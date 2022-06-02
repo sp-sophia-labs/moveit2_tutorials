@@ -49,8 +49,9 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Getting Started</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#install-ros-2-and-colcon">Install ROS 2 and Colcon</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#create-a-colcon-workspace-and-download-tutorials">Create A Colcon Workspace and Download Tutorials</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#download-moveit-2-tutorials-source">Download MoveIt 2 Tutorials Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#download-source-code-of-moveit-and-the-tutorials">Download Source Code of MoveIt and the Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#build-your-colcon-workspace">Build your Colcon Workspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setup-your-colcon-workspace">Setup Your Colcon Workspace</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#next-step">Next Step</a></li>
 </ul>
 </li>
@@ -110,7 +111,7 @@
 
   <div class="section" id="getting-started">
 <h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline"></a></h1>
-<p>This tutorial will install MoveIt 2 and create a workspace sandbox to run the tutorials and example robot.</p>
+<p>Here we will setup your environment for best running the tutorials. This will create a Colcon workspace, download all of the latest MoveIt source code, and build everything from source to ensure you have the latest fixes and improvements.</p>
 <div class="section" id="install-ros-2-and-colcon">
 <h2>Install ROS 2 and Colcon<a class="headerlink" href="#install-ros-2-and-colcon" title="Permalink to this headline"></a></h2>
 <p><a class="reference external" href="https://docs.ros.org/en/rolling/Installation.html">Install ROS 2 Rolling</a>.
@@ -152,12 +153,15 @@ It is easy to miss steps when going through the ROS 2 installation tutorial. If 
 </pre></div>
 </div>
 </div>
-<div class="section" id="download-moveit-2-tutorials-source">
-<h2>Download MoveIt 2 Tutorials Source<a class="headerlink" href="#download-moveit-2-tutorials-source" title="Permalink to this headline"></a></h2>
-<p>Move into your colcon workspace and pull the MoveIt 2 tutorials source:</p>
+<div class="section" id="download-source-code-of-moveit-and-the-tutorials">
+<h2>Download Source Code of MoveIt and the Tutorials<a class="headerlink" href="#download-source-code-of-moveit-and-the-tutorials" title="Permalink to this headline"></a></h2>
+<p>Move into your colcon workspace and pull the MoveIt tutorials source:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">ws_moveit2</span><span class="o">/</span><span class="n">src</span>
 <span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ros</span><span class="o">-</span><span class="n">planning</span><span class="o">/</span><span class="n">moveit2_tutorials</span> <span class="o">-</span><span class="n">b</span> <span class="n">main</span>
-<span class="n">vcs</span> <span class="kn">import</span> <span class="o">&lt;</span> <span class="n">moveit2_tutorials</span><span class="o">/</span><span class="n">moveit2_tutorials</span><span class="o">.</span><span class="n">repos</span>
+</pre></div>
+</div>
+<p>Next we will download the source code for the rest of MoveIt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vcs</span> <span class="kn">import</span> <span class="o">&lt;</span> <span class="n">moveit2_tutorials</span><span class="o">/</span><span class="n">moveit2_tutorials</span><span class="o">.</span><span class="n">repos</span>
 </pre></div>
 </div>
 </div>
@@ -172,6 +176,11 @@ It is easy to miss steps when going through the ROS 2 installation tutorial. If 
 <span class="n">colcon</span> <span class="n">build</span> <span class="o">--</span><span class="n">mixin</span> <span class="n">release</span>
 </pre></div>
 </div>
+<p>This build command will likely take a long time (20+ minutes) depending on your computer speed and amount of RAM available (we recommend 32 GB). If you are short on computer memory or generally your build is struggling to complete on your computer, you can append the argument <code class="docutils literal notranslate"><span class="pre">--parallel-workers</span> <span class="pre">1</span></code> to the colcon command above.</p>
+<p>If everything goes well, you should see the message “finished”. If you have problems, try re-checking your <a class="reference external" href="https://docs.ros.org/en/rolling/Installation.html">ROS Installation</a>.</p>
+</div>
+<div class="section" id="setup-your-colcon-workspace">
+<h2>Setup Your Colcon Workspace<a class="headerlink" href="#setup-your-colcon-workspace" title="Permalink to this headline"></a></h2>
 <p>Source the colcon workspace:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">~/</span><span class="n">ws_moveit2</span><span class="o">/</span><span class="n">install</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">bash</span>
 </pre></div>
@@ -189,7 +198,7 @@ colcon workspace at a time, but we recommend it for simplicity.</p>
 </div>
 <div class="section" id="next-step">
 <h2>Next Step<a class="headerlink" href="#next-step" title="Permalink to this headline"></a></h2>
-<p><a class="reference internal" href="../quickstart_in_rviz/quickstart_in_rviz_tutorial.html"><span class="doc">Visualize a robot with the interactive motion planning plugin for RViz</span></a></p>
+<p>Nice job! Next we will <a class="reference internal" href="../quickstart_in_rviz/quickstart_in_rviz_tutorial.html"><span class="doc">Visualize a robot with the interactive motion planning plugin for RViz</span></a></p>
 </div>
 </div>
 
