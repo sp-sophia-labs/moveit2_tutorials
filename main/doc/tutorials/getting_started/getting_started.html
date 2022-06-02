@@ -112,6 +112,7 @@
   <div class="section" id="getting-started">
 <h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline"></a></h1>
 <p>Here we will setup your environment for best running the tutorials. This will create a Colcon workspace, download all of the latest MoveIt source code, and build everything from source to ensure you have the latest fixes and improvements.</p>
+<p>Building all the source code of MoveIt can take 20-30 minutes, depending on the CPU speed and available RAM of your computer. If you are on a less performant system, or generally just want to get started quicker, checkout our <a class="reference internal" href="../../how_to_guides/how_to_setup_docker_containers_in_ubuntu.html"><span class="doc">Docker Guide</span></a>.</p>
 <div class="section" id="install-ros-2-and-colcon">
 <h2>Install ROS 2 and Colcon<a class="headerlink" href="#install-ros-2-and-colcon" title="Permalink to this headline"></a></h2>
 <p><a class="reference external" href="https://docs.ros.org/en/rolling/Installation.html">Install ROS 2 Rolling</a>.
@@ -155,7 +156,7 @@ It is easy to miss steps when going through the ROS 2 installation tutorial. If 
 </div>
 <div class="section" id="download-source-code-of-moveit-and-the-tutorials">
 <h2>Download Source Code of MoveIt and the Tutorials<a class="headerlink" href="#download-source-code-of-moveit-and-the-tutorials" title="Permalink to this headline"></a></h2>
-<p>Move into your colcon workspace and pull the MoveIt tutorials source:</p>
+<p>Move into your Colcon workspace and pull the MoveIt tutorials source:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">ws_moveit2</span><span class="o">/</span><span class="n">src</span>
 <span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ros</span><span class="o">-</span><span class="n">planning</span><span class="o">/</span><span class="n">moveit2_tutorials</span> <span class="o">-</span><span class="n">b</span> <span class="n">main</span>
 </pre></div>
@@ -171,17 +172,17 @@ It is easy to miss steps when going through the ROS 2 installation tutorial. If 
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>rosdep install -r --from-paths . --ignore-src --rosdistro $ROS_DISTRO -y
 </pre></div>
 </div>
-<p>The next command will configure your colcon workspace:</p>
+<p>The next command will configure your Colcon workspace:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">ws_moveit2</span>
 <span class="n">colcon</span> <span class="n">build</span> <span class="o">--</span><span class="n">mixin</span> <span class="n">release</span>
 </pre></div>
 </div>
-<p>This build command will likely take a long time (20+ minutes) depending on your computer speed and amount of RAM available (we recommend 32 GB). If you are short on computer memory or generally your build is struggling to complete on your computer, you can append the argument <code class="docutils literal notranslate"><span class="pre">--parallel-workers</span> <span class="pre">1</span></code> to the colcon command above.</p>
-<p>If everything goes well, you should see the message “finished”. If you have problems, try re-checking your <a class="reference external" href="https://docs.ros.org/en/rolling/Installation.html">ROS Installation</a>.</p>
+<p>This build command will likely take a long time (20+ minutes) depending on your computer speed and amount of RAM available (we recommend 32 GB). If you are short on computer memory or generally your build is struggling to complete on your computer, you can append the argument <code class="docutils literal notranslate"><span class="pre">--parallel-workers</span> <span class="pre">1</span></code> to the Colcon command above.</p>
+<p>If everything goes well, you should see the message “Summary: X packages finished” where X might be 50. If you have problems, try re-checking your <a class="reference external" href="https://docs.ros.org/en/rolling/Installation.html">ROS Installation</a>.</p>
 </div>
 <div class="section" id="setup-your-colcon-workspace">
 <h2>Setup Your Colcon Workspace<a class="headerlink" href="#setup-your-colcon-workspace" title="Permalink to this headline"></a></h2>
-<p>Source the colcon workspace:</p>
+<p>Source the Colcon workspace:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">~/</span><span class="n">ws_moveit2</span><span class="o">/</span><span class="n">install</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">bash</span>
 </pre></div>
 </div>
@@ -193,7 +194,7 @@ It is easy to miss steps when going through the ROS 2 installation tutorial. If 
 <p class="admonition-title">Note</p>
 <p>Sourcing the <code class="docutils literal notranslate"><span class="pre">setup.bash</span></code> automatically in your <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> is
 not required and often skipped by advanced users who use more than one
-colcon workspace at a time, but we recommend it for simplicity.</p>
+Colcon workspace at a time, but we recommend it for simplicity.</p>
 </div>
 </div>
 <div class="section" id="next-step">
