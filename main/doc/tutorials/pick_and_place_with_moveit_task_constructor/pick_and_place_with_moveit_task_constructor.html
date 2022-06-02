@@ -52,8 +52,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../visualizing_in_rviz/visualizing_in_rviz.html">Visualizing In RViz</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../planning_around_objects/planning_around_objects.html">Planning Around Objects</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Pick and Place with MoveIt Task Constructor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#basic-concepts">Basic Concepts</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#getting-started">Getting Started</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#download-moveit-task-constructor">Download MoveIt Task Constructor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#running-the-demo">Running the Demo</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#create-a-new-package">Create a New Package</a></li>
 </ul>
 </li>
@@ -62,7 +66,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#code-breakdown">Code Breakdown</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#running-the-demo">Running the Demo</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Running the Demo</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#launch-files">Launch files</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#rviz-configuration">RViz Configuration</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#launching-the-demo">Launching the Demo</a></li>
@@ -134,7 +138,36 @@
 <video width="700px" controls="true" autoplay="true" loop="true">
     <source src="../../../_static/videos/mtc.webm" type="video/webm">
     MoveIt Task Constructor Pick and Place example
-</video><p>This tutorial will walk you through creating a package that plans a pick and place operation using <a class="reference external" href="https://github.com/ros-planning/moveit_task_constructor/tree/ros2/">MoveIt Task Constructor</a>. MoveIt Task Constructor provides a way to plan for tasks that consist of multiple different subtasks (known as stages). This tutorial is intended for those who have a basic understanding of MoveIt and the MoveIt Task Constructor <a class="reference internal" href="../../examples/moveit_task_constructor/moveit_task_constructor_tutorial.html#moveit-task-constructor-concepts"><span class="std std-ref">concepts</span></a>. To learn more about these, read the  <a class="reference internal" href="../../examples/examples.html"><span class="doc">MoveIt examples</span></a>, including the example page for <a class="reference internal" href="../../examples/moveit_task_constructor/moveit_task_constructor_tutorial.html"><span class="doc">MoveIt Task Constructor</span></a>.</p>
+</video><p>This tutorial will walk you through creating a package that plans a pick and place operation using <a class="reference external" href="https://github.com/ros-planning/moveit_task_constructor/tree/ros2/">MoveIt Task Constructor</a>. MoveIt Task Constructor provides a way to plan for tasks that consist of multiple different subtasks (known as stages).</p>
+<div class="section" id="basic-concepts">
+<h2>Basic Concepts<a class="headerlink" href="#basic-concepts" title="Permalink to this headline"></a></h2>
+<p>The fundamental idea of MTC is that complex motion planning problems can be composed into a set of simpler subproblems.
+The top-level planning problem is specified as a <strong>Task</strong> while all subproblems are specified by <strong>Stages</strong>.
+Stages can be arranged in any arbitrary order and hierarchy only limited by the individual stages types.
+The order in which stages can be arranged is restricted by the direction in which results are passed.
+There are three possible stages relating to the result flow: generator, propagator, and connector stages:</p>
+<p><strong>Generators</strong> compute their results independently of their neighbor stages and pass them in both directions, backwards and forwards.
+An example is an IK sampler for geometric poses where approaching and departing motions (neighbor stages) depend on the solution.</p>
+<p><strong>Propagators</strong> receive the result of one neighbor stage, solve a subproblem and then propagate their result to the neighbor on the opposite site.
+Depending on the implementation, propagating stages can pass solutions forward, backward or in both directions separately.
+An example is a stage that computes a Cartesian path based on either a start or a goal state.</p>
+<p><strong>Connectors</strong> do not propagate any results, but rather attempt to bridge the gap between the resulting states of both neighbors.
+An example is the computation of a free-motion plan from one given state to another.</p>
+<p>Additional to the order types, there are different hierarchy types allowing to encapsulate subordinate stages.
+Stages without subordinate stages are called <strong>primitive stages</strong>, higher-level stages are called <strong>container stages</strong>.
+There are three container types:</p>
+<p><strong>Wrappers</strong> encapsulate a single subordinate stage and modify or filter the results.
+For example, a filter stage that only accepts solutions of its child stage that satisfy a certain constraint can be realized as a wrapper.
+Another standard use of this type includes the IK wrapper stage, which generates inverse kinematics solutions based on planning scenes annotated with a pose target property.</p>
+<p><strong>Serial Containers</strong> hold a sequence of subordinate stages and only consider end-to-end solutions as results.
+An example is a picking motion that consists of a sequence of coherent steps.</p>
+<p><strong>Parallel Containers</strong> combine set of subordinate stages and can be used for passing the best of alternative results, running fallback solvers or for merging multiple independent solutions.
+Examples are running alternative planners for a free-motion plan, picking objects with the right hand or with the left hand as a fallback, or moving the arm and opening the gripper at the same time.</p>
+<a class="reference internal image-reference" href="../../../_images/mtc_stage_types.png"><img alt="../../../_images/mtc_stage_types.png" src="../../../_images/mtc_stage_types.png" style="width: 700px;" /></a>
+<p>Stages not only support solving motion planning problems.
+They can also be used for all kinds of state transitions, as for instance modifying the planning scene.
+Combined with the possibility of using class inheritance it is possible to construct very complex behavior while only relying on a well-structured set of primitive stages.</p>
+</div>
 <div class="section" id="getting-started">
 <h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline"></a></h2>
 <p>If you haven’t already done so, make sure you’ve completed the steps in <a class="reference internal" href="../getting_started/getting_started.html"><span class="doc">Getting Started</span></a>.</p>
@@ -147,6 +180,24 @@
 </pre></div>
 </div>
 </div>
+</div>
+<div class="section" id="running-the-demo">
+<h2>Running the Demo<a class="headerlink" href="#running-the-demo" title="Permalink to this headline"></a></h2>
+<p>The MoveIt Task Constructor package contains several basic examples and a pick-and-place demo.
+For all demos you should launch the basic environment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">moveit_task_constructor_demo</span> <span class="n">demo</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Subsequently, you can run the individual demos:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">run</span> <span class="n">moveit_task_constructor_demo</span> <span class="n">cartesian</span>
+<span class="n">ros2</span> <span class="n">run</span> <span class="n">moveit_task_constructor_demo</span> <span class="n">modular</span>
+<span class="n">ros2</span> <span class="n">launch</span> <span class="n">moveit_task_constructor_demo</span> <span class="n">pickplace</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>On the right side you should see the <strong>Motion Planning Tasks</strong> panel outlining the hierarchical stage structure of the tasks.
+When you select a particular stage, the list of successful and failed solutions will be
+shown in the right-most window. Selecting one of those solutions will start its visualization.</p>
+<a class="reference internal image-reference" href="../../../_images/mtc_show_stages.gif"><img alt="../../../_images/mtc_show_stages.gif" src="../../../_images/mtc_show_stages.gif" style="width: 700px;" /></a>
 <div class="section" id="create-a-new-package">
 <h3>Create a New Package<a class="headerlink" href="#create-a-new-package" title="Permalink to this headline"></a></h3>
 <p>Create a new package with the following command:</p>
@@ -591,8 +642,8 @@ ament_package()
 </div>
 </div>
 </div>
-<div class="section" id="running-the-demo">
-<h2>Running the Demo<a class="headerlink" href="#running-the-demo" title="Permalink to this headline"></a></h2>
+<div class="section" id="id1">
+<h2>Running the Demo<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h2>
 <div class="section" id="launch-files">
 <h3>Launch files<a class="headerlink" href="#launch-files" title="Permalink to this headline"></a></h3>
 <p>We will need a launch file to launch <code class="docutils literal notranslate"><span class="pre">move_group</span></code>, <code class="docutils literal notranslate"><span class="pre">ros2_control</span></code>, <code class="docutils literal notranslate"><span class="pre">static_tf</span></code>, <code class="docutils literal notranslate"><span class="pre">robot_state_publisher</span></code>, and <code class="docutils literal notranslate"><span class="pre">rviz</span></code>. <a class="reference external" href="https://github.com/ros-planning/moveit2_tutorials/blob/main/doc/tutorials/pick_and_place_with_moveit_task_constructor/launch/pick_place_demo.launch.py">Here</a> is the launch file we use in the tutorials package. Put this in the launch directory of your package.</p>
@@ -657,7 +708,7 @@ ament_package()
 </div>
 <div class="section" id="adding-stages">
 <h2>Adding Stages<a class="headerlink" href="#adding-stages" title="Permalink to this headline"></a></h2>
-<p>So far, we’ve walked through creating and executing a simple task, which runs but does not do much. Now, we will start adding the pick-and-place stages to the task. The image below shows an outline of the stages we will use in our task. To understand more about the concepts behind MoveIt Task Constructor and the different stage types, see the <a class="reference internal" href="../../examples/moveit_task_constructor/moveit_task_constructor_tutorial.html"><span class="doc">example page for MoveIt Task Constructor</span></a>.</p>
+<p>So far, we’ve walked through creating and executing a simple task, which runs but does not do much. Now, we will start adding the pick-and-place stages to the task. The image below shows an outline of the stages we will use in our task.</p>
 <a class="reference internal image-reference" href="../../../_images/stages.png"><img alt="../../../_images/stages.png" src="../../../_images/stages.png" style="width: 700px;" /></a>
 <p>We will start adding stages after our existing open hand stage here:</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">stage_open_hand</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
