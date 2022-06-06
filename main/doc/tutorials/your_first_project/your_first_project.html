@@ -10,7 +10,7 @@
       <link rel="stylesheet" href="../../../_static/tabs.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/override.css" type="text/css" />
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
-    <link rel="canonical" href="https://moveit.picknik.ai/humble//rolling/doc/tutorials/your_first_project/your_first_project.html" />
+    <link rel="canonical" href="https://moveit.picknik.ai/rolling//rolling/doc/tutorials/your_first_project/your_first_project.html" />
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -135,7 +135,7 @@ To prepare yourself for this please complete the <a class="reference external" h
 <div class="section" id="create-a-package">
 <h3>1 Create a package<a class="headerlink" href="#create-a-package" title="Permalink to this headline"></a></h3>
 <p>Open a terminal and <a class="reference external" href="https://docs.ros.org/en/rolling/Tutorials/Configuring-ROS2-Environment.html">source your ROS 2 installation</a> so that <code class="docutils literal notranslate"><span class="pre">ros2</span></code> commands will work.</p>
-<p>Navigate to your <code class="docutils literal notranslate"><span class="pre">ws_moveit2</span></code> directory you created in the <a class="reference internal" href="../getting_started/getting_started.html"><span class="doc">Getting Started Tutorial</span></a>.</p>
+<p>Navigate to your <code class="docutils literal notranslate"><span class="pre">ws_moveit</span></code> directory you created in the <a class="reference internal" href="../getting_started/getting_started.html"><span class="doc">Getting Started Tutorial</span></a>.</p>
 <p>Change directory into the <code class="docutils literal notranslate"><span class="pre">src</span></code> directory, as that is where we put our source code.</p>
 <p>Create a new package with the ROS 2 command line tools:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 pkg create <span class="se">\</span>
@@ -147,7 +147,7 @@ To prepare yourself for this please complete the <a class="reference external" h
 <p>The output of this will show that it created some files in a new directory.</p>
 <p>Note that we added <code class="docutils literal notranslate"><span class="pre">moveit_ros_planning_interface</span></code> and <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> as dependencies.
 This will create the necessary changes in the <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> and <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> files so that we can depend on these two packages.</p>
-<p>Open the new source file created for you at <code class="docutils literal notranslate"><span class="pre">ws_moveit2/src/hello_moveit/src/hello_moveit.cpp</span></code> in your favorite editor.</p>
+<p>Open the new source file created for you at <code class="docutils literal notranslate"><span class="pre">ws_moveit/src/hello_moveit/src/hello_moveit.cpp</span></code> in your favorite editor.</p>
 </div>
 <div class="section" id="create-a-ros-node-and-executor">
 <h3>2 Create a ROS Node and Executor<a class="headerlink" href="#create-a-ros-node-and-executor" title="Permalink to this headline"></a></h3>
@@ -180,12 +180,12 @@ This will create the necessary changes in the <code class="docutils literal notr
 <div class="section" id="build-and-run">
 <h4>2.1 Build and Run<a class="headerlink" href="#build-and-run" title="Permalink to this headline"></a></h4>
 <p>We will build and run the program to see that everything is right before we move on.</p>
-<p>Change directory back to the workspace directory <code class="docutils literal notranslate"><span class="pre">ws_moveit2</span></code> and run this command:</p>
+<p>Change directory back to the workspace directory <code class="docutils literal notranslate"><span class="pre">ws_moveit</span></code> and run this command:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon build --mixin debug
 </pre></div>
 </div>
 <p>After this succeeds, <strong>open a new terminal</strong>, then source the workspace environment script in that new terminal so that we can run our program.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ws_moveit2
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ws_moveit
 <span class="nb">source</span> install/setup.bash
 </pre></div>
 </div>
@@ -246,7 +246,7 @@ The second is needed for MoveIt because of how we use ROS Parameters.</p>
 <div class="section" id="id1">
 <h4>3.1 Build and Run<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h4>
 <p>Just like before, we need to build the code before we can run it.</p>
-<p>In the workspace directory, <code class="docutils literal notranslate"><span class="pre">ws_moveit2</span></code>, run this command:</p>
+<p>In the workspace directory, <code class="docutils literal notranslate"><span class="pre">ws_moveit</span></code>, run this command:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon build --mixin debug
 </pre></div>
 </div>

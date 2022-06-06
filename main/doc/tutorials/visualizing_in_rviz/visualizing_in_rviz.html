@@ -10,7 +10,7 @@
       <link rel="stylesheet" href="../../../_static/tabs.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/override.css" type="text/css" />
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
-    <link rel="canonical" href="https://moveit.picknik.ai/humble//rolling/doc/tutorials/visualizing_in_rviz/visualizing_in_rviz.html" />
+    <link rel="canonical" href="https://moveit.picknik.ai/rolling//rolling/doc/tutorials/visualizing_in_rviz/visualizing_in_rviz.html" />
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -151,7 +151,7 @@ This project assumes you are starting with the <code class="docutils literal not
 </pre></div>
 </div>
 <p>To test that this all worked, open a terminal in the workspace directory (remembering to source your ROS install in opt) and then build with colcon:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ws_moveit2
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ws_moveit
 colcon build --mixin debug
 </pre></div>
 </div>
@@ -284,7 +284,7 @@ Update your code for planning and executing to include these new features:</p>
 <p>One thing you’ll quickly notice is that we have to call a method called <code class="docutils literal notranslate"><span class="pre">trigger</span></code> on <code class="docutils literal notranslate"><span class="pre">moveit_visual_tools</span></code> after each call to change something rendered in RViz.
 The reason for this is that messages sent to RViz are batched up and sent when you call <code class="docutils literal notranslate"><span class="pre">trigger</span></code> to reduce bandwidth of the marker topics.</p>
 <p>Lastly, build your project again to make sure all the code additions are correct.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ws_moveit2
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ws_moveit
 <span class="nb">source</span> /opt/ros/rolling/setup.bash
 colcon build --mixin debug
 </pre></div>
@@ -293,7 +293,7 @@ colcon build --mixin debug
 <div class="section" id="enable-visualizations-in-rviz">
 <h3>6 Enable visualizations in RViz<a class="headerlink" href="#enable-visualizations-in-rviz" title="Permalink to this headline"></a></h3>
 <p>Open a new terminal, source the workspace, and then start the demo launch file that opens RViz.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ws_moveit2
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ws_moveit
 <span class="nb">source</span> install/setup.bash
 ros2 launch moveit2_tutorials demo.launch.py
 </pre></div>
@@ -320,7 +320,7 @@ Click on the “Add” Button in the “Displays” panel.</p>
 <div class="section" id="run-the-program">
 <h3>7 Run the Program<a class="headerlink" href="#run-the-program" title="Permalink to this headline"></a></h3>
 <p>In a new terminal, go to the workspace, source the workspace, and run <code class="docutils literal notranslate"><span class="pre">hello_moveit</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ws_moveit2
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ws_moveit
 <span class="nb">source</span> install/setup.bash
 ros2 run hello_moveit hello_moveit
 </pre></div>
