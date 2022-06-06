@@ -165,11 +165,12 @@ It is easy to miss steps when going through the ROS 2 installation tutorial. If 
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vcs</span> <span class="kn">import</span> <span class="o">&lt;</span> <span class="n">moveit2_tutorials</span><span class="o">/</span><span class="n">moveit2_tutorials</span><span class="o">.</span><span class="n">repos</span>
 </pre></div>
 </div>
+<p>The import command may ask for your GitHub credentials. You can just press Enter until it moves on (ignore the “Authentication failed” error).</p>
 </div>
 <div class="section" id="build-your-colcon-workspace">
 <h2>Build your Colcon Workspace<a class="headerlink" href="#build-your-colcon-workspace" title="Permalink to this headline"></a></h2>
 <p>The following will install from Debian any package dependencies not already in your workspace. This is the step that will install MoveIt and all of its dependencies:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>rosdep install -r --from-paths . --ignore-src --rosdistro $ROS_DISTRO -y
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sudo apt update &amp;&amp; rosdep install -r --from-paths . --ignore-src --rosdistro $ROS_DISTRO -y
 </pre></div>
 </div>
 <p>The next command will configure your Colcon workspace:</p>
