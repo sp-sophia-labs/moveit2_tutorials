@@ -10,7 +10,7 @@
       <link rel="stylesheet" href="../../../_static/tabs.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/override.css" type="text/css" />
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
-    <link rel="canonical" href="https://moveit.picknik.ai/humble//rolling/doc/tutorials/your_first_project/your_first_project.html" />
+    <link rel="canonical" href="https://moveit.picknik.ai/rolling//rolling/doc/tutorials/your_first_project/your_first_project.html" />
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -275,7 +275,7 @@ If it fails to find that within 10 seconds, it prints this error and terminates 
 <h4>3.2 Examine the code<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h4>
 <p>The first thing we do is create the MoveGroupInterface. This object will be used to interact with move_group, which allows us to plan and execute trajectories.
 Note that this is the only mutable object that we create in this program.
-Another thing to take note of is the second interface to the <code class="docutils literal notranslate"><span class="pre">MoveGroupInterface</span></code> object we are creating here: <code class="docutils literal notranslate"><span class="pre">&quot;panda_arm&quot;</span></code>.
+Another thing to take note of is the second argument to the <code class="docutils literal notranslate"><span class="pre">MoveGroupInterface</span></code> object we are creating here: <code class="docutils literal notranslate"><span class="pre">&quot;panda_arm&quot;</span></code>.
 That is the group of joints as defined in the robot description that we are going to operate on with this <code class="docutils literal notranslate"><span class="pre">MoveGroupInterface</span></code>.</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span><span class="p">;</span><span class="w"></span>
 <span class="k">auto</span><span class="w"> </span><span class="n">move_group_interface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MoveGroupInterface</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;panda_arm&quot;</span><span class="p">);</span><span class="w"></span>

@@ -10,7 +10,7 @@
       <link rel="stylesheet" href="../../../_static/tabs.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/override.css" type="text/css" />
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
-    <link rel="canonical" href="https://moveit.picknik.ai/humble//rolling/doc/tutorials/visualizing_in_rviz/visualizing_in_rviz.html" />
+    <link rel="canonical" href="https://moveit.picknik.ai/rolling//rolling/doc/tutorials/visualizing_in_rviz/visualizing_in_rviz.html" />
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -207,7 +207,7 @@ Remote control is a really simple plugin that lets us have a button in RViz to i
 <div class="section" id="write-closures-for-visualizations">
 <h3>4 Write closures for visualizations<a class="headerlink" href="#write-closures-for-visualizations" title="Permalink to this headline"></a></h3>
 <p>After we’ve constructed and initialized, we now create some closures (function objects that have access to variables in our current scope) that we can use later in our program to help render visualizations in RViz.</p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create a closures for visualization</span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create closures for visualization</span>
 <span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">draw_title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="n">moveit_visual_tools</span><span class="p">](</span><span class="k">auto</span><span class="w"> </span><span class="n">text</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">text_pose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Isometry3d</span><span class="o">::</span><span class="n">Identity</span><span class="p">();</span><span class="w"></span>

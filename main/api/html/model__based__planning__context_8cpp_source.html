@@ -823,239 +823,244 @@ $(function() {
 <div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;  {</div>
 <div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;    RCLCPP_WARN(LOGGER, <span class="stringliteral">&quot;Computed solution is approximate&quot;</span>);</div>
 <div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;  }</div>
-<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;}</div>
-<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160; </div>
-<div class="line"><a name="l00755"></a><span class="lineno"><a class="line" href="classompl__interface_1_1ModelBasedPlanningContext.html#ae8157b2f232f07979313536e8fec3dc8">  755</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classompl__interface_1_1ModelBasedPlanningContext.html#ae8157b2f232f07979313536e8fec3dc8">ompl_interface::ModelBasedPlanningContext::solve</a>(<a class="code" href="structplanning__interface_1_1MotionPlanResponse.html">planning_interface::MotionPlanResponse</a>&amp; res)</div>
-<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;{</div>
-<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;  <span class="keywordflow">if</span> (solve(request_.allowed_planning_time, request_.num_planning_attempts))</div>
-<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;  {</div>
-<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;    <span class="keywordtype">double</span> ptime = getLastPlanTime();</div>
-<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;    <span class="keywordflow">if</span> (simplify_solutions_)</div>
-<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;    {</div>
-<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;      simplifySolution(request_.allowed_planning_time - ptime);</div>
-<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;      ptime += getLastSimplifyTime();</div>
-<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;    }</div>
-<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160; </div>
-<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;    <span class="keywordflow">if</span> (interpolate_)</div>
-<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;    {</div>
-<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;      interpolateSolution();</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160; </div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;  <span class="comment">// Debug OMPL setup and solution</span></div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;  std::stringstream debug_out;</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;  ompl_simple_setup_-&gt;print(debug_out);</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;  RCLCPP_DEBUG(LOGGER, <span class="stringliteral">&quot;%s&quot;</span>, rclcpp::get_c_string(debug_out.str()));</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;}</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160; </div>
+<div class="line"><a name="l00760"></a><span class="lineno"><a class="line" href="classompl__interface_1_1ModelBasedPlanningContext.html#ae8157b2f232f07979313536e8fec3dc8">  760</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classompl__interface_1_1ModelBasedPlanningContext.html#ae8157b2f232f07979313536e8fec3dc8">ompl_interface::ModelBasedPlanningContext::solve</a>(<a class="code" href="structplanning__interface_1_1MotionPlanResponse.html">planning_interface::MotionPlanResponse</a>&amp; res)</div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;{</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;  <span class="keywordflow">if</span> (solve(request_.allowed_planning_time, request_.num_planning_attempts))</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;  {</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;    <span class="keywordtype">double</span> ptime = getLastPlanTime();</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;    <span class="keywordflow">if</span> (simplify_solutions_)</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;    {</div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;      simplifySolution(request_.allowed_planning_time - ptime);</div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;      ptime += getLastSimplifyTime();</div>
 <div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;    }</div>
 <div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160; </div>
-<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;    <span class="comment">// fill the response</span></div>
-<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;    RCLCPP_DEBUG(LOGGER, <span class="stringliteral">&quot;%s: Returning successful solution with %lu states&quot;</span>, getName().c_str(),</div>
-<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;                 getOMPLSimpleSetup()-&gt;getSolutionPath().getStateCount());</div>
-<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160; </div>
-<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;    res.<a class="code" href="structplanning__interface_1_1MotionPlanResponse.html#aba269b9eb8f4d12cdc4fc62728cea619">trajectory_</a> = std::make_shared&lt;robot_trajectory::RobotTrajectory&gt;(getRobotModel(), getGroupName());</div>
-<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;    getSolutionPath(*res.<a class="code" href="structplanning__interface_1_1MotionPlanResponse.html#aba269b9eb8f4d12cdc4fc62728cea619">trajectory_</a>);</div>
-<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;    res.<a class="code" href="structplanning__interface_1_1MotionPlanResponse.html#a650d90c6d03969c1ff6410d6dfd69968">planning_time_</a> = ptime;</div>
-<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;  }</div>
-<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;  {</div>
-<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;    RCLCPP_INFO(LOGGER, <span class="stringliteral">&quot;Unable to solve the planning problem&quot;</span>);</div>
-<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;    res.<a class="code" href="structplanning__interface_1_1MotionPlanResponse.html#ae39168510db61336c31f10949a54444a">error_code_</a>.val = moveit_msgs::msg::MoveItErrorCodes::PLANNING_FAILED;</div>
-<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;  }</div>
-<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;}</div>
-<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160; </div>
-<div class="line"><a name="l00788"></a><span class="lineno"><a class="line" href="classompl__interface_1_1ModelBasedPlanningContext.html#ab9e1526ca0b10a8e793ddeb34162a143">  788</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classompl__interface_1_1ModelBasedPlanningContext.html#ae8157b2f232f07979313536e8fec3dc8">ompl_interface::ModelBasedPlanningContext::solve</a>(<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html">planning_interface::MotionPlanDetailedResponse</a>&amp; res)</div>
-<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;{</div>
-<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;  <span class="keywordflow">if</span> (solve(request_.allowed_planning_time, request_.num_planning_attempts))</div>
-<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;  {</div>
-<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;    res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a7d750f1249f713717fe9a101f9f6fdd6">trajectory_</a>.reserve(3);</div>
-<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160; </div>
-<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;    <span class="comment">// add info about planned solution</span></div>
-<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;    <span class="keywordtype">double</span> ptime = getLastPlanTime();</div>
-<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;    res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a81dc1b63e35cb87a87e5ba2f9d3bffcd">processing_time_</a>.push_back(ptime);</div>
-<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;    res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#ae4feba05ab23e6d2f806e766e23d83d8">description_</a>.emplace_back(<span class="stringliteral">&quot;plan&quot;</span>);</div>
-<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;    res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a7d750f1249f713717fe9a101f9f6fdd6">trajectory_</a>.resize(res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a7d750f1249f713717fe9a101f9f6fdd6">trajectory_</a>.size() + 1);</div>
-<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;    res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a7d750f1249f713717fe9a101f9f6fdd6">trajectory_</a>.back() = std::make_shared&lt;robot_trajectory::RobotTrajectory&gt;(getRobotModel(), getGroupName());</div>
-<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;    getSolutionPath(*res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a7d750f1249f713717fe9a101f9f6fdd6">trajectory_</a>.back());</div>
-<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160; </div>
-<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;    <span class="comment">// simplify solution if time remains</span></div>
-<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;    <span class="keywordflow">if</span> (simplify_solutions_)</div>
-<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;    {</div>
-<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;      simplifySolution(request_.allowed_planning_time - ptime);</div>
-<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;      res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a81dc1b63e35cb87a87e5ba2f9d3bffcd">processing_time_</a>.push_back(getLastSimplifyTime());</div>
-<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;      res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#ae4feba05ab23e6d2f806e766e23d83d8">description_</a>.emplace_back(<span class="stringliteral">&quot;simplify&quot;</span>);</div>
-<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;      res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a7d750f1249f713717fe9a101f9f6fdd6">trajectory_</a>.resize(res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a7d750f1249f713717fe9a101f9f6fdd6">trajectory_</a>.size() + 1);</div>
-<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;      res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a7d750f1249f713717fe9a101f9f6fdd6">trajectory_</a>.back() = std::make_shared&lt;robot_trajectory::RobotTrajectory&gt;(getRobotModel(), getGroupName());</div>
-<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;      getSolutionPath(*res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a7d750f1249f713717fe9a101f9f6fdd6">trajectory_</a>.back());</div>
-<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;    }</div>
-<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160; </div>
-<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;    <span class="keywordflow">if</span> (interpolate_)</div>
-<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;    {</div>
-<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;      ompl::time::point start_interpolate = ompl::time::now();</div>
-<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;      interpolateSolution();</div>
-<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;      res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a81dc1b63e35cb87a87e5ba2f9d3bffcd">processing_time_</a>.push_back(ompl::time::seconds(ompl::time::now() - start_interpolate));</div>
-<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;      res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#ae4feba05ab23e6d2f806e766e23d83d8">description_</a>.emplace_back(<span class="stringliteral">&quot;interpolate&quot;</span>);</div>
-<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;      res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a7d750f1249f713717fe9a101f9f6fdd6">trajectory_</a>.resize(res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a7d750f1249f713717fe9a101f9f6fdd6">trajectory_</a>.size() + 1);</div>
-<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;      res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a7d750f1249f713717fe9a101f9f6fdd6">trajectory_</a>.back() = std::make_shared&lt;robot_trajectory::RobotTrajectory&gt;(getRobotModel(), getGroupName());</div>
-<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;      getSolutionPath(*res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a7d750f1249f713717fe9a101f9f6fdd6">trajectory_</a>.back());</div>
-<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;    }</div>
-<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160; </div>
-<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;    <span class="comment">// fill the response</span></div>
-<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;    RCLCPP_DEBUG(LOGGER, <span class="stringliteral">&quot;%s: Returning successful solution with %lu states&quot;</span>, getName().c_str(),</div>
-<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;                 getOMPLSimpleSetup()-&gt;getSolutionPath().getStateCount());</div>
-<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;  }</div>
-<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;  {</div>
-<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;    RCLCPP_INFO(LOGGER, <span class="stringliteral">&quot;Unable to solve the planning problem&quot;</span>);</div>
-<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;    res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a66790e7b65abab7806d360dccb7e479c">error_code_</a>.val = moveit_msgs::msg::MoveItErrorCodes::PLANNING_FAILED;</div>
-<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;  }</div>
-<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;}</div>
-<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160; </div>
-<div class="line"><a name="l00837"></a><span class="lineno"><a class="line" href="classompl__interface_1_1ModelBasedPlanningContext.html#ad0ca13fb2ca458d0209e5d4848d63166">  837</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classompl__interface_1_1ModelBasedPlanningContext.html#ae8157b2f232f07979313536e8fec3dc8">ompl_interface::ModelBasedPlanningContext::solve</a>(<span class="keywordtype">double</span> timeout, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> count)</div>
-<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;{</div>
-<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;  ompl::time::point start = ompl::time::now();</div>
-<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;  preSolve();</div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;    <span class="keywordflow">if</span> (interpolate_)</div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;    {</div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;      interpolateSolution();</div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;    }</div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160; </div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;    <span class="comment">// fill the response</span></div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;    RCLCPP_DEBUG(LOGGER, <span class="stringliteral">&quot;%s: Returning successful solution with %lu states&quot;</span>, getName().c_str(),</div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;                 getOMPLSimpleSetup()-&gt;getSolutionPath().getStateCount());</div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160; </div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;    res.<a class="code" href="structplanning__interface_1_1MotionPlanResponse.html#aba269b9eb8f4d12cdc4fc62728cea619">trajectory_</a> = std::make_shared&lt;robot_trajectory::RobotTrajectory&gt;(getRobotModel(), getGroupName());</div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;    getSolutionPath(*res.<a class="code" href="structplanning__interface_1_1MotionPlanResponse.html#aba269b9eb8f4d12cdc4fc62728cea619">trajectory_</a>);</div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;    res.<a class="code" href="structplanning__interface_1_1MotionPlanResponse.html#a650d90c6d03969c1ff6410d6dfd69968">planning_time_</a> = ptime;</div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;  }</div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;  {</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;    RCLCPP_INFO(LOGGER, <span class="stringliteral">&quot;Unable to solve the planning problem&quot;</span>);</div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;    res.<a class="code" href="structplanning__interface_1_1MotionPlanResponse.html#ae39168510db61336c31f10949a54444a">error_code_</a>.val = moveit_msgs::msg::MoveItErrorCodes::PLANNING_FAILED;</div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;  }</div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;}</div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160; </div>
+<div class="line"><a name="l00793"></a><span class="lineno"><a class="line" href="classompl__interface_1_1ModelBasedPlanningContext.html#ab9e1526ca0b10a8e793ddeb34162a143">  793</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classompl__interface_1_1ModelBasedPlanningContext.html#ae8157b2f232f07979313536e8fec3dc8">ompl_interface::ModelBasedPlanningContext::solve</a>(<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html">planning_interface::MotionPlanDetailedResponse</a>&amp; res)</div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;{</div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;  <span class="keywordflow">if</span> (solve(request_.allowed_planning_time, request_.num_planning_attempts))</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;  {</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;    res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a7d750f1249f713717fe9a101f9f6fdd6">trajectory_</a>.reserve(3);</div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160; </div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;    <span class="comment">// add info about planned solution</span></div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;    <span class="keywordtype">double</span> ptime = getLastPlanTime();</div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;    res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a81dc1b63e35cb87a87e5ba2f9d3bffcd">processing_time_</a>.push_back(ptime);</div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;    res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#ae4feba05ab23e6d2f806e766e23d83d8">description_</a>.emplace_back(<span class="stringliteral">&quot;plan&quot;</span>);</div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;    res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a7d750f1249f713717fe9a101f9f6fdd6">trajectory_</a>.resize(res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a7d750f1249f713717fe9a101f9f6fdd6">trajectory_</a>.size() + 1);</div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;    res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a7d750f1249f713717fe9a101f9f6fdd6">trajectory_</a>.back() = std::make_shared&lt;robot_trajectory::RobotTrajectory&gt;(getRobotModel(), getGroupName());</div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;    getSolutionPath(*res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a7d750f1249f713717fe9a101f9f6fdd6">trajectory_</a>.back());</div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160; </div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;    <span class="comment">// simplify solution if time remains</span></div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;    <span class="keywordflow">if</span> (simplify_solutions_)</div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;    {</div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;      simplifySolution(request_.allowed_planning_time - ptime);</div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;      res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a81dc1b63e35cb87a87e5ba2f9d3bffcd">processing_time_</a>.push_back(getLastSimplifyTime());</div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;      res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#ae4feba05ab23e6d2f806e766e23d83d8">description_</a>.emplace_back(<span class="stringliteral">&quot;simplify&quot;</span>);</div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;      res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a7d750f1249f713717fe9a101f9f6fdd6">trajectory_</a>.resize(res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a7d750f1249f713717fe9a101f9f6fdd6">trajectory_</a>.size() + 1);</div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;      res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a7d750f1249f713717fe9a101f9f6fdd6">trajectory_</a>.back() = std::make_shared&lt;robot_trajectory::RobotTrajectory&gt;(getRobotModel(), getGroupName());</div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;      getSolutionPath(*res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a7d750f1249f713717fe9a101f9f6fdd6">trajectory_</a>.back());</div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;    }</div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160; </div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;    <span class="keywordflow">if</span> (interpolate_)</div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;    {</div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;      ompl::time::point start_interpolate = ompl::time::now();</div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;      interpolateSolution();</div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;      res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a81dc1b63e35cb87a87e5ba2f9d3bffcd">processing_time_</a>.push_back(ompl::time::seconds(ompl::time::now() - start_interpolate));</div>
+<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;      res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#ae4feba05ab23e6d2f806e766e23d83d8">description_</a>.emplace_back(<span class="stringliteral">&quot;interpolate&quot;</span>);</div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;      res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a7d750f1249f713717fe9a101f9f6fdd6">trajectory_</a>.resize(res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a7d750f1249f713717fe9a101f9f6fdd6">trajectory_</a>.size() + 1);</div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;      res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a7d750f1249f713717fe9a101f9f6fdd6">trajectory_</a>.back() = std::make_shared&lt;robot_trajectory::RobotTrajectory&gt;(getRobotModel(), getGroupName());</div>
+<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;      getSolutionPath(*res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a7d750f1249f713717fe9a101f9f6fdd6">trajectory_</a>.back());</div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;    }</div>
+<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160; </div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;    <span class="comment">// fill the response</span></div>
+<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;    RCLCPP_DEBUG(LOGGER, <span class="stringliteral">&quot;%s: Returning successful solution with %lu states&quot;</span>, getName().c_str(),</div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;                 getOMPLSimpleSetup()-&gt;getSolutionPath().getStateCount());</div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;  }</div>
+<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;  {</div>
+<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160;    RCLCPP_INFO(LOGGER, <span class="stringliteral">&quot;Unable to solve the planning problem&quot;</span>);</div>
+<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160;    res.<a class="code" href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a66790e7b65abab7806d360dccb7e479c">error_code_</a>.val = moveit_msgs::msg::MoveItErrorCodes::PLANNING_FAILED;</div>
+<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;  }</div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;}</div>
 <div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160; </div>
-<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160;  <span class="keywordtype">bool</span> result = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;  <span class="keywordflow">if</span> (count &lt;= 1 || multi_query_planning_enabled_)  <span class="comment">// multi-query planners should always run in single instances</span></div>
-<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;  {</div>
-<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;    RCLCPP_DEBUG(LOGGER, <span class="stringliteral">&quot;%s: Solving the planning problem once...&quot;</span>, name_.c_str());</div>
-<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;    ob::PlannerTerminationCondition ptc = constructPlannerTerminationCondition(timeout, start);</div>
-<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;    registerTerminationCondition(ptc);</div>
-<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;    result = ompl_simple_setup_-&gt;solve(ptc) == ompl::base::PlannerStatus::EXACT_SOLUTION;</div>
-<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;    last_plan_time_ = ompl_simple_setup_-&gt;getLastPlanComputationTime();</div>
-<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;    unregisterTerminationCondition();</div>
-<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;  }</div>
-<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;  {</div>
-<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;    RCLCPP_DEBUG(LOGGER, <span class="stringliteral">&quot;%s: Solving the planning problem %u times...&quot;</span>, name_.c_str(), count);</div>
-<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;    ompl_parallel_plan_.clearHybridizationPaths();</div>
-<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;    <span class="keywordflow">if</span> (count &lt;= max_planning_threads_)</div>
-<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;    {</div>
-<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;      ompl_parallel_plan_.clearPlanners();</div>
-<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;      <span class="keywordflow">if</span> (ompl_simple_setup_-&gt;getPlannerAllocator())</div>
-<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; count; ++i)</div>
-<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;        {</div>
-<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;          ompl_parallel_plan_.addPlannerAllocator(ompl_simple_setup_-&gt;getPlannerAllocator());</div>
-<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;        }</div>
-<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;      <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;      {</div>
-<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; count; ++i)</div>
-<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;        {</div>
-<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;          ompl_parallel_plan_.addPlanner(ompl::tools::SelfConfig::getDefaultPlanner(ompl_simple_setup_-&gt;getGoal()));</div>
-<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;        }</div>
-<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;      }</div>
-<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160; </div>
-<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;      ob::PlannerTerminationCondition ptc = constructPlannerTerminationCondition(timeout, start);</div>
-<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;      registerTerminationCondition(ptc);</div>
-<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;      result = ompl_parallel_plan_.solve(ptc, 1, count, hybridize_) == ompl::base::PlannerStatus::EXACT_SOLUTION;</div>
-<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;      last_plan_time_ = ompl::time::seconds(ompl::time::now() - start);</div>
-<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160;      unregisterTerminationCondition();</div>
-<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;    }</div>
-<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;    {</div>
-<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;      ob::PlannerTerminationCondition ptc = constructPlannerTerminationCondition(timeout, start);</div>
-<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;      registerTerminationCondition(ptc);</div>
-<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;      <span class="keywordtype">int</span> n = count / max_planning_threads_;</div>
-<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;      result = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n &amp;&amp; !ptc(); ++i)</div>
-<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;      {</div>
-<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;        ompl_parallel_plan_.clearPlanners();</div>
-<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;        <span class="keywordflow">if</span> (ompl_simple_setup_-&gt;getPlannerAllocator())</div>
-<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;        {</div>
-<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;          <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; max_planning_threads_; ++i)</div>
-<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;          {</div>
-<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;            ompl_parallel_plan_.addPlannerAllocator(ompl_simple_setup_-&gt;getPlannerAllocator());</div>
-<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;          }</div>
-<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;        }</div>
-<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;        {</div>
-<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;          <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; max_planning_threads_; ++i)</div>
-<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;          {</div>
-<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;            ompl_parallel_plan_.addPlanner(ompl::tools::SelfConfig::getDefaultPlanner(ompl_simple_setup_-&gt;getGoal()));</div>
-<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;          }</div>
-<div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;        }</div>
-<div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160; </div>
-<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="namespaceplan.html#ab9a5624d048e6b841d11a5f223f02870">r</a> = ompl_parallel_plan_.solve(ptc, 1, count, hybridize_) == ompl::base::PlannerStatus::EXACT_SOLUTION;</div>
-<div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;        result = result &amp;&amp; <a class="code" href="namespaceplan.html#ab9a5624d048e6b841d11a5f223f02870">r</a>;</div>
-<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;      }</div>
-<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;      n = count % max_planning_threads_;</div>
-<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;      <span class="keywordflow">if</span> (n &amp;&amp; !ptc())</div>
-<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;      {</div>
-<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;        ompl_parallel_plan_.clearPlanners();</div>
-<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;        <span class="keywordflow">if</span> (ompl_simple_setup_-&gt;getPlannerAllocator())</div>
-<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;        {</div>
-<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; ++i)</div>
-<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;          {</div>
-<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;            ompl_parallel_plan_.addPlannerAllocator(ompl_simple_setup_-&gt;getPlannerAllocator());</div>
-<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;          }</div>
-<div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;        }</div>
-<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;        {</div>
-<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; ++i)</div>
-<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;          {</div>
-<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;            ompl_parallel_plan_.addPlanner(ompl::tools::SelfConfig::getDefaultPlanner(ompl_simple_setup_-&gt;getGoal()));</div>
-<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;          }</div>
-<div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;        }</div>
-<div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160; </div>
-<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="namespaceplan.html#ab9a5624d048e6b841d11a5f223f02870">r</a> = ompl_parallel_plan_.solve(ptc, 1, count, hybridize_) == ompl::base::PlannerStatus::EXACT_SOLUTION;</div>
-<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;        result = result &amp;&amp; <a class="code" href="namespaceplan.html#ab9a5624d048e6b841d11a5f223f02870">r</a>;</div>
-<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;      }</div>
-<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;      last_plan_time_ = ompl::time::seconds(ompl::time::now() - start);</div>
-<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;      unregisterTerminationCondition();</div>
-<div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;    }</div>
-<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;  }</div>
-<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160; </div>
-<div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;  postSolve();</div>
-<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160; </div>
-<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;  <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;}</div>
+<div class="line"><a name="l00842"></a><span class="lineno"><a class="line" href="classompl__interface_1_1ModelBasedPlanningContext.html#ad0ca13fb2ca458d0209e5d4848d63166">  842</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classompl__interface_1_1ModelBasedPlanningContext.html#ae8157b2f232f07979313536e8fec3dc8">ompl_interface::ModelBasedPlanningContext::solve</a>(<span class="keywordtype">double</span> timeout, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> count)</div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;{</div>
+<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;  ompl::time::point start = ompl::time::now();</div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;  preSolve();</div>
+<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160; </div>
+<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;  <span class="keywordtype">bool</span> result = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;  <span class="keywordflow">if</span> (count &lt;= 1 || multi_query_planning_enabled_)  <span class="comment">// multi-query planners should always run in single instances</span></div>
+<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;  {</div>
+<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;    RCLCPP_DEBUG(LOGGER, <span class="stringliteral">&quot;%s: Solving the planning problem once...&quot;</span>, name_.c_str());</div>
+<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;    ob::PlannerTerminationCondition ptc = constructPlannerTerminationCondition(timeout, start);</div>
+<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;    registerTerminationCondition(ptc);</div>
+<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;    result = ompl_simple_setup_-&gt;solve(ptc) == ompl::base::PlannerStatus::EXACT_SOLUTION;</div>
+<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;    last_plan_time_ = ompl_simple_setup_-&gt;getLastPlanComputationTime();</div>
+<div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;    unregisterTerminationCondition();</div>
+<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;  }</div>
+<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;  {</div>
+<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160;    RCLCPP_DEBUG(LOGGER, <span class="stringliteral">&quot;%s: Solving the planning problem %u times...&quot;</span>, name_.c_str(), count);</div>
+<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;    ompl_parallel_plan_.clearHybridizationPaths();</div>
+<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;    <span class="keywordflow">if</span> (count &lt;= max_planning_threads_)</div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;    {</div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;      ompl_parallel_plan_.clearPlanners();</div>
+<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;      <span class="keywordflow">if</span> (ompl_simple_setup_-&gt;getPlannerAllocator())</div>
+<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; count; ++i)</div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;        {</div>
+<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;          ompl_parallel_plan_.addPlannerAllocator(ompl_simple_setup_-&gt;getPlannerAllocator());</div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;        }</div>
+<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;      {</div>
+<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; count; ++i)</div>
+<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;        {</div>
+<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;          ompl_parallel_plan_.addPlanner(ompl::tools::SelfConfig::getDefaultPlanner(ompl_simple_setup_-&gt;getGoal()));</div>
+<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;        }</div>
+<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;      }</div>
+<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160; </div>
+<div class="line"><a name="l00877"></a><span class="lineno">  877</span>&#160;      ob::PlannerTerminationCondition ptc = constructPlannerTerminationCondition(timeout, start);</div>
+<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160;      registerTerminationCondition(ptc);</div>
+<div class="line"><a name="l00879"></a><span class="lineno">  879</span>&#160;      result = ompl_parallel_plan_.solve(ptc, 1, count, hybridize_) == ompl::base::PlannerStatus::EXACT_SOLUTION;</div>
+<div class="line"><a name="l00880"></a><span class="lineno">  880</span>&#160;      last_plan_time_ = ompl::time::seconds(ompl::time::now() - start);</div>
+<div class="line"><a name="l00881"></a><span class="lineno">  881</span>&#160;      unregisterTerminationCondition();</div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160;    }</div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;    {</div>
+<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;      ob::PlannerTerminationCondition ptc = constructPlannerTerminationCondition(timeout, start);</div>
+<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;      registerTerminationCondition(ptc);</div>
+<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;      <span class="keywordtype">int</span> n = count / max_planning_threads_;</div>
+<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;      result = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n &amp;&amp; !ptc(); ++i)</div>
+<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;      {</div>
+<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;        ompl_parallel_plan_.clearPlanners();</div>
+<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;        <span class="keywordflow">if</span> (ompl_simple_setup_-&gt;getPlannerAllocator())</div>
+<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;        {</div>
+<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;          <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; max_planning_threads_; ++i)</div>
+<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;          {</div>
+<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;            ompl_parallel_plan_.addPlannerAllocator(ompl_simple_setup_-&gt;getPlannerAllocator());</div>
+<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;          }</div>
+<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;        }</div>
+<div class="line"><a name="l00899"></a><span class="lineno">  899</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00900"></a><span class="lineno">  900</span>&#160;        {</div>
+<div class="line"><a name="l00901"></a><span class="lineno">  901</span>&#160;          <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; max_planning_threads_; ++i)</div>
+<div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;          {</div>
+<div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;            ompl_parallel_plan_.addPlanner(ompl::tools::SelfConfig::getDefaultPlanner(ompl_simple_setup_-&gt;getGoal()));</div>
+<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;          }</div>
+<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;        }</div>
+<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160; </div>
+<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="namespaceplan.html#ab9a5624d048e6b841d11a5f223f02870">r</a> = ompl_parallel_plan_.solve(ptc, 1, count, hybridize_) == ompl::base::PlannerStatus::EXACT_SOLUTION;</div>
+<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;        result = result &amp;&amp; <a class="code" href="namespaceplan.html#ab9a5624d048e6b841d11a5f223f02870">r</a>;</div>
+<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;      }</div>
+<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;      n = count % max_planning_threads_;</div>
+<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;      <span class="keywordflow">if</span> (n &amp;&amp; !ptc())</div>
+<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;      {</div>
+<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;        ompl_parallel_plan_.clearPlanners();</div>
+<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;        <span class="keywordflow">if</span> (ompl_simple_setup_-&gt;getPlannerAllocator())</div>
+<div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;        {</div>
+<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; ++i)</div>
+<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;          {</div>
+<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;            ompl_parallel_plan_.addPlannerAllocator(ompl_simple_setup_-&gt;getPlannerAllocator());</div>
+<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;          }</div>
+<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;        }</div>
+<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;        {</div>
+<div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; ++i)</div>
+<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;          {</div>
+<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;            ompl_parallel_plan_.addPlanner(ompl::tools::SelfConfig::getDefaultPlanner(ompl_simple_setup_-&gt;getGoal()));</div>
+<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;          }</div>
+<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;        }</div>
+<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160; </div>
+<div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="namespaceplan.html#ab9a5624d048e6b841d11a5f223f02870">r</a> = ompl_parallel_plan_.solve(ptc, 1, count, hybridize_) == ompl::base::PlannerStatus::EXACT_SOLUTION;</div>
+<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;        result = result &amp;&amp; <a class="code" href="namespaceplan.html#ab9a5624d048e6b841d11a5f223f02870">r</a>;</div>
+<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;      }</div>
+<div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;      last_plan_time_ = ompl::time::seconds(ompl::time::now() - start);</div>
+<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;      unregisterTerminationCondition();</div>
+<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;    }</div>
+<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;  }</div>
 <div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160; </div>
-<div class="line"><a name="l00937"></a><span class="lineno"><a class="line" href="classompl__interface_1_1ModelBasedPlanningContext.html#a266e27b53bfaf06c333f70244f5142ac">  937</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classompl__interface_1_1ModelBasedPlanningContext.html#a266e27b53bfaf06c333f70244f5142ac">ompl_interface::ModelBasedPlanningContext::registerTerminationCondition</a>(<span class="keyword">const</span> ob::PlannerTerminationCondition&amp; ptc)</div>
-<div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;{</div>
-<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;  std::unique_lock&lt;std::mutex&gt; slock(ptc_lock_);</div>
-<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;  ptc_ = &amp;ptc;</div>
-<div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;}</div>
-<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160; </div>
-<div class="line"><a name="l00943"></a><span class="lineno"><a class="line" href="classompl__interface_1_1ModelBasedPlanningContext.html#aad9416c550817656627a486511a85e5b">  943</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classompl__interface_1_1ModelBasedPlanningContext.html#aad9416c550817656627a486511a85e5b">ompl_interface::ModelBasedPlanningContext::unregisterTerminationCondition</a>()</div>
-<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;{</div>
-<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;  std::unique_lock&lt;std::mutex&gt; slock(ptc_lock_);</div>
-<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;  ptc_ = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;}</div>
-<div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160; </div>
-<div class="line"><a name="l00949"></a><span class="lineno"><a class="line" href="classompl__interface_1_1ModelBasedPlanningContext.html#abf1962790ec5f0a1019c245010f36bc9">  949</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classompl__interface_1_1ModelBasedPlanningContext.html#abf1962790ec5f0a1019c245010f36bc9">ompl_interface::ModelBasedPlanningContext::terminate</a>()</div>
-<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;{</div>
-<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;  std::unique_lock&lt;std::mutex&gt; slock(ptc_lock_);</div>
-<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;  <span class="keywordflow">if</span> (ptc_)</div>
-<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;  {</div>
-<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160;    ptc_-&gt;terminate();</div>
-<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;  }</div>
-<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;}</div>
-<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160; </div>
-<div class="line"><a name="l00959"></a><span class="lineno"><a class="line" href="classompl__interface_1_1ModelBasedPlanningContext.html#a574614e1070dc37374c48d6c3cde0e63">  959</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classompl__interface_1_1ModelBasedPlanningContext.html#a574614e1070dc37374c48d6c3cde0e63">ompl_interface::ModelBasedPlanningContext::saveConstraintApproximations</a>(<span class="keyword">const</span> rclcpp::Node::SharedPtr&amp; node)</div>
-<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;{</div>
-<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;  std::string constraint_path;</div>
-<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;  <span class="keywordflow">if</span> (node-&gt;get_parameter(<span class="stringliteral">&quot;constraint_approximations_path&quot;</span>, constraint_path))</div>
-<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;  {</div>
-<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;    constraints_library_-&gt;saveConstraintApproximations(constraint_path);</div>
-<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;  }</div>
-<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;  RCLCPP_WARN(LOGGER, <span class="stringliteral">&quot;ROS param &#39;constraint_approximations&#39; not found. Unable to save constraint approximations&quot;</span>);</div>
-<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;}</div>
-<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160; </div>
-<div class="line"><a name="l00971"></a><span class="lineno"><a class="line" href="classompl__interface_1_1ModelBasedPlanningContext.html#a3f934ea94b1feafdc1121a2ecc9c2a6b">  971</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classompl__interface_1_1ModelBasedPlanningContext.html#a3f934ea94b1feafdc1121a2ecc9c2a6b">ompl_interface::ModelBasedPlanningContext::loadConstraintApproximations</a>(<span class="keyword">const</span> rclcpp::Node::SharedPtr&amp; node)</div>
-<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;{</div>
-<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;  std::string constraint_path;</div>
-<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;  <span class="keywordflow">if</span> (node-&gt;get_parameter(<span class="stringliteral">&quot;constraint_approximations_path&quot;</span>, constraint_path))</div>
-<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;  {</div>
-<div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160;    constraints_library_-&gt;loadConstraintApproximations(constraint_path);</div>
-<div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;    std::stringstream ss;</div>
-<div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;    constraints_library_-&gt;printConstraintApproximations(ss);</div>
-<div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;    RCLCPP_INFO_STREAM(LOGGER, ss.str());</div>
-<div class="line"><a name="l00980"></a><span class="lineno">  980</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160;  }</div>
-<div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160;}</div>
+<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;  postSolve();</div>
+<div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160; </div>
+<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;  <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;}</div>
+<div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160; </div>
+<div class="line"><a name="l00942"></a><span class="lineno"><a class="line" href="classompl__interface_1_1ModelBasedPlanningContext.html#a266e27b53bfaf06c333f70244f5142ac">  942</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classompl__interface_1_1ModelBasedPlanningContext.html#a266e27b53bfaf06c333f70244f5142ac">ompl_interface::ModelBasedPlanningContext::registerTerminationCondition</a>(<span class="keyword">const</span> ob::PlannerTerminationCondition&amp; ptc)</div>
+<div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;{</div>
+<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;  std::unique_lock&lt;std::mutex&gt; slock(ptc_lock_);</div>
+<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;  ptc_ = &amp;ptc;</div>
+<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;}</div>
+<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160; </div>
+<div class="line"><a name="l00948"></a><span class="lineno"><a class="line" href="classompl__interface_1_1ModelBasedPlanningContext.html#aad9416c550817656627a486511a85e5b">  948</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classompl__interface_1_1ModelBasedPlanningContext.html#aad9416c550817656627a486511a85e5b">ompl_interface::ModelBasedPlanningContext::unregisterTerminationCondition</a>()</div>
+<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;{</div>
+<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;  std::unique_lock&lt;std::mutex&gt; slock(ptc_lock_);</div>
+<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;  ptc_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;}</div>
+<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160; </div>
+<div class="line"><a name="l00954"></a><span class="lineno"><a class="line" href="classompl__interface_1_1ModelBasedPlanningContext.html#abf1962790ec5f0a1019c245010f36bc9">  954</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classompl__interface_1_1ModelBasedPlanningContext.html#abf1962790ec5f0a1019c245010f36bc9">ompl_interface::ModelBasedPlanningContext::terminate</a>()</div>
+<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;{</div>
+<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160;  std::unique_lock&lt;std::mutex&gt; slock(ptc_lock_);</div>
+<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160;  <span class="keywordflow">if</span> (ptc_)</div>
+<div class="line"><a name="l00958"></a><span class="lineno">  958</span>&#160;  {</div>
+<div class="line"><a name="l00959"></a><span class="lineno">  959</span>&#160;    ptc_-&gt;terminate();</div>
+<div class="line"><a name="l00960"></a><span class="lineno">  960</span>&#160;  }</div>
+<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;}</div>
+<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160; </div>
+<div class="line"><a name="l00964"></a><span class="lineno"><a class="line" href="classompl__interface_1_1ModelBasedPlanningContext.html#a574614e1070dc37374c48d6c3cde0e63">  964</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classompl__interface_1_1ModelBasedPlanningContext.html#a574614e1070dc37374c48d6c3cde0e63">ompl_interface::ModelBasedPlanningContext::saveConstraintApproximations</a>(<span class="keyword">const</span> rclcpp::Node::SharedPtr&amp; node)</div>
+<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160;{</div>
+<div class="line"><a name="l00966"></a><span class="lineno">  966</span>&#160;  std::string constraint_path;</div>
+<div class="line"><a name="l00967"></a><span class="lineno">  967</span>&#160;  <span class="keywordflow">if</span> (node-&gt;get_parameter(<span class="stringliteral">&quot;constraint_approximations_path&quot;</span>, constraint_path))</div>
+<div class="line"><a name="l00968"></a><span class="lineno">  968</span>&#160;  {</div>
+<div class="line"><a name="l00969"></a><span class="lineno">  969</span>&#160;    constraints_library_-&gt;saveConstraintApproximations(constraint_path);</div>
+<div class="line"><a name="l00970"></a><span class="lineno">  970</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00971"></a><span class="lineno">  971</span>&#160;  }</div>
+<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;  RCLCPP_WARN(LOGGER, <span class="stringliteral">&quot;ROS param &#39;constraint_approximations&#39; not found. Unable to save constraint approximations&quot;</span>);</div>
+<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;}</div>
+<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160; </div>
+<div class="line"><a name="l00976"></a><span class="lineno"><a class="line" href="classompl__interface_1_1ModelBasedPlanningContext.html#a3f934ea94b1feafdc1121a2ecc9c2a6b">  976</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classompl__interface_1_1ModelBasedPlanningContext.html#a3f934ea94b1feafdc1121a2ecc9c2a6b">ompl_interface::ModelBasedPlanningContext::loadConstraintApproximations</a>(<span class="keyword">const</span> rclcpp::Node::SharedPtr&amp; node)</div>
+<div class="line"><a name="l00977"></a><span class="lineno">  977</span>&#160;{</div>
+<div class="line"><a name="l00978"></a><span class="lineno">  978</span>&#160;  std::string constraint_path;</div>
+<div class="line"><a name="l00979"></a><span class="lineno">  979</span>&#160;  <span class="keywordflow">if</span> (node-&gt;get_parameter(<span class="stringliteral">&quot;constraint_approximations_path&quot;</span>, constraint_path))</div>
+<div class="line"><a name="l00980"></a><span class="lineno">  980</span>&#160;  {</div>
+<div class="line"><a name="l00981"></a><span class="lineno">  981</span>&#160;    constraints_library_-&gt;loadConstraintApproximations(constraint_path);</div>
+<div class="line"><a name="l00982"></a><span class="lineno">  982</span>&#160;    std::stringstream ss;</div>
+<div class="line"><a name="l00983"></a><span class="lineno">  983</span>&#160;    constraints_library_-&gt;printConstraintApproximations(ss);</div>
+<div class="line"><a name="l00984"></a><span class="lineno">  984</span>&#160;    RCLCPP_INFO_STREAM(LOGGER, ss.str());</div>
+<div class="line"><a name="l00985"></a><span class="lineno">  985</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00986"></a><span class="lineno">  986</span>&#160;  }</div>
+<div class="line"><a name="l00987"></a><span class="lineno">  987</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00988"></a><span class="lineno">  988</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassompl__interface_1_1ModelBasedPlanningContext_html_abf1962790ec5f0a1019c245010f36bc9"><div class="ttname"><a href="classompl__interface_1_1ModelBasedPlanningContext.html#abf1962790ec5f0a1019c245010f36bc9">ompl_interface::ModelBasedPlanningContext::terminate</a></div><div class="ttdeci">bool terminate() override</div><div class="ttdoc">If solve() is running, terminate the computation. Return false if termination not possible....</div><div class="ttdef"><b>Definition:</b> <a href="model__based__planning__context_8cpp_source.html#l00949">model_based_planning_context.cpp:949</a></div></div>
+<div class="ttc" id="aclassompl__interface_1_1ModelBasedPlanningContext_html_abf1962790ec5f0a1019c245010f36bc9"><div class="ttname"><a href="classompl__interface_1_1ModelBasedPlanningContext.html#abf1962790ec5f0a1019c245010f36bc9">ompl_interface::ModelBasedPlanningContext::terminate</a></div><div class="ttdeci">bool terminate() override</div><div class="ttdoc">If solve() is running, terminate the computation. Return false if termination not possible....</div><div class="ttdef"><b>Definition:</b> <a href="model__based__planning__context_8cpp_source.html#l00954">model_based_planning_context.cpp:954</a></div></div>
 <div class="ttc" id="alexical__casts_8h_html"><div class="ttname"><a href="lexical__casts_8h.html">lexical_casts.h</a></div><div class="ttdoc">locale-agnostic conversion functions from floating point numbers to strings</div></div>
 <div class="ttc" id="aclassompl__interface_1_1ModelBasedPlanningContext_html_a4704dbe9cc9015395ac9b29f75c24acc"><div class="ttname"><a href="classompl__interface_1_1ModelBasedPlanningContext.html#a4704dbe9cc9015395ac9b29f75c24acc">ompl_interface::ModelBasedPlanningContext::setPathConstraints</a></div><div class="ttdeci">bool setPathConstraints(const moveit_msgs::msg::Constraints &amp;path_constraints, moveit_msgs::msg::MoveItErrorCodes *error)</div><div class="ttdef"><b>Definition:</b> <a href="model__based__planning__context_8cpp_source.html#l00639">model_based_planning_context.cpp:639</a></div></div>
 <div class="ttc" id="amodel__based__planning__context_8h_html"><div class="ttname"><a href="model__based__planning__context_8h.html">model_based_planning_context.h</a></div></div>
@@ -1071,7 +1076,7 @@ $(function() {
 <div class="ttc" id="aclassmoveit_1_1core_1_1RobotState_html"><div class="ttname"><a href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a></div><div class="ttdoc">Representation of a robot's state. This includes position, velocity, acceleration and effort.</div><div class="ttdef"><b>Definition:</b> <a href="robot__state_8h_source.html#l00155">robot_state.h:155</a></div></div>
 <div class="ttc" id="aclassompl__interface_1_1ModelBasedPlanningContext_html_a4bc253bf6e37d00cf414a3e2fa33fb75"><div class="ttname"><a href="classompl__interface_1_1ModelBasedPlanningContext.html#a4bc253bf6e37d00cf414a3e2fa33fb75">ompl_interface::ModelBasedPlanningContext::ModelBasedPlanningContext</a></div><div class="ttdeci">ModelBasedPlanningContext(const std::string &amp;name, const ModelBasedPlanningContextSpecification &amp;spec)</div><div class="ttdef"><b>Definition:</b> <a href="model__based__planning__context_8cpp_source.html#l00075">model_based_planning_context.cpp:75</a></div></div>
 <div class="ttc" id="aclassrobot__trajectory_1_1RobotTrajectory_html"><div class="ttname"><a href="classrobot__trajectory_1_1RobotTrajectory.html">robot_trajectory::RobotTrajectory</a></div><div class="ttdoc">Maintain a sequence of waypoints and the time durations between these waypoints.</div><div class="ttdef"><b>Definition:</b> <a href="robot__trajectory_8h_source.html#l00091">robot_trajectory.h:91</a></div></div>
-<div class="ttc" id="aclassompl__interface_1_1ModelBasedPlanningContext_html_a3f934ea94b1feafdc1121a2ecc9c2a6b"><div class="ttname"><a href="classompl__interface_1_1ModelBasedPlanningContext.html#a3f934ea94b1feafdc1121a2ecc9c2a6b">ompl_interface::ModelBasedPlanningContext::loadConstraintApproximations</a></div><div class="ttdeci">bool loadConstraintApproximations(const rclcpp::Node::SharedPtr &amp;node)</div><div class="ttdoc">Look up param server 'constraint_approximations' and use its value as the path to load constraint app...</div><div class="ttdef"><b>Definition:</b> <a href="model__based__planning__context_8cpp_source.html#l00971">model_based_planning_context.cpp:971</a></div></div>
+<div class="ttc" id="aclassompl__interface_1_1ModelBasedPlanningContext_html_a3f934ea94b1feafdc1121a2ecc9c2a6b"><div class="ttname"><a href="classompl__interface_1_1ModelBasedPlanningContext.html#a3f934ea94b1feafdc1121a2ecc9c2a6b">ompl_interface::ModelBasedPlanningContext::loadConstraintApproximations</a></div><div class="ttdeci">bool loadConstraintApproximations(const rclcpp::Node::SharedPtr &amp;node)</div><div class="ttdoc">Look up param server 'constraint_approximations' and use its value as the path to load constraint app...</div><div class="ttdef"><b>Definition:</b> <a href="model__based__planning__context_8cpp_source.html#l00976">model_based_planning_context.cpp:976</a></div></div>
 <div class="ttc" id="aconstrained__goal__sampler_8h_html"><div class="ttname"><a href="constrained__goal__sampler_8h.html">constrained_goal_sampler.h</a></div></div>
 <div class="ttc" id="anamespaceplan_html_ab9a5624d048e6b841d11a5f223f02870"><div class="ttname"><a href="namespaceplan.html#ab9a5624d048e6b841d11a5f223f02870">plan.r</a></div><div class="ttdeci">r</div><div class="ttdef"><b>Definition:</b> <a href="plan_8py_source.html#l00056">plan.py:56</a></div></div>
 <div class="ttc" id="aclassompl__interface_1_1ModelBasedPlanningContext_html_a87a8bfa81f20d1c166f127b57e310cbf"><div class="ttname"><a href="classompl__interface_1_1ModelBasedPlanningContext.html#a87a8bfa81f20d1c166f127b57e310cbf">ompl_interface::ModelBasedPlanningContext::setCompleteInitialState</a></div><div class="ttdeci">void setCompleteInitialState(const moveit::core::RobotState &amp;complete_initial_robot_state)</div><div class="ttdef"><b>Definition:</b> <a href="model__based__planning__context_8cpp_source.html#l00603">model_based_planning_context.cpp:603</a></div></div>
@@ -1101,17 +1106,17 @@ $(function() {
 <div class="ttc" id="anamespaceplanning__request__adapter_html_af64b3fa8ebc256d9c5133c6c80ade28f"><div class="ttname"><a href="namespaceplanning__request__adapter.html#af64b3fa8ebc256d9c5133c6c80ade28f">planning_request_adapter::LOGGER</a></div><div class="ttdeci">rclcpp::Logger LOGGER</div><div class="ttdef"><b>Definition:</b> <a href="planning__request__adapter_8cpp_source.html#l00076">planning_request_adapter.cpp:76</a></div></div>
 <div class="ttc" id="aclassompl__interface_1_1ModelBasedPlanningContext_html_a75288f401de83b76f32a2f78f67fab46"><div class="ttname"><a href="classompl__interface_1_1ModelBasedPlanningContext.html#a75288f401de83b76f32a2f78f67fab46">ompl_interface::ModelBasedPlanningContext::setGoalConstraints</a></div><div class="ttdeci">bool setGoalConstraints(const std::vector&lt; moveit_msgs::msg::Constraints &gt; &amp;goal_constraints, const moveit_msgs::msg::Constraints &amp;path_constraints, moveit_msgs::msg::MoveItErrorCodes *error)</div><div class="ttdef"><b>Definition:</b> <a href="model__based__planning__context_8cpp_source.html#l00650">model_based_planning_context.cpp:650</a></div></div>
 <div class="ttc" id="astructompl__interface_1_1ModelBasedPlanningContextSpecification_html"><div class="ttname"><a href="structompl__interface_1_1ModelBasedPlanningContextSpecification.html">ompl_interface::ModelBasedPlanningContextSpecification</a></div><div class="ttdef"><b>Definition:</b> <a href="model__based__planning__context_8h_source.html#l00097">model_based_planning_context.h:97</a></div></div>
-<div class="ttc" id="aclassompl__interface_1_1ModelBasedPlanningContext_html_aad9416c550817656627a486511a85e5b"><div class="ttname"><a href="classompl__interface_1_1ModelBasedPlanningContext.html#aad9416c550817656627a486511a85e5b">ompl_interface::ModelBasedPlanningContext::unregisterTerminationCondition</a></div><div class="ttdeci">void unregisterTerminationCondition()</div><div class="ttdef"><b>Definition:</b> <a href="model__based__planning__context_8cpp_source.html#l00943">model_based_planning_context.cpp:943</a></div></div>
+<div class="ttc" id="aclassompl__interface_1_1ModelBasedPlanningContext_html_aad9416c550817656627a486511a85e5b"><div class="ttname"><a href="classompl__interface_1_1ModelBasedPlanningContext.html#aad9416c550817656627a486511a85e5b">ompl_interface::ModelBasedPlanningContext::unregisterTerminationCondition</a></div><div class="ttdeci">void unregisterTerminationCondition()</div><div class="ttdef"><b>Definition:</b> <a href="model__based__planning__context_8cpp_source.html#l00948">model_based_planning_context.cpp:948</a></div></div>
 <div class="ttc" id="aclassompl__interface_1_1ModelBasedPlanningContext_html_a5dc2ec5f889efedb684a6ae2343377b9"><div class="ttname"><a href="classompl__interface_1_1ModelBasedPlanningContext.html#a5dc2ec5f889efedb684a6ae2343377b9">ompl_interface::ModelBasedPlanningContext::configure</a></div><div class="ttdeci">virtual void configure(const rclcpp::Node::SharedPtr &amp;node, bool use_constraints_approximations)</div><div class="ttdoc">Configure ompl_simple_setup_ and optionally the constraints_library_.</div><div class="ttdef"><b>Definition:</b> <a href="model__based__planning__context_8cpp_source.html#l00103">model_based_planning_context.cpp:103</a></div></div>
 <div class="ttc" id="aclassompl__interface_1_1ModelBasedPlanningContext_html_a1cf2aefc2059251902b0e49f9ca63598"><div class="ttname"><a href="classompl__interface_1_1ModelBasedPlanningContext.html#a1cf2aefc2059251902b0e49f9ca63598">ompl_interface::ModelBasedPlanningContext::setVerboseStateValidityChecks</a></div><div class="ttdeci">void setVerboseStateValidityChecks(bool flag)</div><div class="ttdef"><b>Definition:</b> <a href="model__based__planning__context_8cpp_source.html#l00489">model_based_planning_context.cpp:489</a></div></div>
 <div class="ttc" id="astructplanning__interface_1_1MotionPlanDetailedResponse_html_a66790e7b65abab7806d360dccb7e479c"><div class="ttname"><a href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a66790e7b65abab7806d360dccb7e479c">planning_interface::MotionPlanDetailedResponse::error_code_</a></div><div class="ttdeci">moveit_msgs::msg::MoveItErrorCodes error_code_</div><div class="ttdef"><b>Definition:</b> <a href="planning__response_8h_source.html#l00098">planning_response.h:98</a></div></div>
 <div class="ttc" id="aclassompl__interface_1_1ModelBasedPlanningContext_html_aaa0b5e408fbdf6654e3ad7a4ecc02c07"><div class="ttname"><a href="classompl__interface_1_1ModelBasedPlanningContext.html#aaa0b5e408fbdf6654e3ad7a4ecc02c07">ompl_interface::ModelBasedPlanningContext::setPlanningVolume</a></div><div class="ttdeci">void setPlanningVolume(const moveit_msgs::msg::WorkspaceParameters &amp;wparams)</div><div class="ttdef"><b>Definition:</b> <a href="model__based__planning__context_8cpp_source.html#l00411">model_based_planning_context.cpp:411</a></div></div>
 <div class="ttc" id="aclassompl__interface_1_1ModelBasedPlanningContext_html_aaa11c4c5d58af6ea0ca00d5386fb35d2"><div class="ttname"><a href="classompl__interface_1_1ModelBasedPlanningContext.html#aaa11c4c5d58af6ea0ca00d5386fb35d2">ompl_interface::ModelBasedPlanningContext::preSolve</a></div><div class="ttdeci">void preSolve()</div><div class="ttdef"><b>Definition:</b> <a href="model__based__planning__context_8cpp_source.html#l00729">model_based_planning_context.cpp:729</a></div></div>
 <div class="ttc" id="anamespaceplanning__interface_html"><div class="ttname"><a href="namespaceplanning__interface.html">planning_interface</a></div><div class="ttdoc">This namespace includes the base class for MoveIt planners.</div><div class="ttdef"><b>Definition:</b> <a href="planning__interface_8h_source.html#l00052">planning_interface.h:52</a></div></div>
-<div class="ttc" id="aclassompl__interface_1_1ModelBasedPlanningContext_html_a266e27b53bfaf06c333f70244f5142ac"><div class="ttname"><a href="classompl__interface_1_1ModelBasedPlanningContext.html#a266e27b53bfaf06c333f70244f5142ac">ompl_interface::ModelBasedPlanningContext::registerTerminationCondition</a></div><div class="ttdeci">void registerTerminationCondition(const ob::PlannerTerminationCondition &amp;ptc)</div><div class="ttdef"><b>Definition:</b> <a href="model__based__planning__context_8cpp_source.html#l00937">model_based_planning_context.cpp:937</a></div></div>
+<div class="ttc" id="aclassompl__interface_1_1ModelBasedPlanningContext_html_a266e27b53bfaf06c333f70244f5142ac"><div class="ttname"><a href="classompl__interface_1_1ModelBasedPlanningContext.html#a266e27b53bfaf06c333f70244f5142ac">ompl_interface::ModelBasedPlanningContext::registerTerminationCondition</a></div><div class="ttdeci">void registerTerminationCondition(const ob::PlannerTerminationCondition &amp;ptc)</div><div class="ttdef"><b>Definition:</b> <a href="model__based__planning__context_8cpp_source.html#l00942">model_based_planning_context.cpp:942</a></div></div>
 <div class="ttc" id="aclassompl__interface_1_1ModelBasedPlanningContext_html_aad787c8cbe073624f6e968ab0d7456be"><div class="ttname"><a href="classompl__interface_1_1ModelBasedPlanningContext.html#aad787c8cbe073624f6e968ab0d7456be">ompl_interface::ModelBasedPlanningContext::constraints_library_</a></div><div class="ttdeci">ConstraintsLibraryPtr constraints_library_</div><div class="ttdef"><b>Definition:</b> <a href="model__based__planning__context_8h_source.html#l00476">model_based_planning_context.h:476</a></div></div>
 <div class="ttc" id="anamespaceompl__interface_html_ad687a6424381612a8e56b143b331b963"><div class="ttname"><a href="namespaceompl__interface.html#ad687a6424381612a8e56b143b331b963">ompl_interface::InterpolationFunction</a></div><div class="ttdeci">std::function&lt; bool(const ompl::base::State *from, const ompl::base::State *to, const double t, ompl::base::State *state)&gt; InterpolationFunction</div><div class="ttdef"><b>Definition:</b> <a href="model__based__state__space_8h_source.html#l00081">model_based_state_space.h:81</a></div></div>
-<div class="ttc" id="aclassompl__interface_1_1ModelBasedPlanningContext_html_a574614e1070dc37374c48d6c3cde0e63"><div class="ttname"><a href="classompl__interface_1_1ModelBasedPlanningContext.html#a574614e1070dc37374c48d6c3cde0e63">ompl_interface::ModelBasedPlanningContext::saveConstraintApproximations</a></div><div class="ttdeci">bool saveConstraintApproximations(const rclcpp::Node::SharedPtr &amp;node)</div><div class="ttdoc">Look up param server 'constraint_approximations' and use its value as the path to save constraint app...</div><div class="ttdef"><b>Definition:</b> <a href="model__based__planning__context_8cpp_source.html#l00959">model_based_planning_context.cpp:959</a></div></div>
+<div class="ttc" id="aclassompl__interface_1_1ModelBasedPlanningContext_html_a574614e1070dc37374c48d6c3cde0e63"><div class="ttname"><a href="classompl__interface_1_1ModelBasedPlanningContext.html#a574614e1070dc37374c48d6c3cde0e63">ompl_interface::ModelBasedPlanningContext::saveConstraintApproximations</a></div><div class="ttdeci">bool saveConstraintApproximations(const rclcpp::Node::SharedPtr &amp;node)</div><div class="ttdoc">Look up param server 'constraint_approximations' and use its value as the path to save constraint app...</div><div class="ttdef"><b>Definition:</b> <a href="model__based__planning__context_8cpp_source.html#l00964">model_based_planning_context.cpp:964</a></div></div>
 <div class="ttc" id="agoal__union_8h_html"><div class="ttname"><a href="goal__union_8h.html">goal_union.h</a></div></div>
 <div class="ttc" id="astructplanning__interface_1_1MotionPlanResponse_html_a650d90c6d03969c1ff6410d6dfd69968"><div class="ttname"><a href="structplanning__interface_1_1MotionPlanResponse.html#a650d90c6d03969c1ff6410d6dfd69968">planning_interface::MotionPlanResponse::planning_time_</a></div><div class="ttdeci">double planning_time_</div><div class="ttdef"><b>Definition:</b> <a href="planning__response_8h_source.html#l00119">planning_response.h:119</a></div></div>
 <div class="ttc" id="anamespacemoveit_1_1core_html_a4db025558cc2dfdbd52da138ffb4f6d6"><div class="ttname"><a href="namespacemoveit_1_1core.html#a4db025558cc2dfdbd52da138ffb4f6d6">moveit::core::toDouble</a></div><div class="ttdeci">double toDouble(const std::string &amp;s)</div><div class="ttdoc">Converts a std::string to double using the classic C locale.</div><div class="ttdef"><b>Definition:</b> <a href="lexical__casts_8cpp_source.html#l00144">lexical_casts.cpp:144</a></div></div>
@@ -1121,7 +1126,7 @@ $(function() {
 <div class="ttc" id="aclassompl__interface_1_1ModelBasedPlanningContext_html_ac220ab7de080e32fcb91f3644e7bb1f2"><div class="ttname"><a href="classompl__interface_1_1ModelBasedPlanningContext.html#ac220ab7de080e32fcb91f3644e7bb1f2">ompl_interface::ModelBasedPlanningContext::allocPathConstrainedSampler</a></div><div class="ttdeci">virtual ob::StateSamplerPtr allocPathConstrainedSampler(const ompl::base::StateSpace *ss) const</div><div class="ttdef"><b>Definition:</b> <a href="model__based__planning__context_8cpp_source.html#l00226">model_based_planning_context.cpp:226</a></div></div>
 <div class="ttc" id="astructplanning__interface_1_1MotionPlanDetailedResponse_html"><div class="ttname"><a href="structplanning__interface_1_1MotionPlanDetailedResponse.html">planning_interface::MotionPlanDetailedResponse</a></div><div class="ttdef"><b>Definition:</b> <a href="planning__response_8h_source.html#l00091">planning_response.h:91</a></div></div>
 <div class="ttc" id="aclassompl__interface_1_1ModelBasedPlanningContext_html_aee14229aca593e33a73106cc6275ed73"><div class="ttname"><a href="classompl__interface_1_1ModelBasedPlanningContext.html#aee14229aca593e33a73106cc6275ed73">ompl_interface::ModelBasedPlanningContext::constructGoal</a></div><div class="ttdeci">virtual ob::GoalPtr constructGoal()</div><div class="ttdef"><b>Definition:</b> <a href="model__based__planning__context_8cpp_source.html#l00497">model_based_planning_context.cpp:497</a></div></div>
-<div class="ttc" id="aclassompl__interface_1_1ModelBasedPlanningContext_html_ae8157b2f232f07979313536e8fec3dc8"><div class="ttname"><a href="classompl__interface_1_1ModelBasedPlanningContext.html#ae8157b2f232f07979313536e8fec3dc8">ompl_interface::ModelBasedPlanningContext::solve</a></div><div class="ttdeci">bool solve(planning_interface::MotionPlanResponse &amp;res) override</div><div class="ttdoc">Solve the motion planning problem and store the result in res. This function should not clear data st...</div><div class="ttdef"><b>Definition:</b> <a href="model__based__planning__context_8cpp_source.html#l00755">model_based_planning_context.cpp:755</a></div></div>
+<div class="ttc" id="aclassompl__interface_1_1ModelBasedPlanningContext_html_ae8157b2f232f07979313536e8fec3dc8"><div class="ttname"><a href="classompl__interface_1_1ModelBasedPlanningContext.html#ae8157b2f232f07979313536e8fec3dc8">ompl_interface::ModelBasedPlanningContext::solve</a></div><div class="ttdeci">bool solve(planning_interface::MotionPlanResponse &amp;res) override</div><div class="ttdoc">Solve the motion planning problem and store the result in res. This function should not clear data st...</div><div class="ttdef"><b>Definition:</b> <a href="model__based__planning__context_8cpp_source.html#l00760">model_based_planning_context.cpp:760</a></div></div>
 <div class="ttc" id="astructplanning__interface_1_1MotionPlanDetailedResponse_html_a81dc1b63e35cb87a87e5ba2f9d3bffcd"><div class="ttname"><a href="structplanning__interface_1_1MotionPlanDetailedResponse.html#a81dc1b63e35cb87a87e5ba2f9d3bffcd">planning_interface::MotionPlanDetailedResponse::processing_time_</a></div><div class="ttdeci">std::vector&lt; double &gt; processing_time_</div><div class="ttdef"><b>Definition:</b> <a href="planning__response_8h_source.html#l00097">planning_response.h:97</a></div></div>
 <div class="ttc" id="aclassompl__interface_1_1ModelBasedPlanningContext_html_a224e7454fb7ef7a95e1cb44b88e82891"><div class="ttname"><a href="classompl__interface_1_1ModelBasedPlanningContext.html#a224e7454fb7ef7a95e1cb44b88e82891">ompl_interface::ModelBasedPlanningContext::clear</a></div><div class="ttdeci">void clear() override</div><div class="ttdoc">Clear the data structures used by the planner.</div><div class="ttdef"><b>Definition:</b> <a href="model__based__planning__context_8cpp_source.html#l00610">model_based_planning_context.cpp:610</a></div></div>
 <div class="ttc" id="aclassompl__interface_1_1ModelBasedPlanningContext_html_ac93b0c6364d87a903dec03f5281871e5"><div class="ttname"><a href="classompl__interface_1_1ModelBasedPlanningContext.html#ac93b0c6364d87a903dec03f5281871e5">ompl_interface::ModelBasedPlanningContext::setProjectionEvaluator</a></div><div class="ttdeci">void setProjectionEvaluator(const std::string &amp;peval)</div><div class="ttdef"><b>Definition:</b> <a href="model__based__planning__context_8cpp_source.html#l00149">model_based_planning_context.cpp:149</a></div></div>
