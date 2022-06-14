@@ -108,30 +108,32 @@ $(function() {
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">/* Author: Ioan Sucan */</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="robot__model__loader_8h.html">moveit/robot_model_loader/robot_model_loader.h</a>&gt;</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &lt;rclcpp/rclcpp.hpp&gt;</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> std::string ROBOT_DESCRIPTION = <span class="stringliteral">&quot;robot_description&quot;</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &lt;rclcpp/executors/multi_threaded_executor.hpp&gt;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;rclcpp/node.hpp&gt;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;rclcpp/utilities.hpp&gt;</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">using namespace </span>std::chrono_literals;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> std::string ROBOT_DESCRIPTION = <span class="stringliteral">&quot;robot_description&quot;</span>;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="print__planning__model__info_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">   44</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="print__planning__model__info_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv)</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  rclcpp::init(argc, argv);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keyword">auto</span> node = rclcpp::Node::make_shared(<span class="stringliteral">&quot;print_model_info_to_console&quot;</span>);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  rclcpp::executors::MultiThreadedExecutor executor;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  executor.add_node(node);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="classrobot__model__loader_1_1RobotModelLoader.html">robot_model_loader::RobotModelLoader</a> rml(node, ROBOT_DESCRIPTION);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  rclcpp::sleep_for(500ms);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  rml.<a class="code" href="classrobot__model__loader_1_1RobotModelLoader.html#a40e202c404ae62a984861b273a401fcd">getModel</a>()-&gt;printModelInfo(std::cout);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  executor.spin();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  rclcpp::shutdown();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">using namespace </span>std::chrono_literals;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="print__planning__model__info_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">   46</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="print__planning__model__info_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  rclcpp::init(argc, argv);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keyword">auto</span> node = rclcpp::Node::make_shared(<span class="stringliteral">&quot;print_model_info_to_console&quot;</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  rclcpp::executors::MultiThreadedExecutor executor;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  executor.add_node(node);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <a class="code" href="classrobot__model__loader_1_1RobotModelLoader.html">robot_model_loader::RobotModelLoader</a> rml(node, ROBOT_DESCRIPTION);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  rclcpp::sleep_for(500ms);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  rml.<a class="code" href="classrobot__model__loader_1_1RobotModelLoader.html#a40e202c404ae62a984861b273a401fcd">getModel</a>()-&gt;printModelInfo(std::cout);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  executor.spin();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  rclcpp::shutdown();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aprint__planning__model__info_8cpp_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="print__planning__model__info_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="print__planning__model__info_8cpp_source.html#l00044">print_planning_model_info.cpp:44</a></div></div>
+<div class="ttc" id="aprint__planning__model__info_8cpp_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="print__planning__model__info_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="print__planning__model__info_8cpp_source.html#l00046">print_planning_model_info.cpp:46</a></div></div>
 <div class="ttc" id="aclassrobot__model__loader_1_1RobotModelLoader_html"><div class="ttname"><a href="classrobot__model__loader_1_1RobotModelLoader.html">robot_model_loader::RobotModelLoader</a></div><div class="ttdef"><b>Definition:</b> <a href="robot__model__loader_8h_source.html#l00081">robot_model_loader.h:81</a></div></div>
 <div class="ttc" id="aclassrobot__model__loader_1_1RobotModelLoader_html_a40e202c404ae62a984861b273a401fcd"><div class="ttname"><a href="classrobot__model__loader_1_1RobotModelLoader.html#a40e202c404ae62a984861b273a401fcd">robot_model_loader::RobotModelLoader::getModel</a></div><div class="ttdeci">const moveit::core::RobotModelPtr &amp; getModel() const</div><div class="ttdoc">Get the constructed planning_models::RobotModel.</div><div class="ttdef"><b>Definition:</b> <a href="robot__model__loader_8h_source.html#l00120">robot_model_loader.h:120</a></div></div>
 <div class="ttc" id="arobot__model__loader_8h_html"><div class="ttname"><a href="robot__model__loader_8h.html">robot_model_loader.h</a></div></div>

@@ -109,70 +109,77 @@ $(function() {
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="planning__scene__monitor_8h.html">moveit/planning_scene_monitor/planning_scene_monitor.h</a>&gt;</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &lt;geometric_shapes/solid_primitive_dims.h&gt;</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;rclcpp/rclcpp.hpp&gt;</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> rclcpp::Logger <a class="code" href="namespaceplanning__request__adapter.html#af64b3fa8ebc256d9c5133c6c80ade28f">LOGGER</a> = rclcpp::get_logger(<span class="stringliteral">&quot;moveit_ros.planning_scene_monitor.demo_scene&quot;</span>);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> std::string ROBOT_DESCRIPTION = <span class="stringliteral">&quot;robot_description&quot;</span>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="demo__scene_8cpp.html#a353488cc6a8ed0e024a738fad47e3e7c">   46</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="demo__scene_8cpp.html#a353488cc6a8ed0e024a738fad47e3e7c">sendKnife</a>(<span class="keyword">const</span> rclcpp::Node::SharedPtr&amp; node)</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">auto</span> pub_aco = node-&gt;create_publisher&lt;moveit_msgs::msg::AttachedCollisionObject&gt;(<span class="stringliteral">&quot;attached_collision_object&quot;</span>, 10);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  moveit_msgs::msg::AttachedCollisionObject aco;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  aco.link_name = <span class="stringliteral">&quot;r_wrist_roll_link&quot;</span>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  aco.touch_links.push_back(<span class="stringliteral">&quot;r_wrist_roll_link&quot;</span>);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  aco.touch_links.push_back(<span class="stringliteral">&quot;r_gripper_palm_link&quot;</span>);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  aco.touch_links.push_back(<span class="stringliteral">&quot;r_gripper_led_frame&quot;</span>);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  aco.touch_links.push_back(<span class="stringliteral">&quot;r_gripper_motor_accelerometer_link&quot;</span>);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  aco.touch_links.push_back(<span class="stringliteral">&quot;r_gripper_tool_frame&quot;</span>);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  aco.touch_links.push_back(<span class="stringliteral">&quot;r_gripper_motor_slider_link&quot;</span>);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  aco.touch_links.push_back(<span class="stringliteral">&quot;r_gripper_motor_screw_link&quot;</span>);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  aco.touch_links.push_back(<span class="stringliteral">&quot;r_gripper_l_finger_link&quot;</span>);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  aco.touch_links.push_back(<span class="stringliteral">&quot;r_gripper_l_finger_tip_link&quot;</span>);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  aco.touch_links.push_back(<span class="stringliteral">&quot;r_gripper_r_finger_link&quot;</span>);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  aco.touch_links.push_back(<span class="stringliteral">&quot;r_gripper_r_finger_tip_link&quot;</span>);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  aco.touch_links.push_back(<span class="stringliteral">&quot;r_gripper_l_finger_tip_frame&quot;</span>);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  moveit_msgs::msg::CollisionObject&amp; co = aco.object;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  co.id = <span class="stringliteral">&quot;knife&quot;</span>;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  co.header.stamp = rclcpp::Clock().now();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  co.header.frame_id = aco.link_name;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  co.pose.orientation.w = 1.0;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  co.operation = moveit_msgs::msg::CollisionObject::ADD;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  co.primitives.resize(1);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  co.primitives[0].type = shape_msgs::msg::SolidPrimitive::BOX;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  co.primitives[0].dimensions.push_back(0.1);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  co.primitives[0].dimensions.push_back(0.1);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  co.primitives[0].dimensions.push_back(0.4);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  co.primitive_poses.resize(1);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  co.primitive_poses[0].position.x = 0.1;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  co.primitive_poses[0].position.y = 0;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  co.primitive_poses[0].position.z = -0.2;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keyword">using namespace </span>std::chrono_literals;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  pub_aco-&gt;publish(aco);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  rclcpp::sleep_for(1s);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  pub_aco-&gt;publish(aco);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  RCLCPP_INFO(LOGGER, <span class="stringliteral">&quot;Object published.&quot;</span>);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  rclcpp::sleep_for(1500ms);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="demo__scene_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">   88</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="demo__scene_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv)</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;{</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  rclcpp::init(argc, argv);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keyword">auto</span> node = rclcpp::Node::make_shared(<span class="stringliteral">&quot;demo_scene&quot;</span>);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <a class="code" href="demo__scene_8cpp.html#a353488cc6a8ed0e024a738fad47e3e7c">sendKnife</a>(node);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  rclcpp::spin(node);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;rclcpp/clock.hpp&gt;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;rclcpp/executors.hpp&gt;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;rclcpp/logger.hpp&gt;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;rclcpp/logging.hpp&gt;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;rclcpp/node.hpp&gt;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;rclcpp/publisher.hpp&gt;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;rclcpp/qos_event.hpp&gt;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &lt;rclcpp/time.hpp&gt;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &lt;rclcpp/utilities.hpp&gt;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> rclcpp::Logger <a class="code" href="namespaceplanning__request__adapter.html#af64b3fa8ebc256d9c5133c6c80ade28f">LOGGER</a> = rclcpp::get_logger(<span class="stringliteral">&quot;moveit_ros.planning_scene_monitor.demo_scene&quot;</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> std::string ROBOT_DESCRIPTION = <span class="stringliteral">&quot;robot_description&quot;</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="demo__scene_8cpp.html#a353488cc6a8ed0e024a738fad47e3e7c">   53</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="demo__scene_8cpp.html#a353488cc6a8ed0e024a738fad47e3e7c">sendKnife</a>(<span class="keyword">const</span> rclcpp::Node::SharedPtr&amp; node)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keyword">auto</span> pub_aco = node-&gt;create_publisher&lt;moveit_msgs::msg::AttachedCollisionObject&gt;(<span class="stringliteral">&quot;attached_collision_object&quot;</span>, 10);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  moveit_msgs::msg::AttachedCollisionObject aco;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  aco.link_name = <span class="stringliteral">&quot;r_wrist_roll_link&quot;</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  aco.touch_links.push_back(<span class="stringliteral">&quot;r_wrist_roll_link&quot;</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  aco.touch_links.push_back(<span class="stringliteral">&quot;r_gripper_palm_link&quot;</span>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  aco.touch_links.push_back(<span class="stringliteral">&quot;r_gripper_led_frame&quot;</span>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  aco.touch_links.push_back(<span class="stringliteral">&quot;r_gripper_motor_accelerometer_link&quot;</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  aco.touch_links.push_back(<span class="stringliteral">&quot;r_gripper_tool_frame&quot;</span>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  aco.touch_links.push_back(<span class="stringliteral">&quot;r_gripper_motor_slider_link&quot;</span>);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  aco.touch_links.push_back(<span class="stringliteral">&quot;r_gripper_motor_screw_link&quot;</span>);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  aco.touch_links.push_back(<span class="stringliteral">&quot;r_gripper_l_finger_link&quot;</span>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  aco.touch_links.push_back(<span class="stringliteral">&quot;r_gripper_l_finger_tip_link&quot;</span>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  aco.touch_links.push_back(<span class="stringliteral">&quot;r_gripper_r_finger_link&quot;</span>);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  aco.touch_links.push_back(<span class="stringliteral">&quot;r_gripper_r_finger_tip_link&quot;</span>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  aco.touch_links.push_back(<span class="stringliteral">&quot;r_gripper_l_finger_tip_frame&quot;</span>);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  moveit_msgs::msg::CollisionObject&amp; co = aco.object;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  co.id = <span class="stringliteral">&quot;knife&quot;</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  co.header.stamp = rclcpp::Clock().now();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  co.header.frame_id = aco.link_name;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  co.pose.orientation.w = 1.0;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  co.operation = moveit_msgs::msg::CollisionObject::ADD;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  co.primitives.resize(1);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  co.primitives[0].type = shape_msgs::msg::SolidPrimitive::BOX;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  co.primitives[0].dimensions.push_back(0.1);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  co.primitives[0].dimensions.push_back(0.1);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  co.primitives[0].dimensions.push_back(0.4);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  co.primitive_poses.resize(1);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  co.primitive_poses[0].position.x = 0.1;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  co.primitive_poses[0].position.y = 0;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  co.primitive_poses[0].position.z = -0.2;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keyword">using namespace </span>std::chrono_literals;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  pub_aco-&gt;publish(aco);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  rclcpp::sleep_for(1s);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  pub_aco-&gt;publish(aco);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  RCLCPP_INFO(LOGGER, <span class="stringliteral">&quot;Object published.&quot;</span>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  rclcpp::sleep_for(1500ms);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="demo__scene_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">   95</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="demo__scene_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;{</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  rclcpp::init(argc, argv);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keyword">auto</span> node = rclcpp::Node::make_shared(<span class="stringliteral">&quot;demo_scene&quot;</span>);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <a class="code" href="demo__scene_8cpp.html#a353488cc6a8ed0e024a738fad47e3e7c">sendKnife</a>(node);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  rclcpp::spin(node);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="ademo__scene_8cpp_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="demo__scene_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="demo__scene_8cpp_source.html#l00088">demo_scene.cpp:88</a></div></div>
-<div class="ttc" id="ademo__scene_8cpp_html_a353488cc6a8ed0e024a738fad47e3e7c"><div class="ttname"><a href="demo__scene_8cpp.html#a353488cc6a8ed0e024a738fad47e3e7c">sendKnife</a></div><div class="ttdeci">void sendKnife(const rclcpp::Node::SharedPtr &amp;node)</div><div class="ttdef"><b>Definition:</b> <a href="demo__scene_8cpp_source.html#l00046">demo_scene.cpp:46</a></div></div>
+<div class="ttc" id="ademo__scene_8cpp_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="demo__scene_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="demo__scene_8cpp_source.html#l00095">demo_scene.cpp:95</a></div></div>
+<div class="ttc" id="ademo__scene_8cpp_html_a353488cc6a8ed0e024a738fad47e3e7c"><div class="ttname"><a href="demo__scene_8cpp.html#a353488cc6a8ed0e024a738fad47e3e7c">sendKnife</a></div><div class="ttdeci">void sendKnife(const rclcpp::Node::SharedPtr &amp;node)</div><div class="ttdef"><b>Definition:</b> <a href="demo__scene_8cpp_source.html#l00053">demo_scene.cpp:53</a></div></div>
 <div class="ttc" id="aplanning__scene__monitor_8h_html"><div class="ttname"><a href="planning__scene__monitor_8h.html">planning_scene_monitor.h</a></div></div>
 <div class="ttc" id="anamespaceplanning__request__adapter_html_af64b3fa8ebc256d9c5133c6c80ade28f"><div class="ttname"><a href="namespaceplanning__request__adapter.html#af64b3fa8ebc256d9c5133c6c80ade28f">planning_request_adapter::LOGGER</a></div><div class="ttdeci">rclcpp::Logger LOGGER</div><div class="ttdef"><b>Definition:</b> <a href="planning__request__adapter_8cpp_source.html#l00076">planning_request_adapter.cpp:76</a></div></div>
 <!-- start footer part -->

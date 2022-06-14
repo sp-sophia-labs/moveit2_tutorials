@@ -151,27 +151,35 @@ $(function() {
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        output=<span class="stringliteral">&quot;screen&quot;</span>,</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    )</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="comment"># Load controllers</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    load_controllers = []</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">for</span> controller <span class="keywordflow">in</span> [<span class="stringliteral">&quot;panda_arm_controller&quot;</span>, <span class="stringliteral">&quot;joint_state_broadcaster&quot;</span>]:</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        load_controllers += [</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            ExecuteProcess(</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                cmd=[<span class="stringliteral">&quot;ros2 run controller_manager spawner {}&quot;</span>.format(controller)],</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                shell=<span class="keyword">True</span>,</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                output=<span class="stringliteral">&quot;screen&quot;</span>,</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            )</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        ]</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> LaunchDescription(</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        [</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            rviz_node,</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            static_tf,</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            pose_tracking_node,</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            ros2_control_node,</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            robot_state_publisher,</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        ]</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        + load_controllers</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    )</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    joint_state_broadcaster_spawner = Node(</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        package=<span class="stringliteral">&quot;controller_manager&quot;</span>,</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        executable=<span class="stringliteral">&quot;spawner&quot;</span>,</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        arguments=[</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="stringliteral">&quot;joint_state_broadcaster&quot;</span>,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="stringliteral">&quot;--controller-manager-timeout&quot;</span>,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="stringliteral">&quot;300&quot;</span>,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="stringliteral">&quot;--controller-manager&quot;</span>,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="stringliteral">&quot;/controller_manager&quot;</span>,</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        ],</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    )</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    panda_arm_controller_spawner = Node(</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        package=<span class="stringliteral">&quot;controller_manager&quot;</span>,</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        executable=<span class="stringliteral">&quot;spawner&quot;</span>,</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        arguments=[<span class="stringliteral">&quot;panda_arm_controller&quot;</span>, <span class="stringliteral">&quot;-c&quot;</span>, <span class="stringliteral">&quot;/controller_manager&quot;</span>],</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    )</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">return</span> LaunchDescription(</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        [</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            rviz_node,</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            static_tf,</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            pose_tracking_node,</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            ros2_control_node,</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            joint_state_broadcaster_spawner,</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            panda_arm_controller_spawner,</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            robot_state_publisher,</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        ]</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    )</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacecreate__ikfast__moveit__plugin_html_a0c9b4e891e3b0ed1d9e9da320cee114b"><div class="ttname"><a href="namespacecreate__ikfast__moveit__plugin.html#a0c9b4e891e3b0ed1d9e9da320cee114b">create_ikfast_moveit_plugin.get_package_share_directory</a></div><div class="ttdeci">def get_package_share_directory(pkg_name)</div><div class="ttdef"><b>Definition:</b> <a href="create__ikfast__moveit__plugin_8py_source.html#l00070">create_ikfast_moveit_plugin.py:70</a></div></div>
 <div class="ttc" id="anamespacepose__tracking__example_html_a76321894e390c49e4a92d3615de2b43e"><div class="ttname"><a href="namespacepose__tracking__example.html#a76321894e390c49e4a92d3615de2b43e">pose_tracking_example.generate_launch_description</a></div><div class="ttdeci">def generate_launch_description()</div><div class="ttdef"><b>Definition:</b> <a href="pose__tracking__example_8launch_8py_source.html#l00010">pose_tracking_example.launch.py:10</a></div></div>

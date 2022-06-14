@@ -108,34 +108,36 @@ $(function() {
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">/* Author: Ioan Sucan */</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="constraint__sampler_8h.html">moveit/constraint_samplers/constraint_sampler.h</a>&gt;</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceconstraint__samplers.html">constraint_samplers</a></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> rclcpp::Logger LOGGER = rclcpp::get_logger(<span class="stringliteral">&quot;moveit_constraint_samplers.constraint_sampler&quot;</span>);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<a class="code" href="classconstraint__samplers_1_1ConstraintSampler.html#a327856a0ff6a92b65660360db3b855b2">constraint_samplers::ConstraintSampler::ConstraintSampler</a>(<span class="keyword">const</span> planning_scene::PlanningSceneConstPtr&amp; <a class="code" href="namespacepick.html#a2ee00a4cb697b06d098335ade68b33ae">scene</a>,</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                                                          <span class="keyword">const</span> std::string&amp; group_name)</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  : is_valid_(false), scene_(<a class="code" href="namespacepick.html#a2ee00a4cb697b06d098335ade68b33ae">scene</a>), jmg_(<a class="code" href="namespacepick.html#a2ee00a4cb697b06d098335ade68b33ae">scene</a>-&gt;getRobotModel()-&gt;getJointModelGroup(group_name)), verbose_(false)</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="classconstraint__samplers_1_1ConstraintSampler.html#aacf8b5fc42c314e0e81acb0a88e4ba48">jmg_</a>)</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    RCLCPP_ERROR(LOGGER, <span class="stringliteral">&quot;A JointModelGroup should have been specified for the constraint sampler&quot;</span>);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classconstraint__samplers_1_1ConstraintSampler.html#ab9b7e3ef1f1feb1442f90adf8e85ed09">constraint_samplers::ConstraintSampler::clear</a>()</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  is_valid_ = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  frame_depends_.clear();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}  <span class="comment">// namespace constraint_samplers</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &lt;rclcpp/logger.hpp&gt;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;rclcpp/logging.hpp&gt;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceconstraint__samplers.html">constraint_samplers</a></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> rclcpp::Logger LOGGER = rclcpp::get_logger(<span class="stringliteral">&quot;moveit_constraint_samplers.constraint_sampler&quot;</span>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<a class="code" href="classconstraint__samplers_1_1ConstraintSampler.html#a327856a0ff6a92b65660360db3b855b2">constraint_samplers::ConstraintSampler::ConstraintSampler</a>(<span class="keyword">const</span> planning_scene::PlanningSceneConstPtr&amp; <a class="code" href="namespacepick.html#a2ee00a4cb697b06d098335ade68b33ae">scene</a>,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                                                          <span class="keyword">const</span> std::string&amp; group_name)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  : is_valid_(false), scene_(<a class="code" href="namespacepick.html#a2ee00a4cb697b06d098335ade68b33ae">scene</a>), jmg_(<a class="code" href="namespacepick.html#a2ee00a4cb697b06d098335ade68b33ae">scene</a>-&gt;getRobotModel()-&gt;getJointModelGroup(group_name)), verbose_(false)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="classconstraint__samplers_1_1ConstraintSampler.html#aacf8b5fc42c314e0e81acb0a88e4ba48">jmg_</a>)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    RCLCPP_ERROR(LOGGER, <span class="stringliteral">&quot;A JointModelGroup should have been specified for the constraint sampler&quot;</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classconstraint__samplers_1_1ConstraintSampler.html#ab9b7e3ef1f1feb1442f90adf8e85ed09">constraint_samplers::ConstraintSampler::clear</a>()</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  is_valid_ = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  frame_depends_.clear();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}  <span class="comment">// namespace constraint_samplers</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassconstraint__samplers_1_1ConstraintSampler_html_aacf8b5fc42c314e0e81acb0a88e4ba48"><div class="ttname"><a href="classconstraint__samplers_1_1ConstraintSampler.html#aacf8b5fc42c314e0e81acb0a88e4ba48">constraint_samplers::ConstraintSampler::jmg_</a></div><div class="ttdeci">const moveit::core::JointModelGroup *const jmg_</div><div class="ttdoc">Holds the joint model group associated with this constraint.</div><div class="ttdef"><b>Definition:</b> <a href="constraint__sampler_8h_source.html#l00322">constraint_sampler.h:322</a></div></div>
 <div class="ttc" id="anamespacepick_html_a2ee00a4cb697b06d098335ade68b33ae"><div class="ttname"><a href="namespacepick.html#a2ee00a4cb697b06d098335ade68b33ae">pick.scene</a></div><div class="ttdeci">scene</div><div class="ttdef"><b>Definition:</b> <a href="pick_8py_source.html#l00052">pick.py:52</a></div></div>
 <div class="ttc" id="anamespaceconstraint__samplers_html"><div class="ttname"><a href="namespaceconstraint__samplers.html">constraint_samplers</a></div><div class="ttdoc">The constraint samplers namespace contains a number of methods for generating samples based on a cons...</div><div class="ttdef"><b>Definition:</b> <a href="constraint__sampler_8h_source.html#l00051">constraint_sampler.h:51</a></div></div>
-<div class="ttc" id="aclassconstraint__samplers_1_1ConstraintSampler_html_ab9b7e3ef1f1feb1442f90adf8e85ed09"><div class="ttname"><a href="classconstraint__samplers_1_1ConstraintSampler.html#ab9b7e3ef1f1feb1442f90adf8e85ed09">constraint_samplers::ConstraintSampler::clear</a></div><div class="ttdeci">virtual void clear()</div><div class="ttdoc">Clears all data from the constraint.</div><div class="ttdef"><b>Definition:</b> <a href="constraint__sampler_8cpp_source.html#l00085">constraint_sampler.cpp:85</a></div></div>
+<div class="ttc" id="aclassconstraint__samplers_1_1ConstraintSampler_html_ab9b7e3ef1f1feb1442f90adf8e85ed09"><div class="ttname"><a href="classconstraint__samplers_1_1ConstraintSampler.html#ab9b7e3ef1f1feb1442f90adf8e85ed09">constraint_samplers::ConstraintSampler::clear</a></div><div class="ttdeci">virtual void clear()</div><div class="ttdoc">Clears all data from the constraint.</div><div class="ttdef"><b>Definition:</b> <a href="constraint__sampler_8cpp_source.html#l00087">constraint_sampler.cpp:87</a></div></div>
 <div class="ttc" id="aconstraint__sampler_8h_html"><div class="ttname"><a href="constraint__sampler_8h.html">constraint_sampler.h</a></div></div>
-<div class="ttc" id="aclassconstraint__samplers_1_1ConstraintSampler_html_a327856a0ff6a92b65660360db3b855b2"><div class="ttname"><a href="classconstraint__samplers_1_1ConstraintSampler.html#a327856a0ff6a92b65660360db3b855b2">constraint_samplers::ConstraintSampler::ConstraintSampler</a></div><div class="ttdeci">ConstraintSampler(const planning_scene::PlanningSceneConstPtr &amp;scene, const std::string &amp;group_name)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="constraint__sampler_8cpp_source.html#l00075">constraint_sampler.cpp:75</a></div></div>
+<div class="ttc" id="aclassconstraint__samplers_1_1ConstraintSampler_html_a327856a0ff6a92b65660360db3b855b2"><div class="ttname"><a href="classconstraint__samplers_1_1ConstraintSampler.html#a327856a0ff6a92b65660360db3b855b2">constraint_samplers::ConstraintSampler::ConstraintSampler</a></div><div class="ttdeci">ConstraintSampler(const planning_scene::PlanningSceneConstPtr &amp;scene, const std::string &amp;group_name)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="constraint__sampler_8cpp_source.html#l00077">constraint_sampler.cpp:77</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

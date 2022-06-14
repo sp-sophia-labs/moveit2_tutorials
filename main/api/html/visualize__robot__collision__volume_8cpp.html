@@ -73,64 +73,70 @@ $(function() {
 <div class="title">visualize_robot_collision_volume.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;rclcpp/rclcpp.hpp&gt;</code><br />
-<code>#include &lt;<a class="el" href="planning__scene__monitor_8h_source.html">moveit/planning_scene_monitor/planning_scene_monitor.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="planning__scene__monitor_8h_source.html">moveit/planning_scene_monitor/planning_scene_monitor.h</a>&gt;</code><br />
+<code>#include &lt;rclcpp/duration.hpp&gt;</code><br />
+<code>#include &lt;rclcpp/executors/multi_threaded_executor.hpp&gt;</code><br />
+<code>#include &lt;rclcpp/node.hpp&gt;</code><br />
+<code>#include &lt;rclcpp/publisher.hpp&gt;</code><br />
+<code>#include &lt;rclcpp/qos_event.hpp&gt;</code><br />
+<code>#include &lt;rclcpp/time.hpp&gt;</code><br />
+<code>#include &lt;rclcpp/utilities.hpp&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for visualize_robot_collision_volume.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="visualize__robot__collision__volume_8cpp__incl.png" border="0" usemap="#moveit__ros_2planning_2planning__components__tools_2src_2visualize__robot__collision__volume_8cpp" alt=""/></div>
 <map name="moveit__ros_2planning_2planning__components__tools_2src_2visualize__robot__collision__volume_8cpp" id="moveit__ros_2planning_2planning__components__tools_2src_2visualize__robot__collision__volume_8cpp">
-<area shape="rect" title=" " alt="" coords="2445,5,2652,76"/>
-<area shape="rect" title=" " alt="" coords="2809,547,2941,574"/>
-<area shape="rect" href="planning__scene__monitor_8h.html" title=" " alt="" coords="3357,124,3542,180"/>
-<area shape="rect" title=" " alt="" coords="2466,897,2543,924"/>
-<area shape="rect" title=" " alt="" coords="3362,347,3482,373"/>
-<area shape="rect" title=" " alt="" coords="3246,243,3448,269"/>
-<area shape="rect" href="class__forward_8h.html" title=" " alt="" coords="2426,719,2583,760"/>
-<area shape="rect" href="planning__scene_8h.html" title=" " alt="" coords="1586,235,1759,277"/>
-<area shape="rect" title=" " alt="" coords="276,726,450,753"/>
-<area shape="rect" href="robot__model__loader_8h.html" title=" " alt="" coords="3014,228,3170,284"/>
-<area shape="rect" href="occupancy__map__monitor_8h.html" title=" " alt="" coords="4339,228,4528,284"/>
-<area shape="rect" title=" " alt="" coords="4523,540,4675,581"/>
-<area shape="rect" href="current__state__monitor_8h.html" title=" " alt="" coords="2816,228,2990,284"/>
-<area shape="rect" href="collision__plugin__loader_8h.html" title=" " alt="" coords="2637,436,2812,492"/>
-<area shape="rect" title=" " alt="" coords="3473,235,3632,277"/>
-<area shape="rect" title=" " alt="" coords="3656,235,3824,277"/>
-<area shape="rect" title=" " alt="" coords="3848,243,4027,269"/>
-<area shape="rect" title=" " alt="" coords="4051,243,4115,269"/>
-<area shape="rect" title=" " alt="" coords="4139,235,4315,277"/>
-<area shape="rect" href="declare__ptr_8h.html" title=" " alt="" coords="2418,808,2590,849"/>
-<area shape="rect" href="robot__model_8h.html" title=" " alt="" coords="2484,629,2639,671"/>
-<area shape="rect" href="robot__state_8h.html" title=" " alt="" coords="1924,540,2071,581"/>
-<area shape="rect" href="transforms_8h.html" title=" " alt="" coords="1672,637,1902,663"/>
-<area shape="rect" href="collision__detector__allocator_8h.html" title=" " alt="" coords="2127,339,2343,381"/>
-<area shape="rect" href="collision__env_8h.html" title=" " alt="" coords="2076,443,2271,485"/>
-<area shape="rect" href="world__diff_8h.html" title=" " alt="" coords="1452,629,1647,671"/>
-<area shape="rect" href="kinematic__constraint_8h.html" title=" " alt="" coords="1735,339,1951,381"/>
-<area shape="rect" title=" " alt="" coords="1502,451,1749,477"/>
-<area shape="rect" href="kinematics__base_8h.html" title=" " alt="" coords="3493,443,3676,485"/>
-<area shape="rect" title=" " alt="" coords="3638,547,3781,574"/>
-<area shape="rect" href="robot__trajectory_8h.html" title=" " alt="" coords="1252,443,1428,485"/>
-<area shape="rect" title=" " alt="" coords="1146,540,1326,581"/>
-<area shape="rect" title=" " alt="" coords="378,339,580,381"/>
-<area shape="rect" title=" " alt="" coords="604,339,807,381"/>
-<area shape="rect" title=" " alt="" coords="832,339,1046,381"/>
-<area shape="rect" title=" " alt="" coords="1071,347,1258,373"/>
-<area shape="rect" title=" " alt="" coords="1282,339,1458,381"/>
-<area shape="rect" title=" " alt="" coords="2296,451,2358,477"/>
-<area shape="rect" title=" " alt="" coords="4023,547,4082,574"/>
-<area shape="rect" href="rdf__loader_8h.html" title=" " alt="" coords="3031,443,3191,485"/>
-<area shape="rect" href="kinematics__plugin__loader_8h.html" title=" " alt="" coords="3608,332,3801,388"/>
-<area shape="rect" href="occupancy__map_8h.html" title=" " alt="" coords="4264,443,4459,485"/>
-<area shape="rect" href="occupancy__map__updater_8h.html" title=" " alt="" coords="3826,332,4015,388"/>
-<area shape="rect" title=" " alt="" coords="4141,339,4308,381"/>
-<area shape="rect" title=" " alt="" coords="4332,339,4501,381"/>
-<area shape="rect" title=" " alt="" coords="3149,347,3236,373"/>
-<area shape="rect" title=" " alt="" coords="4526,347,4590,373"/>
-<area shape="rect" title=" " alt="" coords="4614,347,4674,373"/>
-<area shape="rect" title=" " alt="" coords="2839,347,2906,373"/>
-<area shape="rect" title=" " alt="" coords="2930,347,3074,373"/>
+<area shape="rect" title=" " alt="" coords="4369,5,4575,76"/>
+<area shape="rect" href="planning__scene__monitor_8h.html" title=" " alt="" coords="1017,124,1202,180"/>
+<area shape="rect" title=" " alt="" coords="1788,883,1865,909"/>
+<area shape="rect" title=" " alt="" coords="4008,622,4155,649"/>
+<area shape="rect" title=" " alt="" coords="2339,533,2464,559"/>
+<area shape="rect" title=" " alt="" coords="3936,443,4059,470"/>
+<area shape="rect" title=" " alt="" coords="4083,443,4226,470"/>
+<area shape="rect" title=" " alt="" coords="4561,131,4738,173"/>
+<area shape="rect" title=" " alt="" coords="4763,139,4915,165"/>
+<area shape="rect" title=" " alt="" coords="4939,139,5099,165"/>
+<area shape="rect" title=" " alt="" coords="1131,443,1263,470"/>
+<area shape="rect" title=" " alt="" coords="547,347,667,373"/>
+<area shape="rect" title=" " alt="" coords="507,243,709,269"/>
+<area shape="rect" href="class__forward_8h.html" title=" " alt="" coords="1748,704,1905,745"/>
+<area shape="rect" href="planning__scene_8h.html" title=" " alt="" coords="2379,235,2552,277"/>
+<area shape="rect" title=" " alt="" coords="4177,711,4351,738"/>
+<area shape="rect" href="robot__model__loader_8h.html" title=" " alt="" coords="1407,228,1563,284"/>
+<area shape="rect" href="occupancy__map__monitor_8h.html" title=" " alt="" coords="293,228,483,284"/>
+<area shape="rect" title=" " alt="" coords="604,525,756,567"/>
+<area shape="rect" href="current__state__monitor_8h.html" title=" " alt="" coords="960,228,1133,284"/>
+<area shape="rect" href="collision__plugin__loader_8h.html" title=" " alt="" coords="1209,228,1383,284"/>
+<area shape="rect" title=" " alt="" coords="2577,235,2735,277"/>
+<area shape="rect" title=" " alt="" coords="2760,235,2928,277"/>
+<area shape="rect" title=" " alt="" coords="2952,243,3131,269"/>
+<area shape="rect" title=" " alt="" coords="5,243,69,269"/>
+<area shape="rect" title=" " alt="" coords="93,235,269,277"/>
+<area shape="rect" href="declare__ptr_8h.html" title=" " alt="" coords="1741,793,1913,835"/>
+<area shape="rect" href="robot__model_8h.html" title=" " alt="" coords="2625,615,2780,656"/>
+<area shape="rect" href="robot__state_8h.html" title=" " alt="" coords="2837,525,2984,567"/>
+<area shape="rect" href="transforms_8h.html" title=" " alt="" coords="2805,622,3035,649"/>
+<area shape="rect" href="collision__detector__allocator_8h.html" title=" " alt="" coords="2016,339,2232,381"/>
+<area shape="rect" href="collision__env_8h.html" title=" " alt="" coords="2117,436,2312,477"/>
+<area shape="rect" href="world__diff_8h.html" title=" " alt="" coords="1797,615,1992,656"/>
+<area shape="rect" href="kinematic__constraint_8h.html" title=" " alt="" coords="2357,339,2573,381"/>
+<area shape="rect" title=" " alt="" coords="2337,443,2583,470"/>
+<area shape="rect" href="kinematics__base_8h.html" title=" " alt="" coords="1707,436,1890,477"/>
+<area shape="rect" title=" " alt="" coords="1478,533,1621,559"/>
+<area shape="rect" href="robot__trajectory_8h.html" title=" " alt="" coords="3904,339,4080,381"/>
+<area shape="rect" title=" " alt="" coords="3529,436,3709,477"/>
+<area shape="rect" title=" " alt="" coords="2648,339,2851,381"/>
+<area shape="rect" title=" " alt="" coords="2875,339,3077,381"/>
+<area shape="rect" title=" " alt="" coords="3102,339,3317,381"/>
+<area shape="rect" title=" " alt="" coords="3341,347,3528,373"/>
+<area shape="rect" title=" " alt="" coords="3552,339,3728,381"/>
+<area shape="rect" href="rdf__loader_8h.html" title=" " alt="" coords="1259,339,1419,381"/>
+<area shape="rect" href="kinematics__plugin__loader_8h.html" title=" " alt="" coords="1595,332,1789,388"/>
+<area shape="rect" href="occupancy__map_8h.html" title=" " alt="" coords="691,436,885,477"/>
+<area shape="rect" href="occupancy__map__updater_8h.html" title=" " alt="" coords="792,332,981,388"/>
+<area shape="rect" title=" " alt="" coords="305,339,471,381"/>
+<area shape="rect" title=" " alt="" coords="111,339,281,381"/>
 </map>
 </div>
 </div>
@@ -168,7 +174,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="visualize__robot__collision__volume_8cpp_source.html#l00043">43</a> of file <a class="el" href="visualize__robot__collision__volume_8cpp_source.html">visualize_robot_collision_volume.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="visualize__robot__collision__volume_8cpp_source.html#l00049">49</a> of file <a class="el" href="visualize__robot__collision__volume_8cpp_source.html">visualize_robot_collision_volume.cpp</a>.</p>
 
 </div>
 </div>

@@ -79,66 +79,67 @@ $(function() {
 <code>#include &lt;<a class="el" href="planning__scene_8h_source.html">moveit/planning_scene/planning_scene.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="robot__model_8h_source.html">moveit/robot_model/robot_model.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="conversions_8h_source.html">moveit/robot_state/conversions.h</a>&gt;</code><br />
+<code>#include &lt;rclcpp/logger.hpp&gt;</code><br />
+<code>#include &lt;rclcpp/logging.hpp&gt;</code><br />
 <code>#include &lt;eigen3/Eigen/Core&gt;</code><br />
 <code>#include &lt;eigen3/Eigen/LU&gt;</code><br />
 <code>#include &lt;random&gt;</code><br />
 <code>#include &lt;visualization_msgs/msg/marker_array.hpp&gt;</code><br />
-<code>#include &quot;rclcpp/rclcpp.hpp&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for chomp_optimizer.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="chomp__optimizer_8cpp__incl.png" border="0" usemap="#moveit__planners_2chomp_2chomp__motion__planner_2src_2chomp__optimizer_8cpp" alt=""/></div>
 <map name="moveit__planners_2chomp_2chomp__motion__planner_2src_2chomp__optimizer_8cpp" id="moveit__planners_2chomp_2chomp__motion__planner_2src_2chomp__optimizer_8cpp">
-<area shape="rect" title=" " alt="" coords="2546,5,2734,61"/>
-<area shape="rect" href="chomp__optimizer_8h.html" title=" " alt="" coords="3010,109,3185,151"/>
-<area shape="rect" href="chomp__utils_8h.html" title=" " alt="" coords="2754,377,2929,419"/>
-<area shape="rect" href="planning__scene_8h.html" title=" " alt="" coords="1275,467,1448,508"/>
-<area shape="rect" href="robot__model_8h.html" title=" " alt="" coords="2185,824,2340,865"/>
-<area shape="rect" title=" " alt="" coords="125,1099,257,1126"/>
-<area shape="rect" title=" " alt="" coords="801,824,972,865"/>
-<area shape="rect" title=" " alt="" coords="3294,385,3434,411"/>
-<area shape="rect" href="conversions_8h.html" title=" " alt="" coords="797,645,944,687"/>
-<area shape="rect" title=" " alt="" coords="3638,117,3765,143"/>
-<area shape="rect" title=" " alt="" coords="3789,117,3861,143"/>
-<area shape="rect" href="chomp__cost_8h.html" title=" " alt="" coords="3235,199,3410,240"/>
-<area shape="rect" href="chomp__trajectory_8h.html" title=" " alt="" coords="2977,288,3151,329"/>
-<area shape="rect" title=" " alt="" coords="3158,653,3221,679"/>
-<area shape="rect" title=" " alt="" coords="2905,474,2997,501"/>
-<area shape="rect" href="chomp__parameters_8h.html" title=" " alt="" coords="3517,556,3691,597"/>
-<area shape="rect" href="multivariate__gaussian_8h.html" title=" " alt="" coords="3278,288,3461,329"/>
-<area shape="rect" href="collision__env__hybrid_8h.html" title=" " alt="" coords="2805,199,3011,240"/>
-<area shape="rect" title=" " alt="" coords="3035,206,3159,233"/>
-<area shape="rect" title=" " alt="" coords="2959,921,3039,947"/>
-<area shape="rect" href="class__forward_8h.html" title=" " alt="" coords="1081,1092,1239,1133"/>
-<area shape="rect" href="kinematics__base_8h.html" title=" " alt="" coords="2763,1003,2946,1044"/>
-<area shape="rect" title=" " alt="" coords="2913,1099,3055,1126"/>
-<area shape="rect" href="robot__state_8h.html" title=" " alt="" coords="1128,735,1275,776"/>
-<area shape="rect" href="transforms_8h.html" title=" " alt="" coords="1078,831,1309,858"/>
-<area shape="rect" title=" " alt="" coords="775,921,948,947"/>
-<area shape="rect" href="collision__detector__allocator_8h.html" title=" " alt="" coords="883,556,1099,597"/>
-<area shape="rect" href="collision__env_8h.html" title=" " alt="" coords="968,645,1163,687"/>
-<area shape="rect" href="world__diff_8h.html" title=" " alt="" coords="93,1003,288,1044"/>
-<area shape="rect" href="kinematic__constraint_8h.html" title=" " alt="" coords="1325,556,1541,597"/>
-<area shape="rect" title=" " alt="" coords="1287,653,1534,679"/>
-<area shape="rect" href="robot__trajectory_8h.html" title=" " alt="" coords="547,645,723,687"/>
-<area shape="rect" title=" " alt="" coords="465,735,645,776"/>
-<area shape="rect" title=" " alt="" coords="720,742,797,769"/>
-<area shape="rect" title=" " alt="" coords="1565,556,1768,597"/>
-<area shape="rect" title=" " alt="" coords="1792,556,1995,597"/>
-<area shape="rect" title=" " alt="" coords="2019,556,2234,597"/>
-<area shape="rect" title=" " alt="" coords="2259,563,2445,590"/>
-<area shape="rect" title=" " alt="" coords="2469,556,2645,597"/>
-<area shape="rect" href="exceptions_8h.html" title=" " alt="" coords="1553,921,1783,947"/>
-<area shape="rect" title=" " alt="" coords="2053,1010,2187,1037"/>
-<area shape="rect" href="joint__model__group_8h.html" title=" " alt="" coords="2775,913,2934,955"/>
-<area shape="rect" href="fixed__joint__model_8h.html" title=" " alt="" coords="1808,913,1963,955"/>
-<area shape="rect" href="floating__joint__model_8h.html" title=" " alt="" coords="1987,913,2157,955"/>
-<area shape="rect" href="planar__joint__model_8h.html" title=" " alt="" coords="2181,913,2344,955"/>
-<area shape="rect" href="revolute__joint__model_8h.html" title=" " alt="" coords="2368,913,2544,955"/>
-<area shape="rect" href="prismatic__joint__model_8h.html" title=" " alt="" coords="2569,913,2751,955"/>
-<area shape="rect" title=" " alt="" coords="1198,921,1325,947"/>
-<area shape="rect" title=" " alt="" coords="3131,1099,3189,1126"/>
-<area shape="rect" title=" " alt="" coords="822,735,1002,776"/>
+<area shape="rect" title=" " alt="" coords="2751,5,2939,61"/>
+<area shape="rect" href="chomp__optimizer_8h.html" title=" " alt="" coords="3290,109,3465,151"/>
+<area shape="rect" href="chomp__utils_8h.html" title=" " alt="" coords="3021,377,3195,419"/>
+<area shape="rect" href="planning__scene_8h.html" title=" " alt="" coords="1147,467,1320,508"/>
+<area shape="rect" href="robot__model_8h.html" title=" " alt="" coords="2245,824,2400,865"/>
+<area shape="rect" title=" " alt="" coords="47,1099,188,1126"/>
+<area shape="rect" title=" " alt="" coords="755,824,925,865"/>
+<area shape="rect" title=" " alt="" coords="3558,385,3698,411"/>
+<area shape="rect" href="conversions_8h.html" title=" " alt="" coords="755,645,901,687"/>
+<area shape="rect" title=" " alt="" coords="3679,117,3812,143"/>
+<area shape="rect" title=" " alt="" coords="3837,117,3963,143"/>
+<area shape="rect" title=" " alt="" coords="3988,117,4060,143"/>
+<area shape="rect" href="chomp__cost_8h.html" title=" " alt="" coords="3466,199,3641,240"/>
+<area shape="rect" href="chomp__trajectory_8h.html" title=" " alt="" coords="3271,288,3446,329"/>
+<area shape="rect" title=" " alt="" coords="3453,653,3515,679"/>
+<area shape="rect" title=" " alt="" coords="3170,474,3262,501"/>
+<area shape="rect" href="chomp__parameters_8h.html" title=" " alt="" coords="3882,288,4057,329"/>
+<area shape="rect" href="multivariate__gaussian_8h.html" title=" " alt="" coords="3573,288,3755,329"/>
+<area shape="rect" href="collision__env__hybrid_8h.html" title=" " alt="" coords="2985,199,3191,240"/>
+<area shape="rect" title=" " alt="" coords="3215,206,3339,233"/>
+<area shape="rect" title=" " alt="" coords="2981,921,3061,947"/>
+<area shape="rect" href="class__forward_8h.html" title=" " alt="" coords="887,1092,1044,1133"/>
+<area shape="rect" href="kinematics__base_8h.html" title=" " alt="" coords="206,1003,389,1044"/>
+<area shape="rect" title=" " alt="" coords="226,1099,369,1126"/>
+<area shape="rect" href="robot__state_8h.html" title=" " alt="" coords="1084,735,1231,776"/>
+<area shape="rect" href="transforms_8h.html" title=" " alt="" coords="950,831,1181,858"/>
+<area shape="rect" title=" " alt="" coords="755,921,928,947"/>
+<area shape="rect" href="collision__detector__allocator_8h.html" title=" " alt="" coords="2592,556,2808,597"/>
+<area shape="rect" href="collision__env_8h.html" title=" " alt="" coords="1757,645,1952,687"/>
+<area shape="rect" href="world__diff_8h.html" title=" " alt="" coords="245,735,440,776"/>
+<area shape="rect" href="kinematic__constraint_8h.html" title=" " alt="" coords="1197,556,1413,597"/>
+<area shape="rect" title=" " alt="" coords="1285,653,1531,679"/>
+<area shape="rect" href="robot__trajectory_8h.html" title=" " alt="" coords="795,556,971,597"/>
+<area shape="rect" title=" " alt="" coords="499,645,679,687"/>
+<area shape="rect" title=" " alt="" coords="976,653,1053,679"/>
+<area shape="rect" title=" " alt="" coords="1078,653,1210,679"/>
+<area shape="rect" title=" " alt="" coords="1488,556,1691,597"/>
+<area shape="rect" title=" " alt="" coords="1715,556,1917,597"/>
+<area shape="rect" title=" " alt="" coords="1942,556,2157,597"/>
+<area shape="rect" title=" " alt="" coords="2181,563,2368,590"/>
+<area shape="rect" title=" " alt="" coords="2392,556,2568,597"/>
+<area shape="rect" href="exceptions_8h.html" title=" " alt="" coords="1707,921,1938,947"/>
+<area shape="rect" title=" " alt="" coords="1492,1010,1625,1037"/>
+<area shape="rect" href="joint__model__group_8h.html" title=" " alt="" coords="1422,913,1581,955"/>
+<area shape="rect" href="fixed__joint__model_8h.html" title=" " alt="" coords="1963,913,2117,955"/>
+<area shape="rect" href="floating__joint__model_8h.html" title=" " alt="" coords="2141,913,2312,955"/>
+<area shape="rect" href="planar__joint__model_8h.html" title=" " alt="" coords="2336,913,2499,955"/>
+<area shape="rect" href="revolute__joint__model_8h.html" title=" " alt="" coords="2523,913,2699,955"/>
+<area shape="rect" href="prismatic__joint__model_8h.html" title=" " alt="" coords="2723,913,2906,955"/>
+<area shape="rect" title=" " alt="" coords="1003,921,1130,947"/>
 </map>
 </div>
 </div>

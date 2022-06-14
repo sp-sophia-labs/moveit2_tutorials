@@ -78,41 +78,47 @@ $(function() {
 <code>#include &lt;geometric_shapes/body_operations.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="distance__field_8h_source.html">moveit/distance_field/distance_field.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="find__internal__points_8h_source.html">moveit/distance_field/find_internal_points.h</a>&gt;</code><br />
+<code>#include &lt;rclcpp/clock.hpp&gt;</code><br />
+<code>#include &lt;rclcpp/logger.hpp&gt;</code><br />
+<code>#include &lt;rclcpp/time.hpp&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for collision_distance_field_types.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="collision__distance__field__types_8cpp__incl.png" border="0" usemap="#moveit__core_2collision__distance__field_2src_2collision__distance__field__types_8cpp" alt=""/></div>
 <map name="moveit__core_2collision__distance__field_2src_2collision__distance__field__types_8cpp" id="moveit__core_2collision__distance__field_2src_2collision__distance__field__types_8cpp">
-<area shape="rect" title=" " alt="" coords="1421,5,1621,61"/>
-<area shape="rect" href="collision__distance__field__types_8h.html" title=" " alt="" coords="783,109,971,165"/>
-<area shape="rect" title=" " alt="" coords="1480,585,1557,612"/>
-<area shape="rect" href="distance__field_8h.html" title=" " alt="" coords="556,317,718,359"/>
-<area shape="rect" title=" " alt="" coords="1628,117,1806,158"/>
-<area shape="rect" href="find__internal__points_8h.html" title=" " alt="" coords="1438,117,1604,158"/>
-<area shape="rect" title=" " alt="" coords="1310,325,1372,351"/>
-<area shape="rect" title=" " alt="" coords="1321,228,1380,255"/>
-<area shape="rect" title=" " alt="" coords="1302,503,1388,530"/>
-<area shape="rect" title=" " alt="" coords="35,228,98,255"/>
-<area shape="rect" title=" " alt="" coords="122,228,325,255"/>
-<area shape="rect" title=" " alt="" coords="1556,228,1756,255"/>
-<area shape="rect" title=" " alt="" coords="349,228,488,255"/>
-<area shape="rect" href="class__forward_8h.html" title=" " alt="" coords="113,407,270,448"/>
-<area shape="rect" title=" " alt="" coords="294,407,465,448"/>
-<area shape="rect" title=" " alt="" coords="863,414,995,441"/>
-<area shape="rect" href="propagation__distance__field_8h.html" title=" " alt="" coords="1130,213,1296,269"/>
-<area shape="rect" title=" " alt="" coords="664,228,791,255"/>
-<area shape="rect" title=" " alt="" coords="816,228,938,255"/>
-<area shape="rect" title=" " alt="" coords="963,228,1106,255"/>
-<area shape="rect" href="declare__ptr_8h.html" title=" " alt="" coords="800,496,972,537"/>
-<area shape="rect" href="voxel__grid_8h.html" title=" " alt="" coords="1070,407,1233,448"/>
-<area shape="rect" title=" " alt="" coords="996,503,1088,530"/>
-<area shape="rect" title=" " alt="" coords="489,407,636,448"/>
-<area shape="rect" title=" " alt="" coords="660,414,787,441"/>
-<area shape="rect" title=" " alt="" coords="1258,407,1430,448"/>
-<area shape="rect" title=" " alt="" coords="1120,503,1183,530"/>
-<area shape="rect" title=" " alt="" coords="1133,325,1176,351"/>
-<area shape="rect" title=" " alt="" coords="793,325,945,351"/>
+<area shape="rect" title=" " alt="" coords="1088,5,1288,61"/>
+<area shape="rect" href="collision__distance__field__types_8h.html" title=" " alt="" coords="1029,109,1217,165"/>
+<area shape="rect" title=" " alt="" coords="1127,585,1204,612"/>
+<area shape="rect" href="distance__field_8h.html" title=" " alt="" coords="663,317,825,359"/>
+<area shape="rect" title=" " alt="" coords="1979,228,2106,255"/>
+<area shape="rect" title=" " alt="" coords="2131,228,2253,255"/>
+<area shape="rect" title=" " alt="" coords="1343,117,1521,158"/>
+<area shape="rect" href="find__internal__points_8h.html" title=" " alt="" coords="110,117,277,158"/>
+<area shape="rect" title=" " alt="" coords="1545,124,1679,151"/>
+<area shape="rect" title=" " alt="" coords="109,325,171,351"/>
+<area shape="rect" title=" " alt="" coords="661,228,720,255"/>
+<area shape="rect" title=" " alt="" coords="1548,503,1633,530"/>
+<area shape="rect" title=" " alt="" coords="745,228,807,255"/>
+<area shape="rect" title=" " alt="" coords="832,228,1035,255"/>
+<area shape="rect" title=" " alt="" coords="93,228,293,255"/>
+<area shape="rect" title=" " alt="" coords="1211,228,1349,255"/>
+<area shape="rect" href="class__forward_8h.html" title=" " alt="" coords="1367,407,1524,448"/>
+<area shape="rect" title=" " alt="" coords="1172,407,1343,448"/>
+<area shape="rect" title=" " alt="" coords="455,414,587,441"/>
+<area shape="rect" href="propagation__distance__field_8h.html" title=" " alt="" coords="369,213,535,269"/>
+<area shape="rect" title=" " alt="" coords="1373,228,1520,255"/>
+<area shape="rect" title=" " alt="" coords="1544,228,1685,255"/>
+<area shape="rect" title=" " alt="" coords="1710,228,1853,255"/>
+<area shape="rect" href="declare__ptr_8h.html" title=" " alt="" coords="1079,496,1251,537"/>
+<area shape="rect" href="voxel__grid_8h.html" title=" " alt="" coords="663,407,825,448"/>
+<area shape="rect" title=" " alt="" coords="579,503,671,530"/>
+<area shape="rect" title=" " alt="" coords="1001,407,1148,448"/>
+<area shape="rect" title=" " alt="" coords="850,414,977,441"/>
+<area shape="rect" title=" " alt="" coords="126,407,298,448"/>
+<area shape="rect" title=" " alt="" coords="713,503,775,530"/>
+<area shape="rect" title=" " alt="" coords="372,325,415,351"/>
+<area shape="rect" title=" " alt="" coords="196,325,348,351"/>
 </map>
 </div>
 </div>
