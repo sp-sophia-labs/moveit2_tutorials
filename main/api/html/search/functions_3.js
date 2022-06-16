@@ -307,7 +307,7 @@ var searchData=
   ['createmessage_9335',['createMessage',['../namespacemoveit_1_1python.html#a2ba347c3a6cda63c4af2e452551ffdcd',1,'moveit::python']]],
   ['creatensslider_9336',['createNSSlider',['../classmoveit__rviz__plugin_1_1MotionPlanningFrameJointsWidget.html#a930afdf23abaf34d6d8f701cdcfdb27c',1,'moveit_rviz_plugin::MotionPlanningFrameJointsWidget']]],
   ['createoctomap_9337',['createOctomap',['../namespaceplanning__scene.html#aeb689feedc4b2fa20b14009c468cb0b0',1,'planning_scene']]],
-  ['createomplconstraint_9338',['createOMPLConstraint',['../namespaceompl__interface.html#ac59c481ebfead520db9f3188f465ae6d',1,'ompl_interface']]],
+  ['createomplconstraints_9338',['createOMPLConstraints',['../namespaceompl__interface.html#ad11c1d264c5b0ab548b01ace27eb5bb9',1,'ompl_interface']]],
   ['createorientationconstraint_9339',['createOrientationConstraint',['../classTestPlanningContext.html#a45a24249bc97c6ba854798d8eabf245d',1,'TestPlanningContext']]],
   ['createplannerinstance_9340',['createPlannerInstance',['../classCommandPlannerTest.html#aec51ab9a80428cc7a1881d7270e31319',1,'CommandPlannerTest']]],
   ['createplanningscenemonitor_9341',['createPlanningSceneMonitor',['../classmoveit__rviz__plugin_1_1PlanningSceneDisplay.html#a9c1dda029d03d2b1aafbb0f06eaaecc8',1,'moveit_rviz_plugin::PlanningSceneDisplay']]],

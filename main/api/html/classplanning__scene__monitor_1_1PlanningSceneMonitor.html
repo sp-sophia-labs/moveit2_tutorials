@@ -235,9 +235,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9488dfb51a30c7bcf7700bf479eeb3bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a9488dfb51a30c7bcf7700bf479eeb3bb">stopWorldGeometryMonitor</a> ()</td></tr>
 <tr class="memdesc:a9488dfb51a30c7bcf7700bf479eeb3bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the world geometry monitor.  <a href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a9488dfb51a30c7bcf7700bf479eeb3bb">More...</a><br /></td></tr>
 <tr class="separator:a9488dfb51a30c7bcf7700bf479eeb3bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a2fbde58b77f9748114f0367fbc7054"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a3a2fbde58b77f9748114f0367fbc7054">addUpdateCallback</a> (const boost::function&lt; void(<a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a97d046ac6573578fc63521717a013268">SceneUpdateType</a>)&gt; &amp;fn)</td></tr>
-<tr class="memdesc:a3a2fbde58b77f9748114f0367fbc7054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a function to be called when an update to the scene is received.  <a href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a3a2fbde58b77f9748114f0367fbc7054">More...</a><br /></td></tr>
-<tr class="separator:a3a2fbde58b77f9748114f0367fbc7054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a4934a30339eda063382f5367f60a49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a4a4934a30339eda063382f5367f60a49">addUpdateCallback</a> (const std::function&lt; void(<a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a97d046ac6573578fc63521717a013268">SceneUpdateType</a>)&gt; &amp;fn)</td></tr>
+<tr class="memdesc:a4a4934a30339eda063382f5367f60a49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a function to be called when an update to the scene is received.  <a href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a4a4934a30339eda063382f5367f60a49">More...</a><br /></td></tr>
+<tr class="separator:a4a4934a30339eda063382f5367f60a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85bacc3221b42a87b460eb177354502a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a85bacc3221b42a87b460eb177354502a">clearUpdateCallbacks</a> ()</td></tr>
 <tr class="memdesc:a85bacc3221b42a87b460eb177354502a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the functions to be called when an update to the scene is received.  <a href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a85bacc3221b42a87b460eb177354502a">More...</a><br /></td></tr>
 <tr class="separator:a85bacc3221b42a87b460eb177354502a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -366,9 +366,9 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a6ae3e64498dc9f2128a62984346a8d04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefe4c4f82927a9abf9399c6aaf9ea204"><td class="memItemLeft" align="right" valign="top">planning_scene::PlanningScenePtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#aefe4c4f82927a9abf9399c6aaf9ea204">parent_scene_</a></td></tr>
 <tr class="separator:aefe4c4f82927a9abf9399c6aaf9ea204"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3df1e6a09846517bd78542f56667334"><td class="memItemLeft" align="right" valign="top">boost::shared_mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#af3df1e6a09846517bd78542f56667334">scene_update_mutex_</a></td></tr>
-<tr class="memdesc:af3df1e6a09846517bd78542f56667334"><td class="mdescLeft">&#160;</td><td class="mdescRight">if diffs are monitored, this is the pointer to the parent scene  <a href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#af3df1e6a09846517bd78542f56667334">More...</a><br /></td></tr>
-<tr class="separator:af3df1e6a09846517bd78542f56667334"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87fdf59575a47ed11a4fe3f46c6b3416"><td class="memItemLeft" align="right" valign="top">std::shared_mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a87fdf59575a47ed11a4fe3f46c6b3416">scene_update_mutex_</a></td></tr>
+<tr class="memdesc:a87fdf59575a47ed11a4fe3f46c6b3416"><td class="mdescLeft">&#160;</td><td class="mdescRight">if diffs are monitored, this is the pointer to the parent scene  <a href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a87fdf59575a47ed11a4fe3f46c6b3416">More...</a><br /></td></tr>
+<tr class="separator:a87fdf59575a47ed11a4fe3f46c6b3416"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3274d675cc757ae9e86b9c22dc3f912"><td class="memItemLeft" align="right" valign="top">rclcpp::Time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#ad3274d675cc757ae9e86b9c22dc3f912">last_update_time_</a></td></tr>
 <tr class="memdesc:ad3274d675cc757ae9e86b9c22dc3f912"><td class="mdescLeft">&#160;</td><td class="mdescRight">mutex for stored scene  <a href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#ad3274d675cc757ae9e86b9c22dc3f912">More...</a><br /></td></tr>
 <tr class="separator:ad3274d675cc757ae9e86b9c22dc3f912"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -410,16 +410,16 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:aabfa06c1a8730b9ced430dce37b12e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7978315b9896036728c0472f9440749"><td class="memItemLeft" align="right" valign="top">rclcpp::Publisher&lt; moveit_msgs::msg::PlanningScene &gt;::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#ae7978315b9896036728c0472f9440749">planning_scene_publisher_</a></td></tr>
 <tr class="separator:ae7978315b9896036728c0472f9440749"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72ee1b139ff680a82bbaa88ebed49b62"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; boost::thread &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a72ee1b139ff680a82bbaa88ebed49b62">publish_planning_scene_</a></td></tr>
-<tr class="separator:a72ee1b139ff680a82bbaa88ebed49b62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5296970113ad06dc755cced8da7d06e"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; std::thread &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#ae5296970113ad06dc755cced8da7d06e">publish_planning_scene_</a></td></tr>
+<tr class="separator:ae5296970113ad06dc755cced8da7d06e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a907f3ebea8b8106e560280bb70b03365"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a907f3ebea8b8106e560280bb70b03365">publish_planning_scene_frequency_</a></td></tr>
 <tr class="separator:a907f3ebea8b8106e560280bb70b03365"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38f3a82d6c4857d3140802b494df0ecc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a97d046ac6573578fc63521717a013268">SceneUpdateType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a38f3a82d6c4857d3140802b494df0ecc">publish_update_types_</a></td></tr>
 <tr class="separator:a38f3a82d6c4857d3140802b494df0ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98e9de4aab7501ee7f2d4ab4eb8e423d"><td class="memItemLeft" align="right" valign="top">std::atomic&lt; <a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a97d046ac6573578fc63521717a013268">SceneUpdateType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a98e9de4aab7501ee7f2d4ab4eb8e423d">new_scene_update_</a></td></tr>
 <tr class="separator:a98e9de4aab7501ee7f2d4ab4eb8e423d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a620c774685ae79df250f16b3a4bde143"><td class="memItemLeft" align="right" valign="top">boost::condition_variable_any&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a620c774685ae79df250f16b3a4bde143">new_scene_update_condition_</a></td></tr>
-<tr class="separator:a620c774685ae79df250f16b3a4bde143"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af427621e321acc3e10a2c82c69e5f528"><td class="memItemLeft" align="right" valign="top">std::condition_variable_any&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#af427621e321acc3e10a2c82c69e5f528">new_scene_update_condition_</a></td></tr>
+<tr class="separator:af427621e321acc3e10a2c82c69e5f528"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8488f9fafd4fff70c81fbbf5b28369aa"><td class="memItemLeft" align="right" valign="top">rclcpp::Subscription&lt; moveit_msgs::msg::PlanningScene &gt;::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a8488f9fafd4fff70c81fbbf5b28369aa">planning_scene_subscriber_</a></td></tr>
 <tr class="separator:a8488f9fafd4fff70c81fbbf5b28369aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa2edf6dd9e573c40edabdacc124db79"><td class="memItemLeft" align="right" valign="top">rclcpp::Subscription&lt; moveit_msgs::msg::PlanningSceneWorld &gt;::SharedPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#afa2edf6dd9e573c40edabdacc124db79">planning_scene_world_subscriber_</a></td></tr>
@@ -440,13 +440,13 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a24ffe797ab65447faa554afaa91fe306"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0851b9f6aa06609e525e9a0c0d926ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a4681f47d50bf3f676996a2a89e4e8fd2">CollisionBodyShapeHandles</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#ad0851b9f6aa06609e525e9a0c0d926ba">collision_body_shape_handles_</a></td></tr>
 <tr class="separator:ad0851b9f6aa06609e525e9a0c0d926ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5230bd6bd53bccfec963bec3002d5563"><td class="memItemLeft" align="right" valign="top">boost::recursive_mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a5230bd6bd53bccfec963bec3002d5563">shape_handles_lock_</a></td></tr>
-<tr class="separator:a5230bd6bd53bccfec963bec3002d5563"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69ade18a44f52f3fa345ba5dda4fa929"><td class="memItemLeft" align="right" valign="top">boost::recursive_mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a69ade18a44f52f3fa345ba5dda4fa929">update_lock_</a></td></tr>
-<tr class="memdesc:a69ade18a44f52f3fa345ba5dda4fa929"><td class="mdescLeft">&#160;</td><td class="mdescRight">lock access to update_callbacks_  <a href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a69ade18a44f52f3fa345ba5dda4fa929">More...</a><br /></td></tr>
-<tr class="separator:a69ade18a44f52f3fa345ba5dda4fa929"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0c0cd590df7be0545d7e9c3bc914ed8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; boost::function&lt; void(<a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a97d046ac6573578fc63521717a013268">SceneUpdateType</a>)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#af0c0cd590df7be0545d7e9c3bc914ed8">update_callbacks_</a></td></tr>
-<tr class="separator:af0c0cd590df7be0545d7e9c3bc914ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9fdec0b7367a6a61d1f48c2c355238c"><td class="memItemLeft" align="right" valign="top">std::recursive_mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#aa9fdec0b7367a6a61d1f48c2c355238c">shape_handles_lock_</a></td></tr>
+<tr class="separator:aa9fdec0b7367a6a61d1f48c2c355238c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca8ee8292c10b8dafa08f9b2e3735864"><td class="memItemLeft" align="right" valign="top">std::recursive_mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#aca8ee8292c10b8dafa08f9b2e3735864">update_lock_</a></td></tr>
+<tr class="memdesc:aca8ee8292c10b8dafa08f9b2e3735864"><td class="mdescLeft">&#160;</td><td class="mdescRight">lock access to update_callbacks_  <a href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#aca8ee8292c10b8dafa08f9b2e3735864">More...</a><br /></td></tr>
+<tr class="separator:aca8ee8292c10b8dafa08f9b2e3735864"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee6ddfbd18079ac2b3a24cd3f79cd82c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::function&lt; void(<a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a97d046ac6573578fc63521717a013268">SceneUpdateType</a>)&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#aee6ddfbd18079ac2b3a24cd3f79cd82c">update_callbacks_</a></td></tr>
+<tr class="separator:aee6ddfbd18079ac2b3a24cd3f79cd82c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -1023,8 +1023,8 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a3a2fbde58b77f9748114f0367fbc7054"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a2fbde58b77f9748114f0367fbc7054">&#9670;&nbsp;</a></span>addUpdateCallback()</h2>
+<a id="a4a4934a30339eda063382f5367f60a49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a4934a30339eda063382f5367f60a49">&#9670;&nbsp;</a></span>addUpdateCallback()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1032,7 +1032,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void planning_scene_monitor::PlanningSceneMonitor::addUpdateCallback </td>
           <td>(</td>
-          <td class="paramtype">const boost::function&lt; void(<a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a97d046ac6573578fc63521717a013268">SceneUpdateType</a>)&gt; &amp;&#160;</td>
+          <td class="paramtype">const std::function&lt; void(<a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a97d046ac6573578fc63521717a013268">SceneUpdateType</a>)&gt; &amp;&#160;</td>
           <td class="paramname"><em>fn</em></td><td>)</td>
           <td></td>
         </tr>
@@ -3971,8 +3971,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a620c774685ae79df250f16b3a4bde143"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a620c774685ae79df250f16b3a4bde143">&#9670;&nbsp;</a></span>new_scene_update_condition_</h2>
+<a id="af427621e321acc3e10a2c82c69e5f528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af427621e321acc3e10a2c82c69e5f528">&#9670;&nbsp;</a></span>new_scene_update_condition_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3981,7 +3981,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">boost::condition_variable_any planning_scene_monitor::PlanningSceneMonitor::new_scene_update_condition_</td>
+          <td class="memname">std::condition_variable_any planning_scene_monitor::PlanningSceneMonitor::new_scene_update_condition_</td>
         </tr>
       </table>
   </td>
@@ -4213,8 +4213,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a72ee1b139ff680a82bbaa88ebed49b62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72ee1b139ff680a82bbaa88ebed49b62">&#9670;&nbsp;</a></span>publish_planning_scene_</h2>
+<a id="ae5296970113ad06dc755cced8da7d06e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5296970113ad06dc755cced8da7d06e">&#9670;&nbsp;</a></span>publish_planning_scene_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4223,7 +4223,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::unique_ptr&lt;boost::thread&gt; planning_scene_monitor::PlanningSceneMonitor::publish_planning_scene_</td>
+          <td class="memname">std::unique_ptr&lt;std::thread&gt; planning_scene_monitor::PlanningSceneMonitor::publish_planning_scene_</td>
         </tr>
       </table>
   </td>
@@ -4357,8 +4357,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="af3df1e6a09846517bd78542f56667334"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3df1e6a09846517bd78542f56667334">&#9670;&nbsp;</a></span>scene_update_mutex_</h2>
+<a id="a87fdf59575a47ed11a4fe3f46c6b3416"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87fdf59575a47ed11a4fe3f46c6b3416">&#9670;&nbsp;</a></span>scene_update_mutex_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4367,7 +4367,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">boost::shared_mutex planning_scene_monitor::PlanningSceneMonitor::scene_update_mutex_</td>
+          <td class="memname">std::shared_mutex planning_scene_monitor::PlanningSceneMonitor::scene_update_mutex_</td>
         </tr>
       </table>
   </td>
@@ -4383,8 +4383,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a5230bd6bd53bccfec963bec3002d5563"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5230bd6bd53bccfec963bec3002d5563">&#9670;&nbsp;</a></span>shape_handles_lock_</h2>
+<a id="aa9fdec0b7367a6a61d1f48c2c355238c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9fdec0b7367a6a61d1f48c2c355238c">&#9670;&nbsp;</a></span>shape_handles_lock_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4393,7 +4393,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">boost::recursive_mutex planning_scene_monitor::PlanningSceneMonitor::shape_handles_lock_</td>
+          <td class="memname">std::recursive_mutex planning_scene_monitor::PlanningSceneMonitor::shape_handles_lock_</td>
         </tr>
       </table>
   </td>
@@ -4455,8 +4455,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="af0c0cd590df7be0545d7e9c3bc914ed8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0c0cd590df7be0545d7e9c3bc914ed8">&#9670;&nbsp;</a></span>update_callbacks_</h2>
+<a id="aee6ddfbd18079ac2b3a24cd3f79cd82c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee6ddfbd18079ac2b3a24cd3f79cd82c">&#9670;&nbsp;</a></span>update_callbacks_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4465,7 +4465,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;boost::function&lt;void(<a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a97d046ac6573578fc63521717a013268">SceneUpdateType</a>)&gt; &gt; planning_scene_monitor::PlanningSceneMonitor::update_callbacks_</td>
+          <td class="memname">std::vector&lt;std::function&lt;void(<a class="el" href="classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a97d046ac6573578fc63521717a013268">SceneUpdateType</a>)&gt; &gt; planning_scene_monitor::PlanningSceneMonitor::update_callbacks_</td>
         </tr>
       </table>
   </td>
@@ -4479,8 +4479,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a69ade18a44f52f3fa345ba5dda4fa929"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69ade18a44f52f3fa345ba5dda4fa929">&#9670;&nbsp;</a></span>update_lock_</h2>
+<a id="aca8ee8292c10b8dafa08f9b2e3735864"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca8ee8292c10b8dafa08f9b2e3735864">&#9670;&nbsp;</a></span>update_lock_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4489,7 +4489,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">boost::recursive_mutex planning_scene_monitor::PlanningSceneMonitor::update_lock_</td>
+          <td class="memname">std::recursive_mutex planning_scene_monitor::PlanningSceneMonitor::update_lock_</td>
         </tr>
       </table>
   </td>

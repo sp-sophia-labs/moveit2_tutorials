@@ -92,9 +92,9 @@ $(function() {
 <code>#include &lt;moveit_msgs/msg/planning_scene_components.hpp&gt;</code><br />
 <code>#include &lt;octomap_msgs/msg/octomap_with_pose.hpp&gt;</code><br />
 <code>#include &lt;boost/noncopyable.hpp&gt;</code><br />
-<code>#include &lt;boost/function.hpp&gt;</code><br />
 <code>#include &lt;boost/concept_check.hpp&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
 <code>#include &quot;rclcpp/rclcpp.hpp&quot;</code><br />
 <code>#include &quot;moveit_planning_scene_export.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -106,7 +106,7 @@ Include dependency graph for planning_scene.h:</div>
 <area shape="rect" href="robot__model_8h.html" title=" " alt="" coords="2584,392,2739,433"/>
 <area shape="rect" href="class__forward_8h.html" title=" " alt="" coords="571,660,728,701"/>
 <area shape="rect" href="kinematics__base_8h.html" title=" " alt="" coords="2642,571,2825,612"/>
-<area shape="rect" title=" " alt="" coords="2455,667,2598,694"/>
+<area shape="rect" title=" " alt="" coords="2511,667,2598,694"/>
 <area shape="rect" href="robot__state_8h.html" title=" " alt="" coords="1719,303,1865,344"/>
 <area shape="rect" href="transforms_8h.html" title=" " alt="" coords="986,489,1217,515"/>
 <area shape="rect" title=" " alt="" coords="439,578,612,605"/>
@@ -171,12 +171,12 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a9a8929f956465132b8e718a26bfee490"><td class="memItemLeft" align="right" valign="top">typedef boost::function&lt; bool(const <a class="el" href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a> &amp;, bool)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplanning__scene.html#a9a8929f956465132b8e718a26bfee490">planning_scene::StateFeasibilityFn</a></td></tr>
-<tr class="memdesc:a9a8929f956465132b8e718a26bfee490"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the function signature for additional feasibility checks to be imposed on states (in addition to respecting constraints and collision avoidance). The first argument is the state to check the feasibility for, the second one is whether the check should be verbose or not.  <a href="namespaceplanning__scene.html#a9a8929f956465132b8e718a26bfee490">More...</a><br /></td></tr>
-<tr class="separator:a9a8929f956465132b8e718a26bfee490"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54e442d09b0aa552bc847c1a39b3978d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplanning__scene.html#a54e442d09b0aa552bc847c1a39b3978d">planning_scene::MotionFeasibilityFn</a> = boost::function&lt; bool(const <a class="el" href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a> &amp;, const <a class="el" href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a> &amp;, bool)&gt;</td></tr>
-<tr class="memdesc:a54e442d09b0aa552bc847c1a39b3978d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the function signature for additional feasibility checks to be imposed on motions segments between states (in addition to respecting constraints and collision avoidance). The order of the arguments matters: the notion of feasibility is to be checked for motion segments that start at the first state and end at the second state. The third argument indicates whether the check should be verbose or not.  <a href="namespaceplanning__scene.html#a54e442d09b0aa552bc847c1a39b3978d">More...</a><br /></td></tr>
-<tr class="separator:a54e442d09b0aa552bc847c1a39b3978d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a019a9390b0cff12f5051a34f11f95a1b"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; bool(const <a class="el" href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a> &amp;, bool)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplanning__scene.html#a019a9390b0cff12f5051a34f11f95a1b">planning_scene::StateFeasibilityFn</a></td></tr>
+<tr class="memdesc:a019a9390b0cff12f5051a34f11f95a1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the function signature for additional feasibility checks to be imposed on states (in addition to respecting constraints and collision avoidance). The first argument is the state to check the feasibility for, the second one is whether the check should be verbose or not.  <a href="namespaceplanning__scene.html#a019a9390b0cff12f5051a34f11f95a1b">More...</a><br /></td></tr>
+<tr class="separator:a019a9390b0cff12f5051a34f11f95a1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a5f77c1f0c4fbd6eb54f2cc229f401d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplanning__scene.html#a2a5f77c1f0c4fbd6eb54f2cc229f401d">planning_scene::MotionFeasibilityFn</a> = std::function&lt; bool(const <a class="el" href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a> &amp;, const <a class="el" href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a> &amp;, bool)&gt;</td></tr>
+<tr class="memdesc:a2a5f77c1f0c4fbd6eb54f2cc229f401d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the function signature for additional feasibility checks to be imposed on motions segments between states (in addition to respecting constraints and collision avoidance). The order of the arguments matters: the notion of feasibility is to be checked for motion segments that start at the first state and end at the second state. The third argument indicates whether the check should be verbose or not.  <a href="namespaceplanning__scene.html#a2a5f77c1f0c4fbd6eb54f2cc229f401d">More...</a><br /></td></tr>
+<tr class="separator:a2a5f77c1f0c4fbd6eb54f2cc229f401d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bc0d58b3efcc493dc884c7a5f3ea8d2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceplanning__scene.html#a1bc0d58b3efcc493dc884c7a5f3ea8d2">planning_scene::ObjectColorMap</a> = std::map&lt; std::string, std_msgs::msg::ColorRGBA &gt;</td></tr>
 <tr class="memdesc:a1bc0d58b3efcc493dc884c7a5f3ea8d2"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classA.html">A</a> map from object names (e.g., attached bodies, collision objects) to their colors.  <a href="namespaceplanning__scene.html#a1bc0d58b3efcc493dc884c7a5f3ea8d2">More...</a><br /></td></tr>
 <tr class="separator:a1bc0d58b3efcc493dc884c7a5f3ea8d2"><td class="memSeparator" colspan="2">&#160;</td></tr>

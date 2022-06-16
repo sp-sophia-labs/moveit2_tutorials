@@ -210,10 +210,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac5933a79c998cf358566448dc411c62a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene_1_1PlanningScene.html#ac5933a79c998cf358566448dc411c62a">setCurrentState</a> (const <a class="el" href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a> &amp;state)</td></tr>
 <tr class="memdesc:ac5933a79c998cf358566448dc411c62a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current robot state.  <a href="classplanning__scene_1_1PlanningScene.html#ac5933a79c998cf358566448dc411c62a">More...</a><br /></td></tr>
 <tr class="separator:ac5933a79c998cf358566448dc411c62a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86bd0ba021809eddb23b77ff3d87f0e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene_1_1PlanningScene.html#a86bd0ba021809eddb23b77ff3d87f0e8">setAttachedBodyUpdateCallback</a> (const <a class="el" href="namespacemoveit_1_1core.html#a7e5071bd0525b17b00f373de2cad9e11">moveit::core::AttachedBodyCallback</a> &amp;callback)</td></tr>
+<tr class="memitem:a86bd0ba021809eddb23b77ff3d87f0e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene_1_1PlanningScene.html#a86bd0ba021809eddb23b77ff3d87f0e8">setAttachedBodyUpdateCallback</a> (const <a class="el" href="namespacemoveit_1_1core.html#ae4cc2032fd6adab166279a7eb1ab5154">moveit::core::AttachedBodyCallback</a> &amp;callback)</td></tr>
 <tr class="memdesc:a86bd0ba021809eddb23b77ff3d87f0e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the callback to be triggered when changes are made to the current scene state.  <a href="classplanning__scene_1_1PlanningScene.html#a86bd0ba021809eddb23b77ff3d87f0e8">More...</a><br /></td></tr>
 <tr class="separator:a86bd0ba021809eddb23b77ff3d87f0e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4d4b22c13d9fc9f2ce94a0d7eb6b976"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene_1_1PlanningScene.html#af4d4b22c13d9fc9f2ce94a0d7eb6b976">setCollisionObjectUpdateCallback</a> (const <a class="el" href="classcollision__detection_1_1World.html#a1c77f50a4ca76e6bdcbbb6c3281eb2a2">collision_detection::World::ObserverCallbackFn</a> &amp;callback)</td></tr>
+<tr class="memitem:af4d4b22c13d9fc9f2ce94a0d7eb6b976"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene_1_1PlanningScene.html#af4d4b22c13d9fc9f2ce94a0d7eb6b976">setCollisionObjectUpdateCallback</a> (const <a class="el" href="classcollision__detection_1_1World.html#a173e0580ace82e3539f03aad6ed3f297">collision_detection::World::ObserverCallbackFn</a> &amp;callback)</td></tr>
 <tr class="memdesc:af4d4b22c13d9fc9f2ce94a0d7eb6b976"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the callback to be triggered when changes are made to the current scene world.  <a href="classplanning__scene_1_1PlanningScene.html#af4d4b22c13d9fc9f2ce94a0d7eb6b976">More...</a><br /></td></tr>
 <tr class="separator:af4d4b22c13d9fc9f2ce94a0d7eb6b976"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c95f687f369331a69f0674336f46f49"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene_1_1PlanningScene.html#a7c95f687f369331a69f0674336f46f49">hasObjectColor</a> (const std::string &amp;id) const</td></tr>
@@ -245,17 +245,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9c1ced2bcec5848f91244342bb7dd571"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene_1_1PlanningScene.html#a9c1ced2bcec5848f91244342bb7dd571">decoupleParent</a> ()</td></tr>
 <tr class="memdesc:a9c1ced2bcec5848f91244342bb7dd571"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make sure that all the data maintained in this scene is local. All unmodified data is copied from the parent and the pointer to the parent is discarded.  <a href="classplanning__scene_1_1PlanningScene.html#a9c1ced2bcec5848f91244342bb7dd571">More...</a><br /></td></tr>
 <tr class="separator:a9c1ced2bcec5848f91244342bb7dd571"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae87ae61744b8bcfa6914c69b41170d07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene_1_1PlanningScene.html#ae87ae61744b8bcfa6914c69b41170d07">setStateFeasibilityPredicate</a> (const <a class="el" href="namespaceplanning__scene.html#a9a8929f956465132b8e718a26bfee490">StateFeasibilityFn</a> &amp;fn)</td></tr>
+<tr class="memitem:ae87ae61744b8bcfa6914c69b41170d07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene_1_1PlanningScene.html#ae87ae61744b8bcfa6914c69b41170d07">setStateFeasibilityPredicate</a> (const <a class="el" href="namespaceplanning__scene.html#a019a9390b0cff12f5051a34f11f95a1b">StateFeasibilityFn</a> &amp;fn)</td></tr>
 <tr class="memdesc:ae87ae61744b8bcfa6914c69b41170d07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify a predicate that decides whether states are considered valid or invalid for reasons beyond ones covered by collision checking and constraint evaluation. This is useful for setting up problem specific constraints (e.g., stability)  <a href="classplanning__scene_1_1PlanningScene.html#ae87ae61744b8bcfa6914c69b41170d07">More...</a><br /></td></tr>
 <tr class="separator:ae87ae61744b8bcfa6914c69b41170d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ac593d91e86c932b634ac77fe45c2e6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespaceplanning__scene.html#a9a8929f956465132b8e718a26bfee490">StateFeasibilityFn</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene_1_1PlanningScene.html#a9ac593d91e86c932b634ac77fe45c2e6">getStateFeasibilityPredicate</a> () const</td></tr>
+<tr class="memitem:a9ac593d91e86c932b634ac77fe45c2e6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespaceplanning__scene.html#a019a9390b0cff12f5051a34f11f95a1b">StateFeasibilityFn</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene_1_1PlanningScene.html#a9ac593d91e86c932b634ac77fe45c2e6">getStateFeasibilityPredicate</a> () const</td></tr>
 <tr class="memdesc:a9ac593d91e86c932b634ac77fe45c2e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the predicate that decides whether states are considered valid or invalid for reasons beyond ones covered by collision checking and constraint evaluation.  <a href="classplanning__scene_1_1PlanningScene.html#a9ac593d91e86c932b634ac77fe45c2e6">More...</a><br /></td></tr>
 <tr class="separator:a9ac593d91e86c932b634ac77fe45c2e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e67aa8b256d1c2466444b32f2d44e4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene_1_1PlanningScene.html#a5e67aa8b256d1c2466444b32f2d44e4f">setMotionFeasibilityPredicate</a> (const <a class="el" href="namespaceplanning__scene.html#a54e442d09b0aa552bc847c1a39b3978d">MotionFeasibilityFn</a> &amp;fn)</td></tr>
+<tr class="memitem:a5e67aa8b256d1c2466444b32f2d44e4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene_1_1PlanningScene.html#a5e67aa8b256d1c2466444b32f2d44e4f">setMotionFeasibilityPredicate</a> (const <a class="el" href="namespaceplanning__scene.html#a2a5f77c1f0c4fbd6eb54f2cc229f401d">MotionFeasibilityFn</a> &amp;fn)</td></tr>
 <tr class="memdesc:a5e67aa8b256d1c2466444b32f2d44e4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify a predicate that decides whether motion segments are considered valid or invalid for reasons beyond ones covered by collision checking and constraint evaluation. <br  />
   <a href="classplanning__scene_1_1PlanningScene.html#a5e67aa8b256d1c2466444b32f2d44e4f">More...</a><br /></td></tr>
 <tr class="separator:a5e67aa8b256d1c2466444b32f2d44e4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49f9b40d1703f6f366066cca8437b984"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespaceplanning__scene.html#a54e442d09b0aa552bc847c1a39b3978d">MotionFeasibilityFn</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene_1_1PlanningScene.html#a49f9b40d1703f6f366066cca8437b984">getMotionFeasibilityPredicate</a> () const</td></tr>
+<tr class="memitem:a49f9b40d1703f6f366066cca8437b984"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespaceplanning__scene.html#a2a5f77c1f0c4fbd6eb54f2cc229f401d">MotionFeasibilityFn</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene_1_1PlanningScene.html#a49f9b40d1703f6f366066cca8437b984">getMotionFeasibilityPredicate</a> () const</td></tr>
 <tr class="memdesc:a49f9b40d1703f6f366066cca8437b984"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the predicate that decides whether motion segments are considered valid or invalid for reasons beyond ones covered by collision checking and constraint evaluation.  <a href="classplanning__scene_1_1PlanningScene.html#a49f9b40d1703f6f366066cca8437b984">More...</a><br /></td></tr>
 <tr class="separator:a49f9b40d1703f6f366066cca8437b984"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a233d4b740bd1fcda86f5fb3ddd75374b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__scene_1_1PlanningScene.html#a233d4b740bd1fcda86f5fb3ddd75374b">isStateFeasible</a> (const moveit_msgs::msg::RobotState &amp;state, bool verbose=false) const</td></tr>
@@ -559,7 +559,7 @@ Friends</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class maintains the representation of the environment as seen by a planning instance. The environment geometry, the robot geometry and state are maintained. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00122">122</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00121">121</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a808d4e576bbe35f4c0b53bcb41237bba"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a808d4e576bbe35f4c0b53bcb41237bba">&#9670;&nbsp;</a></span>PlanningScene() <span class="overload">[1/2]</span></h2>
@@ -689,7 +689,7 @@ Here is the call graph for this function:</div>
 <p><a class="el" href="classA.html">A</a> new <a class="el" href="classplanning__scene_1_1PlanningScene.html" title="This class maintains the representation of the environment as seen by a planning instance....">PlanningScene</a> uses an FCL collision detector by default.</p>
 <p>example: to add FCL collision detection (normally not necessary) call planning_scene-&gt;allocateCollisionDetector(collision_detection::CollisionDetectorAllocatorFCL::create()); </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00977">977</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00976">976</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -781,7 +781,7 @@ Here is the caller graph for this function:</div>
 
 <p>Check whether the current state is in collision. The current state is expected to be updated. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00367">367</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00366">366</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -918,7 +918,7 @@ Here is the call graph for this function:</div>
 
 <p>Check whether a specified state (<em>robot_state</em>) is in collision. This variant of the function takes a non-const <em>robot_state</em> and calls updateCollisionBodyTransforms() on it. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00374">374</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00373">373</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -970,7 +970,7 @@ Here is the call graph for this function:</div>
 
 <p>Check whether a specified state (<em>robot_state</em>) is in collision, with respect to a given allowed collision matrix (<em>acm</em>). This variant of the function takes a non-const <em>robot_state</em> and updates its link transforms if needed. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00390">390</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00389">389</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -1052,7 +1052,7 @@ Here is the call graph for this function:</div>
 <p>Check whether the current state is in collision, but use a collision_detection::CollisionRobot instance that has no padding. <br  />
  </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00412">412</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00411">411</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1108,7 +1108,7 @@ Here is the call graph for this function:</div>
 <p>Check whether a specified state (<em>robot_state</em>) is in collision, but use a collision_detection::CollisionRobot instance that has no padding. <br  />
  </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00420">420</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00419">419</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -1199,7 +1199,7 @@ Here is the call graph for this function:</div>
 
 <p>Check whether a specified state (<em>robot_state</em>) is in collision, but use a collision_detection::CollisionRobot instance that has no padding. Update the link transforms of <em>robot_state</em> if needed. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00430">430</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00429">429</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -1251,7 +1251,7 @@ Here is the call graph for this function:</div>
 
 <p>Check whether a specified state (<em>robot_state</em>) is in collision, with respect to a given allowed collision matrix (<em>acm</em>), but use a collision_detection::CollisionRobot instance that has no padding. This variant of the function takes a non-const <em>robot_state</em> and calls updates the link transforms if needed. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00441">441</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00440">440</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -1342,7 +1342,7 @@ Here is the caller graph for this function:</div>
 
 <p>Check whether the current state is in self collision. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00459">459</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00458">458</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -1388,7 +1388,7 @@ Here is the caller graph for this function:</div>
 
 <p>Check whether a specified state (<em>robot_state</em>) is in self collision. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00474">474</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00473">473</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -1440,7 +1440,7 @@ Here is the caller graph for this function:</div>
 
 <p>Check whether a specified state (<em>robot_state</em>) is in self collision, with respect to a given allowed collision matrix (<em>acm</em>) </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00493">493</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00492">492</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -1486,7 +1486,7 @@ Here is the caller graph for this function:</div>
 
 <p>Check whether a specified state (<em>robot_state</em>) is in self collision. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00466">466</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00465">465</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -1538,7 +1538,7 @@ Here is the caller graph for this function:</div>
 
 <p>Check whether a specified state (<em>robot_state</em>) is in self collision, with respect to a given allowed collision matrix (<em>acm</em>). The link transforms of <em>robot_state</em> are updated if needed. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00483">483</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00482">482</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -1716,7 +1716,7 @@ Here is the call graph for this function:</div>
 
 <p>The distance between the robot model at state <em>robot_state</em> to the nearest collision (ignoring self-collisions) </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00604">604</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00603">603</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -1756,7 +1756,7 @@ Here is the call graph for this function:</div>
 
 <p>The distance between the robot model at state <em>robot_state</em> to the nearest collision, ignoring self-collisions and elements that are allowed to collide. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00637">637</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00636">636</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -1786,7 +1786,7 @@ Here is the call graph for this function:</div>
 
 <p>The distance between the robot model at state <em>robot_state</em> to the nearest collision (ignoring self-collisions) </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00595">595</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00594">594</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1835,7 +1835,7 @@ Here is the call graph for this function:</div>
 
 <p>The distance between the robot model at state <em>robot_state</em> to the nearest collision, ignoring self-collisions and elements that are allowed to collide. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00627">627</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00626">626</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -1865,7 +1865,7 @@ Here is the call graph for this function:</div>
 
 <p>The distance between the robot model at state <em>robot_state</em> to the nearest collision (ignoring self-collisions), if the robot has no padding. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00619">619</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00618">618</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -1905,7 +1905,7 @@ Here is the call graph for this function:</div>
 
 <p>The distance between the robot model at state <em>robot_state</em> to the nearest collision, ignoring self-collisions and elements that always allowed to collide, if the robot has no padding. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00656">656</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00655">655</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -1935,7 +1935,7 @@ Here is the call graph for this function:</div>
 
 <p>The distance between the robot model at state <em>robot_state</em> to the nearest collision (ignoring self-collisions), if the robot has no padding. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00611">611</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00610">610</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -1975,7 +1975,7 @@ Here is the call graph for this function:</div>
 
 <p>The distance between the robot model at state <em>robot_state</em> to the nearest collision, ignoring self-collisions and elements that are allowed to collide, if the robot has no padding. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00646">646</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00645">645</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -2004,7 +2004,7 @@ Here is the call graph for this function:</div>
 
 <p>Get the allowed collision matrix. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00314">314</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00313">313</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2163,7 +2163,7 @@ Here is the caller graph for this function:</div>
 
 <p>Get the names of the links that are involved in collisions for the current state. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00505">505</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00504">504</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -2203,7 +2203,7 @@ Here is the caller graph for this function:</div>
 
 <p>Get the names of the links that are involved in collisions for the state <em>robot_state</em>. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00519">519</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00518">518</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -2292,7 +2292,7 @@ Here is the call graph for this function:</div>
 
 <p>Get the names of the links that are involved in collisions for the state <em>robot_state</em>. Update the link transforms for <em>robot_state</em> if needed. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00512">512</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00511">511</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -2338,7 +2338,7 @@ Here is the call graph for this function:</div>
 
 <p>Get the names of the links that are involved in collisions for the state <em>robot_state</em> given the allowed collision matrix (<em>acm</em>) </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00526">526</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00525">525</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -2390,7 +2390,7 @@ Here is the call graph for this function:</div>
 
 <p>Get the names of the links that are involved in collisions for the current state. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00543">543</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00542">542</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -2480,7 +2480,7 @@ Here is the call graph for this function:</div>
 
 <p>Get the names of the links that are involved in collisions for the state <em>robot_state</em>. Can be restricted to links part of or updated by <em>group_name</em>. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00550">550</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00549">549</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -2532,7 +2532,7 @@ Here is the call graph for this function:</div>
 
 <p>Get the names of the links that are involved in collisions for the state <em>robot_state</em> given the allowed collision matrix (<em>acm</em>). Update the link transforms for <em>robot_state</em> if needed. Can be restricted to links part of or updated by <em>group_name</em>. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00570">570</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00569">569</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -2578,7 +2578,7 @@ Here is the call graph for this function:</div>
 
 <p>Get the names of the links that are involved in collisions for the state <em>robot_state</em>. Update the link transforms for <em>robot_state</em> if needed. Can be restricted to links part of or updated by <em>group_name</em>. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00559">559</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00558">558</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -2605,7 +2605,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00269">269</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00268">268</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -2634,7 +2634,7 @@ Here is the call graph for this function:</div>
 
 <p>Get the active collision environment. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00290">290</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00289">289</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2715,7 +2715,7 @@ Here is the caller graph for this function:</div>
 
 <p>Get the active collision detector for the robot. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00296">296</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00295">295</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3018,7 +3018,7 @@ Here is the caller graph for this function:</div>
 
 <p>Get the state at which the robot is assumed to be. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00182">182</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00181">181</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3238,7 +3238,7 @@ Here is the caller graph for this function:</div>
 
 <p>Get the transform corresponding to the frame <em>id</em>. This will be known if <em>id</em> is a link name, an attached body id or a collision object. Return identity when no transform is available. Use <a class="el" href="classplanning__scene_1_1PlanningScene.html#a4ffd859140c70a6c1cd4eb2e8db0d94f" title="Check if a transform to the frame id is known. This will be known if id is a link name,...">knowsFrameTransform()</a> to test if this function will be successful or not. This function also updates the link transforms of <em>state</em>. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00242">242</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00241">241</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -3292,7 +3292,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespaceplanning__scene.html#a54e442d09b0aa552bc847c1a39b3978d">MotionFeasibilityFn</a>&amp; planning_scene::PlanningScene::getMotionFeasibilityPredicate </td>
+          <td class="memname">const <a class="el" href="namespaceplanning__scene.html#a2a5f77c1f0c4fbd6eb54f2cc229f401d">MotionFeasibilityFn</a>&amp; planning_scene::PlanningScene::getMotionFeasibilityPredicate </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -3307,7 +3307,7 @@ Here is the caller graph for this function:</div>
 
 <p>Get the predicate that decides whether motion segments are considered valid or invalid for reasons beyond ones covered by collision checking and constraint evaluation. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00819">819</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00818">818</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -3336,7 +3336,7 @@ Here is the caller graph for this function:</div>
 
 <p>Get the name of the planning scene. This is empty by default. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00141">141</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00140">140</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3480,7 +3480,7 @@ Here is the caller graph for this function:</div>
 
 <p>Get the parent scene (with respect to which the diffs are maintained). This may be empty. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00169">169</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00168">168</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -3509,7 +3509,7 @@ Here is the caller graph for this function:</div>
 
 <p>Get the frame in which planning is performed. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00199">199</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00198">198</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -3644,7 +3644,7 @@ Here is the call graph for this function:</div>
 
 <p>Get the kinematic model for which the planning scene is maintained. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00175">175</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00174">174</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3672,7 +3672,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="namespaceplanning__scene.html#a9a8929f956465132b8e718a26bfee490">StateFeasibilityFn</a>&amp; planning_scene::PlanningScene::getStateFeasibilityPredicate </td>
+          <td class="memname">const <a class="el" href="namespaceplanning__scene.html#a019a9390b0cff12f5051a34f11f95a1b">StateFeasibilityFn</a>&amp; planning_scene::PlanningScene::getStateFeasibilityPredicate </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -3687,7 +3687,7 @@ Here is the caller graph for this function:</div>
 
 <p>Get the predicate that decides whether states are considered valid or invalid for reasons beyond ones covered by collision checking and constraint evaluation. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00805">805</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00804">804</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -3735,7 +3735,7 @@ Here is the caller graph for this function:</div>
 
 <p>Get the set of fixed transforms from known frames to the planning frame. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00206">206</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00205">205</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3799,7 +3799,7 @@ Here is the caller graph for this function:</div>
 
 <p>Get the representation of the world. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00276">276</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00275">275</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3835,7 +3835,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00283">283</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00282">282</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -4642,7 +4642,7 @@ Here is the caller graph for this function:</div>
 
 <p>Check if the current state is in collision (with the environment or self collision). If a group name is specified, collision checking is done for that group only. It is expected the current state transforms are up to date. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00336">336</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00335">335</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -4688,7 +4688,7 @@ Here is the caller graph for this function:</div>
 
 <p>Check if a given state is in collision (with the environment or self collision) If a group name is specified, collision checking is done for that group only. The link transforms for <em>state</em> are updated before the collision check. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00345">345</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00344">344</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -5664,7 +5664,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void planning_scene::PlanningScene::setAttachedBodyUpdateCallback </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacemoveit_1_1core.html#a7e5071bd0525b17b00f373de2cad9e11">moveit::core::AttachedBodyCallback</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacemoveit_1_1core.html#ae4cc2032fd6adab166279a7eb1ab5154">moveit::core::AttachedBodyCallback</a> &amp;&#160;</td>
           <td class="paramname"><em>callback</em></td><td>)</td>
           <td></td>
         </tr>
@@ -5686,7 +5686,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void planning_scene::PlanningScene::setCollisionObjectUpdateCallback </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classcollision__detection_1_1World.html#a1c77f50a4ca76e6bdcbbb6c3281eb2a2">collision_detection::World::ObserverCallbackFn</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classcollision__detection_1_1World.html#a173e0580ace82e3539f03aad6ed3f297">collision_detection::World::ObserverCallbackFn</a> &amp;&#160;</td>
           <td class="paramname"><em>callback</em></td><td>)</td>
           <td></td>
         </tr>
@@ -5774,7 +5774,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void planning_scene::PlanningScene::setMotionFeasibilityPredicate </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespaceplanning__scene.html#a54e442d09b0aa552bc847c1a39b3978d">MotionFeasibilityFn</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespaceplanning__scene.html#a2a5f77c1f0c4fbd6eb54f2cc229f401d">MotionFeasibilityFn</a> &amp;&#160;</td>
           <td class="paramname"><em>fn</em></td><td>)</td>
           <td></td>
         </tr>
@@ -5789,7 +5789,7 @@ Here is the caller graph for this function:</div>
 <p>Specify a predicate that decides whether motion segments are considered valid or invalid for reasons beyond ones covered by collision checking and constraint evaluation. <br  />
  </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00812">812</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00811">811</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -5819,7 +5819,7 @@ Here is the caller graph for this function:</div>
 
 <p>Set the name of the planning scene. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00147">147</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00146">146</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -5957,7 +5957,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void planning_scene::PlanningScene::setStateFeasibilityPredicate </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespaceplanning__scene.html#a9a8929f956465132b8e718a26bfee490">StateFeasibilityFn</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespaceplanning__scene.html#a019a9390b0cff12f5051a34f11f95a1b">StateFeasibilityFn</a> &amp;&#160;</td>
           <td class="paramname"><em>fn</em></td><td>)</td>
           <td></td>
         </tr>
@@ -5971,7 +5971,7 @@ Here is the caller graph for this function:</div>
 
 <p>Specify a predicate that decides whether states are considered valid or invalid for reasons beyond ones covered by collision checking and constraint evaluation. This is useful for setting up problem specific constraints (e.g., stability) </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00798">798</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00797">797</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -6073,7 +6073,7 @@ Here is the caller graph for this function:</div>
 
 <p>Enumerates the available collision detectors. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l01032">1032</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l01031">1031</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -6098,7 +6098,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00136">136</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00135">135</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>
@@ -6122,7 +6122,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00135">135</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__scene_8h_source.html#l00134">134</a> of file <a class="el" href="planning__scene_8h_source.html">planning_scene.h</a>.</p>
 
 </div>
 </div>

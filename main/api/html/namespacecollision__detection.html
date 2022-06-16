@@ -230,9 +230,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a7bde0a5056eef76b718f72a909923af2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecollision__detection.html#a7bde0a5056eef76b718f72a909923af2">DistanceMap</a> = std::map&lt; const std::pair&lt; std::string, std::string &gt;, std::vector&lt; <a class="el" href="structcollision__detection_1_1DistanceResultsData.html">DistanceResultsData</a> &gt; &gt;</td></tr>
 <tr class="memdesc:a7bde0a5056eef76b718f72a909923af2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mapping between the names of the collision objects and the DistanceResultData.  <a href="namespacecollision__detection.html#a7bde0a5056eef76b718f72a909923af2">More...</a><br /></td></tr>
 <tr class="separator:a7bde0a5056eef76b718f72a909923af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc95f111eb0775b4c8be279ea4891a98"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecollision__detection.html#abc95f111eb0775b4c8be279ea4891a98">DecideContactFn</a> = boost::function&lt; bool(<a class="el" href="structcollision__detection_1_1Contact.html">collision_detection::Contact</a> &amp;)&gt;</td></tr>
-<tr class="memdesc:abc95f111eb0775b4c8be279ea4891a98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signature of predicate that decides whether a contact is allowed or not (when <a class="el" href="namespacecollision__detection_1_1AllowedCollision.html#a8f4b01d9c2bf6843a65389a35296d93b">AllowedCollision::Type</a> is CONDITIONAL)  <a href="namespacecollision__detection.html#abc95f111eb0775b4c8be279ea4891a98">More...</a><br /></td></tr>
-<tr class="separator:abc95f111eb0775b4c8be279ea4891a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdd5bb30ceb94dc79a3911971501ef56"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecollision__detection.html#acdd5bb30ceb94dc79a3911971501ef56">DecideContactFn</a> = std::function&lt; bool(<a class="el" href="structcollision__detection_1_1Contact.html">collision_detection::Contact</a> &amp;)&gt;</td></tr>
+<tr class="memdesc:acdd5bb30ceb94dc79a3911971501ef56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signature of predicate that decides whether a contact is allowed or not (when <a class="el" href="namespacecollision__detection_1_1AllowedCollision.html#a8f4b01d9c2bf6843a65389a35296d93b">AllowedCollision::Type</a> is CONDITIONAL)  <a href="namespacecollision__detection.html#acdd5bb30ceb94dc79a3911971501ef56">More...</a><br /></td></tr>
+<tr class="separator:acdd5bb30ceb94dc79a3911971501ef56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace73c1317d865f74ad8fcd92bcc6759b"><td class="memItemLeft" align="right" valign="top">typedef octomap::OcTreeNode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecollision__detection.html#ace73c1317d865f74ad8fcd92bcc6759b">OccMapNode</a></td></tr>
 <tr class="separator:ace73c1317d865f74ad8fcd92bcc6759b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ac86a279df576cc0b9be55890af87f9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecollision__detection.html#a3ac86a279df576cc0b9be55890af87f9">OccMapTreePtr</a> = std::shared_ptr&lt; <a class="el" href="classcollision__detection_1_1OccMapTree.html">OccMapTree</a> &gt;</td></tr>
@@ -423,14 +423,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="abc95f111eb0775b4c8be279ea4891a98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc95f111eb0775b4c8be279ea4891a98">&#9670;&nbsp;</a></span>DecideContactFn</h2>
+<a id="acdd5bb30ceb94dc79a3911971501ef56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdd5bb30ceb94dc79a3911971501ef56">&#9670;&nbsp;</a></span>DecideContactFn</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespacecollision__detection.html#abc95f111eb0775b4c8be279ea4891a98">collision_detection::DecideContactFn</a> = typedef boost::function&lt;bool(<a class="el" href="structcollision__detection_1_1Contact.html">collision_detection::Contact</a>&amp;)&gt;</td>
+          <td class="memname">using <a class="el" href="namespacecollision__detection.html#acdd5bb30ceb94dc79a3911971501ef56">collision_detection::DecideContactFn</a> = typedef std::function&lt;bool(<a class="el" href="structcollision__detection_1_1Contact.html">collision_detection::Contact</a>&amp;)&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -519,7 +519,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="occupancy__map_8h_source.html#l00082">82</a> of file <a class="el" href="occupancy__map_8h_source.html">occupancy_map.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="occupancy__map_8h_source.html#l00081">81</a> of file <a class="el" href="occupancy__map_8h_source.html">occupancy_map.h</a>.</p>
 
 </div>
 </div>
@@ -535,7 +535,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="occupancy__map_8h_source.html#l00152">152</a> of file <a class="el" href="occupancy__map_8h_source.html">occupancy_map.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="occupancy__map_8h_source.html#l00151">151</a> of file <a class="el" href="occupancy__map_8h_source.html">occupancy_map.h</a>.</p>
 
 </div>
 </div>
@@ -551,7 +551,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="occupancy__map_8h_source.html#l00151">151</a> of file <a class="el" href="occupancy__map_8h_source.html">occupancy_map.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="occupancy__map_8h_source.html#l00150">150</a> of file <a class="el" href="occupancy__map_8h_source.html">occupancy_map.h</a>.</p>
 
 </div>
 </div>

@@ -167,10 +167,10 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ac5d0e19f0a375407bce43f2a61dcf15d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit_1_1core.html#ac5d0e19f0a375407bce43f2a61dcf15d">JointModelMapConst</a> = std::map&lt; std::string, const <a class="el" href="classmoveit_1_1core_1_1JointModel.html">JointModel</a> * &gt;</td></tr>
 <tr class="memdesc:ac5d0e19f0a375407bce43f2a61dcf15d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map of names to const instances for <a class="el" href="classmoveit_1_1core_1_1JointModel.html" title="A joint from the robot. Models the transform that this joint applies in the kinematic chain....">JointModel</a>.  <a href="namespacemoveit_1_1core.html#ac5d0e19f0a375407bce43f2a61dcf15d">More...</a><br /></td></tr>
 <tr class="separator:ac5d0e19f0a375407bce43f2a61dcf15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee2fefede757f1b0b2e59fc9dce12fa7"><td class="memItemLeft" align="right" valign="top">typedef boost::function&lt; kinematics::KinematicsBasePtr(const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit_1_1core.html#aee2fefede757f1b0b2e59fc9dce12fa7">SolverAllocatorFn</a></td></tr>
-<tr class="memdesc:aee2fefede757f1b0b2e59fc9dce12fa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function type that allocates a kinematics solver for a particular group.  <a href="namespacemoveit_1_1core.html#aee2fefede757f1b0b2e59fc9dce12fa7">More...</a><br /></td></tr>
-<tr class="separator:aee2fefede757f1b0b2e59fc9dce12fa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e78b9850215925e7953edbf24ea706d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit_1_1core.html#a0e78b9850215925e7953edbf24ea706d">SolverAllocatorMapFn</a> = std::map&lt; const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *, <a class="el" href="namespacemoveit_1_1core.html#aee2fefede757f1b0b2e59fc9dce12fa7">SolverAllocatorFn</a> &gt;</td></tr>
+<tr class="memitem:acc5cec0d5300a20962579453220e8f71"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; kinematics::KinematicsBasePtr(const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit_1_1core.html#acc5cec0d5300a20962579453220e8f71">SolverAllocatorFn</a></td></tr>
+<tr class="memdesc:acc5cec0d5300a20962579453220e8f71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function type that allocates a kinematics solver for a particular group.  <a href="namespacemoveit_1_1core.html#acc5cec0d5300a20962579453220e8f71">More...</a><br /></td></tr>
+<tr class="separator:acc5cec0d5300a20962579453220e8f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e78b9850215925e7953edbf24ea706d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit_1_1core.html#a0e78b9850215925e7953edbf24ea706d">SolverAllocatorMapFn</a> = std::map&lt; const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *, <a class="el" href="namespacemoveit_1_1core.html#acc5cec0d5300a20962579453220e8f71">SolverAllocatorFn</a> &gt;</td></tr>
 <tr class="memdesc:a0e78b9850215925e7953edbf24ea706d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map from group instances to allocator functions &amp; bijections.  <a href="namespacemoveit_1_1core.html#a0e78b9850215925e7953edbf24ea706d">More...</a><br /></td></tr>
 <tr class="separator:a0e78b9850215925e7953edbf24ea706d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2cb8d91e87ffc1bdf09360651e5a4f7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit_1_1core.html#ae2cb8d91e87ffc1bdf09360651e5a4f7">JointModelGroupMap</a> = std::map&lt; std::string, <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> * &gt;</td></tr>
@@ -190,11 +190,11 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a5a781fad6ceb427d60e9c664831e32c8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit_1_1core.html#a5a781fad6ceb427d60e9c664831e32c8">LinkTransformMap</a> = std::map&lt; const <a class="el" href="classmoveit_1_1core_1_1LinkModel.html">LinkModel</a> *, Eigen::Isometry3d, std::less&lt; const <a class="el" href="classmoveit_1_1core_1_1LinkModel.html">LinkModel</a> * &gt;, Eigen::aligned_allocator&lt; std::pair&lt; const <a class="el" href="classmoveit_1_1core_1_1LinkModel.html">LinkModel</a> *const, Eigen::Isometry3d &gt; &gt; &gt;</td></tr>
 <tr class="memdesc:a5a781fad6ceb427d60e9c664831e32c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map from link model instances to Eigen transforms.  <a href="namespacemoveit_1_1core.html#a5a781fad6ceb427d60e9c664831e32c8">More...</a><br /></td></tr>
 <tr class="separator:a5a781fad6ceb427d60e9c664831e32c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e5071bd0525b17b00f373de2cad9e11"><td class="memItemLeft" align="right" valign="top">typedef boost::function&lt; void(<a class="el" href="classmoveit_1_1core_1_1AttachedBody.html">AttachedBody</a> *body, bool attached)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit_1_1core.html#a7e5071bd0525b17b00f373de2cad9e11">AttachedBodyCallback</a></td></tr>
-<tr class="separator:a7e5071bd0525b17b00f373de2cad9e11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e30b6ca7b8fafe9e2dd276d60e00b2c"><td class="memItemLeft" align="right" valign="top">typedef boost::function&lt; bool(<a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> *robot_state, const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *joint_group, const double *joint_group_variable_values)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit_1_1core.html#a7e30b6ca7b8fafe9e2dd276d60e00b2c">GroupStateValidityCallbackFn</a></td></tr>
-<tr class="memdesc:a7e30b6ca7b8fafe9e2dd276d60e00b2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signature for functions that can verify that if the group <em>joint_group</em> in <em><a class="el" href="namespacemoveit_1_1core_1_1robot__state.html">robot_state</a></em> is set to <em>joint_group_variable_values</em> the state is valid or not. Returns true if the state is valid. This call is allowed to modify <em><a class="el" href="namespacemoveit_1_1core_1_1robot__state.html">robot_state</a></em> (e.g., set <em>joint_group_variable_values</em>)  <a href="namespacemoveit_1_1core.html#a7e30b6ca7b8fafe9e2dd276d60e00b2c">More...</a><br /></td></tr>
-<tr class="separator:a7e30b6ca7b8fafe9e2dd276d60e00b2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4cc2032fd6adab166279a7eb1ab5154"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; void(<a class="el" href="classmoveit_1_1core_1_1AttachedBody.html">AttachedBody</a> *body, bool attached)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit_1_1core.html#ae4cc2032fd6adab166279a7eb1ab5154">AttachedBodyCallback</a></td></tr>
+<tr class="separator:ae4cc2032fd6adab166279a7eb1ab5154"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dd89a7f5270847026534c333452bb4d"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; bool(<a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> *robot_state, const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *joint_group, const double *joint_group_variable_values)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a></td></tr>
+<tr class="memdesc:a0dd89a7f5270847026534c333452bb4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signature for functions that can verify that if the group <em>joint_group</em> in <em><a class="el" href="namespacemoveit_1_1core_1_1robot__state.html">robot_state</a></em> is set to <em>joint_group_variable_values</em> the state is valid or not. Returns true if the state is valid. This call is allowed to modify <em><a class="el" href="namespacemoveit_1_1core_1_1robot__state.html">robot_state</a></em> (e.g., set <em>joint_group_variable_values</em>)  <a href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">More...</a><br /></td></tr>
+<tr class="separator:a0dd89a7f5270847026534c333452bb4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaed75968b346de18defad60f19fc2545"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit_1_1core.html#aaed75968b346de18defad60f19fc2545">FixedTransformsMap</a> = std::map&lt; std::string, Eigen::Isometry3d, std::less&lt; std::string &gt;, Eigen::aligned_allocator&lt; std::pair&lt; const std::string, Eigen::Isometry3d &gt; &gt; &gt;</td></tr>
 <tr class="memdesc:aaed75968b346de18defad60f19fc2545"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map frame names to the transformation matrix that can transform objects from the frame name to the planning frame.  <a href="namespacemoveit_1_1core.html#aaed75968b346de18defad60f19fc2545">More...</a><br /></td></tr>
 <tr class="separator:aaed75968b346de18defad60f19fc2545"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -297,14 +297,14 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Core components of MoveIt. </p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
-<a id="a7e5071bd0525b17b00f373de2cad9e11"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e5071bd0525b17b00f373de2cad9e11">&#9670;&nbsp;</a></span>AttachedBodyCallback</h2>
+<a id="ae4cc2032fd6adab166279a7eb1ab5154"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4cc2032fd6adab166279a7eb1ab5154">&#9670;&nbsp;</a></span>AttachedBodyCallback</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef boost::function&lt;void(<a class="el" href="classmoveit_1_1core_1_1AttachedBody.html">AttachedBody</a>* body, bool attached)&gt; <a class="el" href="namespacemoveit_1_1core.html#a7e5071bd0525b17b00f373de2cad9e11">moveit::core::AttachedBodyCallback</a></td>
+          <td class="memname">typedef std::function&lt;void(<a class="el" href="classmoveit_1_1core_1_1AttachedBody.html">AttachedBody</a>* body, bool attached)&gt; <a class="el" href="namespacemoveit_1_1core.html#ae4cc2032fd6adab166279a7eb1ab5154">moveit::core::AttachedBodyCallback</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -331,14 +331,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a7e30b6ca7b8fafe9e2dd276d60e00b2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e30b6ca7b8fafe9e2dd276d60e00b2c">&#9670;&nbsp;</a></span>GroupStateValidityCallbackFn</h2>
+<a id="a0dd89a7f5270847026534c333452bb4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dd89a7f5270847026534c333452bb4d">&#9670;&nbsp;</a></span>GroupStateValidityCallbackFn</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef boost::function&lt;bool(<a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a>* robot_state, const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a>* joint_group, const double* joint_group_variable_values)&gt; <a class="el" href="namespacemoveit_1_1core.html#a7e30b6ca7b8fafe9e2dd276d60e00b2c">moveit::core::GroupStateValidityCallbackFn</a></td>
+          <td class="memname">typedef std::function&lt;bool(<a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a>* robot_state, const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a>* joint_group, const double* joint_group_variable_values)&gt; <a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">moveit::core::GroupStateValidityCallbackFn</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -491,14 +491,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aee2fefede757f1b0b2e59fc9dce12fa7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee2fefede757f1b0b2e59fc9dce12fa7">&#9670;&nbsp;</a></span>SolverAllocatorFn</h2>
+<a id="acc5cec0d5300a20962579453220e8f71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc5cec0d5300a20962579453220e8f71">&#9670;&nbsp;</a></span>SolverAllocatorFn</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef boost::function&lt;kinematics::KinematicsBasePtr(const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a>*)&gt; <a class="el" href="namespacemoveit_1_1core.html#aee2fefede757f1b0b2e59fc9dce12fa7">moveit::core::SolverAllocatorFn</a></td>
+          <td class="memname">typedef std::function&lt;kinematics::KinematicsBasePtr(const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a>*)&gt; <a class="el" href="namespacemoveit_1_1core.html#acc5cec0d5300a20962579453220e8f71">moveit::core::SolverAllocatorFn</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -516,7 +516,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespacemoveit_1_1core.html#a0e78b9850215925e7953edbf24ea706d">moveit::core::SolverAllocatorMapFn</a> = typedef std::map&lt;const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a>*, <a class="el" href="namespacemoveit_1_1core.html#aee2fefede757f1b0b2e59fc9dce12fa7">SolverAllocatorFn</a>&gt;</td>
+          <td class="memname">using <a class="el" href="namespacemoveit_1_1core.html#a0e78b9850215925e7953edbf24ea706d">moveit::core::SolverAllocatorMapFn</a> = typedef std::map&lt;const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a>*, <a class="el" href="namespacemoveit_1_1core.html#acc5cec0d5300a20962579453220e8f71">SolverAllocatorFn</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1053,8 +1053,8 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title="Loads a robot from moveit_resources." alt="" coords="283,303,469,345"/>
 <area shape="rect" href="classTestAABB.html#ab6cbbcf5533c1a39dc6929c675245d14" title=" " alt="" coords="40,5,200,32"/>
 <area shape="rect" href="benchmark__ik_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="93,56,147,83"/>
-<area shape="rect" href="classDistanceFieldCollisionDetectionTester.html#a08031f36b421726bbe3e1ec2c0093703" title=" " alt="" coords="5,107,235,149"/>
-<area shape="rect" href="classLoadPlanningModelsPr2.html#a4584437ae8ba1bf07cde569b1643a0f0" title=" " alt="" coords="31,173,209,214"/>
+<area shape="rect" href="classLoadPlanningModelsPr2.html#a4584437ae8ba1bf07cde569b1643a0f0" title=" " alt="" coords="31,107,209,149"/>
+<area shape="rect" href="classDistanceFieldCollisionDetectionTester.html#a08031f36b421726bbe3e1ec2c0093703" title=" " alt="" coords="5,173,235,214"/>
 <area shape="rect" href="classCollisionDetectionEnvTest.html#a2d712c3d01e16ea76d3c842c1c6454dc" title=" " alt="" coords="25,238,215,279"/>
 <area shape="rect" href="classCollisionDetectorTests.html#a0c074ae1ca41d80d2ba267ca293f20eb" title=" " alt="" coords="37,303,203,345"/>
 <area shape="rect" href="classCollisionDetectorPandaTest.html#ac80f4ae223ee276d35b520c06f20b23f" title=" " alt="" coords="21,369,219,410"/>

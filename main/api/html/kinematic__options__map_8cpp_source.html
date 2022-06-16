@@ -121,7 +121,7 @@ $(function() {
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">// worry about locking.</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classrobot__interaction_1_1KinematicOptionsMap.html#ade677c39749d03c64f89964c534b110f">   49</a></span>&#160;<a class="code" href="structrobot__interaction_1_1KinematicOptions.html">robot_interaction::KinematicOptions</a> <a class="code" href="classrobot__interaction_1_1KinematicOptionsMap.html#ade677c39749d03c64f89964c534b110f">robot_interaction::KinematicOptionsMap::getOptions</a>(<span class="keyword">const</span> std::string&amp; key)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  boost::mutex::scoped_lock lock(lock_);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  std::scoped_lock lock(lock_);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordflow">if</span> (&amp;key == &amp;<a class="code" href="namespacemoveit__setup__assistant.html#a8102790a31e41396f7fa9c5e99482e39a6047696b54e8dff47cc0fb5349e715e8">DEFAULT</a>)</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> defaults_;</div>
@@ -135,7 +135,7 @@ $(function() {
 <div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classrobot__interaction_1_1KinematicOptionsMap.html#a7f9faae401128ccbde2f0e4475b4355b">   62</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classrobot__interaction_1_1KinematicOptionsMap.html#a7f9faae401128ccbde2f0e4475b4355b">robot_interaction::KinematicOptionsMap::setOptions</a>(<span class="keyword">const</span> std::string&amp; key, <span class="keyword">const</span> <a class="code" href="structrobot__interaction_1_1KinematicOptions.html">KinematicOptions</a>&amp; options_delta,</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                                                        <a class="code" href="structrobot__interaction_1_1KinematicOptions.html#a60e06a61a2fd9174758e411f19ad56f3">KinematicOptions::OptionBitmask</a> fields)</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  boost::mutex::scoped_lock lock(lock_);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  std::scoped_lock lock(lock_);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordflow">if</span> (&amp;key == &amp;<a class="code" href="namespacecollision__detection_1_1DistanceRequestTypes.html#ac754f7bfd3f776cb02a190e9a0fd893ea4b6d1899c4b4626a9da91d05367be0c9">ALL</a>)</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  {</div>
@@ -186,12 +186,12 @@ $(function() {
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="comment">// need to lock in consistent order to avoid deadlock.</span></div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="comment">// Lock the one with lower address first.</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  boost::mutex* m1 = &amp;lock_;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  boost::mutex* m2 = &amp;other.lock_;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  std::mutex* m1 = &amp;lock_;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  std::mutex* m2 = &amp;other.lock_;</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordflow">if</span> (m2 &lt; m1)</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    std::swap(m1, m2);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  boost::mutex::scoped_lock lock1(*m1);</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  boost::mutex::scoped_lock lock2(*m2);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  std::scoped_lock lock1(*m1);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  std::scoped_lock lock2(*m2);</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  defaults_ = other.defaults_;</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> std::pair&lt;const std::string, KinematicOptions&gt;&amp; option : other.options_)</div>

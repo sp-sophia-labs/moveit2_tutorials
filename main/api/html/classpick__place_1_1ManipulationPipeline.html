@@ -90,10 +90,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a09c785d66b20c5742d30180c6301788e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa480ae9791bc3cbf55d81364daba95b"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpick__place_1_1ManipulationPipeline.html#aaa480ae9791bc3cbf55d81364daba95b">getName</a> () const</td></tr>
 <tr class="separator:aaa480ae9791bc3cbf55d81364daba95b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2adf50931d91005e37a42f50f3b92b4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpick__place_1_1ManipulationPipeline.html#a2adf50931d91005e37a42f50f3b92b4f">setSolutionCallback</a> (const boost::function&lt; void()&gt; &amp;callback)</td></tr>
-<tr class="separator:a2adf50931d91005e37a42f50f3b92b4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0832acb877295e4fec74eae4954ee61f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpick__place_1_1ManipulationPipeline.html#a0832acb877295e4fec74eae4954ee61f">setEmptyQueueCallback</a> (const boost::function&lt; void()&gt; &amp;callback)</td></tr>
-<tr class="separator:a0832acb877295e4fec74eae4954ee61f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07a3f36619d464e23afc135ce2ac992c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpick__place_1_1ManipulationPipeline.html#a07a3f36619d464e23afc135ce2ac992c">setSolutionCallback</a> (const std::function&lt; void()&gt; &amp;callback)</td></tr>
+<tr class="separator:a07a3f36619d464e23afc135ce2ac992c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33491e17a7c2598091eff6181ec65962"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpick__place_1_1ManipulationPipeline.html#a33491e17a7c2598091eff6181ec65962">setEmptyQueueCallback</a> (const std::function&lt; void()&gt; &amp;callback)</td></tr>
+<tr class="separator:a33491e17a7c2598091eff6181ec65962"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7aacdede633a0a7cfee899e719d4b2df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpick__place_1_1ManipulationPipeline.html">ManipulationPipeline</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpick__place_1_1ManipulationPipeline.html#a7aacdede633a0a7cfee899e719d4b2df">addStage</a> (const ManipulationStagePtr &amp;next)</td></tr>
 <tr class="separator:a7aacdede633a0a7cfee899e719d4b2df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbba86e906f70c490569d24f304b92b6"><td class="memItemLeft" align="right" valign="top">const ManipulationStagePtr &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpick__place_1_1ManipulationPipeline.html#abbba86e906f70c490569d24f304b92b6">getFirstStage</a> () const</td></tr>
@@ -142,18 +142,18 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:acec251daff5ac21e41aef47c20d384ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b544d7b0995fa25d8d240d63aa8f3c3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; ManipulationPlanPtr &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpick__place_1_1ManipulationPipeline.html#a0b544d7b0995fa25d8d240d63aa8f3c3">failed_</a></td></tr>
 <tr class="separator:a0b544d7b0995fa25d8d240d63aa8f3c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7e8566dfcf08ee03272ff78eb96dd96"><td class="memItemLeft" align="right" valign="top">std::vector&lt; boost::thread * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpick__place_1_1ManipulationPipeline.html#ad7e8566dfcf08ee03272ff78eb96dd96">processing_threads_</a></td></tr>
-<tr class="separator:ad7e8566dfcf08ee03272ff78eb96dd96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec387b28fdc66b3c733511f75d5ee902"><td class="memItemLeft" align="right" valign="top">boost::condition_variable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpick__place_1_1ManipulationPipeline.html#aec387b28fdc66b3c733511f75d5ee902">queue_access_cond_</a></td></tr>
-<tr class="separator:aec387b28fdc66b3c733511f75d5ee902"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b460bfd96b1388769abe19ef25c4b26"><td class="memItemLeft" align="right" valign="top">boost::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpick__place_1_1ManipulationPipeline.html#a6b460bfd96b1388769abe19ef25c4b26">queue_access_lock_</a></td></tr>
-<tr class="separator:a6b460bfd96b1388769abe19ef25c4b26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa856e00d30f9d09b84e8470311666426"><td class="memItemLeft" align="right" valign="top">boost::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpick__place_1_1ManipulationPipeline.html#aa856e00d30f9d09b84e8470311666426">result_lock_</a></td></tr>
-<tr class="separator:aa856e00d30f9d09b84e8470311666426"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20a436b90a77abd0b3a8098c47633df5"><td class="memItemLeft" align="right" valign="top">boost::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpick__place_1_1ManipulationPipeline.html#a20a436b90a77abd0b3a8098c47633df5">solution_callback_</a></td></tr>
-<tr class="separator:a20a436b90a77abd0b3a8098c47633df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc2d4cf405f7bebf77b872f935e42fdd"><td class="memItemLeft" align="right" valign="top">boost::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpick__place_1_1ManipulationPipeline.html#afc2d4cf405f7bebf77b872f935e42fdd">empty_queue_callback_</a></td></tr>
-<tr class="separator:afc2d4cf405f7bebf77b872f935e42fdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae358a3ee99a201052de6b713e584d106"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::thread * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpick__place_1_1ManipulationPipeline.html#ae358a3ee99a201052de6b713e584d106">processing_threads_</a></td></tr>
+<tr class="separator:ae358a3ee99a201052de6b713e584d106"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba221bc5c785b67eb23a095d8c414b82"><td class="memItemLeft" align="right" valign="top">std::condition_variable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpick__place_1_1ManipulationPipeline.html#aba221bc5c785b67eb23a095d8c414b82">queue_access_cond_</a></td></tr>
+<tr class="separator:aba221bc5c785b67eb23a095d8c414b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a653c2eaf9591c230e6414d805d32a7b6"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpick__place_1_1ManipulationPipeline.html#a653c2eaf9591c230e6414d805d32a7b6">queue_access_lock_</a></td></tr>
+<tr class="separator:a653c2eaf9591c230e6414d805d32a7b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafc674f245b2d3f221f4d9f4982f63bd"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpick__place_1_1ManipulationPipeline.html#aafc674f245b2d3f221f4d9f4982f63bd">result_lock_</a></td></tr>
+<tr class="separator:aafc674f245b2d3f221f4d9f4982f63bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7af0fd3ff2e9af52fc5986d7176d23e2"><td class="memItemLeft" align="right" valign="top">std::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpick__place_1_1ManipulationPipeline.html#a7af0fd3ff2e9af52fc5986d7176d23e2">solution_callback_</a></td></tr>
+<tr class="separator:a7af0fd3ff2e9af52fc5986d7176d23e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae75d38a93f0cae7ce6360b1445f54ff4"><td class="memItemLeft" align="right" valign="top">std::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpick__place_1_1ManipulationPipeline.html#ae75d38a93f0cae7ce6360b1445f54ff4">empty_queue_callback_</a></td></tr>
+<tr class="separator:ae75d38a93f0cae7ce6360b1445f54ff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b6127c16dd6c28ec30bacf47c2c0f44"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpick__place_1_1ManipulationPipeline.html#a1b6127c16dd6c28ec30bacf47c2c0f44">empty_queue_threads_</a></td></tr>
 <tr class="separator:a1b6127c16dd6c28ec30bacf47c2c0f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55b91b400f79a3e6c601ab18f7417893"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpick__place_1_1ManipulationPipeline.html#a55b91b400f79a3e6c601ab18f7417893">stop_processing_</a></td></tr>
@@ -493,8 +493,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a0832acb877295e4fec74eae4954ee61f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0832acb877295e4fec74eae4954ee61f">&#9670;&nbsp;</a></span>setEmptyQueueCallback()</h2>
+<a id="a33491e17a7c2598091eff6181ec65962"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33491e17a7c2598091eff6181ec65962">&#9670;&nbsp;</a></span>setEmptyQueueCallback()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -505,7 +505,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void pick_place::ManipulationPipeline::setEmptyQueueCallback </td>
           <td>(</td>
-          <td class="paramtype">const boost::function&lt; void()&gt; &amp;&#160;</td>
+          <td class="paramtype">const std::function&lt; void()&gt; &amp;&#160;</td>
           <td class="paramname"><em>callback</em></td><td>)</td>
           <td></td>
         </tr>
@@ -521,8 +521,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a2adf50931d91005e37a42f50f3b92b4f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2adf50931d91005e37a42f50f3b92b4f">&#9670;&nbsp;</a></span>setSolutionCallback()</h2>
+<a id="a07a3f36619d464e23afc135ce2ac992c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07a3f36619d464e23afc135ce2ac992c">&#9670;&nbsp;</a></span>setSolutionCallback()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -533,7 +533,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void pick_place::ManipulationPipeline::setSolutionCallback </td>
           <td>(</td>
-          <td class="paramtype">const boost::function&lt; void()&gt; &amp;&#160;</td>
+          <td class="paramtype">const std::function&lt; void()&gt; &amp;&#160;</td>
           <td class="paramname"><em>callback</em></td><td>)</td>
           <td></td>
         </tr>
@@ -636,8 +636,8 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="afc2d4cf405f7bebf77b872f935e42fdd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc2d4cf405f7bebf77b872f935e42fdd">&#9670;&nbsp;</a></span>empty_queue_callback_</h2>
+<a id="ae75d38a93f0cae7ce6360b1445f54ff4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae75d38a93f0cae7ce6360b1445f54ff4">&#9670;&nbsp;</a></span>empty_queue_callback_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -646,7 +646,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">boost::function&lt;void()&gt; pick_place::ManipulationPipeline::empty_queue_callback_</td>
+          <td class="memname">std::function&lt;void()&gt; pick_place::ManipulationPipeline::empty_queue_callback_</td>
         </tr>
       </table>
   </td>
@@ -756,8 +756,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ad7e8566dfcf08ee03272ff78eb96dd96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7e8566dfcf08ee03272ff78eb96dd96">&#9670;&nbsp;</a></span>processing_threads_</h2>
+<a id="ae358a3ee99a201052de6b713e584d106"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae358a3ee99a201052de6b713e584d106">&#9670;&nbsp;</a></span>processing_threads_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -766,7 +766,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;boost::thread*&gt; pick_place::ManipulationPipeline::processing_threads_</td>
+          <td class="memname">std::vector&lt;std::thread*&gt; pick_place::ManipulationPipeline::processing_threads_</td>
         </tr>
       </table>
   </td>
@@ -804,8 +804,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="aec387b28fdc66b3c733511f75d5ee902"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec387b28fdc66b3c733511f75d5ee902">&#9670;&nbsp;</a></span>queue_access_cond_</h2>
+<a id="aba221bc5c785b67eb23a095d8c414b82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba221bc5c785b67eb23a095d8c414b82">&#9670;&nbsp;</a></span>queue_access_cond_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -814,7 +814,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">boost::condition_variable pick_place::ManipulationPipeline::queue_access_cond_</td>
+          <td class="memname">std::condition_variable pick_place::ManipulationPipeline::queue_access_cond_</td>
         </tr>
       </table>
   </td>
@@ -828,8 +828,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a6b460bfd96b1388769abe19ef25c4b26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b460bfd96b1388769abe19ef25c4b26">&#9670;&nbsp;</a></span>queue_access_lock_</h2>
+<a id="a653c2eaf9591c230e6414d805d32a7b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a653c2eaf9591c230e6414d805d32a7b6">&#9670;&nbsp;</a></span>queue_access_lock_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -838,7 +838,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">boost::mutex pick_place::ManipulationPipeline::queue_access_lock_</td>
+          <td class="memname">std::mutex pick_place::ManipulationPipeline::queue_access_lock_</td>
         </tr>
       </table>
   </td>
@@ -852,8 +852,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="aa856e00d30f9d09b84e8470311666426"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa856e00d30f9d09b84e8470311666426">&#9670;&nbsp;</a></span>result_lock_</h2>
+<a id="aafc674f245b2d3f221f4d9f4982f63bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafc674f245b2d3f221f4d9f4982f63bd">&#9670;&nbsp;</a></span>result_lock_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -862,7 +862,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">boost::mutex pick_place::ManipulationPipeline::result_lock_</td>
+          <td class="memname">std::mutex pick_place::ManipulationPipeline::result_lock_</td>
         </tr>
       </table>
   </td>
@@ -876,8 +876,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a20a436b90a77abd0b3a8098c47633df5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20a436b90a77abd0b3a8098c47633df5">&#9670;&nbsp;</a></span>solution_callback_</h2>
+<a id="a7af0fd3ff2e9af52fc5986d7176d23e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7af0fd3ff2e9af52fc5986d7176d23e2">&#9670;&nbsp;</a></span>solution_callback_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -886,7 +886,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">boost::function&lt;void()&gt; pick_place::ManipulationPipeline::solution_callback_</td>
+          <td class="memname">std::function&lt;void()&gt; pick_place::ManipulationPipeline::solution_callback_</td>
         </tr>
       </table>
   </td>

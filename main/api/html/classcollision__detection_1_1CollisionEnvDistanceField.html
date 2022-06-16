@@ -325,8 +325,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a85e65ecabd8214fcec7500e66de72213"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53a5c366d67882f900ba65116f5e65ef"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcollision__detection_1_1CollisionEnvDistanceField.html#a53a5c366d67882f900ba65116f5e65ef">link_body_decomposition_index_map_</a></td></tr>
 <tr class="separator:a53a5c366d67882f900ba65116f5e65ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae77977dab406eca66dd73f75ac638b59"><td class="memItemLeft" align="right" valign="top">boost::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcollision__detection_1_1CollisionEnvDistanceField.html#ae77977dab406eca66dd73f75ac638b59">update_cache_lock_</a></td></tr>
-<tr class="separator:ae77977dab406eca66dd73f75ac638b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa411f3ea945e8410a16bb5c8af570749"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcollision__detection_1_1CollisionEnvDistanceField.html#aa411f3ea945e8410a16bb5c8af570749">update_cache_lock_</a></td></tr>
+<tr class="separator:aa411f3ea945e8410a16bb5c8af570749"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6da8442ef64f580e4b7ce5caf80ecb9c"><td class="memItemLeft" align="right" valign="top">DistanceFieldCacheEntryPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcollision__detection_1_1CollisionEnvDistanceField.html#a6da8442ef64f580e4b7ce5caf80ecb9c">distance_field_cache_entry_</a></td></tr>
 <tr class="separator:a6da8442ef64f580e4b7ce5caf80ecb9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22ad1b53ca106ebfbf7312893aee57cb"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, std::map&lt; std::string, bool &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcollision__detection_1_1CollisionEnvDistanceField.html#a22ad1b53ca106ebfbf7312893aee57cb">in_group_update_map_</a></td></tr>
@@ -335,8 +335,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a94245df44ef47c3cec340cdc2b19ba4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6e8b9dfb046f70141ecec9c0a71ee4d"><td class="memItemLeft" align="right" valign="top">planning_scene::PlanningScenePtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcollision__detection_1_1CollisionEnvDistanceField.html#ac6e8b9dfb046f70141ecec9c0a71ee4d">planning_scene_</a></td></tr>
 <tr class="separator:ac6e8b9dfb046f70141ecec9c0a71ee4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01bb01c9c48e2c34fe8ef5c13eef1230"><td class="memItemLeft" align="right" valign="top">boost::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcollision__detection_1_1CollisionEnvDistanceField.html#a01bb01c9c48e2c34fe8ef5c13eef1230">update_cache_lock_world_</a></td></tr>
-<tr class="separator:a01bb01c9c48e2c34fe8ef5c13eef1230"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaae31cf79555f989ee26be032bed0b43"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcollision__detection_1_1CollisionEnvDistanceField.html#aaae31cf79555f989ee26be032bed0b43">update_cache_lock_world_</a></td></tr>
+<tr class="separator:aaae31cf79555f989ee26be032bed0b43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a6344fda09a9191bb38fe04c4c8eba5"><td class="memItemLeft" align="right" valign="top">DistanceFieldCacheEntryWorldPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcollision__detection_1_1CollisionEnvDistanceField.html#a0a6344fda09a9191bb38fe04c4c8eba5">distance_field_cache_entry_world_</a></td></tr>
 <tr class="separator:a0a6344fda09a9191bb38fe04c4c8eba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5f819a825bd8f88cbbf9bb2766417c5"><td class="memItemLeft" align="right" valign="top">GroupStateRepresentationPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcollision__detection_1_1CollisionEnvDistanceField.html#af5f819a825bd8f88cbbf9bb2766417c5">last_gsr_</a></td></tr>
@@ -3476,8 +3476,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ae77977dab406eca66dd73f75ac638b59"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae77977dab406eca66dd73f75ac638b59">&#9670;&nbsp;</a></span>update_cache_lock_</h2>
+<a id="aa411f3ea945e8410a16bb5c8af570749"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa411f3ea945e8410a16bb5c8af570749">&#9670;&nbsp;</a></span>update_cache_lock_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3486,7 +3486,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">boost::mutex collision_detection::CollisionEnvDistanceField::update_cache_lock_</td>
+          <td class="memname">std::mutex collision_detection::CollisionEnvDistanceField::update_cache_lock_</td>
         </tr>
       </table>
   </td>
@@ -3500,8 +3500,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a01bb01c9c48e2c34fe8ef5c13eef1230"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01bb01c9c48e2c34fe8ef5c13eef1230">&#9670;&nbsp;</a></span>update_cache_lock_world_</h2>
+<a id="aaae31cf79555f989ee26be032bed0b43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaae31cf79555f989ee26be032bed0b43">&#9670;&nbsp;</a></span>update_cache_lock_world_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3510,7 +3510,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">boost::mutex collision_detection::CollisionEnvDistanceField::update_cache_lock_world_</td>
+          <td class="memname">std::mutex collision_detection::CollisionEnvDistanceField::update_cache_lock_world_</td>
         </tr>
       </table>
   </td>

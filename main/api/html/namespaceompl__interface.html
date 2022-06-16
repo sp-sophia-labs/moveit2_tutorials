@@ -194,9 +194,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a3010521aa3f126ab1b4c4c8027c19f34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classompl__interface_1_1Bounds.html">Bounds</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceompl__interface.html#a3010521aa3f126ab1b4c4c8027c19f34">orientationConstraintMsgToBoundVector</a> (const moveit_msgs::msg::OrientationConstraint &amp;ori_con)</td></tr>
 <tr class="memdesc:a3010521aa3f126ab1b4c4c8027c19f34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract orientation constraints from the MoveIt message.  <a href="namespaceompl__interface.html#a3010521aa3f126ab1b4c4c8027c19f34">More...</a><br /></td></tr>
 <tr class="separator:a3010521aa3f126ab1b4c4c8027c19f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac59c481ebfead520db9f3188f465ae6d"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classompl__interface_1_1BaseConstraint.html">BaseConstraint</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceompl__interface.html#ac59c481ebfead520db9f3188f465ae6d">createOMPLConstraint</a> (const moveit::core::RobotModelConstPtr &amp;robot_model, const std::string &amp;group, const moveit_msgs::msg::Constraints &amp;constraints)</td></tr>
-<tr class="memdesc:ac59c481ebfead520db9f3188f465ae6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory to create constraints based on what is in the MoveIt constraint message.  <a href="namespaceompl__interface.html#ac59c481ebfead520db9f3188f465ae6d">More...</a><br /></td></tr>
-<tr class="separator:ac59c481ebfead520db9f3188f465ae6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad11c1d264c5b0ab548b01ace27eb5bb9"><td class="memItemLeft" align="right" valign="top">ompl::base::ConstraintPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceompl__interface.html#ad11c1d264c5b0ab548b01ace27eb5bb9">createOMPLConstraints</a> (const moveit::core::RobotModelConstPtr &amp;robot_model, const std::string &amp;group, const moveit_msgs::msg::Constraints &amp;constraints)</td></tr>
+<tr class="memdesc:ad11c1d264c5b0ab548b01ace27eb5bb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Factory to create constraints based on what is in the MoveIt constraint message.  <a href="namespaceompl__interface.html#ad11c1d264c5b0ab548b01ace27eb5bb9">More...</a><br /></td></tr>
+<tr class="separator:ad11c1d264c5b0ab548b01ace27eb5bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa050df2d2be7dfe8861febd1e0a6e90e"><td class="memItemLeft" align="right" valign="top">Eigen::Matrix3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceompl__interface.html#aa050df2d2be7dfe8861febd1e0a6e90e">angularVelocityToAngleAxis</a> (const double &amp;angle, const Eigen::Ref&lt; const Eigen::Vector3d &gt; &amp;axis)</td></tr>
 <tr class="memdesc:aa050df2d2be7dfe8861febd1e0a6e90e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a matrix to convert angular velocity to angle-axis velocity Based on: <a href="https://ethz.ch/content/dam/ethz/special-interest/mavt/robotics-n-intelligent-systems/rsl-dam/documents/RobotDynamics2016/RD2016script.pdf">https://ethz.ch/content/dam/ethz/special-interest/mavt/robotics-n-intelligent-systems/rsl-dam/documents/RobotDynamics2016/RD2016script.pdf</a> Eq. 2.107.  <a href="namespaceompl__interface.html#aa050df2d2be7dfe8861febd1e0a6e90e">More...</a><br /></td></tr>
 <tr class="separator:aa050df2d2be7dfe8861febd1e0a6e90e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -440,14 +440,14 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ac59c481ebfead520db9f3188f465ae6d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac59c481ebfead520db9f3188f465ae6d">&#9670;&nbsp;</a></span>createOMPLConstraint()</h2>
+<a id="ad11c1d264c5b0ab548b01ace27eb5bb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad11c1d264c5b0ab548b01ace27eb5bb9">&#9670;&nbsp;</a></span>createOMPLConstraints()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt; <a class="el" href="classompl__interface_1_1BaseConstraint.html">BaseConstraint</a> &gt; ompl_interface::createOMPLConstraint </td>
+          <td class="memname">ompl::base::ConstraintPtr ompl_interface::createOMPLConstraints </td>
           <td>(</td>
           <td class="paramtype">const moveit::core::RobotModelConstPtr &amp;&#160;</td>
           <td class="paramname"><em>robot_model</em>, </td>
@@ -478,9 +478,9 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespaceompl__interface_ac59c481ebfead520db9f3188f465ae6d_icgraph.png" border="0" usemap="#namespaceompl__interface_ac59c481ebfead520db9f3188f465ae6d_icgraph" alt=""/></div>
-<map name="namespaceompl__interface_ac59c481ebfead520db9f3188f465ae6d_icgraph" id="namespaceompl__interface_ac59c481ebfead520db9f3188f465ae6d_icgraph">
-<area shape="rect" title="Factory to create constraints based on what is in the MoveIt constraint message." alt="" coords="320,13,593,39"/>
+<div class="center"><img src="namespaceompl__interface_ad11c1d264c5b0ab548b01ace27eb5bb9_icgraph.png" border="0" usemap="#namespaceompl__interface_ad11c1d264c5b0ab548b01ace27eb5bb9_icgraph" alt=""/></div>
+<map name="namespaceompl__interface_ad11c1d264c5b0ab548b01ace27eb5bb9_icgraph" id="namespaceompl__interface_ad11c1d264c5b0ab548b01ace27eb5bb9_icgraph">
+<area shape="rect" title="Factory to create constraints based on what is in the MoveIt constraint message." alt="" coords="320,13,600,39"/>
 <area shape="rect" href="classompl__interface_1_1PlanningContextManager.html#a245e9bbf2bae51dca8df2ac9bf2adee7" title="This is the function that constructs new planning contexts if no previous ones exist that are suitabl..." alt="" coords="5,5,272,47"/>
 </map>
 </div>

@@ -134,10 +134,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afabe41ac2df7eb4058f21886b4f15214"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoccupancy__map__monitor_1_1OccupancyMapMonitor.html#afabe41ac2df7eb4058f21886b4f15214">forgetShape</a> (<a class="el" href="namespaceoccupancy__map__monitor.html#aa56619fedadce085b29e4b6d5b55527c">ShapeHandle</a> handle)</td></tr>
 <tr class="memdesc:afabe41ac2df7eb4058f21886b4f15214"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forget about this shape handle and the shapes it corresponds to.  <a href="classoccupancy__map__monitor_1_1OccupancyMapMonitor.html#afabe41ac2df7eb4058f21886b4f15214">More...</a><br /></td></tr>
 <tr class="separator:afabe41ac2df7eb4058f21886b4f15214"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ff7c82fce0e7f7057d602a49c51958d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoccupancy__map__monitor_1_1OccupancyMapMonitor.html#a2ff7c82fce0e7f7057d602a49c51958d">setUpdateCallback</a> (const boost::function&lt; void()&gt; &amp;update_callback)</td></tr>
-<tr class="memdesc:a2ff7c82fce0e7f7057d602a49c51958d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the callback to trigger when updates to the maintained octomap are received.  <a href="classoccupancy__map__monitor_1_1OccupancyMapMonitor.html#a2ff7c82fce0e7f7057d602a49c51958d">More...</a><br /></td></tr>
-<tr class="separator:a2ff7c82fce0e7f7057d602a49c51958d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56c686ad27f23f9dceecdb8946a2ba5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoccupancy__map__monitor_1_1OccupancyMapMonitor.html#a56c686ad27f23f9dceecdb8946a2ba5e">setTransformCacheCallback</a> (const <a class="el" href="namespaceoccupancy__map__monitor.html#a1f02059fc36c481ff35b5bd924c1da5f">TransformCacheProvider</a> &amp;transform_cache_callback)</td></tr>
+<tr class="memitem:af90027bdef7f531adf66c6b80a79a3b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoccupancy__map__monitor_1_1OccupancyMapMonitor.html#af90027bdef7f531adf66c6b80a79a3b2">setUpdateCallback</a> (const std::function&lt; void()&gt; &amp;update_callback)</td></tr>
+<tr class="memdesc:af90027bdef7f531adf66c6b80a79a3b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the callback to trigger when updates to the maintained octomap are received.  <a href="classoccupancy__map__monitor_1_1OccupancyMapMonitor.html#af90027bdef7f531adf66c6b80a79a3b2">More...</a><br /></td></tr>
+<tr class="separator:af90027bdef7f531adf66c6b80a79a3b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56c686ad27f23f9dceecdb8946a2ba5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoccupancy__map__monitor_1_1OccupancyMapMonitor.html#a56c686ad27f23f9dceecdb8946a2ba5e">setTransformCacheCallback</a> (const <a class="el" href="namespaceoccupancy__map__monitor.html#a649f72d4d578be22eef1fc63ca49a845">TransformCacheProvider</a> &amp;transform_cache_callback)</td></tr>
 <tr class="memdesc:a56c686ad27f23f9dceecdb8946a2ba5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the transform cache callback.  <a href="classoccupancy__map__monitor_1_1OccupancyMapMonitor.html#a56c686ad27f23f9dceecdb8946a2ba5e">More...</a><br /></td></tr>
 <tr class="separator:a56c686ad27f23f9dceecdb8946a2ba5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70cc3e6dc1e6fee216def9b9e7b9e389"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoccupancy__map__monitor_1_1OccupancyMapMonitor.html#a70cc3e6dc1e6fee216def9b9e7b9e389">publishDebugInformation</a> (bool flag)</td></tr>
@@ -650,7 +650,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void occupancy_map_monitor::OccupancyMapMonitor::setTransformCacheCallback </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespaceoccupancy__map__monitor.html#a1f02059fc36c481ff35b5bd924c1da5f">TransformCacheProvider</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespaceoccupancy__map__monitor.html#a649f72d4d578be22eef1fc63ca49a845">TransformCacheProvider</a> &amp;&#160;</td>
           <td class="paramname"><em>transform_cache_callback</em></td><td>)</td>
           <td></td>
         </tr>
@@ -669,8 +669,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a2ff7c82fce0e7f7057d602a49c51958d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ff7c82fce0e7f7057d602a49c51958d">&#9670;&nbsp;</a></span>setUpdateCallback()</h2>
+<a id="af90027bdef7f531adf66c6b80a79a3b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af90027bdef7f531adf66c6b80a79a3b2">&#9670;&nbsp;</a></span>setUpdateCallback()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -681,7 +681,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void occupancy_map_monitor::OccupancyMapMonitor::setUpdateCallback </td>
           <td>(</td>
-          <td class="paramtype">const boost::function&lt; void()&gt; &amp;&#160;</td>
+          <td class="paramtype">const std::function&lt; void()&gt; &amp;&#160;</td>
           <td class="paramname"><em>update_callback</em></td><td>)</td>
           <td></td>
         </tr>
@@ -705,8 +705,8 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classoccupancy__map__monitor_1_1OccupancyMapMonitor_a2ff7c82fce0e7f7057d602a49c51958d_icgraph.png" border="0" usemap="#classoccupancy__map__monitor_1_1OccupancyMapMonitor_a2ff7c82fce0e7f7057d602a49c51958d_icgraph" alt=""/></div>
-<map name="classoccupancy__map__monitor_1_1OccupancyMapMonitor_a2ff7c82fce0e7f7057d602a49c51958d_icgraph" id="classoccupancy__map__monitor_1_1OccupancyMapMonitor_a2ff7c82fce0e7f7057d602a49c51958d_icgraph">
+<div class="center"><img src="classoccupancy__map__monitor_1_1OccupancyMapMonitor_af90027bdef7f531adf66c6b80a79a3b2_icgraph.png" border="0" usemap="#classoccupancy__map__monitor_1_1OccupancyMapMonitor_af90027bdef7f531adf66c6b80a79a3b2_icgraph" alt=""/></div>
+<map name="classoccupancy__map__monitor_1_1OccupancyMapMonitor_af90027bdef7f531adf66c6b80a79a3b2_icgraph" id="classoccupancy__map__monitor_1_1OccupancyMapMonitor_af90027bdef7f531adf66c6b80a79a3b2_icgraph">
 <area shape="rect" title="Set the callback to trigger when updates to the maintained octomap are received." alt="" coords="108,5,293,61"/>
 <area shape="rect" href="occupancy__map__server_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,20,60,47"/>
 </map>

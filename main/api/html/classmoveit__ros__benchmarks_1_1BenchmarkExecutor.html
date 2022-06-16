@@ -126,22 +126,22 @@ Public Types</h2></td></tr>
 <tr class="memitem:a17cebe68cbcb6cad9f6540c2f4c848d3"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#aff89c9b8c0878663eb478a98b5d7407a">PlannerRunData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a17cebe68cbcb6cad9f6540c2f4c848d3">PlannerBenchmarkData</a></td></tr>
 <tr class="memdesc:a17cebe68cbcb6cad9f6540c2f4c848d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to hold information for a single planner's benchmark data.  <a href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a17cebe68cbcb6cad9f6540c2f4c848d3">More...</a><br /></td></tr>
 <tr class="separator:a17cebe68cbcb6cad9f6540c2f4c848d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9496928c849d381d9a1fc1c7f75a53b"><td class="memItemLeft" align="right" valign="top">typedef boost::function&lt; void(const moveit_msgs::msg::MotionPlanRequest &amp;request, planning_scene::PlanningScenePtr)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#ae9496928c849d381d9a1fc1c7f75a53b">QueryStartEventFunction</a></td></tr>
-<tr class="memdesc:ae9496928c849d381d9a1fc1c7f75a53b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of a query-start benchmark event function. Invoked before a new query is benchmarked.  <a href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#ae9496928c849d381d9a1fc1c7f75a53b">More...</a><br /></td></tr>
-<tr class="separator:ae9496928c849d381d9a1fc1c7f75a53b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a226bd36681dc360a964701fe9aee435e"><td class="memItemLeft" align="right" valign="top">typedef boost::function&lt; void(const moveit_msgs::msg::MotionPlanRequest &amp;request, planning_scene::PlanningScenePtr)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a226bd36681dc360a964701fe9aee435e">QueryCompletionEventFunction</a></td></tr>
-<tr class="memdesc:a226bd36681dc360a964701fe9aee435e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of a query-end benchmark event function. Invoked after a query has finished benchmarking.  <a href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a226bd36681dc360a964701fe9aee435e">More...</a><br /></td></tr>
-<tr class="separator:a226bd36681dc360a964701fe9aee435e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a1f3499b3f13dc0a6dcf917ebbf9806"><td class="memItemLeft" align="right" valign="top">typedef boost::function&lt; void(const moveit_msgs::msg::MotionPlanRequest &amp;request, <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a17cebe68cbcb6cad9f6540c2f4c848d3">PlannerBenchmarkData</a> &amp;benchmark_data)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a2a1f3499b3f13dc0a6dcf917ebbf9806">PlannerStartEventFunction</a></td></tr>
-<tr class="separator:a2a1f3499b3f13dc0a6dcf917ebbf9806"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ba18a8f31f50ceec4e489e2c46b9fac"><td class="memItemLeft" align="right" valign="top">typedef boost::function&lt; void(const moveit_msgs::msg::MotionPlanRequest &amp;request, <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a17cebe68cbcb6cad9f6540c2f4c848d3">PlannerBenchmarkData</a> &amp;benchmark_data)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a8ba18a8f31f50ceec4e489e2c46b9fac">PlannerCompletionEventFunction</a></td></tr>
-<tr class="separator:a8ba18a8f31f50ceec4e489e2c46b9fac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82832874640c540f8ce476f8a49f9045"><td class="memItemLeft" align="right" valign="top">typedef boost::function&lt; void(moveit_msgs::msg::MotionPlanRequest &amp;request)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a82832874640c540f8ce476f8a49f9045">PreRunEventFunction</a></td></tr>
-<tr class="memdesc:a82832874640c540f8ce476f8a49f9045"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of a pre-run benchmark event function. Invoked immediately before each planner calls solve().  <a href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a82832874640c540f8ce476f8a49f9045">More...</a><br /></td></tr>
-<tr class="separator:a82832874640c540f8ce476f8a49f9045"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ea758629f29405eac35af2b720a954b"><td class="memItemLeft" align="right" valign="top">typedef boost::function&lt; void(const moveit_msgs::msg::MotionPlanRequest &amp;request, const <a class="el" href="structplanning__interface_1_1MotionPlanDetailedResponse.html">planning_interface::MotionPlanDetailedResponse</a> &amp;response, <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#aff89c9b8c0878663eb478a98b5d7407a">PlannerRunData</a> &amp;run_data)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a0ea758629f29405eac35af2b720a954b">PostRunEventFunction</a></td></tr>
-<tr class="memdesc:a0ea758629f29405eac35af2b720a954b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of a post-run benchmark event function. Invoked immediately after each planner calls solve().  <a href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a0ea758629f29405eac35af2b720a954b">More...</a><br /></td></tr>
-<tr class="separator:a0ea758629f29405eac35af2b720a954b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7fc6d5b976850ca483e84fe65bf63d4"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; void(const moveit_msgs::msg::MotionPlanRequest &amp;request, planning_scene::PlanningScenePtr)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#ad7fc6d5b976850ca483e84fe65bf63d4">QueryStartEventFunction</a></td></tr>
+<tr class="memdesc:ad7fc6d5b976850ca483e84fe65bf63d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of a query-start benchmark event function. Invoked before a new query is benchmarked.  <a href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#ad7fc6d5b976850ca483e84fe65bf63d4">More...</a><br /></td></tr>
+<tr class="separator:ad7fc6d5b976850ca483e84fe65bf63d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74aff0ea2b07b6eba493fae3fbdb33d0"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; void(const moveit_msgs::msg::MotionPlanRequest &amp;request, planning_scene::PlanningScenePtr)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a74aff0ea2b07b6eba493fae3fbdb33d0">QueryCompletionEventFunction</a></td></tr>
+<tr class="memdesc:a74aff0ea2b07b6eba493fae3fbdb33d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of a query-end benchmark event function. Invoked after a query has finished benchmarking.  <a href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a74aff0ea2b07b6eba493fae3fbdb33d0">More...</a><br /></td></tr>
+<tr class="separator:a74aff0ea2b07b6eba493fae3fbdb33d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0fc996d78285f397e9b608b341becfc"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; void(const moveit_msgs::msg::MotionPlanRequest &amp;request, <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a17cebe68cbcb6cad9f6540c2f4c848d3">PlannerBenchmarkData</a> &amp;benchmark_data)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#af0fc996d78285f397e9b608b341becfc">PlannerStartEventFunction</a></td></tr>
+<tr class="separator:af0fc996d78285f397e9b608b341becfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e4427f51205f4d4320ee9a13b862822"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; void(const moveit_msgs::msg::MotionPlanRequest &amp;request, <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a17cebe68cbcb6cad9f6540c2f4c848d3">PlannerBenchmarkData</a> &amp;benchmark_data)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a6e4427f51205f4d4320ee9a13b862822">PlannerCompletionEventFunction</a></td></tr>
+<tr class="separator:a6e4427f51205f4d4320ee9a13b862822"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf7c6c70748c531c8808ece378915a83"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; void(moveit_msgs::msg::MotionPlanRequest &amp;request)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#abf7c6c70748c531c8808ece378915a83">PreRunEventFunction</a></td></tr>
+<tr class="memdesc:abf7c6c70748c531c8808ece378915a83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of a pre-run benchmark event function. Invoked immediately before each planner calls solve().  <a href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#abf7c6c70748c531c8808ece378915a83">More...</a><br /></td></tr>
+<tr class="separator:abf7c6c70748c531c8808ece378915a83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbc5b534d2ad790559d5cc749a27c1f1"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; void(const moveit_msgs::msg::MotionPlanRequest &amp;request, const <a class="el" href="structplanning__interface_1_1MotionPlanDetailedResponse.html">planning_interface::MotionPlanDetailedResponse</a> &amp;response, <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#aff89c9b8c0878663eb478a98b5d7407a">PlannerRunData</a> &amp;run_data)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#abbc5b534d2ad790559d5cc749a27c1f1">PostRunEventFunction</a></td></tr>
+<tr class="memdesc:abbc5b534d2ad790559d5cc749a27c1f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of a post-run benchmark event function. Invoked immediately after each planner calls solve().  <a href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#abbc5b534d2ad790559d5cc749a27c1f1">More...</a><br /></td></tr>
+<tr class="separator:abbc5b534d2ad790559d5cc749a27c1f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -151,17 +151,17 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad6736dbf4289b9f5a51b0ef4ea40299e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a261850149f9ca4be2961c1a1032ac749"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a261850149f9ca4be2961c1a1032ac749">initialize</a> (const std::vector&lt; std::string &gt; &amp;plugin_classes)</td></tr>
 <tr class="separator:a261850149f9ca4be2961c1a1032ac749"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87fc093d654f96f8dd45deedac799d29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a87fc093d654f96f8dd45deedac799d29">addPreRunEvent</a> (const <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a82832874640c540f8ce476f8a49f9045">PreRunEventFunction</a> &amp;func)</td></tr>
+<tr class="memitem:a87fc093d654f96f8dd45deedac799d29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a87fc093d654f96f8dd45deedac799d29">addPreRunEvent</a> (const <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#abf7c6c70748c531c8808ece378915a83">PreRunEventFunction</a> &amp;func)</td></tr>
 <tr class="separator:a87fc093d654f96f8dd45deedac799d29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbc1582a31361161c44f5dad07cb517c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#afbc1582a31361161c44f5dad07cb517c">addPostRunEvent</a> (const <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a0ea758629f29405eac35af2b720a954b">PostRunEventFunction</a> &amp;func)</td></tr>
+<tr class="memitem:afbc1582a31361161c44f5dad07cb517c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#afbc1582a31361161c44f5dad07cb517c">addPostRunEvent</a> (const <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#abbc5b534d2ad790559d5cc749a27c1f1">PostRunEventFunction</a> &amp;func)</td></tr>
 <tr class="separator:afbc1582a31361161c44f5dad07cb517c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad7e22559ce40113e92ede61aa3827d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#aad7e22559ce40113e92ede61aa3827d3">addPlannerStartEvent</a> (const <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a2a1f3499b3f13dc0a6dcf917ebbf9806">PlannerStartEventFunction</a> &amp;func)</td></tr>
+<tr class="memitem:aad7e22559ce40113e92ede61aa3827d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#aad7e22559ce40113e92ede61aa3827d3">addPlannerStartEvent</a> (const <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#af0fc996d78285f397e9b608b341becfc">PlannerStartEventFunction</a> &amp;func)</td></tr>
 <tr class="separator:aad7e22559ce40113e92ede61aa3827d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa570fb63ed24cdf09cd7739d4b97ca47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#aa570fb63ed24cdf09cd7739d4b97ca47">addPlannerCompletionEvent</a> (const <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a8ba18a8f31f50ceec4e489e2c46b9fac">PlannerCompletionEventFunction</a> &amp;func)</td></tr>
+<tr class="memitem:aa570fb63ed24cdf09cd7739d4b97ca47"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#aa570fb63ed24cdf09cd7739d4b97ca47">addPlannerCompletionEvent</a> (const <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a6e4427f51205f4d4320ee9a13b862822">PlannerCompletionEventFunction</a> &amp;func)</td></tr>
 <tr class="separator:aa570fb63ed24cdf09cd7739d4b97ca47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dbbb8ebc1bbee3c2f65f69fd6a97520"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a4dbbb8ebc1bbee3c2f65f69fd6a97520">addQueryStartEvent</a> (const <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#ae9496928c849d381d9a1fc1c7f75a53b">QueryStartEventFunction</a> &amp;func)</td></tr>
+<tr class="memitem:a4dbbb8ebc1bbee3c2f65f69fd6a97520"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a4dbbb8ebc1bbee3c2f65f69fd6a97520">addQueryStartEvent</a> (const <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#ad7fc6d5b976850ca483e84fe65bf63d4">QueryStartEventFunction</a> &amp;func)</td></tr>
 <tr class="separator:a4dbbb8ebc1bbee3c2f65f69fd6a97520"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aade716746949a3dc99bb39e000d86411"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#aade716746949a3dc99bb39e000d86411">addQueryCompletionEvent</a> (const <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a226bd36681dc360a964701fe9aee435e">QueryCompletionEventFunction</a> &amp;func)</td></tr>
+<tr class="memitem:aade716746949a3dc99bb39e000d86411"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#aade716746949a3dc99bb39e000d86411">addQueryCompletionEvent</a> (const <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a74aff0ea2b07b6eba493fae3fbdb33d0">QueryCompletionEventFunction</a> &amp;func)</td></tr>
 <tr class="separator:aade716746949a3dc99bb39e000d86411"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae50ad82f792629830615947ed06944e6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#ae50ad82f792629830615947ed06944e6">clear</a> ()</td></tr>
 <tr class="separator:ae50ad82f792629830615947ed06944e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -239,17 +239,17 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a98cad4eb49a3df1768b129244dba1540"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a922952985795893e068999db5f5b21ed"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a17cebe68cbcb6cad9f6540c2f4c848d3">PlannerBenchmarkData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a922952985795893e068999db5f5b21ed">benchmark_data_</a></td></tr>
 <tr class="separator:a922952985795893e068999db5f5b21ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6df378b4e4153c67ef53c8baae3d77c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a82832874640c540f8ce476f8a49f9045">PreRunEventFunction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#ad6df378b4e4153c67ef53c8baae3d77c">pre_event_fns_</a></td></tr>
+<tr class="memitem:ad6df378b4e4153c67ef53c8baae3d77c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#abf7c6c70748c531c8808ece378915a83">PreRunEventFunction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#ad6df378b4e4153c67ef53c8baae3d77c">pre_event_fns_</a></td></tr>
 <tr class="separator:ad6df378b4e4153c67ef53c8baae3d77c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b85436887f9ca906ed41732614eae66"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a0ea758629f29405eac35af2b720a954b">PostRunEventFunction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a5b85436887f9ca906ed41732614eae66">post_event_fns_</a></td></tr>
+<tr class="memitem:a5b85436887f9ca906ed41732614eae66"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#abbc5b534d2ad790559d5cc749a27c1f1">PostRunEventFunction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a5b85436887f9ca906ed41732614eae66">post_event_fns_</a></td></tr>
 <tr class="separator:a5b85436887f9ca906ed41732614eae66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad62d7166e6a42343d99ce61fd182edb2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a2a1f3499b3f13dc0a6dcf917ebbf9806">PlannerStartEventFunction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#ad62d7166e6a42343d99ce61fd182edb2">planner_start_fns_</a></td></tr>
+<tr class="memitem:ad62d7166e6a42343d99ce61fd182edb2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#af0fc996d78285f397e9b608b341becfc">PlannerStartEventFunction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#ad62d7166e6a42343d99ce61fd182edb2">planner_start_fns_</a></td></tr>
 <tr class="separator:ad62d7166e6a42343d99ce61fd182edb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc13d47bc4fc0df8d389682f2746d97f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a8ba18a8f31f50ceec4e489e2c46b9fac">PlannerCompletionEventFunction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#afc13d47bc4fc0df8d389682f2746d97f">planner_completion_fns_</a></td></tr>
+<tr class="memitem:afc13d47bc4fc0df8d389682f2746d97f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a6e4427f51205f4d4320ee9a13b862822">PlannerCompletionEventFunction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#afc13d47bc4fc0df8d389682f2746d97f">planner_completion_fns_</a></td></tr>
 <tr class="separator:afc13d47bc4fc0df8d389682f2746d97f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a997cc745f32cdc72b8f5acbdd467704c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#ae9496928c849d381d9a1fc1c7f75a53b">QueryStartEventFunction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a997cc745f32cdc72b8f5acbdd467704c">query_start_fns_</a></td></tr>
+<tr class="memitem:a997cc745f32cdc72b8f5acbdd467704c"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#ad7fc6d5b976850ca483e84fe65bf63d4">QueryStartEventFunction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a997cc745f32cdc72b8f5acbdd467704c">query_start_fns_</a></td></tr>
 <tr class="separator:a997cc745f32cdc72b8f5acbdd467704c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69a19ac7ae41d51e9319839f49d695d0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a226bd36681dc360a964701fe9aee435e">QueryCompletionEventFunction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a69a19ac7ae41d51e9319839f49d695d0">query_end_fns_</a></td></tr>
+<tr class="memitem:a69a19ac7ae41d51e9319839f49d695d0"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a74aff0ea2b07b6eba493fae3fbdb33d0">QueryCompletionEventFunction</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a69a19ac7ae41d51e9319839f49d695d0">query_end_fns_</a></td></tr>
 <tr class="separator:a69a19ac7ae41d51e9319839f49d695d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -275,14 +275,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a8ba18a8f31f50ceec4e489e2c46b9fac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ba18a8f31f50ceec4e489e2c46b9fac">&#9670;&nbsp;</a></span>PlannerCompletionEventFunction</h2>
+<a id="a6e4427f51205f4d4320ee9a13b862822"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e4427f51205f4d4320ee9a13b862822">&#9670;&nbsp;</a></span>PlannerCompletionEventFunction</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef boost::function&lt;void(const moveit_msgs::msg::MotionPlanRequest&amp; request, <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a17cebe68cbcb6cad9f6540c2f4c848d3">PlannerBenchmarkData</a>&amp; benchmark_data)&gt; <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a8ba18a8f31f50ceec4e489e2c46b9fac">moveit_ros_benchmarks::BenchmarkExecutor::PlannerCompletionEventFunction</a></td>
+          <td class="memname">typedef std::function&lt;void(const moveit_msgs::msg::MotionPlanRequest&amp; request, <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a17cebe68cbcb6cad9f6540c2f4c848d3">PlannerBenchmarkData</a>&amp; benchmark_data)&gt; <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a6e4427f51205f4d4320ee9a13b862822">moveit_ros_benchmarks::BenchmarkExecutor::PlannerCompletionEventFunction</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -310,14 +310,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a2a1f3499b3f13dc0a6dcf917ebbf9806"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a1f3499b3f13dc0a6dcf917ebbf9806">&#9670;&nbsp;</a></span>PlannerStartEventFunction</h2>
+<a id="af0fc996d78285f397e9b608b341becfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0fc996d78285f397e9b608b341becfc">&#9670;&nbsp;</a></span>PlannerStartEventFunction</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef boost::function&lt;void(const moveit_msgs::msg::MotionPlanRequest&amp; request, <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a17cebe68cbcb6cad9f6540c2f4c848d3">PlannerBenchmarkData</a>&amp; benchmark_data)&gt; <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a2a1f3499b3f13dc0a6dcf917ebbf9806">moveit_ros_benchmarks::BenchmarkExecutor::PlannerStartEventFunction</a></td>
+          <td class="memname">typedef std::function&lt;void(const moveit_msgs::msg::MotionPlanRequest&amp; request, <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a17cebe68cbcb6cad9f6540c2f4c848d3">PlannerBenchmarkData</a>&amp; benchmark_data)&gt; <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#af0fc996d78285f397e9b608b341becfc">moveit_ros_benchmarks::BenchmarkExecutor::PlannerStartEventFunction</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -327,14 +327,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a0ea758629f29405eac35af2b720a954b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ea758629f29405eac35af2b720a954b">&#9670;&nbsp;</a></span>PostRunEventFunction</h2>
+<a id="abbc5b534d2ad790559d5cc749a27c1f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbc5b534d2ad790559d5cc749a27c1f1">&#9670;&nbsp;</a></span>PostRunEventFunction</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef boost::function&lt;void(const moveit_msgs::msg::MotionPlanRequest&amp; request, const <a class="el" href="structplanning__interface_1_1MotionPlanDetailedResponse.html">planning_interface::MotionPlanDetailedResponse</a>&amp; response, <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#aff89c9b8c0878663eb478a98b5d7407a">PlannerRunData</a>&amp; run_data)&gt; <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a0ea758629f29405eac35af2b720a954b">moveit_ros_benchmarks::BenchmarkExecutor::PostRunEventFunction</a></td>
+          <td class="memname">typedef std::function&lt;void(const moveit_msgs::msg::MotionPlanRequest&amp; request, const <a class="el" href="structplanning__interface_1_1MotionPlanDetailedResponse.html">planning_interface::MotionPlanDetailedResponse</a>&amp; response, <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#aff89c9b8c0878663eb478a98b5d7407a">PlannerRunData</a>&amp; run_data)&gt; <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#abbc5b534d2ad790559d5cc749a27c1f1">moveit_ros_benchmarks::BenchmarkExecutor::PostRunEventFunction</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -345,14 +345,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a82832874640c540f8ce476f8a49f9045"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82832874640c540f8ce476f8a49f9045">&#9670;&nbsp;</a></span>PreRunEventFunction</h2>
+<a id="abf7c6c70748c531c8808ece378915a83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf7c6c70748c531c8808ece378915a83">&#9670;&nbsp;</a></span>PreRunEventFunction</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef boost::function&lt;void(moveit_msgs::msg::MotionPlanRequest&amp; request)&gt; <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a82832874640c540f8ce476f8a49f9045">moveit_ros_benchmarks::BenchmarkExecutor::PreRunEventFunction</a></td>
+          <td class="memname">typedef std::function&lt;void(moveit_msgs::msg::MotionPlanRequest&amp; request)&gt; <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#abf7c6c70748c531c8808ece378915a83">moveit_ros_benchmarks::BenchmarkExecutor::PreRunEventFunction</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -363,14 +363,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a226bd36681dc360a964701fe9aee435e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a226bd36681dc360a964701fe9aee435e">&#9670;&nbsp;</a></span>QueryCompletionEventFunction</h2>
+<a id="a74aff0ea2b07b6eba493fae3fbdb33d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74aff0ea2b07b6eba493fae3fbdb33d0">&#9670;&nbsp;</a></span>QueryCompletionEventFunction</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef boost::function&lt;void(const moveit_msgs::msg::MotionPlanRequest&amp; request, planning_scene::PlanningScenePtr)&gt; <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a226bd36681dc360a964701fe9aee435e">moveit_ros_benchmarks::BenchmarkExecutor::QueryCompletionEventFunction</a></td>
+          <td class="memname">typedef std::function&lt;void(const moveit_msgs::msg::MotionPlanRequest&amp; request, planning_scene::PlanningScenePtr)&gt; <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a74aff0ea2b07b6eba493fae3fbdb33d0">moveit_ros_benchmarks::BenchmarkExecutor::QueryCompletionEventFunction</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -381,14 +381,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ae9496928c849d381d9a1fc1c7f75a53b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae9496928c849d381d9a1fc1c7f75a53b">&#9670;&nbsp;</a></span>QueryStartEventFunction</h2>
+<a id="ad7fc6d5b976850ca483e84fe65bf63d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7fc6d5b976850ca483e84fe65bf63d4">&#9670;&nbsp;</a></span>QueryStartEventFunction</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef boost::function&lt;void(const moveit_msgs::msg::MotionPlanRequest&amp; request, planning_scene::PlanningScenePtr)&gt; <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#ae9496928c849d381d9a1fc1c7f75a53b">moveit_ros_benchmarks::BenchmarkExecutor::QueryStartEventFunction</a></td>
+          <td class="memname">typedef std::function&lt;void(const moveit_msgs::msg::MotionPlanRequest&amp; request, planning_scene::PlanningScenePtr)&gt; <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#ad7fc6d5b976850ca483e84fe65bf63d4">moveit_ros_benchmarks::BenchmarkExecutor::QueryStartEventFunction</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -476,7 +476,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void BenchmarkExecutor::addPlannerCompletionEvent </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a8ba18a8f31f50ceec4e489e2c46b9fac">PlannerCompletionEventFunction</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a6e4427f51205f4d4320ee9a13b862822">PlannerCompletionEventFunction</a> &amp;&#160;</td>
           <td class="paramname"><em>func</em></td><td>)</td>
           <td></td>
         </tr>
@@ -496,7 +496,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void BenchmarkExecutor::addPlannerStartEvent </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a2a1f3499b3f13dc0a6dcf917ebbf9806">PlannerStartEventFunction</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#af0fc996d78285f397e9b608b341becfc">PlannerStartEventFunction</a> &amp;&#160;</td>
           <td class="paramname"><em>func</em></td><td>)</td>
           <td></td>
         </tr>
@@ -516,7 +516,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void BenchmarkExecutor::addPostRunEvent </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a0ea758629f29405eac35af2b720a954b">PostRunEventFunction</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#abbc5b534d2ad790559d5cc749a27c1f1">PostRunEventFunction</a> &amp;&#160;</td>
           <td class="paramname"><em>func</em></td><td>)</td>
           <td></td>
         </tr>
@@ -536,7 +536,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void BenchmarkExecutor::addPreRunEvent </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a82832874640c540f8ce476f8a49f9045">PreRunEventFunction</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#abf7c6c70748c531c8808ece378915a83">PreRunEventFunction</a> &amp;&#160;</td>
           <td class="paramname"><em>func</em></td><td>)</td>
           <td></td>
         </tr>
@@ -556,7 +556,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void BenchmarkExecutor::addQueryCompletionEvent </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a226bd36681dc360a964701fe9aee435e">QueryCompletionEventFunction</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a74aff0ea2b07b6eba493fae3fbdb33d0">QueryCompletionEventFunction</a> &amp;&#160;</td>
           <td class="paramname"><em>func</em></td><td>)</td>
           <td></td>
         </tr>
@@ -576,7 +576,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void BenchmarkExecutor::addQueryStartEvent </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#ae9496928c849d381d9a1fc1c7f75a53b">QueryStartEventFunction</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#ad7fc6d5b976850ca483e84fe65bf63d4">QueryStartEventFunction</a> &amp;&#160;</td>
           <td class="paramname"><em>func</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1674,7 +1674,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a8ba18a8f31f50ceec4e489e2c46b9fac">PlannerCompletionEventFunction</a>&gt; moveit_ros_benchmarks::BenchmarkExecutor::planner_completion_fns_</td>
+          <td class="memname">std::vector&lt;<a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a6e4427f51205f4d4320ee9a13b862822">PlannerCompletionEventFunction</a>&gt; moveit_ros_benchmarks::BenchmarkExecutor::planner_completion_fns_</td>
         </tr>
       </table>
   </td>
@@ -1698,7 +1698,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a2a1f3499b3f13dc0a6dcf917ebbf9806">PlannerStartEventFunction</a>&gt; moveit_ros_benchmarks::BenchmarkExecutor::planner_start_fns_</td>
+          <td class="memname">std::vector&lt;<a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#af0fc996d78285f397e9b608b341becfc">PlannerStartEventFunction</a>&gt; moveit_ros_benchmarks::BenchmarkExecutor::planner_start_fns_</td>
         </tr>
       </table>
   </td>
@@ -1770,7 +1770,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a0ea758629f29405eac35af2b720a954b">PostRunEventFunction</a>&gt; moveit_ros_benchmarks::BenchmarkExecutor::post_event_fns_</td>
+          <td class="memname">std::vector&lt;<a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#abbc5b534d2ad790559d5cc749a27c1f1">PostRunEventFunction</a>&gt; moveit_ros_benchmarks::BenchmarkExecutor::post_event_fns_</td>
         </tr>
       </table>
   </td>
@@ -1794,7 +1794,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a82832874640c540f8ce476f8a49f9045">PreRunEventFunction</a>&gt; moveit_ros_benchmarks::BenchmarkExecutor::pre_event_fns_</td>
+          <td class="memname">std::vector&lt;<a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#abf7c6c70748c531c8808ece378915a83">PreRunEventFunction</a>&gt; moveit_ros_benchmarks::BenchmarkExecutor::pre_event_fns_</td>
         </tr>
       </table>
   </td>
@@ -1890,7 +1890,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a226bd36681dc360a964701fe9aee435e">QueryCompletionEventFunction</a>&gt; moveit_ros_benchmarks::BenchmarkExecutor::query_end_fns_</td>
+          <td class="memname">std::vector&lt;<a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a74aff0ea2b07b6eba493fae3fbdb33d0">QueryCompletionEventFunction</a>&gt; moveit_ros_benchmarks::BenchmarkExecutor::query_end_fns_</td>
         </tr>
       </table>
   </td>
@@ -1914,7 +1914,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#ae9496928c849d381d9a1fc1c7f75a53b">QueryStartEventFunction</a>&gt; moveit_ros_benchmarks::BenchmarkExecutor::query_start_fns_</td>
+          <td class="memname">std::vector&lt;<a class="el" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#ad7fc6d5b976850ca483e84fe65bf63d4">QueryStartEventFunction</a>&gt; moveit_ros_benchmarks::BenchmarkExecutor::query_start_fns_</td>
         </tr>
       </table>
   </td>

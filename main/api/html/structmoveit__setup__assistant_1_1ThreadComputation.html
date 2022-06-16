@@ -90,8 +90,8 @@ Collaboration diagram for moveit_setup_assistant::ThreadComputation:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad4fb1b21e60b2b1f5cd3739554eb23a2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmoveit__setup__assistant_1_1ThreadComputation.html#ad4fb1b21e60b2b1f5cd3739554eb23a2">ThreadComputation</a> (<a class="el" href="classplanning__scene_1_1PlanningScene.html">planning_scene::PlanningScene</a> &amp;scene, const <a class="el" href="structcollision__detection_1_1CollisionRequest.html">collision_detection::CollisionRequest</a> &amp;req, int thread_id, int num_trials, <a class="el" href="namespacemoveit__setup__assistant.html#a98a4840ded10cd49d1912a2a6cf1c096">StringPairSet</a> *links_seen_colliding, boost::mutex *lock, unsigned int *progress)</td></tr>
-<tr class="separator:ad4fb1b21e60b2b1f5cd3739554eb23a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6926389407aefc3a1d9a670bf71f0fe4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmoveit__setup__assistant_1_1ThreadComputation.html#a6926389407aefc3a1d9a670bf71f0fe4">ThreadComputation</a> (<a class="el" href="classplanning__scene_1_1PlanningScene.html">planning_scene::PlanningScene</a> &amp;scene, const <a class="el" href="structcollision__detection_1_1CollisionRequest.html">collision_detection::CollisionRequest</a> &amp;req, int thread_id, int num_trials, <a class="el" href="namespacemoveit__setup__assistant.html#a98a4840ded10cd49d1912a2a6cf1c096">StringPairSet</a> *links_seen_colliding, std::mutex *lock, unsigned int *progress)</td></tr>
+<tr class="separator:a6926389407aefc3a1d9a670bf71f0fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -105,17 +105,17 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a90d65ca730ea62034d2bd607ad171d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a789f847567ff9d1535b0320deefe23fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemoveit__setup__assistant.html#a98a4840ded10cd49d1912a2a6cf1c096">StringPairSet</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmoveit__setup__assistant_1_1ThreadComputation.html#a789f847567ff9d1535b0320deefe23fd">links_seen_colliding_</a></td></tr>
 <tr class="separator:a789f847567ff9d1535b0320deefe23fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1779b28295765445265f22554187c46"><td class="memItemLeft" align="right" valign="top">boost::mutex *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmoveit__setup__assistant_1_1ThreadComputation.html#ad1779b28295765445265f22554187c46">lock_</a></td></tr>
-<tr class="separator:ad1779b28295765445265f22554187c46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c7e3a8bc7c0a24bec525f1fec7c1f6a"><td class="memItemLeft" align="right" valign="top">std::mutex *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmoveit__setup__assistant_1_1ThreadComputation.html#a9c7e3a8bc7c0a24bec525f1fec7c1f6a">lock_</a></td></tr>
+<tr class="separator:a9c7e3a8bc7c0a24bec525f1fec7c1f6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6df9630f7f267716d9daff321ad6f3b5"><td class="memItemLeft" align="right" valign="top">unsigned int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmoveit__setup__assistant_1_1ThreadComputation.html#a6df9630f7f267716d9daff321ad6f3b5">progress_</a></td></tr>
 <tr class="separator:a6df9630f7f267716d9daff321ad6f3b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="compute__default__collisions_8cpp_source.html#l00097">97</a> of file <a class="el" href="compute__default__collisions_8cpp_source.html">compute_default_collisions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="compute__default__collisions_8cpp_source.html#l00096">96</a> of file <a class="el" href="compute__default__collisions_8cpp_source.html">compute_default_collisions.cpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ad4fb1b21e60b2b1f5cd3739554eb23a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4fb1b21e60b2b1f5cd3739554eb23a2">&#9670;&nbsp;</a></span>ThreadComputation()</h2>
+<a id="a6926389407aefc3a1d9a670bf71f0fe4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6926389407aefc3a1d9a670bf71f0fe4">&#9670;&nbsp;</a></span>ThreadComputation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -156,7 +156,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">boost::mutex *&#160;</td>
+          <td class="paramtype">std::mutex *&#160;</td>
           <td class="paramname"><em>lock</em>, </td>
         </tr>
         <tr>
@@ -178,7 +178,7 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="compute__default__collisions_8cpp_source.html#l00099">99</a> of file <a class="el" href="compute__default__collisions_8cpp_source.html">compute_default_collisions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="compute__default__collisions_8cpp_source.html#l00098">98</a> of file <a class="el" href="compute__default__collisions_8cpp_source.html">compute_default_collisions.cpp</a>.</p>
 
 </div>
 </div>
@@ -195,23 +195,23 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="compute__default__collisions_8cpp_source.html#l00115">115</a> of file <a class="el" href="compute__default__collisions_8cpp_source.html">compute_default_collisions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="compute__default__collisions_8cpp_source.html#l00114">114</a> of file <a class="el" href="compute__default__collisions_8cpp_source.html">compute_default_collisions.cpp</a>.</p>
 
 </div>
 </div>
-<a id="ad1779b28295765445265f22554187c46"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad1779b28295765445265f22554187c46">&#9670;&nbsp;</a></span>lock_</h2>
+<a id="a9c7e3a8bc7c0a24bec525f1fec7c1f6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c7e3a8bc7c0a24bec525f1fec7c1f6a">&#9670;&nbsp;</a></span>lock_</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">boost::mutex* moveit_setup_assistant::ThreadComputation::lock_</td>
+          <td class="memname">std::mutex* moveit_setup_assistant::ThreadComputation::lock_</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="compute__default__collisions_8cpp_source.html#l00116">116</a> of file <a class="el" href="compute__default__collisions_8cpp_source.html">compute_default_collisions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="compute__default__collisions_8cpp_source.html#l00115">115</a> of file <a class="el" href="compute__default__collisions_8cpp_source.html">compute_default_collisions.cpp</a>.</p>
 
 </div>
 </div>
@@ -227,7 +227,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="compute__default__collisions_8cpp_source.html#l00114">114</a> of file <a class="el" href="compute__default__collisions_8cpp_source.html">compute_default_collisions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="compute__default__collisions_8cpp_source.html#l00113">113</a> of file <a class="el" href="compute__default__collisions_8cpp_source.html">compute_default_collisions.cpp</a>.</p>
 
 </div>
 </div>
@@ -243,7 +243,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="compute__default__collisions_8cpp_source.html#l00117">117</a> of file <a class="el" href="compute__default__collisions_8cpp_source.html">compute_default_collisions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="compute__default__collisions_8cpp_source.html#l00116">116</a> of file <a class="el" href="compute__default__collisions_8cpp_source.html">compute_default_collisions.cpp</a>.</p>
 
 </div>
 </div>
@@ -259,7 +259,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="compute__default__collisions_8cpp_source.html#l00112">112</a> of file <a class="el" href="compute__default__collisions_8cpp_source.html">compute_default_collisions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="compute__default__collisions_8cpp_source.html#l00111">111</a> of file <a class="el" href="compute__default__collisions_8cpp_source.html">compute_default_collisions.cpp</a>.</p>
 
 </div>
 </div>
@@ -275,7 +275,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="compute__default__collisions_8cpp_source.html#l00111">111</a> of file <a class="el" href="compute__default__collisions_8cpp_source.html">compute_default_collisions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="compute__default__collisions_8cpp_source.html#l00110">110</a> of file <a class="el" href="compute__default__collisions_8cpp_source.html">compute_default_collisions.cpp</a>.</p>
 
 </div>
 </div>
@@ -291,7 +291,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="compute__default__collisions_8cpp_source.html#l00113">113</a> of file <a class="el" href="compute__default__collisions_8cpp_source.html">compute_default_collisions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="compute__default__collisions_8cpp_source.html#l00112">112</a> of file <a class="el" href="compute__default__collisions_8cpp_source.html">compute_default_collisions.cpp</a>.</p>
 
 </div>
 </div>

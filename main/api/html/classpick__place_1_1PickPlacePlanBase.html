@@ -137,10 +137,10 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:af6c66f50dd6b06f25bb75dc0a1a0408a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8ef42a527db53b9981a41770c3ceb37"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpick__place_1_1PickPlacePlanBase.html#ae8ef42a527db53b9981a41770c3ceb37">pushed_all_poses_</a></td></tr>
 <tr class="separator:ae8ef42a527db53b9981a41770c3ceb37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d8d062669b94e425e4e5720aacf3fa5"><td class="memItemLeft" align="right" valign="top">boost::condition_variable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpick__place_1_1PickPlacePlanBase.html#a4d8d062669b94e425e4e5720aacf3fa5">done_condition_</a></td></tr>
-<tr class="separator:a4d8d062669b94e425e4e5720aacf3fa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53d206019d79d43539ec1385aca9b328"><td class="memItemLeft" align="right" valign="top">boost::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpick__place_1_1PickPlacePlanBase.html#a53d206019d79d43539ec1385aca9b328">done_mutex_</a></td></tr>
-<tr class="separator:a53d206019d79d43539ec1385aca9b328"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fb452d93fd1e78616a9d667a1c29e11"><td class="memItemLeft" align="right" valign="top">std::condition_variable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpick__place_1_1PickPlacePlanBase.html#a9fb452d93fd1e78616a9d667a1c29e11">done_condition_</a></td></tr>
+<tr class="separator:a9fb452d93fd1e78616a9d667a1c29e11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a913ba46358a2ab9a112ed3b832dfe188"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpick__place_1_1PickPlacePlanBase.html#a913ba46358a2ab9a112ed3b832dfe188">done_mutex_</a></td></tr>
+<tr class="separator:a913ba46358a2ab9a112ed3b832dfe188"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bc4ae22a0ffd1cf50b4f58666e7633c"><td class="memItemLeft" align="right" valign="top">moveit_msgs::msg::MoveItErrorCodes&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpick__place_1_1PickPlacePlanBase.html#a8bc4ae22a0ffd1cf50b4f58666e7633c">error_code_</a></td></tr>
 <tr class="separator:a8bc4ae22a0ffd1cf50b4f58666e7633c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -468,8 +468,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a4d8d062669b94e425e4e5720aacf3fa5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d8d062669b94e425e4e5720aacf3fa5">&#9670;&nbsp;</a></span>done_condition_</h2>
+<a id="a9fb452d93fd1e78616a9d667a1c29e11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fb452d93fd1e78616a9d667a1c29e11">&#9670;&nbsp;</a></span>done_condition_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -478,7 +478,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">boost::condition_variable pick_place::PickPlacePlanBase::done_condition_</td>
+          <td class="memname">std::condition_variable pick_place::PickPlacePlanBase::done_condition_</td>
         </tr>
       </table>
   </td>
@@ -492,8 +492,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a53d206019d79d43539ec1385aca9b328"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53d206019d79d43539ec1385aca9b328">&#9670;&nbsp;</a></span>done_mutex_</h2>
+<a id="a913ba46358a2ab9a112ed3b832dfe188"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a913ba46358a2ab9a112ed3b832dfe188">&#9670;&nbsp;</a></span>done_mutex_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -502,7 +502,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">boost::mutex pick_place::PickPlacePlanBase::done_mutex_</td>
+          <td class="memname">std::mutex pick_place::PickPlacePlanBase::done_mutex_</td>
         </tr>
       </table>
   </td>

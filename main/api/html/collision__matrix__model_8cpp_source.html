@@ -108,18 +108,18 @@ $(function() {
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">/* Author: Robert Haschke */</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="collision__matrix__model_8h.html">collision_matrix_model.h</a>&quot;</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &lt;boost/unordered_map.hpp&gt;</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;boost/assign.hpp&gt;</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;QVector&gt;</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;QBrush&gt;</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;QColor&gt;</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;QPalette&gt;</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;QApplication&gt;</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;QItemSelection&gt;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &lt;boost/assign.hpp&gt;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;QVector&gt;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;QBrush&gt;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;QColor&gt;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;QPalette&gt;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;QApplication&gt;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;QItemSelection&gt;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacemoveit__setup__assistant.html">moveit_setup_assistant</a>;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> boost::unordered_map&lt;moveit_setup_assistant::DisabledReason, const char*&gt; LONG_REASONS_TO_STRING =</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> std::unordered_map&lt;moveit_setup_assistant::DisabledReason, const char*&gt; LONG_REASONS_TO_STRING =</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    boost::assign::map_list_of  <span class="comment">// clang-format off</span></div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    ( <a class="code" href="namespacemoveit__setup__assistant.html#a8102790a31e41396f7fa9c5e99482e39a7f6b8dc4a19199d5a949c033498abf3c">moveit_setup_assistant::NEVER</a>, <span class="stringliteral">&quot;Never in Collision&quot;</span> )</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    ( <a class="code" href="namespacemoveit__setup__assistant.html#a8102790a31e41396f7fa9c5e99482e39a6047696b54e8dff47cc0fb5349e715e8">moveit_setup_assistant::DEFAULT</a>, <span class="stringliteral">&quot;Collision by Default&quot;</span> )</div>
@@ -128,7 +128,7 @@ $(function() {
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    ( <a class="code" href="namespacemoveit__setup__assistant.html#a8102790a31e41396f7fa9c5e99482e39ac7b8b4c0a86db0e8eab4bac23286122e">moveit_setup_assistant::USER</a>, <span class="stringliteral">&quot;User Disabled&quot;</span> )</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    ( <a class="code" href="namespacemoveit__setup__assistant.html#a8102790a31e41396f7fa9c5e99482e39a9039d97b5dcb4917a91d254f4dbac59b">moveit_setup_assistant::NOT_DISABLED</a>, <span class="stringliteral">&quot;&quot;</span>);  <span class="comment">// clang-format on</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> boost::unordered_map&lt;moveit_setup_assistant::DisabledReason, QVariant&gt; LONG_REASONS_TO_BRUSH =</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> std::unordered_map&lt;moveit_setup_assistant::DisabledReason, QVariant&gt; LONG_REASONS_TO_BRUSH =</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    boost::assign::map_list_of  <span class="comment">// clang-format off</span></div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    ( <a class="code" href="namespacemoveit__setup__assistant.html#a8102790a31e41396f7fa9c5e99482e39a7f6b8dc4a19199d5a949c033498abf3c">moveit_setup_assistant::NEVER</a>, QBrush(QColor(<span class="stringliteral">&quot;lightgreen&quot;</span>)) )</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    ( <a class="code" href="namespacemoveit__setup__assistant.html#a8102790a31e41396f7fa9c5e99482e39a6047696b54e8dff47cc0fb5349e715e8">moveit_setup_assistant::DEFAULT</a>, QBrush(QColor(<span class="stringliteral">&quot;lightpink&quot;</span>)) )</div>

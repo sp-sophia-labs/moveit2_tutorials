@@ -88,10 +88,10 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a071b71e759d7bd81bc361e78769b5b38"><td class="memItemLeft" align="right" valign="top">typedef boost::function&lt; void(const <a class="el" href="structmoveit__controller__manager_1_1ExecutionStatus.html">moveit_controller_manager::ExecutionStatus</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#a071b71e759d7bd81bc361e78769b5b38">ExecutionCompleteCallback</a></td></tr>
-<tr class="separator:a071b71e759d7bd81bc361e78769b5b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79f3d600e116736e6837300d8e8c7ddc"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#a79f3d600e116736e6837300d8e8c7ddc">PathSegmentCompleteCallback</a> = boost::function&lt; void(std::size_t)&gt;</td></tr>
-<tr class="separator:a79f3d600e116736e6837300d8e8c7ddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51a72fadc0cdcc8c2654474469421c86"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; void(const <a class="el" href="structmoveit__controller__manager_1_1ExecutionStatus.html">moveit_controller_manager::ExecutionStatus</a> &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#a51a72fadc0cdcc8c2654474469421c86">ExecutionCompleteCallback</a></td></tr>
+<tr class="separator:a51a72fadc0cdcc8c2654474469421c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecf6abd0eedbd361366a093a01087e38"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#aecf6abd0eedbd361366a093a01087e38">PathSegmentCompleteCallback</a> = std::function&lt; void(std::size_t)&gt;</td></tr>
+<tr class="separator:aecf6abd0eedbd361366a093a01087e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -142,10 +142,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3b1a0d0e28caffbabdf1ef96fff37fa4"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="structtrajectory__execution__manager_1_1TrajectoryExecutionManager_1_1TrajectoryExecutionContext.html">TrajectoryExecutionContext</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#a3b1a0d0e28caffbabdf1ef96fff37fa4">getTrajectories</a> () const</td></tr>
 <tr class="memdesc:a3b1a0d0e28caffbabdf1ef96fff37fa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the trajectories to be executed.  <a href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#a3b1a0d0e28caffbabdf1ef96fff37fa4">More...</a><br /></td></tr>
 <tr class="separator:a3b1a0d0e28caffbabdf1ef96fff37fa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d076f16a13a284b45dac6c4bac4b519"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#a1d076f16a13a284b45dac6c4bac4b519">execute</a> (const <a class="el" href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#a071b71e759d7bd81bc361e78769b5b38">ExecutionCompleteCallback</a> &amp;callback=<a class="el" href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#a071b71e759d7bd81bc361e78769b5b38">ExecutionCompleteCallback</a>(), bool auto_clear=true)</td></tr>
+<tr class="memitem:a1d076f16a13a284b45dac6c4bac4b519"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#a1d076f16a13a284b45dac6c4bac4b519">execute</a> (const <a class="el" href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#a51a72fadc0cdcc8c2654474469421c86">ExecutionCompleteCallback</a> &amp;callback=<a class="el" href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#a51a72fadc0cdcc8c2654474469421c86">ExecutionCompleteCallback</a>(), bool auto_clear=true)</td></tr>
 <tr class="memdesc:a1d076f16a13a284b45dac6c4bac4b519"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the execution of pushed trajectories; this does not wait for completion, but calls a callback when done.  <a href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#a1d076f16a13a284b45dac6c4bac4b519">More...</a><br /></td></tr>
 <tr class="separator:a1d076f16a13a284b45dac6c4bac4b519"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab60d44a885deb49fd795d6013307572a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#ab60d44a885deb49fd795d6013307572a">execute</a> (const <a class="el" href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#a071b71e759d7bd81bc361e78769b5b38">ExecutionCompleteCallback</a> &amp;callback, const <a class="el" href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#a79f3d600e116736e6837300d8e8c7ddc">PathSegmentCompleteCallback</a> &amp;part_callback, bool auto_clear=true)</td></tr>
+<tr class="memitem:ab60d44a885deb49fd795d6013307572a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#ab60d44a885deb49fd795d6013307572a">execute</a> (const <a class="el" href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#a51a72fadc0cdcc8c2654474469421c86">ExecutionCompleteCallback</a> &amp;callback, const <a class="el" href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#aecf6abd0eedbd361366a093a01087e38">PathSegmentCompleteCallback</a> &amp;part_callback, bool auto_clear=true)</td></tr>
 <tr class="separator:ab60d44a885deb49fd795d6013307572a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac45de4374066d16629c8188a162dfc4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmoveit__controller__manager_1_1ExecutionStatus.html">moveit_controller_manager::ExecutionStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#ac45de4374066d16629c8188a162dfc4f">executeAndWait</a> (bool auto_clear=true)</td></tr>
 <tr class="separator:ac45de4374066d16629c8188a162dfc4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -200,14 +200,14 @@ Static Public Attributes</h2></td></tr>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="trajectory__execution__manager_8h_source.html#l00094">94</a> of file <a class="el" href="trajectory__execution__manager_8h_source.html">trajectory_execution_manager.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a071b71e759d7bd81bc361e78769b5b38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a071b71e759d7bd81bc361e78769b5b38">&#9670;&nbsp;</a></span>ExecutionCompleteCallback</h2>
+<a id="a51a72fadc0cdcc8c2654474469421c86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51a72fadc0cdcc8c2654474469421c86">&#9670;&nbsp;</a></span>ExecutionCompleteCallback</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef boost::function&lt;void(const <a class="el" href="structmoveit__controller__manager_1_1ExecutionStatus.html">moveit_controller_manager::ExecutionStatus</a>&amp;)&gt; <a class="el" href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#a071b71e759d7bd81bc361e78769b5b38">trajectory_execution_manager::TrajectoryExecutionManager::ExecutionCompleteCallback</a></td>
+          <td class="memname">typedef std::function&lt;void(const <a class="el" href="structmoveit__controller__manager_1_1ExecutionStatus.html">moveit_controller_manager::ExecutionStatus</a>&amp;)&gt; <a class="el" href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#a51a72fadc0cdcc8c2654474469421c86">trajectory_execution_manager::TrajectoryExecutionManager::ExecutionCompleteCallback</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -217,14 +217,14 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a79f3d600e116736e6837300d8e8c7ddc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79f3d600e116736e6837300d8e8c7ddc">&#9670;&nbsp;</a></span>PathSegmentCompleteCallback</h2>
+<a id="aecf6abd0eedbd361366a093a01087e38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecf6abd0eedbd361366a093a01087e38">&#9670;&nbsp;</a></span>PathSegmentCompleteCallback</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#a79f3d600e116736e6837300d8e8c7ddc">trajectory_execution_manager::TrajectoryExecutionManager::PathSegmentCompleteCallback</a> =  boost::function&lt;void(std::size_t)&gt;</td>
+          <td class="memname">using <a class="el" href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#aecf6abd0eedbd361366a093a01087e38">trajectory_execution_manager::TrajectoryExecutionManager::PathSegmentCompleteCallback</a> =  std::function&lt;void(std::size_t)&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -522,13 +522,13 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void trajectory_execution_manager::TrajectoryExecutionManager::execute </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#a071b71e759d7bd81bc361e78769b5b38">ExecutionCompleteCallback</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#a51a72fadc0cdcc8c2654474469421c86">ExecutionCompleteCallback</a> &amp;&#160;</td>
           <td class="paramname"><em>callback</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#a79f3d600e116736e6837300d8e8c7ddc">PathSegmentCompleteCallback</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#aecf6abd0eedbd361366a093a01087e38">PathSegmentCompleteCallback</a> &amp;&#160;</td>
           <td class="paramname"><em>part_callback</em>, </td>
         </tr>
         <tr>
@@ -559,8 +559,8 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void trajectory_execution_manager::TrajectoryExecutionManager::execute </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#a071b71e759d7bd81bc361e78769b5b38">ExecutionCompleteCallback</a> &amp;&#160;</td>
-          <td class="paramname"><em>callback</em> = <code><a class="el" href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#a071b71e759d7bd81bc361e78769b5b38">ExecutionCompleteCallback</a>()</code>, </td>
+          <td class="paramtype">const <a class="el" href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#a51a72fadc0cdcc8c2654474469421c86">ExecutionCompleteCallback</a> &amp;&#160;</td>
+          <td class="paramname"><em>callback</em> = <code><a class="el" href="classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#a51a72fadc0cdcc8c2654474469421c86">ExecutionCompleteCallback</a>()</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

@@ -93,17 +93,17 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ad2d3db0c64150fa7f2e043a5367b755a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structplan__execution_1_1PlanExecution_1_1Options.html#ad2d3db0c64150fa7f2e043a5367b755a">replan_delay_</a></td></tr>
 <tr class="memdesc:ad2d3db0c64150fa7f2e043a5367b755a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The amount of time to wait in between replanning attempts (in seconds)  <a href="structplan__execution_1_1PlanExecution_1_1Options.html#ad2d3db0c64150fa7f2e043a5367b755a">More...</a><br /></td></tr>
 <tr class="separator:ad2d3db0c64150fa7f2e043a5367b755a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d9277425bce94ebe7f0feea1b7b79bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceplan__execution.html#ac84c555c3f56f8f0c5be97b626207d86">ExecutableMotionPlanComputationFn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structplan__execution_1_1PlanExecution_1_1Options.html#a6d9277425bce94ebe7f0feea1b7b79bb">plan_callback_</a></td></tr>
+<tr class="memitem:a6d9277425bce94ebe7f0feea1b7b79bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceplan__execution.html#a2476ed7a05089befcbd6c6e4533c0321">ExecutableMotionPlanComputationFn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structplan__execution_1_1PlanExecution_1_1Options.html#a6d9277425bce94ebe7f0feea1b7b79bb">plan_callback_</a></td></tr>
 <tr class="memdesc:a6d9277425bce94ebe7f0feea1b7b79bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback for computing motion plans. This callback must always be specified.  <a href="structplan__execution_1_1PlanExecution_1_1Options.html#a6d9277425bce94ebe7f0feea1b7b79bb">More...</a><br /></td></tr>
 <tr class="separator:a6d9277425bce94ebe7f0feea1b7b79bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b039a3efdab076f1b881e3d0d958a37"><td class="memItemLeft" align="right" valign="top">boost::function&lt; bool(<a class="el" href="structplan__execution_1_1ExecutableMotionPlan.html">ExecutableMotionPlan</a> &amp;plan_to_update, const std::pair&lt; int, int &gt; &amp;trajectory_index)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structplan__execution_1_1PlanExecution_1_1Options.html#a8b039a3efdab076f1b881e3d0d958a37">repair_plan_callback_</a></td></tr>
-<tr class="separator:a8b039a3efdab076f1b881e3d0d958a37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf8d808d44db1ae7844db1a8eb7de277"><td class="memItemLeft" align="right" valign="top">boost::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structplan__execution_1_1PlanExecution_1_1Options.html#abf8d808d44db1ae7844db1a8eb7de277">before_plan_callback_</a></td></tr>
-<tr class="separator:abf8d808d44db1ae7844db1a8eb7de277"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade3c694eec187d9a3700e74956079f76"><td class="memItemLeft" align="right" valign="top">boost::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structplan__execution_1_1PlanExecution_1_1Options.html#ade3c694eec187d9a3700e74956079f76">before_execution_callback_</a></td></tr>
-<tr class="separator:ade3c694eec187d9a3700e74956079f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a116114875fc37b7847cd9c6ca615816d"><td class="memItemLeft" align="right" valign="top">boost::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structplan__execution_1_1PlanExecution_1_1Options.html#a116114875fc37b7847cd9c6ca615816d">done_callback_</a></td></tr>
-<tr class="separator:a116114875fc37b7847cd9c6ca615816d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9b056723433d17a7952c70f2838fd34"><td class="memItemLeft" align="right" valign="top">std::function&lt; bool(<a class="el" href="structplan__execution_1_1ExecutableMotionPlan.html">ExecutableMotionPlan</a> &amp;plan_to_update, const std::pair&lt; int, int &gt; &amp;trajectory_index)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structplan__execution_1_1PlanExecution_1_1Options.html#aa9b056723433d17a7952c70f2838fd34">repair_plan_callback_</a></td></tr>
+<tr class="separator:aa9b056723433d17a7952c70f2838fd34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae36d8ead7848b22cd1b3d52762780e85"><td class="memItemLeft" align="right" valign="top">std::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structplan__execution_1_1PlanExecution_1_1Options.html#ae36d8ead7848b22cd1b3d52762780e85">before_plan_callback_</a></td></tr>
+<tr class="separator:ae36d8ead7848b22cd1b3d52762780e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad14b5e9c3ccec5076a0090ed0be5afbe"><td class="memItemLeft" align="right" valign="top">std::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structplan__execution_1_1PlanExecution_1_1Options.html#ad14b5e9c3ccec5076a0090ed0be5afbe">before_execution_callback_</a></td></tr>
+<tr class="separator:ad14b5e9c3ccec5076a0090ed0be5afbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8b53f1eac775c0614d1ee2ea4827b5b"><td class="memItemLeft" align="right" valign="top">std::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structplan__execution_1_1PlanExecution_1_1Options.html#af8b53f1eac775c0614d1ee2ea4827b5b">done_callback_</a></td></tr>
+<tr class="separator:af8b53f1eac775c0614d1ee2ea4827b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -137,14 +137,14 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ade3c694eec187d9a3700e74956079f76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade3c694eec187d9a3700e74956079f76">&#9670;&nbsp;</a></span>before_execution_callback_</h2>
+<a id="ad14b5e9c3ccec5076a0090ed0be5afbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad14b5e9c3ccec5076a0090ed0be5afbe">&#9670;&nbsp;</a></span>before_execution_callback_</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">boost::function&lt;void()&gt; plan_execution::PlanExecution::Options::before_execution_callback_</td>
+          <td class="memname">std::function&lt;void()&gt; plan_execution::PlanExecution::Options::before_execution_callback_</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -153,14 +153,14 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="abf8d808d44db1ae7844db1a8eb7de277"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf8d808d44db1ae7844db1a8eb7de277">&#9670;&nbsp;</a></span>before_plan_callback_</h2>
+<a id="ae36d8ead7848b22cd1b3d52762780e85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae36d8ead7848b22cd1b3d52762780e85">&#9670;&nbsp;</a></span>before_plan_callback_</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">boost::function&lt;void()&gt; plan_execution::PlanExecution::Options::before_plan_callback_</td>
+          <td class="memname">std::function&lt;void()&gt; plan_execution::PlanExecution::Options::before_plan_callback_</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -169,14 +169,14 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a116114875fc37b7847cd9c6ca615816d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a116114875fc37b7847cd9c6ca615816d">&#9670;&nbsp;</a></span>done_callback_</h2>
+<a id="af8b53f1eac775c0614d1ee2ea4827b5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8b53f1eac775c0614d1ee2ea4827b5b">&#9670;&nbsp;</a></span>done_callback_</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">boost::function&lt;void()&gt; plan_execution::PlanExecution::Options::done_callback_</td>
+          <td class="memname">std::function&lt;void()&gt; plan_execution::PlanExecution::Options::done_callback_</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -192,7 +192,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="namespaceplan__execution.html#ac84c555c3f56f8f0c5be97b626207d86">ExecutableMotionPlanComputationFn</a> plan_execution::PlanExecution::Options::plan_callback_</td>
+          <td class="memname"><a class="el" href="namespaceplan__execution.html#a2476ed7a05089befcbd6c6e4533c0321">ExecutableMotionPlanComputationFn</a> plan_execution::PlanExecution::Options::plan_callback_</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -203,14 +203,14 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a8b039a3efdab076f1b881e3d0d958a37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b039a3efdab076f1b881e3d0d958a37">&#9670;&nbsp;</a></span>repair_plan_callback_</h2>
+<a id="aa9b056723433d17a7952c70f2838fd34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9b056723433d17a7952c70f2838fd34">&#9670;&nbsp;</a></span>repair_plan_callback_</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">boost::function&lt;bool(<a class="el" href="structplan__execution_1_1ExecutableMotionPlan.html">ExecutableMotionPlan</a>&amp; plan_to_update, const std::pair&lt;int, int&gt;&amp; trajectory_index)&gt; plan_execution::PlanExecution::Options::repair_plan_callback_</td>
+          <td class="memname">std::function&lt;bool(<a class="el" href="structplan__execution_1_1ExecutableMotionPlan.html">ExecutableMotionPlan</a>&amp; plan_to_update, const std::pair&lt;int, int&gt;&amp; trajectory_index)&gt; plan_execution::PlanExecution::Options::repair_plan_callback_</td>
         </tr>
       </table>
 </div><div class="memdoc">

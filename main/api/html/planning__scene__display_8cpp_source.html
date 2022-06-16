@@ -255,7 +255,7 @@ $(function() {
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;{</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  background_process_.clear();</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  {</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    boost::unique_lock&lt;boost::mutex&gt; ulock(main_loop_jobs_lock_);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    std::unique_lock&lt;std::mutex&gt; ulock(main_loop_jobs_lock_);</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    main_loop_jobs_.clear();</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  }</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;}</div>
@@ -304,25 +304,25 @@ $(function() {
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  }</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;}</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="keywordtype">void</span> PlanningSceneDisplay::addBackgroundJob(<span class="keyword">const</span> boost::function&lt;<span class="keywordtype">void</span>()&gt;&amp; job, <span class="keyword">const</span> std::string&amp; <a class="code" href="namespacesetup.html#ab3a7a0638d76a01367c5bc3cc699447f">name</a>)</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="keywordtype">void</span> PlanningSceneDisplay::addBackgroundJob(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>()&gt;&amp; job, <span class="keyword">const</span> std::string&amp; <a class="code" href="namespacesetup.html#ab3a7a0638d76a01367c5bc3cc699447f">name</a>)</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;{</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  background_process_.addJob(job, <a class="code" href="namespacesetup.html#ab3a7a0638d76a01367c5bc3cc699447f">name</a>);</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;}</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="keywordtype">void</span> PlanningSceneDisplay::spawnBackgroundJob(<span class="keyword">const</span> boost::function&lt;<span class="keywordtype">void</span>()&gt;&amp; job)</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="keywordtype">void</span> PlanningSceneDisplay::spawnBackgroundJob(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>()&gt;&amp; job)</div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;{</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  boost::thread t(job);</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  std::thread t(job);</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;}</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="keywordtype">void</span> PlanningSceneDisplay::addMainLoopJob(<span class="keyword">const</span> boost::function&lt;<span class="keywordtype">void</span>()&gt;&amp; job)</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="keywordtype">void</span> PlanningSceneDisplay::addMainLoopJob(<span class="keyword">const</span> std::function&lt;<span class="keywordtype">void</span>()&gt;&amp; job)</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;{</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  boost::unique_lock&lt;boost::mutex&gt; ulock(main_loop_jobs_lock_);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  std::unique_lock&lt;std::mutex&gt; ulock(main_loop_jobs_lock_);</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  main_loop_jobs_.push_back(job);</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;}</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
 <div class="line"><a name="l00250"></a><span class="lineno"><a class="line" href="classmoveit__rviz__plugin_1_1PlanningSceneDisplay.html#aab86ea62422c14af5d1a1beed32961a5">  250</a></span>&#160;<span class="keywordtype">void</span> PlanningSceneDisplay::waitForAllMainLoopJobs()</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;{</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  boost::unique_lock&lt;boost::mutex&gt; ulock(main_loop_jobs_lock_);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  std::unique_lock&lt;std::mutex&gt; ulock(main_loop_jobs_lock_);</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  <span class="keywordflow">while</span> (!main_loop_jobs_.empty())</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    main_loop_jobs_empty_condition_.wait(ulock);</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;}</div>
@@ -332,22 +332,22 @@ $(function() {
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  main_loop_jobs_lock_.lock();</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  <span class="keywordflow">while</span> (!main_loop_jobs_.empty())</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  {</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    boost::function&lt;void()&gt; fn = main_loop_jobs_.front();</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    std::function&lt;void()&gt; fn = main_loop_jobs_.front();</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    main_loop_jobs_.pop_front();</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    main_loop_jobs_lock_.unlock();</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keywordflow">try</span></div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    {</div>
-<div class="line"><a name="l00267"></a><span class="lineno"><a class="line" href="classmoveit__rviz__plugin_1_1PlanningSceneDisplay.html#a5f866683f45f26cbd278d50e92c93f52">  267</a></span>&#160;      fn();</div>
+<div class="line"><a name="l00267"></a><span class="lineno"><a class="line" href="classmoveit__rviz__plugin_1_1PlanningSceneDisplay.html#ab55009973a9dcaaebec5025849a1d460">  267</a></span>&#160;      fn();</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    }</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordflow">catch</span> (std::exception&amp; ex)</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    {</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;      RCLCPP_ERROR(LOGGER, <span class="stringliteral">&quot;Exception caught executing main loop job: %s&quot;</span>, ex.what());</div>
-<div class="line"><a name="l00272"></a><span class="lineno"><a class="line" href="classmoveit__rviz__plugin_1_1PlanningSceneDisplay.html#a5f5819b1b81624ca9d7828527d9ddc45">  272</a></span>&#160;    }</div>
+<div class="line"><a name="l00272"></a><span class="lineno"><a class="line" href="classmoveit__rviz__plugin_1_1PlanningSceneDisplay.html#a46e480d3496125ec625f267135c3f77a">  272</a></span>&#160;    }</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    main_loop_jobs_lock_.lock();</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  }</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  main_loop_jobs_empty_condition_.notify_all();</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  main_loop_jobs_lock_.unlock();</div>
-<div class="line"><a name="l00277"></a><span class="lineno"><a class="line" href="classmoveit__rviz__plugin_1_1PlanningSceneDisplay.html#ac344944cbfba1da5059fd336d72ba4ae">  277</a></span>&#160;}</div>
+<div class="line"><a name="l00277"></a><span class="lineno"><a class="line" href="classmoveit__rviz__plugin_1_1PlanningSceneDisplay.html#a920ac69f439f677204b580d659fc762a">  277</a></span>&#160;}</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="keyword">const</span> planning_scene_monitor::PlanningSceneMonitorPtr&amp; PlanningSceneDisplay::getPlanningSceneMonitor()</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;{</div>
@@ -605,7 +605,7 @@ $(function() {
 <div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;<span class="keywordtype">void</span> PlanningSceneDisplay::loadRobotModel()</div>
 <div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;{</div>
 <div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;  <span class="comment">// wait for other robot loadRobotModel() calls to complete;</span></div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;  boost::mutex::scoped_lock _(robot_model_loading_lock_);</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;  std::scoped_lock _(robot_model_loading_lock_);</div>
 <div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160; </div>
 <div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;  <span class="comment">// we need to make sure the clearing of the robot model is in the main thread,</span></div>
 <div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;  <span class="comment">// so that rendering operations do not have data removed from underneath,</span></div>

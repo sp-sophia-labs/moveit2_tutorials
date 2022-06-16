@@ -273,7 +273,7 @@ $(function() {
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="comment">// ******************************************************************************************</span></div>
 <div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="classmoveit__setup__assistant_1_1SetupAssistantWidget.html#a6e2aec9a124259b7f5eb14774a48993d">  201</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__setup__assistant_1_1SetupAssistantWidget.html#addd49ec21ffb77ecfe20a2583e47497f">SetupAssistantWidget::moveToScreen</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> index)</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;{</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  boost::mutex::scoped_lock slock(change_screen_lock_);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  std::scoped_lock slock(change_screen_lock_);</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  <span class="keywordflow">if</span> (current_index_ != index)</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  {</div>
