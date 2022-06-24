@@ -80,13 +80,13 @@ $(function() {
 <code>#include &lt;<a class="el" href="conversions_8h_source.html">moveit/robot_state/conversions.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="collision__env__fcl_8h_source.html">moveit/collision_detection_fcl/collision_env_fcl.h</a>&gt;</code><br />
 <code>#include &lt;geometric_shapes/check_isometry.h&gt;</code><br />
-<code>#include &lt;boost/math/constants/constants.hpp&gt;</code><br />
 <code>#include &lt;rclcpp/logger.hpp&gt;</code><br />
 <code>#include &lt;rclcpp/logging.hpp&gt;</code><br />
 <code>#include &lt;rclcpp/time.hpp&gt;</code><br />
 <code>#include &lt;tf2_eigen/tf2_eigen.h&gt;</code><br />
 <code>#include &lt;functional&gt;</code><br />
 <code>#include &lt;limits&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;typeinfo&gt;</code><br />
 <code>#include &quot;rclcpp/clock.hpp&quot;</code><br />
@@ -96,33 +96,33 @@ Include dependency graph for kinematic_constraint.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="kinematic__constraint_8cpp__incl.png" border="0" usemap="#moveit__core_2kinematic__constraints_2src_2kinematic__constraint_8cpp" alt=""/></div>
 <map name="moveit__core_2kinematic__constraints_2src_2kinematic__constraint_8cpp" id="moveit__core_2kinematic__constraints_2src_2kinematic__constraint_8cpp">
-<area shape="rect" title=" " alt="" coords="2427,5,2620,61"/>
-<area shape="rect" href="kinematic__constraint_8h.html" title=" " alt="" coords="1949,199,2165,240"/>
+<area shape="rect" title=" " alt="" coords="3371,5,3564,61"/>
+<area shape="rect" href="kinematic__constraint_8h.html" title=" " alt="" coords="2156,199,2372,240"/>
 <area shape="rect" title=" " alt="" coords="230,653,316,679"/>
 <area shape="rect" title=" " alt="" coords="45,563,186,590"/>
-<area shape="rect" title=" " alt="" coords="2416,556,2599,597"/>
-<area shape="rect" title=" " alt="" coords="624,474,770,501"/>
-<area shape="rect" title=" " alt="" coords="2050,109,2227,151"/>
-<area shape="rect" title=" " alt="" coords="2252,109,2436,151"/>
-<area shape="rect" href="conversions_8h.html" title=" " alt="" coords="1336,288,1482,329"/>
-<area shape="rect" href="collision__env__fcl_8h.html" title=" " alt="" coords="2561,109,2756,151"/>
-<area shape="rect" title=" " alt="" coords="2780,295,2857,322"/>
-<area shape="rect" title=" " alt="" coords="2780,109,2942,151"/>
-<area shape="rect" title=" " alt="" coords="2966,117,3100,143"/>
-<area shape="rect" title=" " alt="" coords="3124,117,3246,143"/>
-<area shape="rect" title=" " alt="" coords="3270,117,3430,143"/>
-<area shape="rect" title=" " alt="" coords="3454,117,3513,143"/>
-<area shape="rect" title=" " alt="" coords="3538,117,3614,143"/>
-<area shape="rect" title=" " alt="" coords="3638,117,3764,143"/>
-<area shape="rect" href="robot__model_8h.html" title=" " alt="" coords="794,467,949,508"/>
-<area shape="rect" href="class__forward_8h.html" title=" " alt="" coords="2582,645,2740,687"/>
-<area shape="rect" title=" " alt="" coords="1770,563,1850,590"/>
-<area shape="rect" href="robot__state_8h.html" title=" " alt="" coords="1510,377,1657,419"/>
-<area shape="rect" href="transforms_8h.html" title=" " alt="" coords="1926,563,2156,590"/>
-<area shape="rect" href="collision__env_8h.html" title=" " alt="" coords="2561,288,2756,329"/>
-<area shape="rect" title=" " alt="" coords="2623,563,2686,590"/>
-<area shape="rect" title=" " alt="" coords="1865,295,2065,322"/>
-<area shape="rect" title=" " alt="" coords="2139,295,2386,322"/>
+<area shape="rect" title=" " alt="" coords="3102,556,3284,597"/>
+<area shape="rect" title=" " alt="" coords="2398,474,2545,501"/>
+<area shape="rect" title=" " alt="" coords="3379,109,3556,151"/>
+<area shape="rect" title=" " alt="" coords="3581,109,3765,151"/>
+<area shape="rect" href="conversions_8h.html" title=" " alt="" coords="946,288,1093,329"/>
+<area shape="rect" href="collision__env__fcl_8h.html" title=" " alt="" coords="3058,109,3253,151"/>
+<area shape="rect" title=" " alt="" coords="3289,295,3366,322"/>
+<area shape="rect" title=" " alt="" coords="3789,117,3922,143"/>
+<area shape="rect" title=" " alt="" coords="3946,117,4069,143"/>
+<area shape="rect" title=" " alt="" coords="4093,117,4253,143"/>
+<area shape="rect" title=" " alt="" coords="4277,117,4336,143"/>
+<area shape="rect" title=" " alt="" coords="4360,117,4428,143"/>
+<area shape="rect" title=" " alt="" coords="4452,117,4528,143"/>
+<area shape="rect" title=" " alt="" coords="4552,117,4679,143"/>
+<area shape="rect" href="robot__model_8h.html" title=" " alt="" coords="888,467,1042,508"/>
+<area shape="rect" href="class__forward_8h.html" title=" " alt="" coords="2676,645,2833,687"/>
+<area shape="rect" title=" " alt="" coords="2270,563,2350,590"/>
+<area shape="rect" href="robot__state_8h.html" title=" " alt="" coords="1690,377,1837,419"/>
+<area shape="rect" href="transforms_8h.html" title=" " alt="" coords="1822,563,2052,590"/>
+<area shape="rect" href="collision__env_8h.html" title=" " alt="" coords="2665,288,2860,329"/>
+<area shape="rect" title=" " alt="" coords="2452,563,2515,590"/>
+<area shape="rect" title=" " alt="" coords="2233,295,2433,322"/>
+<area shape="rect" title=" " alt="" coords="1862,295,2108,322"/>
 <area shape="rect" href="exceptions_8h.html" title=" " alt="" coords="446,563,676,590"/>
 <area shape="rect" title=" " alt="" coords="341,653,474,679"/>
 <area shape="rect" href="joint__model__group_8h.html" title=" " alt="" coords="211,556,370,597"/>
@@ -131,21 +131,21 @@ Include dependency graph for kinematic_constraint.cpp:</div>
 <area shape="rect" href="planar__joint__model_8h.html" title=" " alt="" coords="1074,556,1237,597"/>
 <area shape="rect" href="revolute__joint__model_8h.html" title=" " alt="" coords="1261,556,1437,597"/>
 <area shape="rect" href="prismatic__joint__model_8h.html" title=" " alt="" coords="1462,556,1644,597"/>
-<area shape="rect" title=" " alt="" coords="1664,653,1791,679"/>
-<area shape="rect" href="attached__body_8h.html" title=" " alt="" coords="1074,467,1221,508"/>
-<area shape="rect" title=" " alt="" coords="1967,467,2139,508"/>
-<area shape="rect" title=" " alt="" coords="2164,467,2334,508"/>
-<area shape="rect" title=" " alt="" coords="1296,467,1448,508"/>
-<area shape="rect" title=" " alt="" coords="1472,474,1695,501"/>
-<area shape="rect" title=" " alt="" coords="1718,474,1788,501"/>
-<area shape="rect" title=" " alt="" coords="1812,474,1942,501"/>
-<area shape="rect" title=" " alt="" coords="2105,645,2332,687"/>
-<area shape="rect" title=" " alt="" coords="1908,653,2081,679"/>
-<area shape="rect" title=" " alt="" coords="2457,653,2508,679"/>
-<area shape="rect" href="collision__matrix_8h.html" title=" " alt="" coords="2612,467,2806,508"/>
-<area shape="rect" title=" " alt="" coords="1024,377,1204,419"/>
-<area shape="rect" href="fcl_2include_2moveit_2collision__detection__fcl_2collision__common_8h.html" title=" " alt="" coords="2784,199,2978,240"/>
-<area shape="rect" title=" " alt="" coords="2982,288,3180,329"/>
+<area shape="rect" title=" " alt="" coords="1646,653,1772,679"/>
+<area shape="rect" href="attached__body_8h.html" title=" " alt="" coords="1168,467,1314,508"/>
+<area shape="rect" title=" " alt="" coords="1390,467,1562,508"/>
+<area shape="rect" title=" " alt="" coords="1586,467,1757,508"/>
+<area shape="rect" title=" " alt="" coords="1781,467,1933,508"/>
+<area shape="rect" title=" " alt="" coords="1958,474,2180,501"/>
+<area shape="rect" title=" " alt="" coords="2204,474,2273,501"/>
+<area shape="rect" title=" " alt="" coords="1824,645,2050,687"/>
+<area shape="rect" title=" " alt="" coords="2382,653,2433,679"/>
+<area shape="rect" href="collision__matrix_8h.html" title=" " alt="" coords="2569,467,2764,508"/>
+<area shape="rect" title=" " alt="" coords="2610,377,2781,419"/>
+<area shape="rect" title=" " alt="" coords="2856,377,3026,419"/>
+<area shape="rect" title=" " alt="" coords="862,377,1042,419"/>
+<area shape="rect" href="fcl_2include_2moveit_2collision__detection__fcl_2collision__common_8h.html" title=" " alt="" coords="2933,199,3128,240"/>
+<area shape="rect" title=" " alt="" coords="3067,288,3266,329"/>
 </map>
 </div>
 </div>

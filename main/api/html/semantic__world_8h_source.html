@@ -192,19 +192,17 @@ $(function() {
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  std::map&lt;std::string, object_recognition_msgs::msg::Table&gt; current_tables_in_collision_world_;</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="comment">//  boost::mutex table_lock_;</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  rclcpp::Subscription&lt;object_recognition_msgs::msg::TableArray&gt;::SharedPtr table_subscriber_;</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  rclcpp::Subscription&lt;object_recognition_msgs::msg::TableArray&gt;::SharedPtr table_subscriber_;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  rclcpp::Publisher&lt;visualization_msgs::msg::MarkerArray&gt;::SharedPtr visualization_publisher_;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  rclcpp::Publisher&lt;moveit_msgs::msg::CollisionObject&gt;::SharedPtr collision_object_publisher_;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  rclcpp::Publisher&lt;visualization_msgs::msg::MarkerArray&gt;::SharedPtr visualization_publisher_;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  rclcpp::Publisher&lt;moveit_msgs::msg::CollisionObject&gt;::SharedPtr collision_object_publisher_;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <a class="code" href="classmoveit_1_1semantic__world_1_1SemanticWorld.html#ab33c9119717f00d78104075e79d4ba66">TableCallbackFn</a> table_callback_;</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  <a class="code" href="classmoveit_1_1semantic__world_1_1SemanticWorld.html#ab33c9119717f00d78104075e79d4ba66">TableCallbackFn</a> table_callback_;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  rclcpp::Publisher&lt;moveit_msgs::msg::PlanningScene&gt;::SharedPtr planning_scene_diff_publisher_;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;};</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;}  <span class="comment">// namespace semantic_world</span></div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;}  <span class="comment">// namespace moveit</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  rclcpp::Publisher&lt;moveit_msgs::msg::PlanningScene&gt;::SharedPtr planning_scene_diff_publisher_;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;};</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;}  <span class="comment">// namespace semantic_world</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;}  <span class="comment">// namespace moveit</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespaceshapes_html"><div class="ttname"><a href="namespaceshapes.html">shapes</a></div><div class="ttdef"><b>Definition:</b> <a href="world_8h_source.html#l00048">world.h:48</a></div></div>
 <div class="ttc" id="aclassmoveit_1_1semantic__world_1_1SemanticWorld_html_a8a2ff229e8126436cf9dc69c5fa7450c"><div class="ttname"><a href="classmoveit_1_1semantic__world_1_1SemanticWorld.html#a8a2ff229e8126436cf9dc69c5fa7450c">moveit::semantic_world::SemanticWorld::generatePlacePoses</a></div><div class="ttdeci">std::vector&lt; geometry_msgs::msg::PoseStamped &gt; generatePlacePoses(const std::string &amp;table_name, const shapes::ShapeConstPtr &amp;object_shape, const geometry_msgs::msg::Quaternion &amp;object_orientation, double resolution, double delta_height=0.01, unsigned int num_heights=2) const</div><div class="ttdoc">Generate possible place poses on the table for a given object. This chooses appropriate values for mi...</div><div class="ttdef"><b>Definition:</b> <a href="semantic__world_8cpp_source.html#l00292">semantic_world.cpp:292</a></div></div>

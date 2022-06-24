@@ -80,8 +80,8 @@ $(function() {
 <code>#include &lt;tf2_eigen/tf2_eigen.h&gt;</code><br />
 <code>#include &lt;boost/regex.hpp&gt;</code><br />
 <code>#include &lt;boost/progress.hpp&gt;</code><br />
-<code>#include &lt;boost/math/constants/constants.hpp&gt;</code><br />
 <code>#include &lt;boost/date_time/posix_time/posix_time.hpp&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
 <code>#include &lt;limits&gt;</code><br />
 <code>#include &lt;filesystem&gt;</code><br />
 <code>#include &lt;unistd.h&gt;</code><br />
@@ -90,56 +90,56 @@ Include dependency graph for BenchmarkExecutor.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="BenchmarkExecutor_8cpp__incl.png" border="0" usemap="#moveit__ros_2benchmarks_2src_2BenchmarkExecutor_8cpp" alt=""/></div>
 <map name="moveit__ros_2benchmarks_2src_2BenchmarkExecutor_8cpp" id="moveit__ros_2benchmarks_2src_2BenchmarkExecutor_8cpp">
-<area shape="rect" title=" " alt="" coords="2316,5,2521,47"/>
-<area shape="rect" href="BenchmarkExecutor_8h.html" title=" " alt="" coords="1351,95,1582,136"/>
-<area shape="rect" href="lexical__casts_8h.html" title="locale&#45;agnostic conversion functions from floating point numbers to strings" alt="" coords="1885,191,2032,233"/>
-<area shape="rect" title=" " alt="" coords="1852,102,1984,129"/>
-<area shape="rect" title=" " alt="" coords="2009,102,2169,129"/>
-<area shape="rect" title=" " alt="" coords="2194,102,2320,129"/>
-<area shape="rect" title=" " alt="" coords="2345,102,2492,129"/>
-<area shape="rect" title=" " alt="" coords="2516,95,2678,136"/>
-<area shape="rect" title=" " alt="" coords="2703,95,2870,136"/>
-<area shape="rect" title=" " alt="" coords="2894,102,2953,129"/>
-<area shape="rect" title=" " alt="" coords="2977,102,3068,129"/>
-<area shape="rect" title=" " alt="" coords="3092,102,3166,129"/>
-<area shape="rect" href="BenchmarkOptions_8h.html" title=" " alt="" coords="150,191,380,233"/>
-<area shape="rect" title=" " alt="" coords="1689,399,1748,426"/>
-<area shape="rect" title=" " alt="" coords="433,303,484,329"/>
-<area shape="rect" title=" " alt="" coords="414,399,476,426"/>
-<area shape="rect" href="planning__scene__monitor_8h.html" title=" " alt="" coords="2860,184,3046,240"/>
-<area shape="rect" title=" " alt="" coords="2583,399,2670,426"/>
-<area shape="rect" href="planning__scene__storage_8h.html" title=" " alt="" coords="1365,191,1568,233"/>
-<area shape="rect" href="planning__scene__world__storage_8h.html" title=" " alt="" coords="690,191,893,233"/>
-<area shape="rect" href="state__storage_8h.html" title=" " alt="" coords="1160,191,1340,233"/>
-<area shape="rect" href="constraints__storage_8h.html" title=" " alt="" coords="917,191,1136,233"/>
-<area shape="rect" href="trajectory__constraints__storage_8h.html" title=" " alt="" coords="456,191,666,233"/>
-<area shape="rect" href="planning__pipeline_8h.html" title=" " alt="" coords="4106,191,4293,233"/>
-<area shape="rect" title=" " alt="" coords="4038,303,4228,329"/>
-<area shape="rect" title=" " alt="" coords="1592,191,1776,233"/>
-<area shape="rect" title=" " alt="" coords="284,303,409,329"/>
-<area shape="rect" title=" " alt="" coords="44,295,260,337"/>
-<area shape="rect" title=" " alt="" coords="3723,399,3855,426"/>
-<area shape="rect" title=" " alt="" coords="3566,399,3686,426"/>
-<area shape="rect" title=" " alt="" coords="3041,303,3244,329"/>
-<area shape="rect" href="class__forward_8h.html" title=" " alt="" coords="1322,392,1480,433"/>
-<area shape="rect" href="planning__scene_8h.html" title=" " alt="" coords="2089,295,2262,337"/>
-<area shape="rect" title=" " alt="" coords="2209,399,2382,426"/>
-<area shape="rect" title=" " alt="" coords="2826,399,2904,426"/>
-<area shape="rect" href="robot__model__loader_8h.html" title=" " alt="" coords="1756,288,1912,344"/>
-<area shape="rect" href="occupancy__map__monitor_8h.html" title=" " alt="" coords="2726,288,2916,344"/>
-<area shape="rect" title=" " alt="" coords="2972,399,3036,426"/>
-<area shape="rect" href="current__state__monitor_8h.html" title=" " alt="" coords="3540,288,3713,344"/>
-<area shape="rect" href="collision__plugin__loader_8h.html" title=" " alt="" coords="3839,288,4014,344"/>
-<area shape="rect" title=" " alt="" coords="3268,295,3427,337"/>
-<area shape="rect" title=" " alt="" coords="3452,303,3516,329"/>
-<area shape="rect" title=" " alt="" coords="2388,303,2502,329"/>
-<area shape="rect" title=" " alt="" coords="2526,295,2702,337"/>
-<area shape="rect" title=" " alt="" coords="1773,392,1976,433"/>
-<area shape="rect" title=" " alt="" coords="2003,392,2183,433"/>
-<area shape="rect" href="moveit__message__storage_8h.html" title=" " alt="" coords="786,295,979,337"/>
-<area shape="rect" title=" " alt="" coords="1438,295,1630,337"/>
-<area shape="rect" title=" " alt="" coords="1156,303,1363,329"/>
-<area shape="rect" title=" " alt="" coords="558,295,761,337"/>
+<area shape="rect" title=" " alt="" coords="4586,5,4791,47"/>
+<area shape="rect" href="BenchmarkExecutor_8h.html" title=" " alt="" coords="3303,95,3533,136"/>
+<area shape="rect" href="lexical__casts_8h.html" title="locale&#45;agnostic conversion functions from floating point numbers to strings" alt="" coords="4509,191,4655,233"/>
+<area shape="rect" title=" " alt="" coords="4123,102,4255,129"/>
+<area shape="rect" title=" " alt="" coords="4279,102,4439,129"/>
+<area shape="rect" title=" " alt="" coords="4464,102,4591,129"/>
+<area shape="rect" title=" " alt="" coords="4615,102,4762,129"/>
+<area shape="rect" title=" " alt="" coords="4787,95,4953,136"/>
+<area shape="rect" title=" " alt="" coords="4977,102,5045,129"/>
+<area shape="rect" title=" " alt="" coords="5070,102,5129,129"/>
+<area shape="rect" title=" " alt="" coords="5153,102,5243,129"/>
+<area shape="rect" title=" " alt="" coords="5267,102,5342,129"/>
+<area shape="rect" href="BenchmarkOptions_8h.html" title=" " alt="" coords="3849,191,4080,233"/>
+<area shape="rect" title=" " alt="" coords="3555,399,3614,426"/>
+<area shape="rect" title=" " alt="" coords="4282,303,4333,329"/>
+<area shape="rect" title=" " alt="" coords="4021,399,4084,426"/>
+<area shape="rect" href="planning__scene__monitor_8h.html" title=" " alt="" coords="1052,184,1237,240"/>
+<area shape="rect" title=" " alt="" coords="1427,399,1513,426"/>
+<area shape="rect" href="planning__scene__storage_8h.html" title=" " alt="" coords="2537,191,2739,233"/>
+<area shape="rect" href="planning__scene__world__storage_8h.html" title=" " alt="" coords="3547,191,3750,233"/>
+<area shape="rect" href="state__storage_8h.html" title=" " alt="" coords="3108,191,3288,233"/>
+<area shape="rect" href="constraints__storage_8h.html" title=" " alt="" coords="2865,191,3083,233"/>
+<area shape="rect" href="trajectory__constraints__storage_8h.html" title=" " alt="" coords="3313,191,3523,233"/>
+<area shape="rect" href="planning__pipeline_8h.html" title=" " alt="" coords="1670,191,1857,233"/>
+<area shape="rect" title=" " alt="" coords="2124,303,2315,329"/>
+<area shape="rect" title=" " alt="" coords="4170,191,4354,233"/>
+<area shape="rect" title=" " alt="" coords="4082,303,4207,329"/>
+<area shape="rect" title=" " alt="" coords="3842,295,4058,337"/>
+<area shape="rect" title=" " alt="" coords="989,399,1121,426"/>
+<area shape="rect" title=" " alt="" coords="1282,399,1402,426"/>
+<area shape="rect" title=" " alt="" coords="30,303,233,329"/>
+<area shape="rect" href="class__forward_8h.html" title=" " alt="" coords="2426,392,2583,433"/>
+<area shape="rect" href="planning__scene_8h.html" title=" " alt="" coords="1233,295,1406,337"/>
+<area shape="rect" title=" " alt="" coords="1158,399,1235,426"/>
+<area shape="rect" title=" " alt="" coords="437,399,501,426"/>
+<area shape="rect" href="robot__model__loader_8h.html" title=" " alt="" coords="1892,288,2048,344"/>
+<area shape="rect" href="occupancy__map__monitor_8h.html" title=" " alt="" coords="1627,288,1817,344"/>
+<area shape="rect" title=" " alt="" coords="1969,399,2033,426"/>
+<area shape="rect" href="current__state__monitor_8h.html" title=" " alt="" coords="1430,288,1603,344"/>
+<area shape="rect" href="collision__plugin__loader_8h.html" title=" " alt="" coords="831,288,1005,344"/>
+<area shape="rect" title=" " alt="" coords="257,295,416,337"/>
+<area shape="rect" title=" " alt="" coords="441,303,555,329"/>
+<area shape="rect" title=" " alt="" coords="579,295,755,337"/>
+<area shape="rect" title=" " alt="" coords="1742,392,1945,433"/>
+<area shape="rect" title=" " alt="" coords="1537,392,1717,433"/>
+<area shape="rect" href="moveit__message__storage_8h.html" title=" " alt="" coords="3296,295,3489,337"/>
+<area shape="rect" title=" " alt="" coords="2542,295,2734,337"/>
+<area shape="rect" title=" " alt="" coords="2759,303,2965,329"/>
+<area shape="rect" title=" " alt="" coords="3565,295,3767,337"/>
+<area shape="rect" title=" " alt="" coords="3092,295,3272,337"/>
 </map>
 </div>
 </div>
@@ -193,15 +193,6 @@ template&lt;class Clock , class Duration &gt; </div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="BenchmarkExecutor_8cpp_source.html#l00070">70</a> of file <a class="el" href="BenchmarkExecutor_8cpp_source.html">BenchmarkExecutor.cpp</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="BenchmarkExecutor_8cpp_aca04eccd5f0d7c2b3e8b4728fdb1b9d7_icgraph.png" border="0" usemap="#BenchmarkExecutor_8cpp_aca04eccd5f0d7c2b3e8b4728fdb1b9d7_icgraph" alt=""/></div>
-<map name="BenchmarkExecutor_8cpp_aca04eccd5f0d7c2b3e8b4728fdb1b9d7_icgraph" id="BenchmarkExecutor_8cpp_aca04eccd5f0d7c2b3e8b4728fdb1b9d7_icgraph">
-<area shape="rect" title=" " alt="" coords="243,13,315,39"/>
-<area shape="rect" href="classpick__place_1_1PickPlacePlanBase.html#ad6e1365c6b0ec5098398bb51b5c7e2f0" title=" " alt="" coords="5,5,195,47"/>
-</map>
-</div>
 
 </div>
 </div>

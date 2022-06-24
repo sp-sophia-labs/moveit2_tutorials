@@ -1,52 +1,52 @@
 <map id="moveit_core/trajectory_processing/src/iterative_time_parameterization.cpp" name="moveit_core/trajectory_processing/src/iterative_time_parameterization.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="1541,5,1746,61"/>
-<area shape="rect" id="node2" href="$iterative__time__parameterization_8h.html" title=" " alt="" coords="651,109,900,151"/>
-<area shape="rect" id="node23" title=" " alt="" coords="859,563,1001,590"/>
-<area shape="rect" id="node48" title=" " alt="" coords="1556,109,1731,151"/>
-<area shape="rect" id="node49" href="$conversions_8h.html" title=" " alt="" coords="1695,288,1842,329"/>
-<area shape="rect" id="node50" title=" " alt="" coords="1806,117,1939,143"/>
-<area shape="rect" id="node3" href="$robot__trajectory_8h.html" title=" " alt="" coords="686,288,862,329"/>
-<area shape="rect" id="node44" title=" " alt="" coords="5,385,137,411"/>
-<area shape="rect" id="node47" href="$time__parameterization_8h.html" title=" " alt="" coords="597,199,809,240"/>
-<area shape="rect" id="node4" href="$class__forward_8h.html" title=" " alt="" coords="1853,735,2010,776"/>
-<area shape="rect" id="node6" title=" " alt="" coords="771,913,849,940"/>
-<area shape="rect" id="node7" href="$robot__state_8h.html" title=" " alt="" coords="1695,377,1842,419"/>
-<area shape="rect" id="node38" title=" " alt="" coords="837,377,1017,419"/>
-<area shape="rect" id="node39" title=" " alt="" coords="1300,377,1480,419"/>
-<area shape="rect" id="node40" title=" " alt="" coords="1041,385,1104,411"/>
-<area shape="rect" id="node41" title=" " alt="" coords="1128,385,1276,411"/>
-<area shape="rect" id="node42" title=" " alt="" coords="161,385,245,411"/>
-<area shape="rect" id="node43" title=" " alt="" coords="269,385,396,411"/>
-<area shape="rect" id="node45" title=" " alt="" coords="421,385,543,411"/>
-<area shape="rect" id="node46" title=" " alt="" coords="568,385,711,411"/>
-<area shape="rect" id="node5" href="$declare__ptr_8h.html" title=" " alt="" coords="1327,824,1499,865"/>
-<area shape="rect" id="node8" href="$robot__model_8h.html" title=" " alt="" coords="2029,467,2183,508"/>
-<area shape="rect" id="node25" href="$attached__body_8h.html" title=" " alt="" coords="2689,556,2835,597"/>
-<area shape="rect" id="node26" href="$transforms_8h.html" title=" " alt="" coords="3169,653,3400,679"/>
-<area shape="rect" id="node31" title=" " alt="" coords="2259,467,2431,508"/>
-<area shape="rect" id="node32" title=" " alt="" coords="993,467,1163,508"/>
-<area shape="rect" id="node33" title=" " alt="" coords="1187,467,1339,508"/>
-<area shape="rect" id="node34" title=" " alt="" coords="1364,474,1587,501"/>
-<area shape="rect" id="node35" title=" " alt="" coords="1610,474,1679,501"/>
-<area shape="rect" id="node36" title=" " alt="" coords="1703,474,1834,501"/>
-<area shape="rect" id="node37" title=" " alt="" coords="1858,474,2005,501"/>
-<area shape="rect" id="node9" href="$exceptions_8h.html" title=" " alt="" coords="1969,563,2200,590"/>
-<area shape="rect" id="node10" title=" " alt="" coords="2225,653,2358,679"/>
-<area shape="rect" id="node11" href="$joint__model__group_8h.html" title=" " alt="" coords="2327,556,2485,597"/>
-<area shape="rect" id="node14" title=" " alt="" coords="2463,742,2589,769"/>
-<area shape="rect" id="node18" href="$fixed__joint__model_8h.html" title=" " alt="" coords="2510,556,2665,597"/>
-<area shape="rect" id="node19" href="$floating__joint__model_8h.html" title=" " alt="" coords="1025,556,1195,597"/>
-<area shape="rect" id="node20" href="$planar__joint__model_8h.html" title=" " alt="" coords="1219,556,1382,597"/>
-<area shape="rect" id="node21" href="$revolute__joint__model_8h.html" title=" " alt="" coords="1406,556,1582,597"/>
-<area shape="rect" id="node22" href="$prismatic__joint__model_8h.html" title=" " alt="" coords="1607,556,1789,597"/>
-<area shape="rect" id="node24" title=" " alt="" coords="1814,563,1894,590"/>
-<area shape="rect" id="node12" href="$link__model_8h.html" title=" " alt="" coords="2449,645,2603,687"/>
-<area shape="rect" id="node16" title=" " alt="" coords="2628,653,2715,679"/>
-<area shape="rect" id="node17" title=" " alt="" coords="2382,653,2425,679"/>
-<area shape="rect" id="node13" title=" " alt="" coords="2985,742,3035,769"/>
-<area shape="rect" id="node15" title=" " alt="" coords="2637,735,2820,776"/>
-<area shape="rect" id="node29" title=" " alt="" coords="2791,645,2963,687"/>
-<area shape="rect" id="node30" title=" " alt="" coords="2987,645,3145,687"/>
-<area shape="rect" id="node27" title=" " alt="" coords="3283,735,3510,776"/>
-<area shape="rect" id="node28" title=" " alt="" coords="3086,742,3259,769"/>
+<area shape="rect" id="node1" title=" " alt="" coords="3707,5,3912,61"/>
+<area shape="rect" id="node2" href="$iterative__time__parameterization_8h.html" title=" " alt="" coords="1040,109,1289,151"/>
+<area shape="rect" id="node16" title=" " alt="" coords="3665,735,3840,776"/>
+<area shape="rect" id="node27" title=" " alt="" coords="3739,563,3880,590"/>
+<area shape="rect" id="node49" href="$conversions_8h.html" title=" " alt="" coords="1962,288,2108,329"/>
+<area shape="rect" id="node50" title=" " alt="" coords="3955,117,4088,143"/>
+<area shape="rect" id="node3" href="$robot__trajectory_8h.html" title=" " alt="" coords="820,288,996,329"/>
+<area shape="rect" id="node45" title=" " alt="" coords="1134,385,1266,411"/>
+<area shape="rect" id="node48" href="$time__parameterization_8h.html" title=" " alt="" coords="884,199,1096,240"/>
+<area shape="rect" id="node4" href="$class__forward_8h.html" title=" " alt="" coords="1150,735,1307,776"/>
+<area shape="rect" id="node6" title=" " alt="" coords="31,913,108,940"/>
+<area shape="rect" id="node7" href="$robot__state_8h.html" title=" " alt="" coords="1756,377,1903,419"/>
+<area shape="rect" id="node39" title=" " alt="" coords="46,377,226,419"/>
+<area shape="rect" id="node40" title=" " alt="" coords="1465,377,1645,419"/>
+<area shape="rect" id="node41" title=" " alt="" coords="250,385,313,411"/>
+<area shape="rect" id="node42" title=" " alt="" coords="337,385,485,411"/>
+<area shape="rect" id="node43" title=" " alt="" coords="509,385,593,411"/>
+<area shape="rect" id="node44" title=" " alt="" coords="617,385,744,411"/>
+<area shape="rect" id="node46" title=" " alt="" coords="768,385,891,411"/>
+<area shape="rect" id="node47" title=" " alt="" coords="916,385,1058,411"/>
+<area shape="rect" id="node5" href="$declare__ptr_8h.html" title=" " alt="" coords="464,824,636,865"/>
+<area shape="rect" id="node8" href="$robot__model_8h.html" title=" " alt="" coords="2652,467,2807,508"/>
+<area shape="rect" id="node28" href="$attached__body_8h.html" title=" " alt="" coords="1754,556,1900,597"/>
+<area shape="rect" id="node29" href="$transforms_8h.html" title=" " alt="" coords="1876,653,2106,679"/>
+<area shape="rect" id="node33" title=" " alt="" coords="2029,467,2201,508"/>
+<area shape="rect" id="node34" title=" " alt="" coords="1046,467,1216,508"/>
+<area shape="rect" id="node35" title=" " alt="" coords="1240,467,1392,508"/>
+<area shape="rect" id="node36" title=" " alt="" coords="1417,474,1640,501"/>
+<area shape="rect" id="node37" title=" " alt="" coords="1663,474,1732,501"/>
+<area shape="rect" id="node38" title=" " alt="" coords="1756,474,1903,501"/>
+<area shape="rect" id="node9" href="$exceptions_8h.html" title=" " alt="" coords="3433,563,3664,590"/>
+<area shape="rect" id="node11" title=" " alt="" coords="2308,653,2442,679"/>
+<area shape="rect" id="node12" href="$joint__model__group_8h.html" title=" " alt="" coords="2181,556,2340,597"/>
+<area shape="rect" id="node15" title=" " alt="" coords="3043,742,3123,769"/>
+<area shape="rect" id="node17" title=" " alt="" coords="2310,742,2437,769"/>
+<area shape="rect" id="node22" href="$fixed__joint__model_8h.html" title=" " alt="" coords="2466,556,2620,597"/>
+<area shape="rect" id="node23" href="$floating__joint__model_8h.html" title=" " alt="" coords="2644,556,2815,597"/>
+<area shape="rect" id="node24" href="$planar__joint__model_8h.html" title=" " alt="" coords="2839,556,3002,597"/>
+<area shape="rect" id="node25" href="$revolute__joint__model_8h.html" title=" " alt="" coords="3026,556,3202,597"/>
+<area shape="rect" id="node26" href="$prismatic__joint__model_8h.html" title=" " alt="" coords="3226,556,3409,597"/>
+<area shape="rect" id="node10" title=" " alt="" coords="3505,653,3592,679"/>
+<area shape="rect" id="node13" href="$joint__model_8h.html" title=" " alt="" coords="2747,645,2902,687"/>
+<area shape="rect" id="node18" href="$link__model_8h.html" title=" " alt="" coords="1696,645,1851,687"/>
+<area shape="rect" id="node20" title=" " alt="" coords="2130,653,2217,679"/>
+<area shape="rect" id="node21" title=" " alt="" coords="2242,653,2284,679"/>
+<area shape="rect" id="node14" title=" " alt="" coords="2103,742,2154,769"/>
+<area shape="rect" id="node19" title=" " alt="" coords="1594,735,1777,776"/>
+<area shape="rect" id="node31" title=" " alt="" coords="1266,645,1438,687"/>
+<area shape="rect" id="node32" title=" " alt="" coords="1462,645,1621,687"/>
+<area shape="rect" id="node30" title=" " alt="" coords="1852,735,2079,776"/>
 </map>

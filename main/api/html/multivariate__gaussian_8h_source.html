@@ -109,61 +109,53 @@ $(function() {
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;boost/random/mersenne_twister.hpp&gt;</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;boost/random/normal_distribution.hpp&gt;</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;boost/random/variate_generator.hpp&gt;</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;eigen3/Eigen/Cholesky&gt;</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;eigen3/Eigen/Core&gt;</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacechomp.html">chomp</a></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">class </span>MultivariateGaussian</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Derived1, <span class="keyword">typename</span> Derived2&gt;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <a class="code" href="classchomp_1_1MultivariateGaussian.html#a53b2e635d0c1fe08ac1aa7d1290e63ab">MultivariateGaussian</a>(<span class="keyword">const</span> Eigen::MatrixBase&lt;Derived1&gt;&amp; mean, <span class="keyword">const</span> Eigen::MatrixBase&lt;Derived2&gt;&amp; covariance);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Derived&gt;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classchomp_1_1MultivariateGaussian.html#a147d649b2d6bf6ad361e05eb940c560d">sample</a>(Eigen::MatrixBase&lt;Derived&gt;&amp; output);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  Eigen::VectorXd mean_;                </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  Eigen::MatrixXd covariance_;          </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  Eigen::MatrixXd covariance_cholesky_; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordtype">int</span> size_;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  boost::mt19937 rng_;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  boost::normal_distribution&lt;&gt; normal_dist_;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  boost::variate_generator&lt;boost::mt19937, boost::normal_distribution&lt;&gt; &gt; gaussian_;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;};</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Derived1, <span class="keyword">typename</span> Derived2&gt;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<a class="code" href="classchomp_1_1MultivariateGaussian.html#a53b2e635d0c1fe08ac1aa7d1290e63ab">MultivariateGaussian::MultivariateGaussian</a>(<span class="keyword">const</span> Eigen::MatrixBase&lt;Derived1&gt;&amp; mean,</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                                           <span class="keyword">const</span> Eigen::MatrixBase&lt;Derived2&gt;&amp; covariance)</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  : mean_(mean)</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  , covariance_(covariance)</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  , covariance_cholesky_(covariance_.llt().matrixL())</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  , rng_()</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  , normal_dist_(0.0, 1.0)</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  , gaussian_(rng_, normal_dist_)</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{</div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classchomp_1_1MultivariateGaussian.html">   83</a></span>&#160;  rng_.seed(rand());</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  size_ = mean.rows();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;random&gt;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;eigen3/Eigen/Cholesky&gt;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;eigen3/Eigen/Core&gt;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacechomp.html">chomp</a></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">class </span>MultivariateGaussian</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Derived1, <span class="keyword">typename</span> Derived2&gt;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <a class="code" href="classchomp_1_1MultivariateGaussian.html#a53b2e635d0c1fe08ac1aa7d1290e63ab">MultivariateGaussian</a>(<span class="keyword">const</span> Eigen::MatrixBase&lt;Derived1&gt;&amp; mean, <span class="keyword">const</span> Eigen::MatrixBase&lt;Derived2&gt;&amp; covariance);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Derived&gt;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classchomp_1_1MultivariateGaussian.html#a147d649b2d6bf6ad361e05eb940c560d">sample</a>(Eigen::MatrixBase&lt;Derived&gt;&amp; output);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  Eigen::VectorXd mean_;                </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  Eigen::MatrixXd covariance_;          </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  Eigen::MatrixXd covariance_cholesky_; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordtype">int</span> size_;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  std::mt19937 rng_;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  std::normal_distribution&lt;double&gt; gaussian_;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Derived1, <span class="keyword">typename</span> Derived2&gt;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<a class="code" href="classchomp_1_1MultivariateGaussian.html#a53b2e635d0c1fe08ac1aa7d1290e63ab">MultivariateGaussian::MultivariateGaussian</a>(<span class="keyword">const</span> Eigen::MatrixBase&lt;Derived1&gt;&amp; mean,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                                           <span class="keyword">const</span> Eigen::MatrixBase&lt;Derived2&gt;&amp; covariance)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  : mean_(mean), covariance_(covariance), covariance_cholesky_(covariance_.llt().matrixL()), gaussian_(0.0, 1.0)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  rng_ = std::mt19937(std::random_device{}());</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  size_ = mean.rows();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Derived&gt;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classchomp_1_1MultivariateGaussian.html#a147d649b2d6bf6ad361e05eb940c560d">MultivariateGaussian::sample</a>(Eigen::MatrixBase&lt;Derived&gt;&amp; output)</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="classchomp_1_1MultivariateGaussian.html">   81</a></span>&#160;{</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; size_; ++i)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    output(i) = gaussian_(rng_);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  output = mean_ + covariance_cholesky_ * output;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Derived&gt;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classchomp_1_1MultivariateGaussian.html#a147d649b2d6bf6ad361e05eb940c560d">MultivariateGaussian::sample</a>(Eigen::MatrixBase&lt;Derived&gt;&amp; output)</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;{</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; size_; ++i)</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    output(i) = gaussian_();</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  output = mean_ + covariance_cholesky_ * output;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}  <span class="comment">// namespace chomp</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}  <span class="comment">// namespace chomp</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacechomp_html"><div class="ttname"><a href="namespacechomp.html">chomp</a></div><div class="ttdef"><b>Definition:</b> <a href="chomp__cost_8h_source.html#l00044">chomp_cost.h:44</a></div></div>
-<div class="ttc" id="aclasschomp_1_1MultivariateGaussian_html_a147d649b2d6bf6ad361e05eb940c560d"><div class="ttname"><a href="classchomp_1_1MultivariateGaussian.html#a147d649b2d6bf6ad361e05eb940c560d">chomp::MultivariateGaussian::sample</a></div><div class="ttdeci">void sample(Eigen::MatrixBase&lt; Derived &gt; &amp;output)</div><div class="ttdef"><b>Definition:</b> <a href="multivariate__gaussian_8h_source.html#l00120">multivariate_gaussian.h:120</a></div></div>
-<div class="ttc" id="aclasschomp_1_1MultivariateGaussian_html_a53b2e635d0c1fe08ac1aa7d1290e63ab"><div class="ttname"><a href="classchomp_1_1MultivariateGaussian.html#a53b2e635d0c1fe08ac1aa7d1290e63ab">chomp::MultivariateGaussian::MultivariateGaussian</a></div><div class="ttdeci">MultivariateGaussian(const Eigen::MatrixBase&lt; Derived1 &gt; &amp;mean, const Eigen::MatrixBase&lt; Derived2 &gt; &amp;covariance)</div><div class="ttdef"><b>Definition:</b> <a href="multivariate__gaussian_8h_source.html#l00106">multivariate_gaussian.h:106</a></div></div>
+<div class="ttc" id="aclasschomp_1_1MultivariateGaussian_html_a147d649b2d6bf6ad361e05eb940c560d"><div class="ttname"><a href="classchomp_1_1MultivariateGaussian.html#a147d649b2d6bf6ad361e05eb940c560d">chomp::MultivariateGaussian::sample</a></div><div class="ttdeci">void sample(Eigen::MatrixBase&lt; Derived &gt; &amp;output)</div><div class="ttdef"><b>Definition:</b> <a href="multivariate__gaussian_8h_source.html#l00112">multivariate_gaussian.h:112</a></div></div>
+<div class="ttc" id="aclasschomp_1_1MultivariateGaussian_html_a53b2e635d0c1fe08ac1aa7d1290e63ab"><div class="ttname"><a href="classchomp_1_1MultivariateGaussian.html#a53b2e635d0c1fe08ac1aa7d1290e63ab">chomp::MultivariateGaussian::MultivariateGaussian</a></div><div class="ttdeci">MultivariateGaussian(const Eigen::MatrixBase&lt; Derived1 &gt; &amp;mean, const Eigen::MatrixBase&lt; Derived2 &gt; &amp;covariance)</div><div class="ttdef"><b>Definition:</b> <a href="multivariate__gaussian_8h_source.html#l00103">multivariate_gaussian.h:103</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

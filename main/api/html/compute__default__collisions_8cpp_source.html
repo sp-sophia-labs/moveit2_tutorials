@@ -573,129 +573,121 @@ $(function() {
 <div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;                                     <a class="code" href="namespacemoveit__setup__assistant.html#a98a4840ded10cd49d1912a2a6cf1c096">StringPairSet</a>&amp; links_seen_colliding, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>* progress)</div>
 <div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;{</div>
 <div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> num_disabled = 0;</div>
-<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160; </div>
-<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;  boost::thread_group bgroup;  <span class="comment">// create a group of threads</span></div>
-<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;  std::mutex lock;             <span class="comment">// used for sharing the same data structures</span></div>
-<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160; </div>
-<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;  <span class="keywordtype">int</span> num_threads = std::thread::hardware_concurrency();  <span class="comment">// how many cores does this computer have?</span></div>
-<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;  <span class="comment">// RCLCPP_INFO_STREAM_STREAM(LOGGER, &quot;Performing &quot; &lt;&lt; num_trials &lt;&lt; &quot; trials for &#39;always in collision&#39; checking on &quot; &lt;&lt;</span></div>
-<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;  <span class="comment">//   num_threads &lt;&lt; &quot; threads...&quot;);</span></div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160; </div>
-<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_threads; ++i)</div>
-<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;  {</div>
-<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;    ThreadComputation tc(<a class="code" href="namespacepick.html#a2ee00a4cb697b06d098335ade68b33ae">scene</a>, req, i, num_trials / num_threads, &amp;links_seen_colliding, &amp;lock, progress);</div>
-<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;    bgroup.create_thread([tc] { <span class="keywordflow">return</span> disableNeverInCollisionThread(tc); });</div>
-<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;  }</div>
-<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160; </div>
-<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;  <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;  {</div>
-<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;    bgroup.join_all();  <span class="comment">// wait for all threads to finish</span></div>
-<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;  }</div>
-<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;  <span class="keywordflow">catch</span> (boost::thread_interrupted)</div>
-<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;  {</div>
-<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;    RCLCPP_WARN_STREAM(LOGGER, <span class="stringliteral">&quot;disableNeverInCollision interrupted&quot;</span>);</div>
-<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;    bgroup.interrupt_all();</div>
-<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;    bgroup.join_all();  <span class="comment">// wait for all threads to interrupt</span></div>
-<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;    <span class="keywordflow">throw</span>;</div>
-<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;  }</div>
-<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160; </div>
-<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;  <span class="comment">// Loop through every possible link pair and check if it has ever been seen in collision</span></div>
-<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;  <span class="keywordflow">for</span> (std::pair&lt;<span class="keyword">const</span> std::pair&lt;std::string, std::string&gt;, LinkPairData&gt;&amp; link_pair : link_pairs)</div>
-<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;  {</div>
-<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;    <span class="keywordflow">if</span> (!link_pair.second.disable_check)  <span class="comment">// is not disabled yet</span></div>
-<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;    {</div>
-<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;      <span class="comment">// Check if current pair has been seen colliding ever. If it has never been seen colliding, add it to disabled</span></div>
-<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;      <span class="comment">// list</span></div>
-<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;      <span class="keywordflow">if</span> (links_seen_colliding.find(link_pair.first) == links_seen_colliding.end())</div>
-<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;      {</div>
-<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;        <span class="comment">// Add to disabled list using pair ordering</span></div>
-<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;        link_pair.second.reason = <a class="code" href="namespacemoveit__setup__assistant.html#a8102790a31e41396f7fa9c5e99482e39a7f6b8dc4a19199d5a949c033498abf3c">NEVER</a>;</div>
-<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;        link_pair.second.disable_check = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160; </div>
-<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;        <span class="comment">// Count it</span></div>
-<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;        ++num_disabled;</div>
-<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;      }</div>
-<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;    }</div>
-<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;  }</div>
-<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;  <span class="comment">// RCLCPP_INFO_STREAM(LOGGER, &quot;Disabled %d link pairs that are never in collision&quot;, num_disabled);</span></div>
-<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160; </div>
-<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;  <span class="keywordflow">return</span> num_disabled;</div>
-<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;}</div>
-<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160; </div>
-<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;<span class="comment">// ******************************************************************************************</span></div>
-<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;<span class="comment">// Thread for getting the pairs of links that are never in collision</span></div>
-<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;<span class="comment">// ******************************************************************************************</span></div>
-<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;<span class="keywordtype">void</span> disableNeverInCollisionThread(ThreadComputation tc)</div>
-<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;{</div>
-<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;  <span class="comment">// RCLCPP_INFO_STREAM_STREAM(LOGGER, &quot;Thread &quot; &lt;&lt; tc.thread_id_ &lt;&lt; &quot; running &quot; &lt;&lt; tc.num_trials_ &lt;&lt; &quot; trials&quot;);</span></div>
-<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160; </div>
-<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;  <span class="comment">// User feedback vars</span></div>
-<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> progress_interval = tc.num_trials_ / 20;  <span class="comment">// show progress update every 5%</span></div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;  std::vector&lt;std::thread&gt; bgroup;</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;  std::mutex lock;  <span class="comment">// used for sharing the same data structures</span></div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160; </div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;  <span class="keywordtype">int</span> num_threads = std::thread::hardware_concurrency();  <span class="comment">// how many cores does this computer have?</span></div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;  <span class="comment">// RCLCPP_INFO_STREAM_STREAM(LOGGER, &quot;Performing &quot; &lt;&lt; num_trials &lt;&lt; &quot; trials for &#39;always in collision&#39; checking on &quot; &lt;&lt;</span></div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;  <span class="comment">//   num_threads &lt;&lt; &quot; threads...&quot;);</span></div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160; </div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; num_threads; ++i)</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;  {</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;    ThreadComputation tc(<a class="code" href="namespacepick.html#a2ee00a4cb697b06d098335ade68b33ae">scene</a>, req, i, num_trials / num_threads, &amp;links_seen_colliding, &amp;lock, progress);</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;    bgroup.push_back(std::thread([tc] { <span class="keywordflow">return</span> disableNeverInCollisionThread(tc); }));</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;  }</div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160; </div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; thread : bgroup)</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;  {</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;    thread.join();</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;  }</div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160; </div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;  <span class="comment">// Loop through every possible link pair and check if it has ever been seen in collision</span></div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;  <span class="keywordflow">for</span> (std::pair&lt;<span class="keyword">const</span> std::pair&lt;std::string, std::string&gt;, LinkPairData&gt;&amp; link_pair : link_pairs)</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;  {</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;    <span class="keywordflow">if</span> (!link_pair.second.disable_check)  <span class="comment">// is not disabled yet</span></div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;    {</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;      <span class="comment">// Check if current pair has been seen colliding ever. If it has never been seen colliding, add it to disabled</span></div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;      <span class="comment">// list</span></div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;      <span class="keywordflow">if</span> (links_seen_colliding.find(link_pair.first) == links_seen_colliding.end())</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;      {</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;        <span class="comment">// Add to disabled list using pair ordering</span></div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;        link_pair.second.reason = <a class="code" href="namespacemoveit__setup__assistant.html#a8102790a31e41396f7fa9c5e99482e39a7f6b8dc4a19199d5a949c033498abf3c">NEVER</a>;</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;        link_pair.second.disable_check = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160; </div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;        <span class="comment">// Count it</span></div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;        ++num_disabled;</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;      }</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;    }</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;  }</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;  <span class="comment">// RCLCPP_INFO_STREAM(LOGGER, &quot;Disabled %d link pairs that are never in collision&quot;, num_disabled);</span></div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160; </div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;  <span class="keywordflow">return</span> num_disabled;</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;}</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160; </div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;<span class="comment">// ******************************************************************************************</span></div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;<span class="comment">// Thread for getting the pairs of links that are never in collision</span></div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;<span class="comment">// ******************************************************************************************</span></div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;<span class="keywordtype">void</span> disableNeverInCollisionThread(ThreadComputation tc)</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;{</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;  <span class="comment">// RCLCPP_INFO_STREAM_STREAM(LOGGER, &quot;Thread &quot; &lt;&lt; tc.thread_id_ &lt;&lt; &quot; running &quot; &lt;&lt; tc.num_trials_ &lt;&lt; &quot; trials&quot;);</span></div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160; </div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;  <span class="comment">// User feedback vars</span></div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> progress_interval = tc.num_trials_ / 20;  <span class="comment">// show progress update every 5%</span></div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160; </div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;  <span class="comment">// Create a new kinematic state for this thread to work on</span></div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;  <a class="code" href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a> robot_state(tc.scene_.getRobotModel());</div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160; </div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;  <span class="comment">// Do a large number of tests</span></div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; tc.num_trials_; ++i)</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;  {</div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;    boost::this_thread::interruption_point();</div>
 <div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160; </div>
-<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;  <span class="comment">// Create a new kinematic state for this thread to work on</span></div>
-<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;  <a class="code" href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a> robot_state(tc.scene_.getRobotModel());</div>
-<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160; </div>
-<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;  <span class="comment">// Do a large number of tests</span></div>
-<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; tc.num_trials_; ++i)</div>
-<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;  {</div>
-<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;    boost::this_thread::interruption_point();</div>
-<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160; </div>
-<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;    <span class="comment">// Status update at intervals and only for 0 thread</span></div>
-<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;    <span class="keywordflow">if</span> (i % progress_interval == 0 &amp;&amp; tc.thread_id_ == 0)</div>
-<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;    {</div>
-<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;      (*tc.progress_) = i * 92 / tc.num_trials_ + 8;  <span class="comment">// 8 is the amount of progress already completed in prev steps</span></div>
-<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;    }</div>
-<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160; </div>
-<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;    <a class="code" href="structcollision__detection_1_1CollisionResult.html">collision_detection::CollisionResult</a> res;</div>
-<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;    robot_state.setToRandomPositions();</div>
-<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;    tc.scene_.checkSelfCollision(tc.req_, res, robot_state);</div>
-<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160; </div>
-<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;    <span class="comment">// Check all contacts</span></div>
-<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;    <span class="keywordflow">for</span> (collision_detection::CollisionResult::ContactMap::const_iterator it = res.<a class="code" href="structcollision__detection_1_1CollisionResult.html#a0c7af992e5bc7e62d81bc4ad6ccdb2a0">contacts</a>.begin();</div>
-<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;         it != res.<a class="code" href="structcollision__detection_1_1CollisionResult.html#a0c7af992e5bc7e62d81bc4ad6ccdb2a0">contacts</a>.end(); ++it)</div>
-<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;    {</div>
-<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;      <span class="comment">// Check if this collision pair is unique before doing a thread lock</span></div>
-<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;      <span class="keywordflow">if</span> (tc.links_seen_colliding_-&gt;find(it-&gt;first) == tc.links_seen_colliding_-&gt;end())</div>
-<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;      {</div>
-<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;        <span class="comment">// Collision Matrix and links_seen_colliding is modified only if needed, based on above if statement</span></div>
-<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160; </div>
-<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;        std::scoped_lock slock(*tc.lock_);</div>
-<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;        tc.links_seen_colliding_-&gt;insert(it-&gt;first);</div>
-<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160; </div>
-<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;        tc.scene_.getAllowedCollisionMatrixNonConst().setEntry(it-&gt;first.first, it-&gt;first.second,</div>
-<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;                                                               <span class="keyword">true</span>);  <span class="comment">// disable link checking in the collision matrix</span></div>
-<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;      }</div>
-<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;    }</div>
-<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;  }</div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;    <span class="comment">// Status update at intervals and only for 0 thread</span></div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;    <span class="keywordflow">if</span> (i % progress_interval == 0 &amp;&amp; tc.thread_id_ == 0)</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;    {</div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;      (*tc.progress_) = i * 92 / tc.num_trials_ + 8;  <span class="comment">// 8 is the amount of progress already completed in prev steps</span></div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;    }</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160; </div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;    <a class="code" href="structcollision__detection_1_1CollisionResult.html">collision_detection::CollisionResult</a> res;</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;    robot_state.setToRandomPositions();</div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;    tc.scene_.checkSelfCollision(tc.req_, res, robot_state);</div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160; </div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;    <span class="comment">// Check all contacts</span></div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;    <span class="keywordflow">for</span> (collision_detection::CollisionResult::ContactMap::const_iterator it = res.<a class="code" href="structcollision__detection_1_1CollisionResult.html#a0c7af992e5bc7e62d81bc4ad6ccdb2a0">contacts</a>.begin();</div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;         it != res.<a class="code" href="structcollision__detection_1_1CollisionResult.html#a0c7af992e5bc7e62d81bc4ad6ccdb2a0">contacts</a>.end(); ++it)</div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;    {</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;      <span class="comment">// Check if this collision pair is unique before doing a thread lock</span></div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;      <span class="keywordflow">if</span> (tc.links_seen_colliding_-&gt;find(it-&gt;first) == tc.links_seen_colliding_-&gt;end())</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;      {</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;        <span class="comment">// Collision Matrix and links_seen_colliding is modified only if needed, based on above if statement</span></div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160; </div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;        std::scoped_lock slock(*tc.lock_);</div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;        tc.links_seen_colliding_-&gt;insert(it-&gt;first);</div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160; </div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;        tc.scene_.getAllowedCollisionMatrixNonConst().setEntry(it-&gt;first.first, it-&gt;first.second,</div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;                                                               <span class="keyword">true</span>);  <span class="comment">// disable link checking in the collision matrix</span></div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;      }</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;    }</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;  }</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;}</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160; </div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;<span class="comment">// ******************************************************************************************</span></div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;<span class="comment">// Converts a reason for disabling a link pair into a string</span></div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;<span class="comment">// ******************************************************************************************</span></div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;<span class="keyword">const</span> std::string <a class="code" href="namespacemoveit__setup__assistant.html#a214a0fe7bdff2e5a2fe895dac701290a">disabledReasonToString</a>(<a class="code" href="namespacemoveit__setup__assistant.html#a8102790a31e41396f7fa9c5e99482e39">DisabledReason</a> reason)</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;{</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="namespacemoveit__setup__assistant.html#abaa25fb92a01134d680508beff5a8497">REASONS_TO_STRING</a>.at(reason);</div>
 <div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;}</div>
 <div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160; </div>
 <div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;<span class="comment">// ******************************************************************************************</span></div>
-<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;<span class="comment">// Converts a reason for disabling a link pair into a string</span></div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;<span class="comment">// Converts a string reason for disabling a link pair into a struct data type</span></div>
 <div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;<span class="comment">// ******************************************************************************************</span></div>
-<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;<span class="keyword">const</span> std::string <a class="code" href="namespacemoveit__setup__assistant.html#a214a0fe7bdff2e5a2fe895dac701290a">disabledReasonToString</a>(<a class="code" href="namespacemoveit__setup__assistant.html#a8102790a31e41396f7fa9c5e99482e39">DisabledReason</a> reason)</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;<a class="code" href="namespacemoveit__setup__assistant.html#a8102790a31e41396f7fa9c5e99482e39">DisabledReason</a> <a class="code" href="namespacemoveit__setup__assistant.html#abd3690c209f9198cb7545c209d6ed216">disabledReasonFromString</a>(<span class="keyword">const</span> std::string&amp; reason)</div>
 <div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;{</div>
-<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="namespacemoveit__setup__assistant.html#abaa25fb92a01134d680508beff5a8497">REASONS_TO_STRING</a>.at(reason);</div>
-<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;}</div>
-<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160; </div>
-<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;<span class="comment">// ******************************************************************************************</span></div>
-<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;<span class="comment">// Converts a string reason for disabling a link pair into a struct data type</span></div>
-<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;<span class="comment">// ******************************************************************************************</span></div>
-<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;<a class="code" href="namespacemoveit__setup__assistant.html#a8102790a31e41396f7fa9c5e99482e39">DisabledReason</a> <a class="code" href="namespacemoveit__setup__assistant.html#abd3690c209f9198cb7545c209d6ed216">disabledReasonFromString</a>(<span class="keyword">const</span> std::string&amp; reason)</div>
-<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;{</div>
-<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;  <a class="code" href="namespacemoveit__setup__assistant.html#a8102790a31e41396f7fa9c5e99482e39">DisabledReason</a> <a class="code" href="namespaceplan.html#ab9a5624d048e6b841d11a5f223f02870">r</a>;</div>
-<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;  <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;  {</div>
-<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;    <a class="code" href="namespaceplan.html#ab9a5624d048e6b841d11a5f223f02870">r</a> = <a class="code" href="namespacemoveit__setup__assistant.html#a2e344fc9f75963053eca4c6642eef11d">REASONS_FROM_STRING</a>.at(reason);</div>
-<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;  }</div>
-<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;  <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::out_of_range&amp;)</div>
-<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;  {</div>
-<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;    <a class="code" href="namespaceplan.html#ab9a5624d048e6b841d11a5f223f02870">r</a> = <a class="code" href="namespacemoveit__setup__assistant.html#a8102790a31e41396f7fa9c5e99482e39ac7b8b4c0a86db0e8eab4bac23286122e">USER</a>;</div>
-<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;  }</div>
-<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160; </div>
-<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="namespaceplan.html#ab9a5624d048e6b841d11a5f223f02870">r</a>;</div>
-<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;}</div>
-<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160; </div>
-<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;}  <span class="comment">// namespace moveit_setup_assistant</span></div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;  <a class="code" href="namespacemoveit__setup__assistant.html#a8102790a31e41396f7fa9c5e99482e39">DisabledReason</a> <a class="code" href="namespaceplan.html#ab9a5624d048e6b841d11a5f223f02870">r</a>;</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;  <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;  {</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;    <a class="code" href="namespaceplan.html#ab9a5624d048e6b841d11a5f223f02870">r</a> = <a class="code" href="namespacemoveit__setup__assistant.html#a2e344fc9f75963053eca4c6642eef11d">REASONS_FROM_STRING</a>.at(reason);</div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;  }</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;  <span class="keywordflow">catch</span> (<span class="keyword">const</span> std::out_of_range&amp;)</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;  {</div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;    <a class="code" href="namespaceplan.html#ab9a5624d048e6b841d11a5f223f02870">r</a> = <a class="code" href="namespacemoveit__setup__assistant.html#a8102790a31e41396f7fa9c5e99482e39ac7b8b4c0a86db0e8eab4bac23286122e">USER</a>;</div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;  }</div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160; </div>
+<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="namespaceplan.html#ab9a5624d048e6b841d11a5f223f02870">r</a>;</div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;}</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160; </div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;}  <span class="comment">// namespace moveit_setup_assistant</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassmoveit_1_1core_1_1LinkModel_html"><div class="ttname"><a href="classmoveit_1_1core_1_1LinkModel.html">moveit::core::LinkModel</a></div><div class="ttdoc">A link from the robot. Contains the constant transform applied to the link and its geometry.</div><div class="ttdef"><b>Definition:</b> <a href="link__model_8h_source.html#l00071">link_model.h:71</a></div></div>
 <div class="ttc" id="anamespacemoveit__setup__assistant_html_a8102790a31e41396f7fa9c5e99482e39a7f6b8dc4a19199d5a949c033498abf3c"><div class="ttname"><a href="namespacemoveit__setup__assistant.html#a8102790a31e41396f7fa9c5e99482e39a7f6b8dc4a19199d5a949c033498abf3c">moveit_setup_assistant::NEVER</a></div><div class="ttdeci">@ NEVER</div><div class="ttdef"><b>Definition:</b> <a href="compute__default__collisions_8hpp_source.html#l00054">compute_default_collisions.hpp:54</a></div></div>
@@ -706,7 +698,7 @@ $(function() {
 <div class="ttc" id="aplanning__scene_8h_html"><div class="ttname"><a href="planning__scene_8h.html">planning_scene.h</a></div></div>
 <div class="ttc" id="anamespacemoveit__setup__assistant_html_a8102790a31e41396f7fa9c5e99482e39a6047696b54e8dff47cc0fb5349e715e8"><div class="ttname"><a href="namespacemoveit__setup__assistant.html#a8102790a31e41396f7fa9c5e99482e39a6047696b54e8dff47cc0fb5349e715e8">moveit_setup_assistant::DEFAULT</a></div><div class="ttdeci">@ DEFAULT</div><div class="ttdef"><b>Definition:</b> <a href="compute__default__collisions_8hpp_source.html#l00055">compute_default_collisions.hpp:55</a></div></div>
 <div class="ttc" id="anamespacepick_html_a2ee00a4cb697b06d098335ade68b33ae"><div class="ttname"><a href="namespacepick.html#a2ee00a4cb697b06d098335ade68b33ae">pick.scene</a></div><div class="ttdeci">scene</div><div class="ttdef"><b>Definition:</b> <a href="pick_8py_source.html#l00052">pick.py:52</a></div></div>
-<div class="ttc" id="aclassmoveit_1_1core_1_1RobotState_html"><div class="ttname"><a href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a></div><div class="ttdoc">Representation of a robot's state. This includes position, velocity, acceleration and effort.</div><div class="ttdef"><b>Definition:</b> <a href="robot__state_8h_source.html#l00156">robot_state.h:156</a></div></div>
+<div class="ttc" id="aclassmoveit_1_1core_1_1RobotState_html"><div class="ttname"><a href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a></div><div class="ttdoc">Representation of a robot's state. This includes position, velocity, acceleration and effort.</div><div class="ttdef"><b>Definition:</b> <a href="robot__state_8h_source.html#l00155">robot_state.h:155</a></div></div>
 <div class="ttc" id="anamespacemoveit__setup__assistant_html_a8102790a31e41396f7fa9c5e99482e39ac7b8b4c0a86db0e8eab4bac23286122e"><div class="ttname"><a href="namespacemoveit__setup__assistant.html#a8102790a31e41396f7fa9c5e99482e39ac7b8b4c0a86db0e8eab4bac23286122e">moveit_setup_assistant::USER</a></div><div class="ttdeci">@ USER</div><div class="ttdef"><b>Definition:</b> <a href="compute__default__collisions_8hpp_source.html#l00058">compute_default_collisions.hpp:58</a></div></div>
 <div class="ttc" id="anamespacemoveit__setup__assistant_html_a8102790a31e41396f7fa9c5e99482e39a6293371c6d77e70dea7b203330e993aa"><div class="ttname"><a href="namespacemoveit__setup__assistant.html#a8102790a31e41396f7fa9c5e99482e39a6293371c6d77e70dea7b203330e993aa">moveit_setup_assistant::ADJACENT</a></div><div class="ttdeci">@ ADJACENT</div><div class="ttdef"><b>Definition:</b> <a href="compute__default__collisions_8hpp_source.html#l00056">compute_default_collisions.hpp:56</a></div></div>
 <div class="ttc" id="astructcollision__detection_1_1CollisionRequest_html"><div class="ttname"><a href="structcollision__detection_1_1CollisionRequest.html">collision_detection::CollisionRequest</a></div><div class="ttdoc">Representation of a collision checking request.</div><div class="ttdef"><b>Definition:</b> <a href="include_2moveit_2collision__detection_2collision__common_8h_source.html#l00216">collision_common.h:216</a></div></div>
@@ -726,7 +718,7 @@ $(function() {
 <div class="ttc" id="anamespaceplanning__request__adapter_html_af64b3fa8ebc256d9c5133c6c80ade28f"><div class="ttname"><a href="namespaceplanning__request__adapter.html#af64b3fa8ebc256d9c5133c6c80ade28f">planning_request_adapter::LOGGER</a></div><div class="ttdeci">rclcpp::Logger LOGGER</div><div class="ttdef"><b>Definition:</b> <a href="planning__request__adapter_8cpp_source.html#l00076">planning_request_adapter.cpp:76</a></div></div>
 <div class="ttc" id="anamespacemoveit__setup__assistant_html"><div class="ttname"><a href="namespacemoveit__setup__assistant.html">moveit_setup_assistant</a></div><div class="ttdef"><b>Definition:</b> <a href="compute__default__collisions_8hpp_source.html#l00046">compute_default_collisions.hpp:46</a></div></div>
 <div class="ttc" id="astructcollision__detection_1_1CollisionResult_html_a0c7af992e5bc7e62d81bc4ad6ccdb2a0"><div class="ttname"><a href="structcollision__detection_1_1CollisionResult.html#a0c7af992e5bc7e62d81bc4ad6ccdb2a0">collision_detection::CollisionResult::contacts</a></div><div class="ttdeci">ContactMap contacts</div><div class="ttdoc">A map returning the pairs of body ids in contact, plus their contact details.</div><div class="ttdef"><b>Definition:</b> <a href="include_2moveit_2collision__detection_2collision__common_8h_source.html#l00209">collision_common.h:209</a></div></div>
-<div class="ttc" id="anamespacemoveit__setup__assistant_html_a214a0fe7bdff2e5a2fe895dac701290a"><div class="ttname"><a href="namespacemoveit__setup__assistant.html#a214a0fe7bdff2e5a2fe895dac701290a">moveit_setup_assistant::disabledReasonToString</a></div><div class="ttdeci">const std::string disabledReasonToString(DisabledReason reason)</div><div class="ttdoc">Converts a reason for disabling a link pair into a string.</div><div class="ttdef"><b>Definition:</b> <a href="compute__default__collisions_8cpp_source.html#l00688">compute_default_collisions.cpp:688</a></div></div>
+<div class="ttc" id="anamespacemoveit__setup__assistant_html_a214a0fe7bdff2e5a2fe895dac701290a"><div class="ttname"><a href="namespacemoveit__setup__assistant.html#a214a0fe7bdff2e5a2fe895dac701290a">moveit_setup_assistant::disabledReasonToString</a></div><div class="ttdeci">const std::string disabledReasonToString(DisabledReason reason)</div><div class="ttdoc">Converts a reason for disabling a link pair into a string.</div><div class="ttdef"><b>Definition:</b> <a href="compute__default__collisions_8cpp_source.html#l00680">compute_default_collisions.cpp:680</a></div></div>
 <div class="ttc" id="anamespacemoveit__setup__assistant_html_a8102790a31e41396f7fa9c5e99482e39"><div class="ttname"><a href="namespacemoveit__setup__assistant.html#a8102790a31e41396f7fa9c5e99482e39">moveit_setup_assistant::DisabledReason</a></div><div class="ttdeci">DisabledReason</div><div class="ttdoc">Reasons for disabling link pairs. Append &quot;in collision&quot; for understanding. NOT_DISABLED means the lin...</div><div class="ttdef"><b>Definition:</b> <a href="compute__default__collisions_8hpp_source.html#l00052">compute_default_collisions.hpp:52</a></div></div>
 <div class="ttc" id="anamespacemoveit__setup__assistant_html_a98a4840ded10cd49d1912a2a6cf1c096"><div class="ttname"><a href="namespacemoveit__setup__assistant.html#a98a4840ded10cd49d1912a2a6cf1c096">moveit_setup_assistant::StringPairSet</a></div><div class="ttdeci">std::set&lt; std::pair&lt; std::string, std::string &gt; &gt; StringPairSet</div><div class="ttdef"><b>Definition:</b> <a href="compute__default__collisions_8cpp_source.html#l00093">compute_default_collisions.cpp:93</a></div></div>
 <div class="ttc" id="astructmoveit__setup__assistant_1_1ThreadComputation_html_adbb65dc29077917b26c1112cb99719cd"><div class="ttname"><a href="structmoveit__setup__assistant_1_1ThreadComputation.html#adbb65dc29077917b26c1112cb99719cd">moveit_setup_assistant::ThreadComputation::thread_id_</a></div><div class="ttdeci">int thread_id_</div><div class="ttdef"><b>Definition:</b> <a href="compute__default__collisions_8cpp_source.html#l00112">compute_default_collisions.cpp:112</a></div></div>
@@ -737,7 +729,7 @@ $(function() {
 <div class="ttc" id="anamespacemoveit__setup__assistant_html_abaa25fb92a01134d680508beff5a8497"><div class="ttname"><a href="namespacemoveit__setup__assistant.html#abaa25fb92a01134d680508beff5a8497">moveit_setup_assistant::REASONS_TO_STRING</a></div><div class="ttdeci">const std::unordered_map&lt; DisabledReason, std::string &gt; REASONS_TO_STRING</div><div class="ttdef"><b>Definition:</b> <a href="compute__default__collisions_8cpp_source.html#l00083">compute_default_collisions.cpp:83</a></div></div>
 <div class="ttc" id="astructmoveit__setup__assistant_1_1ThreadComputation_html_a6df9630f7f267716d9daff321ad6f3b5"><div class="ttname"><a href="structmoveit__setup__assistant_1_1ThreadComputation.html#a6df9630f7f267716d9daff321ad6f3b5">moveit_setup_assistant::ThreadComputation::progress_</a></div><div class="ttdeci">unsigned int * progress_</div><div class="ttdef"><b>Definition:</b> <a href="compute__default__collisions_8cpp_source.html#l00116">compute_default_collisions.cpp:116</a></div></div>
 <div class="ttc" id="anamespacemoveit__setup__assistant_html_a7084ef61757e964005f702ccd3617dfa"><div class="ttname"><a href="namespacemoveit__setup__assistant.html#a7084ef61757e964005f702ccd3617dfa">moveit_setup_assistant::LinkGraph</a></div><div class="ttdeci">std::map&lt; const moveit::core::LinkModel *, std::set&lt; const moveit::core::LinkModel * &gt; &gt; LinkGraph</div><div class="ttdef"><b>Definition:</b> <a href="compute__default__collisions_8cpp_source.html#l00120">compute_default_collisions.cpp:120</a></div></div>
-<div class="ttc" id="anamespacemoveit__setup__assistant_html_abd3690c209f9198cb7545c209d6ed216"><div class="ttname"><a href="namespacemoveit__setup__assistant.html#abd3690c209f9198cb7545c209d6ed216">moveit_setup_assistant::disabledReasonFromString</a></div><div class="ttdeci">DisabledReason disabledReasonFromString(const std::string &amp;reason)</div><div class="ttdoc">Converts a string reason for disabling a link pair into a struct data type.</div><div class="ttdef"><b>Definition:</b> <a href="compute__default__collisions_8cpp_source.html#l00696">compute_default_collisions.cpp:696</a></div></div>
+<div class="ttc" id="anamespacemoveit__setup__assistant_html_abd3690c209f9198cb7545c209d6ed216"><div class="ttname"><a href="namespacemoveit__setup__assistant.html#abd3690c209f9198cb7545c209d6ed216">moveit_setup_assistant::disabledReasonFromString</a></div><div class="ttdeci">DisabledReason disabledReasonFromString(const std::string &amp;reason)</div><div class="ttdoc">Converts a string reason for disabling a link pair into a struct data type.</div><div class="ttdef"><b>Definition:</b> <a href="compute__default__collisions_8cpp_source.html#l00688">compute_default_collisions.cpp:688</a></div></div>
 <div class="ttc" id="anamespacemoveit__setup__assistant_html_a81e8d6baf4648b04a9aa5a4639ad5420"><div class="ttname"><a href="namespacemoveit__setup__assistant.html#a81e8d6baf4648b04a9aa5a4639ad5420">moveit_setup_assistant::LinkPairMap</a></div><div class="ttdeci">std::map&lt; std::pair&lt; std::string, std::string &gt;, LinkPairData &gt; LinkPairMap</div><div class="ttdoc">LinkPairMap is an adjacency list structure containing links in string-based form. Used for disabled l...</div><div class="ttdef"><b>Definition:</b> <a href="compute__default__collisions_8hpp_source.html#l00076">compute_default_collisions.hpp:76</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -1165,9 +1165,9 @@ $(function() {
 <div class="line"><a name="l01093"></a><span class="lineno"> 1093</span>&#160;  <span class="keywordtype">double</span> kinematics_resolution_double;</div>
 <div class="line"><a name="l01094"></a><span class="lineno"> 1094</span>&#160;  <span class="keywordflow">try</span></div>
 <div class="line"><a name="l01095"></a><span class="lineno"> 1095</span>&#160;  {</div>
-<div class="line"><a name="l01096"></a><span class="lineno"> 1096</span>&#160;    kinematics_resolution_double = boost::lexical_cast&lt;double&gt;(kinematics_resolution);</div>
+<div class="line"><a name="l01096"></a><span class="lineno"> 1096</span>&#160;    kinematics_resolution_double = std::stod(kinematics_resolution);</div>
 <div class="line"><a name="l01097"></a><span class="lineno"> 1097</span>&#160;  }</div>
-<div class="line"><a name="l01098"></a><span class="lineno"> 1098</span>&#160;  <span class="keywordflow">catch</span> (boost::bad_lexical_cast&amp;)</div>
+<div class="line"><a name="l01098"></a><span class="lineno"> 1098</span>&#160;  <span class="keywordflow">catch</span> (std::invalid_argument&amp;)</div>
 <div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;  {</div>
 <div class="line"><a name="l01100"></a><span class="lineno"> 1100</span>&#160;    QMessageBox::warning(<span class="keyword">this</span>, <span class="stringliteral">&quot;Error Saving&quot;</span>, <span class="stringliteral">&quot;Unable to convert kinematics resolution to a double number.&quot;</span>);</div>
 <div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
@@ -1177,9 +1177,9 @@ $(function() {
 <div class="line"><a name="l01105"></a><span class="lineno"> 1105</span>&#160;  <span class="keywordtype">double</span> kinematics_timeout_double;</div>
 <div class="line"><a name="l01106"></a><span class="lineno"> 1106</span>&#160;  <span class="keywordflow">try</span></div>
 <div class="line"><a name="l01107"></a><span class="lineno"> 1107</span>&#160;  {</div>
-<div class="line"><a name="l01108"></a><span class="lineno"> 1108</span>&#160;    kinematics_timeout_double = boost::lexical_cast&lt;double&gt;(kinematics_timeout);</div>
+<div class="line"><a name="l01108"></a><span class="lineno"> 1108</span>&#160;    kinematics_timeout_double = std::stod(kinematics_timeout);</div>
 <div class="line"><a name="l01109"></a><span class="lineno"> 1109</span>&#160;  }</div>
-<div class="line"><a name="l01110"></a><span class="lineno"> 1110</span>&#160;  <span class="keywordflow">catch</span> (boost::bad_lexical_cast&amp;)</div>
+<div class="line"><a name="l01110"></a><span class="lineno"> 1110</span>&#160;  <span class="keywordflow">catch</span> (std::invalid_argument&amp;)</div>
 <div class="line"><a name="l01111"></a><span class="lineno"> 1111</span>&#160;  {</div>
 <div class="line"><a name="l01112"></a><span class="lineno"> 1112</span>&#160;    QMessageBox::warning(<span class="keyword">this</span>, <span class="stringliteral">&quot;Error Saving&quot;</span>, <span class="stringliteral">&quot;Unable to convert kinematics solver timeout to a double number.&quot;</span>);</div>
 <div class="line"><a name="l01113"></a><span class="lineno"> 1113</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>

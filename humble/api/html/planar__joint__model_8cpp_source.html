@@ -344,7 +344,7 @@ $(function() {
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classmoveit_1_1core_1_1PlanarJointModel.html#a9b1a6cf73431a15e8eb4ba79b4253932">PlanarJointModel::satisfiesPositionBounds</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>* values, <span class="keyword">const</span> Bounds&amp; bounds, <span class="keywordtype">double</span> margin)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; 3; ++i)</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordflow">if</span> (values[0] &lt; bounds[0].min_position_ - margin || values[0] &gt; bounds[0].max_position_ + margin)</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordflow">if</span> (values[i] &lt; bounds[i].min_position_ - margin || values[i] &gt; bounds[i].max_position_ + margin)</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;}</div>

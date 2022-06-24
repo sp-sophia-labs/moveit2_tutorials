@@ -68,6 +68,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classmoveit_1_1core_1_1CartesianInterpolator-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -77,33 +78,40 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="cartesian__interpolator_8h_source.html">cartesian_interpolator.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmoveit_1_1core_1_1CartesianInterpolator_1_1Distance.html">Distance</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmoveit_1_1core_1_1CartesianInterpolator_1_1Percentage.html">Percentage</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ae8e2f4be4098480869bb8a55340f6483"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1CartesianInterpolator.html#ae8e2f4be4098480869bb8a55340f6483">computeCartesianPath</a> (<a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> *start_state, const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> &gt;&gt; &amp;traj, const <a class="el" href="classmoveit_1_1core_1_1LinkModel.html">LinkModel</a> *link, const Eigen::Vector3d &amp;direction, bool global_reference_frame, double distance, const <a class="el" href="structmoveit_1_1core_1_1MaxEEFStep.html">MaxEEFStep</a> &amp;max_step, const <a class="el" href="structmoveit_1_1core_1_1JumpThreshold.html">JumpThreshold</a> &amp;jump_threshold, const <a class="el" href="namespacemoveit_1_1core.html#a7e30b6ca7b8fafe9e2dd276d60e00b2c">GroupStateValidityCallbackFn</a> &amp;validCallback=<a class="el" href="namespacemoveit_1_1core.html#a7e30b6ca7b8fafe9e2dd276d60e00b2c">GroupStateValidityCallbackFn</a>(), const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;options=<a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>())</td></tr>
-<tr class="memdesc:ae8e2f4be4098480869bb8a55340f6483"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the sequence of joint values that correspond to a straight Cartesian path for a particular group.  <a href="classmoveit_1_1core_1_1CartesianInterpolator.html#ae8e2f4be4098480869bb8a55340f6483">More...</a><br /></td></tr>
-<tr class="separator:ae8e2f4be4098480869bb8a55340f6483"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8907d4c8f81f05d3484c453f1cd3724"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1CartesianInterpolator.html#aa8907d4c8f81f05d3484c453f1cd3724">computeCartesianPath</a> (<a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> *start_state, const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> &gt;&gt; &amp;traj, const <a class="el" href="classmoveit_1_1core_1_1LinkModel.html">LinkModel</a> *link, const Eigen::Isometry3d &amp;target, bool global_reference_frame, const <a class="el" href="structmoveit_1_1core_1_1MaxEEFStep.html">MaxEEFStep</a> &amp;max_step, const <a class="el" href="structmoveit_1_1core_1_1JumpThreshold.html">JumpThreshold</a> &amp;jump_threshold, const <a class="el" href="namespacemoveit_1_1core.html#a7e30b6ca7b8fafe9e2dd276d60e00b2c">GroupStateValidityCallbackFn</a> &amp;validCallback=<a class="el" href="namespacemoveit_1_1core.html#a7e30b6ca7b8fafe9e2dd276d60e00b2c">GroupStateValidityCallbackFn</a>(), const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;options=<a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>())</td></tr>
-<tr class="memdesc:aa8907d4c8f81f05d3484c453f1cd3724"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the sequence of joint values that correspond to a straight Cartesian path, for a particular group.  <a href="classmoveit_1_1core_1_1CartesianInterpolator.html#aa8907d4c8f81f05d3484c453f1cd3724">More...</a><br /></td></tr>
-<tr class="separator:aa8907d4c8f81f05d3484c453f1cd3724"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f8be419adb404a8632b6699391b13ab"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1CartesianInterpolator.html#a4f8be419adb404a8632b6699391b13ab">computeCartesianPath</a> (<a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> *start_state, const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> &gt;&gt; &amp;traj, const <a class="el" href="classmoveit_1_1core_1_1LinkModel.html">LinkModel</a> *link, const EigenSTL::vector_Isometry3d &amp;waypoints, bool global_reference_frame, const <a class="el" href="structmoveit_1_1core_1_1MaxEEFStep.html">MaxEEFStep</a> &amp;max_step, const <a class="el" href="structmoveit_1_1core_1_1JumpThreshold.html">JumpThreshold</a> &amp;jump_threshold, const <a class="el" href="namespacemoveit_1_1core.html#a7e30b6ca7b8fafe9e2dd276d60e00b2c">GroupStateValidityCallbackFn</a> &amp;validCallback=<a class="el" href="namespacemoveit_1_1core.html#a7e30b6ca7b8fafe9e2dd276d60e00b2c">GroupStateValidityCallbackFn</a>(), const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;options=<a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>())</td></tr>
-<tr class="memdesc:a4f8be419adb404a8632b6699391b13ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the sequence of joint values that perform a general Cartesian path.  <a href="classmoveit_1_1core_1_1CartesianInterpolator.html#a4f8be419adb404a8632b6699391b13ab">More...</a><br /></td></tr>
-<tr class="separator:a4f8be419adb404a8632b6699391b13ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a246928dafcdaa5fec7f6b32476f3073a"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1CartesianInterpolator.html#a246928dafcdaa5fec7f6b32476f3073a">checkJointSpaceJump</a> (const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> &gt;&gt; &amp;traj, const <a class="el" href="structmoveit_1_1core_1_1JumpThreshold.html">JumpThreshold</a> &amp;jump_threshold)</td></tr>
-<tr class="memdesc:a246928dafcdaa5fec7f6b32476f3073a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests joint space jumps of a trajectory.  <a href="classmoveit_1_1core_1_1CartesianInterpolator.html#a246928dafcdaa5fec7f6b32476f3073a">More...</a><br /></td></tr>
-<tr class="separator:a246928dafcdaa5fec7f6b32476f3073a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d1dc2244ea8833cac25941e0d5aa3b8"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1CartesianInterpolator.html#a7d1dc2244ea8833cac25941e0d5aa3b8">checkRelativeJointSpaceJump</a> (const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> &gt;&gt; &amp;traj, double jump_threshold_factor)</td></tr>
-<tr class="memdesc:a7d1dc2244ea8833cac25941e0d5aa3b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests for relative joint space jumps of the trajectory <em>traj</em>.  <a href="classmoveit_1_1core_1_1CartesianInterpolator.html#a7d1dc2244ea8833cac25941e0d5aa3b8">More...</a><br /></td></tr>
-<tr class="separator:a7d1dc2244ea8833cac25941e0d5aa3b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f5a408c58454415643aae58ba7b6856"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1CartesianInterpolator.html#a4f5a408c58454415643aae58ba7b6856">checkAbsoluteJointSpaceJump</a> (const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> &gt;&gt; &amp;traj, double revolute_jump_threshold, double prismatic_jump_threshold)</td></tr>
-<tr class="memdesc:a4f5a408c58454415643aae58ba7b6856"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests for absolute joint space jumps of the trajectory <em>traj</em>.  <a href="classmoveit_1_1core_1_1CartesianInterpolator.html#a4f5a408c58454415643aae58ba7b6856">More...</a><br /></td></tr>
-<tr class="separator:a4f5a408c58454415643aae58ba7b6856"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03e2d14cc7af064253ea04439b85da66"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmoveit_1_1core_1_1CartesianInterpolator_1_1Distance.html">Distance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1CartesianInterpolator.html#a03e2d14cc7af064253ea04439b85da66">computeCartesianPath</a> (<a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> *start_state, const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> &gt;&gt; &amp;traj, const <a class="el" href="classmoveit_1_1core_1_1LinkModel.html">LinkModel</a> *link, const Eigen::Vector3d &amp;direction, bool global_reference_frame, double distance, const <a class="el" href="structmoveit_1_1core_1_1MaxEEFStep.html">MaxEEFStep</a> &amp;max_step, const <a class="el" href="structmoveit_1_1core_1_1JumpThreshold.html">JumpThreshold</a> &amp;jump_threshold, const <a class="el" href="namespacemoveit_1_1core.html#a7e30b6ca7b8fafe9e2dd276d60e00b2c">GroupStateValidityCallbackFn</a> &amp;validCallback=<a class="el" href="namespacemoveit_1_1core.html#a7e30b6ca7b8fafe9e2dd276d60e00b2c">GroupStateValidityCallbackFn</a>(), const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;options=<a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>())</td></tr>
+<tr class="memdesc:a03e2d14cc7af064253ea04439b85da66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the sequence of joint values that correspond to a straight Cartesian path for a particular group.  <a href="classmoveit_1_1core_1_1CartesianInterpolator.html#a03e2d14cc7af064253ea04439b85da66">More...</a><br /></td></tr>
+<tr class="separator:a03e2d14cc7af064253ea04439b85da66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11ed89e5593f44be0a4e41d8920c9a1c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmoveit_1_1core_1_1CartesianInterpolator_1_1Percentage.html">Percentage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1CartesianInterpolator.html#a11ed89e5593f44be0a4e41d8920c9a1c">computeCartesianPath</a> (<a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> *start_state, const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> &gt;&gt; &amp;traj, const <a class="el" href="classmoveit_1_1core_1_1LinkModel.html">LinkModel</a> *link, const Eigen::Isometry3d &amp;target, bool global_reference_frame, const <a class="el" href="structmoveit_1_1core_1_1MaxEEFStep.html">MaxEEFStep</a> &amp;max_step, const <a class="el" href="structmoveit_1_1core_1_1JumpThreshold.html">JumpThreshold</a> &amp;jump_threshold, const <a class="el" href="namespacemoveit_1_1core.html#a7e30b6ca7b8fafe9e2dd276d60e00b2c">GroupStateValidityCallbackFn</a> &amp;validCallback=<a class="el" href="namespacemoveit_1_1core.html#a7e30b6ca7b8fafe9e2dd276d60e00b2c">GroupStateValidityCallbackFn</a>(), const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;options=<a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>())</td></tr>
+<tr class="memdesc:a11ed89e5593f44be0a4e41d8920c9a1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the sequence of joint values that correspond to a straight Cartesian path, for a particular group.  <a href="classmoveit_1_1core_1_1CartesianInterpolator.html#a11ed89e5593f44be0a4e41d8920c9a1c">More...</a><br /></td></tr>
+<tr class="separator:a11ed89e5593f44be0a4e41d8920c9a1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00fb955b7f58171473a359c94bbca229"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmoveit_1_1core_1_1CartesianInterpolator_1_1Percentage.html">Percentage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1CartesianInterpolator.html#a00fb955b7f58171473a359c94bbca229">computeCartesianPath</a> (<a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> *start_state, const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> &gt;&gt; &amp;traj, const <a class="el" href="classmoveit_1_1core_1_1LinkModel.html">LinkModel</a> *link, const EigenSTL::vector_Isometry3d &amp;waypoints, bool global_reference_frame, const <a class="el" href="structmoveit_1_1core_1_1MaxEEFStep.html">MaxEEFStep</a> &amp;max_step, const <a class="el" href="structmoveit_1_1core_1_1JumpThreshold.html">JumpThreshold</a> &amp;jump_threshold, const <a class="el" href="namespacemoveit_1_1core.html#a7e30b6ca7b8fafe9e2dd276d60e00b2c">GroupStateValidityCallbackFn</a> &amp;validCallback=<a class="el" href="namespacemoveit_1_1core.html#a7e30b6ca7b8fafe9e2dd276d60e00b2c">GroupStateValidityCallbackFn</a>(), const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;options=<a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>())</td></tr>
+<tr class="memdesc:a00fb955b7f58171473a359c94bbca229"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the sequence of joint values that perform a general Cartesian path.  <a href="classmoveit_1_1core_1_1CartesianInterpolator.html#a00fb955b7f58171473a359c94bbca229">More...</a><br /></td></tr>
+<tr class="separator:a00fb955b7f58171473a359c94bbca229"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef25fbb7a6f29cb63cc95009e057bd20"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmoveit_1_1core_1_1CartesianInterpolator_1_1Percentage.html">Percentage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1CartesianInterpolator.html#aef25fbb7a6f29cb63cc95009e057bd20">checkJointSpaceJump</a> (const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> &gt;&gt; &amp;traj, const <a class="el" href="structmoveit_1_1core_1_1JumpThreshold.html">JumpThreshold</a> &amp;jump_threshold)</td></tr>
+<tr class="memdesc:aef25fbb7a6f29cb63cc95009e057bd20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests joint space jumps of a trajectory.  <a href="classmoveit_1_1core_1_1CartesianInterpolator.html#aef25fbb7a6f29cb63cc95009e057bd20">More...</a><br /></td></tr>
+<tr class="separator:aef25fbb7a6f29cb63cc95009e057bd20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0d306b4a99562482d21daf5d14ed75b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmoveit_1_1core_1_1CartesianInterpolator_1_1Percentage.html">Percentage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1CartesianInterpolator.html#ae0d306b4a99562482d21daf5d14ed75b">checkRelativeJointSpaceJump</a> (const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> &gt;&gt; &amp;traj, double jump_threshold_factor)</td></tr>
+<tr class="memdesc:ae0d306b4a99562482d21daf5d14ed75b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests for relative joint space jumps of the trajectory <em>traj</em>.  <a href="classmoveit_1_1core_1_1CartesianInterpolator.html#ae0d306b4a99562482d21daf5d14ed75b">More...</a><br /></td></tr>
+<tr class="separator:ae0d306b4a99562482d21daf5d14ed75b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fb6337f3cc17b31257414d571daa394"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmoveit_1_1core_1_1CartesianInterpolator_1_1Percentage.html">Percentage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1CartesianInterpolator.html#a8fb6337f3cc17b31257414d571daa394">checkAbsoluteJointSpaceJump</a> (const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> &gt;&gt; &amp;traj, double revolute_jump_threshold, double prismatic_jump_threshold)</td></tr>
+<tr class="memdesc:a8fb6337f3cc17b31257414d571daa394"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests for absolute joint space jumps of the trajectory <em>traj</em>.  <a href="classmoveit_1_1core_1_1CartesianInterpolator.html#a8fb6337f3cc17b31257414d571daa394">More...</a><br /></td></tr>
+<tr class="separator:a8fb6337f3cc17b31257414d571daa394"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="cartesian__interpolator_8h_source.html#l00163">163</a> of file <a class="el" href="cartesian__interpolator_8h_source.html">cartesian_interpolator.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a4f5a408c58454415643aae58ba7b6856"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f5a408c58454415643aae58ba7b6856">&#9670;&nbsp;</a></span>checkAbsoluteJointSpaceJump()</h2>
+<a id="a8fb6337f3cc17b31257414d571daa394"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fb6337f3cc17b31257414d571daa394">&#9670;&nbsp;</a></span>checkAbsoluteJointSpaceJump()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -112,7 +120,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double moveit::core::CartesianInterpolator::checkAbsoluteJointSpaceJump </td>
+          <td class="memname"><a class="el" href="structmoveit_1_1core_1_1CartesianInterpolator_1_1Percentage.html">CartesianInterpolator::Percentage</a> moveit::core::CartesianInterpolator::checkAbsoluteJointSpaceJump </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *&#160;</td>
           <td class="paramname"><em>group</em>, </td>
@@ -162,12 +170,12 @@ Static Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The fraction of the trajectory that passed.</dd></dl>
 <p>TODO: move to more appropriate location </p>
 
-<p class="definition">Definition at line <a class="el" href="cartesian__interpolator_8cpp_source.html#l00338">338</a> of file <a class="el" href="cartesian__interpolator_8cpp_source.html">cartesian_interpolator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cartesian__interpolator_8cpp_source.html#l00335">335</a> of file <a class="el" href="cartesian__interpolator_8cpp_source.html">cartesian_interpolator.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classmoveit_1_1core_1_1CartesianInterpolator_a4f5a408c58454415643aae58ba7b6856_icgraph.png" border="0" usemap="#classmoveit_1_1core_1_1CartesianInterpolator_a4f5a408c58454415643aae58ba7b6856_icgraph" alt=""/></div>
-<map name="classmoveit_1_1core_1_1CartesianInterpolator_a4f5a408c58454415643aae58ba7b6856_icgraph" id="classmoveit_1_1core_1_1CartesianInterpolator_a4f5a408c58454415643aae58ba7b6856_icgraph">
+<div class="center"><img src="classmoveit_1_1core_1_1CartesianInterpolator_a8fb6337f3cc17b31257414d571daa394_icgraph.png" border="0" usemap="#classmoveit_1_1core_1_1CartesianInterpolator_a8fb6337f3cc17b31257414d571daa394_icgraph" alt=""/></div>
+<map name="classmoveit_1_1core_1_1CartesianInterpolator_a8fb6337f3cc17b31257414d571daa394_icgraph" id="classmoveit_1_1core_1_1CartesianInterpolator_a8fb6337f3cc17b31257414d571daa394_icgraph">
 <area shape="rect" title="Tests for absolute joint space jumps of the trajectory traj." alt="" coords="123,5,373,47"/>
 <area shape="rect" href="test__cartesian__interpolator_8cpp.html#ae59250539e92d8b9afb5901fc03fa271" title=" " alt="" coords="5,13,75,39"/>
 </map>
@@ -175,8 +183,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a246928dafcdaa5fec7f6b32476f3073a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a246928dafcdaa5fec7f6b32476f3073a">&#9670;&nbsp;</a></span>checkJointSpaceJump()</h2>
+<a id="aef25fbb7a6f29cb63cc95009e057bd20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef25fbb7a6f29cb63cc95009e057bd20">&#9670;&nbsp;</a></span>checkJointSpaceJump()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -185,7 +193,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double moveit::core::CartesianInterpolator::checkJointSpaceJump </td>
+          <td class="memname"><a class="el" href="structmoveit_1_1core_1_1CartesianInterpolator_1_1Percentage.html">CartesianInterpolator::Percentage</a> moveit::core::CartesianInterpolator::checkJointSpaceJump </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *&#160;</td>
           <td class="paramname"><em>group</em>, </td>
@@ -228,12 +236,12 @@ Here is the caller graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>The fraction of the trajectory that passed.</dd></dl>
 <p>TODO: move to more appropriate location </p>
 
-<p class="definition">Definition at line <a class="el" href="cartesian__interpolator_8cpp_source.html#l00285">285</a> of file <a class="el" href="cartesian__interpolator_8cpp_source.html">cartesian_interpolator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cartesian__interpolator_8cpp_source.html#l00281">281</a> of file <a class="el" href="cartesian__interpolator_8cpp_source.html">cartesian_interpolator.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classmoveit_1_1core_1_1CartesianInterpolator_a246928dafcdaa5fec7f6b32476f3073a_icgraph.png" border="0" usemap="#classmoveit_1_1core_1_1CartesianInterpolator_a246928dafcdaa5fec7f6b32476f3073a_icgraph" alt=""/></div>
-<map name="classmoveit_1_1core_1_1CartesianInterpolator_a246928dafcdaa5fec7f6b32476f3073a_icgraph" id="classmoveit_1_1core_1_1CartesianInterpolator_a246928dafcdaa5fec7f6b32476f3073a_icgraph">
+<div class="center"><img src="classmoveit_1_1core_1_1CartesianInterpolator_aef25fbb7a6f29cb63cc95009e057bd20_icgraph.png" border="0" usemap="#classmoveit_1_1core_1_1CartesianInterpolator_aef25fbb7a6f29cb63cc95009e057bd20_icgraph" alt=""/></div>
+<map name="classmoveit_1_1core_1_1CartesianInterpolator_aef25fbb7a6f29cb63cc95009e057bd20_icgraph" id="classmoveit_1_1core_1_1CartesianInterpolator_aef25fbb7a6f29cb63cc95009e057bd20_icgraph">
 <area shape="rect" title="Tests joint space jumps of a trajectory." alt="" coords="123,5,373,47"/>
 <area shape="rect" href="test__cartesian__interpolator_8cpp.html#ae59250539e92d8b9afb5901fc03fa271" title=" " alt="" coords="5,13,75,39"/>
 </map>
@@ -241,8 +249,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a7d1dc2244ea8833cac25941e0d5aa3b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d1dc2244ea8833cac25941e0d5aa3b8">&#9670;&nbsp;</a></span>checkRelativeJointSpaceJump()</h2>
+<a id="ae0d306b4a99562482d21daf5d14ed75b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0d306b4a99562482d21daf5d14ed75b">&#9670;&nbsp;</a></span>checkRelativeJointSpaceJump()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -251,7 +259,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double moveit::core::CartesianInterpolator::checkRelativeJointSpaceJump </td>
+          <td class="memname"><a class="el" href="structmoveit_1_1core_1_1CartesianInterpolator_1_1Percentage.html">CartesianInterpolator::Percentage</a> moveit::core::CartesianInterpolator::checkRelativeJointSpaceJump </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *&#160;</td>
           <td class="paramname"><em>group</em>, </td>
@@ -294,12 +302,12 @@ Here is the caller graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>The fraction of the trajectory that passed.</dd></dl>
 <p>TODO: move to more appropriate location </p>
 
-<p class="definition">Definition at line <a class="el" href="cartesian__interpolator_8cpp_source.html#l00301">301</a> of file <a class="el" href="cartesian__interpolator_8cpp_source.html">cartesian_interpolator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cartesian__interpolator_8cpp_source.html#l00298">298</a> of file <a class="el" href="cartesian__interpolator_8cpp_source.html">cartesian_interpolator.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classmoveit_1_1core_1_1CartesianInterpolator_a7d1dc2244ea8833cac25941e0d5aa3b8_icgraph.png" border="0" usemap="#classmoveit_1_1core_1_1CartesianInterpolator_a7d1dc2244ea8833cac25941e0d5aa3b8_icgraph" alt=""/></div>
-<map name="classmoveit_1_1core_1_1CartesianInterpolator_a7d1dc2244ea8833cac25941e0d5aa3b8_icgraph" id="classmoveit_1_1core_1_1CartesianInterpolator_a7d1dc2244ea8833cac25941e0d5aa3b8_icgraph">
+<div class="center"><img src="classmoveit_1_1core_1_1CartesianInterpolator_ae0d306b4a99562482d21daf5d14ed75b_icgraph.png" border="0" usemap="#classmoveit_1_1core_1_1CartesianInterpolator_ae0d306b4a99562482d21daf5d14ed75b_icgraph" alt=""/></div>
+<map name="classmoveit_1_1core_1_1CartesianInterpolator_ae0d306b4a99562482d21daf5d14ed75b_icgraph" id="classmoveit_1_1core_1_1CartesianInterpolator_ae0d306b4a99562482d21daf5d14ed75b_icgraph">
 <area shape="rect" title="Tests for relative joint space jumps of the trajectory traj." alt="" coords="123,5,373,47"/>
 <area shape="rect" href="test__cartesian__interpolator_8cpp.html#ac2ced3e38148ebe458a4966eddd74545" title=" " alt="" coords="5,13,75,39"/>
 </map>
@@ -307,8 +315,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="aa8907d4c8f81f05d3484c453f1cd3724"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8907d4c8f81f05d3484c453f1cd3724">&#9670;&nbsp;</a></span>computeCartesianPath() <span class="overload">[1/3]</span></h2>
+<a id="a11ed89e5593f44be0a4e41d8920c9a1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11ed89e5593f44be0a4e41d8920c9a1c">&#9670;&nbsp;</a></span>computeCartesianPath() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -317,7 +325,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static double moveit::core::CartesianInterpolator::computeCartesianPath </td>
+          <td class="memname">static <a class="el" href="structmoveit_1_1core_1_1CartesianInterpolator_1_1Percentage.html">Percentage</a> moveit::core::CartesianInterpolator::computeCartesianPath </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> *&#160;</td>
           <td class="paramname"><em>start_state</em>, </td>
@@ -394,8 +402,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ae8e2f4be4098480869bb8a55340f6483"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8e2f4be4098480869bb8a55340f6483">&#9670;&nbsp;</a></span>computeCartesianPath() <span class="overload">[2/3]</span></h2>
+<a id="a03e2d14cc7af064253ea04439b85da66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03e2d14cc7af064253ea04439b85da66">&#9670;&nbsp;</a></span>computeCartesianPath() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -404,7 +412,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static double moveit::core::CartesianInterpolator::computeCartesianPath </td>
+          <td class="memname">static <a class="el" href="structmoveit_1_1core_1_1CartesianInterpolator_1_1Distance.html">Distance</a> moveit::core::CartesianInterpolator::computeCartesianPath </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> *&#160;</td>
           <td class="paramname"><em>start_state</em>, </td>
@@ -490,8 +498,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a4f8be419adb404a8632b6699391b13ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f8be419adb404a8632b6699391b13ab">&#9670;&nbsp;</a></span>computeCartesianPath() <span class="overload">[3/3]</span></h2>
+<a id="a00fb955b7f58171473a359c94bbca229"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00fb955b7f58171473a359c94bbca229">&#9670;&nbsp;</a></span>computeCartesianPath() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -500,7 +508,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static double moveit::core::CartesianInterpolator::computeCartesianPath </td>
+          <td class="memname">static <a class="el" href="structmoveit_1_1core_1_1CartesianInterpolator_1_1Percentage.html">Percentage</a> moveit::core::CartesianInterpolator::computeCartesianPath </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> *&#160;</td>
           <td class="paramname"><em>start_state</em>, </td>
