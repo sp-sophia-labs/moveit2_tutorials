@@ -1,0 +1,4 @@
+<map id="moveit_setup::srdf_setup::computeLinkPairs" name="moveit_setup::srdf_setup::computeLinkPairs">
+<area shape="rect" id="node1" title="Generate a list of unique link pairs for all links with geometry. Order pairs alphabetically...." alt="" coords="237,13,425,54"/>
+<area shape="rect" id="node2" href="$classmoveit__setup_1_1srdf__setup_1_1DefaultCollisions.html#adb1b0432dde50a1b273b52d0a981bb73" title="Output Link Pairs to SRDF Format." alt="" coords="5,5,189,61"/>
+</map>

@@ -368,19 +368,26 @@ $(function() {
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <a class="code" href="classmove__group_1_1MoveGroupExe.html">move_group::MoveGroupExe</a> mge(<a class="code" href="namespacemoveit__cpp.html">moveit_cpp</a>, default_planning_pipeline, debug);</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <a class="code" href="namespaceplanning__scene__monitor.html">planning_scene_monitor</a>-&gt;publishDebugInformation(debug);</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    mge.<a class="code" href="classmove__group_1_1MoveGroupExe.html#a5d5ccea4204f57e4c0f3e96903cf7a2a">status</a>();</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    executor.add_node(nh);</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    executor.spin();</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160; </div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    rclcpp::shutdown();</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  }</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    RCLCPP_ERROR(LOGGER, <span class="stringliteral">&quot;Planning scene not configured&quot;</span>);</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; </div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;}</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordtype">bool</span> monitor_dynamics;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordflow">if</span> (nh-&gt;get_parameter(<span class="stringliteral">&quot;monitor_dynamics&quot;</span>, monitor_dynamics) &amp;&amp; monitor_dynamics)</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    {</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;      RCLCPP_INFO(LOGGER, <span class="stringliteral">&quot;MoveGroup monitors robot dynamics (higher load)&quot;</span>);</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;      <a class="code" href="namespaceplanning__scene__monitor.html">planning_scene_monitor</a>-&gt;getStateMonitor()-&gt;enableCopyDynamics(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    }</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <a class="code" href="namespaceplanning__scene__monitor.html">planning_scene_monitor</a>-&gt;publishDebugInformation(debug);</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160; </div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    mge.<a class="code" href="classmove__group_1_1MoveGroupExe.html#a5d5ccea4204f57e4c0f3e96903cf7a2a">status</a>();</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    executor.add_node(nh);</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    executor.spin();</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    rclcpp::shutdown();</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  }</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    RCLCPP_ERROR(LOGGER, <span class="stringliteral">&quot;Planning scene not configured&quot;</span>);</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespaceplanning__scene__monitor_html"><div class="ttname"><a href="namespaceplanning__scene__monitor.html">planning_scene_monitor</a></div><div class="ttdef"><b>Definition:</b> <a href="move__group__context_8h_source.html#l00048">move_group_context.h:48</a></div></div>
 <div class="ttc" id="astructmoveit__cpp_1_1MoveItCpp_1_1Options_html"><div class="ttname"><a href="structmoveit__cpp_1_1MoveItCpp_1_1Options.html">moveit_cpp::MoveItCpp::Options</a></div><div class="ttdoc">Parameter container for initializing MoveItCpp.</div><div class="ttdef"><b>Definition:</b> <a href="moveit__cpp_8h_source.html#l00130">moveit_cpp.h:130</a></div></div>

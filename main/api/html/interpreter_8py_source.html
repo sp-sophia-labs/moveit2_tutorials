@@ -788,13 +788,13 @@ $(function() {
 <div class="line"><a name="l00715"></a><span class="lineno"><a class="line" href="classmoveit__commander_1_1interpreter_1_1MoveGroupCommandInterpreter.html#a9160eaad2308a3643feeeaf1911025ac">  715</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classmoveit__commander_1_1interpreter_1_1MoveGroupCommandInterpreter.html#a9160eaad2308a3643feeeaf1911025ac">command_current</a>(self, g):</div>
 <div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;        res = (</div>
 <div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;            <span class="stringliteral">&quot;joints = [&quot;</span></div>
-<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;            + <span class="stringliteral">&quot; &quot;</span>.join([str(x) <span class="keywordflow">for</span> x <span class="keywordflow">in</span> g.get_current_joint_values()])</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;            + <span class="stringliteral">&quot;, &quot;</span>.join([str(x) <span class="keywordflow">for</span> x <span class="keywordflow">in</span> g.get_current_joint_values()])</div>
 <div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;            + <span class="stringliteral">&quot;]&quot;</span></div>
 <div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;        )</div>
 <div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;        <span class="keywordflow">if</span> len(g.get_end_effector_link()) &gt; 0:</div>
 <div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;            res = (</div>
 <div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;                res</div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;                + <span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;                + <span class="stringliteral">&quot;\n\n&quot;</span></div>
 <div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;                + g.get_end_effector_link()</div>
 <div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;                + <span class="stringliteral">&quot; pose = [\n&quot;</span></div>
 <div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;                + str(g.get_current_pose())</div>

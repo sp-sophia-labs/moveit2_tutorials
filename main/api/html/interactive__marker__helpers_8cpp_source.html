@@ -219,30 +219,30 @@ $(function() {
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
 <div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="namespacerobot__interaction.html#aaec4533f5b65bd63cd2ce7fe2cc11bd6">  147</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacerobot__interaction.html#ac90d6371a8a1d6c247423feed5ae1fa3">addPlanarXYControl</a>(visualization_msgs::msg::InteractiveMarker&amp; int_marker, <span class="keywordtype">bool</span> orientation_fixed)</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;{</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  visualization_msgs::msg::InteractiveMarkerControl control;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  visualization_msgs::msg::InteractiveMarkerControl <a class="code" href="namespacecontrol.html">control</a>;</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <span class="keywordflow">if</span> (orientation_fixed)</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    control.orientation_mode = <a class="code" href="namespacerobot__interaction_1_1InteractionStyle.html#a93fff5c84d4bf83018257f994ef88058aa44a292ae97a59f172cc6dbffff2d507">visualization_msgs::msg::InteractiveMarkerControl::FIXED</a>;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  control.orientation.w = SQRT2INV;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  control.orientation.x = SQRT2INV;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  control.orientation.y = 0;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  control.orientation.z = 0;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  control.interaction_mode = visualization_msgs::msg::InteractiveMarkerControl::MOVE_AXIS;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  int_marker.controls.push_back(control);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <a class="code" href="namespacecontrol.html">control</a>.orientation_mode = <a class="code" href="namespacerobot__interaction_1_1InteractionStyle.html#a93fff5c84d4bf83018257f994ef88058aa44a292ae97a59f172cc6dbffff2d507">visualization_msgs::msg::InteractiveMarkerControl::FIXED</a>;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.w = SQRT2INV;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.x = SQRT2INV;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.y = 0;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.z = 0;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.interaction_mode = visualization_msgs::msg::InteractiveMarkerControl::MOVE_AXIS;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  int_marker.controls.push_back(<a class="code" href="namespacecontrol.html">control</a>);</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  control.orientation.w = SQRT2INV;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  control.orientation.x = 0;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  control.orientation.y = SQRT2INV;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  control.orientation.z = 0;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  control.interaction_mode = visualization_msgs::msg::InteractiveMarkerControl::ROTATE_AXIS;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  int_marker.controls.push_back(control);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.w = SQRT2INV;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.x = 0;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.y = SQRT2INV;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.z = 0;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.interaction_mode = visualization_msgs::msg::InteractiveMarkerControl::ROTATE_AXIS;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  int_marker.controls.push_back(<a class="code" href="namespacecontrol.html">control</a>);</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  control.orientation.w = SQRT2INV;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  control.orientation.x = 0;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  control.orientation.y = 0;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  control.orientation.z = SQRT2INV;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  control.interaction_mode = visualization_msgs::msg::InteractiveMarkerControl::MOVE_AXIS;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  int_marker.controls.push_back(control);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.w = SQRT2INV;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.x = 0;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.y = 0;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.z = SQRT2INV;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.interaction_mode = visualization_msgs::msg::InteractiveMarkerControl::MOVE_AXIS;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  int_marker.controls.push_back(<a class="code" href="namespacecontrol.html">control</a>);</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;}</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacerobot__interaction.html#a2897878fa0a4369596eb87c42e7a2abe">add6DOFControl</a>(visualization_msgs::msg::InteractiveMarker&amp; int_marker, <span class="keywordtype">bool</span> orientation_fixed)</div>
@@ -253,73 +253,73 @@ $(function() {
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacerobot__interaction.html#a5ab3337210e40aef81c61b226ddc4ca3">addOrientationControl</a>(visualization_msgs::msg::InteractiveMarker&amp; int_marker, <span class="keywordtype">bool</span> orientation_fixed)</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;{</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  visualization_msgs::msg::InteractiveMarkerControl control;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  visualization_msgs::msg::InteractiveMarkerControl <a class="code" href="namespacecontrol.html">control</a>;</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <span class="keywordflow">if</span> (orientation_fixed)</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    control.orientation_mode = <a class="code" href="namespacerobot__interaction_1_1InteractionStyle.html#a93fff5c84d4bf83018257f994ef88058aa44a292ae97a59f172cc6dbffff2d507">visualization_msgs::msg::InteractiveMarkerControl::FIXED</a>;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  control.orientation.w = SQRT2INV;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  control.orientation.x = SQRT2INV;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  control.orientation.y = 0;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  control.orientation.z = 0;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  control.interaction_mode = visualization_msgs::msg::InteractiveMarkerControl::ROTATE_AXIS;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  int_marker.controls.push_back(control);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <a class="code" href="namespacecontrol.html">control</a>.orientation_mode = <a class="code" href="namespacerobot__interaction_1_1InteractionStyle.html#a93fff5c84d4bf83018257f994ef88058aa44a292ae97a59f172cc6dbffff2d507">visualization_msgs::msg::InteractiveMarkerControl::FIXED</a>;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.w = SQRT2INV;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.x = SQRT2INV;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.y = 0;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.z = 0;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.interaction_mode = visualization_msgs::msg::InteractiveMarkerControl::ROTATE_AXIS;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  int_marker.controls.push_back(<a class="code" href="namespacecontrol.html">control</a>);</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  control.orientation.w = SQRT2INV;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  control.orientation.x = 0;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  control.orientation.y = SQRT2INV;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  control.orientation.z = 0;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  control.interaction_mode = visualization_msgs::msg::InteractiveMarkerControl::ROTATE_AXIS;</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  int_marker.controls.push_back(control);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.w = SQRT2INV;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.x = 0;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.y = SQRT2INV;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.z = 0;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.interaction_mode = visualization_msgs::msg::InteractiveMarkerControl::ROTATE_AXIS;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  int_marker.controls.push_back(<a class="code" href="namespacecontrol.html">control</a>);</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  control.orientation.w = SQRT2INV;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  control.orientation.x = 0;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  control.orientation.y = 0;</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  control.orientation.z = SQRT2INV;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  control.interaction_mode = visualization_msgs::msg::InteractiveMarkerControl::ROTATE_AXIS;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  int_marker.controls.push_back(control);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.w = SQRT2INV;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.x = 0;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.y = 0;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.z = SQRT2INV;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.interaction_mode = visualization_msgs::msg::InteractiveMarkerControl::ROTATE_AXIS;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  int_marker.controls.push_back(<a class="code" href="namespacecontrol.html">control</a>);</div>
 <div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="namespacerobot__interaction.html#a2897878fa0a4369596eb87c42e7a2abe">  207</a></span>&#160;}</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacerobot__interaction.html#afadd74d9b7d1307d0a5802261e805ad6">addPositionControl</a>(visualization_msgs::msg::InteractiveMarker&amp; int_marker, <span class="keywordtype">bool</span> orientation_fixed)</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;{</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  visualization_msgs::msg::InteractiveMarkerControl control;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  visualization_msgs::msg::InteractiveMarkerControl <a class="code" href="namespacecontrol.html">control</a>;</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
 <div class="line"><a name="l00213"></a><span class="lineno"><a class="line" href="namespacerobot__interaction.html#a5ab3337210e40aef81c61b226ddc4ca3">  213</a></span>&#160;  <span class="keywordflow">if</span> (orientation_fixed)</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    control.orientation_mode = <a class="code" href="namespacerobot__interaction_1_1InteractionStyle.html#a93fff5c84d4bf83018257f994ef88058aa44a292ae97a59f172cc6dbffff2d507">visualization_msgs::msg::InteractiveMarkerControl::FIXED</a>;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  control.orientation.w = SQRT2INV;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  control.orientation.x = SQRT2INV;</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  control.orientation.y = 0;</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  control.orientation.z = 0;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  control.interaction_mode = visualization_msgs::msg::InteractiveMarkerControl::MOVE_AXIS;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  int_marker.controls.push_back(control);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <a class="code" href="namespacecontrol.html">control</a>.orientation_mode = <a class="code" href="namespacerobot__interaction_1_1InteractionStyle.html#a93fff5c84d4bf83018257f994ef88058aa44a292ae97a59f172cc6dbffff2d507">visualization_msgs::msg::InteractiveMarkerControl::FIXED</a>;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.w = SQRT2INV;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.x = SQRT2INV;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.y = 0;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.z = 0;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.interaction_mode = visualization_msgs::msg::InteractiveMarkerControl::MOVE_AXIS;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  int_marker.controls.push_back(<a class="code" href="namespacecontrol.html">control</a>);</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  control.orientation.w = SQRT2INV;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  control.orientation.x = 0;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  control.orientation.y = SQRT2INV;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  control.orientation.z = 0;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  control.interaction_mode = visualization_msgs::msg::InteractiveMarkerControl::MOVE_AXIS;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  int_marker.controls.push_back(control);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.w = SQRT2INV;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.x = 0;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.y = SQRT2INV;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.z = 0;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.interaction_mode = visualization_msgs::msg::InteractiveMarkerControl::MOVE_AXIS;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  int_marker.controls.push_back(<a class="code" href="namespacecontrol.html">control</a>);</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  control.orientation.w = SQRT2INV;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  control.orientation.x = 0;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  control.orientation.y = 0;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  control.orientation.z = SQRT2INV;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  control.interaction_mode = visualization_msgs::msg::InteractiveMarkerControl::MOVE_AXIS;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  int_marker.controls.push_back(control);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.w = SQRT2INV;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.x = 0;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.y = 0;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation.z = SQRT2INV;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.interaction_mode = visualization_msgs::msg::InteractiveMarkerControl::MOVE_AXIS;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  int_marker.controls.push_back(<a class="code" href="namespacecontrol.html">control</a>);</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;}</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacerobot__interaction.html#a0a0318fd727602cf3714465d24b0c0b6">addViewPlaneControl</a>(visualization_msgs::msg::InteractiveMarker&amp; int_marker, <span class="keywordtype">double</span> radius,</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                         <span class="keyword">const</span> std_msgs::msg::ColorRGBA&amp; color, <span class="keywordtype">bool</span> position, <span class="keywordtype">bool</span> orientation)</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;{</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  visualization_msgs::msg::InteractiveMarkerControl control;</div>
-<div class="line"><a name="l00241"></a><span class="lineno"><a class="line" href="namespacerobot__interaction.html#afadd74d9b7d1307d0a5802261e805ad6">  241</a></span>&#160;  control.orientation_mode = visualization_msgs::msg::InteractiveMarkerControl::VIEW_FACING;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  visualization_msgs::msg::InteractiveMarkerControl <a class="code" href="namespacecontrol.html">control</a>;</div>
+<div class="line"><a name="l00241"></a><span class="lineno"><a class="line" href="namespacerobot__interaction.html#afadd74d9b7d1307d0a5802261e805ad6">  241</a></span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.orientation_mode = visualization_msgs::msg::InteractiveMarkerControl::VIEW_FACING;</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  <span class="keywordflow">if</span> (position &amp;&amp; orientation)</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    control.interaction_mode = visualization_msgs::msg::InteractiveMarkerControl::MOVE_ROTATE_3D;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <a class="code" href="namespacecontrol.html">control</a>.interaction_mode = visualization_msgs::msg::InteractiveMarkerControl::MOVE_ROTATE_3D;</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (orientation)</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    control.interaction_mode = visualization_msgs::msg::InteractiveMarkerControl::ROTATE_3D;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <a class="code" href="namespacecontrol.html">control</a>.interaction_mode = visualization_msgs::msg::InteractiveMarkerControl::ROTATE_3D;</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    control.interaction_mode = visualization_msgs::msg::InteractiveMarkerControl::MOVE_3D;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  control.independent_marker_orientation = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  control.name = <span class="stringliteral">&quot;move&quot;</span>;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <a class="code" href="namespacecontrol.html">control</a>.interaction_mode = visualization_msgs::msg::InteractiveMarkerControl::MOVE_3D;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.independent_marker_orientation = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.name = <span class="stringliteral">&quot;move&quot;</span>;</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  visualization_msgs::msg::Marker marker;</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
@@ -329,10 +329,10 @@ $(function() {
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  marker.scale.z = radius * 2.0;</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  marker.color = color;</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  control.markers.push_back(marker);</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  control.always_visible = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.markers.push_back(marker);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  <a class="code" href="namespacecontrol.html">control</a>.always_visible = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  int_marker.controls.push_back(control);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  int_marker.controls.push_back(<a class="code" href="namespacecontrol.html">control</a>);</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;}</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160; </div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;visualization_msgs::msg::InteractiveMarker <a class="code" href="namespacerobot__interaction.html#aeca92dd2c22fe0ad5cba195f3c6b9a4c">makePlanarXYMarker</a>(<span class="keyword">const</span> std::string&amp; <a class="code" href="namespacesetup.html#ab3a7a0638d76a01367c5bc3cc699447f">name</a>,</div>
@@ -368,6 +368,7 @@ $(function() {
 <div class="ttc" id="ainteractive__marker__helpers_8h_html"><div class="ttname"><a href="interactive__marker__helpers_8h.html">interactive_marker_helpers.h</a></div></div>
 <div class="ttc" id="anamespacerobot__interaction_html"><div class="ttname"><a href="namespacerobot__interaction.html">robot_interaction</a></div><div class="ttdef"><b>Definition:</b> <a href="interaction_8h_source.html#l00054">interaction.h:54</a></div></div>
 <div class="ttc" id="anamespacerobot__interaction_html_afadd74d9b7d1307d0a5802261e805ad6"><div class="ttname"><a href="namespacerobot__interaction.html#afadd74d9b7d1307d0a5802261e805ad6">robot_interaction::addPositionControl</a></div><div class="ttdeci">void addPositionControl(visualization_msgs::msg::InteractiveMarker &amp;int_marker, bool orientation_fixed=false)</div><div class="ttdef"><b>Definition:</b> <a href="interactive__marker__helpers_8cpp_source.html#l00241">interactive_marker_helpers.cpp:241</a></div></div>
+<div class="ttc" id="anamespacecontrol_html"><div class="ttname"><a href="namespacecontrol.html">control</a></div><div class="ttdef"><b>Definition:</b> <a href="control_8launch_8py_source.html#l00001">control.launch.py:1</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

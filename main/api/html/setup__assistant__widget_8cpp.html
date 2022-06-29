@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>moveit2: moveit_setup_assistant/src/widgets/setup_assistant_widget.cpp File Reference</title>
+<title>moveit2: moveit_setup_assistant/moveit_setup_assistant/src/setup_assistant_widget.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_55a00c037ec403d857a488a861b1a386.html">moveit_setup_assistant</a></li><li class="navelem"><a class="el" href="dir_112e659552143f98ed491d3d9d97b81d.html">src</a></li><li class="navelem"><a class="el" href="dir_70f0f67ab9df69781261b67adf6c1aeb.html">widgets</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_55a00c037ec403d857a488a861b1a386.html">moveit_setup_assistant</a></li><li class="navelem"><a class="el" href="dir_eb0faa1aa26c592e15d0c60428b6e4ea.html">moveit_setup_assistant</a></li><li class="navelem"><a class="el" href="dir_575c96d55b02aae2fd65a7fb2c5855e4.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -73,81 +73,73 @@ $(function() {
 <div class="title">setup_assistant_widget.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="setup__screen__widget_8h_source.html">setup_screen_widget.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="setup__assistant__widget_8h_source.html">setup_assistant_widget.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="header__widget_8h_source.html">header_widget.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="setup__assistant__widget_8hpp_source.html">moveit_setup_assistant/setup_assistant_widget.hpp</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="urdf__config_8hpp_source.html">moveit_setup_framework/data/urdf_config.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="package__settings__config_8hpp_source.html">moveit_setup_framework/data/package_settings_config.hpp</a>&gt;</code><br />
 <code>#include &lt;QApplication&gt;</code><br />
-<code>#include &lt;QCheckBox&gt;</code><br />
 <code>#include &lt;QCloseEvent&gt;</code><br />
-<code>#include &lt;QFont&gt;</code><br />
 <code>#include &lt;QHBoxLayout&gt;</code><br />
-<code>#include &lt;QLabel&gt;</code><br />
 <code>#include &lt;QMessageBox&gt;</code><br />
 <code>#include &lt;QPushButton&gt;</code><br />
 <code>#include &lt;QSplitter&gt;</code><br />
 <code>#include &lt;QStackedWidget&gt;</code><br />
 <code>#include &lt;QString&gt;</code><br />
 <code>#include &lt;pluginlib/class_loader.hpp&gt;</code><br />
-<code>#include &lt;rviz/render_panel.h&gt;</code><br />
-<code>#include &lt;rviz/visualization_manager.h&gt;</code><br />
-<code>#include &lt;rviz/view_manager.h&gt;</code><br />
-<code>#include &lt;rviz/default_plugin/view_controllers/orbit_view_controller.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="robot__state__display_8h_source.html">moveit/robot_state_rviz_plugin/robot_state_display.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for setup_assistant_widget.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="setup__assistant__widget_8cpp__incl.png" border="0" usemap="#moveit__setup__assistant_2src_2widgets_2setup__assistant__widget_8cpp" alt=""/></div>
-<map name="moveit__setup__assistant_2src_2widgets_2setup__assistant__widget_8cpp" id="moveit__setup__assistant_2src_2widgets_2setup__assistant__widget_8cpp">
-<area shape="rect" title=" " alt="" coords="2444,5,2651,61"/>
-<area shape="rect" href="setup__screen__widget_8h.html" title=" " alt="" coords="1527,325,1698,351"/>
-<area shape="rect" href="setup__assistant__widget_8h.html" title=" " alt="" coords="1367,124,1554,151"/>
-<area shape="rect" href="header__widget_8h.html" title=" " alt="" coords="1578,124,1709,151"/>
-<area shape="rect" title=" " alt="" coords="1733,124,1839,151"/>
-<area shape="rect" title=" " alt="" coords="1863,124,1960,151"/>
-<area shape="rect" title=" " alt="" coords="1984,124,2089,151"/>
-<area shape="rect" title=" " alt="" coords="2113,124,2173,151"/>
-<area shape="rect" title=" " alt="" coords="2197,124,2308,151"/>
-<area shape="rect" title=" " alt="" coords="2333,124,2399,151"/>
-<area shape="rect" title=" " alt="" coords="2423,124,2538,151"/>
-<area shape="rect" title=" " alt="" coords="2562,124,2669,151"/>
-<area shape="rect" title=" " alt="" coords="2693,124,2772,151"/>
-<area shape="rect" title=" " alt="" coords="2796,124,2925,151"/>
-<area shape="rect" title=" " alt="" coords="2949,124,3020,151"/>
-<area shape="rect" title=" " alt="" coords="3044,124,3235,151"/>
-<area shape="rect" title=" " alt="" coords="3259,124,3406,151"/>
-<area shape="rect" title=" " alt="" coords="3430,117,3563,158"/>
-<area shape="rect" title=" " alt="" coords="3587,124,3745,151"/>
-<area shape="rect" title=" " alt="" coords="3769,109,3936,165"/>
-<area shape="rect" href="robot__state__display_8h.html" title=" " alt="" coords="3961,109,4139,165"/>
-<area shape="rect" title=" " alt="" coords="2267,407,2345,433"/>
-<area shape="rect" href="navigation__widget_8h.html" title=" " alt="" coords="101,228,255,255"/>
-<area shape="rect" href="start__screen__widget_8h.html" title=" " alt="" coords="2698,228,2863,255"/>
-<area shape="rect" title=" " alt="" coords="1722,317,1925,359"/>
-<area shape="rect" href="default__collisions__widget_8h.html" title=" " alt="" coords="330,221,466,262"/>
-<area shape="rect" href="planning__groups__widget_8h.html" title=" " alt="" coords="1517,228,1709,255"/>
-<area shape="rect" href="robot__poses__widget_8h.html" title=" " alt="" coords="1733,228,1897,255"/>
-<area shape="rect" href="end__effectors__widget_8h.html" title=" " alt="" coords="1922,228,2095,255"/>
-<area shape="rect" href="virtual__joints__widget_8h.html" title=" " alt="" coords="1037,228,1207,255"/>
-<area shape="rect" href="passive__joints__widget_8h.html" title=" " alt="" coords="490,228,669,255"/>
-<area shape="rect" href="author__information__widget_8h.html" title=" " alt="" coords="2119,221,2266,262"/>
-<area shape="rect" href="simulation__widget_8h.html" title=" " alt="" coords="2290,228,2445,255"/>
-<area shape="rect" href="configuration__files__widget_8h.html" title=" " alt="" coords="871,221,1013,262"/>
-<area shape="rect" href="perception__widget_8h.html" title=" " alt="" coords="693,228,847,255"/>
-<area shape="rect" href="controllers__widget_8h.html" title=" " alt="" coords="2469,228,2623,255"/>
-<area shape="rect" title=" " alt="" coords="1232,221,1404,262"/>
-<area shape="rect" title=" " alt="" coords="1429,228,1493,255"/>
-<area shape="rect" title=" " alt="" coords="5,325,92,351"/>
-<area shape="rect" title=" " alt="" coords="117,325,279,351"/>
-<area shape="rect" title=" " alt="" coords="2792,325,2897,351"/>
-<area shape="rect" title=" " alt="" coords="3286,325,3419,351"/>
-<area shape="rect" title=" " alt="" coords="341,325,418,351"/>
-<area shape="rect" title=" " alt="" coords="442,325,506,351"/>
-<area shape="rect" title=" " alt="" coords="2888,228,2961,255"/>
-<area shape="rect" title=" " alt="" coords="3706,228,3893,255"/>
-<area shape="rect" href="rdf__loader_8h.html" title=" " alt="" coords="3437,221,3597,262"/>
-<area shape="rect" title=" " alt="" coords="3615,325,3747,351"/>
-<area shape="rect" href="robot__state__visualization_8h.html" title=" " alt="" coords="3968,213,4132,269"/>
-<area shape="rect" title=" " alt="" coords="4156,221,4349,262"/>
+<div class="center"><img src="setup__assistant__widget_8cpp__incl.png" border="0" usemap="#moveit__setup__assistant_2moveit__setup__assistant_2src_2setup__assistant__widget_8cpp" alt=""/></div>
+<map name="moveit__setup__assistant_2moveit__setup__assistant_2src_2setup__assistant__widget_8cpp" id="moveit__setup__assistant_2moveit__setup__assistant_2src_2setup__assistant__widget_8cpp">
+<area shape="rect" title=" " alt="" coords="1493,5,1722,61"/>
+<area shape="rect" href="setup__assistant__widget_8hpp.html" title=" " alt="" coords="803,109,1009,151"/>
+<area shape="rect" title=" " alt="" coords="5,503,196,530"/>
+<area shape="rect" title=" " alt="" coords="1343,206,1472,233"/>
+<area shape="rect" title=" " alt="" coords="2364,407,2475,433"/>
+<area shape="rect" href="urdf__config_8hpp.html" title=" " alt="" coords="2499,399,2689,441"/>
+<area shape="rect" href="package__settings__config_8hpp.html" title=" " alt="" coords="138,288,327,344"/>
+<area shape="rect" title=" " alt="" coords="1600,117,1705,143"/>
+<area shape="rect" title=" " alt="" coords="1729,117,1835,143"/>
+<area shape="rect" title=" " alt="" coords="1859,117,1974,143"/>
+<area shape="rect" title=" " alt="" coords="1998,117,2105,143"/>
+<area shape="rect" title=" " alt="" coords="2129,117,2208,143"/>
+<area shape="rect" title=" " alt="" coords="2232,117,2303,143"/>
+<area shape="rect" title=" " alt="" coords="199,199,411,240"/>
+<area shape="rect" title=" " alt="" coords="872,407,951,433"/>
+<area shape="rect" title=" " alt="" coords="434,206,594,233"/>
+<area shape="rect" href="setup__step__widget_8hpp.html" title=" " alt="" coords="1016,199,1209,240"/>
+<area shape="rect" href="data__warehouse_8hpp.html" title=" " alt="" coords="438,399,627,441"/>
+<area shape="rect" href="rviz__panel_8hpp.html" title=" " alt="" coords="1285,295,1474,337"/>
+<area shape="rect" href="navigation__widget_8hpp.html" title=" " alt="" coords="619,199,796,240"/>
+<area shape="rect" title=" " alt="" coords="820,199,992,240"/>
+<area shape="rect" title=" " alt="" coords="770,593,895,619"/>
+<area shape="rect" href="setup__step_8hpp.html" title=" " alt="" coords="701,295,890,337"/>
+<area shape="rect" href="config_8hpp.html" title=" " alt="" coords="306,496,495,537"/>
+<area shape="rect" href="class__forward_8h.html" title=" " alt="" coords="645,779,802,820"/>
+<area shape="rect" title=" " alt="" coords="505,957,582,984"/>
+<area shape="rect" title=" " alt="" coords="571,503,695,530"/>
+<area shape="rect" href="generated__file_8hpp.html" title=" " alt="" coords="291,682,481,723"/>
+<area shape="rect" title=" " alt="" coords="123,875,255,902"/>
+<area shape="rect" href="templates_8hpp.html" title=" " alt="" coords="317,585,506,627"/>
+<area shape="rect" title=" " alt="" coords="250,593,293,619"/>
+<area shape="rect" href="utilities_8hpp.html" title=" " alt="" coords="266,779,455,820"/>
+<area shape="rect" href="generated__time_8hpp.html" title=" " alt="" coords="53,779,242,820"/>
+<area shape="rect" href="declare__ptr_8h.html" title=" " alt="" coords="600,868,772,909"/>
+<area shape="rect" title=" " alt="" coords="1109,399,1265,441"/>
+<area shape="rect" title=" " alt="" coords="1289,399,1469,441"/>
+<area shape="rect" title=" " alt="" coords="1494,399,1691,441"/>
+<area shape="rect" title=" " alt="" coords="1715,407,1953,433"/>
+<area shape="rect" title=" " alt="" coords="1977,407,2219,433"/>
+<area shape="rect" href="robot__state__display_8h.html" title=" " alt="" coords="2713,392,2891,448"/>
+<area shape="rect" title=" " alt="" coords="2243,407,2340,433"/>
+<area shape="rect" title=" " alt="" coords="975,407,1085,433"/>
+<area shape="rect" title=" " alt="" coords="2779,503,2966,530"/>
+<area shape="rect" href="rdf__loader_8h.html" title=" " alt="" coords="2326,496,2486,537"/>
+<area shape="rect" title=" " alt="" coords="2225,593,2357,619"/>
+<area shape="rect" href="robot__state__visualization_8h.html" title=" " alt="" coords="2681,675,2845,731"/>
+<area shape="rect" title=" " alt="" coords="2561,496,2755,537"/>
+<area shape="rect" title=" " alt="" coords="2456,593,2561,619"/>
+<area shape="rect" title=" " alt="" coords="403,303,489,329"/>
+<area shape="rect" title=" " alt="" coords="514,303,677,329"/>
 </map>
 </div>
 </div>
@@ -155,7 +147,9 @@ Include dependency graph for setup_assistant_widget.cpp:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:namespacemoveit__setup__assistant"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__setup__assistant.html">moveit_setup_assistant</a></td></tr>
+<tr class="memitem:namespacemoveit__setup"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__setup.html">moveit_setup</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacemoveit__setup_1_1assistant"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__setup_1_1assistant.html">moveit_setup::assistant</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

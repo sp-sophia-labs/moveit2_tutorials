@@ -1,0 +1,4 @@
+<map id="moveit_setup::uniqueInsert" name="moveit_setup::uniqueInsert">
+<area shape="rect" id="node1" title="Insert a new XML element with a given tag, attributes, and text." alt="" coords="275,20,475,47"/>
+<area shape="rect" id="node2" href="$classmoveit__setup_1_1simulation_1_1Simulation.html#af85059d473396d258137f9518e80108d" title="Helper function to get the controller that is controlling the joint." alt="" coords="5,5,227,61"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="moveit_setup::simulation::SimulationWidget::focusGiven" name="moveit_setup::simulation::SimulationWidget::focusGiven">
+<area shape="rect" id="node1" title="function called when widget is activated, allows to update/initialize GUI" alt="" coords="5,57,232,98"/>
+<area shape="rect" id="node2" href="$namespacerclcpp_1_1names.html#a4c3e21517afd9a6909de322da95c5e81" title=" " alt="" coords="325,5,494,32"/>
+<area shape="rect" id="node4" href="$classmoveit__setup_1_1simulation_1_1SimulationWidget.html#a2c0863ba339d2b3d8076db9bf3940003" title="function called when widget loses focus, although switching away can be rejected" alt="" coords="301,57,517,98"/>
+<area shape="rect" id="node5" href="$classmoveit__setup_1_1simulation_1_1Simulation.html#ad457570e4c7be6202d720b1ac4fbb3f3" title=" " alt="" coords="280,122,539,163"/>
+<area shape="rect" id="node3" href="$namespacerclcpp_1_1names.html#a80893fadce35db823b13c8ddd4be2104" title=" " alt="" coords="587,5,743,32"/>
+</map>
