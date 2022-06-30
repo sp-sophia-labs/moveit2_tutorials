@@ -108,6 +108,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ac09096d2798b99937f8ec2e0fa110b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7db5da94f2f5fc7cbfa71197e3434114"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__setup_1_1controllers_1_1Controllers.html#a7db5da94f2f5fc7cbfa71197e3434114">getDefaultType</a> () const =0</td></tr>
 <tr class="separator:a7db5da94f2f5fc7cbfa71197e3434114"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fa4532e18900277da07622552e0fca1"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacemoveit__setup_1_1controllers.html#a1ced296c1835ce7bf0b7f756b95eb0cf">FieldPointers</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__setup_1_1controllers_1_1Controllers.html#a6fa4532e18900277da07622552e0fca1">getAdditionalControllerFields</a> () const</td></tr>
+<tr class="memdesc:a6fa4532e18900277da07622552e0fca1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define the types of controller fields for the specific types of controllers.  <a href="classmoveit__setup_1_1controllers_1_1Controllers.html#a6fa4532e18900277da07622552e0fca1">More...</a><br /></td></tr>
+<tr class="separator:a6fa4532e18900277da07622552e0fca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b86fc5f37ffcac5ae4dafdc98928ab3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__setup_1_1controllers_1_1Controllers.html#a2b86fc5f37ffcac5ae4dafdc98928ab3">isReady</a> () const override</td></tr>
 <tr class="memdesc:a2b86fc5f37ffcac5ae4dafdc98928ab3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if the data necessary to proceed with this step has been configured.  <a href="classmoveit__setup_1_1controllers_1_1Controllers.html#a2b86fc5f37ffcac5ae4dafdc98928ab3">More...</a><br /></td></tr>
 <tr class="separator:a2b86fc5f37ffcac5ae4dafdc98928ab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -159,7 +162,7 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="controllers_8hpp_source.html#l00110">110</a> of file <a class="el" href="controllers_8hpp_source.html">controllers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controllers_8hpp_source.html#l00136">136</a> of file <a class="el" href="controllers_8hpp_source.html">controllers.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a841d47c939d2d6a137520be374dbe458"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a841d47c939d2d6a137520be374dbe458">&#9670;&nbsp;</a></span>addController()</h2>
@@ -185,7 +188,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="controllers_8hpp_source.html#l00178">178</a> of file <a class="el" href="controllers_8hpp_source.html">controllers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controllers_8hpp_source.html#l00180">180</a> of file <a class="el" href="controllers_8hpp_source.html">controllers.hpp</a>.</p>
 
 </div>
 </div>
@@ -232,7 +235,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="controllers_8hpp_source.html#l00188">188</a> of file <a class="el" href="controllers_8hpp_source.html">controllers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controllers_8hpp_source.html#l00190">190</a> of file <a class="el" href="controllers_8hpp_source.html">controllers.hpp</a>.</p>
 
 </div>
 </div>
@@ -260,7 +263,38 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="controllers_8hpp_source.html#l00183">183</a> of file <a class="el" href="controllers_8hpp_source.html">controllers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controllers_8hpp_source.html#l00185">185</a> of file <a class="el" href="controllers_8hpp_source.html">controllers.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a6fa4532e18900277da07622552e0fca1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fa4532e18900277da07622552e0fca1">&#9670;&nbsp;</a></span>getAdditionalControllerFields()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="namespacemoveit__setup_1_1controllers.html#a1ced296c1835ce7bf0b7f756b95eb0cf">FieldPointers</a> moveit_setup::controllers::Controllers::getAdditionalControllerFields </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Define the types of controller fields for the specific types of controllers. </p>
+
+<p>Reimplemented in <a class="el" href="classmoveit__setup_1_1controllers_1_1MoveItControllers.html#a75b693a86d2dd2d3526e58a4d467e369">moveit_setup::controllers::MoveItControllers</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="controllers_8hpp_source.html#l00150">150</a> of file <a class="el" href="controllers_8hpp_source.html">controllers.hpp</a>.</p>
 
 </div>
 </div>
@@ -342,7 +376,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="controllers_8hpp_source.html#l00168">168</a> of file <a class="el" href="controllers_8hpp_source.html">controllers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controllers_8hpp_source.html#l00170">170</a> of file <a class="el" href="controllers_8hpp_source.html">controllers.hpp</a>.</p>
 
 </div>
 </div>
@@ -369,7 +403,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="controllers_8hpp_source.html#l00173">173</a> of file <a class="el" href="controllers_8hpp_source.html">controllers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controllers_8hpp_source.html#l00175">175</a> of file <a class="el" href="controllers_8hpp_source.html">controllers.hpp</a>.</p>
 
 </div>
 </div>
@@ -423,7 +457,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="controllers_8hpp_source.html#l00163">163</a> of file <a class="el" href="controllers_8hpp_source.html">controllers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controllers_8hpp_source.html#l00165">165</a> of file <a class="el" href="controllers_8hpp_source.html">controllers.hpp</a>.</p>
 
 </div>
 </div>
@@ -477,7 +511,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="controllers_8hpp_source.html#l00158">158</a> of file <a class="el" href="controllers_8hpp_source.html">controllers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controllers_8hpp_source.html#l00160">160</a> of file <a class="el" href="controllers_8hpp_source.html">controllers.hpp</a>.</p>
 
 </div>
 </div>
@@ -528,7 +562,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classmoveit__setup_1_1SetupStep.html#afd4a3b299cc041ff0b93ad8939a00b26">moveit_setup::SetupStep</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="controllers_8hpp_source.html#l00153">153</a> of file <a class="el" href="controllers_8hpp_source.html">controllers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controllers_8hpp_source.html#l00155">155</a> of file <a class="el" href="controllers_8hpp_source.html">controllers.hpp</a>.</p>
 
 </div>
 </div>
@@ -553,7 +587,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="controllers_8hpp_source.html#l00199">199</a> of file <a class="el" href="controllers_8hpp_source.html">controllers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controllers_8hpp_source.html#l00201">201</a> of file <a class="el" href="controllers_8hpp_source.html">controllers.hpp</a>.</p>
 
 </div>
 </div>
@@ -577,7 +611,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="controllers_8hpp_source.html#l00198">198</a> of file <a class="el" href="controllers_8hpp_source.html">controllers.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controllers_8hpp_source.html#l00200">200</a> of file <a class="el" href="controllers_8hpp_source.html">controllers.hpp</a>.</p>
 
 </div>
 </div>
