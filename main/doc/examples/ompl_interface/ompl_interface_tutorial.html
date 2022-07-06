@@ -241,26 +241,26 @@ configuration in ompl_planning.yaml via the <code class="docutils literal notran
 <p>By default the planning algorithms start from scratch for each motion planning request. However, for certain planners that build a roadmap of the environment, it may be beneficial to reuse the roadmap from previous motion planning requests if the planning scene is more or less static. Consider the following planning configurations:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PersistentLazyPRMstar</span><span class="p">:</span> <span class="c1"># use this with a representative environment to create a roadmap</span>
     <span class="nb">type</span><span class="p">:</span> <span class="n">geometric</span><span class="p">::</span><span class="n">LazyPRMstar</span>
-    <span class="n">multi_query_planning_enabled</span><span class="p">:</span> <span class="n">true</span>
-    <span class="n">store_planner_data</span><span class="p">:</span> <span class="n">true</span>
-    <span class="n">load_planner_data</span><span class="p">:</span> <span class="n">false</span>
+    <span class="n">multi_query_planning_enabled</span><span class="p">:</span> <span class="mi">1</span>
+    <span class="n">store_planner_data</span><span class="p">:</span> <span class="mi">1</span>
+    <span class="n">load_planner_data</span><span class="p">:</span> <span class="mi">0</span>
     <span class="n">planner_data_path</span><span class="p">:</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">roadmap</span><span class="o">.</span><span class="n">graph</span>
 <span class="n">PersistentLazyPRM</span><span class="p">:</span> <span class="c1"># use this to load a previously created roadmap</span>
     <span class="nb">type</span><span class="p">:</span> <span class="n">geometric</span><span class="p">::</span><span class="n">LazyPRM</span>
-    <span class="n">multi_query_planning_enabled</span><span class="p">:</span> <span class="n">true</span>
-    <span class="n">store_planner_data</span><span class="p">:</span> <span class="n">false</span>
-    <span class="n">load_planner_data</span><span class="p">:</span> <span class="n">true</span>
+    <span class="n">multi_query_planning_enabled</span><span class="p">:</span> <span class="mi">1</span>
+    <span class="n">store_planner_data</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="n">load_planner_data</span><span class="p">:</span> <span class="mi">1</span>
     <span class="n">planner_data_path</span><span class="p">:</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">roadmap</span><span class="o">.</span><span class="n">graph</span>
 <span class="n">SemiPersistentLazyPRMstar</span><span class="p">:</span> <span class="c1"># reuses roadmap during lifetime of node but doesn&#39;t save/load roadmap to/from disk</span>
     <span class="nb">type</span><span class="p">:</span> <span class="n">geometric</span><span class="p">::</span><span class="n">LazyPRMstar</span>
-    <span class="n">multi_query_planning_enabled</span><span class="p">:</span> <span class="n">true</span>
-    <span class="n">store_planner_data</span><span class="p">:</span> <span class="n">false</span>
-    <span class="n">load_planner_data</span><span class="p">:</span> <span class="n">false</span>
+    <span class="n">multi_query_planning_enabled</span><span class="p">:</span> <span class="mi">1</span>
+    <span class="n">store_planner_data</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="n">load_planner_data</span><span class="p">:</span> <span class="mi">0</span>
 <span class="n">SemiPersistentLazyPRM</span><span class="p">:</span> <span class="c1"># reuses roadmap during lifetime of node but doesn&#39;t save/load roadmap to/from disk</span>
     <span class="nb">type</span><span class="p">:</span> <span class="n">geometric</span><span class="p">::</span><span class="n">LazyPRM</span>
-    <span class="n">multi_query_planning_enabled</span><span class="p">:</span> <span class="n">true</span>
-    <span class="n">store_planner_data</span><span class="p">:</span> <span class="n">false</span>
-    <span class="n">load_planner_data</span><span class="p">:</span> <span class="n">false</span>
+    <span class="n">multi_query_planning_enabled</span><span class="p">:</span> <span class="mi">1</span>
+    <span class="n">store_planner_data</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="n">load_planner_data</span><span class="p">:</span> <span class="mi">0</span>
 </pre></div>
 </div>
 <p>The first planner configuration, <code class="docutils literal notranslate"><span class="pre">PersistentLazyPRMstar</span></code>, will use LazyPRM* to keep growing a roadmap of asymptotically optimal paths between sampled robot configurations with each motion planning request. Upon destruction of the planner instance, it will save the roadmap to disk. The <code class="docutils literal notranslate"><span class="pre">PersistentLazyPRM</span></code> configuration is similar, except it will <em>load</em> a roadmap from disk but not <em>save</em> it upon destruction. The <code class="docutils literal notranslate"><span class="pre">SemiPersistent</span></code> planner configurations do not load/save roadmaps, but do keep extending a roadmap with each motion planning request (rather than the default behavior of clearing it before planning). The four planners that support the persistent planning features are: PRM, PRM*, LazyPRM, and LazyPRM*. The critical difference between them is that the lazy variants will re-validate the validity of nodes and edges as needed when searching the roadmap for a valid path. The non-lazy variants will not check if the roadmap is still valid for the current environment. In other words, use the non-lazy variants for static environments, the lazy variants for environments with small changes, and a non-persistent planner if the environment can change significantly.</p>
