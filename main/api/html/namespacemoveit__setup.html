@@ -115,6 +115,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__setup_1_1ModifiedUrdfConfig.html">ModifiedUrdfConfig</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classA.html">A</a> configuration that stores info about modifications to the URDF.  <a href="classmoveit__setup_1_1ModifiedUrdfConfig.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__setup_1_1MoveItSetupTest.html">MoveItSetupTest</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test environment with <a class="el" href="classmoveit__setup_1_1DataWarehouse.html" title="Container for all of the SetupConfig object singletons.">DataWarehouse</a> setup and help for generating files in a temp dir.  <a href="classmoveit__setup_1_1MoveItSetupTest.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__setup_1_1PackageSettingsConfig.html">PackageSettingsConfig</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__setup_1_1RVizPanel.html">RVizPanel</a></td></tr>
@@ -213,6 +216,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ae9f19f1a3945e2a4d8710b9e938c5da4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__setup.html#ae9f19f1a3945e2a4d8710b9e938c5da4">toString</a> (const <a class="el" href="namespacemoveit__setup.html#abd0b3e222160c5f9c4360b0ec300ce5c">GeneratedTime</a> &amp;t)</td></tr>
 <tr class="memdesc:ae9f19f1a3945e2a4d8710b9e938c5da4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a GeneratedTime to a std::string (using system_clock)  <a href="namespacemoveit__setup.html#ae9f19f1a3945e2a4d8710b9e938c5da4">More...</a><br /></td></tr>
 <tr class="separator:ae9f19f1a3945e2a4d8710b9e938c5da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e3c427a6d8299d70a12632bdcf8a450"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ros_2warehouse_2warehouse_2CMakeLists_8txt.html#af4423e580afb68aec7c40fb0bce7d5d4">std::set</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__setup.html#a6e3c427a6d8299d70a12632bdcf8a450">getKeys</a> (const YAML::Node &amp;node)</td></tr>
+<tr class="separator:a6e3c427a6d8299d70a12632bdcf8a450"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7626cba04294ada87377ca223880eda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__setup.html#aa7626cba04294ada87377ca223880eda">expectYamlEquivalence</a> (const YAML::Node &amp;generated, const YAML::Node &amp;reference, const std::filesystem::path &amp;generated_path, const std::string &amp;yaml_namespace=&quot;&quot;)</td></tr>
+<tr class="separator:aa7626cba04294ada87377ca223880eda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2622df418b4fa5b2244516ef3bb74e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__setup.html#ad2622df418b4fa5b2244516ef3bb74e6">expectYamlEquivalence</a> (const std::filesystem::path &amp;generated_path, const std::filesystem::path &amp;reference_path)</td></tr>
+<tr class="separator:ad2622df418b4fa5b2244516ef3bb74e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a399f04e10443cb224ab25be0e87f387e"><td class="memItemLeft" align="right" valign="top">std::filesystem::path&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__setup.html#a399f04e10443cb224ab25be0e87f387e">getSharePath</a> (const std::string &amp;package_name)</td></tr>
 <tr class="memdesc:a399f04e10443cb224ab25be0e87f387e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a path for the given package's share folder.  <a href="namespacemoveit__setup.html#a399f04e10443cb224ab25be0e87f387e">More...</a><br /></td></tr>
 <tr class="separator:a399f04e10443cb224ab25be0e87f387e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -495,6 +504,87 @@ template&lt;typename CLOCK &gt; </div>
 
 </div>
 </div>
+<a id="ad2622df418b4fa5b2244516ef3bb74e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2622df418b4fa5b2244516ef3bb74e6">&#9670;&nbsp;</a></span>expectYamlEquivalence() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void moveit_setup::expectYamlEquivalence </td>
+          <td>(</td>
+          <td class="paramtype">const std::filesystem::path &amp;&#160;</td>
+          <td class="paramname"><em>generated_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::filesystem::path &amp;&#160;</td>
+          <td class="paramname"><em>reference_path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="testing__utils_8hpp_source.html#l00203">203</a> of file <a class="el" href="testing__utils_8hpp_source.html">testing_utils.hpp</a>.</p>
+
+</div>
+</div>
+<a id="aa7626cba04294ada87377ca223880eda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7626cba04294ada87377ca223880eda">&#9670;&nbsp;</a></span>expectYamlEquivalence() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void moveit_setup::expectYamlEquivalence </td>
+          <td>(</td>
+          <td class="paramtype">const YAML::Node &amp;&#160;</td>
+          <td class="paramname"><em>generated</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const YAML::Node &amp;&#160;</td>
+          <td class="paramname"><em>reference</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::filesystem::path &amp;&#160;</td>
+          <td class="paramname"><em>generated_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>yaml_namespace</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="testing__utils_8hpp_source.html#l00146">146</a> of file <a class="el" href="testing__utils_8hpp_source.html">testing_utils.hpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemoveit__setup_aa7626cba04294ada87377ca223880eda_icgraph.png" border="0" usemap="#namespacemoveit__setup_aa7626cba04294ada87377ca223880eda_icgraph" alt=""/></div>
+<map name="namespacemoveit__setup_aa7626cba04294ada87377ca223880eda_icgraph" id="namespacemoveit__setup_aa7626cba04294ada87377ca223880eda_icgraph">
+<area shape="rect" title=" " alt="" coords="123,5,317,47"/>
+<area shape="rect" href="test__perception_8cpp.html#ae68dedaaf9e53cdfc160a26520ad3a0e" title=" " alt="" coords="5,13,75,39"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="aae7c778bf896afd5dac629e3d8fbd5bb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aae7c778bf896afd5dac629e3d8fbd5bb">&#9670;&nbsp;</a></span>extractPackageNameFromPath()</h2>
 
@@ -570,6 +660,26 @@ template&lt;typename CLOCK &gt; </div>
 
 </div>
 </div>
+<a id="a6e3c427a6d8299d70a12632bdcf8a450"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e3c427a6d8299d70a12632bdcf8a450">&#9670;&nbsp;</a></span>getKeys()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ros_2warehouse_2warehouse_2CMakeLists_8txt.html#af4423e580afb68aec7c40fb0bce7d5d4">std::set</a>&lt;std::string&gt; moveit_setup::getKeys </td>
+          <td>(</td>
+          <td class="paramtype">const YAML::Node &amp;&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="testing__utils_8hpp_source.html#l00136">136</a> of file <a class="el" href="testing__utils_8hpp_source.html">testing_utils.hpp</a>.</p>
+
+</div>
+</div>
 <a id="a399f04e10443cb224ab25be0e87f387e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a399f04e10443cb224ab25be0e87f387e">&#9670;&nbsp;</a></span>getSharePath()</h2>
 
@@ -602,9 +712,12 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemoveit__setup_a399f04e10443cb224ab25be0e87f387e_icgraph.png" border="0" usemap="#namespacemoveit__setup_a399f04e10443cb224ab25be0e87f387e_icgraph" alt=""/></div>
 <map name="namespacemoveit__setup_a399f04e10443cb224ab25be0e87f387e_icgraph" id="namespacemoveit__setup_a399f04e10443cb224ab25be0e87f387e_icgraph">
-<area shape="rect" title="Return a path for the given package&#39;s share folder." alt="" coords="279,57,484,84"/>
+<area shape="rect" title="Return a path for the given package&#39;s share folder." alt="" coords="279,159,484,185"/>
 <area shape="rect" href="classmoveit__setup_1_1PackageSettingsConfig_1_1GeneratedSettings.html#ae70dda915ea92214dda02be4392a92f7" title="Returns true if this file will have changes when it is written to file." alt="" coords="5,5,231,61"/>
-<area shape="rect" href="classmoveit__setup_1_1URDFConfig.html#a34dec05d79dcd38f7eafeedd06e0658e" title=" " alt="" coords="19,86,217,127"/>
+<area shape="rect" href="classSRDFTest.html#a92c4af5a7fa03c3fee55cdc99eac8ee8" title=" " alt="" coords="30,86,206,127"/>
+<area shape="rect" href="classmoveit__setup_1_1URDFConfig.html#a34dec05d79dcd38f7eafeedd06e0658e" title=" " alt="" coords="19,151,217,193"/>
+<area shape="rect" href="classPerceptionTest.html#acb55ab30623ed87ffa3ac2f064663607" title=" " alt="" coords="36,217,200,244"/>
+<area shape="rect" href="test__controllers_8cpp.html#af5fc4f819a7eb9880a20f67c47c769b6" title=" " alt="" coords="83,268,153,295"/>
 </map>
 </div>
 

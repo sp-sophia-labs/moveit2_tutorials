@@ -1,5 +1,8 @@
 <map id="moveit_setup::getSharePath" name="moveit_setup::getSharePath">
-<area shape="rect" id="node1" title="Return a path for the given package&#39;s share folder." alt="" coords="279,57,484,84"/>
+<area shape="rect" id="node1" title="Return a path for the given package&#39;s share folder." alt="" coords="279,159,484,185"/>
 <area shape="rect" id="node2" href="$classmoveit__setup_1_1PackageSettingsConfig_1_1GeneratedSettings.html#ae70dda915ea92214dda02be4392a92f7" title="Returns true if this file will have changes when it is written to file." alt="" coords="5,5,231,61"/>
-<area shape="rect" id="node3" href="$classmoveit__setup_1_1URDFConfig.html#a34dec05d79dcd38f7eafeedd06e0658e" title=" " alt="" coords="19,86,217,127"/>
+<area shape="rect" id="node3" href="$classSRDFTest.html#a92c4af5a7fa03c3fee55cdc99eac8ee8" title=" " alt="" coords="30,86,206,127"/>
+<area shape="rect" id="node4" href="$classmoveit__setup_1_1URDFConfig.html#a34dec05d79dcd38f7eafeedd06e0658e" title=" " alt="" coords="19,151,217,193"/>
+<area shape="rect" id="node5" href="$classPerceptionTest.html#acb55ab30623ed87ffa3ac2f064663607" title=" " alt="" coords="36,217,200,244"/>
+<area shape="rect" id="node6" href="$test__controllers_8cpp.html#af5fc4f819a7eb9880a20f67c47c769b6" title=" " alt="" coords="83,268,153,295"/>
 </map>

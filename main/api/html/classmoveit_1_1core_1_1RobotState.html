@@ -497,27 +497,27 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af8cd62bf201a3d2a7ae739d4f117a3a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">For a given group, copy the acceleration values of the variables that make up the group into another location, in the order that the variables are found in the group. This is not necessarily a contiguous block of memory in the <a class="el" href="classmoveit_1_1core_1_1RobotState.html" title="Representation of a robot&#39;s state. This includes position, velocity, acceleration and effort.">RobotState</a> itself, so we copy instead of returning a pointer.  <a href="classmoveit_1_1core_1_1RobotState.html#af8cd62bf201a3d2a7ae739d4f117a3a4">More...</a><br /></td></tr>
 <tr class="separator:af8cd62bf201a3d2a7ae739d4f117a3a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Setting from Inverse Kinematics</div></td></tr>
-<tr class="memitem:a7af4b38e8bbc441f5aa646878cc023c7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1RobotState.html#a7af4b38e8bbc441f5aa646878cc023c7">setFromIK</a> (const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, const geometry_msgs::msg::Pose &amp;pose, double timeout=0.0, const <a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a> &amp;constraint=<a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a>(), const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;options=<a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>())</td></tr>
-<tr class="memdesc:a7af4b38e8bbc441f5aa646878cc023c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the group this state corresponds to is a chain and a solver is available, then the joint values can be set by computing inverse kinematics. The pose is assumed to be in the reference frame of the kinematic model. Returns true on success.  <a href="classmoveit_1_1core_1_1RobotState.html#a7af4b38e8bbc441f5aa646878cc023c7">More...</a><br /></td></tr>
-<tr class="separator:a7af4b38e8bbc441f5aa646878cc023c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e3ca61e91a74e2dfd1780c538249171"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1RobotState.html#a7e3ca61e91a74e2dfd1780c538249171">setFromIK</a> (const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, const geometry_msgs::msg::Pose &amp;pose, const std::string &amp;tip, double timeout=0.0, const <a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a> &amp;constraint=<a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a>(), const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;options=<a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>())</td></tr>
-<tr class="memdesc:a7e3ca61e91a74e2dfd1780c538249171"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the group this state corresponds to is a chain and a solver is available, then the joint values can be set by computing inverse kinematics. The pose is assumed to be in the reference frame of the kinematic model. Returns true on success.  <a href="classmoveit_1_1core_1_1RobotState.html#a7e3ca61e91a74e2dfd1780c538249171">More...</a><br /></td></tr>
-<tr class="separator:a7e3ca61e91a74e2dfd1780c538249171"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8db36e3dfb41dbcca35696f90daf6e56"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1RobotState.html#a8db36e3dfb41dbcca35696f90daf6e56">setFromIK</a> (const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, const Eigen::Isometry3d &amp;pose, double timeout=0.0, const <a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a> &amp;constraint=<a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a>(), const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;options=<a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>())</td></tr>
-<tr class="memdesc:a8db36e3dfb41dbcca35696f90daf6e56"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the group this state corresponds to is a chain and a solver is available, then the joint values can be set by computing inverse kinematics. The pose is assumed to be in the reference frame of the kinematic model. Returns true on success.  <a href="classmoveit_1_1core_1_1RobotState.html#a8db36e3dfb41dbcca35696f90daf6e56">More...</a><br /></td></tr>
-<tr class="separator:a8db36e3dfb41dbcca35696f90daf6e56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0fa69631ecf3d3853c519301e470cf6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1RobotState.html#ac0fa69631ecf3d3853c519301e470cf6">setFromIK</a> (const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, const Eigen::Isometry3d &amp;pose, const std::string &amp;tip, double timeout=0.0, const <a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a> &amp;constraint=<a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a>(), const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;options=<a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>())</td></tr>
-<tr class="memdesc:ac0fa69631ecf3d3853c519301e470cf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the group this state corresponds to is a chain and a solver is available, then the joint values can be set by computing inverse kinematics. The pose is assumed to be in the reference frame of the kinematic model. Returns true on success.  <a href="classmoveit_1_1core_1_1RobotState.html#ac0fa69631ecf3d3853c519301e470cf6">More...</a><br /></td></tr>
-<tr class="separator:ac0fa69631ecf3d3853c519301e470cf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7bad24130f392436844b6ffe7ce8abf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1RobotState.html#aa7bad24130f392436844b6ffe7ce8abf">setFromIK</a> (const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, const Eigen::Isometry3d &amp;pose, const std::string &amp;tip, const std::vector&lt; double &gt; &amp;consistency_limits, double timeout=0.0, const <a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a> &amp;constraint=<a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a>(), const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;options=<a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>())</td></tr>
-<tr class="memdesc:aa7bad24130f392436844b6ffe7ce8abf"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the group this state corresponds to is a chain and a solver is available, then the joint values can be set by computing inverse kinematics. The pose is assumed to be in the reference frame of the kinematic model. Returns true on success.  <a href="classmoveit_1_1core_1_1RobotState.html#aa7bad24130f392436844b6ffe7ce8abf">More...</a><br /></td></tr>
-<tr class="separator:aa7bad24130f392436844b6ffe7ce8abf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cf5af7701dcb4fcb945acd9cdbc0ebc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1RobotState.html#a7cf5af7701dcb4fcb945acd9cdbc0ebc">setFromIK</a> (const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, const EigenSTL::vector_Isometry3d &amp;poses, const std::vector&lt; std::string &gt; &amp;tips, double timeout=0.0, const <a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a> &amp;constraint=<a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a>(), const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;options=<a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>())</td></tr>
-<tr class="memdesc:a7cf5af7701dcb4fcb945acd9cdbc0ebc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Warning: This function inefficiently copies all transforms around. If the group consists of a set of sub-groups that are each a chain and a solver is available for each sub-group, then the joint values can be set by computing inverse kinematics. The poses are assumed to be in the reference frame of the kinematic model. The poses are assumed to be in the same order as the order of the sub-groups in this group. Returns true on success.  <a href="classmoveit_1_1core_1_1RobotState.html#a7cf5af7701dcb4fcb945acd9cdbc0ebc">More...</a><br /></td></tr>
-<tr class="separator:a7cf5af7701dcb4fcb945acd9cdbc0ebc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a066c1ca28bc32dc90dea29835183e76c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1RobotState.html#a066c1ca28bc32dc90dea29835183e76c">setFromIK</a> (const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, const EigenSTL::vector_Isometry3d &amp;poses, const std::vector&lt; std::string &gt; &amp;tips, const std::vector&lt; std::vector&lt; double &gt;&gt; &amp;consistency_limits, double timeout=0.0, const <a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a> &amp;constraint=<a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a>(), const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;options=<a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>())</td></tr>
-<tr class="memdesc:a066c1ca28bc32dc90dea29835183e76c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Warning: This function inefficiently copies all transforms around. If the group consists of a set of sub-groups that are each a chain and a solver is available for each sub-group, then the joint values can be set by computing inverse kinematics. The poses are assumed to be in the reference frame of the kinematic model. The poses are assumed to be in the same order as the order of the sub-groups in this group. Returns true on success.  <a href="classmoveit_1_1core_1_1RobotState.html#a066c1ca28bc32dc90dea29835183e76c">More...</a><br /></td></tr>
-<tr class="separator:a066c1ca28bc32dc90dea29835183e76c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00a1dc64cd55d4148a6dbb2572c622a8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1RobotState.html#a00a1dc64cd55d4148a6dbb2572c622a8">setFromIK</a> (const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, const geometry_msgs::msg::Pose &amp;pose, double timeout=0.0, const <a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a> &amp;constraint=<a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a>(), const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;options=<a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>(), <a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">kinematics::KinematicsBase::IKCostFn</a> cost_function=<a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">kinematics::KinematicsBase::IKCostFn</a>())</td></tr>
+<tr class="memdesc:a00a1dc64cd55d4148a6dbb2572c622a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the group this state corresponds to is a chain and a solver is available, then the joint values can be set by computing inverse kinematics. The pose is assumed to be in the reference frame of the kinematic model. Returns true on success.  <a href="classmoveit_1_1core_1_1RobotState.html#a00a1dc64cd55d4148a6dbb2572c622a8">More...</a><br /></td></tr>
+<tr class="separator:a00a1dc64cd55d4148a6dbb2572c622a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5ab5c58a66bcfb8ea910760c06f8133"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1RobotState.html#af5ab5c58a66bcfb8ea910760c06f8133">setFromIK</a> (const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, const geometry_msgs::msg::Pose &amp;pose, const std::string &amp;tip, double timeout=0.0, const <a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a> &amp;constraint=<a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a>(), const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;options=<a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>(), <a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">kinematics::KinematicsBase::IKCostFn</a> cost_function=<a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">kinematics::KinematicsBase::IKCostFn</a>())</td></tr>
+<tr class="memdesc:af5ab5c58a66bcfb8ea910760c06f8133"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the group this state corresponds to is a chain and a solver is available, then the joint values can be set by computing inverse kinematics. The pose is assumed to be in the reference frame of the kinematic model. Returns true on success.  <a href="classmoveit_1_1core_1_1RobotState.html#af5ab5c58a66bcfb8ea910760c06f8133">More...</a><br /></td></tr>
+<tr class="separator:af5ab5c58a66bcfb8ea910760c06f8133"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90c3888d4610d7f2afafa6f44e217960"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1RobotState.html#a90c3888d4610d7f2afafa6f44e217960">setFromIK</a> (const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, const Eigen::Isometry3d &amp;pose, double timeout=0.0, const <a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a> &amp;constraint=<a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a>(), const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;options=<a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>(), <a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">kinematics::KinematicsBase::IKCostFn</a> cost_function=<a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">kinematics::KinematicsBase::IKCostFn</a>())</td></tr>
+<tr class="memdesc:a90c3888d4610d7f2afafa6f44e217960"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the group this state corresponds to is a chain and a solver is available, then the joint values can be set by computing inverse kinematics. The pose is assumed to be in the reference frame of the kinematic model. Returns true on success.  <a href="classmoveit_1_1core_1_1RobotState.html#a90c3888d4610d7f2afafa6f44e217960">More...</a><br /></td></tr>
+<tr class="separator:a90c3888d4610d7f2afafa6f44e217960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5075e93ea1012e428901e76ce6e32283"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1RobotState.html#a5075e93ea1012e428901e76ce6e32283">setFromIK</a> (const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, const Eigen::Isometry3d &amp;pose, const std::string &amp;tip, double timeout=0.0, const <a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a> &amp;constraint=<a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a>(), const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;options=<a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>(), <a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">kinematics::KinematicsBase::IKCostFn</a> cost_function=<a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">kinematics::KinematicsBase::IKCostFn</a>())</td></tr>
+<tr class="memdesc:a5075e93ea1012e428901e76ce6e32283"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the group this state corresponds to is a chain and a solver is available, then the joint values can be set by computing inverse kinematics. The pose is assumed to be in the reference frame of the kinematic model. Returns true on success.  <a href="classmoveit_1_1core_1_1RobotState.html#a5075e93ea1012e428901e76ce6e32283">More...</a><br /></td></tr>
+<tr class="separator:a5075e93ea1012e428901e76ce6e32283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9422420a9a644412491845034848cedb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1RobotState.html#a9422420a9a644412491845034848cedb">setFromIK</a> (const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, const Eigen::Isometry3d &amp;pose, const std::string &amp;tip, const std::vector&lt; double &gt; &amp;consistency_limits, double timeout=0.0, const <a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a> &amp;constraint=<a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a>(), const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;options=<a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>(), <a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">kinematics::KinematicsBase::IKCostFn</a> cost_function=<a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">kinematics::KinematicsBase::IKCostFn</a>())</td></tr>
+<tr class="memdesc:a9422420a9a644412491845034848cedb"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the group this state corresponds to is a chain and a solver is available, then the joint values can be set by computing inverse kinematics. The pose is assumed to be in the reference frame of the kinematic model. Returns true on success.  <a href="classmoveit_1_1core_1_1RobotState.html#a9422420a9a644412491845034848cedb">More...</a><br /></td></tr>
+<tr class="separator:a9422420a9a644412491845034848cedb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68ef09593fe59abfe57474e8e8117e5b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1RobotState.html#a68ef09593fe59abfe57474e8e8117e5b">setFromIK</a> (const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, const EigenSTL::vector_Isometry3d &amp;poses, const std::vector&lt; std::string &gt; &amp;tips, double timeout=0.0, const <a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a> &amp;constraint=<a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a>(), const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;options=<a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>(), <a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">kinematics::KinematicsBase::IKCostFn</a> cost_function=<a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">kinematics::KinematicsBase::IKCostFn</a>())</td></tr>
+<tr class="memdesc:a68ef09593fe59abfe57474e8e8117e5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Warning: This function inefficiently copies all transforms around. If the group consists of a set of sub-groups that are each a chain and a solver is available for each sub-group, then the joint values can be set by computing inverse kinematics. The poses are assumed to be in the reference frame of the kinematic model. The poses are assumed to be in the same order as the order of the sub-groups in this group. Returns true on success.  <a href="classmoveit_1_1core_1_1RobotState.html#a68ef09593fe59abfe57474e8e8117e5b">More...</a><br /></td></tr>
+<tr class="separator:a68ef09593fe59abfe57474e8e8117e5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90aec7ea08163f6b681c2698c8db6000"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1RobotState.html#a90aec7ea08163f6b681c2698c8db6000">setFromIK</a> (const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, const EigenSTL::vector_Isometry3d &amp;poses, const std::vector&lt; std::string &gt; &amp;tips, const std::vector&lt; std::vector&lt; double &gt;&gt; &amp;consistency_limits, double timeout=0.0, const <a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a> &amp;constraint=<a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a>(), const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;options=<a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>(), <a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">kinematics::KinematicsBase::IKCostFn</a> cost_function=<a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">kinematics::KinematicsBase::IKCostFn</a>())</td></tr>
+<tr class="memdesc:a90aec7ea08163f6b681c2698c8db6000"><td class="mdescLeft">&#160;</td><td class="mdescRight">Warning: This function inefficiently copies all transforms around. If the group consists of a set of sub-groups that are each a chain and a solver is available for each sub-group, then the joint values can be set by computing inverse kinematics. The poses are assumed to be in the reference frame of the kinematic model. The poses are assumed to be in the same order as the order of the sub-groups in this group. Returns true on success.  <a href="classmoveit_1_1core_1_1RobotState.html#a90aec7ea08163f6b681c2698c8db6000">More...</a><br /></td></tr>
+<tr class="separator:a90aec7ea08163f6b681c2698c8db6000"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8313d03f9a6f2e17e19db6f6faf5db8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1RobotState.html#ab8313d03f9a6f2e17e19db6f6faf5db8">setFromIKSubgroups</a> (const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, const EigenSTL::vector_Isometry3d &amp;poses, const std::vector&lt; std::string &gt; &amp;tips, const std::vector&lt; std::vector&lt; double &gt;&gt; &amp;consistency_limits, double timeout=0.0, const <a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a> &amp;constraint=<a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a>(), const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;options=<a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>())</td></tr>
 <tr class="memdesc:ab8313d03f9a6f2e17e19db6f6faf5db8"><td class="mdescLeft">&#160;</td><td class="mdescRight">setFromIK for multiple poses and tips (end effectors) when no solver exists for the jmg that can solver for non-chain kinematics. In this case, we divide the group into subgroups and do IK solving individually  <a href="classmoveit_1_1core_1_1RobotState.html#ab8313d03f9a6f2e17e19db6f6faf5db8">More...</a><br /></td></tr>
 <tr class="separator:ab8313d03f9a6f2e17e19db6f6faf5db8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1005,7 +1005,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <p>This only adds the given body to this <a class="el" href="classmoveit_1_1core_1_1RobotState.html" title="Representation of a robot&#39;s state. This includes position, velocity, acceleration and effort.">RobotState</a> instance. It does not change anything about other representations of the object elsewhere in the system. So if the body represents an object in a <a class="el" href="classcollision__detection_1_1World.html" title="Maintain a representation of the environment.">collision_detection::World</a> (like from a <a class="el" href="classplanning__scene_1_1PlanningScene.html" title="This class maintains the representation of the environment as seen by a planning instance....">planning_scene::PlanningScene</a>), you will likely need to remove the corresponding object from that world to avoid having collisions detected against it. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01716">1716</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01723">1723</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 
 </div>
 </div>
@@ -1174,7 +1174,7 @@ Here is the caller graph for this function:</div>
 
 <p>Compute an axis-aligned bounding box that contains the current state. The format for <em>aabb</em> is (minx, maxx, miny, maxy, minz, maxz) </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01763">1763</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01770">1770</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 
 </div>
 </div>
@@ -1196,7 +1196,7 @@ Here is the caller graph for this function:</div>
 
 <p>Compute an axis-aligned bounding box that contains the current state. The format for <em>aabb</em> is (minx, maxx, miny, maxy, minz, maxz) </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02117">2117</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02124">2124</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1281,7 +1281,7 @@ Here is the caller graph for this function:</div>
 <p>In contrast to the previous function, the Cartesian path is specified as a target frame to be reached (<em>target</em>) for the origin of a robot link (<em>link</em>). The target frame is assumed to be either in a global reference frame or in the local reference frame of the link. In the latter case (<em>global_reference_frame</em> is false) the <em>target</em> is rotated accordingly. All other comments from the previous function apply.</p>
 <p>NOTE: As of ROS-Melodic these are deprecated and should not be used </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02095">2095</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02102">2102</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -1360,13 +1360,13 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Compute the sequence of joint values that correspond to a straight Cartesian path for a particular group. </p>
-<p>The Cartesian path to be followed is specified as a direction of motion (<em>direction</em>, unit vector) for the origin The Cartesian path to be followed is specified as a direction of motion (<em>direction</em>, unit vector) for the origin of a robot link (<em>link</em>). The direction is assumed to be either in a global reference frame or in the local reference frame of the link. In the latter case (<em>global_reference_frame</em> is false) the <em>direction</em> is rotated accordingly. The link needs to move in a straight line, following the specified direction, for the desired <em>distance</em>. The resulting joint values are stored in the vector <em>traj</em>, one by one. The maximum distance in Cartesian space between consecutive points on the resulting path is specified in the <em><a class="el" href="structmoveit_1_1core_1_1MaxEEFStep.html" title="Struct for containing max_step for computeCartesianPath.">MaxEEFStep</a></em> struct which provides two fields: translation and rotation. If a <em>validCallback</em> is specified, this is passed to the internal call to <a class="el" href="classmoveit_1_1core_1_1RobotState.html#a7af4b38e8bbc441f5aa646878cc023c7" title="If the group this state corresponds to is a chain and a solver is available, then the joint values ca...">setFromIK()</a>. In case of IK failure, the computation of the path stops and the value returned corresponds to the distance that was computed and for which corresponding states were added to the path. At the end of the function call, the state of the group corresponds to the last attempted Cartesian pose.</p>
+<p>The Cartesian path to be followed is specified as a direction of motion (<em>direction</em>, unit vector) for the origin The Cartesian path to be followed is specified as a direction of motion (<em>direction</em>, unit vector) for the origin of a robot link (<em>link</em>). The direction is assumed to be either in a global reference frame or in the local reference frame of the link. In the latter case (<em>global_reference_frame</em> is false) the <em>direction</em> is rotated accordingly. The link needs to move in a straight line, following the specified direction, for the desired <em>distance</em>. The resulting joint values are stored in the vector <em>traj</em>, one by one. The maximum distance in Cartesian space between consecutive points on the resulting path is specified in the <em><a class="el" href="structmoveit_1_1core_1_1MaxEEFStep.html" title="Struct for containing max_step for computeCartesianPath.">MaxEEFStep</a></em> struct which provides two fields: translation and rotation. If a <em>validCallback</em> is specified, this is passed to the internal call to <a class="el" href="classmoveit_1_1core_1_1RobotState.html#a00a1dc64cd55d4148a6dbb2572c622a8" title="If the group this state corresponds to is a chain and a solver is available, then the joint values ca...">setFromIK()</a>. In case of IK failure, the computation of the path stops and the value returned corresponds to the distance that was computed and for which corresponding states were added to the path. At the end of the function call, the state of the group corresponds to the last attempted Cartesian pose.</p>
 <p>During the computation of the trajectory, it is usually preferred if consecutive joint values do not 'jump' by a large amount in joint space, even if the Cartesian distance between the corresponding points is small as expected. To account for this, the <em>jump_threshold</em> struct is provided, which comprises three fields: <em>jump_threshold_factor</em>, <em>revolute_jump_threshold</em> and <em>prismatic_jump_threshold</em>. If either <em>revolute_jump_threshold</em> or <em>prismatic_jump_threshold</em> are non-zero, we test for absolute jumps. If <em>jump_threshold_factor</em> is non-zero, we test for relative jumps. Otherwise (all params are zero), jump detection is disabled.</p>
 <p>For relative jump detection, the average joint-space distance between consecutive points in the trajectory is computed. If any individual joint-space motion delta is larger then this average distance by a factor of <em>jump_threshold_factor</em>, this step is considered a failure and the returned path is truncated up to just before the jump.</p>
 <p>For absolute jump thresholds, if any individual joint-space motion delta is larger then <em>revolute_jump_threshold</em> for revolute joints or <em>prismatic_jump_threshold</em> for prismatic joints then this step is considered a failure and the returned path is truncated up to just before the jump.</p>
 <p>NOTE: As of ROS-Melodic these are deprecated and should not be used </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02084">2084</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02091">2091</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -1442,7 +1442,7 @@ Here is the caller graph for this function:</div>
 <p>In contrast to the previous functions, the Cartesian path is specified as a set of <em>waypoints</em> to be sequentially reached for the origin of a robot link (<em>link</em>). The waypoints are transforms given either in a global reference frame or in the local reference frame of the link at the immediately preceding waypoint. The link needs to move in a straight line between two consecutive waypoints. All other comments apply.</p>
 <p>NOTE: As of ROS-Melodic these are deprecated and should not be used </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02106">2106</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02113">2113</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -1494,7 +1494,7 @@ Here is the caller graph for this function:</div>
 
 <p>Given a twist for a particular link (<em>tip</em>), compute the corresponding velocity for every variable and store it in <em>qdot</em>. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01259">1259</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01266">1266</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 
 </div>
 </div>
@@ -2414,7 +2414,7 @@ Here is the caller graph for this function:</div>
 
 <p>Returns true if anything in this state is dirty. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01504">1504</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01511">1511</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2460,7 +2460,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01498">1498</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01505">1505</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2504,7 +2504,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01488">1488</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01495">1495</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 
 </div>
 </div>
@@ -2531,7 +2531,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01493">1493</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01500">1500</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2570,7 +2570,7 @@ Here is the caller graph for this function:</div>
 
 <p>Return the sum of joint distances to "other" state. An L1 norm. Only considers active joints. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01516">1516</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01523">1523</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2620,7 +2620,7 @@ Here is the caller graph for this function:</div>
 
 <p>Return the sum of joint distances to "other" state. An L1 norm. Only considers active joints. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01525">1525</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01532">1532</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 
 </div>
 </div>
@@ -2811,7 +2811,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01571">1571</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01578">1578</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 
 </div>
 </div>
@@ -2859,7 +2859,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01577">1577</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01584">1584</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 
 </div>
 </div>
@@ -2887,7 +2887,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01596">1596</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01603">1603</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 
 </div>
 </div>
@@ -3055,7 +3055,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01443">1443</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01450">1450</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 
 </div>
 </div>
@@ -3093,7 +3093,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01454">1454</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01461">1461</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 
 </div>
 </div>
@@ -3141,7 +3141,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01438">1438</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01445">1445</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -3203,7 +3203,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01449">1449</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01456">1456</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 
 </div>
 </div>
@@ -3356,7 +3356,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01403">1403</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01410">1410</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -3395,7 +3395,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01418">1418</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01425">1425</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 
 </div>
 </div>
@@ -3427,7 +3427,7 @@ Here is the call graph for this function:</div>
 <p>This will throw an exception if the passed link is not found</p>
 <p>The returned transformation is always a valid isometry. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01398">1398</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01405">1405</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -3484,7 +3484,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01413">1413</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01420">1420</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 
 </div>
 </div>
@@ -3532,7 +3532,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The computed Jacobian. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01245">1245</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01252">1252</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 
 </div>
 </div>
@@ -3641,7 +3641,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if jacobian was successfully computed, false otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01222">1222</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01229">1229</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 
 </div>
 </div>
@@ -4002,7 +4002,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01465">1465</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01472">1472</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 
 </div>
 </div>
@@ -4030,7 +4030,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01482">1482</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01489">1489</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 
 </div>
 </div>
@@ -4058,7 +4058,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01460">1460</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01467">1467</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -4096,7 +4096,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01477">1477</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01484">1484</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 
 </div>
 </div>
@@ -4303,7 +4303,7 @@ Here is the call graph for this function:</div>
 
 <p>Return the instance of a random number generator. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01770">1770</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01777">1777</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 
 </div>
 </div>
@@ -4388,7 +4388,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01840">1840</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01847">1847</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -4518,7 +4518,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01821">1821</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01828">1828</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 
 </div>
 </div>
@@ -4648,7 +4648,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02312">2312</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02319">2319</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -5264,7 +5264,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01589">1589</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01596">1596</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 
 </div>
 </div>
@@ -5600,7 +5600,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01561">1561</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01568">1568</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 
 </div>
 </div>
@@ -5801,7 +5801,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02211">2211</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02218">2218</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -5821,7 +5821,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02223">2223</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02230">2230</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -5841,7 +5841,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02152">2152</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02159">2159</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -5873,7 +5873,7 @@ Here is the caller graph for this function:</div>
 
 <p>Output to console the current state of the robot's joint limits. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02159">2159</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02166">2166</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -5912,7 +5912,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02265">2265</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02272">2272</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -5932,7 +5932,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02283">2283</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02290">2290</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -5970,7 +5970,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01603">1603</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01610">1610</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 
 </div>
 </div>
@@ -6078,7 +6078,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01607">1607</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01614">1614</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 
 </div>
 </div>
@@ -6116,7 +6116,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01611">1611</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01618">1618</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 
 </div>
 </div>
@@ -6260,8 +6260,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="aa7bad24130f392436844b6ffe7ce8abf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7bad24130f392436844b6ffe7ce8abf">&#9670;&nbsp;</a></span>setFromIK() <span class="overload">[1/7]</span></h2>
+<a id="a9422420a9a644412491845034848cedb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9422420a9a644412491845034848cedb">&#9670;&nbsp;</a></span>setFromIK() <span class="overload">[1/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6306,7 +6306,13 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;&#160;</td>
-          <td class="paramname"><em>options</em> = <code><a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>()</code>&#160;</td>
+          <td class="paramname"><em>options</em> = <code><a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">kinematics::KinematicsBase::IKCostFn</a>&#160;</td>
+          <td class="paramname"><em>cost_function</em> = <code><a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">kinematics::KinematicsBase::IKCostFn</a>()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -6328,12 +6334,12 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01619">1619</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01623">1623</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
-<a id="ac0fa69631ecf3d3853c519301e470cf6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0fa69631ecf3d3853c519301e470cf6">&#9670;&nbsp;</a></span>setFromIK() <span class="overload">[2/7]</span></h2>
+<a id="a5075e93ea1012e428901e76ce6e32283"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5075e93ea1012e428901e76ce6e32283">&#9670;&nbsp;</a></span>setFromIK() <span class="overload">[2/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6372,7 +6378,13 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;&#160;</td>
-          <td class="paramname"><em>options</em> = <code><a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>()</code>&#160;</td>
+          <td class="paramname"><em>options</em> = <code><a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">kinematics::KinematicsBase::IKCostFn</a>&#160;</td>
+          <td class="paramname"><em>cost_function</em> = <code><a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">kinematics::KinematicsBase::IKCostFn</a>()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -6392,12 +6404,12 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01571">1571</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01574">1574</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a8db36e3dfb41dbcca35696f90daf6e56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8db36e3dfb41dbcca35696f90daf6e56">&#9670;&nbsp;</a></span>setFromIK() <span class="overload">[3/7]</span></h2>
+<a id="a90c3888d4610d7f2afafa6f44e217960"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90c3888d4610d7f2afafa6f44e217960">&#9670;&nbsp;</a></span>setFromIK() <span class="overload">[3/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6430,7 +6442,13 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;&#160;</td>
-          <td class="paramname"><em>options</em> = <code><a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>()</code>&#160;</td>
+          <td class="paramname"><em>options</em> = <code><a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">kinematics::KinematicsBase::IKCostFn</a>&#160;</td>
+          <td class="paramname"><em>cost_function</em> = <code><a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">kinematics::KinematicsBase::IKCostFn</a>()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -6450,12 +6468,12 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01557">1557</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01559">1559</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a066c1ca28bc32dc90dea29835183e76c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a066c1ca28bc32dc90dea29835183e76c">&#9670;&nbsp;</a></span>setFromIK() <span class="overload">[4/7]</span></h2>
+<a id="a90aec7ea08163f6b681c2698c8db6000"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90aec7ea08163f6b681c2698c8db6000">&#9670;&nbsp;</a></span>setFromIK() <span class="overload">[4/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6500,7 +6518,13 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;&#160;</td>
-          <td class="paramname"><em>options</em> = <code><a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>()</code>&#160;</td>
+          <td class="paramname"><em>options</em> = <code><a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">kinematics::KinematicsBase::IKCostFn</a>&#160;</td>
+          <td class="paramname"><em>cost_function</em> = <code><a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">kinematics::KinematicsBase::IKCostFn</a>()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -6524,8 +6548,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a7cf5af7701dcb4fcb945acd9cdbc0ebc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7cf5af7701dcb4fcb945acd9cdbc0ebc">&#9670;&nbsp;</a></span>setFromIK() <span class="overload">[5/7]</span></h2>
+<a id="a68ef09593fe59abfe57474e8e8117e5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68ef09593fe59abfe57474e8e8117e5b">&#9670;&nbsp;</a></span>setFromIK() <span class="overload">[5/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6564,7 +6588,13 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;&#160;</td>
-          <td class="paramname"><em>options</em> = <code><a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>()</code>&#160;</td>
+          <td class="paramname"><em>options</em> = <code><a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">kinematics::KinematicsBase::IKCostFn</a>&#160;</td>
+          <td class="paramname"><em>cost_function</em> = <code><a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">kinematics::KinematicsBase::IKCostFn</a>()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -6585,12 +6615,12 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01637">1637</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01642">1642</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a7e3ca61e91a74e2dfd1780c538249171"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e3ca61e91a74e2dfd1780c538249171">&#9670;&nbsp;</a></span>setFromIK() <span class="overload">[6/7]</span></h2>
+<a id="af5ab5c58a66bcfb8ea910760c06f8133"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5ab5c58a66bcfb8ea910760c06f8133">&#9670;&nbsp;</a></span>setFromIK() <span class="overload">[6/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6629,7 +6659,13 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;&#160;</td>
-          <td class="paramname"><em>options</em> = <code><a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>()</code>&#160;</td>
+          <td class="paramname"><em>options</em> = <code><a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">kinematics::KinematicsBase::IKCostFn</a>&#160;</td>
+          <td class="paramname"><em>cost_function</em> = <code><a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">kinematics::KinematicsBase::IKCostFn</a>()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -6650,12 +6686,12 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01547">1547</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01548">1548</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a7af4b38e8bbc441f5aa646878cc023c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7af4b38e8bbc441f5aa646878cc023c7">&#9670;&nbsp;</a></span>setFromIK() <span class="overload">[7/7]</span></h2>
+<a id="a00a1dc64cd55d4148a6dbb2572c622a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00a1dc64cd55d4148a6dbb2572c622a8">&#9670;&nbsp;</a></span>setFromIK() <span class="overload">[7/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6688,7 +6724,13 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;&#160;</td>
-          <td class="paramname"><em>options</em> = <code><a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>()</code>&#160;</td>
+          <td class="paramname"><em>options</em> = <code><a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">kinematics::KinematicsBase::IKCostFn</a>&#160;</td>
+          <td class="paramname"><em>cost_function</em> = <code><a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">kinematics::KinematicsBase::IKCostFn</a>()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -6712,8 +6754,8 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classmoveit_1_1core_1_1RobotState_a7af4b38e8bbc441f5aa646878cc023c7_icgraph.png" border="0" usemap="#classmoveit_1_1core_1_1RobotState_a7af4b38e8bbc441f5aa646878cc023c7_icgraph" alt=""/></div>
-<map name="classmoveit_1_1core_1_1RobotState_a7af4b38e8bbc441f5aa646878cc023c7_icgraph" id="classmoveit_1_1core_1_1RobotState_a7af4b38e8bbc441f5aa646878cc023c7_icgraph">
+<div class="center"><img src="classmoveit_1_1core_1_1RobotState_a00a1dc64cd55d4148a6dbb2572c622a8_icgraph.png" border="0" usemap="#classmoveit_1_1core_1_1RobotState_a00a1dc64cd55d4148a6dbb2572c622a8_icgraph" alt=""/></div>
+<map name="classmoveit_1_1core_1_1RobotState_a00a1dc64cd55d4148a6dbb2572c622a8_icgraph" id="classmoveit_1_1core_1_1RobotState_a00a1dc64cd55d4148a6dbb2572c622a8_icgraph">
 <area shape="rect" title="If the group this state corresponds to is a chain and a solver is available, then the joint values ca..." alt="" coords="312,71,496,112"/>
 <area shape="rect" href="classPlanningContextTest.html#a007e70029a3f986a0596ff0a7feac14a" title="Generate a valid fully defined request." alt="" coords="57,5,212,47"/>
 <area shape="rect" href="classmove__group_1_1MoveGroupKinematicsService.html#a5f7431ad977ffa26914345d0769d6ce8" title=" " alt="" coords="5,71,264,112"/>
@@ -6791,7 +6833,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01880">1880</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01887">1887</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -8272,7 +8314,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01294">1294</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01301">1301</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 
 </div>
 </div>
@@ -8312,7 +8354,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if no error </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01597">1597</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01601">1601</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -8352,7 +8394,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if no error </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01602">1602</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01606">1606</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -9390,7 +9432,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01278">1278</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01285">1285</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 
 </div>
 </div>
@@ -9827,7 +9869,7 @@ Here is the caller graph for this function:</div>
 <p>Update the state after setting a particular link to the input global transform pose. </p>
 <p>This "warps" the given link to the given pose, neglecting the joint values of its parent joint. The link transforms of link and all its descendants are updated, but not marked as dirty, although they do not match the joint values anymore! Collision body transforms are not yet updated, but marked dirty only. Use update(false) or <a class="el" href="classmoveit_1_1core_1_1RobotState.html#afa1f72a766bdf75d81f4404058322576" title="Update the transforms for the collision bodies. This call is needed before calling collision checking...">updateCollisionBodyTransforms()</a> to update them as well. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01373">1373</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8h_source.html#l01380">1380</a> of file <a class="el" href="robot__state_8h_source.html">robot_state.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

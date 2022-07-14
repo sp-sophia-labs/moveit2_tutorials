@@ -104,6 +104,10 @@ Collaboration diagram for moveit_setup::DataWarehouse:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a4421ffdd1ae042f56f9ebbe777b85710"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__setup_1_1DataWarehouse.html#a4421ffdd1ae042f56f9ebbe777b85710">DataWarehouse</a> (const rclcpp::Node::SharedPtr &amp;parent_node)</td></tr>
 <tr class="separator:a4421ffdd1ae042f56f9ebbe777b85710"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec7dff74c3c8263eda08d009999fd346"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__setup_1_1DataWarehouse.html#aec7dff74c3c8263eda08d009999fd346">preloadWithURDFPath</a> (const std::filesystem::path &amp;urdf_path)</td></tr>
+<tr class="separator:aec7dff74c3c8263eda08d009999fd346"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b442e65a70b5df21c5c477f7bad22d5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__setup_1_1DataWarehouse.html#a0b442e65a70b5df21c5c477f7bad22d5">preloadWithFullConfig</a> (const std::string &amp;package_path_or_name)</td></tr>
+<tr class="separator:a0b442e65a70b5df21c5c477f7bad22d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a389644f67d93f3778c918d67a9d9d1"><td class="memItemLeft" align="right" valign="top">SetupConfigPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__setup_1_1DataWarehouse.html#a1a389644f67d93f3778c918d67a9d9d1">get</a> (const std::string &amp;config_name, std::string config_class=&quot;&quot;)</td></tr>
 <tr class="memdesc:a1a389644f67d93f3778c918d67a9d9d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the singleton for a given config name and class.  <a href="classmoveit__setup_1_1DataWarehouse.html#a1a389644f67d93f3778c918d67a9d9d1">More...</a><br /></td></tr>
 <tr class="separator:a1a389644f67d93f3778c918d67a9d9d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -121,9 +125,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae58034ff5c1bc65c770de835cc4d389e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; SetupConfigPtr &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__setup_1_1DataWarehouse.html#ae58034ff5c1bc65c770de835cc4d389e">getConfigured</a> ()</td></tr>
 <tr class="memdesc:ae58034ff5c1bc65c770de835cc4d389e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of the <a class="el" href="classmoveit__setup_1_1SetupConfig.html" title="where all the data for each part of the configuration is stored.">SetupConfig</a> for which isConfigured is true.  <a href="classmoveit__setup_1_1DataWarehouse.html#ae58034ff5c1bc65c770de835cc4d389e">More...</a><br /></td></tr>
 <tr class="separator:ae58034ff5c1bc65c770de835cc4d389e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2f2a14a82776909bc8304eaefef72bf"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__setup_1_1DataWarehouse.html#af2f2a14a82776909bc8304eaefef72bf">getRegisteredNames</a> () const</td></tr>
-<tr class="memdesc:af2f2a14a82776909bc8304eaefef72bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of config_names that have registered types associated with them.  <a href="classmoveit__setup_1_1DataWarehouse.html#af2f2a14a82776909bc8304eaefef72bf">More...</a><br /></td></tr>
-<tr class="separator:af2f2a14a82776909bc8304eaefef72bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37adf4063d6c55fe0fadcca44708626d"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__setup_1_1DataWarehouse.html#a37adf4063d6c55fe0fadcca44708626d">getRegisteredNames</a> () const</td></tr>
+<tr class="memdesc:a37adf4063d6c55fe0fadcca44708626d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of config_names that have registered types associated with them.  <a href="classmoveit__setup_1_1DataWarehouse.html#a37adf4063d6c55fe0fadcca44708626d">More...</a><br /></td></tr>
+<tr class="separator:a37adf4063d6c55fe0fadcca44708626d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -141,6 +145,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a983aa11da44f22098aa8d7237fcc9207"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28b17dff9464e3e6b70b16e29fa6399e"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__setup_1_1DataWarehouse.html#a28b17dff9464e3e6b70b16e29fa6399e">registered_types_</a></td></tr>
 <tr class="separator:a28b17dff9464e3e6b70b16e29fa6399e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e560e2ef960bb6db180d23056352491"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__setup_1_1DataWarehouse.html#a3e560e2ef960bb6db180d23056352491">registered_names_</a></td></tr>
+<tr class="separator:a3e560e2ef960bb6db180d23056352491"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Container for all of the <code><a class="el" href="classmoveit__setup_1_1SetupConfig.html" title="where all the data for each part of the configuration is stored.">SetupConfig</a></code> object singletons. </p>
@@ -221,7 +227,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Shared pointer to the specific <a class="el" href="classmoveit__setup_1_1SetupConfig.html" title="where all the data for each part of the configuration is stored.">SetupConfig</a> object </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="data__warehouse_8hpp_source.html#l00111">111</a> of file <a class="el" href="data__warehouse_8hpp_source.html">data_warehouse.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__warehouse_8hpp_source.html#l00114">114</a> of file <a class="el" href="data__warehouse_8hpp_source.html">data_warehouse.hpp</a>.</p>
 
 </div>
 </div>
@@ -267,7 +273,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Shared pointer to the generic <a class="el" href="classmoveit__setup_1_1SetupConfig.html" title="where all the data for each part of the configuration is stored.">SetupConfig</a> object </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="data__warehouse_8cpp_source.html#l00084">84</a> of file <a class="el" href="data__warehouse_8cpp_source.html">data_warehouse.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__warehouse_8cpp_source.html#l00094">94</a> of file <a class="el" href="data__warehouse_8cpp_source.html">data_warehouse.cpp</a>.</p>
 
 </div>
 </div>
@@ -305,7 +311,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Map of shared pointers from config names to singleton config </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="data__warehouse_8hpp_source.html#l00123">123</a> of file <a class="el" href="data__warehouse_8hpp_source.html">data_warehouse.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__warehouse_8hpp_source.html#l00126">126</a> of file <a class="el" href="data__warehouse_8hpp_source.html">data_warehouse.hpp</a>.</p>
 
 </div>
 </div>
@@ -326,18 +332,18 @@ template&lt;typename T &gt; </div>
 
 <p>Returns a list of the <a class="el" href="classmoveit__setup_1_1SetupConfig.html" title="where all the data for each part of the configuration is stored.">SetupConfig</a> for which isConfigured is true. </p>
 
-<p class="definition">Definition at line <a class="el" href="data__warehouse_8cpp_source.html#l00111">111</a> of file <a class="el" href="data__warehouse_8cpp_source.html">data_warehouse.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__warehouse_8cpp_source.html#l00122">122</a> of file <a class="el" href="data__warehouse_8cpp_source.html">data_warehouse.cpp</a>.</p>
 
 </div>
 </div>
-<a id="af2f2a14a82776909bc8304eaefef72bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2f2a14a82776909bc8304eaefef72bf">&#9670;&nbsp;</a></span>getRegisteredNames()</h2>
+<a id="a37adf4063d6c55fe0fadcca44708626d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37adf4063d6c55fe0fadcca44708626d">&#9670;&nbsp;</a></span>getRegisteredNames()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; std::string &gt; moveit_setup::DataWarehouse::getRegisteredNames </td>
+          <td class="memname">const std::vector&lt; std::string &gt; &amp; moveit_setup::DataWarehouse::getRegisteredNames </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -347,7 +353,47 @@ template&lt;typename T &gt; </div>
 
 <p>Returns a list of config_names that have registered types associated with them. </p>
 
-<p class="definition">Definition at line <a class="el" href="data__warehouse_8cpp_source.html#l00124">124</a> of file <a class="el" href="data__warehouse_8cpp_source.html">data_warehouse.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__warehouse_8cpp_source.html#l00141">141</a> of file <a class="el" href="data__warehouse_8cpp_source.html">data_warehouse.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0b442e65a70b5df21c5c477f7bad22d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b442e65a70b5df21c5c477f7bad22d5">&#9670;&nbsp;</a></span>preloadWithFullConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void moveit_setup::DataWarehouse::preloadWithFullConfig </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>package_path_or_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="data__warehouse_8cpp_source.html#l00089">89</a> of file <a class="el" href="data__warehouse_8cpp_source.html">data_warehouse.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aec7dff74c3c8263eda08d009999fd346"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec7dff74c3c8263eda08d009999fd346">&#9670;&nbsp;</a></span>preloadWithURDFPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void moveit_setup::DataWarehouse::preloadWithURDFPath </td>
+          <td>(</td>
+          <td class="paramtype">const std::filesystem::path &amp;&#160;</td>
+          <td class="paramname"><em>urdf_path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="data__warehouse_8cpp_source.html#l00084">84</a> of file <a class="el" href="data__warehouse_8cpp_source.html">data_warehouse.cpp</a>.</p>
 
 </div>
 </div>
@@ -379,7 +425,7 @@ template&lt;typename T &gt; </div>
 
 <p>Associates a class_name with the given name. Makes calls to get more succinct. </p>
 
-<p class="definition">Definition at line <a class="el" href="data__warehouse_8cpp_source.html#l00106">106</a> of file <a class="el" href="data__warehouse_8cpp_source.html">data_warehouse.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__warehouse_8cpp_source.html#l00116">116</a> of file <a class="el" href="data__warehouse_8cpp_source.html">data_warehouse.cpp</a>.</p>
 
 </div>
 </div>
@@ -404,7 +450,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="data__warehouse_8hpp_source.html#l00160">160</a> of file <a class="el" href="data__warehouse_8hpp_source.html">data_warehouse.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__warehouse_8hpp_source.html#l00163">163</a> of file <a class="el" href="data__warehouse_8hpp_source.html">data_warehouse.hpp</a>.</p>
 
 </div>
 </div>
@@ -428,7 +474,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="data__warehouse_8hpp_source.html#l00161">161</a> of file <a class="el" href="data__warehouse_8hpp_source.html">data_warehouse.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__warehouse_8hpp_source.html#l00164">164</a> of file <a class="el" href="data__warehouse_8hpp_source.html">data_warehouse.hpp</a>.</p>
 
 </div>
 </div>
@@ -446,7 +492,7 @@ template&lt;typename T &gt; </div>
 
 <p>Is this application in debug mode? </p>
 
-<p class="definition">Definition at line <a class="el" href="data__warehouse_8hpp_source.html#l00156">156</a> of file <a class="el" href="data__warehouse_8hpp_source.html">data_warehouse.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__warehouse_8hpp_source.html#l00159">159</a> of file <a class="el" href="data__warehouse_8hpp_source.html">data_warehouse.hpp</a>.</p>
 
 </div>
 </div>
@@ -470,7 +516,31 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="data__warehouse_8hpp_source.html#l00159">159</a> of file <a class="el" href="data__warehouse_8hpp_source.html">data_warehouse.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__warehouse_8hpp_source.html#l00162">162</a> of file <a class="el" href="data__warehouse_8hpp_source.html">data_warehouse.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a3e560e2ef960bb6db180d23056352491"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e560e2ef960bb6db180d23056352491">&#9670;&nbsp;</a></span>registered_names_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::string&gt; moveit_setup::DataWarehouse::registered_names_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="data__warehouse_8hpp_source.html#l00166">166</a> of file <a class="el" href="data__warehouse_8hpp_source.html">data_warehouse.hpp</a>.</p>
 
 </div>
 </div>
@@ -494,7 +564,7 @@ template&lt;typename T &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="data__warehouse_8hpp_source.html#l00162">162</a> of file <a class="el" href="data__warehouse_8hpp_source.html">data_warehouse.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data__warehouse_8hpp_source.html#l00165">165</a> of file <a class="el" href="data__warehouse_8hpp_source.html">data_warehouse.hpp</a>.</p>
 
 </div>
 </div>

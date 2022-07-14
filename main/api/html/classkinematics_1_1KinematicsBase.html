@@ -103,6 +103,9 @@ Public Types</h2></td></tr>
 <tr class="memitem:abedb4fdc03cd199429545929a6bea6ee"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkinematics_1_1KinematicsBase.html#abedb4fdc03cd199429545929a6bea6ee">IKCallbackFn</a> = std::function&lt; void(const geometry_msgs::msg::Pose &amp;, const std::vector&lt; double &gt; &amp;, moveit_msgs::msg::MoveItErrorCodes &amp;)&gt;</td></tr>
 <tr class="memdesc:abedb4fdc03cd199429545929a6bea6ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signature for a callback to validate an IK solution. Typically used for collision checking.  <a href="classkinematics_1_1KinematicsBase.html#abedb4fdc03cd199429545929a6bea6ee">More...</a><br /></td></tr>
 <tr class="separator:abedb4fdc03cd199429545929a6bea6ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad293b21333139231f63c66c0b82da17b"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">IKCostFn</a> = std::function&lt; double(const geometry_msgs::msg::Pose &amp;, const <a class="el" href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a> &amp;, <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">moveit::core::JointModelGroup</a> *, const std::vector&lt; double &gt; &amp;)&gt;</td></tr>
+<tr class="memdesc:ad293b21333139231f63c66c0b82da17b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signature for a cost function used to evaluate IK solutions.  <a href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">More...</a><br /></td></tr>
+<tr class="separator:ad293b21333139231f63c66c0b82da17b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -127,6 +130,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a26c45780408fdd39c6efd056f53d4b40"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkinematics_1_1KinematicsBase.html#a26c45780408fdd39c6efd056f53d4b40">searchPositionIK</a> (const std::vector&lt; geometry_msgs::msg::Pose &gt; &amp;ik_poses, const std::vector&lt; double &gt; &amp;ik_seed_state, double timeout, const std::vector&lt; double &gt; &amp;consistency_limits, std::vector&lt; double &gt; &amp;solution, const <a class="el" href="classkinematics_1_1KinematicsBase.html#abedb4fdc03cd199429545929a6bea6ee">IKCallbackFn</a> &amp;solution_callback, moveit_msgs::msg::MoveItErrorCodes &amp;error_code, const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;options=<a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>(), const <a class="el" href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a> *context_state=nullptr) const</td></tr>
 <tr class="memdesc:a26c45780408fdd39c6efd056f53d4b40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a set of desired poses for a planning group with multiple end-effectors, search for the joint angles required to reach them. This is useful for e.g. biped robots that need to perform whole-body IK. Not necessary for most robots that have kinematic chains. This particular method is intended for "searching" for a solution by stepping through the redundancy (or other numerical routines).  <a href="classkinematics_1_1KinematicsBase.html#a26c45780408fdd39c6efd056f53d4b40">More...</a><br /></td></tr>
 <tr class="separator:a26c45780408fdd39c6efd056f53d4b40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b49b881b4941836d4a9438e2844b538"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkinematics_1_1KinematicsBase.html#a5b49b881b4941836d4a9438e2844b538">searchPositionIK</a> (const std::vector&lt; geometry_msgs::msg::Pose &gt; &amp;ik_poses, const std::vector&lt; double &gt; &amp;ik_seed_state, double timeout, const std::vector&lt; double &gt; &amp;consistency_limits, std::vector&lt; double &gt; &amp;solution, const <a class="el" href="classkinematics_1_1KinematicsBase.html#abedb4fdc03cd199429545929a6bea6ee">IKCallbackFn</a> &amp;solution_callback, <a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">IKCostFn</a> cost_function, moveit_msgs::msg::MoveItErrorCodes &amp;error_code, const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;options=<a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>(), const <a class="el" href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a> *context_state=nullptr) const</td></tr>
+<tr class="memdesc:a5b49b881b4941836d4a9438e2844b538"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a set of desired poses for a planning group with multiple end-effectors, search for the joint angles required to reach them. This is useful for e.g. biped robots that need to perform whole-body IK. Not necessary for most robots that have kinematic chains. This particular method is intended for "searching" for a solution by stepping through the redundancy (or other numerical routines).  <a href="classkinematics_1_1KinematicsBase.html#a5b49b881b4941836d4a9438e2844b538">More...</a><br /></td></tr>
+<tr class="separator:a5b49b881b4941836d4a9438e2844b538"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a012c07b6585316efd03fceed34ac719e"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkinematics_1_1KinematicsBase.html#a012c07b6585316efd03fceed34ac719e">getPositionFK</a> (const std::vector&lt; std::string &gt; &amp;link_names, const std::vector&lt; double &gt; &amp;joint_angles, std::vector&lt; geometry_msgs::msg::Pose &gt; &amp;poses) const =0</td></tr>
 <tr class="memdesc:a012c07b6585316efd03fceed34ac719e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a set of joint angles and a set of links, compute their pose.  <a href="classkinematics_1_1KinematicsBase.html#a012c07b6585316efd03fceed34ac719e">More...</a><br /></td></tr>
 <tr class="separator:a012c07b6585316efd03fceed34ac719e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -254,6 +260,24 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ad293b21333139231f63c66c0b82da17b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad293b21333139231f63c66c0b82da17b">&#9670;&nbsp;</a></span>IKCostFn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">kinematics::KinematicsBase::IKCostFn</a> =  std::function&lt;double(const geometry_msgs::msg::Pose&amp;, const <a class="el" href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a>&amp;, <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">moveit::core::JointModelGroup</a>*, const std::vector&lt;double&gt;&amp;)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Signature for a cost function used to evaluate IK solutions. </p>
+
+<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00159">159</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9f03dce30c715768526c4a951fc64766"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9f03dce30c715768526c4a951fc64766">&#9670;&nbsp;</a></span>~KinematicsBase()</h2>
@@ -328,7 +352,7 @@ Protected Attributes</h2></td></tr>
 <p>Return the name of the frame in which the solver is operating. This is usually a link name. No namespacing (e.g., no "/" prefix) should be used. </p>
 <dl class="section return"><dt>Returns</dt><dd>The string name of the frame in which the solver is operating </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00380">380</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00424">424</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
 
 </div>
 </div>
@@ -357,7 +381,7 @@ Protected Attributes</h2></td></tr>
 
 <p>For functions that require a timeout specified but one is not specified using arguments, this default timeout is used. </p>
 
-<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00524">524</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00568">568</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
 
 </div>
 </div>
@@ -387,7 +411,7 @@ Protected Attributes</h2></td></tr>
 <p>Return the name of the group that the solver is operating on. </p>
 <dl class="section return"><dt>Returns</dt><dd>The string name of the group that the solver is operating on </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00370">370</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00414">414</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
 
 </div>
 </div>
@@ -670,7 +694,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Get the set of redundant joints. </p>
 
-<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00430">430</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00474">474</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
 
 </div>
 </div>
@@ -700,7 +724,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Get the value of the search discretization. </p>
 
-<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00494">494</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00538">538</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
 
 </div>
 </div>
@@ -729,7 +753,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Returns the set of supported kinematics discretization search types. This implementation only supports the DiscretizationMethods::ONE search. </p>
 
-<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00510">510</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00554">554</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
 
 </div>
 </div>
@@ -759,7 +783,7 @@ Protected Attributes</h2></td></tr>
 <p>Return the name of the tip frame of the chain on which the solver is operating. This is usually a link name. No namespacing (e.g., no "/" prefix) should be used. </p>
 <dl class="section return"><dt>Returns</dt><dd>The string name of the tip frame of the chain on which the solver is operating </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00390">390</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00434">434</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
 
 </div>
 </div>
@@ -789,7 +813,7 @@ Protected Attributes</h2></td></tr>
 <p>Return the names of the tip frames of the kinematic tree on which the solver is operating. This is usually a link name. No namespacing (e.g., no "/" prefix) should be used. </p>
 <dl class="section return"><dt>Returns</dt><dd>The vector of names of the tip frames of the kinematic tree on which the solver is operating </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00404">404</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00448">448</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
 
 </div>
 </div>
@@ -923,12 +947,12 @@ template&lt;typename T &gt; </div>
 <p>~/&lt;group_name&gt;/ ~/ robot_description_kinematics/&lt;group_name&gt;/ robot_description_kinematics/</p>
 <p>This order maintains default behavior by keeping the private namespace as the predominant configuration but also allows groupwise specifications. </p>
 
-<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00563">563</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00607">607</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
 
 </div>
 </div>
 <a id="a1740206ea9d1d650fa374335ccd23f61"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1740206ea9d1d650fa374335ccd23f61">&#9670;&nbsp;</a></span>searchPositionIK() <span class="overload">[1/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1740206ea9d1d650fa374335ccd23f61">&#9670;&nbsp;</a></span>searchPositionIK() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1018,7 +1042,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="a8da71ca98c7394764be7e027bc9d09e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8da71ca98c7394764be7e027bc9d09e9">&#9670;&nbsp;</a></span>searchPositionIK() <span class="overload">[2/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8da71ca98c7394764be7e027bc9d09e9">&#9670;&nbsp;</a></span>searchPositionIK() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1101,7 +1125,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="aa9cb5e1867d5d4b5c75b0b900bcf49e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9cb5e1867d5d4b5c75b0b900bcf49e0">&#9670;&nbsp;</a></span>searchPositionIK() <span class="overload">[3/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9cb5e1867d5d4b5c75b0b900bcf49e0">&#9670;&nbsp;</a></span>searchPositionIK() <span class="overload">[3/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1184,7 +1208,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="a744b6236d6ce18e75e04f7f59b1195b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a744b6236d6ce18e75e04f7f59b1195b6">&#9670;&nbsp;</a></span>searchPositionIK() <span class="overload">[4/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a744b6236d6ce18e75e04f7f59b1195b6">&#9670;&nbsp;</a></span>searchPositionIK() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1259,8 +1283,112 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a5b49b881b4941836d4a9438e2844b538"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b49b881b4941836d4a9438e2844b538">&#9670;&nbsp;</a></span>searchPositionIK() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool kinematics::KinematicsBase::searchPositionIK </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; geometry_msgs::msg::Pose &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ik_poses</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ik_seed_state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>timeout</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>consistency_limits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>solution</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classkinematics_1_1KinematicsBase.html#abedb4fdc03cd199429545929a6bea6ee">IKCallbackFn</a> &amp;&#160;</td>
+          <td class="paramname"><em>solution_callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classkinematics_1_1KinematicsBase.html#ad293b21333139231f63c66c0b82da17b">IKCostFn</a>&#160;</td>
+          <td class="paramname"><em>cost_function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">moveit_msgs::msg::MoveItErrorCodes &amp;&#160;</td>
+          <td class="paramname"><em>error_code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code><a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a> *&#160;</td>
+          <td class="paramname"><em>context_state</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Given a set of desired poses for a planning group with multiple end-effectors, search for the joint angles required to reach them. This is useful for e.g. biped robots that need to perform whole-body IK. Not necessary for most robots that have kinematic chains. This particular method is intended for "searching" for a solution by stepping through the redundancy (or other numerical routines). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ik_poses</td><td>the desired pose of each tip link, in the same order as the <a class="el" href="classkinematics_1_1KinematicsBase.html#a9f886473c58afe6ff87c4aef5e9e17a0" title="Return the names of the tip frames of the kinematic tree on which the solver is operating....">getTipFrames()</a> vector </td></tr>
+    <tr><td class="paramname">ik_seed_state</td><td>an initial guess solution for the inverse kinematics </td></tr>
+    <tr><td class="paramname">timeout</td><td>The amount of time (in seconds) available to the solver </td></tr>
+    <tr><td class="paramname">consistency_limits</td><td>the distance that any joint in the solution can be from the corresponding joints in the current seed state </td></tr>
+    <tr><td class="paramname">solution</td><td>the solution vector </td></tr>
+    <tr><td class="paramname">solution_callback</td><td><a class="el" href="classA.html">A</a> callback to validate an IK solution </td></tr>
+    <tr><td class="paramname">cost_function</td><td><a class="el" href="classA.html">A</a> function to evaluate the cost of a particular IK solution </td></tr>
+    <tr><td class="paramname">error_code</td><td>an error code that encodes the reason for failure or success </td></tr>
+    <tr><td class="paramname">options</td><td>container for other IK options. See definition of <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html" title="A set of options for the kinematics solver.">KinematicsQueryOptions</a> for details. </td></tr>
+    <tr><td class="paramname">context_state</td><td>(optional) the context in which this request is being made. The position values corresponding to joints in the current group may not match those in ik_seed_state. The values in ik_seed_state are the ones to use. The state is passed to provide the <em>other</em> joint values, in case they are needed for context, like with an IK solver that computes a balanced result for a biped. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if a valid solution was found, false otherwise </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00352">352</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
+
+</div>
+</div>
 <a id="a26c45780408fdd39c6efd056f53d4b40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26c45780408fdd39c6efd056f53d4b40">&#9670;&nbsp;</a></span>searchPositionIK() <span class="overload">[5/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a26c45780408fdd39c6efd056f53d4b40">&#9670;&nbsp;</a></span>searchPositionIK() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1354,7 +1482,7 @@ template&lt;typename T &gt; </div>
 
 <p>Reimplemented in <a class="el" href="classsrv__kinematics__plugin_1_1SrvKinematicsPlugin.html#a17b05f2de6e34fa42405367fbf19a650">srv_kinematics_plugin::SrvKinematicsPlugin</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00298">298</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00302">302</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
 
 </div>
 </div>
@@ -1384,7 +1512,7 @@ template&lt;typename T &gt; </div>
 
 <p>For functions that require a timeout specified but one is not specified using arguments, a default timeout is used, as set by this function (and initialized to <a class="el" href="classkinematics_1_1KinematicsBase.html#abbbaaf2548c5f94248ccded217ae7945">KinematicsBase::DEFAULT_TIMEOUT</a>) </p>
 
-<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00517">517</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00561">561</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
 
 </div>
 </div>
@@ -1489,7 +1617,7 @@ template&lt;typename T &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00480">480</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00524">524</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
 
 </div>
 </div>
@@ -1519,7 +1647,7 @@ template&lt;typename T &gt; </div>
 
 <p>Set the search discretization value for all the redundant joints. </p>
 
-<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00466">466</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00510">510</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
 
 </div>
 </div>
@@ -1738,7 +1866,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00541">541</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00585">585</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
 
 </div>
 </div>
@@ -1810,7 +1938,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00544">544</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00588">588</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
 
 </div>
 </div>
@@ -1834,7 +1962,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00540">540</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00584">584</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
 
 </div>
 </div>
@@ -1882,7 +2010,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00537">537</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00581">581</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
 
 </div>
 </div>
@@ -1906,7 +2034,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00546">546</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00590">590</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
 
 </div>
 </div>
@@ -1930,7 +2058,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00545">545</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00589">589</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
 
 </div>
 </div>
@@ -1954,7 +2082,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00539">539</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00583">583</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
 
 </div>
 </div>
@@ -1978,7 +2106,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00538">538</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00582">582</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
 
 </div>
 </div>
@@ -2002,7 +2130,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00547">547</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00591">591</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
 
 </div>
 </div>
@@ -2026,7 +2154,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00542">542</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kinematics__base_8h_source.html#l00586">586</a> of file <a class="el" href="kinematics__base_8h_source.html">kinematics_base.h</a>.</p>
 
 </div>
 </div>

@@ -132,13 +132,13 @@ $(function() {
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    joint_limits_yaml = <a class="code" href="namespacedemo.html#a674d8a85852ae42d9abdbe1db7b3cda7">load_yaml</a>(</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="stringliteral">&quot;moveit_resources_prbt_moveit_config&quot;</span>, <span class="stringliteral">&quot;config/joint_limits.yaml&quot;</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    )</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    cartesian_limits_yaml = <a class="code" href="namespacedemo.html#a674d8a85852ae42d9abdbe1db7b3cda7">load_yaml</a>(</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="stringliteral">&quot;moveit_resources_prbt_moveit_config&quot;</span>, <span class="stringliteral">&quot;config/cartesian_limits.yaml&quot;</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    pilz_cartesian_limits_yaml = <a class="code" href="namespacedemo.html#a674d8a85852ae42d9abdbe1db7b3cda7">load_yaml</a>(</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="stringliteral">&quot;moveit_resources_prbt_moveit_config&quot;</span>, <span class="stringliteral">&quot;config/pilz_cartesian_limits.yaml&quot;</span></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    )</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    robot_description_planning = {</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="stringliteral">&quot;robot_description_planning&quot;</span>: {</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            **joint_limits_yaml,</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            **cartesian_limits_yaml,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            **pilz_cartesian_limits_yaml,</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    kinematics_yaml = <a class="code" href="namespacedemo.html#a674d8a85852ae42d9abdbe1db7b3cda7">load_yaml</a>(</div>

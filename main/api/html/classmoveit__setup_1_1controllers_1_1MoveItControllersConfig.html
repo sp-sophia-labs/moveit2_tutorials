@@ -71,6 +71,7 @@ $(function() {
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classmoveit__setup_1_1controllers_1_1MoveItControllersConfig-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">moveit_setup::controllers::MoveItControllersConfig Class Reference</div>  </div>
@@ -156,8 +157,10 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a2d629641027cec58c4fe386bca9f9325"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__setup_1_1controllers_1_1MoveItControllersConfig.html#a2d629641027cec58c4fe386bca9f9325">parseController</a> (const std::string &amp;name, const YAML::Node &amp;controller)</td></tr>
 <tr class="separator:a2d629641027cec58c4fe386bca9f9325"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a6caa6995af5103e6fde8422c6308a650"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, YAML::Node &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__setup_1_1controllers_1_1MoveItControllersConfig.html#a6caa6995af5103e6fde8422c6308a650">trajectory_parameters_</a></td></tr>
+<tr class="separator:a6caa6995af5103e6fde8422c6308a650"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classmoveit__setup_1_1controllers_1_1ControllersConfig"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classmoveit__setup_1_1controllers_1_1ControllersConfig')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classmoveit__setup_1_1controllers_1_1ControllersConfig.html">moveit_setup::controllers::ControllersConfig</a></td></tr>
 <tr class="memitem:a64ba1e655a0f2e974bd73bb662db05e0 inherit pro_attribs_classmoveit__setup_1_1controllers_1_1ControllersConfig"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structmoveit__setup_1_1controllers_1_1ControllerInfo.html">ControllerInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__setup_1_1controllers_1_1ControllersConfig.html#a64ba1e655a0f2e974bd73bb662db05e0">controllers_</a></td></tr>
 <tr class="memdesc:a64ba1e655a0f2e974bd73bb662db05e0 inherit pro_attribs_classmoveit__setup_1_1controllers_1_1ControllersConfig"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classmoveit__setup_1_1controllers_1_1Controllers.html">Controllers</a> config data.  <a href="classmoveit__setup_1_1controllers_1_1ControllersConfig.html#a64ba1e655a0f2e974bd73bb662db05e0">More...</a><br /></td></tr>
@@ -324,7 +327,32 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the file was read correctly </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="moveit__controllers__config_8cpp_source.html#l00157">157</a> of file <a class="el" href="moveit__controllers__config_8cpp_source.html">moveit_controllers_config.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="moveit__controllers__config_8cpp_source.html#l00168">168</a> of file <a class="el" href="moveit__controllers__config_8cpp_source.html">moveit_controllers_config.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a6caa6995af5103e6fde8422c6308a650"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6caa6995af5103e6fde8422c6308a650">&#9670;&nbsp;</a></span>trajectory_parameters_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;std::string, YAML::Node&gt; moveit_setup::controllers::MoveItControllersConfig::trajectory_parameters_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="moveit__controllers__config_8hpp_source.html#l00160">160</a> of file <a class="el" href="moveit__controllers__config_8hpp_source.html">moveit_controllers_config.hpp</a>.</p>
 
 </div>
 </div>
