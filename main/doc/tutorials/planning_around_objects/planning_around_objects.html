@@ -151,7 +151,7 @@ This project assumes you are starting with the <code class="docutils literal not
 <div class="section" id="create-a-collision-object">
 <h3>3 Create a Collision Object<a class="headerlink" href="#create-a-collision-object" title="Permalink to this headline"></a></h3>
 <p>In the next block of code, we create a collision object.
-The first thing to notice is that it is being placed in the frame of the robot.
+The first thing to notice is that it is being placed in the coordinate frame of the robot.
 If we had a perception system that reported the location of obstacles in our scene, then this is the sort of message it would build.
 Because this is just an example, we are creating it manually.
 One thing to notice at the end of this block of code is that we set the operation on this message to <code class="docutils literal notranslate"><span class="pre">ADD</span></code>.
@@ -174,7 +174,7 @@ Place this code block between setting the target pose from the previous step and
 
 <span class="w">  </span><span class="c1">// Define the pose of the box (relative to the frame_id)</span>
 <span class="w">  </span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Pose</span><span class="w"> </span><span class="n">box_pose</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">box_pose</span><span class="p">.</span><span class="n">orientation</span><span class="p">.</span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">box_pose</span><span class="p">.</span><span class="n">orientation</span><span class="p">.</span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span><span class="w">  </span><span class="c1">// We can leave out the x, y, and z components of the quaternion since they are initialized to 0</span>
 <span class="w">  </span><span class="n">box_pose</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.2</span><span class="p">;</span><span class="w"></span>
 <span class="w">  </span><span class="n">box_pose</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.2</span><span class="p">;</span><span class="w"></span>
 <span class="w">  </span><span class="n">box_pose</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.25</span><span class="p">;</span><span class="w"></span>

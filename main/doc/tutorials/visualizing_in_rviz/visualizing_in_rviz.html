@@ -159,30 +159,36 @@ colcon build --mixin debug
 <div class="section" id="create-a-ros-executor-and-spin-the-node-on-a-thread">
 <h3>2 Create a ROS executor and spin the node on a thread<a class="headerlink" href="#create-a-ros-executor-and-spin-the-node-on-a-thread" title="Permalink to this headline"></a></h3>
 <p>Before we can initialize MoveItVisualTools, we need to have a executor spinning on our ROS node.
-This is necessary because of how MoveItVisualTools interacts with ROS services and topics.</p>
+This is necessary because of how MoveItVisualTools interacts with ROS services and topics. First, add the threading library to your includes at the top.</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;thread&gt;</span><span class="c1">  // &lt;---- add this to the set of includes at the top</span><span class="cp"></span>
-
-<span class="w">  </span><span class="p">...</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// Create a ROS logger</span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">logger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">get_logger</span><span class="p">(</span><span class="s">&quot;hello_moveit&quot;</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">  </span><span class="c1">// We spin up a SingleThreadedExecutor so MoveItVisualTools interact with ROS</span>
+</pre></div>
+</div>
+<p>By creating and naming loggers, we are able to keep our program logs organized.</p>
+<blockquote>
+<div><div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create a ROS logger</span>
+<span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">logger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">get_logger</span><span class="p">(</span><span class="s">&quot;hello_moveit&quot;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Next, add your executor before creating the MoveIt MoveGroup Interface.</p>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="c1">// Spin up a SingleThreadedExecutor for MoveItVisualTools to interact with ROS</span>
 <span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">executors</span><span class="o">::</span><span class="n">SingleThreadedExecutor</span><span class="w"> </span><span class="n">executor</span><span class="p">;</span><span class="w"></span>
 <span class="w">  </span><span class="n">executor</span><span class="p">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">node</span><span class="p">);</span><span class="w"></span>
 <span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">spinner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kr">thread</span><span class="p">([</span><span class="o">&amp;</span><span class="n">executor</span><span class="p">]()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">executor</span><span class="p">.</span><span class="n">spin</span><span class="p">();</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
 
 <span class="w">  </span><span class="c1">// Create the MoveIt MoveGroup Interface</span>
-<span class="w">  </span><span class="p">...</span><span class="w"></span>
 
-<span class="w">  </span><span class="c1">// Shutdown ROS</span>
-<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span><span class="w">  </span><span class="c1">// &lt;--- This will cause the spin function in the thread to return</span>
-<span class="w">  </span><span class="n">spinner</span><span class="p">.</span><span class="n">join</span><span class="p">();</span><span class="w">  </span><span class="c1">// &lt;--- Join the thread before exiting</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
 </pre></div>
 </div>
-<p>After each one of these changes, you should rebuild your workspace to make sure you don’t have any syntax errors.</p>
+<p>Finally, make sure to join the thread before exiting.</p>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Shutdown ROS</span>
+<span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span><span class="w">  </span><span class="c1">// &lt;--- This will cause the spin function in the thread to return</span>
+<span class="n">spinner</span><span class="p">.</span><span class="n">join</span><span class="p">();</span><span class="w">  </span><span class="c1">// &lt;--- Join the thread before exiting</span>
+<span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>After making these changes, rebuild your workspace to make sure you don’t have any syntax errors.</p>
 </div>
 <div class="section" id="create-and-initialize-moveitvisualtools">
 <h3>3 Create and Initialize MoveItVisualTools<a class="headerlink" href="#create-and-initialize-moveitvisualtools" title="Permalink to this headline"></a></h3>
@@ -211,7 +217,7 @@ Remote control is a really simple plugin that lets us have a button in RViz to i
 <span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">draw_title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="n">moveit_visual_tools</span><span class="p">](</span><span class="k">auto</span><span class="w"> </span><span class="n">text</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">text_pose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Isometry3d</span><span class="o">::</span><span class="n">Identity</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">msg</span><span class="p">.</span><span class="n">translation</span><span class="p">().</span><span class="n">z</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">msg</span><span class="p">.</span><span class="n">translation</span><span class="p">().</span><span class="n">z</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span><span class="w">  </span><span class="c1">// Place text 1m above the base link</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span><span class="w"></span>
 <span class="w">  </span><span class="p">}();</span><span class="w"></span>
 <span class="w">  </span><span class="n">moveit_visual_tools</span><span class="p">.</span><span class="n">publishText</span><span class="p">(</span><span class="n">text_pose</span><span class="p">,</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="n">rviz_visual_tools</span><span class="o">::</span><span class="n">WHITE</span><span class="p">,</span><span class="w"></span>

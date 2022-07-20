@@ -52,32 +52,32 @@
 <li class="toctree-l2"><a class="reference internal" href="../visualizing_in_rviz/visualizing_in_rviz.html">Visualizing In RViz</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../planning_around_objects/planning_around_objects.html">Planning Around Objects</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Pick and Place with MoveIt Task Constructor</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#basic-concepts">Basic Concepts</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#getting-started">Getting Started</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#download-moveit-task-constructor">Download MoveIt Task Constructor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#basic-concepts">1 Basic Concepts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getting-started">2 Getting Started</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#download-moveit-task-constructor">2.1 Download MoveIt Task Constructor</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#running-the-demo">Running the Demo</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#setting-up-a-project-with-moveit-task-constructor">Setting up a Project with MoveIt Task Constructor</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#create-a-new-package">Create a New Package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#the-code">The Code</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#code-breakdown">Code Breakdown</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#trying-it-out">3 Trying It Out</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setting-up-a-project-with-moveit-task-constructor">4 Setting up a Project with MoveIt Task Constructor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#create-a-new-package">4.1 Create a New Package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-code">4.2 The Code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#code-breakdown">4.3 Code Breakdown</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#id1">Running the Demo</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#launch-files">Launch files</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#rviz-configuration">RViz Configuration</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#launching-the-demo">Launching the Demo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running-the-demo">5 Running the Demo</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#launch-files">5.1 Launch Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rviz-configuration">5.2 RViz Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#launching-the-demo">5.3 Launching the Demo</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#adding-stages">Adding Stages</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#pick-stages">Pick Stages</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#place-stages">Place Stages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-stages">6 Adding Stages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pick-stages">6.1 Pick Stages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#place-stages">6.2 Place Stages</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#visualizing-with-rviz">Visualizing with RViz</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#debugging-from-terminal">Debugging from terminal</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#various-hints">Various hints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#further-discussion">7 Further Discussion</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#debugging-information-printed-to-the-terminal">7.1 Debugging Information Printed to the Terminal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stages">7.2 Stages</a></li>
 </ul>
 </li>
 </ul>
@@ -138,7 +138,7 @@
     MoveIt Task Constructor Pick and Place example
 </video><p>This tutorial will walk you through creating a package that plans a pick and place operation using <a class="reference external" href="https://github.com/ros-planning/moveit_task_constructor/tree/ros2/">MoveIt Task Constructor</a>. MoveIt Task Constructor provides a way to plan for tasks that consist of multiple different subtasks (known as stages).</p>
 <div class="section" id="basic-concepts">
-<h2>Basic Concepts<a class="headerlink" href="#basic-concepts" title="Permalink to this headline"></a></h2>
+<h2>1 Basic Concepts<a class="headerlink" href="#basic-concepts" title="Permalink to this headline"></a></h2>
 <p>The fundamental idea of MTC is that complex motion planning problems can be composed into a set of simpler subproblems.
 The top-level planning problem is specified as a <strong>Task</strong> while all subproblems are specified by <strong>Stages</strong>.
 Stages can be arranged in any arbitrary order and hierarchy only limited by the individual stages types.
@@ -167,20 +167,20 @@ They can also be used for all kinds of state transitions, as for instance modify
 Combined with the possibility of using class inheritance it is possible to construct very complex behavior while only relying on a well-structured set of primitive stages.</p>
 </div>
 <div class="section" id="getting-started">
-<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline"></a></h2>
+<h2>2 Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline"></a></h2>
 <p>If you haven’t already done so, make sure you’ve completed the steps in <a class="reference internal" href="../getting_started/getting_started.html"><span class="doc">Getting Started</span></a>.</p>
 <div class="section" id="download-moveit-task-constructor">
-<h3>Download MoveIt Task Constructor<a class="headerlink" href="#download-moveit-task-constructor" title="Permalink to this headline"></a></h3>
+<h3>2.1 Download MoveIt Task Constructor<a class="headerlink" href="#download-moveit-task-constructor" title="Permalink to this headline"></a></h3>
 <p>Move into your colcon workspace and pull the MoveIt Task Constructor source:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">ws_moveit</span><span class="o">/</span><span class="n">src</span>
-<span class="n">git</span> <span class="n">pull</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">ros</span><span class="o">-</span><span class="n">planning</span><span class="o">/</span><span class="n">moveit_task_constructor</span><span class="o">.</span><span class="n">git</span> <span class="o">-</span><span class="n">b</span> <span class="n">ros2</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">ros</span><span class="o">-</span><span class="n">planning</span><span class="o">/</span><span class="n">moveit_task_constructor</span><span class="o">.</span><span class="n">git</span> <span class="o">-</span><span class="n">b</span> <span class="n">ros2</span>
 <span class="n">vcs</span> <span class="kn">import</span> <span class="o">&lt;</span> <span class="n">moveit_task_constructor</span><span class="o">/.</span><span class="n">repos</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="section" id="running-the-demo">
-<h2>Running the Demo<a class="headerlink" href="#running-the-demo" title="Permalink to this headline"></a></h2>
+<div class="section" id="trying-it-out">
+<h2>3 Trying It Out<a class="headerlink" href="#trying-it-out" title="Permalink to this headline"></a></h2>
 <p>The MoveIt Task Constructor package contains several basic examples and a pick-and-place demo.
 For all demos you should launch the basic environment:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">moveit_task_constructor_demo</span> <span class="n">demo</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span>
@@ -198,82 +198,22 @@ shown in the right-most window. Selecting one of those solutions will start its 
 <a class="reference internal image-reference" href="../../../_images/mtc_show_stages.gif"><img alt="../../../_images/mtc_show_stages.gif" src="../../../_images/mtc_show_stages.gif" style="width: 700px;" /></a>
 </div>
 <div class="section" id="setting-up-a-project-with-moveit-task-constructor">
-<h2>Setting up a Project with MoveIt Task Constructor<a class="headerlink" href="#setting-up-a-project-with-moveit-task-constructor" title="Permalink to this headline"></a></h2>
+<h2>4 Setting up a Project with MoveIt Task Constructor<a class="headerlink" href="#setting-up-a-project-with-moveit-task-constructor" title="Permalink to this headline"></a></h2>
 <p>This section walks through the steps required to build a simple task with MoveIt Task Constructor.</p>
 <div class="section" id="create-a-new-package">
-<h3>Create a New Package<a class="headerlink" href="#create-a-new-package" title="Permalink to this headline"></a></h3>
+<h3>4.1 Create a New Package<a class="headerlink" href="#create-a-new-package" title="Permalink to this headline"></a></h3>
 <p>Create a new package with the following command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">pkg</span> <span class="n">create</span> <span class="o">--</span><span class="n">build</span><span class="o">-</span><span class="nb">type</span> <span class="n">ament_cmake</span> <span class="o">--</span><span class="n">node</span><span class="o">-</span><span class="n">name</span> <span class="n">mtc_tutorial</span> <span class="n">mtc_tutorial</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">pkg</span> <span class="n">create</span> \
+<span class="o">--</span><span class="n">build</span><span class="o">-</span><span class="nb">type</span> <span class="n">ament_cmake</span> \
+<span class="o">--</span><span class="n">dependencies</span> <span class="n">moveit_task_constructor_core</span> <span class="n">rclcpp</span> \
+<span class="o">--</span><span class="n">node</span><span class="o">-</span><span class="n">name</span> <span class="n">mtc_node</span> <span class="n">mtc_tutorial</span>
 </pre></div>
 </div>
-<p>This will create a new folder called <code class="docutils literal notranslate"><span class="pre">mtc_tutorial</span></code> with a hello world example in <code class="docutils literal notranslate"><span class="pre">src/mtc_node</span></code>. Next, add the dependencies to <code class="docutils literal notranslate"><span class="pre">package.xml</span></code>. It should look similar to this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;?xml version=&quot;1.0&quot;?&gt;
-&lt;?xml-model href=&quot;http://download.ros.org/schema/package_format3.xsd&quot; schematypens=&quot;http://www.w3.org/2001/XMLSchema&quot;?&gt;
-&lt;package format=&quot;3&quot;&gt;
-&lt;name&gt;mtc_tutorial&lt;/name&gt;
-&lt;version&gt;0.0.0&lt;/version&gt;
-&lt;description&gt;TODO: Package description&lt;/description&gt;
-&lt;maintainer email=&quot;youremail@domain.com&quot;&gt;user&lt;/maintainer&gt;
-&lt;license&gt;TODO: License declaration&lt;/license&gt;
-
-&lt;buildtool_depend&gt;ament_cmake&lt;/buildtool_depend&gt;
-
-&lt;depend&gt;moveit_task_constructor_core&lt;/depend&gt;
-&lt;depend&gt;rclcpp&lt;/depend&gt;
-
-&lt;test_depend&gt;ament_lint_auto&lt;/test_depend&gt;
-&lt;test_depend&gt;ament_lint_common&lt;/test_depend&gt;
-
-&lt;export&gt;
-    &lt;build_type&gt;ament_cmake&lt;/build_type&gt;
-&lt;/export&gt;
-&lt;/package&gt;
-</pre></div>
-</div>
-<p>Also, add the dependencies to <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code>. The file should look similar to this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cmake_minimum_required(VERSION 3.8)
-project(mtc_tutorial)
-
-if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES &quot;Clang&quot;)
-add_compile_options(-Wall -Wextra -Wpedantic)
-endif()
-
-# find dependencies
-find_package(ament_cmake REQUIRED)
-find_package(moveit_task_constructor_core REQUIRED)
-find_package(rclcpp REQUIRED)
-# uncomment the following section in order to fill in
-# further dependencies manually.
-# find_package(&lt;dependency&gt; REQUIRED)
-
-add_executable(mtc_tutorial src/mtc_tutorial.cpp)
-ament_target_dependencies(mtc_tutorial moveit_task_constructor_core rclcpp)
-target_include_directories(mtc_tutorial PUBLIC
-$&lt;BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include&gt;
-$&lt;INSTALL_INTERFACE:include&gt;)
-target_compile_features(mtc_tutorial PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
-
-install(TARGETS mtc_tutorial
-DESTINATION lib/${PROJECT_NAME})
-
-if(BUILD_TESTING)
-find_package(ament_lint_auto REQUIRED)
-# the following line skips the linter which checks for copyrights
-# uncomment the line when a copyright and license is not present in all source files
-#set(ament_cmake_copyright_FOUND TRUE)
-# the following line skips cpplint (only works in a git repo)
-# uncomment the line when this package is not in a git repo
-#set(ament_cmake_cpplint_FOUND TRUE)
-ament_lint_auto_find_test_dependencies()
-endif()
-
-ament_package()
-</pre></div>
-</div>
+<p>This will create a new package and folder called <code class="docutils literal notranslate"><span class="pre">mtc_tutorial</span></code> with a dependency on <code class="docutils literal notranslate"><span class="pre">moveit_task_constructor_core</span></code> as well as a hello world example in <code class="docutils literal notranslate"><span class="pre">src/mtc_node</span></code>.</p>
 </div>
 <div class="section" id="the-code">
-<h3>The Code<a class="headerlink" href="#the-code" title="Permalink to this headline"></a></h3>
-<p>Open <code class="docutils literal notranslate"><span class="pre">mtc_tutorial.cpp</span></code> in your editor of choice, and paste in the following code.</p>
+<h3>4.2 The Code<a class="headerlink" href="#the-code" title="Permalink to this headline"></a></h3>
+<p>Open <code class="docutils literal notranslate"><span class="pre">mtc_node.cpp</span></code> in your editor of choice, and paste in the following code.</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;rclcpp/rclcpp.hpp&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;moveit/planning_scene/planning_scene.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;moveit/planning_scene_interface/planning_scene_interface.h&gt;</span><span class="cp"></span>
@@ -440,7 +380,7 @@ ament_package()
 </div>
 </div>
 <div class="section" id="code-breakdown">
-<h3>Code Breakdown<a class="headerlink" href="#code-breakdown" title="Permalink to this headline"></a></h3>
+<h3>4.3 Code Breakdown<a class="headerlink" href="#code-breakdown" title="Permalink to this headline"></a></h3>
 <p>The top of the code includes the ROS and MoveIt Libraries that this package uses.</p>
 <blockquote>
 <div><ul class="simple">
@@ -450,7 +390,6 @@ ament_package()
 <li><p><code class="docutils literal notranslate"><span class="pre">tf2_geometry_msgs/tf2_geometry_msgs.hpp</span></code> and <code class="docutils literal notranslate"><span class="pre">tf2_eigen/tf2_eigen.hpp</span></code> won’t be used in this initial example, but they will be used for pose generation when we add more stages to the MoveIt Task Constructor task.</p></li>
 </ul>
 </div></blockquote>
-<p>The next line gets a logger for your new node. We also create a namespace alias for <code class="docutils literal notranslate"><span class="pre">moveit::task_constructor</span></code> for convenience.</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;rclcpp/rclcpp.hpp&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;moveit/planning_scene/planning_scene.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;moveit/planning_scene_interface/planning_scene_interface.h&gt;</span><span class="cp"></span>
@@ -467,8 +406,10 @@ ament_package()
 <span class="cp">#else</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;tf2_eigen/tf2_eigen.h&gt;</span><span class="cp"></span>
 <span class="cp">#endif</span>
-
-<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Logger</span><span class="w"> </span><span class="n">LOGGER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">get_logger</span><span class="p">(</span><span class="s">&quot;mtc_tutorial&quot;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The next line gets a logger for our new node. We also create a namespace alias for <code class="docutils literal notranslate"><span class="pre">moveit::task_constructor</span></code> for convenience.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Logger</span><span class="w"> </span><span class="n">LOGGER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">get_logger</span><span class="p">(</span><span class="s">&quot;mtc_tutorial&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="k">namespace</span><span class="w"> </span><span class="nn">mtc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nn">moveit</span><span class="o">::</span><span class="nn">task_constructor</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
@@ -506,7 +447,7 @@ ament_package()
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>This class method is used to set up the planning scene that is used in the example. It creates a cylinder with dimensions specified by <code class="docutils literal notranslate"><span class="pre">object.primitives[0].dimensions</span></code> and position specified by <code class="docutils literal notranslate"><span class="pre">pose.position.z</span></code> and <code class="docutils literal notranslate"><span class="pre">pose.position.x</span></code>. You can try changing these numbers to resize and move the cylinder around. If you move the cylinder out of the robot’s reach, planning will fail.</p>
+<p>This class method is used to set up the planning scene that is used in the example. It creates a cylinder with dimensions specified by <code class="docutils literal notranslate"><span class="pre">object.primitives[0].dimensions</span></code> and position specified by <code class="docutils literal notranslate"><span class="pre">pose.position.z</span></code> and <code class="docutils literal notranslate"><span class="pre">pose.position.x</span></code>. You can try changing these numbers to resize and move the cylinder around. If we move the cylinder out of the robot’s reach, planning will fail.</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">MTCTaskNode::setupPlanningScene</span><span class="p">()</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="n">moveit_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">CollisionObject</span><span class="w"> </span><span class="n">object</span><span class="p">;</span><span class="w"></span>
@@ -583,19 +524,23 @@ ament_package()
 <span class="n">task</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">move</span><span class="p">(</span><span class="n">stage_state_current</span><span class="p">));</span><span class="w"></span>
 </pre></div>
 </div>
-<p>In order to plan any robot motions, we need to specify a solver. MoveIt Task Constructor has three options for solvers:</p>
+<p>Solvers are used to define the type of robot motion. MoveIt Task Constructor has three options for solvers:</p>
 <blockquote>
-<div><ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">PipelinePlanner</span></code> uses MoveIt’s planning pipeline, which typically defaults to OMPL.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CartesianPath</span></code> is used to move the end effector in a straight line in Cartesian space.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">JointInterpolation</span></code> is a simple planner that interpolates between the start and goal joint states. It is typically used for simple motions as it computes quickly but doesn’t support complex motions.</p></li>
-</ul>
-</div></blockquote>
-<p>We also set some properties specific for to the Cartesian planner.</p>
+<div><p><strong>PipelinePlanner</strong> uses MoveIt’s planning pipeline, which typically defaults to <a class="reference external" href="https://github.com/ompl/ompl">OMPL</a>.</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">sampling_planner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">mtc</span><span class="o">::</span><span class="n">solvers</span><span class="o">::</span><span class="n">PipelinePlanner</span><span class="o">&gt;</span><span class="p">(</span><span class="n">node_</span><span class="p">);</span><span class="w"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">interpolation_planner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">mtc</span><span class="o">::</span><span class="n">solvers</span><span class="o">::</span><span class="n">JointInterpolationPlanner</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
-
-<span class="k">auto</span><span class="w"> </span><span class="n">cartesian_planner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">mtc</span><span class="o">::</span><span class="n">solvers</span><span class="o">::</span><span class="n">CartesianPath</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>JointInterpolation</strong> is a simple planner that interpolates between the start and goal joint states. It is typically used for simple motions as it computes quickly but doesn’t support complex motions.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">interpolation_planner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">mtc</span><span class="o">::</span><span class="n">solvers</span><span class="o">::</span><span class="n">JointInterpolationPlanner</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+<p><strong>CartesianPath</strong> is used to move the end effector in a straight line in Cartesian space.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">cartesian_planner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">mtc</span><span class="o">::</span><span class="n">solvers</span><span class="o">::</span><span class="n">CartesianPath</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Feel free to try out the different solvers and see how the robot motion changes. For the first stage we will use the Cartesian planner, which requires the following properties to be set:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">cartesian_planner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">mtc</span><span class="o">::</span><span class="n">solvers</span><span class="o">::</span><span class="n">CartesianPath</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
 <span class="n">cartesian_planner</span><span class="o">-&gt;</span><span class="n">setMaxVelocityScaling</span><span class="p">(</span><span class="mf">1.0</span><span class="p">);</span><span class="w"></span>
 <span class="n">cartesian_planner</span><span class="o">-&gt;</span><span class="n">setMaxAccelerationScaling</span><span class="p">(</span><span class="mf">1.0</span><span class="p">);</span><span class="w"></span>
 <span class="n">cartesian_planner</span><span class="o">-&gt;</span><span class="n">setStepSize</span><span class="p">(</span><span class="mf">.01</span><span class="p">);</span><span class="w"></span>
@@ -640,12 +585,12 @@ ament_package()
 </div>
 </div>
 </div>
-<div class="section" id="id1">
-<h2>Running the Demo<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h2>
+<div class="section" id="running-the-demo">
+<h2>5 Running the Demo<a class="headerlink" href="#running-the-demo" title="Permalink to this headline"></a></h2>
 <div class="section" id="launch-files">
-<h3>Launch files<a class="headerlink" href="#launch-files" title="Permalink to this headline"></a></h3>
-<p>We will need a launch file to launch <code class="docutils literal notranslate"><span class="pre">move_group</span></code>, <code class="docutils literal notranslate"><span class="pre">ros2_control</span></code>, <code class="docutils literal notranslate"><span class="pre">static_tf</span></code>, <code class="docutils literal notranslate"><span class="pre">robot_state_publisher</span></code>, and <code class="docutils literal notranslate"><span class="pre">rviz</span></code>. <a class="reference external" href="https://github.com/ros-planning/moveit2_tutorials/blob/main/doc/tutorials/pick_and_place_with_moveit_task_constructor/launch/pick_place_demo.launch.py">Here</a> is the launch file we use in the tutorials package. Put this in the launch directory of your package.</p>
-<p>To run the MoveIt Task Constructor node, we need a second launch file to start the <code class="docutils literal notranslate"><span class="pre">mtc_tutorial</span></code> executable with the proper parameters. Either load your URDF, SRDF, and OMPL parameters, or use MoveIt Configs Utils to do so. Your launch file should look something like this:</p>
+<h3>5.1 Launch Files<a class="headerlink" href="#launch-files" title="Permalink to this headline"></a></h3>
+<p>We will need a launch file to launch the <code class="docutils literal notranslate"><span class="pre">move_group</span></code>, <code class="docutils literal notranslate"><span class="pre">ros2_control</span></code>, <code class="docutils literal notranslate"><span class="pre">static_tf</span></code>, <code class="docutils literal notranslate"><span class="pre">robot_state_publisher</span></code>, and <code class="docutils literal notranslate"><span class="pre">rviz</span></code> nodes that provide us the environment to run the demo. The one we will use for this example can be found <a class="reference external" href="https://github.com/ros-planning/moveit2_tutorials/blob/main/doc/tutorials/pick_and_place_with_moveit_task_constructor/launch/mtc_demo.launch.py">here</a>.</p>
+<p>To run the MoveIt Task Constructor node, we will use a second launch file to start the <code class="docutils literal notranslate"><span class="pre">mtc_tutorial</span></code> executable with the proper parameters. Here we can load URDF, SRDF, and OMPL parameters, or use MoveIt Configs Utils to do so. Your launch file should look something like the one found in this tutorial package <a class="reference external" href="https://github.com/ros-planning/moveit2_tutorials/blob/main/doc/tutorials/pick_and_place_with_moveit_task_constructor/launch/pick_place_demo.launch.py">here</a> (pay close attention to the <code class="docutils literal notranslate"><span class="pre">package</span></code> and <code class="docutils literal notranslate"><span class="pre">executable</span></code> arguments below as they are different from the launch file linked) :</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">launch</span> <span class="kn">import</span> <span class="n">LaunchDescription</span>
 <span class="kn">from</span> <span class="nn">launch_ros.actions</span> <span class="kn">import</span> <span class="n">Node</span>
 <span class="kn">from</span> <span class="nn">moveit_configs_utils</span> <span class="kn">import</span> <span class="n">MoveItConfigsBuilder</span>
@@ -656,7 +601,7 @@ ament_package()
     <span class="c1"># MTC Demo node</span>
     <span class="n">pick_place_demo</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span>
         <span class="n">package</span><span class="o">=</span><span class="s2">&quot;mtc_tutorial&quot;</span><span class="p">,</span>
-        <span class="n">executable</span><span class="o">=</span><span class="s2">&quot;mtc_tutorial&quot;</span><span class="p">,</span>
+        <span class="n">executable</span><span class="o">=</span><span class="s2">&quot;mtc_node&quot;</span><span class="p">,</span>
         <span class="n">output</span><span class="o">=</span><span class="s2">&quot;screen&quot;</span><span class="p">,</span>
         <span class="n">parameters</span><span class="o">=</span><span class="p">[</span>
             <span class="n">moveit_config</span><span class="p">,</span>
@@ -666,21 +611,27 @@ ament_package()
     <span class="k">return</span> <span class="n">LaunchDescription</span><span class="p">([</span><span class="n">pick_place_demo</span><span class="p">])</span>
 </pre></div>
 </div>
-<p>Save this file as <code class="docutils literal notranslate"><span class="pre">pick_place_demo.launch.py</span></code> in your package’s launch directory, then build and source your colcon workspace.</p>
+<p>Save a launch file as <code class="docutils literal notranslate"><span class="pre">pick_place_demo.launch.py</span></code> or download one to the package’s launch directory. Make sure to edit the <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> so it includes the launch folder by adding the following lines:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>install(DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}
+  )
+</pre></div>
+</div>
+<p>Now we can build and source the colcon workspace.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">ws_moveit</span>
 <span class="n">colcon</span> <span class="n">build</span> <span class="o">--</span><span class="n">mixin</span> <span class="n">release</span>
 <span class="n">source</span> <span class="o">~/</span><span class="n">ws_moveit</span><span class="o">/</span><span class="n">install</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">bash</span>
 </pre></div>
 </div>
-<p>Start by launching your first launch file. If you want to use the one provided by the tutorials:</p>
+<p>Start by launching the first launch file. If you want to use the one provided by the tutorials:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">moveit2_tutorials</span> <span class="n">mtc_demo</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
-<p>RViz should load. If you’re using your own launch file, before we can see anything, we will need to configure RViz. If you’re using the launch file from the tutorials package, this will already be configured for you.</p>
+<p>RViz will now load. If you’re using your own launch file and haven’t included an rviz config <a class="reference external" href="https://github.com/ros-planning/moveit2_tutorials/blob/main/doc/tutorials/pick_and_place_with_moveit_task_constructor/launch/mtc.rviz">such as this</a>, you will need to configure RViz before you see anything displayed. If you’re using the launch file from the tutorials package, RViz will already be configured for you and you can jump to the end of the next section.</p>
 </div>
 <div class="section" id="rviz-configuration">
-<h3>RViz Configuration<a class="headerlink" href="#rviz-configuration" title="Permalink to this headline"></a></h3>
-<p>In order to see your robot and the MoveIt Task Constructor solutions in RViz, we’ll have to make some changes to the RViz configuration. First, start RViz. The following steps will cover how to set up RViz for MoveIt Task Constructor solution visualization.</p>
+<h3>5.2 RViz Configuration<a class="headerlink" href="#rviz-configuration" title="Permalink to this headline"></a></h3>
+<p>If you are not using the RViz configuration provided, we’ll have to make some changes to the RViz configuration to see your robot and the MoveIt Task Constructor solutions. First, start RViz. The following steps will cover how to set up RViz for MoveIt Task Constructor solution visualization.</p>
 <ol class="arabic simple">
 <li><p>If the <strong>MotionPlanning</strong> display is active, uncheck it to hide it for now.</p></li>
 <li><p>Under <strong>Global Options</strong>, change the <strong>Fixed Frame</strong> from <code class="docutils literal notranslate"><span class="pre">map</span></code> to <code class="docutils literal notranslate"><span class="pre">panda_link0</span></code> if not already done.</p></li>
@@ -691,8 +642,8 @@ ament_package()
 <p>You should see the panda arm in the main view with Motion Planning Tasks display open in the bottom left and nothing in it. Your MTC task will show up in this panel once you launch the <code class="docutils literal notranslate"><span class="pre">mtc_tutorial</span></code> node. If you’re using <code class="docutils literal notranslate"><span class="pre">mtc_demo.launch.py</span></code> from the tutorials, jump back in here.</p>
 </div>
 <div class="section" id="launching-the-demo">
-<h3>Launching the Demo<a class="headerlink" href="#launching-the-demo" title="Permalink to this headline"></a></h3>
-<p>Launch your <code class="docutils literal notranslate"><span class="pre">mtc_tutorial</span></code> node with</p>
+<h3>5.3 Launching the Demo<a class="headerlink" href="#launching-the-demo" title="Permalink to this headline"></a></h3>
+<p>Launch the <code class="docutils literal notranslate"><span class="pre">mtc_tutorial</span></code> node with</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">mtc_tutorial</span> <span class="n">pick_place_demo</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
@@ -705,10 +656,10 @@ ament_package()
 </div>
 </div>
 <div class="section" id="adding-stages">
-<h2>Adding Stages<a class="headerlink" href="#adding-stages" title="Permalink to this headline"></a></h2>
+<h2>6 Adding Stages<a class="headerlink" href="#adding-stages" title="Permalink to this headline"></a></h2>
 <p>So far, we’ve walked through creating and executing a simple task, which runs but does not do much. Now, we will start adding the pick-and-place stages to the task. The image below shows an outline of the stages we will use in our task.</p>
 <a class="reference internal image-reference" href="../../../_images/stages.png"><img alt="../../../_images/stages.png" src="../../../_images/stages.png" style="width: 700px;" /></a>
-<p>We will start adding stages after our existing open hand stage here:</p>
+<p>We will start adding stages after our existing open hand stage. Open <code class="docutils literal notranslate"><span class="pre">mtc_node.cpp</span></code> and locate the following lines:</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">stage_open_hand</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">mtc</span><span class="o">::</span><span class="n">stages</span><span class="o">::</span><span class="n">MoveTo</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;open hand&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">interpolation_planner</span><span class="p">);</span><span class="w"></span>
 <span class="n">stage_open_hand</span><span class="o">-&gt;</span><span class="n">setGroup</span><span class="p">(</span><span class="n">hand_group_name</span><span class="p">);</span><span class="w"></span>
@@ -718,7 +669,7 @@ ament_package()
 </pre></div>
 </div>
 <div class="section" id="pick-stages">
-<h3>Pick Stages<a class="headerlink" href="#pick-stages" title="Permalink to this headline"></a></h3>
+<h3>6.1 Pick Stages<a class="headerlink" href="#pick-stages" title="Permalink to this headline"></a></h3>
 <p>We need to move the arm to a position where we can pick up our object. This is done with a <code class="docutils literal notranslate"><span class="pre">Connect</span></code> stage, which as its name implies, is a Connector stage. This means that it tries to bridge between the results of the stage before and after it. This stage is initialized with a name, <code class="docutils literal notranslate"><span class="pre">move_to_pick</span></code>, and a <code class="docutils literal notranslate"><span class="pre">GroupPlannerVector</span></code> that specifies the planning group and the planner. We then set a timeout for the stage, set the properties for the stage, and add it to our task.</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">stage_move_to_pick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">mtc</span><span class="o">::</span><span class="n">stages</span><span class="o">::</span><span class="n">Connect</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>
 <span class="w">    </span><span class="s">&quot;move to pick&quot;</span><span class="p">,</span><span class="w"></span>
@@ -848,10 +799,14 @@ ament_package()
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
+<p>To test out the newly created stage, build the code and execute:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">mtc_tutorial</span> <span class="n">pick_place_demo</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="place-stages">
-<h3>Place Stages<a class="headerlink" href="#place-stages" title="Permalink to this headline"></a></h3>
-<p>Now that the stages that define the pick are complete, we move on to defining the stages for placing the object. We start with a <code class="docutils literal notranslate"><span class="pre">Connect</span></code> stage to connect the two, as we will soon be using a generator stage to generate the pose for placing the object.</p>
+<h3>6.2 Place Stages<a class="headerlink" href="#place-stages" title="Permalink to this headline"></a></h3>
+<p>Now that the stages that define the pick are complete, we move on to defining the stages for placing the object. Picking up where we left off, we add a <code class="docutils literal notranslate"><span class="pre">Connect</span></code> stage to connect the two, as we will soon be using a generator stage to generate the pose for placing the object.</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">stage_move_to_place</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">mtc</span><span class="o">::</span><span class="n">stages</span><span class="o">::</span><span class="n">Connect</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>
 <span class="w">      </span><span class="s">&quot;move to place&quot;</span><span class="p">,</span><span class="w"></span>
@@ -906,7 +861,7 @@ ament_package()
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>We also can re-enable collisions with the object now that we no longer need to hold it. This is done using <code class="docutils literal notranslate"><span class="pre">allowCollisions</span></code> almost exactly the same way as disabling collisions, except setting the last argument to <code class="docutils literal notranslate"><span class="pre">false</span></code> rather than``true``.</p>
+<p>We also can re-enable collisions with the object now that we no longer need to hold it. This is done using <code class="docutils literal notranslate"><span class="pre">allowCollisions</span></code> almost exactly the same way as disabling collisions, except setting the last argument to <code class="docutils literal notranslate"><span class="pre">false</span></code> rather than <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">stage</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
 <span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">mtc</span><span class="o">::</span><span class="n">stages</span><span class="o">::</span><span class="n">ModifyPlanningScene</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;forbid collision (hand,object)&quot;</span><span class="p">);</span><span class="w"></span>
@@ -965,11 +920,14 @@ ament_package()
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Congratulations! You’ve now defined a pick and place task using MoveIt Task Constructor!</p>
+<p>Congratulations! You’ve now defined a pick and place task using MoveIt Task Constructor! To try it out, build the code and execute:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">mtc_tutorial</span> <span class="n">pick_place_demo</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
 </div>
 </div>
-<div class="section" id="visualizing-with-rviz">
-<h2>Visualizing with RViz<a class="headerlink" href="#visualizing-with-rviz" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="further-discussion">
+<h2>7 Further Discussion<a class="headerlink" href="#further-discussion" title="Permalink to this headline"></a></h2>
 <p>The task with each comprising stage is shown in the Motion Planning Tasks pane. Click on a stage and additional information about the stage will show up to the right. The right pane shows different solutions as well as their associated costs. Depending on the stage type and the robot configuration, there may only be one solution shown.</p>
 <p>Click one of the solution costs to see an animation of the robot following the plan for that stage. Click the “Exec” button in the upper-right portion of the pane to execute the motion.</p>
 <p>To run the complete MoveIt Task Constructor example included with the MoveIt tutorials:</p>
@@ -980,8 +938,8 @@ ament_package()
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">moveit2_tutorials</span> <span class="n">pick_place_demo</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
-<div class="section" id="debugging-from-terminal">
-<h3>Debugging from terminal<a class="headerlink" href="#debugging-from-terminal" title="Permalink to this headline"></a></h3>
+<div class="section" id="debugging-information-printed-to-the-terminal">
+<h3>7.1 Debugging Information Printed to the Terminal<a class="headerlink" href="#debugging-information-printed-to-the-terminal" title="Permalink to this headline"></a></h3>
 <p>When running MTC, it prints a diagram like this to terminal:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>demo_node-1<span class="o">]</span>     <span class="m">1</span>  - ←   <span class="m">1</span> →   -  <span class="m">0</span> / initial_state
 <span class="o">[</span>demo_node-1<span class="o">]</span>     -  <span class="m">0</span> →   <span class="m">0</span> →   -  <span class="m">0</span> / move_to_home
@@ -996,8 +954,8 @@ ament_package()
 </ul>
 <p>In this case, we could tell that “move_to_home” was the root cause of the failure. The problem was a home state that was in collision. Defining a new, collision-free home position fixed the issue.</p>
 </div>
-<div class="section" id="various-hints">
-<h3>Various hints<a class="headerlink" href="#various-hints" title="Permalink to this headline"></a></h3>
+<div class="section" id="stages">
+<h3>7.2 Stages<a class="headerlink" href="#stages" title="Permalink to this headline"></a></h3>
 <p>Information about individual stages can be retrieved from the task. For example, here we retrieve the unique ID for a stage:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">uint32_t</span> <span class="n">const</span> <span class="n">unique_stage_id</span> <span class="o">=</span> <span class="n">task_</span><span class="o">.</span><span class="n">stages</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">findChild</span><span class="p">(</span><span class="n">stage_name</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">introspectionId</span><span class="p">();</span>
 </pre></div>

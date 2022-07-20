@@ -205,9 +205,19 @@ This will create the necessary changes in the <code class="docutils literal notr
 <span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<p>The first argument is a string that ROS will use to make a unique node.
+<p>The first argument is a string that ROS will use to name a unique node.
 The second is needed for MoveIt because of how we use ROS Parameters.</p>
+<p>Next, we <a class="reference external" href="https://docs.ros.org/en/humble/Tutorials/Demos/Logging-and-logger-configuration.html">create a logger</a> named “hello_moveit” to keep our log outputs organized and configurable.</p>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create a ROS logger</span>
+<span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">logger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">get_logger</span><span class="p">(</span><span class="s">&quot;hello_moveit&quot;</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
 <p>Lastly, we have the code to shutdown ROS.</p>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Shutdown ROS</span>
+<span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span><span class="w"></span>
+<span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="plan-and-execute-using-movegroupinterface">
