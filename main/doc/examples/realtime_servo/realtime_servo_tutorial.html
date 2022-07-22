@@ -68,7 +68,10 @@
 <li class="toctree-l5"><a class="reference internal" href="#sending-commands">Sending Commands</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="#servo-overview">Servo Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#servo-overview">Servo Overview</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#inverse-kinematics-in-servo">Inverse Kinematics in Servo</a></li>
+</ul>
+</li>
 <li class="toctree-l4"><a class="reference internal" href="#setup-on-a-new-robot">Setup on a New Robot</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="#preliminaries">Preliminaries</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#input-devices">Input Devices</a></li>
@@ -380,6 +383,36 @@ defined, not the robot frame that will follow the command. Again, we need a rece
 </ol>
 </dd>
 </dl>
+<div class="section" id="inverse-kinematics-in-servo">
+<h3>Inverse Kinematics in Servo<a class="headerlink" href="#inverse-kinematics-in-servo" title="Permalink to this headline"></a></h3>
+<p>Inverse Kinematics may be handled internally by MoveIt Servo via inverse Jacobian calculations. However, you may also use an IK plugin.
+To configure an IK plugin for use in Servo, your robot config package must define one in a <code class="code docutils literal notranslate"><span class="pre">kinematics.yaml</span></code> file, such as the one
+in the <a class="reference external" href="https://github.com/ros-planning/moveit_resources/blob/master/panda_moveit_config/config/kinematics.yaml">Panda config package</a>.
+Several IK plugins are available <a class="reference external" href="https://github.com/ros-planning/moveit2/tree/main/moveit_kinematics">within MoveIt</a>,
+as well as <a class="reference external" href="https://github.com/PickNikRobotics/bio_ik/tree/ros2">externally</a>.
+<code class="code docutils literal notranslate"><span class="pre">bio_ik/BioIKKinematicsPlugin</span></code> is the most common choice.</p>
+<p>Once your <code class="code docutils literal notranslate"><span class="pre">kinematics.yaml</span></code> file has been populated, include it with the ROS parameters passed to the servo node in your launch file:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">moveit_config</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">MoveItConfigsBuilder</span><span class="p">(</span><span class="s2">&quot;moveit_resources_panda&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">robot_description</span><span class="p">(</span><span class="n">file_path</span><span class="o">=</span><span class="s2">&quot;config/panda.urdf.xacro&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">to_moveit_configs</span><span class="p">()</span>
+<span class="p">)</span>
+<span class="n">servo_node</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span>
+    <span class="n">package</span><span class="o">=</span><span class="s2">&quot;moveit_servo&quot;</span><span class="p">,</span>
+    <span class="n">executable</span><span class="o">=</span><span class="s2">&quot;servo_node_main&quot;</span><span class="p">,</span>
+    <span class="n">parameters</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">servo_params</span><span class="p">,</span>
+        <span class="n">moveit_config</span><span class="o">.</span><span class="n">robot_description</span><span class="p">,</span>
+        <span class="n">moveit_config</span><span class="o">.</span><span class="n">robot_description_semantic</span><span class="p">,</span>
+        <span class="n">moveit_config</span><span class="o">.</span><span class="n">robot_description_kinematics</span><span class="p">,</span> <span class="c1"># here is where kinematics plugin parameters are passed</span>
+    <span class="p">],</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>The above excerpt is taken from <a class="reference external" href="https://github.com/ros-planning/moveit2/blob/main/moveit_ros/moveit_servo/launch/servo_example.launch.py">servo_example.launch.py</a> in MoveIt.
+In the above example, the <code class="code docutils literal notranslate"><span class="pre">kinematics.yaml</span></code> file is taken from the <a class="reference external" href="https://github.com/ros-planning/moveit_resources">moveit_resources</a> repository in the workspace, specifically <code class="code docutils literal notranslate"><span class="pre">moveit_resources/panda_moveit_config/config/kinematics.yaml</span></code>.
+The actual ROS parameter names that get passed by loading the yaml file are of the form <code class="code docutils literal notranslate"><span class="pre">robot_description_kinematics.&lt;group_name&gt;.&lt;param_name&gt;</span></code>, e.g. <code class="code docutils literal notranslate"><span class="pre">robot_description_kinematics.panda_arm.kinematics_solver</span></code>.</p>
+</div>
 </div>
 <div class="section" id="setup-on-a-new-robot">
 <h2>Setup on a New Robot<a class="headerlink" href="#setup-on-a-new-robot" title="Permalink to this headline"></a></h2>
