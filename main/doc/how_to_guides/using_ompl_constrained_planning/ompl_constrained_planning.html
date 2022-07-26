@@ -62,6 +62,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#box-constraints">Box Constraints</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#equality-constraints">Equality Constraints</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#orientation-constraints">Orientation Constraints</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mixed-constraints">Mixed Constraints</a></li>
 </ul>
 </li>
 </ul>
@@ -170,7 +171,11 @@
 <video width="300px" controls="true" autoplay="true" loop="true">
     <source src="../../../_static/videos/ompl_constraints_orientation.webm" type="video/webm">
     OMPL constrained planning orientation constraint example
-</video><p>This example may take longer to plan. Press Next to remove all markers and end the example. If planning fails, you can start at the beginning of the section to try again.</p>
+</video><p>This example may take longer to plan. If planning fails, you can start at the beginning of the section to try again. Press Next to try mixed constraints,</p>
+<video width="300px" controls="true" autoplay="true" loop="true">
+    <source src="../../../_static/videos/ompl_mixed_constraints.webm" type="video/webm">
+    OMPL constrained planning orientation constraint example
+</video><p>Press Next to remove all markers and end the example.</p>
 </div>
 <div class="section" id="how-to-set-constraints">
 <h2>How to Set Constraints<a class="headerlink" href="#how-to-set-constraints" title="Permalink to this headline"></a></h2>
@@ -295,7 +300,7 @@
 </div>
 <div class="section" id="orientation-constraints">
 <h3>Orientation Constraints<a class="headerlink" href="#orientation-constraints" title="Permalink to this headline"></a></h3>
-<p>Finally, we can place constraints on orientation. We set the target pose to be the other side of the robot for a more drastic move as we are no longer constrained by position.</p>
+<p>We can place constraints on orientation. We set the target pose to be the other side of the robot for a more drastic move as we are no longer constrained by position.</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">target_pose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_relative_pose</span><span class="p">(</span><span class="mf">-0.6</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
@@ -320,6 +325,35 @@
 </div>
 <p>Set up the planning problem as before and plan.</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">move_group_interface</span><span class="p">.</span><span class="n">setPathConstraints</span><span class="p">(</span><span class="n">orientation_constraints</span><span class="p">);</span><span class="w"></span>
+<span class="n">move_group_interface</span><span class="p">.</span><span class="n">setPoseTarget</span><span class="p">(</span><span class="n">target_pose</span><span class="p">);</span><span class="w"></span>
+<span class="n">move_group_interface</span><span class="p">.</span><span class="n">setPlanningTime</span><span class="p">(</span><span class="mf">10.0</span><span class="p">);</span><span class="w"></span>
+<span class="n">move_group_interface</span><span class="p">.</span><span class="n">plan</span><span class="p">(</span><span class="n">plan</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="mixed-constraints">
+<h3>Mixed Constraints<a class="headerlink" href="#mixed-constraints" title="Permalink to this headline"></a></h3>
+<p>Finally, we can set both a position and an orientation constraint. We will use the same target pose that we used for the orientation constraint.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">target_pose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_relative_pose</span><span class="p">(</span><span class="mf">-0.6</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>We will also reuse our orientation constraint - but this time, the original box constraint won’t work as the target pose is outside of our original box. Let’s modify the box pose and dimensions such that the goal pose is reachable. Be aware that having a both a position and orientation constraint can drastically shrink the reachable area - the target pose not only needs to be within the box constraint as mentioned, but needs to be reachable while satisfying the orientation constriant, which is more difficult to visualize.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">box</span><span class="p">.</span><span class="n">dimensions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.6</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="n">box_constraint</span><span class="p">.</span><span class="n">constraint_region</span><span class="p">.</span><span class="n">primitives</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">box</span><span class="p">;</span><span class="w"></span>
+
+<span class="n">box_pose</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="n">box_pose</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">-0.1</span><span class="p">;</span><span class="w"></span>
+<span class="n">box_pose</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">current_pose</span><span class="p">.</span><span class="n">pose</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">z</span><span class="p">;</span><span class="w"></span>
+<span class="n">box_constraint</span><span class="p">.</span><span class="n">constraint_region</span><span class="p">.</span><span class="n">primitive_poses</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">box_pose</span><span class="p">;</span><span class="w"></span>
+<span class="n">box_constraint</span><span class="p">.</span><span class="n">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>As before, we create a generalized constraint message, this time adding both our position and orientation constrint.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">moveit_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Constraints</span><span class="w"> </span><span class="n">mixed_constraints</span><span class="p">;</span><span class="w"></span>
+<span class="n">mixed_constraints</span><span class="p">.</span><span class="n">position_constraints</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">box_constraint</span><span class="p">);</span><span class="w"></span>
+<span class="n">mixed_constraints</span><span class="p">.</span><span class="n">orientation_constraints</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">orientation_constraint</span><span class="p">);</span><span class="w"></span>
+
+<span class="n">move_group_interface</span><span class="p">.</span><span class="n">setPathConstraints</span><span class="p">(</span><span class="n">mixed_constraints</span><span class="p">);</span><span class="w"></span>
 <span class="n">move_group_interface</span><span class="p">.</span><span class="n">setPoseTarget</span><span class="p">(</span><span class="n">target_pose</span><span class="p">);</span><span class="w"></span>
 <span class="n">move_group_interface</span><span class="p">.</span><span class="n">setPlanningTime</span><span class="p">(</span><span class="mf">10.0</span><span class="p">);</span><span class="w"></span>
 <span class="n">move_group_interface</span><span class="p">.</span><span class="n">plan</span><span class="p">(</span><span class="n">plan</span><span class="p">);</span><span class="w"></span>
