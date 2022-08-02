@@ -1,5 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title=" " alt="" coords="5,1197,85,1224"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,1263,85,1289"/>
 <area shape="rect" id="node2" href="$classcleanup_1_1CleanupTest.html" title=" " alt="" coords="208,5,364,32"/>
 <area shape="rect" id="node3" href="$classfanuc-kdl-singular_1_1TestOutcome.html" title=" " alt="" coords="172,56,400,83"/>
 <area shape="rect" id="node4" href="$classfanuc-kdl-singular_1_1TestTerminatingProcessStops.html" title=" " alt="" coords="163,107,409,149"/>
@@ -32,13 +32,15 @@
 <area shape="rect" id="node31" href="$classtest__cancel__before__plan__execution_1_1TestMoveActionCancelDrop.html" title=" " alt="" coords="169,1781,403,1837"/>
 <area shape="rect" id="node32" href="$classtest__check__state__validity__in__empty__scene_1_1TestCheckStateValidityInEmptyScene.html" title=" " alt="" coords="167,1861,405,1917"/>
 <area shape="rect" id="node33" href="$classtest__moveit__joy_1_1TestMoveitJoy.html" title=" " alt="" coords="176,1941,396,1968"/>
-<area shape="rect" id="node34" href="$classtest__servo__collision_1_1TestGTestProcessPostShutdown.html" title=" " alt="" coords="186,1993,386,2034"/>
-<area shape="rect" id="node35" href="$classtest__servo__collision_1_1TestGTestWaitForCompletion.html" title=" " alt="" coords="195,2058,377,2099"/>
-<area shape="rect" id="node36" href="$classtest__servo__integration_1_1TestGTestProcessPostShutdown.html" title=" " alt="" coords="186,2123,386,2165"/>
-<area shape="rect" id="node37" href="$classtest__servo__integration_1_1TestGTestWaitForCompletion.html" title=" " alt="" coords="187,2189,385,2230"/>
-<area shape="rect" id="node38" href="$classtest__servo__pose__tracking_1_1TestGTestProcessActive.html" title=" " alt="" coords="190,2254,382,2295"/>
-<area shape="rect" id="node39" href="$classtest__servo__pose__tracking_1_1TestGTestProcessPostShutdown.html" title=" " alt="" coords="173,2319,399,2361"/>
-<area shape="rect" id="node40" href="$classtest__servo__singularity_1_1TestGTestProcessPostShutdown.html" title=" " alt="" coords="186,2385,386,2426"/>
-<area shape="rect" id="node41" href="$classtest__servo__singularity_1_1TestGTestWaitForCompletion.html" title=" " alt="" coords="189,2450,383,2491"/>
-<area shape="rect" id="node42" href="$classunit__test__servo__calcs_1_1TestGTestProcessPostShutdown.html" title=" " alt="" coords="186,2515,386,2557"/>
+<area shape="rect" id="node34" href="$classtest__rdf__integration_1_1TestGTestProcessPostShutdown.html" title=" " alt="" coords="186,1993,386,2034"/>
+<area shape="rect" id="node35" href="$classtest__rdf__integration_1_1TestGTestWaitForCompletion.html" title=" " alt="" coords="195,2058,377,2099"/>
+<area shape="rect" id="node36" href="$classtest__servo__collision_1_1TestGTestProcessPostShutdown.html" title=" " alt="" coords="186,2123,386,2165"/>
+<area shape="rect" id="node37" href="$classtest__servo__collision_1_1TestGTestWaitForCompletion.html" title=" " alt="" coords="195,2189,377,2230"/>
+<area shape="rect" id="node38" href="$classtest__servo__integration_1_1TestGTestProcessPostShutdown.html" title=" " alt="" coords="186,2254,386,2295"/>
+<area shape="rect" id="node39" href="$classtest__servo__integration_1_1TestGTestWaitForCompletion.html" title=" " alt="" coords="187,2319,385,2361"/>
+<area shape="rect" id="node40" href="$classtest__servo__pose__tracking_1_1TestGTestProcessActive.html" title=" " alt="" coords="190,2385,382,2426"/>
+<area shape="rect" id="node41" href="$classtest__servo__pose__tracking_1_1TestGTestProcessPostShutdown.html" title=" " alt="" coords="173,2450,399,2491"/>
+<area shape="rect" id="node42" href="$classtest__servo__singularity_1_1TestGTestProcessPostShutdown.html" title=" " alt="" coords="186,2515,386,2557"/>
+<area shape="rect" id="node43" href="$classtest__servo__singularity_1_1TestGTestWaitForCompletion.html" title=" " alt="" coords="189,2581,383,2622"/>
+<area shape="rect" id="node44" href="$classunit__test__servo__calcs_1_1TestGTestProcessPostShutdown.html" title=" " alt="" coords="186,2646,386,2687"/>
 </map>

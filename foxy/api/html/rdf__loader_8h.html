@@ -70,12 +70,14 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">rdf_loader.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="class__forward_8h_source.html">moveit/macros/class_forward.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="synchronized__string__parameter_8h_source.html">moveit/rdf_loader/synchronized_string_parameter.h</a>&gt;</code><br />
 <code>#include &lt;urdf/model.h&gt;</code><br />
 <code>#include &lt;srdfdom/model.h&gt;</code><br />
 <code>#include &lt;rclcpp/rclcpp.hpp&gt;</code><br />
@@ -84,13 +86,15 @@ Include dependency graph for rdf_loader.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="rdf__loader_8h__incl.png" border="0" usemap="#moveit__ros_2planning_2rdf__loader_2include_2moveit_2rdf__loader_2rdf__loader_8h" alt=""/></div>
 <map name="moveit__ros_2planning_2rdf__loader_2include_2moveit_2rdf__loader_2rdf__loader_8h" id="moveit__ros_2planning_2rdf__loader_2include_2moveit_2rdf__loader_2rdf__loader_8h">
-<area shape="rect" title=" " alt="" coords="237,5,401,76"/>
-<area shape="rect" href="class__forward_8h.html" title=" " alt="" coords="13,124,170,165"/>
-<area shape="rect" title=" " alt="" coords="195,131,300,158"/>
-<area shape="rect" title=" " alt="" coords="325,131,458,158"/>
-<area shape="rect" title=" " alt="" coords="483,131,615,158"/>
+<area shape="rect" title=" " alt="" coords="391,5,555,76"/>
+<area shape="rect" href="class__forward_8h.html" title=" " alt="" coords="21,124,178,165"/>
+<area shape="rect" href="synchronized__string__parameter_8h.html" title=" " alt="" coords="207,124,435,165"/>
+<area shape="rect" title=" " alt="" coords="411,221,543,247"/>
+<area shape="rect" title=" " alt="" coords="511,131,616,158"/>
+<area shape="rect" title=" " alt="" coords="641,131,774,158"/>
 <area shape="rect" href="declare__ptr_8h.html" title=" " alt="" coords="5,213,177,255"/>
 <area shape="rect" title=" " alt="" coords="53,303,130,329"/>
+<area shape="rect" title=" " alt="" coords="201,221,387,247"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -98,11 +102,12 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="rdf__loader_8h__dep__incl.png" border="0" usemap="#moveit__ros_2planning_2rdf__loader_2include_2moveit_2rdf__loader_2rdf__loader_8hdep" alt=""/></div>
 <map name="moveit__ros_2planning_2rdf__loader_2include_2moveit_2rdf__loader_2rdf__loader_8hdep" id="moveit__ros_2planning_2rdf__loader_2include_2moveit_2rdf__loader_2rdf__loader_8hdep">
-<area shape="rect" title=" " alt="" coords="4244,5,4408,76"/>
-<area shape="rect" href="kinematics__cache__ros_8cpp.html" title=" " alt="" coords="3354,124,3525,209"/>
-<area shape="rect" href="test__kinematics__plugin_8cpp.html" title=" " alt="" coords="3549,146,3753,187"/>
-<area shape="rect" href="kinematics__plugin__loader_8cpp.html" title=" " alt="" coords="3778,139,4021,195"/>
-<area shape="rect" href="rdf__loader_8cpp.html" title=" " alt="" coords="4045,139,4199,195"/>
+<area shape="rect" title=" " alt="" coords="4141,5,4305,76"/>
+<area shape="rect" href="kinematics__cache__ros_8cpp.html" title=" " alt="" coords="3175,124,3346,209"/>
+<area shape="rect" href="test__kinematics__plugin_8cpp.html" title=" " alt="" coords="3371,146,3575,187"/>
+<area shape="rect" href="kinematics__plugin__loader_8cpp.html" title=" " alt="" coords="3599,139,3842,195"/>
+<area shape="rect" href="rdf__loader_8cpp.html" title=" " alt="" coords="3866,139,4021,195"/>
+<area shape="rect" href="test__rdf__integration_8cpp.html" title=" " alt="" coords="4045,139,4199,195"/>
 <area shape="rect" href="robot__model__loader_8h.html" title=" " alt="" coords="4224,124,4428,209"/>
 <area shape="rect" href="robot__state__display_8h.html" title=" " alt="" coords="6639,131,6882,202"/>
 <area shape="rect" href="trajectory__display_8h.html" title=" " alt="" coords="6907,131,7137,202"/>
@@ -141,8 +146,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <area shape="rect" href="test__execution__manager_8cpp.html" title=" " alt="" coords="5189,391,5404,461"/>
 <area shape="rect" href="robot__model__loader_8cpp.html" title=" " alt="" coords="3723,272,3929,328"/>
 <area shape="rect" href="common__objects_8h.html" title=" " alt="" coords="3953,257,4214,343"/>
-<area shape="rect" href="servo_8h.html" title=" " alt="" coords="4717,509,4905,565"/>
-<area shape="rect" href="collision__check_8cpp.html" title=" " alt="" coords="4505,517,4693,558"/>
+<area shape="rect" href="servo_8h.html" title=" " alt="" coords="4611,509,4799,565"/>
 <area shape="rect" href="visualization_2robot__state__rviz__plugin_2src_2plugin__init_8cpp.html" title=" " alt="" coords="6669,272,6852,328"/>
 <area shape="rect" href="robot__state__display_8cpp.html" title=" " alt="" coords="6877,272,7079,328"/>
 <area shape="rect" href="setup__assistant__widget_8cpp.html" title=" " alt="" coords="7104,272,7311,328"/>
@@ -156,13 +160,17 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrdf__loader_1_1RDFLoader.html">rdf_loader::RDFLoader</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="classrdf__loader_1_1RDFLoader.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacerdf__loader"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerdf__loader.html">rdf_loader</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a4911252e62ee62892c89f6f9f5a977f8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerdf__loader.html#a4911252e62ee62892c89f6f9f5a977f8">rdf_loader::NewModelCallback</a> = std::function&lt; void()&gt;</td></tr>
+<tr class="separator:a4911252e62ee62892c89f6f9f5a977f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>

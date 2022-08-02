@@ -130,7 +130,6 @@
 <span class="w">   </span><span class="nt">projection_evaluator</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">joints(panda_joint1,panda_joint2)</span><span class="w"></span>
 </pre></div>
 </div>
-<p>You can see an example <a class="reference external" href="https://github.com/ros-planning/moveit2_tutorials/blob/main/doc/how_to_guides/using_ompl_constrained_planning/config/ompl_planning.yaml">here</a>.</p>
 <p>This tutorial adds the parameters in the <a class="reference external" href="https://github.com/ros-planning/moveit2_tutorials/blob/main/doc/how_to_guides/using_ompl_constrained_planning/launch/ompl_constrained_planning.launch.py">launch file</a>. The launch file uses <code class="docutils literal notranslate"><span class="pre">moveit_configs_utils</span></code> to simplify the launch file. The <code class="docutils literal notranslate"><span class="pre">moveit_config</span></code> is configured with the moveit_resources Panda MoveIt config. We add our OMPL parameters to the <code class="docutils literal notranslate"><span class="pre">planning_pipelines</span></code> with the following lines:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">moveit_config</span><span class="o">.</span><span class="n">planning_pipelines</span><span class="p">[</span><span class="s2">&quot;ompl&quot;</span><span class="p">][</span><span class="s2">&quot;panda_arm&quot;</span><span class="p">][</span><span class="s2">&quot;enforce_constrained_state_space&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">moveit_config</span><span class="o">.</span><span class="n">planning_pipelines</span><span class="p">[</span><span class="s2">&quot;ompl&quot;</span><span class="p">][</span><span class="s2">&quot;panda_arm&quot;</span><span class="p">][</span><span class="s2">&quot;projection_evaluator&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;joints(panda_joint1,panda_joint2)&quot;</span>
@@ -142,7 +141,7 @@
 <div class="section" id="running-the-example">
 <h2>Running the Example<a class="headerlink" href="#running-the-example" title="Permalink to this headline"></a></h2>
 <p>Run the following command to launch the example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">moveit_tutorials</span> <span class="n">ompl_constrained_planning</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">moveit2_tutorials</span> <span class="n">ompl_constrained_planning</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 <p>The Panda robot should appear, with the RViz Visual Tools and the Trajectory Slider panel in the bottom-left. You should also see this text in your terminal:</p>

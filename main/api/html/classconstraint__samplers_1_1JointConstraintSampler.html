@@ -115,6 +115,8 @@ Classes</h2></td></tr>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a5ab1ae0dc80cd605321973b4c67af5f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classconstraint__samplers_1_1JointConstraintSampler.html#a5ab1ae0dc80cd605321973b4c67af5f8">JointConstraintSampler</a> (const planning_scene::PlanningSceneConstPtr &amp;scene, const std::string &amp;group_name)</td></tr>
 <tr class="separator:a5ab1ae0dc80cd605321973b4c67af5f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35be13c6a32f744bd45e6b0a60bd0839"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classconstraint__samplers_1_1JointConstraintSampler.html#a35be13c6a32f744bd45e6b0a60bd0839">JointConstraintSampler</a> (const planning_scene::PlanningSceneConstPtr &amp;scene, const std::string &amp;group_name, unsigned int seed)</td></tr>
+<tr class="separator:a35be13c6a32f744bd45e6b0a60bd0839"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fb5f7164e985416fa116a8ba2516e9c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classconstraint__samplers_1_1JointConstraintSampler.html#a7fb5f7164e985416fa116a8ba2516e9c">configure</a> (const moveit_msgs::msg::Constraints &amp;constr) override</td></tr>
 <tr class="memdesc:a7fb5f7164e985416fa116a8ba2516e9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures a joint constraint given a Constraints message.  <a href="classconstraint__samplers_1_1JointConstraintSampler.html#a7fb5f7164e985416fa116a8ba2516e9c">More...</a><br /></td></tr>
 <tr class="separator:a7fb5f7164e985416fa116a8ba2516e9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -239,7 +241,7 @@ Additional Inherited Members</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00091">91</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5ab1ae0dc80cd605321973b4c67af5f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ab1ae0dc80cd605321973b4c67af5f8">&#9670;&nbsp;</a></span>JointConstraintSampler()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ab1ae0dc80cd605321973b4c67af5f8">&#9670;&nbsp;</a></span>JointConstraintSampler() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -284,6 +286,59 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a35be13c6a32f744bd45e6b0a60bd0839"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35be13c6a32f744bd45e6b0a60bd0839">&#9670;&nbsp;</a></span>JointConstraintSampler() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constraint_samplers::JointConstraintSampler::JointConstraintSampler </td>
+          <td>(</td>
+          <td class="paramtype">const planning_scene::PlanningSceneConstPtr &amp;&#160;</td>
+          <td class="paramname"><em>scene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>group_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>seed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Constructor</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">scene</td><td>The planning scene used to check the constraint</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">group_name</td><td>The group name associated with the constraint. Will be invalid if no group name is passed in or the joint model group cannot be found in the kinematic model</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">seed</td><td>The rng seed to be used </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00121">121</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a5568906be0e1d71bdb691bd5fbd9d359"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5568906be0e1d71bdb691bd5fbd9d359">&#9670;&nbsp;</a></span>clear()</h2>
@@ -312,7 +367,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classconstraint__samplers_1_1ConstraintSampler.html#ab9b7e3ef1f1feb1442f90adf8e85ed09">constraint_samplers::ConstraintSampler</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8cpp_source.html#l00235">235</a> of file <a class="el" href="default__constraint__samplers_8cpp_source.html">default_constraint_samplers.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8cpp_source.html#l00221">221</a> of file <a class="el" href="default__constraint__samplers_8cpp_source.html">default_constraint_samplers.cpp</a>.</p>
 
 </div>
 </div>
@@ -355,7 +410,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classconstraint__samplers_1_1ConstraintSampler.html#a42104965516ab50880e2cf7c7a6056ad">constraint_samplers::ConstraintSampler</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8cpp_source.html#l00093">93</a> of file <a class="el" href="default__constraint__samplers_8cpp_source.html">default_constraint_samplers.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8cpp_source.html#l00079">79</a> of file <a class="el" href="default__constraint__samplers_8cpp_source.html">default_constraint_samplers.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -403,7 +458,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if the conditions are met, otherwise false </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8cpp_source.html#l00107">107</a> of file <a class="el" href="default__constraint__samplers_8cpp_source.html">default_constraint_samplers.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8cpp_source.html#l00093">93</a> of file <a class="el" href="default__constraint__samplers_8cpp_source.html">default_constraint_samplers.cpp</a>.</p>
 
 </div>
 </div>
@@ -433,7 +488,7 @@ Here is the caller graph for this function:</div>
 <p>Gets the number of constrained joints - joints that have an additional bound beyond the joint limits. </p>
 <dl class="section return"><dt>Returns</dt><dd>The number of constrained joints. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00167">167</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00184">184</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -474,7 +529,7 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="classconstraint__samplers_1_1ConstraintSampler.html#a288fc27c2d5c66808a5193e0a3262a25">constraint_samplers::ConstraintSampler</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00188">188</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00205">205</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
 
 </div>
 </div>
@@ -504,7 +559,7 @@ Here is the caller graph for this function:</div>
 <p>Gets the number of unconstrained joints - joint that have no additional bound beyond the joint limits. </p>
 <dl class="section return"><dt>Returns</dt><dd>The number of unconstrained joints. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00178">178</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00195">195</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -563,7 +618,7 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="classconstraint__samplers_1_1ConstraintSampler.html#a4bc41a1d7d1476c38ceff13e1e0e9e8d">constraint_samplers::ConstraintSampler</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8cpp_source.html#l00230">230</a> of file <a class="el" href="default__constraint__samplers_8cpp_source.html">default_constraint_samplers.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8cpp_source.html#l00216">216</a> of file <a class="el" href="default__constraint__samplers_8cpp_source.html">default_constraint_samplers.cpp</a>.</p>
 
 </div>
 </div>
@@ -620,7 +675,7 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="classconstraint__samplers_1_1ConstraintSampler.html#a7b407d32e9c99923facbe59bcc6094a9">constraint_samplers::ConstraintSampler</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8cpp_source.html#l00200">200</a> of file <a class="el" href="default__constraint__samplers_8cpp_source.html">default_constraint_samplers.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8cpp_source.html#l00186">186</a> of file <a class="el" href="default__constraint__samplers_8cpp_source.html">default_constraint_samplers.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -656,7 +711,7 @@ Here is the caller graph for this function:</div>
 
 <p>The bounds for any joint with bounds that are more restrictive than the joint limits. </p>
 
-<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00232">232</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00249">249</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
 
 </div>
 </div>
@@ -682,7 +737,7 @@ Here is the caller graph for this function:</div>
 
 <p>Random number generator used to sample. </p>
 
-<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00231">231</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00248">248</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
 
 </div>
 </div>
@@ -708,7 +763,7 @@ Here is the caller graph for this function:</div>
 
 <p>The index of the unbounded joints in the joint state vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00237">237</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00254">254</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
 
 </div>
 </div>
@@ -734,7 +789,7 @@ Here is the caller graph for this function:</div>
 
 <p>The joints that are not bounded except by joint limits. </p>
 
-<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00235">235</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00252">252</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
 
 </div>
 </div>
@@ -760,7 +815,7 @@ Here is the caller graph for this function:</div>
 
 <p>Values associated with this group to avoid continuously reallocating. </p>
 
-<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00238">238</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00255">255</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
 
 </div>
 </div>
