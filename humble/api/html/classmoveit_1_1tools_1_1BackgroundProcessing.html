@@ -80,24 +80,6 @@ $(function() {
  <a href="classmoveit_1_1tools_1_1BackgroundProcessing.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="background__processing_8hpp_source.html">background_processing.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for moveit::tools::BackgroundProcessing:</div>
-<div class="dyncontent">
-<div class="center"><img src="classmoveit_1_1tools_1_1BackgroundProcessing__inherit__graph.png" border="0" usemap="#moveit_1_1tools_1_1BackgroundProcessing_inherit__map" alt="Inheritance graph"/></div>
-<map name="moveit_1_1tools_1_1BackgroundProcessing_inherit__map" id="moveit_1_1tools_1_1BackgroundProcessing_inherit__map">
-<area shape="rect" title="This class provides simple API for executing background jobs. A queue of jobs is created and the spec..." alt="" coords="5,80,199,121"/>
-<area shape="rect" title=" " alt="" coords="27,5,177,32"/>
-</map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for moveit::tools::BackgroundProcessing:</div>
-<div class="dyncontent">
-<div class="center"><img src="classmoveit_1_1tools_1_1BackgroundProcessing__coll__graph.png" border="0" usemap="#moveit_1_1tools_1_1BackgroundProcessing_coll__map" alt="Collaboration graph"/></div>
-<map name="moveit_1_1tools_1_1BackgroundProcessing_coll__map" id="moveit_1_1tools_1_1BackgroundProcessing_coll__map">
-<area shape="rect" title="This class provides simple API for executing background jobs. A queue of jobs is created and the spec..." alt="" coords="5,80,199,121"/>
-<area shape="rect" title=" " alt="" coords="27,5,177,32"/>
-</map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -107,22 +89,28 @@ Public Types</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ab9e5dab259098f46b9a71d4c982d233b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Events for jobs.  <a href="classmoveit_1_1tools_1_1BackgroundProcessing.html#ab9e5dab259098f46b9a71d4c982d233b">More...</a><br /></td></tr>
 <tr class="separator:ab9e5dab259098f46b9a71d4c982d233b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11deda0b0f8dcd207ae061616e420546"><td class="memItemLeft" align="right" valign="top">typedef boost::function&lt; void(<a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html#ab9e5dab259098f46b9a71d4c982d233b">JobEvent</a>, const std::string &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html#a11deda0b0f8dcd207ae061616e420546">JobUpdateCallback</a></td></tr>
-<tr class="memdesc:a11deda0b0f8dcd207ae061616e420546"><td class="mdescLeft">&#160;</td><td class="mdescRight">The signature for callback triggered when job events take place: the event that took place and the name of the job.  <a href="classmoveit_1_1tools_1_1BackgroundProcessing.html#a11deda0b0f8dcd207ae061616e420546">More...</a><br /></td></tr>
-<tr class="separator:a11deda0b0f8dcd207ae061616e420546"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95578bdd6e6b54a08e51f2b32fc74f78"><td class="memItemLeft" align="right" valign="top">typedef boost::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html#a95578bdd6e6b54a08e51f2b32fc74f78">JobCallback</a></td></tr>
-<tr class="memdesc:a95578bdd6e6b54a08e51f2b32fc74f78"><td class="mdescLeft">&#160;</td><td class="mdescRight">The signature for job callbacks.  <a href="classmoveit_1_1tools_1_1BackgroundProcessing.html#a95578bdd6e6b54a08e51f2b32fc74f78">More...</a><br /></td></tr>
-<tr class="separator:a95578bdd6e6b54a08e51f2b32fc74f78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60c61a7bf9a88850f1a45ca4985a884b"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; void(<a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html#ab9e5dab259098f46b9a71d4c982d233b">JobEvent</a>, const std::string &amp;)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html#a60c61a7bf9a88850f1a45ca4985a884b">JobUpdateCallback</a></td></tr>
+<tr class="memdesc:a60c61a7bf9a88850f1a45ca4985a884b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The signature for callback triggered when job events take place: the event that took place and the name of the job.  <a href="classmoveit_1_1tools_1_1BackgroundProcessing.html#a60c61a7bf9a88850f1a45ca4985a884b">More...</a><br /></td></tr>
+<tr class="separator:a60c61a7bf9a88850f1a45ca4985a884b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecf9746b72c3353ff057fa3f39042c58"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html#aecf9746b72c3353ff057fa3f39042c58">JobCallback</a></td></tr>
+<tr class="memdesc:aecf9746b72c3353ff057fa3f39042c58"><td class="mdescLeft">&#160;</td><td class="mdescRight">The signature for job callbacks.  <a href="classmoveit_1_1tools_1_1BackgroundProcessing.html#aecf9746b72c3353ff057fa3f39042c58">More...</a><br /></td></tr>
+<tr class="separator:aecf9746b72c3353ff057fa3f39042c58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a80d826865f08059079f8b63dd43b8fe9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html#a80d826865f08059079f8b63dd43b8fe9">BackgroundProcessing</a> (const <a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html">BackgroundProcessing</a> &amp;)=delete</td></tr>
+<tr class="memdesc:a80d826865f08059079f8b63dd43b8fe9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html" title="This class provides simple API for executing background jobs. A queue of jobs is created and the spec...">BackgroundProcessing</a> cannot be copy-constructed.  <a href="classmoveit_1_1tools_1_1BackgroundProcessing.html#a80d826865f08059079f8b63dd43b8fe9">More...</a><br /></td></tr>
+<tr class="separator:a80d826865f08059079f8b63dd43b8fe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f267693c629fb08ebda0fd3811ab4cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html">BackgroundProcessing</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html#a7f267693c629fb08ebda0fd3811ab4cd">operator=</a> (const <a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html">BackgroundProcessing</a> &amp;)=delete</td></tr>
+<tr class="memdesc:a7f267693c629fb08ebda0fd3811ab4cd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html" title="This class provides simple API for executing background jobs. A queue of jobs is created and the spec...">BackgroundProcessing</a> cannot be copy-assigned.  <a href="classmoveit_1_1tools_1_1BackgroundProcessing.html#a7f267693c629fb08ebda0fd3811ab4cd">More...</a><br /></td></tr>
+<tr class="separator:a7f267693c629fb08ebda0fd3811ab4cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae204830b7100ce34a0c494801fcdcc0c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html#ae204830b7100ce34a0c494801fcdcc0c">BackgroundProcessing</a> ()</td></tr>
 <tr class="memdesc:ae204830b7100ce34a0c494801fcdcc0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. The background thread is activated automatically.  <a href="classmoveit_1_1tools_1_1BackgroundProcessing.html#ae204830b7100ce34a0c494801fcdcc0c">More...</a><br /></td></tr>
 <tr class="separator:ae204830b7100ce34a0c494801fcdcc0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15526519ab82b5ef8e1260bab9e2da46"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html#a15526519ab82b5ef8e1260bab9e2da46">~BackgroundProcessing</a> ()</td></tr>
 <tr class="memdesc:a15526519ab82b5ef8e1260bab9e2da46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finishes currently executing job, clears the remaining queue.  <a href="classmoveit_1_1tools_1_1BackgroundProcessing.html#a15526519ab82b5ef8e1260bab9e2da46">More...</a><br /></td></tr>
 <tr class="separator:a15526519ab82b5ef8e1260bab9e2da46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc0bd8d3dc2ad1e17946d6ef2b441c80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html#afc0bd8d3dc2ad1e17946d6ef2b441c80">addJob</a> (const <a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html#a95578bdd6e6b54a08e51f2b32fc74f78">JobCallback</a> &amp;job, const std::string &amp;name)</td></tr>
+<tr class="memitem:afc0bd8d3dc2ad1e17946d6ef2b441c80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html#afc0bd8d3dc2ad1e17946d6ef2b441c80">addJob</a> (const <a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html#aecf9746b72c3353ff057fa3f39042c58">JobCallback</a> &amp;job, const std::string &amp;name)</td></tr>
 <tr class="memdesc:afc0bd8d3dc2ad1e17946d6ef2b441c80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a job to the queue of jobs to execute. <a class="el" href="classA.html">A</a> name is also specifies for the job.  <a href="classmoveit_1_1tools_1_1BackgroundProcessing.html#afc0bd8d3dc2ad1e17946d6ef2b441c80">More...</a><br /></td></tr>
 <tr class="separator:afc0bd8d3dc2ad1e17946d6ef2b441c80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab44504c3da3a42da0b810941fd1a3a7d"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html#ab44504c3da3a42da0b810941fd1a3a7d">getJobCount</a> () const</td></tr>
@@ -131,7 +119,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a50c16096b3407addf1aabd6f1d358d3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html#a50c16096b3407addf1aabd6f1d358d3b">clear</a> ()</td></tr>
 <tr class="memdesc:a50c16096b3407addf1aabd6f1d358d3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the queue of jobs.  <a href="classmoveit_1_1tools_1_1BackgroundProcessing.html#a50c16096b3407addf1aabd6f1d358d3b">More...</a><br /></td></tr>
 <tr class="separator:a50c16096b3407addf1aabd6f1d358d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90dc9dd1f19fa8e5e975d0a0c62923aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html#a90dc9dd1f19fa8e5e975d0a0c62923aa">setJobUpdateEvent</a> (const <a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html#a11deda0b0f8dcd207ae061616e420546">JobUpdateCallback</a> &amp;event)</td></tr>
+<tr class="memitem:a90dc9dd1f19fa8e5e975d0a0c62923aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html#a90dc9dd1f19fa8e5e975d0a0c62923aa">setJobUpdateEvent</a> (const <a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html#a60c61a7bf9a88850f1a45ca4985a884b">JobUpdateCallback</a> &amp;event)</td></tr>
 <tr class="memdesc:a90dc9dd1f19fa8e5e975d0a0c62923aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the callback to be triggered when events in JobEvent take place.  <a href="classmoveit_1_1tools_1_1BackgroundProcessing.html#a90dc9dd1f19fa8e5e975d0a0c62923aa">More...</a><br /></td></tr>
 <tr class="separator:a90dc9dd1f19fa8e5e975d0a0c62923aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5510d2fe73b3dc391365d78394c38853"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html#a5510d2fe73b3dc391365d78394c38853">clearJobUpdateEvent</a> ()</td></tr>
@@ -143,39 +131,39 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="background__processing_8hpp_source.html#l00120">120</a> of file <a class="el" href="background__processing_8hpp_source.html">background_processing.hpp</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a95578bdd6e6b54a08e51f2b32fc74f78"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95578bdd6e6b54a08e51f2b32fc74f78">&#9670;&nbsp;</a></span>JobCallback</h2>
+<a id="aecf9746b72c3353ff057fa3f39042c58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecf9746b72c3353ff057fa3f39042c58">&#9670;&nbsp;</a></span>JobCallback</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef boost::function&lt;void()&gt; <a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html#a95578bdd6e6b54a08e51f2b32fc74f78">moveit::tools::BackgroundProcessing::JobCallback</a></td>
+          <td class="memname">typedef std::function&lt;void()&gt; <a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html#aecf9746b72c3353ff057fa3f39042c58">moveit::tools::BackgroundProcessing::JobCallback</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>The signature for job callbacks. </p>
 
-<p class="definition">Definition at line <a class="el" href="background__processing_8hpp_source.html#l00171">171</a> of file <a class="el" href="background__processing_8hpp_source.html">background_processing.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="background__processing_8hpp_source.html#l00181">181</a> of file <a class="el" href="background__processing_8hpp_source.html">background_processing.hpp</a>.</p>
 
 </div>
 </div>
-<a id="a11deda0b0f8dcd207ae061616e420546"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11deda0b0f8dcd207ae061616e420546">&#9670;&nbsp;</a></span>JobUpdateCallback</h2>
+<a id="a60c61a7bf9a88850f1a45ca4985a884b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60c61a7bf9a88850f1a45ca4985a884b">&#9670;&nbsp;</a></span>JobUpdateCallback</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef boost::function&lt;void(<a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html#ab9e5dab259098f46b9a71d4c982d233b">JobEvent</a>, const std::string&amp;)&gt; <a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html#a11deda0b0f8dcd207ae061616e420546">moveit::tools::BackgroundProcessing::JobUpdateCallback</a></td>
+          <td class="memname">typedef std::function&lt;void(<a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html#ab9e5dab259098f46b9a71d4c982d233b">JobEvent</a>, const std::string&amp;)&gt; <a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html#a60c61a7bf9a88850f1a45ca4985a884b">moveit::tools::BackgroundProcessing::JobUpdateCallback</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>The signature for callback triggered when job events take place: the event that took place and the name of the job. </p>
 
-<p class="definition">Definition at line <a class="el" href="background__processing_8hpp_source.html#l00168">168</a> of file <a class="el" href="background__processing_8hpp_source.html">background_processing.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="background__processing_8hpp_source.html#l00178">178</a> of file <a class="el" href="background__processing_8hpp_source.html">background_processing.hpp</a>.</p>
 
 </div>
 </div>
@@ -202,13 +190,41 @@ Public Member Functions</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="background__processing_8hpp_source.html#l00156">156</a> of file <a class="el" href="background__processing_8hpp_source.html">background_processing.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="background__processing_8hpp_source.html#l00166">166</a> of file <a class="el" href="background__processing_8hpp_source.html">background_processing.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a80d826865f08059079f8b63dd43b8fe9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80d826865f08059079f8b63dd43b8fe9">&#9670;&nbsp;</a></span>BackgroundProcessing() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">moveit::tools::BackgroundProcessing::BackgroundProcessing </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html">BackgroundProcessing</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html" title="This class provides simple API for executing background jobs. A queue of jobs is created and the spec...">BackgroundProcessing</a> cannot be copy-constructed. </p>
+
+</div>
+</div>
 <a id="ae204830b7100ce34a0c494801fcdcc0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae204830b7100ce34a0c494801fcdcc0c">&#9670;&nbsp;</a></span>BackgroundProcessing()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae204830b7100ce34a0c494801fcdcc0c">&#9670;&nbsp;</a></span>BackgroundProcessing() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -224,7 +240,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Constructor. The background thread is activated automatically. </p>
 
-<p class="definition">Definition at line <a class="el" href="background__processing_8cpp_source.html#l00111">111</a> of file <a class="el" href="background__processing_8cpp_source.html">background_processing.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="background__processing_8cpp_source.html#l00112">112</a> of file <a class="el" href="background__processing_8cpp_source.html">background_processing.cpp</a>.</p>
 
 </div>
 </div>
@@ -245,7 +261,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Finishes currently executing job, clears the remaining queue. </p>
 
-<p class="definition">Definition at line <a class="el" href="background__processing_8cpp_source.html#l00119">119</a> of file <a class="el" href="background__processing_8cpp_source.html">background_processing.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="background__processing_8cpp_source.html#l00120">120</a> of file <a class="el" href="background__processing_8cpp_source.html">background_processing.cpp</a>.</p>
 
 </div>
 </div>
@@ -259,7 +275,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void moveit::tools::BackgroundProcessing::addJob </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html#a95578bdd6e6b54a08e51f2b32fc74f78">JobCallback</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html#aecf9746b72c3353ff057fa3f39042c58">JobCallback</a> &amp;&#160;</td>
           <td class="paramname"><em>job</em>, </td>
         </tr>
         <tr>
@@ -278,7 +294,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Add a job to the queue of jobs to execute. <a class="el" href="classA.html">A</a> name is also specifies for the job. </p>
 
-<p class="definition">Definition at line <a class="el" href="background__processing_8cpp_source.html#l00163">163</a> of file <a class="el" href="background__processing_8cpp_source.html">background_processing.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="background__processing_8cpp_source.html#l00164">164</a> of file <a class="el" href="background__processing_8cpp_source.html">background_processing.cpp</a>.</p>
 
 </div>
 </div>
@@ -299,7 +315,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Clear the queue of jobs. </p>
 
-<p class="definition">Definition at line <a class="el" href="background__processing_8cpp_source.html#l00175">175</a> of file <a class="el" href="background__processing_8cpp_source.html">background_processing.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="background__processing_8cpp_source.html#l00176">176</a> of file <a class="el" href="background__processing_8cpp_source.html">background_processing.cpp</a>.</p>
 
 </div>
 </div>
@@ -320,7 +336,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Clear the callback to be triggered when events in JobEvent take place. </p>
 
-<p class="definition">Definition at line <a class="el" href="background__processing_8cpp_source.html#l00202">202</a> of file <a class="el" href="background__processing_8cpp_source.html">background_processing.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="background__processing_8cpp_source.html#l00203">203</a> of file <a class="el" href="background__processing_8cpp_source.html">background_processing.cpp</a>.</p>
 
 </div>
 </div>
@@ -341,7 +357,35 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the size of the queue of jobs (includes currently processed job). </p>
 
-<p class="definition">Definition at line <a class="el" href="background__processing_8cpp_source.html#l00190">190</a> of file <a class="el" href="background__processing_8cpp_source.html">background_processing.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="background__processing_8cpp_source.html#l00191">191</a> of file <a class="el" href="background__processing_8cpp_source.html">background_processing.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7f267693c629fb08ebda0fd3811ab4cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f267693c629fb08ebda0fd3811ab4cd">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html">BackgroundProcessing</a>&amp; moveit::tools::BackgroundProcessing::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html">BackgroundProcessing</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html" title="This class provides simple API for executing background jobs. A queue of jobs is created and the spec...">BackgroundProcessing</a> cannot be copy-assigned. </p>
 
 </div>
 </div>
@@ -354,7 +398,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void moveit::tools::BackgroundProcessing::setJobUpdateEvent </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html#a11deda0b0f8dcd207ae061616e420546">JobUpdateCallback</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classmoveit_1_1tools_1_1BackgroundProcessing.html#a60c61a7bf9a88850f1a45ca4985a884b">JobUpdateCallback</a> &amp;&#160;</td>
           <td class="paramname"><em>event</em></td><td>)</td>
           <td></td>
         </tr>
@@ -363,7 +407,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Set the callback to be triggered when events in JobEvent take place. </p>
 
-<p class="definition">Definition at line <a class="el" href="background__processing_8cpp_source.html#l00196">196</a> of file <a class="el" href="background__processing_8cpp_source.html">background_processing.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="background__processing_8cpp_source.html#l00197">197</a> of file <a class="el" href="background__processing_8cpp_source.html">background_processing.cpp</a>.</p>
 
 </div>
 </div>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>moveit2: moveit_planners/pilz_industrial_motion_planner/include/joint_limits/joint_limits_rosparam.hpp Source File</title>
+<title>moveit2: moveit_planners/pilz_industrial_motion_planner/include/joint_limits_copy/joint_limits_rosparam.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_98fe95a23ea5e2b6be22936637a26e5a.html">moveit_planners</a></li><li class="navelem"><a class="el" href="dir_03738038f6eeb941adf4586ea8c9995d.html">pilz_industrial_motion_planner</a></li><li class="navelem"><a class="el" href="dir_51701ab6680f096236775cbfcd79eea6.html">include</a></li><li class="navelem"><a class="el" href="dir_5b14a32c46c9309f6e6053071b377367.html">joint_limits</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_98fe95a23ea5e2b6be22936637a26e5a.html">moveit_planners</a></li><li class="navelem"><a class="el" href="dir_03738038f6eeb941adf4586ea8c9995d.html">pilz_industrial_motion_planner</a></li><li class="navelem"><a class="el" href="dir_51701ab6680f096236775cbfcd79eea6.html">include</a></li><li class="navelem"><a class="el" href="dir_a6f01a394d55ad787c87c22b9b22fae4.html">joint_limits_copy</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -96,7 +96,7 @@ $(function() {
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;limits&gt;</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="joint__limits_8hpp.html">joint_limits/joint_limits.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="joint__limits_8hpp.html">joint_limits_copy/joint_limits.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;rclcpp/rclcpp.hpp&quot;</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">namespace</span></div>
@@ -345,7 +345,7 @@ $(function() {
 <div class="ttc" id="anamespacejoint__limits_html_a7b519211152988b4138851b8bd1c6921"><div class="ttname"><a href="namespacejoint__limits.html#a7b519211152988b4138851b8bd1c6921">joint_limits::get_joint_limits</a></div><div class="ttdeci">bool get_joint_limits(const std::string &amp;joint_name, const rclcpp::Node::SharedPtr &amp;node, const std::string &amp;param_ns, JointLimits &amp;limits)</div><div class="ttdoc">Populate a JointLimits instance from the ROS parameter server.</div><div class="ttdef"><b>Definition:</b> <a href="joint__limits__rosparam_8hpp_source.html#l00113">joint_limits_rosparam.hpp:113</a></div></div>
 <div class="ttc" id="astructjoint__limits_1_1SoftJointLimits_html"><div class="ttname"><a href="structjoint__limits_1_1SoftJointLimits.html">joint_limits::SoftJointLimits</a></div><div class="ttdef"><b>Definition:</b> <a href="joint__limits_8hpp_source.html#l00116">joint_limits.hpp:116</a></div></div>
 <div class="ttc" id="anamespacejoint__limits_html"><div class="ttname"><a href="namespacejoint__limits.html">joint_limits</a></div><div class="ttdef"><b>Definition:</b> <a href="joint__limits_8hpp_source.html#l00028">joint_limits.hpp:28</a></div></div>
-<div class="ttc" id="anamespacekinematics__plugin__loader_html_a4b7e3ede6a64d1e70f3072ec11708d72"><div class="ttname"><a href="namespacekinematics__plugin__loader.html#a4b7e3ede6a64d1e70f3072ec11708d72">kinematics_plugin_loader::declare_parameter</a></div><div class="ttdeci">rclcpp::Parameter declare_parameter(const rclcpp::Node::SharedPtr &amp;node, const std::string &amp;parameter_name)</div><div class="ttdef"><b>Definition:</b> <a href="kinematics__plugin__loader_8cpp_source.html#l00084">kinematics_plugin_loader.cpp:84</a></div></div>
+<div class="ttc" id="anamespacekinematics__plugin__loader_html_a4b7e3ede6a64d1e70f3072ec11708d72"><div class="ttname"><a href="namespacekinematics__plugin__loader.html#a4b7e3ede6a64d1e70f3072ec11708d72">kinematics_plugin_loader::declare_parameter</a></div><div class="ttdeci">rclcpp::Parameter declare_parameter(const rclcpp::Node::SharedPtr &amp;node, const std::string &amp;parameter_name)</div><div class="ttdef"><b>Definition:</b> <a href="kinematics__plugin__loader_8cpp_source.html#l00087">kinematics_plugin_loader.cpp:87</a></div></div>
 <div class="ttc" id="astructjoint__limits_1_1JointLimits_html_a77dc908d317d7723cb4f763d5c4e9f20"><div class="ttname"><a href="structjoint__limits_1_1JointLimits.html#a77dc908d317d7723cb4f763d5c4e9f20">joint_limits::JointLimits::max_position</a></div><div class="ttdeci">double max_position</div><div class="ttdef"><b>Definition:</b> <a href="joint__limits_8hpp_source.html#l00049">joint_limits.hpp:49</a></div></div>
 <div class="ttc" id="astructjoint__limits_1_1JointLimits_html_a3a695f2e8d45687de218eb0ee120bb86"><div class="ttname"><a href="structjoint__limits_1_1JointLimits.html#a3a695f2e8d45687de218eb0ee120bb86">joint_limits::JointLimits::angle_wraparound</a></div><div class="ttdeci">bool angle_wraparound</div><div class="ttdef"><b>Definition:</b> <a href="joint__limits_8hpp_source.html#l00060">joint_limits.hpp:60</a></div></div>
 <div class="ttc" id="astructjoint__limits_1_1JointLimits_html_a50a30156759aab39389f20b0b7d8654c"><div class="ttname"><a href="structjoint__limits_1_1JointLimits.html#a50a30156759aab39389f20b0b7d8654c">joint_limits::JointLimits::has_acceleration_limits</a></div><div class="ttdeci">bool has_acceleration_limits</div><div class="ttdef"><b>Definition:</b> <a href="joint__limits_8hpp_source.html#l00057">joint_limits.hpp:57</a></div></div>

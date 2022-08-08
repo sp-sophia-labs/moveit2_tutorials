@@ -1,0 +1,14 @@
+<map id="moveit_setup::srdf_setup::SRDFStep" name="moveit_setup::srdf_setup::SRDFStep">
+<area shape="rect" id="node1" title="Setup Step that contains the SRDFConfig." alt="" coords="239,201,383,243"/>
+<area shape="rect" id="node3" href="$classmoveit__setup_1_1srdf__setup_1_1DefaultCollisions.html" title=" " alt="" coords="444,5,628,47"/>
+<area shape="rect" id="node4" href="$classmoveit__setup_1_1srdf__setup_1_1PassiveJoints.html" title=" " alt="" coords="457,71,615,112"/>
+<area shape="rect" id="node5" href="$classmoveit__setup_1_1srdf__setup_1_1RobotPoses.html" title=" " alt="" coords="461,136,611,177"/>
+<area shape="rect" id="node6" href="$classmoveit__setup_1_1srdf__setup_1_1SuperSRDFStep.html" title="This class provides a number of standard operations based on srdf&#39;s vector members." alt="" coords="431,201,641,243"/>
+<area shape="rect" id="node7" href="$classmoveit__setup_1_1srdf__setup_1_1SuperSRDFStep.html" title=" " alt="" coords="433,267,639,323"/>
+<area shape="rect" id="node9" href="$classmoveit__setup_1_1srdf__setup_1_1SuperSRDFStep.html" title=" " alt="" coords="449,347,623,403"/>
+<area shape="rect" id="node11" href="$classmoveit__setup_1_1srdf__setup_1_1SuperSRDFStep.html" title=" " alt="" coords="434,427,638,483"/>
+<area shape="rect" id="node2" href="$classmoveit__setup_1_1SetupStep.html" title="Contains all of the non&#45;GUI code necessary for doing one &quot;screen&quot; worth of setup." alt="" coords="5,209,191,235"/>
+<area shape="rect" id="node8" href="$classmoveit__setup_1_1srdf__setup_1_1EndEffectors.html" title=" " alt="" coords="699,275,854,316"/>
+<area shape="rect" id="node10" href="$classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html" title=" " alt="" coords="689,355,864,396"/>
+<area shape="rect" id="node12" href="$classmoveit__setup_1_1srdf__setup_1_1VirtualJoints.html" title=" " alt="" coords="701,435,853,476"/>
+</map>

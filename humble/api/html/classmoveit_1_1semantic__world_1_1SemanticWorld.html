@@ -83,9 +83,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a2d3a32d9053bb33af906ca222af77b20"><td class="memItemLeft" align="right" valign="top">typedef boost::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1semantic__world_1_1SemanticWorld.html#a2d3a32d9053bb33af906ca222af77b20">TableCallbackFn</a></td></tr>
-<tr class="memdesc:a2d3a32d9053bb33af906ca222af77b20"><td class="mdescLeft">&#160;</td><td class="mdescRight">The signature for a callback on receiving table messages.  <a href="classmoveit_1_1semantic__world_1_1SemanticWorld.html#a2d3a32d9053bb33af906ca222af77b20">More...</a><br /></td></tr>
-<tr class="separator:a2d3a32d9053bb33af906ca222af77b20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab33c9119717f00d78104075e79d4ba66"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; void()&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1semantic__world_1_1SemanticWorld.html#ab33c9119717f00d78104075e79d4ba66">TableCallbackFn</a></td></tr>
+<tr class="memdesc:ab33c9119717f00d78104075e79d4ba66"><td class="mdescLeft">&#160;</td><td class="mdescRight">The signature for a callback on receiving table messages.  <a href="classmoveit_1_1semantic__world_1_1SemanticWorld.html#ab33c9119717f00d78104075e79d4ba66">More...</a><br /></td></tr>
+<tr class="separator:ab33c9119717f00d78104075e79d4ba66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -113,7 +113,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a24c16571fa625bae15aa84993868a76b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cc2c3aeeec441846ce5453564628816"><td class="memItemLeft" align="right" valign="top">visualization_msgs::msg::MarkerArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1semantic__world_1_1SemanticWorld.html#a6cc2c3aeeec441846ce5453564628816">getPlaceLocationsMarker</a> (const std::vector&lt; geometry_msgs::msg::PoseStamped &gt; &amp;poses) const</td></tr>
 <tr class="separator:a6cc2c3aeeec441846ce5453564628816"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e85b48f24b428018b8ca48ad1edb7de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1semantic__world_1_1SemanticWorld.html#a9e85b48f24b428018b8ca48ad1edb7de">addTableCallback</a> (const <a class="el" href="classmoveit_1_1semantic__world_1_1SemanticWorld.html#a2d3a32d9053bb33af906ca222af77b20">TableCallbackFn</a> &amp;table_callback)</td></tr>
+<tr class="memitem:a9e85b48f24b428018b8ca48ad1edb7de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1semantic__world_1_1SemanticWorld.html#a9e85b48f24b428018b8ca48ad1edb7de">addTableCallback</a> (const <a class="el" href="classmoveit_1_1semantic__world_1_1SemanticWorld.html#ab33c9119717f00d78104075e79d4ba66">TableCallbackFn</a> &amp;table_callback)</td></tr>
 <tr class="separator:a9e85b48f24b428018b8ca48ad1edb7de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7adc77dc5324e717f471f173e7d83808"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1semantic__world_1_1SemanticWorld.html#a7adc77dc5324e717f471f173e7d83808">findObjectTable</a> (const geometry_msgs::msg::Pose &amp;pose, double min_distance_from_edge=0.0, double min_vertical_offset=0.0) const</td></tr>
 <tr class="separator:a7adc77dc5324e717f471f173e7d83808"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,14 +125,14 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="semantic__world_8h_source.html#l00060">60</a> of file <a class="el" href="semantic__world_8h_source.html">semantic_world.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a2d3a32d9053bb33af906ca222af77b20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d3a32d9053bb33af906ca222af77b20">&#9670;&nbsp;</a></span>TableCallbackFn</h2>
+<a id="ab33c9119717f00d78104075e79d4ba66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab33c9119717f00d78104075e79d4ba66">&#9670;&nbsp;</a></span>TableCallbackFn</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef boost::function&lt;void()&gt; <a class="el" href="classmoveit_1_1semantic__world_1_1SemanticWorld.html#a2d3a32d9053bb33af906ca222af77b20">moveit::semantic_world::SemanticWorld::TableCallbackFn</a></td>
+          <td class="memname">typedef std::function&lt;void()&gt; <a class="el" href="classmoveit_1_1semantic__world_1_1SemanticWorld.html#ab33c9119717f00d78104075e79d4ba66">moveit::semantic_world::SemanticWorld::TableCallbackFn</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -189,7 +189,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void moveit::semantic_world::SemanticWorld::addTableCallback </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classmoveit_1_1semantic__world_1_1SemanticWorld.html#a2d3a32d9053bb33af906ca222af77b20">TableCallbackFn</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classmoveit_1_1semantic__world_1_1SemanticWorld.html#ab33c9119717f00d78104075e79d4ba66">TableCallbackFn</a> &amp;&#160;</td>
           <td class="paramname"><em>table_callback</em></td><td>)</td>
           <td></td>
         </tr>

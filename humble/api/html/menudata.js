@@ -55,6 +55,7 @@ var menudata={children:[
 {text:"z",url:"namespacemembers_z.html#index_z"}]},
 {text:"Functions",url:"namespacemembers_func.html",children:[
 {text:"a",url:"namespacemembers_func.html#index_a"},
+{text:"b",url:"namespacemembers_func_b.html#index_b"},
 {text:"c",url:"namespacemembers_func_c.html#index_c"},
 {text:"d",url:"namespacemembers_func_d.html#index_d"},
 {text:"e",url:"namespacemembers_func_e.html#index_e"},
@@ -140,6 +141,7 @@ var menudata={children:[
 {text:"s",url:"namespacemembers_eval.html#index_s"},
 {text:"t",url:"namespacemembers_eval.html#index_t"},
 {text:"u",url:"namespacemembers_eval.html#index_u"},
+{text:"v",url:"namespacemembers_eval.html#index_v"},
 {text:"w",url:"namespacemembers_eval.html#index_w"},
 {text:"x",url:"namespacemembers_eval.html#index_x"},
 {text:"y",url:"namespacemembers_eval.html#index_y"}]}]}]},
@@ -260,7 +262,6 @@ var menudata={children:[
 {text:"b",url:"functions_eval.html#index_b"},
 {text:"c",url:"functions_eval.html#index_c"},
 {text:"d",url:"functions_eval.html#index_d"},
-{text:"e",url:"functions_eval.html#index_e"},
 {text:"f",url:"functions_eval.html#index_f"},
 {text:"g",url:"functions_eval.html#index_g"},
 {text:"h",url:"functions_eval.html#index_h"},

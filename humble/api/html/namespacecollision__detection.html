@@ -230,9 +230,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a7bde0a5056eef76b718f72a909923af2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecollision__detection.html#a7bde0a5056eef76b718f72a909923af2">DistanceMap</a> = std::map&lt; const std::pair&lt; std::string, std::string &gt;, std::vector&lt; <a class="el" href="structcollision__detection_1_1DistanceResultsData.html">DistanceResultsData</a> &gt; &gt;</td></tr>
 <tr class="memdesc:a7bde0a5056eef76b718f72a909923af2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mapping between the names of the collision objects and the DistanceResultData.  <a href="namespacecollision__detection.html#a7bde0a5056eef76b718f72a909923af2">More...</a><br /></td></tr>
 <tr class="separator:a7bde0a5056eef76b718f72a909923af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc95f111eb0775b4c8be279ea4891a98"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecollision__detection.html#abc95f111eb0775b4c8be279ea4891a98">DecideContactFn</a> = boost::function&lt; bool(<a class="el" href="structcollision__detection_1_1Contact.html">collision_detection::Contact</a> &amp;)&gt;</td></tr>
-<tr class="memdesc:abc95f111eb0775b4c8be279ea4891a98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signature of predicate that decides whether a contact is allowed or not (when <a class="el" href="namespacecollision__detection_1_1AllowedCollision.html#a8f4b01d9c2bf6843a65389a35296d93b">AllowedCollision::Type</a> is CONDITIONAL)  <a href="namespacecollision__detection.html#abc95f111eb0775b4c8be279ea4891a98">More...</a><br /></td></tr>
-<tr class="separator:abc95f111eb0775b4c8be279ea4891a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdd5bb30ceb94dc79a3911971501ef56"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecollision__detection.html#acdd5bb30ceb94dc79a3911971501ef56">DecideContactFn</a> = std::function&lt; bool(<a class="el" href="structcollision__detection_1_1Contact.html">collision_detection::Contact</a> &amp;)&gt;</td></tr>
+<tr class="memdesc:acdd5bb30ceb94dc79a3911971501ef56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signature of predicate that decides whether a contact is allowed or not (when <a class="el" href="namespacecollision__detection_1_1AllowedCollision.html#a8f4b01d9c2bf6843a65389a35296d93b">AllowedCollision::Type</a> is CONDITIONAL)  <a href="namespacecollision__detection.html#acdd5bb30ceb94dc79a3911971501ef56">More...</a><br /></td></tr>
+<tr class="separator:acdd5bb30ceb94dc79a3911971501ef56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace73c1317d865f74ad8fcd92bcc6759b"><td class="memItemLeft" align="right" valign="top">typedef octomap::OcTreeNode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecollision__detection.html#ace73c1317d865f74ad8fcd92bcc6759b">OccMapNode</a></td></tr>
 <tr class="separator:ace73c1317d865f74ad8fcd92bcc6759b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ac86a279df576cc0b9be55890af87f9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecollision__detection.html#a3ac86a279df576cc0b9be55890af87f9">OccMapTreePtr</a> = std::shared_ptr&lt; <a class="el" href="classcollision__detection_1_1OccMapTree.html">OccMapTree</a> &gt;</td></tr>
@@ -423,14 +423,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="abc95f111eb0775b4c8be279ea4891a98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc95f111eb0775b4c8be279ea4891a98">&#9670;&nbsp;</a></span>DecideContactFn</h2>
+<a id="acdd5bb30ceb94dc79a3911971501ef56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdd5bb30ceb94dc79a3911971501ef56">&#9670;&nbsp;</a></span>DecideContactFn</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespacecollision__detection.html#abc95f111eb0775b4c8be279ea4891a98">collision_detection::DecideContactFn</a> = typedef boost::function&lt;bool(<a class="el" href="structcollision__detection_1_1Contact.html">collision_detection::Contact</a>&amp;)&gt;</td>
+          <td class="memname">using <a class="el" href="namespacecollision__detection.html#acdd5bb30ceb94dc79a3911971501ef56">collision_detection::DecideContactFn</a> = typedef std::function&lt;bool(<a class="el" href="structcollision__detection_1_1Contact.html">collision_detection::Contact</a>&amp;)&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -519,7 +519,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="occupancy__map_8h_source.html#l00082">82</a> of file <a class="el" href="occupancy__map_8h_source.html">occupancy_map.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="occupancy__map_8h_source.html#l00081">81</a> of file <a class="el" href="occupancy__map_8h_source.html">occupancy_map.h</a>.</p>
 
 </div>
 </div>
@@ -535,7 +535,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="occupancy__map_8h_source.html#l00152">152</a> of file <a class="el" href="occupancy__map_8h_source.html">occupancy_map.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="occupancy__map_8h_source.html#l00151">151</a> of file <a class="el" href="occupancy__map_8h_source.html">occupancy_map.h</a>.</p>
 
 </div>
 </div>
@@ -551,7 +551,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="occupancy__map_8h_source.html#l00151">151</a> of file <a class="el" href="occupancy__map_8h_source.html">occupancy_map.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="occupancy__map_8h_source.html#l00150">150</a> of file <a class="el" href="occupancy__map_8h_source.html">occupancy_map.h</a>.</p>
 
 </div>
 </div>
@@ -574,7 +574,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="a3475cd70ddea60348f0737a6b6b859faa1d6aa9e8d5eddde1826ce63f16677a4e"></a>ENVIRONMENT&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="collision__distance__field__types_8h_source.html#l00092">92</a> of file <a class="el" href="collision__distance__field__types_8h_source.html">collision_distance_field_types.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="collision__distance__field__types_8h_source.html#l00094">94</a> of file <a class="el" href="collision__distance__field__types_8h_source.html">collision_distance_field_types.h</a>.</p>
 
 </div>
 </div>
@@ -596,7 +596,7 @@ Variables</h2></td></tr>
 
 <p>Increases the counter of the caches which can trigger the cleaning of expired entries from them. </p>
 
-<p class="definition">Definition at line <a class="el" href="fcl_2src_2collision__common_8cpp_source.html#l00952">952</a> of file <a class="el" href="fcl_2src_2collision__common_8cpp_source.html">collision_common.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fcl_2src_2collision__common_8cpp_source.html#l00954">954</a> of file <a class="el" href="fcl_2src_2collision__common_8cpp_source.html">collision_common.cpp</a>.</p>
 
 </div>
 </div>
@@ -642,7 +642,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True terminates the collision check, false continues it to the next pair of objects </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="fcl_2src_2collision__common_8cpp_source.html#l00091">91</a> of file <a class="el" href="fcl_2src_2collision__common_8cpp_source.html">collision_common.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fcl_2src_2collision__common_8cpp_source.html#l00093">93</a> of file <a class="el" href="fcl_2src_2collision__common_8cpp_source.html">collision_common.cpp</a>.</p>
 
 </div>
 </div>
@@ -672,7 +672,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="collision__tools_8cpp_source.html#l00311">311</a> of file <a class="el" href="collision__tools_8cpp_source.html">collision_tools.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="collision__tools_8cpp_source.html#l00308">308</a> of file <a class="el" href="collision__tools_8cpp_source.html">collision_tools.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -711,7 +711,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="collision__tools_8cpp_source.html#l00300">300</a> of file <a class="el" href="collision__tools_8cpp_source.html">collision_tools.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="collision__tools_8cpp_source.html#l00297">297</a> of file <a class="el" href="collision__tools_8cpp_source.html">collision_tools.cpp</a>.</p>
 
 </div>
 </div>
@@ -749,7 +749,7 @@ Here is the caller graph for this function:</div>
 
 <p>Create new <a class="el" href="structcollision__detection_1_1FCLGeometry.html" title="Bundles the CollisionGeometryData and FCL collision geometry representation into a single class.">FCLGeometry</a> object out of attached body. </p>
 
-<p class="definition">Definition at line <a class="el" href="fcl_2src_2collision__common_8cpp_source.html#l00906">906</a> of file <a class="el" href="fcl_2src_2collision__common_8cpp_source.html">collision_common.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fcl_2src_2collision__common_8cpp_source.html#l00908">908</a> of file <a class="el" href="fcl_2src_2collision__common_8cpp_source.html">collision_common.cpp</a>.</p>
 
 </div>
 </div>
@@ -787,7 +787,7 @@ Here is the caller graph for this function:</div>
 
 <p>Create new <a class="el" href="structcollision__detection_1_1FCLGeometry.html" title="Bundles the CollisionGeometryData and FCL collision geometry representation into a single class.">FCLGeometry</a> object out of robot link model. </p>
 
-<p class="definition">Definition at line <a class="el" href="fcl_2src_2collision__common_8cpp_source.html#l00900">900</a> of file <a class="el" href="fcl_2src_2collision__common_8cpp_source.html">collision_common.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fcl_2src_2collision__common_8cpp_source.html#l00902">902</a> of file <a class="el" href="fcl_2src_2collision__common_8cpp_source.html">collision_common.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -837,7 +837,7 @@ template&lt;typename BV , typename T &gt; </div>
 <p>Templated helper function creating new collision geometry out of general object using an arbitrary bounding volume (BV). </p>
 <p>It assigns a thread-local cache for each type of shape and minimizes memory usage and copying through utilizing the cache. </p>
 
-<p class="definition">Definition at line <a class="el" href="fcl_2src_2collision__common_8cpp_source.html#l00722">722</a> of file <a class="el" href="fcl_2src_2collision__common_8cpp_source.html">collision_common.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fcl_2src_2collision__common_8cpp_source.html#l00724">724</a> of file <a class="el" href="fcl_2src_2collision__common_8cpp_source.html">collision_common.cpp</a>.</p>
 
 </div>
 </div>
@@ -870,7 +870,7 @@ template&lt;typename BV , typename T &gt; </div>
 <p>Create new <a class="el" href="structcollision__detection_1_1FCLGeometry.html" title="Bundles the CollisionGeometryData and FCL collision geometry representation into a single class.">FCLGeometry</a> object out of a world object. </p>
 <p><a class="el" href="classA.html">A</a> world object always consists only of a single shape, therefore we don't need the <em>shape_index</em>. </p>
 
-<p class="definition">Definition at line <a class="el" href="fcl_2src_2collision__common_8cpp_source.html#l00912">912</a> of file <a class="el" href="fcl_2src_2collision__common_8cpp_source.html">collision_common.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fcl_2src_2collision__common_8cpp_source.html#l00914">914</a> of file <a class="el" href="fcl_2src_2collision__common_8cpp_source.html">collision_common.cpp</a>.</p>
 
 </div>
 </div>
@@ -920,7 +920,7 @@ template&lt;typename BV , typename T &gt; </div>
 
 <p>Create new scaled and / or padded <a class="el" href="structcollision__detection_1_1FCLGeometry.html" title="Bundles the CollisionGeometryData and FCL collision geometry representation into a single class.">FCLGeometry</a> object out of an attached body. </p>
 
-<p class="definition">Definition at line <a class="el" href="fcl_2src_2collision__common_8cpp_source.html#l00940">940</a> of file <a class="el" href="fcl_2src_2collision__common_8cpp_source.html">collision_common.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fcl_2src_2collision__common_8cpp_source.html#l00942">942</a> of file <a class="el" href="fcl_2src_2collision__common_8cpp_source.html">collision_common.cpp</a>.</p>
 
 </div>
 </div>
@@ -970,7 +970,7 @@ template&lt;typename BV , typename T &gt; </div>
 
 <p>Create new scaled and / or padded <a class="el" href="structcollision__detection_1_1FCLGeometry.html" title="Bundles the CollisionGeometryData and FCL collision geometry representation into a single class.">FCLGeometry</a> object out of robot link model. </p>
 
-<p class="definition">Definition at line <a class="el" href="fcl_2src_2collision__common_8cpp_source.html#l00934">934</a> of file <a class="el" href="fcl_2src_2collision__common_8cpp_source.html">collision_common.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fcl_2src_2collision__common_8cpp_source.html#l00936">936</a> of file <a class="el" href="fcl_2src_2collision__common_8cpp_source.html">collision_common.cpp</a>.</p>
 
 </div>
 </div>
@@ -1022,7 +1022,7 @@ template&lt;typename BV , typename T &gt; </div>
 
 <p>Templated helper function creating new collision geometry out of general object using an arbitrary bounding volume (BV). This can include padding and scaling. </p>
 
-<p class="definition">Definition at line <a class="el" href="fcl_2src_2collision__common_8cpp_source.html#l00920">920</a> of file <a class="el" href="fcl_2src_2collision__common_8cpp_source.html">collision_common.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fcl_2src_2collision__common_8cpp_source.html#l00922">922</a> of file <a class="el" href="fcl_2src_2collision__common_8cpp_source.html">collision_common.cpp</a>.</p>
 
 </div>
 </div>
@@ -1066,7 +1066,7 @@ template&lt;typename BV , typename T &gt; </div>
 
 <p>Create new scaled and / or padded <a class="el" href="structcollision__detection_1_1FCLGeometry.html" title="Bundles the CollisionGeometryData and FCL collision geometry representation into a single class.">FCLGeometry</a> object out of an world object. </p>
 
-<p class="definition">Definition at line <a class="el" href="fcl_2src_2collision__common_8cpp_source.html#l00946">946</a> of file <a class="el" href="fcl_2src_2collision__common_8cpp_source.html">collision_common.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fcl_2src_2collision__common_8cpp_source.html#l00948">948</a> of file <a class="el" href="fcl_2src_2collision__common_8cpp_source.html">collision_common.cpp</a>.</p>
 
 </div>
 </div>
@@ -1096,7 +1096,7 @@ template&lt;typename BV , typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="collision__distance__field__types_8cpp_source.html#l00050">50</a> of file <a class="el" href="collision__distance__field__types_8cpp_source.html">collision_distance_field_types.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="collision__distance__field__types_8cpp_source.html#l00053">53</a> of file <a class="el" href="collision__distance__field__types_8cpp_source.html">collision_distance_field_types.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1158,7 +1158,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True terminates the distance check, false continues it to the next pair of objects </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="fcl_2src_2collision__common_8cpp_source.html#l00442">442</a> of file <a class="el" href="fcl_2src_2collision__common_8cpp_source.html">collision_common.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fcl_2src_2collision__common_8cpp_source.html#l00444">444</a> of file <a class="el" href="fcl_2src_2collision__common_8cpp_source.html">collision_common.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1198,7 +1198,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="collision__distance__field__types_8cpp_source.html#l00399">399</a> of file <a class="el" href="collision__distance__field__types_8cpp_source.html">collision_distance_field_types.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="collision__distance__field__types_8cpp_source.html#l00402">402</a> of file <a class="el" href="collision__distance__field__types_8cpp_source.html">collision_distance_field_types.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1318,7 +1318,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="collision__common__distance__field_8cpp_source.html#l00155">155</a> of file <a class="el" href="collision__common__distance__field_8cpp_source.html">collision_common_distance_field.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="collision__common__distance__field_8cpp_source.html#l00154">154</a> of file <a class="el" href="collision__common__distance__field_8cpp_source.html">collision_common_distance_field.cpp</a>.</p>
 
 </div>
 </div>
@@ -1348,7 +1348,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="collision__common__distance__field_8cpp_source.html#l00141">141</a> of file <a class="el" href="collision__common__distance__field_8cpp_source.html">collision_common_distance_field.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="collision__common__distance__field_8cpp_source.html#l00140">140</a> of file <a class="el" href="collision__common__distance__field_8cpp_source.html">collision_common_distance_field.cpp</a>.</p>
 
 </div>
 </div>
@@ -1367,7 +1367,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="collision__common__distance__field_8cpp_source.html#l00097">97</a> of file <a class="el" href="collision__common__distance__field_8cpp_source.html">collision_common_distance_field.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="collision__common__distance__field_8cpp_source.html#l00096">96</a> of file <a class="el" href="collision__common__distance__field_8cpp_source.html">collision_common_distance_field.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1406,7 +1406,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="collision__common__distance__field_8cpp_source.html#l00103">103</a> of file <a class="el" href="collision__common__distance__field_8cpp_source.html">collision_common_distance_field.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="collision__common__distance__field_8cpp_source.html#l00102">102</a> of file <a class="el" href="collision__common__distance__field_8cpp_source.html">collision_common_distance_field.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1453,7 +1453,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="collision__common__distance__field_8cpp_source.html#l00169">169</a> of file <a class="el" href="collision__common__distance__field_8cpp_source.html">collision_common_distance_field.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="collision__common__distance__field_8cpp_source.html#l00168">168</a> of file <a class="el" href="collision__common__distance__field_8cpp_source.html">collision_common_distance_field.cpp</a>.</p>
 
 </div>
 </div>
@@ -1547,7 +1547,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="collision__distance__field__types_8cpp_source.html#l00542">542</a> of file <a class="el" href="collision__distance__field__types_8cpp_source.html">collision_distance_field_types.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="collision__distance__field__types_8cpp_source.html#l00545">545</a> of file <a class="el" href="collision__distance__field__types_8cpp_source.html">collision_distance_field_types.cpp</a>.</p>
 
 </div>
 </div>
@@ -1583,7 +1583,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="collision__tools_8cpp_source.html#l00090">90</a> of file <a class="el" href="collision__tools_8cpp_source.html">collision_tools.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="collision__tools_8cpp_source.html#l00087">87</a> of file <a class="el" href="collision__tools_8cpp_source.html">collision_tools.cpp</a>.</p>
 
 </div>
 </div>
@@ -1637,7 +1637,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="collision__tools_8cpp_source.html#l00133">133</a> of file <a class="el" href="collision__tools_8cpp_source.html">collision_tools.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="collision__tools_8cpp_source.html#l00130">130</a> of file <a class="el" href="collision__tools_8cpp_source.html">collision_tools.cpp</a>.</p>
 
 </div>
 </div>
@@ -1667,7 +1667,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="collision__common__distance__field_8cpp_source.html#l00127">127</a> of file <a class="el" href="collision__common__distance__field_8cpp_source.html">collision_common_distance_field.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="collision__common__distance__field_8cpp_source.html#l00126">126</a> of file <a class="el" href="collision__common__distance__field_8cpp_source.html">collision_common_distance_field.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1726,7 +1726,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="collision__distance__field__types_8cpp_source.html#l00202">202</a> of file <a class="el" href="collision__distance__field__types_8cpp_source.html">collision_distance_field_types.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="collision__distance__field__types_8cpp_source.html#l00205">205</a> of file <a class="el" href="collision__distance__field__types_8cpp_source.html">collision_distance_field_types.cpp</a>.</p>
 
 </div>
 </div>
@@ -1786,7 +1786,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="collision__distance__field__types_8cpp_source.html#l00229">229</a> of file <a class="el" href="collision__distance__field__types_8cpp_source.html">collision_distance_field_types.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="collision__distance__field__types_8cpp_source.html#l00232">232</a> of file <a class="el" href="collision__distance__field__types_8cpp_source.html">collision_distance_field_types.cpp</a>.</p>
 
 </div>
 </div>
@@ -1858,7 +1858,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="collision__distance__field__types_8cpp_source.html#l00141">141</a> of file <a class="el" href="collision__distance__field__types_8cpp_source.html">collision_distance_field_types.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="collision__distance__field__types_8cpp_source.html#l00144">144</a> of file <a class="el" href="collision__distance__field__types_8cpp_source.html">collision_distance_field_types.cpp</a>.</p>
 
 </div>
 </div>
@@ -1912,7 +1912,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="collision__distance__field__types_8cpp_source.html#l00411">411</a> of file <a class="el" href="collision__distance__field__types_8cpp_source.html">collision_distance_field_types.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="collision__distance__field__types_8cpp_source.html#l00414">414</a> of file <a class="el" href="collision__distance__field__types_8cpp_source.html">collision_distance_field_types.cpp</a>.</p>
 
 </div>
 </div>
@@ -1949,7 +1949,7 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>add a class for managing cost sources </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="collision__tools_8cpp_source.html#l00079">79</a> of file <a class="el" href="collision__tools_8cpp_source.html">collision_tools.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="collision__tools_8cpp_source.html#l00076">76</a> of file <a class="el" href="collision__tools_8cpp_source.html">collision_tools.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2006,7 +2006,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="collision__tools_8cpp_source.html#l00101">101</a> of file <a class="el" href="collision__tools_8cpp_source.html">collision_tools.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="collision__tools_8cpp_source.html#l00098">98</a> of file <a class="el" href="collision__tools_8cpp_source.html">collision_tools.cpp</a>.</p>
 
 </div>
 </div>
@@ -2066,7 +2066,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="collision__distance__field__types_8cpp_source.html#l00442">442</a> of file <a class="el" href="collision__distance__field__types_8cpp_source.html">collision_distance_field_types.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="collision__distance__field__types_8cpp_source.html#l00445">445</a> of file <a class="el" href="collision__distance__field__types_8cpp_source.html">collision_distance_field_types.cpp</a>.</p>
 
 </div>
 </div>
@@ -2096,7 +2096,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="collision__tools_8cpp_source.html#l00173">173</a> of file <a class="el" href="collision__tools_8cpp_source.html">collision_tools.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="collision__tools_8cpp_source.html#l00170">170</a> of file <a class="el" href="collision__tools_8cpp_source.html">collision_tools.cpp</a>.</p>
 
 </div>
 </div>
@@ -2117,7 +2117,7 @@ template&lt;typename BV , typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="fcl_2src_2collision__common_8cpp_source.html#l00701">701</a> of file <a class="el" href="fcl_2src_2collision__common_8cpp_source.html">collision_common.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="fcl_2src_2collision__common_8cpp_source.html#l00703">703</a> of file <a class="el" href="fcl_2src_2collision__common_8cpp_source.html">collision_common.cpp</a>.</p>
 
 </div>
 </div>
@@ -2137,7 +2137,7 @@ template&lt;typename BV , typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="collision__tools_8cpp_source.html#l00186">186</a> of file <a class="el" href="collision__tools_8cpp_source.html">collision_tools.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="collision__tools_8cpp_source.html#l00183">183</a> of file <a class="el" href="collision__tools_8cpp_source.html">collision_tools.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2182,7 +2182,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="collision__tools_8cpp_source.html#l00194">194</a> of file <a class="el" href="collision__tools_8cpp_source.html">collision_tools.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="collision__tools_8cpp_source.html#l00191">191</a> of file <a class="el" href="collision__tools_8cpp_source.html">collision_tools.cpp</a>.</p>
 
 </div>
 </div>
@@ -2563,7 +2563,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="collision__octomap__filter_8cpp_source.html#l00061">61</a> of file <a class="el" href="collision__octomap__filter_8cpp_source.html">collision_octomap_filter.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="collision__octomap__filter_8cpp_source.html#l00062">62</a> of file <a class="el" href="collision__octomap__filter_8cpp_source.html">collision_octomap_filter.cpp</a>.</p>
 
 </div>
 </div>
@@ -2599,7 +2599,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="collision__tools_8cpp_source.html#l00247">247</a> of file <a class="el" href="collision__tools_8cpp_source.html">collision_tools.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="collision__tools_8cpp_source.html#l00244">244</a> of file <a class="el" href="collision__tools_8cpp_source.html">collision_tools.cpp</a>.</p>
 
 </div>
 </div>
@@ -2629,7 +2629,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="collision__tools_8cpp_source.html#l00217">217</a> of file <a class="el" href="collision__tools_8cpp_source.html">collision_tools.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="collision__tools_8cpp_source.html#l00214">214</a> of file <a class="el" href="collision__tools_8cpp_source.html">collision_tools.cpp</a>.</p>
 
 </div>
 </div>
@@ -2727,7 +2727,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="collision__env__distance__field_8cpp_source.html#l00087">87</a> of file <a class="el" href="collision__env__distance__field_8cpp_source.html">collision_env_distance_field.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="collision__env__distance__field_8cpp_source.html#l00088">88</a> of file <a class="el" href="collision__env__distance__field_8cpp_source.html">collision_env_distance_field.cpp</a>.</p>
 
 </div>
 </div>
@@ -2743,7 +2743,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="collision__env__bullet_8cpp_source.html#l00080">80</a> of file <a class="el" href="collision__env__bullet_8cpp_source.html">collision_env_bullet.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="collision__env__bullet_8cpp_source.html#l00082">82</a> of file <a class="el" href="collision__env__bullet_8cpp_source.html">collision_env_bullet.cpp</a>.</p>
 
 </div>
 </div>

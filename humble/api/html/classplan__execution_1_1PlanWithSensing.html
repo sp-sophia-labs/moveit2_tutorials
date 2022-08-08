@@ -85,7 +85,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a780573682cd58bde713bc1e189b72e01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aade87eac338c9e9f61b3940925723d14"><td class="memItemLeft" align="right" valign="top">const trajectory_execution_manager::TrajectoryExecutionManagerPtr &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplan__execution_1_1PlanWithSensing.html#aade87eac338c9e9f61b3940925723d14">getTrajectoryExecutionManager</a> () const</td></tr>
 <tr class="separator:aade87eac338c9e9f61b3940925723d14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbcdac3166ddb05a2f16c07a9f4e1ae5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplan__execution_1_1PlanWithSensing.html#adbcdac3166ddb05a2f16c07a9f4e1ae5">computePlan</a> (<a class="el" href="structplan__execution_1_1ExecutableMotionPlan.html">ExecutableMotionPlan</a> &amp;plan, const <a class="el" href="namespaceplan__execution.html#ac84c555c3f56f8f0c5be97b626207d86">ExecutableMotionPlanComputationFn</a> &amp;motion_planner, unsigned int max_look_attempts, double max_safe_path_cost)</td></tr>
+<tr class="memitem:adbcdac3166ddb05a2f16c07a9f4e1ae5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplan__execution_1_1PlanWithSensing.html#adbcdac3166ddb05a2f16c07a9f4e1ae5">computePlan</a> (<a class="el" href="structplan__execution_1_1ExecutableMotionPlan.html">ExecutableMotionPlan</a> &amp;plan, const <a class="el" href="namespaceplan__execution.html#a2476ed7a05089befcbd6c6e4533c0321">ExecutableMotionPlanComputationFn</a> &amp;motion_planner, unsigned int max_look_attempts, double max_safe_path_cost)</td></tr>
 <tr class="separator:adbcdac3166ddb05a2f16c07a9f4e1ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04d78cc1cece900dfa24e58803da5933"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplan__execution_1_1PlanWithSensing.html#a04d78cc1cece900dfa24e58803da5933">getMaxSafePathCost</a> () const</td></tr>
 <tr class="separator:a04d78cc1cece900dfa24e58803da5933"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -103,8 +103,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7b7616873625a0d1f77ef9294de98e9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25724fd20d4f7bf7580b5c30095372a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplan__execution_1_1PlanWithSensing.html#a25724fd20d4f7bf7580b5c30095372a8">setDiscardOverlappingCostSources</a> (double value)</td></tr>
 <tr class="separator:a25724fd20d4f7bf7580b5c30095372a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfc7fb8e06eb7dfdd3b8f0915792ba5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplan__execution_1_1PlanWithSensing.html#acfc7fb8e06eb7dfdd3b8f0915792ba5a">setBeforeLookCallback</a> (const boost::function&lt; void()&gt; &amp;callback)</td></tr>
-<tr class="separator:acfc7fb8e06eb7dfdd3b8f0915792ba5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad62aaee9095bcca1472c49fefecf4ab0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplan__execution_1_1PlanWithSensing.html#ad62aaee9095bcca1472c49fefecf4ab0">setBeforeLookCallback</a> (const std::function&lt; void()&gt; &amp;callback)</td></tr>
+<tr class="separator:ad62aaee9095bcca1472c49fefecf4ab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb3efa863c196d80e92c93037318ab2e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplan__execution_1_1PlanWithSensing.html#abb3efa863c196d80e92c93037318ab2e">displayCostSources</a> (bool flag)</td></tr>
 <tr class="separator:abb3efa863c196d80e92c93037318ab2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -138,7 +138,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plan__with__sensing_8cpp_source.html#l00077">77</a> of file <a class="el" href="plan__with__sensing_8cpp_source.html">plan_with_sensing.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plan__with__sensing_8cpp_source.html#l00083">83</a> of file <a class="el" href="plan__with__sensing_8cpp_source.html">plan_with_sensing.cpp</a>.</p>
 
 </div>
 </div>
@@ -157,7 +157,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plan__with__sensing_8cpp_source.html#l00140">140</a> of file <a class="el" href="plan__with__sensing_8cpp_source.html">plan_with_sensing.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plan__with__sensing_8cpp_source.html#l00146">146</a> of file <a class="el" href="plan__with__sensing_8cpp_source.html">plan_with_sensing.cpp</a>.</p>
 
 </div>
 </div>
@@ -177,7 +177,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="namespaceplan__execution.html#ac84c555c3f56f8f0c5be97b626207d86">ExecutableMotionPlanComputationFn</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespaceplan__execution.html#a2476ed7a05089befcbd6c6e4533c0321">ExecutableMotionPlanComputationFn</a> &amp;&#160;</td>
           <td class="paramname"><em>motion_planner</em>, </td>
         </tr>
         <tr>
@@ -200,7 +200,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plan__with__sensing_8cpp_source.html#l00155">155</a> of file <a class="el" href="plan__with__sensing_8cpp_source.html">plan_with_sensing.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plan__with__sensing_8cpp_source.html#l00161">161</a> of file <a class="el" href="plan__with__sensing_8cpp_source.html">plan_with_sensing.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -230,7 +230,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plan__with__sensing_8cpp_source.html#l00145">145</a> of file <a class="el" href="plan__with__sensing_8cpp_source.html">plan_with_sensing.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plan__with__sensing_8cpp_source.html#l00151">151</a> of file <a class="el" href="plan__with__sensing_8cpp_source.html">plan_with_sensing.cpp</a>.</p>
 
 </div>
 </div>
@@ -369,8 +369,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="acfc7fb8e06eb7dfdd3b8f0915792ba5a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acfc7fb8e06eb7dfdd3b8f0915792ba5a">&#9670;&nbsp;</a></span>setBeforeLookCallback()</h2>
+<a id="ad62aaee9095bcca1472c49fefecf4ab0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad62aaee9095bcca1472c49fefecf4ab0">&#9670;&nbsp;</a></span>setBeforeLookCallback()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -381,7 +381,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void plan_execution::PlanWithSensing::setBeforeLookCallback </td>
           <td>(</td>
-          <td class="paramtype">const boost::function&lt; void()&gt; &amp;&#160;</td>
+          <td class="paramtype">const std::function&lt; void()&gt; &amp;&#160;</td>
           <td class="paramname"><em>callback</em></td><td>)</td>
           <td></td>
         </tr>

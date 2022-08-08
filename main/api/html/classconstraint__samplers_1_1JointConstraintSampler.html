@@ -126,9 +126,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aae9569abec9c66877a44457795c773e7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classconstraint__samplers_1_1JointConstraintSampler.html#aae9569abec9c66877a44457795c773e7">sample</a> (<a class="el" href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a> &amp;state, const <a class="el" href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a> &amp;ks, unsigned int max_attempts) override</td></tr>
 <tr class="memdesc:aae9569abec9c66877a44457795c773e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Samples given the constraints, populating <em>state</em>. This function allows the parameter max_attempts to be set.  <a href="classconstraint__samplers_1_1JointConstraintSampler.html#aae9569abec9c66877a44457795c773e7">More...</a><br /></td></tr>
 <tr class="separator:aae9569abec9c66877a44457795c773e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a2a319628afc3b267d4dc12009cd639"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classconstraint__samplers_1_1JointConstraintSampler.html#a3a2a319628afc3b267d4dc12009cd639">project</a> (<a class="el" href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a> &amp;state, unsigned int max_attempts) override</td></tr>
-<tr class="memdesc:a3a2a319628afc3b267d4dc12009cd639"><td class="mdescLeft">&#160;</td><td class="mdescRight">Project a sample given the constraints, updating the joint state group. This function allows the parameter max_attempts to be set.  <a href="classconstraint__samplers_1_1JointConstraintSampler.html#a3a2a319628afc3b267d4dc12009cd639">More...</a><br /></td></tr>
-<tr class="separator:a3a2a319628afc3b267d4dc12009cd639"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef5d4d0d9a2288f9d64477ac70adb587"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classconstraint__samplers_1_1JointConstraintSampler.html#aef5d4d0d9a2288f9d64477ac70adb587">getConstrainedJointCount</a> () const</td></tr>
 <tr class="memdesc:aef5d4d0d9a2288f9d64477ac70adb587"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of constrained joints - joints that have an additional bound beyond the joint limits.  <a href="classconstraint__samplers_1_1JointConstraintSampler.html#aef5d4d0d9a2288f9d64477ac70adb587">More...</a><br /></td></tr>
 <tr class="separator:aef5d4d0d9a2288f9d64477ac70adb587"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,9 +168,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a092e2a6ea80f58f2fe340335e6633e6a inherit pub_methods_classconstraint__samplers_1_1ConstraintSampler"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classconstraint__samplers_1_1ConstraintSampler.html#a092e2a6ea80f58f2fe340335e6633e6a">sample</a> (<a class="el" href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a> &amp;state, const <a class="el" href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a> &amp;reference_state)</td></tr>
 <tr class="memdesc:a092e2a6ea80f58f2fe340335e6633e6a inherit pub_methods_classconstraint__samplers_1_1ConstraintSampler"><td class="mdescLeft">&#160;</td><td class="mdescRight">Samples given the constraints, populating <em>state</em>. The value DEFAULT_MAX_SAMPLING_ATTEMPTS will be passed in as the maximum number of attempts to make to take a sample.  <a href="classconstraint__samplers_1_1ConstraintSampler.html#a092e2a6ea80f58f2fe340335e6633e6a">More...</a><br /></td></tr>
 <tr class="separator:a092e2a6ea80f58f2fe340335e6633e6a inherit pub_methods_classconstraint__samplers_1_1ConstraintSampler"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81e665859ee1cee5599f68d05c784293 inherit pub_methods_classconstraint__samplers_1_1ConstraintSampler"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classconstraint__samplers_1_1ConstraintSampler.html#a81e665859ee1cee5599f68d05c784293">project</a> (<a class="el" href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a> &amp;state)</td></tr>
-<tr class="memdesc:a81e665859ee1cee5599f68d05c784293 inherit pub_methods_classconstraint__samplers_1_1ConstraintSampler"><td class="mdescLeft">&#160;</td><td class="mdescRight">Project a sample given the constraints, updating the joint state group. The value DEFAULT_MAX_SAMPLING_ATTEMPTS will be passed in as the maximum number of attempts to make to project the sample.  <a href="classconstraint__samplers_1_1ConstraintSampler.html#a81e665859ee1cee5599f68d05c784293">More...</a><br /></td></tr>
-<tr class="separator:a81e665859ee1cee5599f68d05c784293 inherit pub_methods_classconstraint__samplers_1_1ConstraintSampler"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bd1131691258f0e1a13e6f484c53838 inherit pub_methods_classconstraint__samplers_1_1ConstraintSampler"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classconstraint__samplers_1_1ConstraintSampler.html#a6bd1131691258f0e1a13e6f484c53838">isValid</a> () const</td></tr>
 <tr class="memdesc:a6bd1131691258f0e1a13e6f484c53838 inherit pub_methods_classconstraint__samplers_1_1ConstraintSampler"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether or not the constraint sampler is valid or not. To be valid, the joint model group must be available in the kinematic model and <a class="el" href="classconstraint__samplers_1_1ConstraintSampler.html#a42104965516ab50880e2cf7c7a6056ad" title="Function for configuring a constraint sampler given a Constraints message.">configure()</a> must have successfully been called.  <a href="classconstraint__samplers_1_1ConstraintSampler.html#a6bd1131691258f0e1a13e6f484c53838">More...</a><br /></td></tr>
 <tr class="separator:a6bd1131691258f0e1a13e6f484c53838 inherit pub_methods_classconstraint__samplers_1_1ConstraintSampler"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -367,7 +361,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classconstraint__samplers_1_1ConstraintSampler.html#ab9b7e3ef1f1feb1442f90adf8e85ed09">constraint_samplers::ConstraintSampler</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8cpp_source.html#l00221">221</a> of file <a class="el" href="default__constraint__samplers_8cpp_source.html">default_constraint_samplers.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8cpp_source.html#l00216">216</a> of file <a class="el" href="default__constraint__samplers_8cpp_source.html">default_constraint_samplers.cpp</a>.</p>
 
 </div>
 </div>
@@ -488,7 +482,7 @@ Here is the caller graph for this function:</div>
 <p>Gets the number of constrained joints - joints that have an additional bound beyond the joint limits. </p>
 <dl class="section return"><dt>Returns</dt><dd>The number of constrained joints. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00184">184</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00182">182</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -529,7 +523,7 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="classconstraint__samplers_1_1ConstraintSampler.html#a288fc27c2d5c66808a5193e0a3262a25">constraint_samplers::ConstraintSampler</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00205">205</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00203">203</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
 
 </div>
 </div>
@@ -559,7 +553,7 @@ Here is the caller graph for this function:</div>
 <p>Gets the number of unconstrained joints - joint that have no additional bound beyond the joint limits. </p>
 <dl class="section return"><dt>Returns</dt><dd>The number of unconstrained joints. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00195">195</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00193">193</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -569,56 +563,6 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="test__constraint__samplers_8cpp.html#a6fe411e8837d790250fda4f239fa9241" title=" " alt="" coords="5,20,75,47"/>
 </map>
 </div>
-
-</div>
-</div>
-<a id="a3a2a319628afc3b267d4dc12009cd639"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a2a319628afc3b267d4dc12009cd639">&#9670;&nbsp;</a></span>project()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool constraint_samplers::JointConstraintSampler::project </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a> &amp;&#160;</td>
-          <td class="paramname"><em>state</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>max_attempts</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Project a sample given the constraints, updating the joint state group. This function allows the parameter max_attempts to be set. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">state</td><td>The state into which the values will be placed. Only values for the group are written. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">max_attempts</td><td>The maximum number of times to attempt to draw a sample. If no sample has been drawn in this number of attempts, false will be returned.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>True if a sample was successfully projected, false otherwise </dd></dl>
-
-<p>Implements <a class="el" href="classconstraint__samplers_1_1ConstraintSampler.html#a4bc41a1d7d1476c38ceff13e1e0e9e8d">constraint_samplers::ConstraintSampler</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8cpp_source.html#l00216">216</a> of file <a class="el" href="default__constraint__samplers_8cpp_source.html">default_constraint_samplers.cpp</a>.</p>
 
 </div>
 </div>
@@ -711,7 +655,7 @@ Here is the caller graph for this function:</div>
 
 <p>The bounds for any joint with bounds that are more restrictive than the joint limits. </p>
 
-<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00249">249</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00247">247</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
 
 </div>
 </div>
@@ -737,7 +681,7 @@ Here is the caller graph for this function:</div>
 
 <p>Random number generator used to sample. </p>
 
-<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00248">248</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00246">246</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
 
 </div>
 </div>
@@ -763,7 +707,7 @@ Here is the caller graph for this function:</div>
 
 <p>The index of the unbounded joints in the joint state vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00254">254</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00252">252</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
 
 </div>
 </div>
@@ -789,7 +733,7 @@ Here is the caller graph for this function:</div>
 
 <p>The joints that are not bounded except by joint limits. </p>
 
-<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00252">252</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00250">250</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
 
 </div>
 </div>
@@ -815,7 +759,7 @@ Here is the caller graph for this function:</div>
 
 <p>Values associated with this group to avoid continuously reallocating. </p>
 
-<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00255">255</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="default__constraint__samplers_8h_source.html#l00253">253</a> of file <a class="el" href="default__constraint__samplers_8h_source.html">default_constraint_samplers.h</a>.</p>
 
 </div>
 </div>

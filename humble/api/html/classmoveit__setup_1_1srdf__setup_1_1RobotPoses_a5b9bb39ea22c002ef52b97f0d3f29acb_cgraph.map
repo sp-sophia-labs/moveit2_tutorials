@@ -1,0 +1,4 @@
+<map id="moveit_setup::srdf_setup::RobotPoses::loadAllowedCollisionMatrix" name="moveit_setup::srdf_setup::RobotPoses::loadAllowedCollisionMatrix">
+<area shape="rect" id="node1" title="Load the allowed collision matrix from the SRDF&#39;s list of link pairs." alt="" coords="5,5,205,61"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1RobotState.html#a72e5062115857bc793f0ba6be6aca059" title="Get a raw pointer to the positions of the variables stored in this state. Use carefully...." alt="" coords="253,13,437,54"/>
+</map>

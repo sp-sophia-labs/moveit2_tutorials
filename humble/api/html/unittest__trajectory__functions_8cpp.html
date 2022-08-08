@@ -80,7 +80,6 @@ $(function() {
 <code>#include &lt;math.h&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
-<code>#include &lt;boost/thread.hpp&gt;</code><br />
 <code>#include &lt;Eigen/Geometry&gt;</code><br />
 <code>#include &lt;kdl/frames.hpp&gt;</code><br />
 <code>#include &lt;kdl/path_roundedcomposite.hpp&gt;</code><br />
@@ -92,8 +91,8 @@ $(function() {
 <code>#include &lt;<a class="el" href="joint__model__group_8h_source.html">moveit/robot_model/joint_model_group.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="robot__model_8h_source.html">moveit/robot_model/robot_model.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="robot__model__loader_8h_source.html">moveit/robot_model_loader/robot_model_loader.h</a>&gt;</code><br />
-<code>#include &lt;tf2_eigen/tf2_eigen.h&gt;</code><br />
-<code>#include &lt;tf2_geometry_msgs/tf2_geometry_msgs.h&gt;</code><br />
+<code>#include &lt;tf2_eigen/tf2_eigen.hpp&gt;</code><br />
+<code>#include &lt;tf2_geometry_msgs/tf2_geometry_msgs.hpp&gt;</code><br />
 <code>#include &quot;<a class="el" href="cartesian__trajectory_8h_source.html">pilz_industrial_motion_planner/cartesian_trajectory.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="cartesian__trajectory__point_8h_source.html">pilz_industrial_motion_planner/cartesian_trajectory_point.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="limits__container_8h_source.html">pilz_industrial_motion_planner/limits_container.h</a>&quot;</code><br />
@@ -104,56 +103,56 @@ Include dependency graph for unittest_trajectory_functions.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="unittest__trajectory__functions_8cpp__incl.png" border="0" usemap="#moveit__planners_2pilz__industrial__motion__planner_2test_2unit__tests_2src_2unittest__trajectory__functions_8cpp" alt=""/></div>
 <map name="moveit__planners_2pilz__industrial__motion__planner_2test_2unit__tests_2src_2unittest__trajectory__functions_8cpp" id="moveit__planners_2pilz__industrial__motion__planner_2test_2unit__tests_2src_2unittest__trajectory__functions_8cpp">
-<area shape="rect" title=" " alt="" coords="1381,5,1579,76"/>
-<area shape="rect" title=" " alt="" coords="1048,221,1152,247"/>
-<area shape="rect" title=" " alt="" coords="851,861,901,887"/>
-<area shape="rect" title=" " alt="" coords="3441,310,3509,337"/>
-<area shape="rect" title=" " alt="" coords="519,861,577,887"/>
-<area shape="rect" title=" " alt="" coords="371,861,434,887"/>
-<area shape="rect" title=" " alt="" coords="402,131,534,158"/>
-<area shape="rect" title=" " alt="" coords="1354,861,1481,887"/>
-<area shape="rect" title=" " alt="" coords="609,131,729,158"/>
-<area shape="rect" title=" " alt="" coords="754,131,985,158"/>
-<area shape="rect" title=" " alt="" coords="1009,124,1207,165"/>
-<area shape="rect" title=" " alt="" coords="483,221,618,247"/>
-<area shape="rect" title=" " alt="" coords="1282,131,1483,158"/>
-<area shape="rect" title=" " alt="" coords="1508,124,1647,165"/>
-<area shape="rect" href="planning__scene_8h.html" title=" " alt="" coords="1965,213,2139,255"/>
-<area shape="rect" href="robot__model_8h.html" title=" " alt="" coords="1436,585,1591,627"/>
-<area shape="rect" href="joint__model__group_8h.html" title=" " alt="" coords="843,675,1002,716"/>
-<area shape="rect" href="robot__model__loader_8h.html" title=" " alt="" coords="3107,481,3263,537"/>
-<area shape="rect" title=" " alt="" coords="2071,131,2231,158"/>
-<area shape="rect" title=" " alt="" coords="3262,213,3437,255"/>
-<area shape="rect" href="cartesian__trajectory_8h.html" title=" " alt="" coords="93,213,315,255"/>
-<area shape="rect" href="cartesian__trajectory__point_8h.html" title=" " alt="" coords="45,303,197,344"/>
-<area shape="rect" href="limits__container_8h.html" title=" " alt="" coords="3039,213,3238,255"/>
-<area shape="rect" href="trajectory__functions_8h.html" title=" " alt="" coords="1671,124,1895,165"/>
-<area shape="rect" href="test__utils_8h.html" title=" " alt="" coords="2854,131,2949,158"/>
-<area shape="rect" href="class__forward_8h.html" title=" " alt="" coords="2259,853,2416,895"/>
-<area shape="rect" href="kinematics__base_8h.html" title=" " alt="" coords="1067,764,1250,805"/>
-<area shape="rect" title=" " alt="" coords="3235,861,3367,887"/>
-<area shape="rect" title=" " alt="" coords="662,861,805,887"/>
-<area shape="rect" href="robot__state_8h.html" title=" " alt="" coords="1251,489,1397,530"/>
-<area shape="rect" href="transforms_8h.html" title=" " alt="" coords="1181,593,1411,619"/>
-<area shape="rect" title=" " alt="" coords="1188,682,1361,709"/>
-<area shape="rect" href="collision__detector__allocator_8h.html" title=" " alt="" coords="2645,303,2861,344"/>
-<area shape="rect" href="collision__env_8h.html" title=" " alt="" coords="2240,392,2435,433"/>
-<area shape="rect" href="world__diff_8h.html" title=" " alt="" coords="2888,489,3083,530"/>
-<area shape="rect" href="kinematic__constraint_8h.html" title=" " alt="" coords="1200,303,1416,344"/>
-<area shape="rect" title=" " alt="" coords="2559,399,2806,426"/>
-<area shape="rect" href="robot__trajectory_8h.html" title=" " alt="" coords="3139,303,3315,344"/>
-<area shape="rect" title=" " alt="" coords="2830,392,3010,433"/>
-<area shape="rect" title=" " alt="" coords="3035,399,3112,426"/>
-<area shape="rect" title=" " alt="" coords="1491,303,1693,344"/>
-<area shape="rect" title=" " alt="" coords="1717,303,1920,344"/>
-<area shape="rect" title=" " alt="" coords="1945,303,2159,344"/>
-<area shape="rect" title=" " alt="" coords="2184,310,2371,337"/>
-<area shape="rect" title=" " alt="" coords="2395,303,2571,344"/>
-<area shape="rect" href="exceptions_8h.html" title=" " alt="" coords="1737,682,1967,709"/>
-<area shape="rect" title=" " alt="" coords="1325,771,1459,798"/>
-<area shape="rect" href="joint__model_8h.html" title=" " alt="" coords="541,764,696,805"/>
-<area shape="rect" href="link__model_8h.html" title=" " alt="" coords="821,764,976,805"/>
-<area shape="rect" title=" " alt="" coords="1000,771,1043,798"/>
+<area shape="rect" title=" " alt="" coords="2797,5,2995,76"/>
+<area shape="rect" title=" " alt="" coords="479,221,583,247"/>
+<area shape="rect" title=" " alt="" coords="2495,861,2545,887"/>
+<area shape="rect" title=" " alt="" coords="43,310,111,337"/>
+<area shape="rect" title=" " alt="" coords="2677,861,2736,887"/>
+<area shape="rect" title=" " alt="" coords="3151,861,3214,887"/>
+<area shape="rect" title=" " alt="" coords="269,861,395,887"/>
+<area shape="rect" title=" " alt="" coords="3308,131,3428,158"/>
+<area shape="rect" title=" " alt="" coords="3453,131,3683,158"/>
+<area shape="rect" title=" " alt="" coords="3707,124,3906,165"/>
+<area shape="rect" title=" " alt="" coords="2622,221,2757,247"/>
+<area shape="rect" title=" " alt="" coords="3930,131,4131,158"/>
+<area shape="rect" title=" " alt="" coords="4156,124,4295,165"/>
+<area shape="rect" href="planning__scene_8h.html" title=" " alt="" coords="1332,213,1505,255"/>
+<area shape="rect" href="robot__model_8h.html" title=" " alt="" coords="1976,585,2131,627"/>
+<area shape="rect" href="joint__model__group_8h.html" title=" " alt="" coords="2331,675,2490,716"/>
+<area shape="rect" href="robot__model__loader_8h.html" title=" " alt="" coords="2601,481,2757,537"/>
+<area shape="rect" title=" " alt="" coords="4319,131,4495,158"/>
+<area shape="rect" title=" " alt="" coords="607,213,782,255"/>
+<area shape="rect" href="cartesian__trajectory_8h.html" title=" " alt="" coords="3034,213,3257,255"/>
+<area shape="rect" href="cartesian__trajectory__point_8h.html" title=" " alt="" coords="2984,303,3136,344"/>
+<area shape="rect" href="limits__container_8h.html" title=" " alt="" coords="958,213,1157,255"/>
+<area shape="rect" href="trajectory__functions_8h.html" title=" " alt="" coords="1307,124,1531,165"/>
+<area shape="rect" href="test__utils_8h.html" title=" " alt="" coords="849,131,943,158"/>
+<area shape="rect" href="class__forward_8h.html" title=" " alt="" coords="1345,853,1503,895"/>
+<area shape="rect" href="kinematics__base_8h.html" title=" " alt="" coords="1918,764,2101,805"/>
+<area shape="rect" title=" " alt="" coords="1966,861,2053,887"/>
+<area shape="rect" href="robot__state_8h.html" title=" " alt="" coords="1351,489,1497,530"/>
+<area shape="rect" href="transforms_8h.html" title=" " alt="" coords="1309,593,1539,619"/>
+<area shape="rect" href="collision__detector__allocator_8h.html" title=" " alt="" coords="720,303,936,344"/>
+<area shape="rect" href="collision__env_8h.html" title=" " alt="" coords="955,392,1149,433"/>
+<area shape="rect" href="world__diff_8h.html" title=" " alt="" coords="268,489,463,530"/>
+<area shape="rect" href="kinematic__constraint_8h.html" title=" " alt="" coords="1507,303,1723,344"/>
+<area shape="rect" title=" " alt="" coords="1223,399,1470,426"/>
+<area shape="rect" href="robot__trajectory_8h.html" title=" " alt="" coords="419,303,595,344"/>
+<area shape="rect" title=" " alt="" coords="598,392,778,433"/>
+<area shape="rect" title=" " alt="" coords="803,399,880,426"/>
+<area shape="rect" title=" " alt="" coords="339,399,471,426"/>
+<area shape="rect" title=" " alt="" coords="1848,303,2051,344"/>
+<area shape="rect" title=" " alt="" coords="2075,303,2277,344"/>
+<area shape="rect" title=" " alt="" coords="2302,303,2517,344"/>
+<area shape="rect" title=" " alt="" coords="2541,310,2605,337"/>
+<area shape="rect" title=" " alt="" coords="1113,310,1181,337"/>
+<area shape="rect" title=" " alt="" coords="1205,303,1381,344"/>
+<area shape="rect" href="exceptions_8h.html" title=" " alt="" coords="1899,682,2130,709"/>
+<area shape="rect" title=" " alt="" coords="2125,771,2259,798"/>
+<area shape="rect" href="fixed__joint__model_8h.html" title=" " alt="" coords="2572,675,2727,716"/>
+<area shape="rect" href="joint__model_8h.html" title=" " alt="" coords="2629,764,2784,805"/>
+<area shape="rect" href="link__model_8h.html" title=" " alt="" coords="2333,764,2488,805"/>
+<area shape="rect" title=" " alt="" coords="2512,771,2555,798"/>
 </map>
 </div>
 </div>
@@ -264,7 +263,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00071">71</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00062">62</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
 
 </div>
 </div>
@@ -331,7 +330,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00973">973</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00964">964</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
 
 </div>
 </div>
@@ -417,7 +416,7 @@ Functions</h2></td></tr>
 
 <p>Test the wrapper function to compute inverse kinematics using robot model. </p>
 
-<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00333">333</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00324">324</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -461,7 +460,7 @@ Here is the call graph for this function:</div>
 <p>Test computePoseIK for invalid frame_id. </p>
 <p>Currently only robot_model_-&gt;getModelFrame() == frame_id </p>
 
-<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00415">415</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00406">406</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -502,7 +501,7 @@ Here is the call graph for this function:</div>
 
 <p>Test computePoseIK for invalid group_name. </p>
 
-<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00381">381</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00372">372</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -543,7 +542,7 @@ Here is the call graph for this function:</div>
 
 <p>Test computePoseIK for invalid link_name. </p>
 
-<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00397">397</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00388">388</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -584,7 +583,7 @@ Here is the call graph for this function:</div>
 
 <p>Test if self collision is considered by using a pose that always has self collision. </p>
 
-<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00504">504</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00495">495</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -634,7 +633,7 @@ Here is the call graph for this function:</div>
 <li>Function returns 'true'. </li>
 </ol>
 
-<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00768">768</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00759">759</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -681,7 +680,7 @@ Here is the call graph for this function:</div>
 <li>Function returns 'false'. </li>
 </ol>
 
-<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00740">740</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00731">731</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -728,7 +727,7 @@ Here is the call graph for this function:</div>
 <li>Function returns 'false'. </li>
 </ol>
 
-<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00802">802</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00793">793</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -776,7 +775,7 @@ Here is the call graph for this function:</div>
 <li>Function returns 'false'. </li>
 </ol>
 
-<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00691">691</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00682">682</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -817,7 +816,7 @@ Here is the call graph for this function:</div>
 
 <p>Test the inverse kinematics using RobotState class (setFromIK) using robot model. </p>
 
-<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00275">275</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00266">266</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -860,7 +859,7 @@ Here is the call graph for this function:</div>
 
 <p>Test the inverse kinematics directly through ikfast solver. </p>
 
-<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00220">220</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00211">211</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -912,7 +911,7 @@ Here is the call graph for this function:</div>
 <li>Function returns 'false'. </li>
 </ol>
 
-<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00898">898</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00889">889</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -965,7 +964,7 @@ Here is the call graph for this function:</div>
 <li>Function returns 'false'. </li>
 </ol>
 
-<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00841">841</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00832">832</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1018,7 +1017,7 @@ Here is the call graph for this function:</div>
 <li>Function returns 'false'. </li>
 </ol>
 
-<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00867">867</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00858">858</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1071,7 +1070,7 @@ Here is the call graph for this function:</div>
 <li>Function returns 'false'. </li>
 </ol>
 
-<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00957">957</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00948">948</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1122,7 +1121,7 @@ Here is the call graph for this function:</div>
 <li>Function returns 'false'. </li>
 </ol>
 
-<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00934">934</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00925">925</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1173,7 +1172,7 @@ Here is the call graph for this function:</div>
 <li>Function returns 'false'. </li>
 </ol>
 
-<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00601">601</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00592">592</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1220,7 +1219,7 @@ Here is the call graph for this function:</div>
 <li>Function returns 'false'. </li>
 </ol>
 
-<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00644">644</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00635">635</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1267,7 +1266,7 @@ Here is the call graph for this function:</div>
 <li>Function returns 'false'. </li>
 </ol>
 
-<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00568">568</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00559">559</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1314,7 +1313,7 @@ Here is the call graph for this function:</div>
 <li>Function returns 'false'. </li>
 </ol>
 
-<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00546">546</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00537">537</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1355,7 +1354,7 @@ Here is the call graph for this function:</div>
 
 <p>Test the forward kinematics function with simple robot poses for robot tip link using robot model without gripper. </p>
 
-<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00190">190</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="unittest__trajectory__functions_8cpp_source.html#l00181">181</a> of file <a class="el" href="unittest__trajectory__functions_8cpp_source.html">unittest_trajectory_functions.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

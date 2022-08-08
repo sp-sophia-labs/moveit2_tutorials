@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>moveit2: moveit_setup_assistant/src/tools/collision_linear_model.cpp File Reference</title>
+<title>moveit2: moveit_setup_assistant/moveit_setup_srdf_plugins/src/collision_linear_model.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,91 +63,59 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_55a00c037ec403d857a488a861b1a386.html">moveit_setup_assistant</a></li><li class="navelem"><a class="el" href="dir_112e659552143f98ed491d3d9d97b81d.html">src</a></li><li class="navelem"><a class="el" href="dir_093dfca146e5f401ca846a1eaedcffe4.html">tools</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_55a00c037ec403d857a488a861b1a386.html">moveit_setup_assistant</a></li><li class="navelem"><a class="el" href="dir_c50b52e01d2ea0a2747cae3658cca971.html">moveit_setup_srdf_plugins</a></li><li class="navelem"><a class="el" href="dir_cc81d0c30a565f95b2af51b4f3a19b0c.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">collision_linear_model.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="collision__linear__model_8h_source.html">collision_linear_model.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="collision__matrix__model_8h_source.html">collision_matrix_model.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="collision__linear__model_8hpp_source.html">moveit_setup_srdf_plugins/collision_linear_model.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="collision__matrix__model_8hpp_source.html">moveit_setup_srdf_plugins/collision_matrix_model.hpp</a>&gt;</code><br />
 <code>#include &lt;QItemSelection&gt;</code><br />
 <code>#include &lt;QPainter&gt;</code><br />
 <code>#include &lt;cmath&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for collision_linear_model.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="collision__linear__model_8cpp__incl.png" border="0" usemap="#moveit__setup__assistant_2src_2tools_2collision__linear__model_8cpp" alt=""/></div>
-<map name="moveit__setup__assistant_2src_2tools_2collision__linear__model_8cpp" id="moveit__setup__assistant_2src_2tools_2collision__linear__model_8cpp">
-<area shape="rect" title=" " alt="" coords="614,5,797,61"/>
-<area shape="rect" href="collision__linear__model_8h.html" title=" " alt="" coords="369,109,549,136"/>
-<area shape="rect" href="collision__matrix__model_8h.html" title=" " alt="" coords="533,184,720,211"/>
-<area shape="rect" title=" " alt="" coords="644,109,767,136"/>
-<area shape="rect" title=" " alt="" coords="791,109,868,136"/>
-<area shape="rect" title=" " alt="" coords="893,109,955,136"/>
-<area shape="rect" title=" " alt="" coords="5,184,168,211"/>
-<area shape="rect" title=" " alt="" coords="192,184,360,211"/>
-<area shape="rect" title=" " alt="" coords="385,184,458,211"/>
-<area shape="rect" href="compute__default__collisions_8hpp.html" title=" " alt="" coords="409,259,583,315"/>
-<area shape="rect" title=" " alt="" coords="407,370,457,397"/>
-<area shape="rect" href="class__forward_8h.html" title=" " alt="" coords="481,363,639,404"/>
-<area shape="rect" href="declare__ptr_8h.html" title=" " alt="" coords="474,452,646,493"/>
-<area shape="rect" title=" " alt="" coords="521,541,599,568"/>
-<area shape="rect" title=" " alt="" coords="608,273,768,300"/>
+<div class="center"><img src="collision__linear__model_8cpp__incl.png" border="0" usemap="#moveit__setup__assistant_2moveit__setup__srdf__plugins_2src_2collision__linear__model_8cpp" alt=""/></div>
+<map name="moveit__setup__assistant_2moveit__setup__srdf__plugins_2src_2collision__linear__model_8cpp" id="moveit__setup__assistant_2moveit__setup__srdf__plugins_2src_2collision__linear__model_8cpp">
+<area shape="rect" title=" " alt="" coords="667,5,890,61"/>
+<area shape="rect" href="collision__linear__model_8hpp.html" title=" " alt="" coords="359,109,559,151"/>
+<area shape="rect" href="collision__matrix__model_8hpp.html" title=" " alt="" coords="534,199,741,240"/>
+<area shape="rect" title=" " alt="" coords="741,295,864,322"/>
+<area shape="rect" title=" " alt="" coords="816,117,893,143"/>
+<area shape="rect" title=" " alt="" coords="918,117,981,143"/>
+<area shape="rect" title=" " alt="" coords="5,206,168,233"/>
+<area shape="rect" title=" " alt="" coords="192,206,360,233"/>
+<area shape="rect" title=" " alt="" coords="385,206,458,233"/>
+<area shape="rect" href="compute__default__collisions_8hpp.html" title=" " alt="" coords="301,288,533,329"/>
+<area shape="rect" title=" " alt="" coords="328,385,379,411"/>
+<area shape="rect" href="class__forward_8h.html" title=" " alt="" coords="403,377,560,419"/>
+<area shape="rect" href="declare__ptr_8h.html" title=" " alt="" coords="395,467,567,508"/>
+<area shape="rect" title=" " alt="" coords="443,556,520,583"/>
+<area shape="rect" title=" " alt="" coords="557,295,717,322"/>
 </map>
 </div>
 </div>
 <p><a href="collision__linear__model_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacemoveit__setup"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__setup.html">moveit_setup</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacemoveit__setup_1_1srdf__setup"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__setup_1_1srdf__setup.html">moveit_setup::srdf_setup</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a0fa1483a1b785228739b8387d56a22c1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="collision__linear__model_8cpp.html#a0fa1483a1b785228739b8387d56a22c1">compareVariants</a> (const QVariant &amp;left, const QVariant &amp;right)</td></tr>
-<tr class="separator:a0fa1483a1b785228739b8387d56a22c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae69ecee8ca41d2a4fc1f14b85cf778dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__setup_1_1srdf__setup.html#ae69ecee8ca41d2a4fc1f14b85cf778dc">moveit_setup::srdf_setup::compareVariants</a> (const QVariant &amp;left, const QVariant &amp;right)</td></tr>
+<tr class="separator:ae69ecee8ca41d2a4fc1f14b85cf778dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a0fa1483a1b785228739b8387d56a22c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0fa1483a1b785228739b8387d56a22c1">&#9670;&nbsp;</a></span>compareVariants()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool compareVariants </td>
-          <td>(</td>
-          <td class="paramtype">const QVariant &amp;&#160;</td>
-          <td class="paramname"><em>left</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const QVariant &amp;&#160;</td>
-          <td class="paramname"><em>right</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="collision__linear__model_8cpp_source.html#l00255">255</a> of file <a class="el" href="collision__linear__model_8cpp_source.html">collision_linear_model.cpp</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="collision__linear__model_8cpp_a0fa1483a1b785228739b8387d56a22c1_icgraph.png" border="0" usemap="#collision__linear__model_8cpp_a0fa1483a1b785228739b8387d56a22c1_icgraph" alt=""/></div>
-<map name="collision__linear__model_8cpp_a0fa1483a1b785228739b8387d56a22c1_icgraph" id="collision__linear__model_8cpp_a0fa1483a1b785228739b8387d56a22c1_icgraph">
-<area shape="rect" title=" " alt="" coords="212,13,344,39"/>
-<area shape="rect" href="classSortFilterProxyModel.html#a48eab37609626be1d75197ce2988d2ea" title=" " alt="" coords="5,5,164,47"/>
-</map>
-</div>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

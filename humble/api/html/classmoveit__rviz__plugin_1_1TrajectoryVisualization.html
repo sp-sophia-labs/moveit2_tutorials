@@ -170,8 +170,8 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a5e302cb3a3fcb25a2f26109368d172ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ae4979b02c7bbce8c901007ddc56037"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__rviz__plugin_1_1TrajectoryVisualization.html#a7ae4979b02c7bbce8c901007ddc56037">current_state_time_</a></td></tr>
 <tr class="separator:a7ae4979b02c7bbce8c901007ddc56037"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc7b0c3451ca089dc7bf176f21c61a27"><td class="memItemLeft" align="right" valign="top">boost::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__rviz__plugin_1_1TrajectoryVisualization.html#afc7b0c3451ca089dc7bf176f21c61a27">update_trajectory_message_</a></td></tr>
-<tr class="separator:afc7b0c3451ca089dc7bf176f21c61a27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d7446b6beb9a92121e2d185d5afba35"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__rviz__plugin_1_1TrajectoryVisualization.html#a4d7446b6beb9a92121e2d185d5afba35">update_trajectory_message_</a></td></tr>
+<tr class="separator:a4d7446b6beb9a92121e2d185d5afba35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8534ea84908acd2dd4e72da8d1395c1f"><td class="memItemLeft" align="right" valign="top">moveit::core::RobotModelConstPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__rviz__plugin_1_1TrajectoryVisualization.html#a8534ea84908acd2dd4e72da8d1395c1f">robot_model_</a></td></tr>
 <tr class="separator:a8534ea84908acd2dd4e72da8d1395c1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e89b26385421a57ce183d4f2709a3fd"><td class="memItemLeft" align="right" valign="top">moveit::core::RobotStatePtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__rviz__plugin_1_1TrajectoryVisualization.html#a7e89b26385421a57ce183d4f2709a3fd">robot_state_</a></td></tr>
@@ -255,7 +255,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true on success </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00066">66</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00067">67</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
 
 </div>
 </div>
@@ -282,7 +282,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00140">140</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00141">141</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -311,7 +311,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00639">639</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00640">640</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
 
 </div>
 </div>
@@ -338,7 +338,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00232">232</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00233">233</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -367,7 +367,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00412">412</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00413">413</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
 
 </div>
 </div>
@@ -397,7 +397,7 @@ Here is the caller graph for this function:</div>
 <p>get time to show each single robot state </p>
 <dl class="section return"><dt>Returns</dt><dd>Positive values indicate a fixed time per state Negative values indicate a realtime-factor </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00365">365</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00366">366</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -436,7 +436,7 @@ Here is the caller graph for this function:</div>
 
 <p>ROS callback for an incoming path message. </p>
 
-<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00538">538</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00539">539</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -483,7 +483,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00356">356</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00357">357</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -512,7 +512,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00345">345</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00346">346</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -540,7 +540,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00328">328</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00329">329</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
 
 </div>
 </div>
@@ -576,7 +576,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00151">151</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00152">152</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -609,7 +609,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00196">196</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00197">197</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
 
 </div>
 </div>
@@ -636,7 +636,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00220">220</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00221">221</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -673,7 +673,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00606">606</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00607">607</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
 
 </div>
 </div>
@@ -693,7 +693,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00190">190</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00191">191</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
 
 </div>
 </div>
@@ -731,7 +731,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00622">622</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00623">623</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
 
 </div>
 </div>
@@ -759,7 +759,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00600">600</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00601">601</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
 
 </div>
 </div>
@@ -797,7 +797,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00417">417</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="trajectory__visualization_8cpp_source.html#l00418">418</a> of file <a class="el" href="trajectory__visualization_8cpp_source.html">trajectory_visualization.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1512,8 +1512,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="afc7b0c3451ca089dc7bf176f21c61a27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc7b0c3451ca089dc7bf176f21c61a27">&#9670;&nbsp;</a></span>update_trajectory_message_</h2>
+<a id="a4d7446b6beb9a92121e2d185d5afba35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d7446b6beb9a92121e2d185d5afba35">&#9670;&nbsp;</a></span>update_trajectory_message_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1522,7 +1522,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">boost::mutex moveit_rviz_plugin::TrajectoryVisualization::update_trajectory_message_</td>
+          <td class="memname">std::mutex moveit_rviz_plugin::TrajectoryVisualization::update_trajectory_message_</td>
         </tr>
       </table>
   </td>

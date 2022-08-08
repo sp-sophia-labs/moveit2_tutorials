@@ -110,15 +110,15 @@ $(function() {
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="kinematics__cache__ros_8h.html">kinematics_cache_ros/kinematics_cache_ros.h</a>&gt;</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">// ROS</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;boost/shared_ptr.hpp&gt;</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">// MoveIt</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;planning_models/kinematic_state.h&gt;</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="rdf__loader_8h.html">rdf_loader/rdf_loader.h</a>&gt;</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#include &lt;urdf_interface/model.h&gt;</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#include &lt;urdf/model.h&gt;</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#include &lt;srdf/model.h&gt;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">// MoveIt</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;planning_models/kinematic_state.h&gt;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="rdf__loader_8h.html">rdf_loader/rdf_loader.h</a>&gt;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;urdf_interface/model.h&gt;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;urdf/model.h&gt;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#include &lt;srdf/model.h&gt;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">// std</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacekinematics__cache__ros.html">kinematics_cache_ros</a></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
@@ -168,7 +168,7 @@ $(function() {
 <div class="ttc" id="aclasskinematics__cache__ros_1_1KinematicsCacheROS_html_adaad7fb176ba75d5c6de69a76a6a6173"><div class="ttname"><a href="classkinematics__cache__ros_1_1KinematicsCacheROS.html#adaad7fb176ba75d5c6de69a76a6a6173">kinematics_cache_ros::KinematicsCacheROS::init</a></div><div class="ttdeci">bool init(const kinematics_cache::KinematicsCache::Options &amp;opt, const std::string &amp;kinematics_solver_name, const std::string &amp;group_name, const std::string &amp;base_frame, const std::string &amp;tip_frame, double search_discretization)</div><div class="ttdoc">Initialization function.</div><div class="ttdef"><b>Definition:</b> <a href="kinematics__cache__ros_8cpp_source.html#l00087">kinematics_cache_ros.cpp:87</a></div></div>
 <div class="ttc" id="aclassrdf__loader_1_1RDFLoader_html"><div class="ttname"><a href="classrdf__loader_1_1RDFLoader.html">rdf_loader::RDFLoader</a></div><div class="ttdef"><b>Definition:</b> <a href="rdf__loader_8h_source.html#l00085">rdf_loader.h:85</a></div></div>
 <div class="ttc" id="anamespacerdf__loader_html"><div class="ttname"><a href="namespacerdf__loader.html">rdf_loader</a></div><div class="ttdef"><b>Definition:</b> <a href="rdf__loader_8h_source.html#l00045">rdf_loader.h:45</a></div></div>
-<div class="ttc" id="aclasskinematics_1_1KinematicsBase_html_a8097b63569cba39c6b5e4b29e8c6bd82"><div class="ttname"><a href="classkinematics_1_1KinematicsBase.html#a8097b63569cba39c6b5e4b29e8c6bd82">kinematics::KinematicsBase::initialize</a></div><div class="ttdeci">virtual bool initialize(const rclcpp::Node::SharedPtr &amp;node, const moveit::core::RobotModel &amp;robot_model, const std::string &amp;group_name, const std::string &amp;base_frame, const std::vector&lt; std::string &gt; &amp;tip_frames, double search_discretization)</div><div class="ttdoc">Initialization function for the kinematics, for use with kinematic chain IK solvers.</div><div class="ttdef"><b>Definition:</b> <a href="kinematics__base_8cpp_source.html#l00115">kinematics_base.cpp:115</a></div></div>
+<div class="ttc" id="aclasskinematics_1_1KinematicsBase_html_a8097b63569cba39c6b5e4b29e8c6bd82"><div class="ttname"><a href="classkinematics_1_1KinematicsBase.html#a8097b63569cba39c6b5e4b29e8c6bd82">kinematics::KinematicsBase::initialize</a></div><div class="ttdeci">virtual bool initialize(const rclcpp::Node::SharedPtr &amp;node, const moveit::core::RobotModel &amp;robot_model, const std::string &amp;group_name, const std::string &amp;base_frame, const std::vector&lt; std::string &gt; &amp;tip_frames, double search_discretization)</div><div class="ttdoc">Initialization function for the kinematics, for use with kinematic chain IK solvers.</div><div class="ttdef"><b>Definition:</b> <a href="kinematics__base_8cpp_source.html#l00116">kinematics_base.cpp:116</a></div></div>
 <div class="ttc" id="ardf__loader_8h_html"><div class="ttname"><a href="rdf__loader_8h.html">rdf_loader.h</a></div></div>
 <div class="ttc" id="anamespacekinematics__cache__ros_html"><div class="ttname"><a href="namespacekinematics__cache__ros.html">kinematics_cache_ros</a></div><div class="ttdef"><b>Definition:</b> <a href="kinematics__cache__ros_8h_source.html#l00044">kinematics_cache_ros.h:44</a></div></div>
 <!-- start footer part -->

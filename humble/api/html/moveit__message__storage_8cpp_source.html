@@ -109,9 +109,9 @@ $(function() {
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="moveit__message__storage_8h.html">moveit/warehouse/moveit_message_storage.h</a>&gt;</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &lt;warehouse_ros/database_loader.h&gt;</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;boost/regex.hpp&gt;</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;utility&gt;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;regex&gt;</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1MoveItMessageStorage.html#aaf947e85a44769339c6a262c6c26fa37">   43</a></span>&#160;<a class="code" href="classmoveit__warehouse_1_1MoveItMessageStorage.html#aaf947e85a44769339c6a262c6c26fa37">moveit_warehouse::MoveItMessageStorage::MoveItMessageStorage</a>(warehouse_ros::DatabaseConnection::Ptr conn)</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  : conn_(std::move(conn))</div>
@@ -123,11 +123,11 @@ $(function() {
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordflow">if</span> (!regex.empty())</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  {</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    std::vector&lt;std::string&gt; fnames;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    boost::regex <a class="code" href="namespaceplan.html#ab9a5624d048e6b841d11a5f223f02870">r</a>(regex);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    std::regex <a class="code" href="namespaceplan.html#ab9a5624d048e6b841d11a5f223f02870">r</a>(regex);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">for</span> (std::string&amp; <a class="code" href="namespacesetup.html#ab3a7a0638d76a01367c5bc3cc699447f">name</a> : names)</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      boost::cmatch match;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="keywordflow">if</span> (boost::regex_match(<a class="code" href="namespacesetup.html#ab3a7a0638d76a01367c5bc3cc699447f">name</a>.c_str(), match, <a class="code" href="namespaceplan.html#ab9a5624d048e6b841d11a5f223f02870">r</a>))</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      std::smatch match;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="keywordflow">if</span> (std::regex_match(<a class="code" href="namespacesetup.html#ab3a7a0638d76a01367c5bc3cc699447f">name</a>, match, <a class="code" href="namespaceplan.html#ab9a5624d048e6b841d11a5f223f02870">r</a>))</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        fnames.push_back(<a class="code" href="namespacesetup.html#ab3a7a0638d76a01367c5bc3cc699447f">name</a>);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    names.swap(fnames);</div>

@@ -81,11 +81,12 @@ $(function() {
 <code>#include &lt;<a class="el" href="iterative__time__parameterization_8h_source.html">moveit/trajectory_processing/iterative_time_parameterization.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="iterative__spline__parameterization_8h_source.html">moveit/trajectory_processing/iterative_spline_parameterization.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="time__optimal__trajectory__generation_8h_source.html">moveit/trajectory_processing/time_optimal_trajectory_generation.h</a>&gt;</code><br />
-<code>#include &lt;tf2_eigen/tf2_eigen.h&gt;</code><br />
+<code>#include &lt;tf2_eigen/tf2_eigen.hpp&gt;</code><br />
 <code>#include &lt;tf2/LinearMath/Quaternion.h&gt;</code><br />
-<code>#include &lt;tf2_geometry_msgs/tf2_geometry_msgs.h&gt;</code><br />
+<code>#include &lt;tf2_geometry_msgs/tf2_geometry_msgs.hpp&gt;</code><br />
 <code>#include &lt;tf2_ros/buffer.h&gt;</code><br />
 <code>#include &lt;boost/python.hpp&gt;</code><br />
+<code>#include &lt;boost/noncopyable.hpp&gt;</code><br />
 <code>#include &lt;eigenpy/eigenpy.hpp&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
 <code>#include &lt;Python.h&gt;</code><br />
@@ -94,56 +95,56 @@ Include dependency graph for wrap_python_move_group.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="wrap__python__move__group_8cpp__incl.png" border="0" usemap="#moveit__ros_2planning__interface_2move__group__interface_2src_2wrap__python__move__group_8cpp" alt=""/></div>
 <map name="moveit__ros_2planning__interface_2move__group__interface_2src_2wrap__python__move__group_8cpp" id="moveit__ros_2planning__interface_2move__group__interface_2src_2wrap__python__move__group_8cpp">
-<area shape="rect" title=" " alt="" coords="3135,5,3334,76"/>
-<area shape="rect" href="move__group__interface_8h.html" title=" " alt="" coords="1711,317,1929,359"/>
-<area shape="rect" title=" " alt="" coords="2673,414,2751,441"/>
-<area shape="rect" title=" " alt="" coords="2188,414,2308,441"/>
-<area shape="rect" href="roscpp__initializer_8h.html" title=" " alt="" coords="2567,131,2753,173"/>
-<area shape="rect" title=" " alt="" coords="2470,235,2605,262"/>
-<area shape="rect" href="py__conversions_8h.html" title=" " alt="" coords="2313,131,2492,173"/>
-<area shape="rect" href="serialize__msg_8h.html" title=" " alt="" coords="2778,131,2945,173"/>
-<area shape="rect" title=" " alt="" coords="3042,235,3121,262"/>
-<area shape="rect" href="gil__releaser_8h.html" title=" " alt="" coords="3020,131,3172,173"/>
-<area shape="rect" href="conversions_8h.html" title=" " alt="" coords="3247,317,3393,359"/>
-<area shape="rect" href="robot__trajectory_8h.html" title=" " alt="" coords="3456,317,3632,359"/>
-<area shape="rect" href="iterative__time__parameterization_8h.html" title=" " alt="" coords="3865,131,4114,173"/>
-<area shape="rect" href="iterative__spline__parameterization_8h.html" title=" " alt="" coords="3583,131,3841,173"/>
-<area shape="rect" href="time__optimal__trajectory__generation_8h.html" title=" " alt="" coords="3347,124,3559,180"/>
-<area shape="rect" title=" " alt="" coords="4137,139,4297,165"/>
-<area shape="rect" title=" " alt="" coords="4321,139,4527,165"/>
-<area shape="rect" title=" " alt="" coords="4551,131,4726,173"/>
-<area shape="rect" title=" " alt="" coords="4750,139,4906,165"/>
-<area shape="rect" href="class__forward_8h.html" title=" " alt="" coords="2709,571,2867,612"/>
-<area shape="rect" href="robot__state_8h.html" title=" " alt="" coords="2825,407,2972,448"/>
-<area shape="rect" href="moveit__error__code_8h.html" title=" " alt="" coords="251,407,402,448"/>
-<area shape="rect" title=" " alt="" coords="2469,407,2649,448"/>
-<area shape="rect" title=" " alt="" coords="2997,407,3177,448"/>
-<area shape="rect" title=" " alt="" coords="427,407,621,448"/>
-<area shape="rect" title=" " alt="" coords="646,414,893,441"/>
-<area shape="rect" title=" " alt="" coords="916,414,1127,441"/>
-<area shape="rect" title=" " alt="" coords="1151,407,1305,448"/>
-<area shape="rect" title=" " alt="" coords="1380,407,1553,448"/>
-<area shape="rect" title=" " alt="" coords="1577,407,1769,448"/>
-<area shape="rect" title=" " alt="" coords="1793,407,1988,448"/>
-<area shape="rect" title=" " alt="" coords="2013,407,2163,448"/>
-<area shape="rect" title=" " alt="" coords="2333,414,2393,441"/>
-<area shape="rect" title=" " alt="" coords="5,407,227,448"/>
-<area shape="rect" href="transforms_8h.html" title=" " alt="" coords="2673,496,2903,523"/>
-<area shape="rect" title=" " alt="" coords="2520,578,2571,605"/>
-<area shape="rect" title=" " alt="" coords="2629,235,2688,262"/>
-<area shape="rect" title=" " alt="" coords="2150,235,2359,262"/>
-<area shape="rect" title=" " alt="" coords="2383,235,2446,262"/>
-<area shape="rect" title=" " alt="" coords="2713,235,2791,262"/>
-<area shape="rect" title=" " alt="" coords="2815,235,2902,262"/>
-<area shape="rect" title=" " alt="" coords="2926,235,3018,262"/>
-<area shape="rect" title=" " alt="" coords="3998,414,4061,441"/>
-<area shape="rect" title=" " alt="" coords="3201,414,3349,441"/>
-<area shape="rect" title=" " alt="" coords="3373,414,3457,441"/>
-<area shape="rect" title=" " alt="" coords="3481,414,3607,441"/>
-<area shape="rect" title=" " alt="" coords="4085,414,4217,441"/>
-<area shape="rect" title=" " alt="" coords="3632,414,3755,441"/>
-<area shape="rect" title=" " alt="" coords="3779,414,3922,441"/>
-<area shape="rect" href="time__parameterization_8h.html" title=" " alt="" coords="3477,228,3689,269"/>
+<area shape="rect" title=" " alt="" coords="3323,5,3522,76"/>
+<area shape="rect" href="move__group__interface_8h.html" title=" " alt="" coords="1773,228,1992,269"/>
+<area shape="rect" title=" " alt="" coords="2417,325,2495,351"/>
+<area shape="rect" title=" " alt="" coords="2188,325,2308,351"/>
+<area shape="rect" href="roscpp__initializer_8h.html" title=" " alt="" coords="2780,131,2967,173"/>
+<area shape="rect" title=" " alt="" coords="2689,235,2823,262"/>
+<area shape="rect" href="py__conversions_8h.html" title=" " alt="" coords="2527,131,2705,173"/>
+<area shape="rect" href="serialize__msg_8h.html" title=" " alt="" coords="2991,131,3158,173"/>
+<area shape="rect" title=" " alt="" coords="3261,235,3339,262"/>
+<area shape="rect" href="gil__releaser_8h.html" title=" " alt="" coords="3233,131,3385,173"/>
+<area shape="rect" href="conversions_8h.html" title=" " alt="" coords="3415,228,3561,269"/>
+<area shape="rect" href="robot__trajectory_8h.html" title=" " alt="" coords="3588,228,3764,269"/>
+<area shape="rect" href="iterative__time__parameterization_8h.html" title=" " alt="" coords="4027,131,4277,173"/>
+<area shape="rect" href="iterative__spline__parameterization_8h.html" title=" " alt="" coords="3745,131,4004,173"/>
+<area shape="rect" href="time__optimal__trajectory__generation_8h.html" title=" " alt="" coords="3459,124,3671,180"/>
+<area shape="rect" title=" " alt="" coords="4301,139,4477,165"/>
+<area shape="rect" title=" " alt="" coords="4501,139,4707,165"/>
+<area shape="rect" title=" " alt="" coords="4731,131,4906,173"/>
+<area shape="rect" title=" " alt="" coords="4931,139,5104,165"/>
+<area shape="rect" title=" " alt="" coords="5129,139,5285,165"/>
+<area shape="rect" href="class__forward_8h.html" title=" " alt="" coords="2863,481,3020,523"/>
+<area shape="rect" href="robot__state_8h.html" title=" " alt="" coords="2775,317,2921,359"/>
+<area shape="rect" href="moveit__error__code_8h.html" title=" " alt="" coords="1238,317,1389,359"/>
+<area shape="rect" title=" " alt="" coords="2519,317,2699,359"/>
+<area shape="rect" title=" " alt="" coords="2946,317,3126,359"/>
+<area shape="rect" title=" " alt="" coords="1413,317,1608,359"/>
+<area shape="rect" title=" " alt="" coords="1633,325,1879,351"/>
+<area shape="rect" title=" " alt="" coords="1903,325,2113,351"/>
+<area shape="rect" title=" " alt="" coords="5,317,160,359"/>
+<area shape="rect" title=" " alt="" coords="184,317,357,359"/>
+<area shape="rect" title=" " alt="" coords="381,317,573,359"/>
+<area shape="rect" title=" " alt="" coords="597,317,792,359"/>
+<area shape="rect" title=" " alt="" coords="817,317,967,359"/>
+<area shape="rect" title=" " alt="" coords="2333,325,2393,351"/>
+<area shape="rect" title=" " alt="" coords="992,317,1213,359"/>
+<area shape="rect" href="transforms_8h.html" title=" " alt="" coords="2826,407,3057,433"/>
+<area shape="rect" title=" " alt="" coords="2751,489,2801,515"/>
+<area shape="rect" title=" " alt="" coords="2848,235,2907,262"/>
+<area shape="rect" title=" " alt="" coords="2369,235,2578,262"/>
+<area shape="rect" title=" " alt="" coords="2602,235,2665,262"/>
+<area shape="rect" title=" " alt="" coords="2931,235,3010,262"/>
+<area shape="rect" title=" " alt="" coords="3034,235,3121,262"/>
+<area shape="rect" title=" " alt="" coords="3145,235,3237,262"/>
+<area shape="rect" title=" " alt="" coords="3719,325,3782,351"/>
+<area shape="rect" title=" " alt="" coords="3806,325,3954,351"/>
+<area shape="rect" title=" " alt="" coords="3978,325,4062,351"/>
+<area shape="rect" title=" " alt="" coords="3202,325,3329,351"/>
+<area shape="rect" title=" " alt="" coords="4086,325,4218,351"/>
+<area shape="rect" title=" " alt="" coords="3353,325,3476,351"/>
+<area shape="rect" title=" " alt="" coords="3501,325,3643,351"/>
 </map>
 </div>
 </div>

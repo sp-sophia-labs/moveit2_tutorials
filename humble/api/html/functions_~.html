@@ -148,7 +148,7 @@ $(function() {
 : <a class="el" href="classcollision__detection_1_1CollisionEnvHybrid.html#a010b619b7bbf1b4fb77afdec21f31ab0">collision_detection::CollisionEnvHybrid</a>
 </li>
 <li>~CollisionLinearModel()
-: <a class="el" href="classCollisionLinearModel.html#afb1f2cdacebbfe056a72c9a64872db86">CollisionLinearModel</a>
+: <a class="el" href="classmoveit__setup_1_1srdf__setup_1_1CollisionLinearModel.html#aec7dfd986727da42e120301ac159d67f">moveit_setup::srdf_setup::CollisionLinearModel</a>
 </li>
 <li>~CollisionPlugin()
 : <a class="el" href="classcollision__detection_1_1CollisionPlugin.html#a6b71d8a13e6f653d3777f413696f488b">collision_detection::CollisionPlugin</a>
@@ -178,7 +178,7 @@ $(function() {
 : <a class="el" href="classplanning__scene__monitor_1_1CurrentStateMonitor.html#a6721676264f2599348b81b9885b87aca">planning_scene_monitor::CurrentStateMonitor</a>
 </li>
 <li>~DefaultCollisionsWidget()
-: <a class="el" href="classmoveit__setup__assistant_1_1DefaultCollisionsWidget.html#a5c257588a662c3e62bd9e508ce770837">moveit_setup_assistant::DefaultCollisionsWidget</a>
+: <a class="el" href="classmoveit__setup_1_1srdf__setup_1_1DefaultCollisionsWidget.html#a8e584af030a9fc0d367a10e0bb270656">moveit_setup::srdf_setup::DefaultCollisionsWidget</a>
 </li>
 <li>~DepthImageOctomapUpdater()
 : <a class="el" href="classoccupancy__map__monitor_1_1DepthImageOctomapUpdater.html#a73c163836c406908c326d2213952be39">occupancy_map_monitor::DepthImageOctomapUpdater</a>
@@ -198,6 +198,9 @@ $(function() {
 <li>~GLMesh()
 : <a class="el" href="classmesh__filter_1_1GLMesh.html#af481ebc0e6d49571f2c587cff8a0360a">mesh_filter::GLMesh</a>
 </li>
+<li>~GlobalPlannerComponent()
+: <a class="el" href="classmoveit_1_1hybrid__planning_1_1GlobalPlannerComponent.html#aef0dc77c6d154d9483c709e7684f91ce">moveit::hybrid_planning::GlobalPlannerComponent</a>
+</li>
 <li>~GLRenderer()
 : <a class="el" href="classmesh__filter_1_1GLRenderer.html#ae89d12631b3e18ca6fcc757e7a92579d">mesh_filter::GLRenderer</a>
 </li>
@@ -206,6 +209,9 @@ $(function() {
 </li>
 <li>~GreedyKCenters()
 : <a class="el" href="classcached__ik__kinematics__plugin_1_1GreedyKCenters.html#a157b94d1710c6d4045822dce88ca6d1b">cached_ik_kinematics_plugin::GreedyKCenters&lt; _T &gt;</a>
+</li>
+<li>~HybridPlanningManager()
+: <a class="el" href="classmoveit_1_1hybrid__planning_1_1HybridPlanningManager.html#a17aafa3953ed1a83906a73122d541ff6">moveit::hybrid_planning::HybridPlanningManager</a>
 </li>
 <li>~IKCache()
 : <a class="el" href="classcached__ik__kinematics__plugin_1_1IKCache.html#a7421dbc9133656746712d76450d1bece">cached_ik_kinematics_plugin::IKCache</a>
@@ -261,14 +267,11 @@ $(function() {
 <li>~LinkModel()
 : <a class="el" href="classmoveit_1_1core_1_1LinkModel.html#ac8675c197c1308e855678e09bcde521d">moveit::core::LinkModel</a>
 </li>
+<li>~LocalPlannerComponent()
+: <a class="el" href="classmoveit_1_1hybrid__planning_1_1LocalPlannerComponent.html#a2eae94569123ae7a13fde9cbe3a00a3c">moveit::hybrid_planning::LocalPlannerComponent</a>
+</li>
 <li>~LockedRobotState()
 : <a class="el" href="classrobot__interaction_1_1LockedRobotState.html#a22940a7d677c86bfc504bb4dd2529bbf">robot_interaction::LockedRobotState</a>
-</li>
-<li>~ManipulationPipeline()
-: <a class="el" href="classpick__place_1_1ManipulationPipeline.html#a09c785d66b20c5742d30180c6301788e">pick_place::ManipulationPipeline</a>
-</li>
-<li>~ManipulationStage()
-: <a class="el" href="classpick__place_1_1ManipulationStage.html#a2dc1b13ae285a9434e175e8fc962e328">pick_place::ManipulationStage</a>
 </li>
 <li>~MeshFilterBase()
 : <a class="el" href="classmesh__filter_1_1MeshFilterBase.html#a264c65243b5b51a77a12521a521e09e7">mesh_filter::MeshFilterBase</a>
@@ -320,9 +323,6 @@ $(function() {
 <li>~MoveGroupSequenceService()
 : <a class="el" href="classpilz__industrial__motion__planner_1_1MoveGroupSequenceService.html#aff107920ba852cda8d57d6d34234e2b0">pilz_industrial_motion_planner::MoveGroupSequenceService</a>
 </li>
-<li>~MoveItConfigData()
-: <a class="el" href="classmoveit__setup__assistant_1_1MoveItConfigData.html#ab49983aac4ce3469c495c756b9549437">moveit_setup_assistant::MoveItConfigData</a>
-</li>
 <li>~MoveItControllerHandle()
 : <a class="el" href="classmoveit__controller__manager_1_1MoveItControllerHandle.html#a6abfaeedd8222814e428bb813446a76e">moveit_controller_manager::MoveItControllerHandle</a>
 </li>
@@ -337,9 +337,6 @@ $(function() {
 </li>
 <li>~MoveItErrorCodeException()
 : <a class="el" href="classpilz__industrial__motion__planner_1_1MoveItErrorCodeException.html#a57892160ae5f530bcf95032e1c504de2">pilz_industrial_motion_planner::MoveItErrorCodeException</a>
-</li>
-<li>~MoveItFakeControllerManager()
-: <a class="el" href="classmoveit__fake__controller__manager_1_1MoveItFakeControllerManager.html#a9ae6443c45d66261f3dff03664ecd94c">moveit_fake_controller_manager::MoveItFakeControllerManager</a>
 </li>
 <li>~MoveItMessageStorage()
 : <a class="el" href="classmoveit__warehouse_1_1MoveItMessageStorage.html#a24cccae4898bf06e6ba3f7b62620d3b7">moveit_warehouse::MoveItMessageStorage</a>
@@ -377,9 +374,6 @@ $(function() {
 <li>~OMPLInterface()
 : <a class="el" href="classompl__interface_1_1OMPLInterface.html#a97e4f6fc56cfd6b0be4401bd034e1ede">ompl_interface::OMPLInterface</a>
 </li>
-<li>~OMPLPlannerDescription()
-: <a class="el" href="classmoveit__setup__assistant_1_1OMPLPlannerDescription.html#ae6d85038ea054453c3b3f8e76e80b46e">moveit_setup_assistant::OMPLPlannerDescription</a>
-</li>
 <li>~Parameters()
 : <a class="el" href="classmesh__filter_1_1SensorModel_1_1Parameters.html#a759e06195420524ab52374f489ed7b12">mesh_filter::SensorModel::Parameters</a>
 , <a class="el" href="classmesh__filter_1_1StereoCameraModel_1_1Parameters.html#a3ed723b70293351e4bb2beb2d68ae343">mesh_filter::StereoCameraModel::Parameters</a>
@@ -387,14 +381,11 @@ $(function() {
 <li>~PathSegment()
 : <a class="el" href="classtrajectory__processing_1_1PathSegment.html#ad75c73ad47ed24471381af2f4df3381e">trajectory_processing::PathSegment</a>
 </li>
-<li>~PickPlacePlanBase()
-: <a class="el" href="classpick__place_1_1PickPlacePlanBase.html#a3327f8ce8103ad60e9c806dab41cfab7">pick_place::PickPlacePlanBase</a>
-</li>
 <li>~PlanExecution()
 : <a class="el" href="classplan__execution_1_1PlanExecution.html#aca779944c5de6abd24bf050eb5eff236">plan_execution::PlanExecution</a>
 </li>
 <li>~PlanGroupType()
-: <a class="el" href="classPlanGroupType.html#aea5a6aa4c44144e9aa863abf23fc1d97">PlanGroupType</a>
+: <a class="el" href="classmoveit__setup_1_1srdf__setup_1_1PlanGroupType.html#a21839963199b17f4853349c2a168a8ca">moveit_setup::srdf_setup::PlanGroupType</a>
 </li>
 <li>~PlannerManager()
 : <a class="el" href="classplanning__interface_1_1PlannerManager.html#ad47c3857dbccc4a10bbc62d7d5c7955a">planning_interface::PlannerManager</a>
@@ -480,6 +471,9 @@ $(function() {
 <li>~RobotStateDisplay()
 : <a class="el" href="classmoveit__rviz__plugin_1_1RobotStateDisplay.html#a2452da5d22733db01cb6f343dea359f5">moveit_rviz_plugin::RobotStateDisplay</a>
 </li>
+<li>~RVizPanel()
+: <a class="el" href="classmoveit__setup_1_1RVizPanel.html#a38f59bc6b3ac7ac3f410608b1c668c1a">moveit_setup::RVizPanel</a>
+</li>
 <li>~ScopedTimer()
 : <a class="el" href="classScopedTimer.html#a338ced0c8c39fe3d3e89e1b09d29f589">ScopedTimer</a>
 </li>
@@ -495,9 +489,6 @@ $(function() {
 <li>~ServoCalcsTestFixture()
 : <a class="el" href="classServoCalcsTestFixture.html#aa380db1353943089893cc65dcccc4d5d">ServoCalcsTestFixture</a>
 </li>
-<li>~SetupAssistantWidget()
-: <a class="el" href="classmoveit__setup__assistant_1_1SetupAssistantWidget.html#a6e2aec9a124259b7f5eb14774a48993d">moveit_setup_assistant::SetupAssistantWidget</a>
-</li>
 <li>~ShapeMask()
 : <a class="el" href="classpoint__containment__filter_1_1ShapeMask.html#ac9b8a16cb0b12e2658b73d23ffa63142">point_containment_filter::ShapeMask</a>
 </li>
@@ -511,13 +502,13 @@ $(function() {
 : <a class="el" href="structplanning__scene__monitor_1_1LockedPlanningSceneRO_1_1SingleUnlock.html#ac8bc5cd247b95d6dfd5267adda9db950">planning_scene_monitor::LockedPlanningSceneRO::SingleUnlock</a>
 </li>
 <li>~SliderWidget()
-: <a class="el" href="classmoveit__setup__assistant_1_1SliderWidget.html#ab4a41e6c7187ae77652a2b53cf977415">moveit_setup_assistant::SliderWidget</a>
+: <a class="el" href="classmoveit__setup_1_1srdf__setup_1_1SliderWidget.html#a5d5224d044604df4b90aa6460c59bb63">moveit_setup::srdf_setup::SliderWidget</a>
 </li>
 <li>~SmoothingBaseClass()
 : <a class="el" href="classonline__signal__smoothing_1_1SmoothingBaseClass.html#ad636e376527aa6885da057f7698e0177">online_signal_smoothing::SmoothingBaseClass</a>
 </li>
 <li>~StartScreenWidget()
-: <a class="el" href="classmoveit__setup__assistant_1_1StartScreenWidget.html#a4c71423990f17658dfe96fc6cce3db46">moveit_setup_assistant::StartScreenWidget</a>
+: <a class="el" href="classmoveit__setup_1_1core_1_1StartScreenWidget.html#a47fb4c763c507e989d0aff9945e66005">moveit_setup::core::StartScreenWidget</a>
 </li>
 <li>~TermInfo()
 : <a class="el" href="structtrajopt__interface_1_1TermInfo.html#a43702b7323f3a73e19b9310ffcac44bd">trajopt_interface::TermInfo</a>

@@ -3,7 +3,7 @@
 <area shape="rect" id="node2" title=" " alt="" coords="1601,511,1679,537"/>
 <area shape="rect" id="node3" href="$collision__check_8h.html" title=" " alt="" coords="1215,109,1385,151"/>
 <area shape="rect" id="node34" href="$servo__parameters_8h.html" title=" " alt="" coords="1081,199,1231,240"/>
-<area shape="rect" id="node35" href="$servo__calcs_8h.html" title=" " alt="" coords="2358,109,2509,151"/>
+<area shape="rect" id="node35" href="$servo__calcs_8h.html" title=" " alt="" coords="2374,109,2525,151"/>
 <area shape="rect" id="node4" title=" " alt="" coords="2375,511,2439,537"/>
 <area shape="rect" id="node5" title=" " alt="" coords="2031,607,2163,634"/>
 <area shape="rect" id="node6" href="$robot__model__loader_8h.html" title=" " alt="" coords="94,392,250,448"/>
@@ -34,19 +34,19 @@
 <area shape="rect" id="node32" title=" " alt="" coords="1376,399,1552,441"/>
 <area shape="rect" id="node25" title=" " alt="" coords="1703,511,1766,537"/>
 <area shape="rect" id="node27" title=" " alt="" coords="2467,511,2610,537"/>
-<area shape="rect" id="node36" title=" " alt="" coords="2675,206,2741,233"/>
-<area shape="rect" id="node37" title=" " alt="" coords="2766,199,2941,240"/>
-<area shape="rect" id="node38" title=" " alt="" coords="2965,199,3160,240"/>
-<area shape="rect" id="node39" title=" " alt="" coords="3286,199,3471,240"/>
-<area shape="rect" id="node40" title=" " alt="" coords="3495,199,3681,240"/>
-<area shape="rect" id="node41" title=" " alt="" coords="3705,206,3895,233"/>
-<area shape="rect" id="node42" title=" " alt="" coords="3920,199,4085,240"/>
-<area shape="rect" id="node43" title=" " alt="" coords="4109,206,4283,233"/>
+<area shape="rect" id="node36" title=" " alt="" coords="2691,206,2757,233"/>
+<area shape="rect" id="node37" title=" " alt="" coords="2782,199,2957,240"/>
+<area shape="rect" id="node38" title=" " alt="" coords="2981,199,3176,240"/>
+<area shape="rect" id="node39" title=" " alt="" coords="3302,199,3487,240"/>
+<area shape="rect" id="node40" title=" " alt="" coords="3511,199,3697,240"/>
+<area shape="rect" id="node41" title=" " alt="" coords="3721,206,3911,233"/>
+<area shape="rect" id="node42" title=" " alt="" coords="3936,199,4101,240"/>
+<area shape="rect" id="node43" title=" " alt="" coords="4125,206,4299,233"/>
 <area shape="rect" id="node44" title=" " alt="" coords="1830,206,2002,233"/>
-<area shape="rect" id="node45" title=" " alt="" coords="2027,206,2187,233"/>
-<area shape="rect" id="node46" title=" " alt="" coords="2211,199,2370,240"/>
-<area shape="rect" id="node47" href="$status__codes_8h.html" title=" " alt="" coords="2496,199,2651,240"/>
-<area shape="rect" id="node49" href="$smoothing__base__class_8h.html" title=" " alt="" coords="3127,496,3297,552"/>
-<area shape="rect" id="node48" title=" " alt="" coords="2511,303,2635,329"/>
-<area shape="rect" id="node50" title=" " alt="" coords="3114,600,3297,641"/>
+<area shape="rect" id="node45" title=" " alt="" coords="2027,206,2203,233"/>
+<area shape="rect" id="node46" title=" " alt="" coords="2227,199,2386,240"/>
+<area shape="rect" id="node47" href="$status__codes_8h.html" title=" " alt="" coords="2512,199,2667,240"/>
+<area shape="rect" id="node49" href="$smoothing__base__class_8h.html" title=" " alt="" coords="3143,496,3313,552"/>
+<area shape="rect" id="node48" title=" " alt="" coords="2527,303,2651,329"/>
+<area shape="rect" id="node50" title=" " alt="" coords="3130,600,3313,641"/>
 </map>

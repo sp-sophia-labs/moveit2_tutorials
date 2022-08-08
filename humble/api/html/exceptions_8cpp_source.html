@@ -108,26 +108,27 @@ $(function() {
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">/* Author: Acorn Pooley, Ioan Sucan */</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="exceptions_8h.html">moveit/exceptions/exceptions.h</a>&gt;</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &quot;rclcpp/rclcpp.hpp&quot;</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">// Logger</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacemoveit.html">moveit</a></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> rclcpp::Logger LOGGER = rclcpp::get_logger(<span class="stringliteral">&quot;moveit_exceptions.exceptions&quot;</span>);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<a class="code" href="classmoveit_1_1ConstructException.html#ab8c9926ec487e1aa9d263cae3f7e5349">ConstructException::ConstructException</a>(<span class="keyword">const</span> std::string&amp; what_arg) : std::runtime_error(what_arg)</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  RCLCPP_ERROR(LOGGER, <span class="stringliteral">&quot;Error during construction of object: %s\nException thrown.&quot;</span>, what_arg.c_str());</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;Exception::Exception(<span class="keyword">const</span> std::string&amp; what_arg) : std::runtime_error(what_arg)</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  RCLCPP_ERROR(LOGGER, <span class="stringliteral">&quot;%s\nException thrown.&quot;</span>, what_arg.c_str());</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}  <span class="comment">// namespace moveit</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &lt;rclcpp/logger.hpp&gt;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;rclcpp/logging.hpp&gt;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">// Logger</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacemoveit.html">moveit</a></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> rclcpp::Logger LOGGER = rclcpp::get_logger(<span class="stringliteral">&quot;moveit_exceptions.exceptions&quot;</span>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<a class="code" href="classmoveit_1_1ConstructException.html#ab8c9926ec487e1aa9d263cae3f7e5349">ConstructException::ConstructException</a>(<span class="keyword">const</span> std::string&amp; what_arg) : std::runtime_error(what_arg)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  RCLCPP_ERROR(LOGGER, <span class="stringliteral">&quot;Error during construction of object: %s\nException thrown.&quot;</span>, what_arg.c_str());</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;Exception::Exception(<span class="keyword">const</span> std::string&amp; what_arg) : std::runtime_error(what_arg)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  RCLCPP_ERROR(LOGGER, <span class="stringliteral">&quot;%s\nException thrown.&quot;</span>, what_arg.c_str());</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}  <span class="comment">// namespace moveit</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aexceptions_8h_html"><div class="ttname"><a href="exceptions_8h.html">exceptions.h</a></div></div>
-<div class="ttc" id="aclassmoveit_1_1ConstructException_html_ab8c9926ec487e1aa9d263cae3f7e5349"><div class="ttname"><a href="classmoveit_1_1ConstructException.html#ab8c9926ec487e1aa9d263cae3f7e5349">moveit::ConstructException::ConstructException</a></div><div class="ttdeci">ConstructException(const std::string &amp;what_arg)</div><div class="ttdef"><b>Definition:</b> <a href="exceptions_8cpp_source.html#l00077">exceptions.cpp:77</a></div></div>
+<div class="ttc" id="aclassmoveit_1_1ConstructException_html_ab8c9926ec487e1aa9d263cae3f7e5349"><div class="ttname"><a href="classmoveit_1_1ConstructException.html#ab8c9926ec487e1aa9d263cae3f7e5349">moveit::ConstructException::ConstructException</a></div><div class="ttdeci">ConstructException(const std::string &amp;what_arg)</div><div class="ttdef"><b>Definition:</b> <a href="exceptions_8cpp_source.html#l00078">exceptions.cpp:78</a></div></div>
 <div class="ttc" id="anamespacemoveit_html"><div class="ttname"><a href="namespacemoveit.html">moveit</a></div><div class="ttdoc">Main namespace for MoveIt.</div><div class="ttdef"><b>Definition:</b> <a href="exceptions_8h_source.html#l00042">exceptions.h:42</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

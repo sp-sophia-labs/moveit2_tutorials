@@ -13,12 +13,12 @@
 <area shape="rect" id="node9" href="$classFanucConstraintTest.html" title=" " alt="" coords="615,157,767,184"/>
 <area shape="rect" id="node10" href="$classPandaConstraintTest.html" title=" " alt="" coords="614,208,769,235"/>
 <area shape="rect" id="node11" href="$classPR2LeftArmConstraintTest.html" title=" " alt="" coords="596,259,787,285"/>
-<area shape="rect" id="node13" href="$classFanucTestPlanningContext.html" title=" " alt="" coords="595,309,787,336"/>
-<area shape="rect" id="node14" href="$classPandaTestPlanningContext.html" title=" " alt="" coords="594,360,789,387"/>
-<area shape="rect" id="node16" href="$classFanucTest.html" title=" " alt="" coords="649,411,734,437"/>
-<area shape="rect" id="node17" href="$classFanucTestStateValidityChecker.html" title=" " alt="" coords="581,461,801,488"/>
-<area shape="rect" id="node18" href="$classPandaValidity.html" title=" " alt="" coords="636,512,747,539"/>
-<area shape="rect" id="node19" href="$classPandaValidityCheckerTests.html" title=" " alt="" coords="594,563,789,589"/>
+<area shape="rect" id="node13" href="$classFanucTestPlanningContext.html" title=" " alt="" coords="595,360,787,387"/>
+<area shape="rect" id="node14" href="$classPandaTestPlanningContext.html" title=" " alt="" coords="594,309,789,336"/>
+<area shape="rect" id="node16" href="$classFanucTest.html" title=" " alt="" coords="649,461,734,488"/>
+<area shape="rect" id="node17" href="$classFanucTestStateValidityChecker.html" title=" " alt="" coords="581,512,801,539"/>
+<area shape="rect" id="node18" href="$classPandaValidity.html" title=" " alt="" coords="636,563,747,589"/>
+<area shape="rect" id="node19" href="$classPandaValidityCheckerTests.html" title=" " alt="" coords="594,411,789,437"/>
 <area shape="rect" id="node21" href="$classPandaTest.html" title=" " alt="" coords="648,613,735,640"/>
 <area shape="rect" id="node22" title=" " alt="" coords="67,1513,115,1540"/>
 <area shape="rect" id="node23" href="$classBulletCollisionDetectionTester.html" title=" " alt="" coords="290,1477,469,1518"/>
@@ -46,27 +46,30 @@
 <area shape="rect" id="node47" href="$classmoveit__hybrid__planning_1_1HybridPlanningFixture.html" title=" " alt="" coords="290,2702,469,2743"/>
 <area shape="rect" id="node48" href="$classmoveit__servo_1_1PoseTrackingFixture.html" title=" " alt="" coords="277,2767,481,2809"/>
 <area shape="rect" id="node49" href="$classmoveit__servo_1_1ServoFixture.html" title=" " alt="" coords="279,2833,480,2860"/>
-<area shape="rect" id="node50" href="$classMoveItConfigData.html" title=" " alt="" coords="310,2884,449,2911"/>
-<area shape="rect" id="node51" href="$classOneRobot.html" title=" " alt="" coords="336,487,423,513"/>
-<area shape="rect" id="node52" href="$classPickPlaceTestFixture.html" title=" " alt="" coords="302,537,457,564"/>
-<area shape="rect" id="node53" href="$classpilz__extensions__tests_1_1JointLimitTest.html" title=" " alt="" coords="298,589,461,630"/>
-<area shape="rect" id="node54" href="$classpilz__industrial__motion__planner_1_1GetSolverTipFrameIntegrationTest.html" title=" " alt="" coords="225,654,533,695"/>
-<area shape="rect" id="node55" href="$classpilz__industrial__motion__planner_1_1GetSolverTipFrameTest.html" title="Test fixture for getSolverTipFrame tests." alt="" coords="261,719,498,761"/>
-<area shape="rect" id="node56" href="$classPlanningContextTest.html" title=" " alt="" coords="283,785,476,812"/>
-<area shape="rect" id="node57" href="$classRobotTrajectoryTestFixture.html" title=" " alt="" coords="282,836,477,863"/>
-<area shape="rect" id="node58" href="$classServoCalcsTestFixture.html" title=" " alt="" coords="297,887,462,913"/>
-<area shape="rect" id="node59" href="$classSphericalRobot.html" title=" " alt="" coords="319,937,439,964"/>
-<area shape="rect" id="node60" href="$classTestAABB.html" title=" " alt="" coords="337,988,421,1015"/>
-<area shape="rect" id="node61" href="$classTiming.html" title=" " alt="" coords="346,1039,413,1065"/>
-<area shape="rect" id="node62" href="$classTrajectoryBlenderTransitionWindowTest.html" title=" " alt="" coords="280,1090,479,1131"/>
-<area shape="rect" id="node63" href="$classTrajectoryFunctionsTestBase.html" title="test fixtures base class" alt="" coords="276,1156,483,1183"/>
-<area shape="rect" id="node65" href="$classTrajectoryGeneratorCIRCTest.html" title=" " alt="" coords="275,1207,483,1233"/>
-<area shape="rect" id="node66" href="$classTrajectoryGeneratorCommonTest.html" title=" " alt="" coords="274,1258,485,1299"/>
-<area shape="rect" id="node68" href="$classTrajectoryGeneratorLINTest.html" title="Parameterized unittest of trajectory generator LIN to enable tests against different robot models...." alt="" coords="280,1324,479,1351"/>
-<area shape="rect" id="node69" href="$classTrajectoryGeneratorPTPTest.html" title=" " alt="" coords="279,1375,480,1401"/>
-<area shape="rect" id="node70" href="$classTrajectoryTest.html" title=" " alt="" coords="323,1425,435,1452"/>
+<area shape="rect" id="node50" href="$classmoveit__setup_1_1MoveItSetupTest.html" title="Test environment with DataWarehouse setup and help for generating files in a temp dir." alt="" coords="266,2884,493,2911"/>
+<area shape="rect" id="node54" href="$classOneRobot.html" title=" " alt="" coords="336,487,423,513"/>
+<area shape="rect" id="node55" href="$classPickPlaceTestFixture.html" title=" " alt="" coords="302,537,457,564"/>
+<area shape="rect" id="node56" href="$classpilz__extensions__tests_1_1JointLimitTest.html" title=" " alt="" coords="298,589,461,630"/>
+<area shape="rect" id="node57" href="$classpilz__industrial__motion__planner_1_1GetSolverTipFrameIntegrationTest.html" title=" " alt="" coords="225,654,533,695"/>
+<area shape="rect" id="node58" href="$classpilz__industrial__motion__planner_1_1GetSolverTipFrameTest.html" title="Test fixture for getSolverTipFrame tests." alt="" coords="261,719,498,761"/>
+<area shape="rect" id="node59" href="$classPlanningContextTest.html" title=" " alt="" coords="283,785,476,812"/>
+<area shape="rect" id="node60" href="$classRobotTrajectoryTestFixture.html" title=" " alt="" coords="282,836,477,863"/>
+<area shape="rect" id="node61" href="$classServoCalcsTestFixture.html" title=" " alt="" coords="297,887,462,913"/>
+<area shape="rect" id="node62" href="$classSphericalRobot.html" title=" " alt="" coords="319,937,439,964"/>
+<area shape="rect" id="node63" href="$classTestAABB.html" title=" " alt="" coords="337,988,421,1015"/>
+<area shape="rect" id="node64" href="$classTiming.html" title=" " alt="" coords="346,1039,413,1065"/>
+<area shape="rect" id="node65" href="$classTrajectoryBlenderTransitionWindowTest.html" title=" " alt="" coords="280,1090,479,1131"/>
+<area shape="rect" id="node66" href="$classTrajectoryFunctionsTestBase.html" title="test fixtures base class" alt="" coords="276,1156,483,1183"/>
+<area shape="rect" id="node68" href="$classTrajectoryGeneratorCIRCTest.html" title=" " alt="" coords="275,1207,483,1233"/>
+<area shape="rect" id="node69" href="$classTrajectoryGeneratorCommonTest.html" title=" " alt="" coords="274,1258,485,1299"/>
+<area shape="rect" id="node71" href="$classTrajectoryGeneratorLINTest.html" title="Parameterized unittest of trajectory generator LIN to enable tests against different robot models...." alt="" coords="280,1324,479,1351"/>
+<area shape="rect" id="node72" href="$classTrajectoryGeneratorPTPTest.html" title=" " alt="" coords="279,1375,480,1401"/>
+<area shape="rect" id="node73" href="$classTrajectoryTest.html" title=" " alt="" coords="323,1425,435,1452"/>
 <area shape="rect" id="node28" href="$classDistanceCheckPandaTest.html" title=" " alt="" coords="593,1695,789,1737"/>
 <area shape="rect" id="node29" href="$classDistanceFullPandaTest.html" title=" " alt="" coords="849,1695,1045,1737"/>
-<area shape="rect" id="node64" href="$classTrajectoryFunctionsTestFlangeAndGripper.html" title="Parametrized class for tests with and without gripper." alt="" coords="582,1149,801,1190"/>
-<area shape="rect" id="node67" href="$classTrajectoryGeneratorCommonTestNoGripper.html" title=" " alt="" coords="586,1258,797,1299"/>
+<area shape="rect" id="node51" href="$classControllersTest.html" title=" " alt="" coords="632,2884,751,2911"/>
+<area shape="rect" id="node52" href="$classPerceptionTest.html" title=" " alt="" coords="633,2935,750,2961"/>
+<area shape="rect" id="node53" href="$classSRDFTest.html" title=" " alt="" coords="650,2833,733,2860"/>
+<area shape="rect" id="node67" href="$classTrajectoryFunctionsTestFlangeAndGripper.html" title="Parametrized class for tests with and without gripper." alt="" coords="582,1149,801,1190"/>
+<area shape="rect" id="node70" href="$classTrajectoryGeneratorCommonTestNoGripper.html" title=" " alt="" coords="586,1258,797,1299"/>
 </map>

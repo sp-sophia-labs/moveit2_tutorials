@@ -77,63 +77,63 @@ $(function() {
 <div class="textblock"><code>#include &lt;<a class="el" href="kinematic__constraint_8h_source.html">moveit/kinematic_constraints/kinematic_constraint.h</a>&gt;</code><br />
 <code>#include &lt;gtest/gtest.h&gt;</code><br />
 <code>#include &lt;urdf_parser/urdf_parser.h&gt;</code><br />
-<code>#include &lt;tf2_eigen/tf2_eigen.h&gt;</code><br />
-<code>#include &lt;tf2_geometry_msgs/tf2_geometry_msgs.h&gt;</code><br />
-<code>#include &lt;boost/math/constants/constants.hpp&gt;</code><br />
+<code>#include &lt;tf2_eigen/tf2_eigen.hpp&gt;</code><br />
+<code>#include &lt;tf2_geometry_msgs/tf2_geometry_msgs.hpp&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="robot__model__test__utils_8h_source.html">moveit/utils/robot_model_test_utils.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for test_orientation_constraints.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="test__orientation__constraints_8cpp__incl.png" border="0" usemap="#moveit__core_2kinematic__constraints_2test_2test__orientation__constraints_8cpp" alt=""/></div>
 <map name="moveit__core_2kinematic__constraints_2test_2test__orientation__constraints_8cpp" id="moveit__core_2kinematic__constraints_2test_2test__orientation__constraints_8cpp">
-<area shape="rect" title=" " alt="" coords="2095,5,2301,61"/>
-<area shape="rect" href="kinematic__constraint_8h.html" title=" " alt="" coords="1737,109,1953,151"/>
-<area shape="rect" title=" " alt="" coords="1977,117,2081,143"/>
-<area shape="rect" title=" " alt="" coords="2105,117,2291,143"/>
-<area shape="rect" title=" " alt="" coords="2315,117,2475,143"/>
-<area shape="rect" title=" " alt="" coords="2500,109,2675,151"/>
-<area shape="rect" title=" " alt="" coords="2699,109,2862,151"/>
+<area shape="rect" title=" " alt="" coords="2321,5,2528,61"/>
+<area shape="rect" href="kinematic__constraint_8h.html" title=" " alt="" coords="1963,109,2179,151"/>
+<area shape="rect" title=" " alt="" coords="2203,117,2307,143"/>
+<area shape="rect" title=" " alt="" coords="2332,117,2517,143"/>
+<area shape="rect" title=" " alt="" coords="2542,117,2718,143"/>
+<area shape="rect" title=" " alt="" coords="2743,109,2917,151"/>
+<area shape="rect" title=" " alt="" coords="2941,117,3009,143"/>
 <area shape="rect" href="robot__model__test__utils_8h.html" title=" " alt="" coords="193,288,342,329"/>
-<area shape="rect" href="robot__model_8h.html" title=" " alt="" coords="1275,377,1430,419"/>
-<area shape="rect" href="class__forward_8h.html" title=" " alt="" coords="2365,645,2522,687"/>
-<area shape="rect" title=" " alt="" coords="1373,653,1436,679"/>
-<area shape="rect" title=" " alt="" coords="730,653,810,679"/>
-<area shape="rect" href="robot__state_8h.html" title=" " alt="" coords="1981,288,2127,329"/>
-<area shape="rect" href="transforms_8h.html" title=" " alt="" coords="2513,563,2744,590"/>
-<area shape="rect" href="collision__env_8h.html" title=" " alt="" coords="1681,199,1875,240"/>
-<area shape="rect" title=" " alt="" coords="1950,206,2150,233"/>
-<area shape="rect" title=" " alt="" coords="2173,206,2420,233"/>
-<area shape="rect" href="exceptions_8h.html" title=" " alt="" coords="440,474,671,501"/>
-<area shape="rect" title=" " alt="" coords="1329,563,1462,590"/>
-<area shape="rect" href="joint__model__group_8h.html" title=" " alt="" coords="1816,467,1975,508"/>
-<area shape="rect" title=" " alt="" coords="1707,653,1833,679"/>
-<area shape="rect" href="fixed__joint__model_8h.html" title=" " alt="" coords="1485,467,1639,508"/>
-<area shape="rect" href="floating__joint__model_8h.html" title=" " alt="" coords="695,467,866,508"/>
-<area shape="rect" href="planar__joint__model_8h.html" title=" " alt="" coords="890,467,1053,508"/>
-<area shape="rect" href="revolute__joint__model_8h.html" title=" " alt="" coords="1077,467,1253,508"/>
-<area shape="rect" href="prismatic__joint__model_8h.html" title=" " alt="" coords="1277,467,1460,508"/>
-<area shape="rect" href="declare__ptr_8h.html" title=" " alt="" coords="2357,735,2529,776"/>
-<area shape="rect" title=" " alt="" coords="512,563,599,590"/>
-<area shape="rect" href="joint__model_8h.html" title=" " alt="" coords="1099,556,1254,597"/>
-<area shape="rect" href="link__model_8h.html" title=" " alt="" coords="1806,556,1961,597"/>
-<area shape="rect" href="kinematics__base_8h.html" title=" " alt="" coords="1985,556,2168,597"/>
-<area shape="rect" title=" " alt="" coords="2181,653,2324,679"/>
-<area shape="rect" title=" " alt="" coords="2243,563,2286,590"/>
-<area shape="rect" title=" " alt="" coords="1858,653,1909,679"/>
-<area shape="rect" title=" " alt="" coords="1460,653,1683,679"/>
-<area shape="rect" href="attached__body_8h.html" title=" " alt="" coords="2218,467,2365,508"/>
-<area shape="rect" title=" " alt="" coords="1968,377,2140,419"/>
-<area shape="rect" title=" " alt="" coords="2165,377,2335,419"/>
-<area shape="rect" title=" " alt="" coords="2359,377,2511,419"/>
-<area shape="rect" title=" " alt="" coords="2536,385,2759,411"/>
-<area shape="rect" title=" " alt="" coords="2782,385,2851,411"/>
-<area shape="rect" title=" " alt="" coords="2875,385,3006,411"/>
-<area shape="rect" title=" " alt="" coords="2546,645,2773,687"/>
-<area shape="rect" title=" " alt="" coords="2797,653,2970,679"/>
-<area shape="rect" href="collision__matrix_8h.html" title=" " alt="" coords="1537,556,1731,597"/>
-<area shape="rect" title=" " alt="" coords="1375,288,1546,329"/>
-<area shape="rect" title=" " alt="" coords="1570,288,1741,329"/>
-<area shape="rect" href="world_8h.html" title=" " alt="" coords="1999,467,2194,508"/>
+<area shape="rect" href="robot__model_8h.html" title=" " alt="" coords="1187,377,1342,419"/>
+<area shape="rect" href="class__forward_8h.html" title=" " alt="" coords="2509,645,2666,687"/>
+<area shape="rect" title=" " alt="" coords="1835,653,1897,679"/>
+<area shape="rect" title=" " alt="" coords="1135,653,1215,679"/>
+<area shape="rect" href="robot__state_8h.html" title=" " alt="" coords="2207,288,2354,329"/>
+<area shape="rect" href="transforms_8h.html" title=" " alt="" coords="2319,563,2549,590"/>
+<area shape="rect" href="collision__env_8h.html" title=" " alt="" coords="1907,199,2102,240"/>
+<area shape="rect" title=" " alt="" coords="2177,206,2377,233"/>
+<area shape="rect" title=" " alt="" coords="2400,206,2647,233"/>
+<area shape="rect" href="exceptions_8h.html" title=" " alt="" coords="381,474,612,501"/>
+<area shape="rect" title=" " alt="" coords="687,563,821,590"/>
+<area shape="rect" href="joint__model__group_8h.html" title=" " alt="" coords="789,467,948,508"/>
+<area shape="rect" title=" " alt="" coords="1985,653,2112,679"/>
+<area shape="rect" title=" " alt="" coords="697,653,838,679"/>
+<area shape="rect" href="fixed__joint__model_8h.html" title=" " alt="" coords="1381,467,1535,508"/>
+<area shape="rect" href="floating__joint__model_8h.html" title=" " alt="" coords="1559,467,1730,508"/>
+<area shape="rect" href="planar__joint__model_8h.html" title=" " alt="" coords="1754,467,1917,508"/>
+<area shape="rect" href="revolute__joint__model_8h.html" title=" " alt="" coords="973,467,1149,508"/>
+<area shape="rect" href="prismatic__joint__model_8h.html" title=" " alt="" coords="1173,467,1356,508"/>
+<area shape="rect" href="declare__ptr_8h.html" title=" " alt="" coords="2501,735,2673,776"/>
+<area shape="rect" title=" " alt="" coords="453,563,540,590"/>
+<area shape="rect" href="joint__model_8h.html" title=" " alt="" coords="1371,556,1526,597"/>
+<area shape="rect" href="link__model_8h.html" title=" " alt="" coords="2038,556,2193,597"/>
+<area shape="rect" href="kinematics__base_8h.html" title=" " alt="" coords="845,556,1028,597"/>
+<area shape="rect" title=" " alt="" coords="1576,653,1663,679"/>
+<area shape="rect" title=" " alt="" coords="1601,563,1643,590"/>
+<area shape="rect" title=" " alt="" coords="2137,653,2187,679"/>
+<area shape="rect" title=" " alt="" coords="207,653,429,679"/>
+<area shape="rect" href="attached__body_8h.html" title=" " alt="" coords="2042,467,2189,508"/>
+<area shape="rect" title=" " alt="" coords="2195,377,2367,419"/>
+<area shape="rect" title=" " alt="" coords="2391,377,2562,419"/>
+<area shape="rect" title=" " alt="" coords="2586,377,2738,419"/>
+<area shape="rect" title=" " alt="" coords="2763,385,2985,411"/>
+<area shape="rect" title=" " alt="" coords="3009,385,3078,411"/>
+<area shape="rect" title=" " alt="" coords="3102,385,3249,411"/>
+<area shape="rect" title=" " alt="" coords="2258,645,2485,687"/>
+<area shape="rect" href="collision__matrix_8h.html" title=" " alt="" coords="1769,556,1963,597"/>
+<area shape="rect" title=" " alt="" coords="1602,288,1773,329"/>
+<area shape="rect" title=" " alt="" coords="1797,288,1967,329"/>
+<area shape="rect" href="world_8h.html" title=" " alt="" coords="2213,467,2407,508"/>
 <area shape="rect" title=" " alt="" coords="187,385,348,411"/>
 <area shape="rect" title=" " alt="" coords="5,385,111,411"/>
 </map>
@@ -200,7 +200,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__orientation__constraints_8cpp_source.html#l00483">483</a> of file <a class="el" href="test__orientation__constraints_8cpp_source.html">test_orientation_constraints.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__orientation__constraints_8cpp_source.html#l00478">478</a> of file <a class="el" href="test__orientation__constraints_8cpp_source.html">test_orientation_constraints.cpp</a>.</p>
 
 </div>
 </div>
@@ -245,7 +245,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Helper function to create a quaternion from a rotation vector. </p>
 
-<p class="definition">Definition at line <a class="el" href="test__orientation__constraints_8cpp_source.html#l00141">141</a> of file <a class="el" href="test__orientation__constraints_8cpp_source.html">test_orientation_constraints.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__orientation__constraints_8cpp_source.html#l00136">136</a> of file <a class="el" href="test__orientation__constraints_8cpp_source.html">test_orientation_constraints.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -285,7 +285,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Helper function to set the orientation of the robot end-effector for the <a class="el" href="classFloatingJointRobot.html">FloatingJointRobot</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="test__orientation__constraints_8cpp_source.html#l00149">149</a> of file <a class="el" href="test__orientation__constraints_8cpp_source.html">test_orientation_constraints.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__orientation__constraints_8cpp_source.html#l00144">144</a> of file <a class="el" href="test__orientation__constraints_8cpp_source.html">test_orientation_constraints.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -334,7 +334,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__orientation__constraints_8cpp_source.html#l00385">385</a> of file <a class="el" href="test__orientation__constraints_8cpp_source.html">test_orientation_constraints.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__orientation__constraints_8cpp_source.html#l00380">380</a> of file <a class="el" href="test__orientation__constraints_8cpp_source.html">test_orientation_constraints.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -384,7 +384,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__orientation__constraints_8cpp_source.html#l00357">357</a> of file <a class="el" href="test__orientation__constraints_8cpp_source.html">test_orientation_constraints.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__orientation__constraints_8cpp_source.html#l00352">352</a> of file <a class="el" href="test__orientation__constraints_8cpp_source.html">test_orientation_constraints.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -424,7 +424,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__orientation__constraints_8cpp_source.html#l00157">157</a> of file <a class="el" href="test__orientation__constraints_8cpp_source.html">test_orientation_constraints.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__orientation__constraints_8cpp_source.html#l00152">152</a> of file <a class="el" href="test__orientation__constraints_8cpp_source.html">test_orientation_constraints.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -466,7 +466,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__orientation__constraints_8cpp_source.html#l00184">184</a> of file <a class="el" href="test__orientation__constraints_8cpp_source.html">test_orientation_constraints.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__orientation__constraints_8cpp_source.html#l00179">179</a> of file <a class="el" href="test__orientation__constraints_8cpp_source.html">test_orientation_constraints.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -508,7 +508,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__orientation__constraints_8cpp_source.html#l00229">229</a> of file <a class="el" href="test__orientation__constraints_8cpp_source.html">test_orientation_constraints.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__orientation__constraints_8cpp_source.html#l00224">224</a> of file <a class="el" href="test__orientation__constraints_8cpp_source.html">test_orientation_constraints.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -550,7 +550,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__orientation__constraints_8cpp_source.html#l00277">277</a> of file <a class="el" href="test__orientation__constraints_8cpp_source.html">test_orientation_constraints.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__orientation__constraints_8cpp_source.html#l00272">272</a> of file <a class="el" href="test__orientation__constraints_8cpp_source.html">test_orientation_constraints.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -592,7 +592,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__orientation__constraints_8cpp_source.html#l00331">331</a> of file <a class="el" href="test__orientation__constraints_8cpp_source.html">test_orientation_constraints.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__orientation__constraints_8cpp_source.html#l00326">326</a> of file <a class="el" href="test__orientation__constraints_8cpp_source.html">test_orientation_constraints.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -653,7 +653,7 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>Helper function to create a quaternion from Euler angles. </p>
 
-<p class="definition">Definition at line <a class="el" href="test__orientation__constraints_8cpp_source.html#l00134">134</a> of file <a class="el" href="test__orientation__constraints_8cpp_source.html">test_orientation_constraints.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__orientation__constraints_8cpp_source.html#l00129">129</a> of file <a class="el" href="test__orientation__constraints_8cpp_source.html">test_orientation_constraints.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

@@ -68,7 +68,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>API changes in MoveIt releases</p>
-<h1><a class="anchor" id="autotoc_md15"></a>
+<h1><a class="anchor" id="autotoc_md14"></a>
 ROS Rolling</h1>
 <ul>
 <li><code>lockSceneRead()</code> and <code>lockSceneWrite()</code> are now protected member functions, for internal use only. To lock the planning scene, use LockedPlanningSceneRO or LockedPlanningSceneRW: <div class="fragment"><div class="line">planning_scene_monitor::LockedPlanningSceneRO ls(planning_scene_monitor);</div>
@@ -85,7 +85,7 @@ ROS Rolling</h1>
 <li>Static member variable interface of the CollisionDetectorAllocatorTemplate for the string NAME was replaced with a virtual method <code>getName</code>.</li>
 <li>Enhance <code>RDFLoader</code> to load from string parameter OR string topic (and add the ability to publish a string topic).</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md16"></a>
+<h1><a class="anchor" id="autotoc_md15"></a>
 ROS Noetic</h1>
 <ul>
 <li>RobotModel no longer overrides empty URDF collision geometry by matching the visual geometry of the link.</li>
@@ -107,7 +107,7 @@ ROS Noetic</h1>
 <li>Moved the class <code>MoveItErrorCode</code> from both <code>moveit_ros_planning</code> and <code><a class="el" href="namespacemoveit__ros__planning__interface.html">moveit_ros_planning_interface</a></code> to <code>moveit_core</code>. The class now is in namespace <code><a class="el" href="namespacemoveit_1_1core.html" title="Core components of MoveIt.">moveit::core</a></code>, access via <code><a class="el" href="namespacemoveit_1_1planning__interface.html" title="Simple interface to MoveIt components.">moveit::planning_interface</a></code> or <code><a class="el" href="classmoveit__cpp_1_1PlanningComponent.html">moveit_cpp::PlanningComponent</a></code> is deprecated.</li>
 <li>End-effector markers in rviz are shown only if the eef's parent group is active <em>and</em> the parent link is part of that group. Before, these conditions were <em>OR</em>-connected. You might need to define additional end-effectors.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md17"></a>
+<h1><a class="anchor" id="autotoc_md16"></a>
 ROS Melodic</h1>
 <ul>
 <li>Migration to <code>tf2</code> API.</li>
@@ -122,7 +122,7 @@ ROS Melodic</h1>
 <li><code>RDFLoader</code> / <code>RobotModelLoader</code>: removed TinyXML-based API (<a href="https://github.com/ros-planning/moveit/pull/1254">https://github.com/ros-planning/moveit/pull/1254</a>)</li>
 <li>Deprecated <code>EndEffectorInteractionStyle</code> got removed from <code>RobotInteraction</code> (<a href="https://github.com/ros-planning/moveit/pull/1287">https://github.com/ros-planning/moveit/pull/1287</a>) Use <a href="https://github.com/ros-planning/moveit/pull/1287/files#diff-24e57a8ea7f2f2d8a63cfc31580d09ddL240">the corresponding <code>InteractionStyle</code> definitions</a> instead</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md18"></a>
+<h1><a class="anchor" id="autotoc_md17"></a>
 ROS Kinetic</h1>
 <ul>
 <li>In the C++ MoveGroupInterface class the <code><a class="el" href="namespaceplan__with__constraints.html#ad98040293eeabd17f40a72a60f1146c4">plan()</a></code> method returns a <code>MoveItErrorCode</code> object and not a boolean. <code>static_cast&lt;bool&gt;(<a class="el" href="namespaceplan__with__constraints.html#ad98040293eeabd17f40a72a60f1146c4">mgi.plan()</a>)</code> can be used to achieve the old behavior.</li>

@@ -767,7 +767,7 @@ Public Member Functions</h2></td></tr>
 
 <p><a class="el" href="classA.html">A</a> state can be constructed from a specified robot model. No values are initialized. Call <a class="el" href="classmoveit_1_1core_1_1RobotState.html#aba31c6f758e3dabd32c1acbd069e189e" title="Set all joints to their default positions. The default position is 0, or if that is not within bounds...">setToDefaultValues()</a> if a state needs to provide valid information. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00130">130</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00126">126</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -786,7 +786,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00156">156</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00152">152</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -808,7 +808,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Copy constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00149">149</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00145">145</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -833,7 +833,7 @@ Public Member Functions</h2></td></tr>
 <p>This only adds the given body to this <a class="el" href="classmoveit_1_1core_1_1RobotState.html" title="Representation of a robot&#39;s state. This includes position, velocity, acceleration and effort.">RobotState</a> instance. It does not change anything about other representations of the object elsewhere in the system. So if the body represents an object in a <a class="el" href="classcollision__detection_1_1World.html" title="Maintain a representation of the environment.">collision_detection::World</a> (like from a <a class="el" href="classplanning__scene_1_1PlanningScene.html" title="This class maintains the representation of the environment as seen by a planning instance....">planning_scene::PlanningScene</a>), you will likely need to remove the corresponding object from that world to avoid having collisions detected against it.</p>
 <dl class="section note"><dt>Note</dt><dd>This version of the function (taking an <a class="el" href="classmoveit_1_1core_1_1AttachedBody.html" title="Object defining bodies that can be attached to robot links.">AttachedBody</a> pointer) does not copy the <a class="el" href="classmoveit_1_1core_1_1AttachedBody.html" title="Object defining bodies that can be attached to robot links.">AttachedBody</a> object, it just uses it directly. The <a class="el" href="classmoveit_1_1core_1_1AttachedBody.html" title="Object defining bodies that can be attached to robot links.">AttachedBody</a> object stores its position data internally. This means you should <b>never attach a single <a class="el" href="classmoveit_1_1core_1_1AttachedBody.html" title="Object defining bodies that can be attached to robot links.">AttachedBody</a> instance to multiple <a class="el" href="classmoveit_1_1core_1_1RobotState.html" title="Representation of a robot&#39;s state. This includes position, velocity, acceleration and effort.">RobotState</a> instances</b>, or the body positions will get corrupted. You need to make a fresh copy of the <a class="el" href="classmoveit_1_1core_1_1AttachedBody.html" title="Object defining bodies that can be attached to robot links.">AttachedBody</a> object for each <a class="el" href="classmoveit_1_1core_1_1RobotState.html" title="Representation of a robot&#39;s state. This includes position, velocity, acceleration and effort.">RobotState</a> you attach it to. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01074">1074</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01070">1070</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -915,7 +915,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <p>This only adds the given body to this <a class="el" href="classmoveit_1_1core_1_1RobotState.html" title="Representation of a robot&#39;s state. This includes position, velocity, acceleration and effort.">RobotState</a> instance. It does not change anything about other representations of the object elsewhere in the system. So if the body represents an object in a <a class="el" href="classcollision__detection_1_1World.html" title="Maintain a representation of the environment.">collision_detection::World</a> (like from a <a class="el" href="classplanning__scene_1_1PlanningScene.html" title="This class maintains the representation of the environment as seen by a planning instance....">planning_scene::PlanningScene</a>), you will likely need to remove the corresponding object from that world to avoid having collisions detected against it. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01079">1079</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01075">1075</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -1028,7 +1028,7 @@ Public Member Functions</h2></td></tr>
 <p>Add an attached body to this state. </p>
 <p>This only adds the given body to this <a class="el" href="classmoveit_1_1core_1_1RobotState.html" title="Representation of a robot&#39;s state. This includes position, velocity, acceleration and effort.">RobotState</a> instance. It does not change anything about other representations of the object elsewhere in the system. So if the body represents an object in a <a class="el" href="classcollision__detection_1_1World.html" title="Maintain a representation of the environment.">collision_detection::World</a> (like from a <a class="el" href="classplanning__scene_1_1PlanningScene.html" title="This class maintains the representation of the environment as seen by a planning instance....">planning_scene::PlanningScene</a>), you will likely need to remove the corresponding object from that world to avoid having collisions detected against it. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01063">1063</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01059">1059</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1059,7 +1059,7 @@ Here is the caller graph for this function:</div>
 
 <p>Clear all attached bodies. This calls delete on the <a class="el" href="classmoveit_1_1core_1_1AttachedBody.html" title="Object defining bodies that can be attached to robot links.">AttachedBody</a> instances, if needed. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01113">1113</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01109">1109</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -1081,7 +1081,7 @@ Here is the caller graph for this function:</div>
 
 <p>Clear the bodies attached to a specific group. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01138">1138</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01134">1134</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -1103,7 +1103,7 @@ Here is the caller graph for this function:</div>
 
 <p>Clear the bodies attached to a specific link. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01123">1123</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01119">1119</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1134,7 +1134,7 @@ Here is the call graph for this function:</div>
 
 <p>Remove the attached body named <em>id</em>. Return false if the object was not found (and thus not removed). Return true on success. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01153">1153</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01149">1149</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1196,7 +1196,7 @@ Here is the caller graph for this function:</div>
 
 <p>Compute an axis-aligned bounding box that contains the current state. The format for <em>aabb</em> is (minx, maxx, miny, maxy, minz, maxz) </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02124">2124</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02120">2120</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1281,7 +1281,7 @@ Here is the caller graph for this function:</div>
 <p>In contrast to the previous function, the Cartesian path is specified as a target frame to be reached (<em>target</em>) for the origin of a robot link (<em>link</em>). The target frame is assumed to be either in a global reference frame or in the local reference frame of the link. In the latter case (<em>global_reference_frame</em> is false) the <em>target</em> is rotated accordingly. All other comments from the previous function apply.</p>
 <p>NOTE: As of ROS-Melodic these are deprecated and should not be used </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02102">2102</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02098">2098</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -1366,7 +1366,7 @@ Here is the caller graph for this function:</div>
 <p>For absolute jump thresholds, if any individual joint-space motion delta is larger then <em>revolute_jump_threshold</em> for revolute joints or <em>prismatic_jump_threshold</em> for prismatic joints then this step is considered a failure and the returned path is truncated up to just before the jump.</p>
 <p>NOTE: As of ROS-Melodic these are deprecated and should not be used </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02091">2091</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02087">2087</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -1442,7 +1442,7 @@ Here is the caller graph for this function:</div>
 <p>In contrast to the previous functions, the Cartesian path is specified as a set of <em>waypoints</em> to be sequentially reached for the origin of a robot link (<em>link</em>). The waypoints are transforms given either in a global reference frame or in the local reference frame of the link at the immediately preceding waypoint. The link needs to move in a straight line between two consecutive waypoints. All other comments apply.</p>
 <p>NOTE: As of ROS-Melodic these are deprecated and should not be used </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02113">2113</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02109">2109</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -1538,7 +1538,7 @@ Here is the caller graph for this function:</div>
 
 <p>Given a twist for a particular link (<em>tip</em>), compute the corresponding velocity for every variable and store it in <em>qdot</em>. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01474">1474</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01470">1470</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -1570,7 +1570,7 @@ Here is the caller graph for this function:</div>
 
 <p>For a given group, copy the acceleration values of the variables that make up the group into another location, in the order that the variables are found in the group. This is not necessarily a contiguous block of memory in the <a class="el" href="classmoveit_1_1core_1_1RobotState.html" title="Representation of a robot&#39;s state. This includes position, velocity, acceleration and effort.">RobotState</a> itself, so we copy instead of returning a pointer. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00708">708</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00704">704</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -1602,7 +1602,7 @@ Here is the caller graph for this function:</div>
 
 <p>For a given group, copy the acceleration values of the variables that make up the group into another location, in the order that the variables are found in the group. This is not necessarily a contiguous block of memory in the <a class="el" href="classmoveit_1_1core_1_1RobotState.html" title="Representation of a robot&#39;s state. This includes position, velocity, acceleration and effort.">RobotState</a> itself, so we copy instead of returning a pointer. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00718">718</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00714">714</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1849,7 +1849,7 @@ Here is the caller graph for this function:</div>
 
 <p>For a given group, copy the position values of the variables that make up the group into another location, in the order that the variables are found in the group. This is not necessarily a contiguous block of memory in the <a class="el" href="classmoveit_1_1core_1_1RobotState.html" title="Representation of a robot&#39;s state. This includes position, velocity, acceleration and effort.">RobotState</a> itself, so we copy instead of returning a pointer. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00630">630</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00626">626</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -1881,7 +1881,7 @@ Here is the caller graph for this function:</div>
 
 <p>For a given group, copy the position values of the variables that make up the group into another location, in the order that the variables are found in the group. This is not necessarily a contiguous block of memory in the <a class="el" href="classmoveit_1_1core_1_1RobotState.html" title="Representation of a robot&#39;s state. This includes position, velocity, acceleration and effort.">RobotState</a> itself, so we copy instead of returning a pointer. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00640">640</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00636">636</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -2132,7 +2132,7 @@ Here is the caller graph for this function:</div>
 
 <p>For a given group, copy the velocity values of the variables that make up the group into another location, in the order that the variables are found in the group. This is not necessarily a contiguous block of memory in the <a class="el" href="classmoveit_1_1core_1_1RobotState.html" title="Representation of a robot&#39;s state. This includes position, velocity, acceleration and effort.">RobotState</a> itself, so we copy instead of returning a pointer. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00669">669</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00665">665</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -2164,7 +2164,7 @@ Here is the caller graph for this function:</div>
 
 <p>For a given group, copy the velocity values of the variables that make up the group into another location, in the order that the variables are found in the group. This is not necessarily a contiguous block of memory in the <a class="el" href="classmoveit_1_1core_1_1RobotState.html" title="Representation of a robot&#39;s state. This includes position, velocity, acceleration and effort.">RobotState</a> itself, so we copy instead of returning a pointer. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00679">679</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00675">675</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -2652,7 +2652,7 @@ Here is the caller graph for this function:</div>
 
 <p>Return the sum of joint distances to "other" state. An L1 norm. Only considers active joints. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01008">1008</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01004">1004</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -2673,7 +2673,7 @@ Here is the caller graph for this function:</div>
 
 <p>Remove accelerations from this state (this differs from setting them to zero) </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00337">337</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00333">333</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2703,7 +2703,7 @@ Here is the call graph for this function:</div>
 
 <p>Reduce <a class="el" href="classmoveit_1_1core_1_1RobotState.html" title="Representation of a robot&#39;s state. This includes position, velocity, acceleration and effort.">RobotState</a> to kinematic information (remove velocity, acceleration and effort, if present) </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00347">347</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00343">343</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2733,7 +2733,7 @@ Here is the call graph for this function:</div>
 
 <p>Remove effort values from this state (this differs from setting them to zero) </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00342">342</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00338">338</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -2754,7 +2754,7 @@ Here is the call graph for this function:</div>
 
 <p>Remove velocities from this state (this differs from setting them to zero) </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00332">332</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00328">328</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -2773,7 +2773,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00915">915</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00911">911</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2831,7 +2831,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00922">922</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00918">918</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -2909,7 +2909,7 @@ Here is the caller graph for this function:</div>
 
 <p>Get all bodies attached to the model corresponding to this state. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01089">1089</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01085">1085</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2951,7 +2951,7 @@ Here is the caller graph for this function:</div>
 
 <p>Get all bodies attached to a particular group the model corresponding to this state. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01097">1097</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01093">1093</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -2983,7 +2983,7 @@ Here is the caller graph for this function:</div>
 
 <p>Get all bodies attached to a particular link in the model corresponding to this state. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01105">1105</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01101">1101</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -3005,7 +3005,7 @@ Here is the caller graph for this function:</div>
 
 <p>Get the attached body named <em>name</em>. Return nullptr if not found. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01051">1051</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01047">1047</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3243,7 +3243,7 @@ Here is the caller graph for this function:</div>
 <p>If this frame is attached to a robot link, the link pointer is returned in <em>robot_link</em>. If frame_id was not found, <em>frame_found</em> is set to false and an identity transform is returned.</p>
 <p>The returned transformation is always a valid isometry. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01187">1187</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01183">1183</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -3277,7 +3277,7 @@ Here is the caller graph for this function:</div>
 <p>If frame_id was not found, <em>frame_found</em> is set to false and an identity transform is returned.</p>
 <p>The returned transformation is always a valid isometry. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01167">1167</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01163">1163</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3328,7 +3328,7 @@ Here is the caller graph for this function:</div>
 <p>If frame_id was not found, <em>frame_found</em> is set to false and an identity transform is returned.</p>
 <p>The returned transformation is always a valid isometry. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01173">1173</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01169">1169</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -3572,7 +3572,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The computed Jacobian. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01341">1341</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01337">1337</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -3702,7 +3702,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if jacobian was successfully computed, false otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01350">1350</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01346">1346</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -4221,7 +4221,7 @@ Here is the caller graph for this function:</div>
 
 <p>Get the minimm distance from this state to the bounds. The minimum distance and the joint for which this minimum is achieved are returned. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00941">941</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00937">937</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -4252,7 +4252,7 @@ Here is the call graph for this function:</div>
 
 <p>Get the minimm distance from a group in this state to the bounds. The minimum distance and the joint for which this minimum is achieved are returned. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00946">946</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00942">942</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -4274,7 +4274,7 @@ Here is the call graph for this function:</div>
 
 <p>Get the minimm distance from a set of joints in the state to the bounds. The minimum distance and the joint for which this minimum is achieved are returned. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00952">952</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00948">948</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -4326,7 +4326,7 @@ Here is the call graph for this function:</div>
 <p>Get the latest link upwards the kinematic tree which is only connected via fixed joints. </p>
 <p>This behaves the same as <a class="el" href="classmoveit_1_1core_1_1RobotModel.html#abc8fa87627c002b5790c34130a5a5d00" title="Get the latest link upwards the kinematic tree, which is only connected via fixed joints.">RobotModel::getRigidlyConnectedParentLinkModel</a>, but can additionally resolve parents for attached objects / subframes. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00872">872</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00868">868</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -4444,7 +4444,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01272">1272</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01268">1268</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -4584,7 +4584,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01256">1256</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01252">1252</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -4648,7 +4648,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02319">2319</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02315">2315</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -5285,7 +5285,7 @@ Here is the caller graph for this function:</div>
 
 <p>Call <a class="el" href="classmoveit_1_1core_1_1RobotState.html#af1c8462c4ed2d0a427912d18663f4bfa">harmonizePosition()</a> for all joints / all joints in group / given joint. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00929">929</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00925">925</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -5314,7 +5314,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00935">935</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00931">931</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -5374,7 +5374,7 @@ Here is the caller graph for this function:</div>
 
 <p>Check if an attached body named <em>id</em> exists in this state. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01046">1046</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01042">1042</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -5486,7 +5486,7 @@ Here is the caller graph for this function:</div>
 
 <p>Given the velocities for the variables in this group (<em>qdot</em>) and an amount of time (<em>dt</em>), update the current state using the Euler forward method. If the constraint specified is satisfied, return true, otherwise return false. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01515">1515</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01511">1511</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -5531,7 +5531,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01020">1020</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01016">1016</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -5652,7 +5652,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01029">1029</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01025">1025</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -5673,7 +5673,7 @@ Here is the caller graph for this function:</div>
 
 <p>Invert velocity if present. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00564">564</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00560">560</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -5719,7 +5719,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00988">988</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00984">984</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -5741,7 +5741,7 @@ Here is the caller graph for this function:</div>
 
 <p>Check if a transformation matrix from the model frame (root of model) to frame <em>frame_id</em> is known. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01235">1235</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01231">1231</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -5781,7 +5781,7 @@ Here is the caller graph for this function:</div>
 
 <p>Copy operator. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00209">209</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00205">205</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -5801,7 +5801,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02218">2218</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02214">2214</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -5821,7 +5821,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02230">2230</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02226">2226</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -5841,7 +5841,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02159">2159</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02155">2155</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -5873,7 +5873,7 @@ Here is the caller graph for this function:</div>
 
 <p>Output to console the current state of the robot's joint limits. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02166">2166</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02162">2162</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -5912,7 +5912,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02272">2272</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02268">2268</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -5932,7 +5932,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02290">2290</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02286">2286</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -6000,7 +6000,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00906">906</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00902">902</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -6029,7 +6029,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00897">897</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00893">893</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -6136,7 +6136,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01041">1041</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01037">1037</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -6196,7 +6196,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01458">1458</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01454">1454</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -6256,7 +6256,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01466">1466</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01462">1462</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -6334,7 +6334,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01623">1623</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01619">1619</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -6404,7 +6404,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01574">1574</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01570">1570</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -6468,7 +6468,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01559">1559</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01555">1555</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -6615,7 +6615,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01642">1642</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01638">1638</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -6686,7 +6686,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01548">1548</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01544">1544</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -6750,7 +6750,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01534">1534</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01530">1530</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -6833,7 +6833,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01887">1887</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01883">1883</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -6874,7 +6874,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00573">573</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00569">569</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -6906,7 +6906,7 @@ Here is the call graph for this function:</div>
 
 <p>Given accelerations for the variables that make up a group, in the order found in the group (including values of mimic joints), set those as the new values that correspond to the group. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00687">687</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00683">683</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -6938,7 +6938,7 @@ Here is the call graph for this function:</div>
 
 <p>Given accelerations for the variables that make up a group, in the order found in the group (including values of mimic joints), set those as the new values that correspond to the group. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00700">700</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00696">696</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -7182,7 +7182,7 @@ Here is the caller graph for this function:</div>
 
 <p>Given positions for the variables of active joints that make up a group, in the order found in the group (excluding values of mimic joints), set those as the new values that correspond to the group. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00618">618</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00614">614</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -7214,7 +7214,7 @@ Here is the caller graph for this function:</div>
 
 <p>Given positions for the variables of active joints that make up a group, in the order found in the group (excluding values of mimic joints), set those as the new values that correspond to the group. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00606">606</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00602">602</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -7335,7 +7335,7 @@ Here is the caller graph for this function:</div>
 
 <p>Given positions for the variables that make up a group, in the order found in the group (including values of mimic joints), set those as the new values that correspond to the group. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00585">585</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00581">581</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -7367,7 +7367,7 @@ Here is the caller graph for this function:</div>
 
 <p>Given positions for the variables that make up a group, in the order found in the group (including values of mimic joints), set those as the new values that correspond to the group. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00598">598</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00594">594</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -7630,7 +7630,7 @@ Here is the call graph for this function:</div>
 
 <p>Given velocities for the variables that make up a group, in the order found in the group (including values of mimic joints), set those as the new values that correspond to the group. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00648">648</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00644">644</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -7662,7 +7662,7 @@ Here is the call graph for this function:</div>
 
 <p>Given velocities for the variables that make up a group, in the order found in the group (including values of mimic joints), set those as the new values that correspond to the group. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00661">661</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00657">657</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -8210,7 +8210,7 @@ Here is the call graph for this function:</div>
 <p>Set all joints to their default positions. The default position is 0, or if that is not within bounds then half way between min and max bound. <br  />
  </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00431">431</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00427">427</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -8276,7 +8276,7 @@ Here is the caller graph for this function:</div>
 
 <p>Set the joints in <em>group</em> to the position <em>name</em> defined in the SRDF. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00423">423</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00419">419</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -8354,7 +8354,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if no error </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01601">1601</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01597">1597</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -8394,7 +8394,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if no error </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01606">1606</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l01602">1602</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -8415,7 +8415,7 @@ Here is the caller graph for this function:</div>
 
 <p>Set all joints to random values. Values will be within default bounds. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00354">354</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00350">350</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -8446,7 +8446,7 @@ Here is the caller graph for this function:</div>
 
 <p>Set all joints in <em>group</em> to random values. Values will be within default bounds. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00363">363</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00359">359</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -8478,7 +8478,7 @@ Here is the caller graph for this function:</div>
 
 <p>Set all joints in <em>group</em> to random values using a specified random number generator. Values will be within default bounds. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00370">370</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00366">366</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -8516,7 +8516,7 @@ Here is the caller graph for this function:</div>
 
 <p>Set all joints in <em>group</em> to random values near the value in <em>seed</em>. <em>distances</em> <b>MUST</b> have the same size as <code>group.getActiveJointModels()</code>. Each value in <em>distances</em> is the maximum amount the corresponding active joint in <em>group</em> will vary from the corresponding value in <em>seed</em>. \distance represents meters for prismatic/postitional joints and radians for revolute/orientation joints. Resulting values are clamped within default bounds. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00378">378</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00374">374</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -8560,7 +8560,7 @@ Here is the caller graph for this function:</div>
 
 <p>Set all joints in <em>group</em> to random values near the value in <em>seed</em>, using a specified random number generator. <em>distances</em> <b>MUST</b> have the same size as <code>group.getActiveJointModels()</code>. Each value in <em>distances</em> is the maximum amount the corresponding active joint in <em>group</em> will vary from the corresponding value in <em>seed</em>. \distance represents meters for prismatic/postitional joints and radians for revolute/orientation joints. Resulting values are clamped within default bounds. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00387">387</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00383">383</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -8598,7 +8598,7 @@ Here is the caller graph for this function:</div>
 
 <p>Set all joints in <em>group</em> to random values near the value in <em>seed</em>. <em>distance</em> is the maximum amount each joint value will vary from the corresponding value in <em>seed</em>. \distance represents meters for prismatic/postitional joints and radians for revolute/orientation joints. Resulting values are clamped within default bounds. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00402">402</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00398">398</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -8651,7 +8651,7 @@ Here is the caller graph for this function:</div>
 
 <p>Set all joints in <em>group</em> to random values near the value in <em>seed</em>, using a specified random number generator. <em>distance</em> is the maximum amount each joint value will vary from the corresponding value in <em>seed</em>. \distance represents meters for prismatic/postitional joints and radians for revolute/orientation joints. Resulting values are clamped within default bounds. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00410">410</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00406">406</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -8801,7 +8801,7 @@ Here is the call graph for this function:</div>
 
 <p>Set the accelerations of a set of variables. If unknown variable names are specified, an exception is thrown. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00518">518</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00514">514</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -8833,7 +8833,7 @@ Here is the call graph for this function:</div>
 
 <p>Set the accelerations of a set of variables. If unknown variable names are specified, an exception is thrown. Additionally, <em>missing_variables</em> is filled with the names of the variables that are not set. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00525">525</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00521">521</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -8895,7 +8895,7 @@ Here is the call graph for this function:</div>
 
 <p>Set the accelerations of a set of variables. If unknown variable names are specified, an exception is thrown. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00532">532</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00528">528</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -8956,7 +8956,7 @@ Here is the caller graph for this function:</div>
 
 <p>Set the effort of a set of variables. If unknown variable names are specified, an exception is thrown. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00541">541</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00537">537</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -8988,7 +8988,7 @@ Here is the caller graph for this function:</div>
 
 <p>Set the effort of a set of variables. If unknown variable names are specified, an exception is thrown. Additionally, <em>missing_variables</em> is filled with the names of the variables that are not set. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00548">548</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00544">544</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -9110,7 +9110,7 @@ Here is the call graph for this function:</div>
 
 <p>Set the effort of a set of variables. If unknown variable names are specified, an exception is thrown. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00555">555</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00551">551</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -9275,7 +9275,7 @@ Here is the call graph for this function:</div>
 
 <p>It is assumed <em>positions</em> is an array containing the new positions for all variables in this state. Those values are copied into the state. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00440">440</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00436">436</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -9310,7 +9310,7 @@ Here is the caller graph for this function:</div>
 
 <p>Set the positions of a set of variables. If unknown variable names are specified, an exception is thrown. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00452">452</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00448">448</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -9342,7 +9342,7 @@ Here is the caller graph for this function:</div>
 
 <p>Set the positions of a set of variables. If unknown variable names are specified, an exception is thrown. Additionally, <em>missing_variables</em> is filled with the names of the variables that are not set. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00475">475</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00471">471</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -9404,7 +9404,7 @@ Here is the caller graph for this function:</div>
 
 <p>Set the positions of a set of variables. If unknown variable names are specified, an exception is thrown. Additionally, <em>missing_variables</em> is filled with the names of the variables that are not set. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00482">482</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00478">478</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -9495,7 +9495,7 @@ Here is the caller graph for this function:</div>
 
 <p>Set the velocities of a set of variables. If unknown variable names are specified, an exception is thrown. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00495">495</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00491">491</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -9527,7 +9527,7 @@ Here is the caller graph for this function:</div>
 
 <p>Set the velocities of a set of variables. If unknown variable names are specified, an exception is thrown. Additionally, <em>missing_variables</em> is filled with the names of the variables that are not set. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00502">502</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00498">498</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -9589,7 +9589,7 @@ Here is the caller graph for this function:</div>
 
 <p>Set the velocities of a set of variables. If unknown variable names are specified, an exception is thrown. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00509">509</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00505">505</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -9691,7 +9691,7 @@ Here is the caller graph for this function:</div>
 
 <p>Update all transforms. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00726">726</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00722">722</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -9739,7 +9739,7 @@ Here is the caller graph for this function:</div>
 
 <p>Update the transforms for the collision bodies. This call is needed before calling collision checking. If updating link transforms or joint transforms is needed, the corresponding updates are also triggered. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00739">739</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00735">735</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -9773,16 +9773,15 @@ Here is the caller graph for this function:</div>
 
 <p>Update the reference frame transforms for links. This call is needed before using the transforms of links for coordinate transforms. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00767">767</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00763">763</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classmoveit_1_1core_1_1RobotState_a8778df1884c3caaf47558c939832cd9e_icgraph.png" border="0" usemap="#classmoveit_1_1core_1_1RobotState_a8778df1884c3caaf47558c939832cd9e_icgraph" alt=""/></div>
 <map name="classmoveit_1_1core_1_1RobotState_a8778df1884c3caaf47558c939832cd9e_icgraph" id="classmoveit_1_1core_1_1RobotState_a8778df1884c3caaf47558c939832cd9e_icgraph">
-<area shape="rect" title="Update the reference frame transforms for links. This call is needed before using the transforms of l..." alt="" coords="252,78,436,119"/>
+<area shape="rect" title="Update the reference frame transforms for links. This call is needed before using the transforms of l..." alt="" coords="252,46,436,87"/>
 <area shape="rect" href="classcollision__detection_1_1CollisionEnvDistanceField.html#a6af9afdc57bc54e77b11c528fbe30d37" title=" " alt="" coords="5,5,204,61"/>
 <area shape="rect" href="test__constraint__samplers_8cpp.html#a85db5a190e27663a9bf3727c8f667013" title=" " alt="" coords="70,85,139,112"/>
-<area shape="rect" href="classconstraint__samplers_1_1UnionConstraintSampler.html#af8cf3828dd1afcb245866abe0051b4ce" title="Constructor, which will re&#45;order its internal list of samplers on construction." alt="" coords="10,136,199,192"/>
 </map>
 </div>
 
@@ -9822,7 +9821,7 @@ Here is the caller graph for this function:</div>
 
 <p>Update the state after setting a particular link to the input global transform pose. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00820">820</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00816">816</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -9910,7 +9909,7 @@ Here is the caller graph for this function:</div>
 
 <p>Set all accelerations to 0.0. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00320">320</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00316">316</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -9940,7 +9939,7 @@ Here is the caller graph for this function:</div>
 
 <p>Set all effort values to 0.0. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00326">326</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00322">322</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -9961,7 +9960,7 @@ Here is the caller graph for this function:</div>
 
 <p>Set all velocities to 0.0. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00314">314</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l00310">310</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">

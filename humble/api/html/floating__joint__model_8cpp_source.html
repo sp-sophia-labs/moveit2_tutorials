@@ -108,12 +108,12 @@ $(function() {
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">/* Author: Ioan Sucan */</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="floating__joint__model_8h.html">moveit/robot_model/floating_joint_model.h</a>&gt;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &lt;geometric_shapes/check_isometry.h&gt;</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;boost/math/constants/constants.hpp&gt;</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;limits&gt;</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &quot;rclcpp/rclcpp.hpp&quot;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;limits&gt;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="floating__joint__model_8h.html">moveit/robot_model/floating_joint_model.h</a>&gt;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;rclcpp/logger.hpp&gt;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;rclcpp/logging.hpp&gt;</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacemoveit.html">moveit</a></div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
@@ -176,7 +176,7 @@ $(function() {
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordtype">double</span> dx = other_bounds[0].max_position_ - other_bounds[0].min_position_;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keywordtype">double</span> dy = other_bounds[1].max_position_ - other_bounds[1].min_position_;</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordtype">double</span> dz = other_bounds[2].max_position_ - other_bounds[2].min_position_;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordflow">return</span> sqrt(dx * dx + dy * dy + dz * dz) + boost::math::constants::pi&lt;double&gt;() * 0.5 * angular_distance_weight_;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordflow">return</span> sqrt(dx * dx + dy * dy + dz * dz) + M_PI * 0.5 * angular_distance_weight_;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keywordtype">double</span> <a class="code" href="classmoveit_1_1core_1_1FloatingJointModel.html#a78b75b45d46d33dc764e3f5b3e6bf699">FloatingJointModel::distance</a>(<span class="keyword">const</span> <span class="keywordtype">double</span>* values1, <span class="keyword">const</span> <span class="keywordtype">double</span>* values2)<span class="keyword"> const</span></div>
@@ -384,7 +384,7 @@ $(function() {
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                                std::min(bounds[2].max_position_, near[2] + <a class="code" href="classmoveit_1_1core_1_1FloatingJointModel.html#a78b75b45d46d33dc764e3f5b3e6bf699">distance</a>));</div>
 <div class="line"><a name="l00312"></a><span class="lineno"><a class="line" href="classmoveit_1_1core_1_1FloatingJointModel.html#a7a7b14007d23f148edf954164e1c5243">  312</a></span>&#160; </div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  <span class="keywordtype">double</span> da = angular_distance_weight_ * <a class="code" href="classmoveit_1_1core_1_1FloatingJointModel.html#a78b75b45d46d33dc764e3f5b3e6bf699">distance</a>;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  <span class="keywordflow">if</span> (da &gt;= .25 * boost::math::constants::pi&lt;double&gt;())</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  <span class="keywordflow">if</span> (da &gt;= .25 * M_PI)</div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  {</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="keywordtype">double</span> q[4];</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    rng.quaternion(q);</div>

@@ -1,0 +1,4 @@
+<map id="moveit_setup::controllers::ControlXacroConfig::hasChanges" name="moveit_setup::controllers::ControlXacroConfig::hasChanges">
+<area shape="rect" id="node1" title="Returns if the xacro and its properties have changed, resulting in the whole urdf needing regeneratio..." alt="" coords="285,13,528,54"/>
+<area shape="rect" id="node2" href="$classmoveit__setup_1_1controllers_1_1ControlXacroConfig.html#a36cda2d1896dd5765b6c0039c92c0d45" title=" " alt="" coords="5,5,237,61"/>
+</map>

@@ -167,10 +167,10 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ac5d0e19f0a375407bce43f2a61dcf15d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit_1_1core.html#ac5d0e19f0a375407bce43f2a61dcf15d">JointModelMapConst</a> = std::map&lt; std::string, const <a class="el" href="classmoveit_1_1core_1_1JointModel.html">JointModel</a> * &gt;</td></tr>
 <tr class="memdesc:ac5d0e19f0a375407bce43f2a61dcf15d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map of names to const instances for <a class="el" href="classmoveit_1_1core_1_1JointModel.html" title="A joint from the robot. Models the transform that this joint applies in the kinematic chain....">JointModel</a>.  <a href="namespacemoveit_1_1core.html#ac5d0e19f0a375407bce43f2a61dcf15d">More...</a><br /></td></tr>
 <tr class="separator:ac5d0e19f0a375407bce43f2a61dcf15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee2fefede757f1b0b2e59fc9dce12fa7"><td class="memItemLeft" align="right" valign="top">typedef boost::function&lt; kinematics::KinematicsBasePtr(const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit_1_1core.html#aee2fefede757f1b0b2e59fc9dce12fa7">SolverAllocatorFn</a></td></tr>
-<tr class="memdesc:aee2fefede757f1b0b2e59fc9dce12fa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function type that allocates a kinematics solver for a particular group.  <a href="namespacemoveit_1_1core.html#aee2fefede757f1b0b2e59fc9dce12fa7">More...</a><br /></td></tr>
-<tr class="separator:aee2fefede757f1b0b2e59fc9dce12fa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e78b9850215925e7953edbf24ea706d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit_1_1core.html#a0e78b9850215925e7953edbf24ea706d">SolverAllocatorMapFn</a> = std::map&lt; const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *, <a class="el" href="namespacemoveit_1_1core.html#aee2fefede757f1b0b2e59fc9dce12fa7">SolverAllocatorFn</a> &gt;</td></tr>
+<tr class="memitem:acc5cec0d5300a20962579453220e8f71"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; kinematics::KinematicsBasePtr(const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit_1_1core.html#acc5cec0d5300a20962579453220e8f71">SolverAllocatorFn</a></td></tr>
+<tr class="memdesc:acc5cec0d5300a20962579453220e8f71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function type that allocates a kinematics solver for a particular group.  <a href="namespacemoveit_1_1core.html#acc5cec0d5300a20962579453220e8f71">More...</a><br /></td></tr>
+<tr class="separator:acc5cec0d5300a20962579453220e8f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e78b9850215925e7953edbf24ea706d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit_1_1core.html#a0e78b9850215925e7953edbf24ea706d">SolverAllocatorMapFn</a> = std::map&lt; const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *, <a class="el" href="namespacemoveit_1_1core.html#acc5cec0d5300a20962579453220e8f71">SolverAllocatorFn</a> &gt;</td></tr>
 <tr class="memdesc:a0e78b9850215925e7953edbf24ea706d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map from group instances to allocator functions &amp; bijections.  <a href="namespacemoveit_1_1core.html#a0e78b9850215925e7953edbf24ea706d">More...</a><br /></td></tr>
 <tr class="separator:a0e78b9850215925e7953edbf24ea706d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2cb8d91e87ffc1bdf09360651e5a4f7"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit_1_1core.html#ae2cb8d91e87ffc1bdf09360651e5a4f7">JointModelGroupMap</a> = std::map&lt; std::string, <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> * &gt;</td></tr>
@@ -190,11 +190,11 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a5a781fad6ceb427d60e9c664831e32c8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit_1_1core.html#a5a781fad6ceb427d60e9c664831e32c8">LinkTransformMap</a> = std::map&lt; const <a class="el" href="classmoveit_1_1core_1_1LinkModel.html">LinkModel</a> *, Eigen::Isometry3d, std::less&lt; const <a class="el" href="classmoveit_1_1core_1_1LinkModel.html">LinkModel</a> * &gt;, Eigen::aligned_allocator&lt; std::pair&lt; const <a class="el" href="classmoveit_1_1core_1_1LinkModel.html">LinkModel</a> *const, Eigen::Isometry3d &gt; &gt; &gt;</td></tr>
 <tr class="memdesc:a5a781fad6ceb427d60e9c664831e32c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map from link model instances to Eigen transforms.  <a href="namespacemoveit_1_1core.html#a5a781fad6ceb427d60e9c664831e32c8">More...</a><br /></td></tr>
 <tr class="separator:a5a781fad6ceb427d60e9c664831e32c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e5071bd0525b17b00f373de2cad9e11"><td class="memItemLeft" align="right" valign="top">typedef boost::function&lt; void(<a class="el" href="classmoveit_1_1core_1_1AttachedBody.html">AttachedBody</a> *body, bool attached)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit_1_1core.html#a7e5071bd0525b17b00f373de2cad9e11">AttachedBodyCallback</a></td></tr>
-<tr class="separator:a7e5071bd0525b17b00f373de2cad9e11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e30b6ca7b8fafe9e2dd276d60e00b2c"><td class="memItemLeft" align="right" valign="top">typedef boost::function&lt; bool(<a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> *robot_state, const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *joint_group, const double *joint_group_variable_values)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit_1_1core.html#a7e30b6ca7b8fafe9e2dd276d60e00b2c">GroupStateValidityCallbackFn</a></td></tr>
-<tr class="memdesc:a7e30b6ca7b8fafe9e2dd276d60e00b2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signature for functions that can verify that if the group <em>joint_group</em> in <em><a class="el" href="namespacemoveit_1_1core_1_1robot__state.html">robot_state</a></em> is set to <em>joint_group_variable_values</em> the state is valid or not. Returns true if the state is valid. This call is allowed to modify <em><a class="el" href="namespacemoveit_1_1core_1_1robot__state.html">robot_state</a></em> (e.g., set <em>joint_group_variable_values</em>)  <a href="namespacemoveit_1_1core.html#a7e30b6ca7b8fafe9e2dd276d60e00b2c">More...</a><br /></td></tr>
-<tr class="separator:a7e30b6ca7b8fafe9e2dd276d60e00b2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4cc2032fd6adab166279a7eb1ab5154"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; void(<a class="el" href="classmoveit_1_1core_1_1AttachedBody.html">AttachedBody</a> *body, bool attached)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit_1_1core.html#ae4cc2032fd6adab166279a7eb1ab5154">AttachedBodyCallback</a></td></tr>
+<tr class="separator:ae4cc2032fd6adab166279a7eb1ab5154"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dd89a7f5270847026534c333452bb4d"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; bool(<a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> *robot_state, const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *joint_group, const double *joint_group_variable_values)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a></td></tr>
+<tr class="memdesc:a0dd89a7f5270847026534c333452bb4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signature for functions that can verify that if the group <em>joint_group</em> in <em><a class="el" href="namespacemoveit_1_1core_1_1robot__state.html">robot_state</a></em> is set to <em>joint_group_variable_values</em> the state is valid or not. Returns true if the state is valid. This call is allowed to modify <em><a class="el" href="namespacemoveit_1_1core_1_1robot__state.html">robot_state</a></em> (e.g., set <em>joint_group_variable_values</em>)  <a href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">More...</a><br /></td></tr>
+<tr class="separator:a0dd89a7f5270847026534c333452bb4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaed75968b346de18defad60f19fc2545"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit_1_1core.html#aaed75968b346de18defad60f19fc2545">FixedTransformsMap</a> = std::map&lt; std::string, Eigen::Isometry3d, std::less&lt; std::string &gt;, Eigen::aligned_allocator&lt; std::pair&lt; const std::string, Eigen::Isometry3d &gt; &gt; &gt;</td></tr>
 <tr class="memdesc:aaed75968b346de18defad60f19fc2545"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map frame names to the transformation matrix that can transform objects from the frame name to the planning frame.  <a href="namespacemoveit_1_1core.html#aaed75968b346de18defad60f19fc2545">More...</a><br /></td></tr>
 <tr class="separator:aaed75968b346de18defad60f19fc2545"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -297,14 +297,14 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Core components of MoveIt. </p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
-<a id="a7e5071bd0525b17b00f373de2cad9e11"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e5071bd0525b17b00f373de2cad9e11">&#9670;&nbsp;</a></span>AttachedBodyCallback</h2>
+<a id="ae4cc2032fd6adab166279a7eb1ab5154"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4cc2032fd6adab166279a7eb1ab5154">&#9670;&nbsp;</a></span>AttachedBodyCallback</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef boost::function&lt;void(<a class="el" href="classmoveit_1_1core_1_1AttachedBody.html">AttachedBody</a>* body, bool attached)&gt; <a class="el" href="namespacemoveit_1_1core.html#a7e5071bd0525b17b00f373de2cad9e11">moveit::core::AttachedBodyCallback</a></td>
+          <td class="memname">typedef std::function&lt;void(<a class="el" href="classmoveit_1_1core_1_1AttachedBody.html">AttachedBody</a>* body, bool attached)&gt; <a class="el" href="namespacemoveit_1_1core.html#ae4cc2032fd6adab166279a7eb1ab5154">moveit::core::AttachedBodyCallback</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -327,18 +327,18 @@ Functions</h2></td></tr>
 
 <p>Map frame names to the transformation matrix that can transform objects from the frame name to the planning frame. </p>
 
-<p class="definition">Definition at line <a class="el" href="transforms_8h_source.html#l00118">118</a> of file <a class="el" href="transforms_8h_source.html">transforms.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="transforms_8h_source.html#l00117">117</a> of file <a class="el" href="transforms_8h_source.html">transforms.h</a>.</p>
 
 </div>
 </div>
-<a id="a7e30b6ca7b8fafe9e2dd276d60e00b2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e30b6ca7b8fafe9e2dd276d60e00b2c">&#9670;&nbsp;</a></span>GroupStateValidityCallbackFn</h2>
+<a id="a0dd89a7f5270847026534c333452bb4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dd89a7f5270847026534c333452bb4d">&#9670;&nbsp;</a></span>GroupStateValidityCallbackFn</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef boost::function&lt;bool(<a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a>* robot_state, const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a>* joint_group, const double* joint_group_variable_values)&gt; <a class="el" href="namespacemoveit_1_1core.html#a7e30b6ca7b8fafe9e2dd276d60e00b2c">moveit::core::GroupStateValidityCallbackFn</a></td>
+          <td class="memname">typedef std::function&lt;bool(<a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a>* robot_state, const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a>* joint_group, const double* joint_group_variable_values)&gt; <a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">moveit::core::GroupStateValidityCallbackFn</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -361,7 +361,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00132">132</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00133">133</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -379,7 +379,7 @@ Functions</h2></td></tr>
 
 <p>Map of names to instances for <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00127">127</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00128">128</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -397,7 +397,7 @@ Functions</h2></td></tr>
 
 <p>Map of names to const instances for <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00130">130</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00131">131</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -491,21 +491,21 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aee2fefede757f1b0b2e59fc9dce12fa7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee2fefede757f1b0b2e59fc9dce12fa7">&#9670;&nbsp;</a></span>SolverAllocatorFn</h2>
+<a id="acc5cec0d5300a20962579453220e8f71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc5cec0d5300a20962579453220e8f71">&#9670;&nbsp;</a></span>SolverAllocatorFn</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef boost::function&lt;kinematics::KinematicsBasePtr(const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a>*)&gt; <a class="el" href="namespacemoveit_1_1core.html#aee2fefede757f1b0b2e59fc9dce12fa7">moveit::core::SolverAllocatorFn</a></td>
+          <td class="memname">typedef std::function&lt;kinematics::KinematicsBasePtr(const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a>*)&gt; <a class="el" href="namespacemoveit_1_1core.html#acc5cec0d5300a20962579453220e8f71">moveit::core::SolverAllocatorFn</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Function type that allocates a kinematics solver for a particular group. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00118">118</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00119">119</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -516,14 +516,14 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="namespacemoveit_1_1core.html#a0e78b9850215925e7953edbf24ea706d">moveit::core::SolverAllocatorMapFn</a> = typedef std::map&lt;const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a>*, <a class="el" href="namespacemoveit_1_1core.html#aee2fefede757f1b0b2e59fc9dce12fa7">SolverAllocatorFn</a>&gt;</td>
+          <td class="memname">using <a class="el" href="namespacemoveit_1_1core.html#a0e78b9850215925e7953edbf24ea706d">moveit::core::SolverAllocatorMapFn</a> = typedef std::map&lt;const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a>*, <a class="el" href="namespacemoveit_1_1core.html#acc5cec0d5300a20962579453220e8f71">SolverAllocatorFn</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Map from group instances to allocator functions &amp; bijections. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00124">124</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00125">125</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -599,7 +599,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="conversions_8cpp_source.html#l00498">498</a> of file <a class="el" href="conversions_8cpp_source.html">conversions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="conversions_8cpp_source.html#l00495">495</a> of file <a class="el" href="conversions_8cpp_source.html">conversions.cpp</a>.</p>
 
 </div>
 </div>
@@ -680,7 +680,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="planar__joint__model_8cpp_source.html#l00213">213</a> of file <a class="el" href="planar__joint__model_8cpp_source.html">planar_joint_model.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planar__joint__model_8cpp_source.html#l00212">212</a> of file <a class="el" href="planar__joint__model_8cpp_source.html">planar_joint_model.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -876,7 +876,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if successful, false if failed for any reason </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="conversions_8cpp_source.html#l00460">460</a> of file <a class="el" href="conversions_8cpp_source.html">conversions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="conversions_8cpp_source.html#l00457">457</a> of file <a class="el" href="conversions_8cpp_source.html">conversions.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -937,7 +937,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if successful, false if failed for any reason </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="conversions_8cpp_source.html#l00527">527</a> of file <a class="el" href="conversions_8cpp_source.html">conversions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="conversions_8cpp_source.html#l00524">524</a> of file <a class="el" href="conversions_8cpp_source.html">conversions.cpp</a>.</p>
 
 </div>
 </div>
@@ -966,7 +966,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a ModelInterface constructed from robot_name's URDF. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__model__test__utils_8cpp_source.html#l00125">125</a> of file <a class="el" href="robot__model__test__utils_8cpp_source.html">robot_model_test_utils.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__model__test__utils_8cpp_source.html#l00124">124</a> of file <a class="el" href="robot__model__test__utils_8cpp_source.html">robot_model_test_utils.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1006,7 +1006,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>an SRDF Model constructed from robot_name's URDF and SRDF. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__model__test__utils_8cpp_source.html#l00147">147</a> of file <a class="el" href="robot__model__test__utils_8cpp_source.html">robot_model_test_utils.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__model__test__utils_8cpp_source.html#l00146">146</a> of file <a class="el" href="robot__model__test__utils_8cpp_source.html">robot_model_test_utils.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1044,7 +1044,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="classmoveit_1_1core_1_1RobotModel.html" title="Definition of a kinematic model. This class is not thread safe, however multiple instances can be cre...">RobotModel</a> constructed from robot_name's URDF and SRDF. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="robot__model__test__utils_8cpp_source.html#l00117">117</a> of file <a class="el" href="robot__model__test__utils_8cpp_source.html">robot_model_test_utils.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__model__test__utils_8cpp_source.html#l00116">116</a> of file <a class="el" href="robot__model__test__utils_8cpp_source.html">robot_model_test_utils.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1053,8 +1053,8 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title="Loads a robot from moveit_resources." alt="" coords="283,303,469,345"/>
 <area shape="rect" href="classTestAABB.html#ab6cbbcf5533c1a39dc6929c675245d14" title=" " alt="" coords="40,5,200,32"/>
 <area shape="rect" href="benchmark__ik_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="93,56,147,83"/>
-<area shape="rect" href="classDistanceFieldCollisionDetectionTester.html#a08031f36b421726bbe3e1ec2c0093703" title=" " alt="" coords="5,107,235,149"/>
-<area shape="rect" href="classLoadPlanningModelsPr2.html#a4584437ae8ba1bf07cde569b1643a0f0" title=" " alt="" coords="31,173,209,214"/>
+<area shape="rect" href="classLoadPlanningModelsPr2.html#a4584437ae8ba1bf07cde569b1643a0f0" title=" " alt="" coords="31,107,209,149"/>
+<area shape="rect" href="classDistanceFieldCollisionDetectionTester.html#a08031f36b421726bbe3e1ec2c0093703" title=" " alt="" coords="5,173,235,214"/>
 <area shape="rect" href="classCollisionDetectionEnvTest.html#a2d712c3d01e16ea76d3c842c1c6454dc" title=" " alt="" coords="25,238,215,279"/>
 <area shape="rect" href="classCollisionDetectorTests.html#a0c074ae1ca41d80d2ba267ca293f20eb" title=" " alt="" coords="37,303,203,345"/>
 <area shape="rect" href="classCollisionDetectorPandaTest.html#ac80f4ae223ee276d35b520c06f20b23f" title=" " alt="" coords="21,369,219,410"/>
@@ -1167,7 +1167,7 @@ Here is the caller graph for this function:</div>
 
 <p>Operator overload for printing variable bounds to a stream. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02363">2363</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02370">2370</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>
@@ -1246,7 +1246,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if successful, false if failed for any reason </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="conversions_8cpp_source.html#l00467">467</a> of file <a class="el" href="conversions_8cpp_source.html">conversions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="conversions_8cpp_source.html#l00464">464</a> of file <a class="el" href="conversions_8cpp_source.html">conversions.cpp</a>.</p>
 
 </div>
 </div>
@@ -1300,7 +1300,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if successful, false if failed for any reason </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="conversions_8cpp_source.html#l00475">475</a> of file <a class="el" href="conversions_8cpp_source.html">conversions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="conversions_8cpp_source.html#l00472">472</a> of file <a class="el" href="conversions_8cpp_source.html">conversions.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1354,7 +1354,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="conversions_8cpp_source.html#l00507">507</a> of file <a class="el" href="conversions_8cpp_source.html">conversions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="conversions_8cpp_source.html#l00504">504</a> of file <a class="el" href="conversions_8cpp_source.html">conversions.cpp</a>.</p>
 
 </div>
 </div>
@@ -1400,13 +1400,13 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="conversions_8cpp_source.html#l00483">483</a> of file <a class="el" href="conversions_8cpp_source.html">conversions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="conversions_8cpp_source.html#l00480">480</a> of file <a class="el" href="conversions_8cpp_source.html">conversions.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespacemoveit_1_1core_a0aafbf7242f36d6efd7bd73ecee400e8_icgraph.png" border="0" usemap="#namespacemoveit_1_1core_a0aafbf7242f36d6efd7bd73ecee400e8_icgraph" alt=""/></div>
 <map name="namespacemoveit_1_1core_a0aafbf7242f36d6efd7bd73ecee400e8_icgraph" id="namespacemoveit_1_1core_a0aafbf7242f36d6efd7bd73ecee400e8_icgraph">
-<area shape="rect" title="Convert a MoveIt robot state to a robot state message." alt="" coords="591,603,771,645"/>
+<area shape="rect" title="Convert a MoveIt robot state to a robot state message." alt="" coords="591,566,771,607"/>
 <area shape="rect" href="generate__state__database_8cpp.html#a82b7d814b7d1e65af86a269fc31283c3" title=" " alt="" coords="364,5,463,32"/>
 <area shape="rect" href="classmove__group_1_1MoveGroupCapability.html#a5bc0d92b709dfd7580bd62f469b1fcab" title=" " alt="" coords="287,57,539,98"/>
 <area shape="rect" href="namespacetestutils.html#a3604c25908da745d6e201a35db05a990" title="create a dummy motion plan request with zero start state No goal constraint is given." alt="" coords="299,304,528,331"/>
@@ -1423,10 +1423,9 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="classPlanningContextTest.html#a007e70029a3f986a0596ff0a7feac14a" title="Generate a valid fully defined request." alt="" coords="336,858,491,899"/>
 <area shape="rect" href="classmove__group_1_1MoveGroupKinematicsService.html#a5f7431ad977ffa26914345d0769d6ce8" title=" " alt="" coords="284,923,543,965"/>
 <area shape="rect" href="import__from__text_8cpp.html#aaf196fa51e069cfb8c1d3109d6a5c383" title=" " alt="" coords="369,989,458,1016"/>
-<area shape="rect" href="classpick__place_1_1PickPlace.html#a3930343d1b25a8a5bd68ee524f521590" title=" " alt="" coords="333,1041,494,1082"/>
-<area shape="rect" href="classpilz__industrial__motion__planner_1_1PlanningContextBase.html#aeca472a81bd00dc9317506af6af2029f" title=" " alt="" coords="301,1106,526,1177"/>
-<area shape="rect" href="classTrajectoryGeneratorCommonTest.html#a80e3885bdb7b0ce80bc85c3a75e0e28b" title=" " alt="" coords="308,1201,519,1242"/>
-<area shape="rect" href="test__kinematic__complex_8cpp.html#a21a56d609cf50d6d770a29e8edc10a43" title=" " alt="" coords="379,1267,448,1293"/>
+<area shape="rect" href="classpilz__industrial__motion__planner_1_1PlanningContextBase.html#aeca472a81bd00dc9317506af6af2029f" title=" " alt="" coords="301,1041,526,1111"/>
+<area shape="rect" href="classTrajectoryGeneratorCommonTest.html#a80e3885bdb7b0ce80bc85c3a75e0e28b" title=" " alt="" coords="308,1135,519,1177"/>
+<area shape="rect" href="test__kinematic__complex_8cpp.html#a21a56d609cf50d6d770a29e8edc10a43" title=" " alt="" coords="379,1201,448,1228"/>
 <area shape="rect" href="unittest__trajectory__generator__ptp_8cpp.html#afc270e6306260d6dfbe4f2eba872e929" title="test the ptp trajectory generator of Cartesian space goal" alt="" coords="86,456,155,483"/>
 <area shape="rect" href="pymoveit__core_8cpp.html#aae5c18014d007aef7676d42ced1ba2b0" title=" " alt="" coords="45,123,196,149"/>
 <area shape="rect" href="classmoveit_1_1planning__interface_1_1MoveGroupInterface.html#a4530a0e30683a0d1ae47de1424a5a992" title="Specify that no path constraints are to be used. This removes any path constraints set in previous ca..." alt="" coords="5,224,236,280"/>
@@ -1488,7 +1487,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="conversions_8cpp_source.html#l00552">552</a> of file <a class="el" href="conversions_8cpp_source.html">conversions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="conversions_8cpp_source.html#l00549">549</a> of file <a class="el" href="conversions_8cpp_source.html">conversions.cpp</a>.</p>
 
 </div>
 </div>
@@ -1548,7 +1547,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="conversions_8cpp_source.html#l00580">580</a> of file <a class="el" href="conversions_8cpp_source.html">conversions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="conversions_8cpp_source.html#l00577">577</a> of file <a class="el" href="conversions_8cpp_source.html">conversions.cpp</a>.</p>
 
 </div>
 </div>
@@ -1595,7 +1594,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true on success </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="conversions_8cpp_source.html#l00617">617</a> of file <a class="el" href="conversions_8cpp_source.html">conversions.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="conversions_8cpp_source.html#l00614">614</a> of file <a class="el" href="conversions_8cpp_source.html">conversions.cpp</a>.</p>
 
 </div>
 </div>

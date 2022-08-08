@@ -109,9 +109,8 @@ config/
     joint_limits.yaml -&gt; Overriding position/velocity/acceleration limits from the URDF file
     moveit_cpp.yaml -&gt; MoveItCpp related parameters
     *_planning.yaml -&gt; planning pipelines parameters
-    cartesian_limits.yaml -&gt; Pilz planner parameters
-    # TODO(JafarAbdi): Check to see if this is a good default value
-    robot_name_controllers.yaml -&gt; trajectory execution manager's parameters
+    pilz_cartesian_limits.yaml -&gt; Pilz planner parameters
+    moveit_controllers.yaml -&gt; trajectory execution manager's parameters
     ...
 
 Example:
@@ -124,10 +123,11 @@ moveit_configs.robot_description_kinematics
 moveit_configs.planning_pipelines
 moveit_configs.trajectory_execution
 moveit_configs.planning_scene_monitor
+moveit_configs.sensors_3d
 moveit_configs.move_group_capabilities
 moveit_configs.joint_limits
 moveit_configs.moveit_cpp
-moveit_configs.cartesian_limits
+moveit_configs.pilz_cartesian_limits
 # Or to get all the parameters as a dictionary
 moveit_configs.to_dict()
 

@@ -87,9 +87,9 @@ Public Types</h2></td></tr>
 <tr class="memitem:ac974b47add6d6c1285242c2dfbe671a3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcached__ik__kinematics__plugin_1_1GreedyKCenters.html#ac974b47add6d6c1285242c2dfbe671a3">DistanceFunction</a> = std::function&lt; double(const _T &amp;, const _T &amp;)&gt;</td></tr>
 <tr class="memdesc:ac974b47add6d6c1285242c2dfbe671a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The definition of a distance function.  <a href="classcached__ik__kinematics__plugin_1_1GreedyKCenters.html#ac974b47add6d6c1285242c2dfbe671a3">More...</a><br /></td></tr>
 <tr class="separator:ac974b47add6d6c1285242c2dfbe671a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3ed98eaadd2a0b4deb1cac34b1d2cd4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcached__ik__kinematics__plugin_1_1GreedyKCenters.html#ae3ed98eaadd2a0b4deb1cac34b1d2cd4">Matrix</a> = boost::numeric::ublas::matrix&lt; double &gt;</td></tr>
-<tr class="memdesc:ae3ed98eaadd2a0b4deb1cac34b1d2cd4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classA.html">A</a> matrix type for storing distances between points and centers.  <a href="classcached__ik__kinematics__plugin_1_1GreedyKCenters.html#ae3ed98eaadd2a0b4deb1cac34b1d2cd4">More...</a><br /></td></tr>
-<tr class="separator:ae3ed98eaadd2a0b4deb1cac34b1d2cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa28ea6e77dea0e1b94c8d7953aed4504"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcached__ik__kinematics__plugin_1_1GreedyKCenters.html#aa28ea6e77dea0e1b94c8d7953aed4504">Matrix</a> = Eigen::MatrixXd</td></tr>
+<tr class="memdesc:aa28ea6e77dea0e1b94c8d7953aed4504"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classA.html">A</a> matrix type for storing distances between points and centers.  <a href="classcached__ik__kinematics__plugin_1_1GreedyKCenters.html#aa28ea6e77dea0e1b94c8d7953aed4504">More...</a><br /></td></tr>
+<tr class="separator:aa28ea6e77dea0e1b94c8d7953aed4504"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -103,7 +103,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a20d8d20a07afb9ffb1e240a9836fa1bb"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classcached__ik__kinematics__plugin_1_1GreedyKCenters.html#ac974b47add6d6c1285242c2dfbe671a3">DistanceFunction</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcached__ik__kinematics__plugin_1_1GreedyKCenters.html#a20d8d20a07afb9ffb1e240a9836fa1bb">getDistanceFunction</a> () const</td></tr>
 <tr class="memdesc:a20d8d20a07afb9ffb1e240a9836fa1bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the distance function used.  <a href="classcached__ik__kinematics__plugin_1_1GreedyKCenters.html#a20d8d20a07afb9ffb1e240a9836fa1bb">More...</a><br /></td></tr>
 <tr class="separator:a20d8d20a07afb9ffb1e240a9836fa1bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a412aefdb18ea8fac3cd9b45f05cc9dad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcached__ik__kinematics__plugin_1_1GreedyKCenters.html#a412aefdb18ea8fac3cd9b45f05cc9dad">kcenters</a> (const std::vector&lt; _T &gt; &amp;data, unsigned int k, std::vector&lt; unsigned int &gt; &amp;centers, <a class="el" href="classcached__ik__kinematics__plugin_1_1GreedyKCenters.html#ae3ed98eaadd2a0b4deb1cac34b1d2cd4">Matrix</a> &amp;dists)</td></tr>
+<tr class="memitem:a412aefdb18ea8fac3cd9b45f05cc9dad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcached__ik__kinematics__plugin_1_1GreedyKCenters.html#a412aefdb18ea8fac3cd9b45f05cc9dad">kcenters</a> (const std::vector&lt; _T &gt; &amp;data, unsigned int k, std::vector&lt; unsigned int &gt; &amp;centers, <a class="el" href="classcached__ik__kinematics__plugin_1_1GreedyKCenters.html#aa28ea6e77dea0e1b94c8d7953aed4504">Matrix</a> &amp;dists)</td></tr>
 <tr class="memdesc:a412aefdb18ea8fac3cd9b45f05cc9dad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Greedy algorithm for selecting k centers.  <a href="classcached__ik__kinematics__plugin_1_1GreedyKCenters.html#a412aefdb18ea8fac3cd9b45f05cc9dad">More...</a><br /></td></tr>
 <tr class="separator:a412aefdb18ea8fac3cd9b45f05cc9dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -143,8 +143,8 @@ template&lt;typename _T &gt; </div>
 
 </div>
 </div>
-<a id="ae3ed98eaadd2a0b4deb1cac34b1d2cd4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3ed98eaadd2a0b4deb1cac34b1d2cd4">&#9670;&nbsp;</a></span>Matrix</h2>
+<a id="aa28ea6e77dea0e1b94c8d7953aed4504"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa28ea6e77dea0e1b94c8d7953aed4504">&#9670;&nbsp;</a></span>Matrix</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -152,7 +152,7 @@ template&lt;typename _T &gt; </div>
 template&lt;typename _T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classcached__ik__kinematics__plugin_1_1GreedyKCenters.html">cached_ik_kinematics_plugin::GreedyKCenters</a>&lt; _T &gt;::<a class="el" href="classcached__ik__kinematics__plugin_1_1GreedyKCenters.html#ae3ed98eaadd2a0b4deb1cac34b1d2cd4">Matrix</a> =  boost::numeric::ublas::matrix&lt;double&gt;</td>
+          <td class="memname">using <a class="el" href="classcached__ik__kinematics__plugin_1_1GreedyKCenters.html">cached_ik_kinematics_plugin::GreedyKCenters</a>&lt; _T &gt;::<a class="el" href="classcached__ik__kinematics__plugin_1_1GreedyKCenters.html#aa28ea6e77dea0e1b94c8d7953aed4504">Matrix</a> =  Eigen::MatrixXd</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -282,7 +282,7 @@ template&lt;typename _T &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classcached__ik__kinematics__plugin_1_1GreedyKCenters.html#ae3ed98eaadd2a0b4deb1cac34b1d2cd4">Matrix</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classcached__ik__kinematics__plugin_1_1GreedyKCenters.html#aa28ea6e77dea0e1b94c8d7953aed4504">Matrix</a> &amp;&#160;</td>
           <td class="paramname"><em>dists</em>&#160;</td>
         </tr>
         <tr>

@@ -1,0 +1,4 @@
+<map id="moveit_setup::controllers::ControlXacroConfig::getControlInterfaces" name="moveit_setup::controllers::ControlXacroConfig::getControlInterfaces">
+<area shape="rect" id="node1" title="Get all the control interfaces for all of the specified joint names." alt="" coords="304,5,535,61"/>
+<area shape="rect" id="node2" href="$classmoveit__setup_1_1controllers_1_1ControlXacroConfig.html#a0797a9eef9e73a15e868cbc282f39290" title=" " alt="" coords="5,5,256,61"/>
+</map>
