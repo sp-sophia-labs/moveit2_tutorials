@@ -116,9 +116,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0820d5d3922f3cd0d5d3dd86185afb16"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__interface_1_1PlannerManager.html#a0820d5d3922f3cd0d5d3dd86185afb16">canServiceRequest</a> (const <a class="el" href="namespaceplanning__interface.html#a1307e10a0a3b9ca03406d777b9a938a3">MotionPlanRequest</a> &amp;req) const =0</td></tr>
 <tr class="memdesc:a0820d5d3922f3cd0d5d3dd86185afb16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine whether this plugin instance is able to represent this planning request.  <a href="classplanning__interface_1_1PlannerManager.html#a0820d5d3922f3cd0d5d3dd86185afb16">More...</a><br /></td></tr>
 <tr class="separator:a0820d5d3922f3cd0d5d3dd86185afb16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5113ae0f3db5bc86805a13b6aeed605e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__interface_1_1PlannerManager.html#a5113ae0f3db5bc86805a13b6aeed605e">setPlannerConfigurations</a> (const <a class="el" href="namespaceplanning__interface.html#a0f570b4d5ea3f33ee94b3b28ee9c0147">PlannerConfigurationMap</a> &amp;pcs)</td></tr>
-<tr class="memdesc:a5113ae0f3db5bc86805a13b6aeed605e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify the settings to be used for specific algorithms.  <a href="classplanning__interface_1_1PlannerManager.html#a5113ae0f3db5bc86805a13b6aeed605e">More...</a><br /></td></tr>
-<tr class="separator:a5113ae0f3db5bc86805a13b6aeed605e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8303a23529b2d6cb4f575b56fdec4e9b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__interface_1_1PlannerManager.html#a8303a23529b2d6cb4f575b56fdec4e9b">setPlannerConfigurations</a> (const <a class="el" href="namespaceplanning__interface.html#a0f570b4d5ea3f33ee94b3b28ee9c0147">PlannerConfigurationMap</a> &amp;pcs)=0</td></tr>
+<tr class="memdesc:a8303a23529b2d6cb4f575b56fdec4e9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specify the settings to be used for specific algorithms.  <a href="classplanning__interface_1_1PlannerManager.html#a8303a23529b2d6cb4f575b56fdec4e9b">More...</a><br /></td></tr>
+<tr class="separator:a8303a23529b2d6cb4f575b56fdec4e9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abed1f44071f1676361b796f37393ec21"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespaceplanning__interface.html#a0f570b4d5ea3f33ee94b3b28ee9c0147">PlannerConfigurationMap</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classplanning__interface_1_1PlannerManager.html#abed1f44071f1676361b796f37393ec21">getPlannerConfigurations</a> () const</td></tr>
 <tr class="memdesc:abed1f44071f1676361b796f37393ec21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the settings for a specific algorithm.  <a href="classplanning__interface_1_1PlannerManager.html#abed1f44071f1676361b796f37393ec21">More...</a><br /></td></tr>
 <tr class="separator:abed1f44071f1676361b796f37393ec21"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -248,7 +248,7 @@ Protected Attributes</h2></td></tr>
 <p>Get. </p>
 <p>a short string that identifies the planning interface </p>
 
-<p>Reimplemented in <a class="el" href="classtrajopt__interface_1_1TrajOptPlannerManager.html#ac2eea063a17f701af45a3230ee4f0b39">trajopt_interface::TrajOptPlannerManager</a>, <a class="el" href="classpilz__industrial__motion__planner_1_1CommandPlanner.html#af879a7f673c0e7653bf09e9135723a13">pilz_industrial_motion_planner::CommandPlanner</a>, <a class="el" href="classchomp__interface_1_1CHOMPPlannerManager.html#a3827f0da7844ae3afc1b0198e6b7d35c">chomp_interface::CHOMPPlannerManager</a>, and <a class="el" href="classompl__interface_1_1OMPLPlannerManager.html#a763806486d56ceff079cc422f33c6462">ompl_interface::OMPLPlannerManager</a>.</p>
+<p>Reimplemented in <a class="el" href="classchomp__interface_1_1CHOMPPlannerManager.html#a3827f0da7844ae3afc1b0198e6b7d35c">chomp_interface::CHOMPPlannerManager</a>, <a class="el" href="classtrajopt__interface_1_1TrajOptPlannerManager.html#ac2eea063a17f701af45a3230ee4f0b39">trajopt_interface::TrajOptPlannerManager</a>, <a class="el" href="classpilz__industrial__motion__planner_1_1CommandPlanner.html#af879a7f673c0e7653bf09e9135723a13">pilz_industrial_motion_planner::CommandPlanner</a>, and <a class="el" href="classompl__interface_1_1OMPLPlannerManager.html#a763806486d56ceff079cc422f33c6462">ompl_interface::OMPLPlannerManager</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="planning__interface_8cpp_source.html#l00135">135</a> of file <a class="el" href="planning__interface_8cpp_source.html">planning_interface.cpp</a>.</p>
 
@@ -309,7 +309,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Get the names of the known planning algorithms (values that can be filled as planner_id in the planning request) </p>
 
-<p>Reimplemented in <a class="el" href="classpilz__industrial__motion__planner_1_1CommandPlanner.html#a99b14642d146f2fb3760fabf3c4ff366">pilz_industrial_motion_planner::CommandPlanner</a>, <a class="el" href="classtrajopt__interface_1_1TrajOptPlannerManager.html#aedda3ee01a2c3853d52be7f916d83acb">trajopt_interface::TrajOptPlannerManager</a>, <a class="el" href="classchomp__interface_1_1CHOMPPlannerManager.html#a70c561a46dcd305e18e005fa79401688">chomp_interface::CHOMPPlannerManager</a>, and <a class="el" href="classompl__interface_1_1OMPLPlannerManager.html#ad8484fec67c555e946ba930985860f1c">ompl_interface::OMPLPlannerManager</a>.</p>
+<p>Reimplemented in <a class="el" href="classpilz__industrial__motion__planner_1_1CommandPlanner.html#a99b14642d146f2fb3760fabf3c4ff366">pilz_industrial_motion_planner::CommandPlanner</a>, <a class="el" href="classchomp__interface_1_1CHOMPPlannerManager.html#a70c561a46dcd305e18e005fa79401688">chomp_interface::CHOMPPlannerManager</a>, <a class="el" href="classtrajopt__interface_1_1TrajOptPlannerManager.html#aedda3ee01a2c3853d52be7f916d83acb">trajopt_interface::TrajOptPlannerManager</a>, and <a class="el" href="classompl__interface_1_1OMPLPlannerManager.html#ad8484fec67c555e946ba930985860f1c">ompl_interface::OMPLPlannerManager</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="planning__interface_8cpp_source.html#l00147">147</a> of file <a class="el" href="planning__interface_8cpp_source.html">planning_interface.cpp</a>.</p>
 
@@ -457,8 +457,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a5113ae0f3db5bc86805a13b6aeed605e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5113ae0f3db5bc86805a13b6aeed605e">&#9670;&nbsp;</a></span>setPlannerConfigurations()</h2>
+<a id="a8303a23529b2d6cb4f575b56fdec4e9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8303a23529b2d6cb4f575b56fdec4e9b">&#9670;&nbsp;</a></span>setPlannerConfigurations()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -476,14 +476,14 @@ Here is the caller graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Specify the settings to be used for specific algorithms. </p>
 
-<p>Reimplemented in <a class="el" href="classompl__interface_1_1OMPLPlannerManager.html#a20c36a6ac221913804d89336a162782a">ompl_interface::OMPLPlannerManager</a>.</p>
+<p>Implemented in <a class="el" href="classpilz__industrial__motion__planner_1_1CommandPlanner.html#a5a0af584e104477f28e180cfce2a03e3">pilz_industrial_motion_planner::CommandPlanner</a>, <a class="el" href="classchomp__interface_1_1CHOMPPlannerManager.html#a4ac7106dcd33c1778bd1e3eac78bf3d0">chomp_interface::CHOMPPlannerManager</a>, and <a class="el" href="classompl__interface_1_1OMPLPlannerManager.html#a20c36a6ac221913804d89336a162782a">ompl_interface::OMPLPlannerManager</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="planning__interface_8cpp_source.html#l00153">153</a> of file <a class="el" href="planning__interface_8cpp_source.html">planning_interface.cpp</a>.</p>
 

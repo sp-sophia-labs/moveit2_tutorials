@@ -1,4 +1,6 @@
 <map id="moveit_ros_benchmarks::BenchmarkExecutor::collectMetrics" name="moveit_ros_benchmarks::BenchmarkExecutor::collectMetrics">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,188,61"/>
-<area shape="rect" id="node2" href="$namespacemoveit_1_1core.html#a7408555e942ec8025cdb5a178fb23dfd" title="Convert a double to std::string using the classic C locale." alt="" coords="236,20,399,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,57,188,113"/>
+<area shape="rect" id="node2" href="$namespacerobot__trajectory.html#a0750fe7c58d1a655d83bd177586696ca" title="Calculate the path length of a given trajectory based on the accumulated robot state distances...." alt="" coords="236,5,399,47"/>
+<area shape="rect" id="node3" href="$namespacerobot__trajectory.html#aaea992e4ba6967a7ec88956541d43618" title="Calculate the smoothness of a given trajectory." alt="" coords="447,42,659,69"/>
+<area shape="rect" id="node4" href="$namespacemoveit_1_1core.html#a7408555e942ec8025cdb5a178fb23dfd" title="Convert a double to std::string using the classic C locale." alt="" coords="236,122,399,149"/>
 </map>

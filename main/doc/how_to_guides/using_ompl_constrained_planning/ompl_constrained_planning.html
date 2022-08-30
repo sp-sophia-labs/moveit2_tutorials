@@ -183,7 +183,7 @@
 <div class="section" id="initial-setup">
 <h3>Initial Setup<a class="headerlink" href="#initial-setup" title="Permalink to this headline"></a></h3>
 <p>First, we start off by setting up the <code class="docutils literal notranslate"><span class="pre">MoveGroupInterface</span></code> similarly to the <a class="reference internal" href="../../examples/move_group_interface/move_group_interface_tutorial.html"><span class="doc">Move Group interface example page</span></a>. This assumes you’ve already set up your node.</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span><span class="w"> </span><span class="nf">move_group_interface</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;panda_arm&quot;</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span><span class="w"> </span><span class="n">move_group_interface</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;panda_arm&quot;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Next, we create a lambda to help us create a pose at a given relative position from the current pose.</p>

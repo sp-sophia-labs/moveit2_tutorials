@@ -168,7 +168,7 @@ run you through the C++ code to instantiate and call such a planning pipeline.</
 a RobotModel and a PlanningScene.</p>
 <p>We will start by instantiating a <a class="reference external" href="http://docs.ros.org/noetic/api/moveit_ros_planning/html/classrobot__model__loader_1_1RobotModelLoader.html">RobotModelLoader</a> object, which will look up the robot description on the ROS
 parameter server and construct a <a class="reference external" href="http://docs.ros.org/noetic/api/moveit_core/html/cpp/classmoveit_1_1core_1_1RobotModel.html">RobotModel</a> for us to use.</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">robot_model_loader</span><span class="o">::</span><span class="n">RobotModelLoaderPtr</span><span class="w"> </span><span class="nf">robot_model_loader</span><span class="p">(</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">robot_model_loader</span><span class="o">::</span><span class="n">RobotModelLoaderPtr</span><span class="w"> </span><span class="n">robot_model_loader</span><span class="p">(</span><span class="w"></span>
 <span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">robot_model_loader</span><span class="o">::</span><span class="n">RobotModelLoader</span><span class="p">(</span><span class="s">&quot;robot_description&quot;</span><span class="p">));</span><span class="w"></span>
 </pre></div>
 </div>
@@ -205,7 +205,7 @@ startStateMonitor to fully initialize the planning scene monitor</p>
 </div>
 <p>We can now setup the PlanningPipeline object, which will use the ROS parameter server
 to determine the set of request adapters and the planning plugin to use</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">planning_pipeline</span><span class="o">::</span><span class="n">PlanningPipelinePtr</span><span class="w"> </span><span class="nf">planning_pipeline</span><span class="p">(</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">planning_pipeline</span><span class="o">::</span><span class="n">PlanningPipelinePtr</span><span class="w"> </span><span class="n">planning_pipeline</span><span class="p">(</span><span class="w"></span>
 <span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">planning_pipeline</span><span class="o">::</span><span class="n">PlanningPipeline</span><span class="p">(</span><span class="n">robot_model</span><span class="p">,</span><span class="w"> </span><span class="n">node_handle</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;planning_plugin&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;request_adapters&quot;</span><span class="p">));</span><span class="w"></span>
 </pre></div>
 </div>
@@ -215,7 +215,7 @@ to determine the set of request adapters and the planning plugin to use</p>
 <p>The package MoveItVisualTools provides many capabilities for visualizing objects, robots,
 and trajectories in RViz as well as debugging tools such as step-by-step introspection of a script.</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">namespace</span><span class="w"> </span><span class="nn">rvt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nn">rviz_visual_tools</span><span class="p">;</span><span class="w"></span>
-<span class="n">moveit_visual_tools</span><span class="o">::</span><span class="n">MoveItVisualTools</span><span class="w"> </span><span class="nf">visual_tools</span><span class="p">(</span><span class="s">&quot;panda_link0&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">moveit_visual_tools</span><span class="o">::</span><span class="n">MoveItVisualTools</span><span class="w"> </span><span class="n">visual_tools</span><span class="p">(</span><span class="s">&quot;panda_link0&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="n">visual_tools</span><span class="p">.</span><span class="n">deleteAllMarkers</span><span class="p">();</span><span class="w"></span>
 
 <span class="cm">/* Remote control is an introspection tool that allows users to step through a high level script</span>
