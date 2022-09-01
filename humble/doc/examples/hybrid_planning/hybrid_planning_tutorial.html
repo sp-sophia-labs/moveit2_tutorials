@@ -10,7 +10,7 @@
       <link rel="stylesheet" href="../../../_static/tabs.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/override.css" type="text/css" />
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
-    <link rel="canonical" href="https://moveit.picknik.ai/rolling//humble/doc/examples/hybrid_planning/hybrid_planning_tutorial.html" />
+    <link rel="canonical" href="https://moveit.picknik.ai/galactic//humble/doc/examples/hybrid_planning/hybrid_planning_tutorial.html" />
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -146,7 +146,7 @@ The main advantages of using the architecture are:</p>
     <span class="n">composable_node_descriptions</span><span class="o">=</span><span class="p">[</span>
         <span class="n">ComposableNode</span><span class="p">(</span>
             <span class="n">package</span><span class="o">=</span><span class="s2">&quot;moveit_hybrid_planning&quot;</span><span class="p">,</span>
-            <span class="n">plugin</span><span class="o">=</span><span class="s2">&quot;moveit_hybrid_planning::GlobalPlannerComponent&quot;</span><span class="p">,</span>
+            <span class="n">plugin</span><span class="o">=</span><span class="s2">&quot;moveit::hybrid_planning::GlobalPlannerComponent&quot;</span><span class="p">,</span>
             <span class="n">name</span><span class="o">=</span><span class="s2">&quot;global_planner&quot;</span><span class="p">,</span>
             <span class="n">parameters</span><span class="o">=</span><span class="p">[</span>
                 <span class="n">global_planner_param</span><span class="p">,</span>
@@ -158,7 +158,7 @@ The main advantages of using the architecture are:</p>
         <span class="p">),</span>
         <span class="n">ComposableNode</span><span class="p">(</span>
             <span class="n">package</span><span class="o">=</span><span class="s2">&quot;moveit_hybrid_planning&quot;</span><span class="p">,</span>
-            <span class="n">plugin</span><span class="o">=</span><span class="s2">&quot;moveit_hybrid_planning::LocalPlannerComponent&quot;</span><span class="p">,</span>
+            <span class="n">plugin</span><span class="o">=</span><span class="s2">&quot;moveit::hybrid_planning::LocalPlannerComponent&quot;</span><span class="p">,</span>
             <span class="n">name</span><span class="o">=</span><span class="s2">&quot;local_planner&quot;</span><span class="p">,</span>
             <span class="n">parameters</span><span class="o">=</span><span class="p">[</span>
                 <span class="n">local_planner_param</span><span class="p">,</span>
@@ -169,7 +169,7 @@ The main advantages of using the architecture are:</p>
         <span class="p">),</span>
         <span class="n">ComposableNode</span><span class="p">(</span>
             <span class="n">package</span><span class="o">=</span><span class="s2">&quot;moveit_hybrid_planning&quot;</span><span class="p">,</span>
-            <span class="n">plugin</span><span class="o">=</span><span class="s2">&quot;moveit_hybrid_planning::HybridPlanningManager&quot;</span><span class="p">,</span>
+            <span class="n">plugin</span><span class="o">=</span><span class="s2">&quot;moveit::hybrid_planning::HybridPlanningManager&quot;</span><span class="p">,</span>
             <span class="n">name</span><span class="o">=</span><span class="s2">&quot;hybrid_planning_manager&quot;</span><span class="p">,</span>
             <span class="n">parameters</span><span class="o">=</span><span class="p">[</span><span class="n">hybrid_planning_manager_param</span><span class="p">],</span>
         <span class="p">),</span>
