@@ -1586,7 +1586,7 @@ $(function() {
 <div class="line"><a name="l01513"></a><span class="lineno"> 1513</span>&#160;                         <span class="keyword">const</span> <a class="code" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a>&amp; constraint, <span class="keyword">const</span> geometry_msgs::msg::Pose&amp; <span class="comment">/*unused*/</span>,</div>
 <div class="line"><a name="l01514"></a><span class="lineno"> 1514</span>&#160;                         <span class="keyword">const</span> std::vector&lt;double&gt;&amp; ik_sol, moveit_msgs::msg::MoveItErrorCodes&amp; error_code)</div>
 <div class="line"><a name="l01515"></a><span class="lineno"> 1515</span>&#160;{</div>
-<div class="line"><a name="l01516"></a><span class="lineno"> 1516</span>&#160;  <span class="keyword">const</span> std::vector&lt;unsigned int&gt;&amp; bij = <a class="code" href="namespacetest__cleanup.html#a121623a04b6c3260c0e3e9c8cb74d9f9">group</a>-&gt;getKinematicsSolverJointBijection();</div>
+<div class="line"><a name="l01516"></a><span class="lineno"> 1516</span>&#160;  <span class="keyword">const</span> std::vector&lt;size_t&gt;&amp; bij = <a class="code" href="namespacetest__cleanup.html#a121623a04b6c3260c0e3e9c8cb74d9f9">group</a>-&gt;getKinematicsSolverJointBijection();</div>
 <div class="line"><a name="l01517"></a><span class="lineno"> 1517</span>&#160;  std::vector&lt;double&gt; solution(bij.size());</div>
 <div class="line"><a name="l01518"></a><span class="lineno"> 1518</span>&#160;  <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; bij.size(); ++i)</div>
 <div class="line"><a name="l01519"></a><span class="lineno"> 1519</span>&#160;    solution[bij[i]] = ik_sol[i];</div>
@@ -1860,7 +1860,7 @@ $(function() {
 <div class="line"><a name="l01787"></a><span class="lineno"> 1787</span>&#160;    };</div>
 <div class="line"><a name="l01788"></a><span class="lineno"> 1788</span>&#160; </div>
 <div class="line"><a name="l01789"></a><span class="lineno"> 1789</span>&#160;  <span class="comment">// Bijection</span></div>
-<div class="line"><a name="l01790"></a><span class="lineno"> 1790</span>&#160;  <span class="keyword">const</span> std::vector&lt;unsigned int&gt;&amp; bij = jmg-&gt;getKinematicsSolverJointBijection();</div>
+<div class="line"><a name="l01790"></a><span class="lineno"> 1790</span>&#160;  <span class="keyword">const</span> std::vector&lt;size_t&gt;&amp; bij = jmg-&gt;getKinematicsSolverJointBijection();</div>
 <div class="line"><a name="l01791"></a><span class="lineno"> 1791</span>&#160; </div>
 <div class="line"><a name="l01792"></a><span class="lineno"> 1792</span>&#160;  std::vector&lt;double&gt; initial_values;</div>
 <div class="line"><a name="l01793"></a><span class="lineno"> 1793</span>&#160;  copyJointGroupPositions(jmg, initial_values);</div>
@@ -2034,7 +2034,7 @@ $(function() {
 <div class="line"><a name="l01961"></a><span class="lineno"> 1961</span>&#160;    <span class="keywordtype">bool</span> found_solution = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l01962"></a><span class="lineno"> 1962</span>&#160;    <span class="keywordflow">for</span> (std::size_t sg = 0; sg &lt; sub_groups.size(); ++sg)</div>
 <div class="line"><a name="l01963"></a><span class="lineno"> 1963</span>&#160;    {</div>
-<div class="line"><a name="l01964"></a><span class="lineno"> 1964</span>&#160;      <span class="keyword">const</span> std::vector&lt;unsigned int&gt;&amp; bij = sub_groups[sg]-&gt;getKinematicsSolverJointBijection();</div>
+<div class="line"><a name="l01964"></a><span class="lineno"> 1964</span>&#160;      <span class="keyword">const</span> std::vector&lt;size_t&gt;&amp; bij = sub_groups[sg]-&gt;getKinematicsSolverJointBijection();</div>
 <div class="line"><a name="l01965"></a><span class="lineno"> 1965</span>&#160;      std::vector&lt;double&gt; seed(bij.size());</div>
 <div class="line"><a name="l01966"></a><span class="lineno"> 1966</span>&#160;      <span class="comment">// the first seed is the initial state</span></div>
 <div class="line"><a name="l01967"></a><span class="lineno"> 1967</span>&#160;      <span class="keywordflow">if</span> (first_seed)</div>

@@ -345,9 +345,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a254a0225896a3dddefc75dec2c731fb4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html#a254a0225896a3dddefc75dec2c731fb4">setDefaultIKTimeout</a> (double ik_timeout)</td></tr>
 <tr class="memdesc:a254a0225896a3dddefc75dec2c731fb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the default IK timeout.  <a href="classmoveit_1_1core_1_1JointModelGroup.html#a254a0225896a3dddefc75dec2c731fb4">More...</a><br /></td></tr>
 <tr class="separator:a254a0225896a3dddefc75dec2c731fb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76acd9acff57851f65b4221b51b3219d"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; unsigned int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html#a76acd9acff57851f65b4221b51b3219d">getKinematicsSolverJointBijection</a> () const</td></tr>
-<tr class="memdesc:a76acd9acff57851f65b4221b51b3219d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the mapping between the order of the joints in this group and the order of the joints in the kinematics solver. An element bijection[i] at index <em>i</em> in this array, maps the variable at index bijection[i] in this group to the variable at index i in the kinematic solver.  <a href="classmoveit_1_1core_1_1JointModelGroup.html#a76acd9acff57851f65b4221b51b3219d">More...</a><br /></td></tr>
-<tr class="separator:a76acd9acff57851f65b4221b51b3219d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa24a1b8cb0d7c622538494af22bf8f68"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; size_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html#aa24a1b8cb0d7c622538494af22bf8f68">getKinematicsSolverJointBijection</a> () const</td></tr>
+<tr class="memdesc:aa24a1b8cb0d7c622538494af22bf8f68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the mapping between the order of the joints in this group and the order of the joints in the kinematics solver. An element bijection[i] at index <em>i</em> in this array, maps the variable at index bijection[i] in this group to the variable at index i in the kinematic solver.  <a href="classmoveit_1_1core_1_1JointModelGroup.html#aa24a1b8cb0d7c622538494af22bf8f68">More...</a><br /></td></tr>
+<tr class="separator:aa24a1b8cb0d7c622538494af22bf8f68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbc255c0832b70bee552c7537f889dc5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html#afbc255c0832b70bee552c7537f889dc5">printGroupInfo</a> (std::ostream &amp;out=std::cout) const</td></tr>
 <tr class="memdesc:afbc255c0832b70bee552c7537f889dc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print information about the constructed model.  <a href="classmoveit_1_1core_1_1JointModelGroup.html#afbc255c0832b70bee552c7537f889dc5">More...</a><br /></td></tr>
 <tr class="separator:afbc255c0832b70bee552c7537f889dc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -360,8 +360,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:abc36f85e8064845d63632045dfc77334"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html#abc36f85e8064845d63632045dfc77334">computeIKIndexBijection</a> (const std::vector&lt; std::string &gt; &amp;ik_jnames, std::vector&lt; unsigned int &gt; &amp;joint_bijection) const</td></tr>
-<tr class="separator:abc36f85e8064845d63632045dfc77334"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa11b464a43bb475addb128a9f1b8bbb1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html#aa11b464a43bb475addb128a9f1b8bbb1">computeIKIndexBijection</a> (const std::vector&lt; std::string &gt; &amp;ik_jnames, std::vector&lt; size_t &gt; &amp;joint_bijection) const</td></tr>
+<tr class="separator:aa11b464a43bb475addb128a9f1b8bbb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c796aff98af787009d7eabbedd5f9c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html#a8c796aff98af787009d7eabbedd5f9c8">updateMimicJoints</a> (double *values) const</td></tr>
 <tr class="memdesc:a8c796aff98af787009d7eabbedd5f9c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the variable values for the state of a group with respect to the mimic joints. This only updates mimic joints that have the parent in this group. If there is a joint mimicking one that is outside the group, there are no values to be read (<em>values</em> is only the group state)  <a href="classmoveit_1_1core_1_1JointModelGroup.html#a8c796aff98af787009d7eabbedd5f9c8">More...</a><br /></td></tr>
 <tr class="separator:a8c796aff98af787009d7eabbedd5f9c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -664,8 +664,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="abc36f85e8064845d63632045dfc77334"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc36f85e8064845d63632045dfc77334">&#9670;&nbsp;</a></span>computeIKIndexBijection()</h2>
+<a id="aa11b464a43bb475addb128a9f1b8bbb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa11b464a43bb475addb128a9f1b8bbb1">&#9670;&nbsp;</a></span>computeIKIndexBijection()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -682,7 +682,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; unsigned int &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; size_t &gt; &amp;&#160;</td>
           <td class="paramname"><em>joint_bijection</em>&#160;</td>
         </tr>
         <tr>
@@ -702,8 +702,8 @@ Protected Attributes</h2></td></tr>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classmoveit_1_1core_1_1JointModelGroup_abc36f85e8064845d63632045dfc77334_icgraph.png" border="0" usemap="#classmoveit_1_1core_1_1JointModelGroup_abc36f85e8064845d63632045dfc77334_icgraph" alt=""/></div>
-<map name="classmoveit_1_1core_1_1JointModelGroup_abc36f85e8064845d63632045dfc77334_icgraph" id="classmoveit_1_1core_1_1JointModelGroup_abc36f85e8064845d63632045dfc77334_icgraph">
+<div class="center"><img src="classmoveit_1_1core_1_1JointModelGroup_aa11b464a43bb475addb128a9f1b8bbb1_icgraph.png" border="0" usemap="#classmoveit_1_1core_1_1JointModelGroup_aa11b464a43bb475addb128a9f1b8bbb1_icgraph" alt=""/></div>
+<map name="classmoveit_1_1core_1_1JointModelGroup_aa11b464a43bb475addb128a9f1b8bbb1_icgraph" id="classmoveit_1_1core_1_1JointModelGroup_aa11b464a43bb475addb128a9f1b8bbb1_icgraph">
 <area shape="rect" title=" " alt="" coords="293,5,525,47"/>
 <area shape="rect" href="classmoveit_1_1core_1_1JointModelGroup.html#a7df35063c14cf1c267be5d6b63cb6b9d" title="Get one end effector tip, throwing an error if there ends up being more in the joint model group This..." alt="" coords="5,5,245,47"/>
 </map>
@@ -1551,8 +1551,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a76acd9acff57851f65b4221b51b3219d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76acd9acff57851f65b4221b51b3219d">&#9670;&nbsp;</a></span>getKinematicsSolverJointBijection()</h2>
+<a id="aa24a1b8cb0d7c622538494af22bf8f68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa24a1b8cb0d7c622538494af22bf8f68">&#9670;&nbsp;</a></span>getKinematicsSolverJointBijection()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1561,7 +1561,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::vector&lt;unsigned int&gt;&amp; moveit::core::JointModelGroup::getKinematicsSolverJointBijection </td>
+          <td class="memname">const std::vector&lt;size_t&gt;&amp; moveit::core::JointModelGroup::getKinematicsSolverJointBijection </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1885,7 +1885,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classmoveit_1_1core_1_1JointModelGroup_a7df35063c14cf1c267be5d6b63cb6b9d_cgraph.png" border="0" usemap="#classmoveit_1_1core_1_1JointModelGroup_a7df35063c14cf1c267be5d6b63cb6b9d_cgraph" alt=""/></div>
 <map name="classmoveit_1_1core_1_1JointModelGroup_a7df35063c14cf1c267be5d6b63cb6b9d_cgraph" id="classmoveit_1_1core_1_1JointModelGroup_a7df35063c14cf1c267be5d6b63cb6b9d_cgraph">
 <area shape="rect" title="Get one end effector tip, throwing an error if there ends up being more in the joint model group This..." alt="" coords="5,5,245,47"/>
-<area shape="rect" href="classmoveit_1_1core_1_1JointModelGroup.html#abc36f85e8064845d63632045dfc77334" title=" " alt="" coords="293,5,525,47"/>
+<area shape="rect" href="classmoveit_1_1core_1_1JointModelGroup.html#aa11b464a43bb475addb128a9f1b8bbb1" title=" " alt="" coords="293,5,525,47"/>
 </map>
 </div>
 
@@ -3988,7 +3988,7 @@ Here is the caller graph for this function:</div>
 
 <p>Names of active joints in the order they appear in the group state. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00676">676</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00675">675</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4014,7 +4014,7 @@ Here is the caller graph for this function:</div>
 
 <p>For each active joint model in this group, hold the index at which the corresponding joint state starts in the group state. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00718">718</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00717">717</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4040,7 +4040,7 @@ Here is the caller graph for this function:</div>
 
 <p>Active joint instances in the order they appear in the group state. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00673">673</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00672">672</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4066,7 +4066,7 @@ Here is the caller graph for this function:</div>
 
 <p>The bounds for all the active joint models. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00710">710</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00709">709</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4092,7 +4092,7 @@ Here is the caller graph for this function:</div>
 
 <p>The number of variables necessary to describe the active joints in this group of joints. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00772">772</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00771">771</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4118,7 +4118,7 @@ Here is the caller graph for this function:</div>
 
 <p>If an end-effector is attached to this group, the name of that end-effector is stored in this variable. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00785">785</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00784">784</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4144,7 +4144,7 @@ Here is the caller graph for this function:</div>
 
 <p>The joint that is a common root for all joints in this group (not necessarily part of this group) </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00702">702</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00701">701</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4168,7 +4168,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00814">814</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00813">813</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4194,7 +4194,7 @@ Here is the caller graph for this function:</div>
 
 <p>The set of continuous joints this group contains. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00685">685</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00684">684</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4220,7 +4220,7 @@ Here is the caller graph for this function:</div>
 
 <p>The set of default states specified for this group in the SRDF. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00817">817</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00816">816</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4246,7 +4246,7 @@ Here is the caller graph for this function:</div>
 
 <p>The names of the default states specified for this group in the SRDF. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00820">820</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00819">819</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4272,7 +4272,7 @@ Here is the caller graph for this function:</div>
 
 <p>The name of the end effector, if this group is an end-effector. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00793">793</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00792">792</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4298,7 +4298,7 @@ Here is the caller graph for this function:</div>
 
 <p>First: name of the group that is parent to this end-effector group; Second: the link this in the parent group that this group attaches to. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00790">790</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00789">789</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4324,7 +4324,7 @@ Here is the caller graph for this function:</div>
 
 <p>The joints that have no DOF (fixed) </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00679">679</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00678">678</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4348,7 +4348,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00812">812</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00811">811</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4372,7 +4372,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00810">810</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00809">809</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4396,7 +4396,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00795">795</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00794">794</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4422,7 +4422,7 @@ Here is the caller graph for this function:</div>
 
 <p>True if the state of this group is contiguous within the full robot state; this also means that the index values in variable_index_list_ are consecutive integers. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00776">776</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00775">775</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4446,7 +4446,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00797">797</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00796">796</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4472,7 +4472,7 @@ Here is the caller graph for this function:</div>
 
 <p><a class="el" href="classA.html">A</a> map from joint names to their instances. This includes all joints in the group. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00696">696</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00695">695</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4498,7 +4498,7 @@ Here is the caller graph for this function:</div>
 
 <p>Names of joints in the order they appear in the group state. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00670">670</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00669">669</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4524,7 +4524,7 @@ Here is the caller graph for this function:</div>
 
 <p>Joint instances in the order they appear in the group state. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00667">667</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00666">666</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4550,7 +4550,7 @@ Here is the caller graph for this function:</div>
 
 <p>The list of active joint models that are roots in this group. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00699">699</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00698">698</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4576,7 +4576,7 @@ Here is the caller graph for this function:</div>
 
 <p>The group includes all the joint variables that make up the joints the group consists of. This map gives the position in the state vector of the group for each of these variables. Additionally, it includes the names of the joints and the index for the first variable of that joint. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00707">707</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00706">706</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4602,7 +4602,7 @@ Here is the caller graph for this function:</div>
 
 <p><a class="el" href="classA.html">A</a> map from link names to their instances. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00726">726</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00725">725</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4628,7 +4628,7 @@ Here is the caller graph for this function:</div>
 
 <p>The names of the links in this group. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00729">729</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00728">728</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4654,7 +4654,7 @@ Here is the caller graph for this function:</div>
 
 <p>The links that are on the direct lineage between joints and joint_roots_, as well as the children of the joint leafs. May not be in any particular order. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00723">723</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00722">722</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4680,7 +4680,7 @@ Here is the caller graph for this function:</div>
 
 <p>The names of the links in this group that also have geometry. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00734">734</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00733">733</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4704,7 +4704,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00731">731</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00730">730</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4730,7 +4730,7 @@ Here is the caller graph for this function:</div>
 
 <p>Joints that mimic other joints. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00682">682</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00681">681</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4756,7 +4756,7 @@ Here is the caller graph for this function:</div>
 
 <p>Name of group. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00664">664</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00663">663</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4782,7 +4782,7 @@ Here is the caller graph for this function:</div>
 
 <p>Owner model. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00661">661</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00660">660</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4808,7 +4808,7 @@ Here is the caller graph for this function:</div>
 
 <p>The set of labelled subgroups that are included in this group. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00779">779</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00778">778</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4834,7 +4834,7 @@ Here is the caller graph for this function:</div>
 
 <p>The set of labelled subgroups that are included in this group. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00782">782</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00781">781</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4860,7 +4860,7 @@ Here is the caller graph for this function:</div>
 
 <p>The list of downstream link names in the order they should be updated (may include links that are not in this group) </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00750">750</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00749">749</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4886,7 +4886,7 @@ Here is the caller graph for this function:</div>
 
 <p>The list of downstream link names in the order they should be updated (may include links that are not in this group) </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00746">746</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00745">745</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4912,7 +4912,7 @@ Here is the caller graph for this function:</div>
 
 <p>The list of downstream link models in the order they should be updated (may include links that are not in this group) </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00742">742</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00741">741</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4938,7 +4938,7 @@ Here is the caller graph for this function:</div>
 
 <p>The list of downstream link models in the order they should be updated (may include links that are not in this group) </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00738">738</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00737">737</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4964,7 +4964,7 @@ Here is the caller graph for this function:</div>
 
 <p>The list of downstream link names in the order they should be updated (may include links that are not in this group) </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00766">766</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00765">765</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -4990,7 +4990,7 @@ Here is the caller graph for this function:</div>
 
 <p>The list of downstream link names in the order they should be updated (may include links that are not in this group) </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00762">762</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00761">761</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -5016,7 +5016,7 @@ Here is the caller graph for this function:</div>
 
 <p>The list of downstream link models in the order they should be updated (may include links that are not in this group) </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00758">758</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00757">757</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -5042,7 +5042,7 @@ Here is the caller graph for this function:</div>
 
 <p>The list of downstream link models in the order they should be updated (may include links that are not in this group) </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00754">754</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00753">753</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -5068,7 +5068,7 @@ Here is the caller graph for this function:</div>
 
 <p>The number of variables necessary to describe this group of joints. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00769">769</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00768">768</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -5094,7 +5094,7 @@ Here is the caller graph for this function:</div>
 
 <p>The list of index values this group includes, with respect to a full robot state; this includes mimic joints. </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00714">714</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00713">713</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -5120,7 +5120,7 @@ Here is the caller graph for this function:</div>
 
 <p>The names of the DOF that make up this group (this is just a sequence of joint variable names; not necessarily joint names!) </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00689">689</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00688">688</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>
@@ -5146,7 +5146,7 @@ Here is the caller graph for this function:</div>
 
 <p>The names of the DOF that make up this group (this is just a sequence of joint variable names; not necessarily joint names!) </p>
 
-<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00693">693</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="joint__model__group_8h_source.html#l00692">692</a> of file <a class="el" href="joint__model__group_8h_source.html">joint_model_group.h</a>.</p>
 
 </div>
 </div>

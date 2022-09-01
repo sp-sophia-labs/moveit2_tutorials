@@ -93,9 +93,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:abf447be92276bece38eec6c92b8bb7b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacemoveit_1_1core.html#acc5cec0d5300a20962579453220e8f71">SolverAllocatorFn</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmoveit_1_1core_1_1JointModelGroup_1_1KinematicsSolver.html#abf447be92276bece38eec6c92b8bb7b4">allocator_</a></td></tr>
 <tr class="memdesc:abf447be92276bece38eec6c92b8bb7b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function type that allocates a kinematics solver for a particular group.  <a href="structmoveit_1_1core_1_1JointModelGroup_1_1KinematicsSolver.html#abf447be92276bece38eec6c92b8bb7b4">More...</a><br /></td></tr>
 <tr class="separator:abf447be92276bece38eec6c92b8bb7b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40480202bf9f06b3b7cdd92f761f4de7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmoveit_1_1core_1_1JointModelGroup_1_1KinematicsSolver.html#a40480202bf9f06b3b7cdd92f761f4de7">bijection_</a></td></tr>
-<tr class="memdesc:a40480202bf9f06b3b7cdd92f761f4de7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The mapping between the order of the joints in the group and the order of the joints in the kinematics solver. An element bijection[i] at index <em>i</em> in this array, maps the variable at index bijection[i] in this group to the variable at index i in the kinematic solver.  <a href="structmoveit_1_1core_1_1JointModelGroup_1_1KinematicsSolver.html#a40480202bf9f06b3b7cdd92f761f4de7">More...</a><br /></td></tr>
-<tr class="separator:a40480202bf9f06b3b7cdd92f761f4de7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5699a9d4efa552287295204a6a9261d1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; size_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmoveit_1_1core_1_1JointModelGroup_1_1KinematicsSolver.html#a5699a9d4efa552287295204a6a9261d1">bijection_</a></td></tr>
+<tr class="memdesc:a5699a9d4efa552287295204a6a9261d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The mapping between the order of the joints in the group and the order of the joints in the kinematics solver. An element bijection[i] at index <em>i</em> in this array, maps the variable at index bijection[i] in this group to the variable at index i in the kinematic solver.  <a href="structmoveit_1_1core_1_1JointModelGroup_1_1KinematicsSolver.html#a5699a9d4efa552287295204a6a9261d1">More...</a><br /></td></tr>
+<tr class="separator:a5699a9d4efa552287295204a6a9261d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee1ac13230abea36b8d67eea54164ef2"><td class="memItemLeft" align="right" valign="top">kinematics::KinematicsBasePtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmoveit_1_1core_1_1JointModelGroup_1_1KinematicsSolver.html#aee1ac13230abea36b8d67eea54164ef2">solver_instance_</a></td></tr>
 <tr class="separator:aee1ac13230abea36b8d67eea54164ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a971a70577752991d2d4bc5881dc42dbe"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmoveit_1_1core_1_1JointModelGroup_1_1KinematicsSolver.html#a971a70577752991d2d4bc5881dc42dbe">default_ik_timeout_</a></td></tr>
@@ -208,14 +208,14 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a40480202bf9f06b3b7cdd92f761f4de7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40480202bf9f06b3b7cdd92f761f4de7">&#9670;&nbsp;</a></span>bijection_</h2>
+<a id="a5699a9d4efa552287295204a6a9261d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5699a9d4efa552287295204a6a9261d1">&#9670;&nbsp;</a></span>bijection_</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;unsigned int&gt; moveit::core::JointModelGroup::KinematicsSolver::bijection_</td>
+          <td class="memname">std::vector&lt;size_t&gt; moveit::core::JointModelGroup::KinematicsSolver::bijection_</td>
         </tr>
       </table>
 </div><div class="memdoc">
