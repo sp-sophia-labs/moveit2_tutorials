@@ -1,5 +1,5 @@
-<map id="moveit_ros/warehouse/warehouse/src/initialize_demo_db.cpp" name="moveit_ros/warehouse/warehouse/src/initialize_demo_db.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="2533,5,2713,61"/>
+<map id="moveit_ros/warehouse/src/initialize_demo_db.cpp" name="moveit_ros/warehouse/src/initialize_demo_db.cpp">
+<area shape="rect" id="node1" title=" " alt="" coords="2538,5,2709,61"/>
 <area shape="rect" id="node2" title=" " alt="" coords="1689,124,1757,151"/>
 <area shape="rect" id="node3" href="$planning__scene__storage_8h.html" title=" " alt="" coords="827,221,1030,262"/>
 <area shape="rect" id="node13" href="$constraints__storage_8h.html" title=" " alt="" coords="1054,221,1273,262"/>

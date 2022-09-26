@@ -1,0 +1,4 @@
+<map id="moveit_ros_control_interface::EmptyControllerAllocator" name="moveit_ros_control_interface::EmptyControllerAllocator">
+<area shape="rect" id="node1" title="This class allows MoveIt&#39;s controller manager to start and stop a controller that does not have a cor..." alt="" coords="7,109,209,165"/>
+<area shape="rect" id="node2" href="$classmoveit__ros__control__interface_1_1ControllerHandleAllocator.html" title=" " alt="" coords="5,5,211,61"/>
+</map>

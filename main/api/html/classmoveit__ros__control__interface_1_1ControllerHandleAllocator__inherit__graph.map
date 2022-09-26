@@ -1,5 +1,6 @@
 <map id="moveit_ros_control_interface::ControllerHandleAllocator" name="moveit_ros_control_interface::ControllerHandleAllocator">
-<area shape="rect" id="node1" title=" " alt="" coords="5,45,211,101"/>
-<area shape="rect" id="node2" href="$classmoveit__ros__control__interface_1_1GripperControllerAllocator.html" title="Simple allocator for moveit_simple_controller_manager::FollowJointTrajectoryControllerHandle instance..." alt="" coords="259,5,465,61"/>
-<area shape="rect" id="node3" href="$classmoveit__ros__control__interface_1_1JointTrajectoryControllerAllocator.html" title="Simple allocator for moveit_simple_controller_manager::FollowJointTrajectoryControllerHandle instance..." alt="" coords="268,85,456,141"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,85,211,141"/>
+<area shape="rect" id="node2" href="$classmoveit__ros__control__interface_1_1EmptyControllerAllocator.html" title="This class allows MoveIt&#39;s controller manager to start and stop a controller that does not have a cor..." alt="" coords="261,5,463,61"/>
+<area shape="rect" id="node3" href="$classmoveit__ros__control__interface_1_1GripperControllerAllocator.html" title="Simple allocator for moveit_simple_controller_manager::FollowJointTrajectoryControllerHandle instance..." alt="" coords="259,85,465,141"/>
+<area shape="rect" id="node4" href="$classmoveit__ros__control__interface_1_1JointTrajectoryControllerAllocator.html" title="Simple allocator for moveit_simple_controller_manager::FollowJointTrajectoryControllerHandle instance..." alt="" coords="268,165,456,221"/>
 </map>

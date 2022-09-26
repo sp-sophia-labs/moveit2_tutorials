@@ -121,9 +121,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac13dd5c487851d59e1695df38ff9bcc7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmoveit__controller__manager_1_1MoveItControllerManager_1_1ControllerState.html">ControllerState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__control__interface_1_1MoveItControllerManager.html#ac13dd5c487851d59e1695df38ff9bcc7">getControllerState</a> (const std::string &amp;name) override</td></tr>
 <tr class="memdesc:ac13dd5c487851d59e1695df38ff9bcc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refresh controller state and output the state of the given one, only active_ will be set.  <a href="classmoveit__ros__control__interface_1_1MoveItControllerManager.html#ac13dd5c487851d59e1695df38ff9bcc7">More...</a><br /></td></tr>
 <tr class="separator:ac13dd5c487851d59e1695df38ff9bcc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9177563ed789c0d8d904927e08d9eb95"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__control__interface_1_1MoveItControllerManager.html#a9177563ed789c0d8d904927e08d9eb95">switchControllers</a> (const std::vector&lt; std::string &gt; &amp;activate, const std::vector&lt; std::string &gt; &amp;deactivate) override</td></tr>
-<tr class="memdesc:a9177563ed789c0d8d904927e08d9eb95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter lists for managed controller and computes switching set. Stopped list might be extended by unsupported controllers that claim needed resources.  <a href="classmoveit__ros__control__interface_1_1MoveItControllerManager.html#a9177563ed789c0d8d904927e08d9eb95">More...</a><br /></td></tr>
-<tr class="separator:a9177563ed789c0d8d904927e08d9eb95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef5d7c5bf74845420fd71044a2e566fd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__control__interface_1_1MoveItControllerManager.html#aef5d7c5bf74845420fd71044a2e566fd">switchControllers</a> (const std::vector&lt; std::string &gt; &amp;activate_base, const std::vector&lt; std::string &gt; &amp;deactivate_base) override</td></tr>
+<tr class="memdesc:aef5d7c5bf74845420fd71044a2e566fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter lists for managed controller and computes switching set. Stopped list might be extended by unsupported controllers that claim needed resources.  <a href="classmoveit__ros__control__interface_1_1MoveItControllerManager.html#aef5d7c5bf74845420fd71044a2e566fd">More...</a><br /></td></tr>
+<tr class="separator:aef5d7c5bf74845420fd71044a2e566fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f6f3358603e94add4221196304e558f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__control__interface_1_1MoveItControllerManager.html#a5f6f3358603e94add4221196304e558f">fixChainedControllers</a> (std::shared_ptr&lt; controller_manager_msgs::srv::ListControllers::Response &gt; &amp;result)</td></tr>
+<tr class="memdesc:a5f6f3358603e94add4221196304e558f"><td class="mdescLeft">&#160;</td><td class="mdescRight">fixChainedControllers modifies ListControllers service response if it contains chained controllers. Since chained controllers cannot be written to directly, they are removed from the response and their interfaces are propagated back to the first controller with a non-chained input  <a href="classmoveit__ros__control__interface_1_1MoveItControllerManager.html#a5f6f3358603e94add4221196304e558f">More...</a><br /></td></tr>
+<tr class="separator:a5f6f3358603e94add4221196304e558f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classmoveit__controller__manager_1_1MoveItControllerManager"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmoveit__controller__manager_1_1MoveItControllerManager')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmoveit__controller__manager_1_1MoveItControllerManager.html">moveit_controller_manager::MoveItControllerManager</a></td></tr>
 <tr class="memitem:ab217085309a95bc44ea9c1b89e8dd5e3 inherit pub_methods_classmoveit__controller__manager_1_1MoveItControllerManager"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__controller__manager_1_1MoveItControllerManager.html#ab217085309a95bc44ea9c1b89e8dd5e3">MoveItControllerManager</a> ()</td></tr>
 <tr class="memdesc:ab217085309a95bc44ea9c1b89e8dd5e3 inherit pub_methods_classmoveit__controller__manager_1_1MoveItControllerManager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. This needs to have no arguments so that the plugin system can construct the object.  <a href="classmoveit__controller__manager_1_1MoveItControllerManager.html#ab217085309a95bc44ea9c1b89e8dd5e3">More...</a><br /></td></tr>
@@ -134,7 +137,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classmoveit__controller__manager_1_1MoveItControllerManager.html" title="MoveIt does not enforce how controllers are implemented. To make your controllers usable by MoveIt,...">moveit_controller_manager::MoveItControllerManager</a> sub class that interfaces one ros_control controller_manager instance. All services and names are relative to ns_. </p>
 
-<p class="definition">Definition at line <a class="el" href="controller__manager__plugin_8cpp_source.html#l00084">84</a> of file <a class="el" href="controller__manager__plugin_8cpp_source.html">controller_manager_plugin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller__manager__plugin_8cpp_source.html#l00085">85</a> of file <a class="el" href="controller__manager__plugin_8cpp_source.html">controller_manager_plugin.cpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae8894a1f57305908f9c1c9aac450a6de"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae8894a1f57305908f9c1c9aac450a6de">&#9670;&nbsp;</a></span>MoveItControllerManager() <span class="overload">[1/2]</span></h2>
@@ -161,7 +164,7 @@ Public Member Functions</h2></td></tr>
 
 <p>The default constructor. Reads the namespace from ~ros_control_namespace param and defaults to /. </p>
 
-<p class="definition">Definition at line <a class="el" href="controller__manager__plugin_8cpp_source.html#l00229">229</a> of file <a class="el" href="controller__manager__plugin_8cpp_source.html">controller_manager_plugin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller__manager__plugin_8cpp_source.html#l00238">238</a> of file <a class="el" href="controller__manager__plugin_8cpp_source.html">controller_manager_plugin.cpp</a>.</p>
 
 </div>
 </div>
@@ -197,11 +200,41 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="controller__manager__plugin_8cpp_source.html#l00239">239</a> of file <a class="el" href="controller__manager__plugin_8cpp_source.html">controller_manager_plugin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller__manager__plugin_8cpp_source.html#l00248">248</a> of file <a class="el" href="controller__manager__plugin_8cpp_source.html">controller_manager_plugin.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5f6f3358603e94add4221196304e558f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f6f3358603e94add4221196304e558f">&#9670;&nbsp;</a></span>fixChainedControllers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool moveit_ros_control_interface::MoveItControllerManager::fixChainedControllers </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; controller_manager_msgs::srv::ListControllers::Response &gt; &amp;&#160;</td>
+          <td class="paramname"><em>result</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>fixChainedControllers modifies ListControllers service response if it contains chained controllers. Since chained controllers cannot be written to directly, they are removed from the response and their interfaces are propagated back to the first controller with a non-chained input </p>
+
+<p class="definition">Definition at line <a class="el" href="controller__manager__plugin_8cpp_source.html#l00462">462</a> of file <a class="el" href="controller__manager__plugin_8cpp_source.html">controller_manager_plugin.cpp</a>.</p>
+
+</div>
+</div>
 <a id="ad8cd22ff7fe9c8afcbb1afe0f6537abe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad8cd22ff7fe9c8afcbb1afe0f6537abe">&#9670;&nbsp;</a></span>getActiveControllers()</h2>
 
@@ -236,7 +269,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classmoveit__controller__manager_1_1MoveItControllerManager.html#a0552af3c5fbccbb402882472bc28cc19">moveit_controller_manager::MoveItControllerManager</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="controller__manager__plugin_8cpp_source.html#l00296">296</a> of file <a class="el" href="controller__manager__plugin_8cpp_source.html">controller_manager_plugin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller__manager__plugin_8cpp_source.html#l00305">305</a> of file <a class="el" href="controller__manager__plugin_8cpp_source.html">controller_manager_plugin.cpp</a>.</p>
 
 </div>
 </div>
@@ -275,7 +308,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classmoveit__controller__manager_1_1MoveItControllerManager.html#a69b5304cc24a1f06938061c8ed2e9bec">moveit_controller_manager::MoveItControllerManager</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="controller__manager__plugin_8cpp_source.html#l00265">265</a> of file <a class="el" href="controller__manager__plugin_8cpp_source.html">controller_manager_plugin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller__manager__plugin_8cpp_source.html#l00274">274</a> of file <a class="el" href="controller__manager__plugin_8cpp_source.html">controller_manager_plugin.cpp</a>.</p>
 
 </div>
 </div>
@@ -324,7 +357,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classmoveit__controller__manager_1_1MoveItControllerManager.html#af839f3623557bda10e57f4fb8f18b67c">moveit_controller_manager::MoveItControllerManager</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="controller__manager__plugin_8cpp_source.html#l00314">314</a> of file <a class="el" href="controller__manager__plugin_8cpp_source.html">controller_manager_plugin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller__manager__plugin_8cpp_source.html#l00323">323</a> of file <a class="el" href="controller__manager__plugin_8cpp_source.html">controller_manager_plugin.cpp</a>.</p>
 
 </div>
 </div>
@@ -362,7 +395,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classmoveit__controller__manager_1_1MoveItControllerManager.html#a4875f8a6aaea5445ed521595dce8f67d">moveit_controller_manager::MoveItControllerManager</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="controller__manager__plugin_8cpp_source.html#l00280">280</a> of file <a class="el" href="controller__manager__plugin_8cpp_source.html">controller_manager_plugin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller__manager__plugin_8cpp_source.html#l00289">289</a> of file <a class="el" href="controller__manager__plugin_8cpp_source.html">controller_manager_plugin.cpp</a>.</p>
 
 </div>
 </div>
@@ -401,7 +434,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classmoveit__controller__manager_1_1MoveItControllerManager.html#a82a519ae13cdcf4db79e3460fa31456e">moveit_controller_manager::MoveItControllerManager</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="controller__manager__plugin_8cpp_source.html#l00332">332</a> of file <a class="el" href="controller__manager__plugin_8cpp_source.html">controller_manager_plugin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller__manager__plugin_8cpp_source.html#l00341">341</a> of file <a class="el" href="controller__manager__plugin_8cpp_source.html">controller_manager_plugin.cpp</a>.</p>
 
 </div>
 </div>
@@ -431,12 +464,12 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classmoveit__controller__manager_1_1MoveItControllerManager.html#af9302d1c736db36b8088ab0f324d1a38">moveit_controller_manager::MoveItControllerManager</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="controller__manager__plugin_8cpp_source.html#l00244">244</a> of file <a class="el" href="controller__manager__plugin_8cpp_source.html">controller_manager_plugin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller__manager__plugin_8cpp_source.html#l00253">253</a> of file <a class="el" href="controller__manager__plugin_8cpp_source.html">controller_manager_plugin.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a9177563ed789c0d8d904927e08d9eb95"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9177563ed789c0d8d904927e08d9eb95">&#9670;&nbsp;</a></span>switchControllers()</h2>
+<a id="aef5d7c5bf74845420fd71044a2e566fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef5d7c5bf74845420fd71044a2e566fd">&#9670;&nbsp;</a></span>switchControllers()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -448,13 +481,13 @@ Public Member Functions</h2></td></tr>
           <td class="memname">bool moveit_ros_control_interface::MoveItControllerManager::switchControllers </td>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
-          <td class="paramname"><em>activate</em>, </td>
+          <td class="paramname"><em>activate_base</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
-          <td class="paramname"><em>deactivate</em>&#160;</td>
+          <td class="paramname"><em>deactivate_base</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -481,7 +514,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classmoveit__controller__manager_1_1MoveItControllerManager.html#ae42e4f2824c9707cc52ab61853a9a85e">moveit_controller_manager::MoveItControllerManager</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="controller__manager__plugin_8cpp_source.html#l00353">353</a> of file <a class="el" href="controller__manager__plugin_8cpp_source.html">controller_manager_plugin.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="controller__manager__plugin_8cpp_source.html#l00362">362</a> of file <a class="el" href="controller__manager__plugin_8cpp_source.html">controller_manager_plugin.cpp</a>.</p>
 
 </div>
 </div>
