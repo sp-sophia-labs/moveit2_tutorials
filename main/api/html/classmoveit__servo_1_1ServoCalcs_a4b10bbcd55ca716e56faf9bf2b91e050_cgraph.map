@@ -1,4 +1,0 @@
-<map id="moveit_servo::ServoCalcs::velocityScalingFactorForSingularity" name="moveit_servo::ServoCalcs::velocityScalingFactorForSingularity">
-<area shape="rect" id="node1" title="Possibly calculate a velocity scaling factor, due to proximity of singularity and direction of motion..." alt="" coords="5,5,264,47"/>
-<area shape="rect" id="node2" href="$kinematics_2cached__ik__kinematics__plugin_2CMakeLists_8txt.html#ae343b1e33488e0fe29b1e5fc4add139d" title=" " alt="" coords="312,13,351,39"/>
-</map>

@@ -1,0 +1,4 @@
+<map id="moveit_servo::velocityScalingFactorForSingularity" name="moveit_servo::velocityScalingFactorForSingularity">
+<area shape="rect" id="node1" title="Possibly calculate a velocity scaling factor, due to proximity of singularity and direction of motion..." alt="" coords="123,5,341,47"/>
+<area shape="rect" id="node2" href="$servo__calcs__unit__tests_8cpp.html#abc2c6e56840e09046938c1608f8cbf5a" title=" " alt="" coords="5,13,75,39"/>
+</map>

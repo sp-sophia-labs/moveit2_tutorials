@@ -116,7 +116,7 @@ $(function() {
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacemoveit__servo.html">moveit_servo</a></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<a class="code" href="namespacemoveit__servo.html#ac23c005d46e36b6782e787628a1407fa">TEST_F</a>(ServoFixture, SelfCollision)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<a class="code" href="namespacemoveit__servo.html#a8edf9cfa55723e9959c43228f5cb7f14">TEST_F</a>(ServoFixture, SelfCollision)</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">auto</span> log_time_start = node_-&gt;now();</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  ASSERT_TRUE(setupStartClient());</div>
@@ -131,7 +131,7 @@ $(function() {
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  watchForStatus(<a class="code" href="namespacemoveit__servo.html#a645be72fe1553806404002b7cb52b43fab45161de0aa61a411dac49050427d55a">moveit_servo::StatusCode::DECELERATE_FOR_COLLISION</a>);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="comment">// Publish some joint jog commands that will bring us to collision</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  rclcpp::Rate publish_loop_rate(test_parameters_-&gt;publish_hz);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  rclcpp::WallRate publish_loop_rate(test_parameters_-&gt;publish_hz);</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  log_time_start = node_-&gt;now();</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordtype">size_t</span> iterations = 0;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordflow">while</span> (!sawTrackedStatus() &amp;&amp; iterations++ &lt; test_parameters_-&gt;timeout_iterations)</div>
@@ -150,7 +150,7 @@ $(function() {
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  RCLCPP_INFO_STREAM(LOGGER, <span class="stringliteral">&quot;Wait for collision: &quot;</span> &lt;&lt; (log_time_end - log_time_start).seconds());</div>
 <div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="namespacemoveit__servo.html#a4a1787c2c61fd83e150e805c85d8e4c0">   78</a></span>&#160;}</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<a class="code" href="namespacemoveit__servo.html#ac23c005d46e36b6782e787628a1407fa">TEST_F</a>(ServoFixture, ExternalCollision)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<a class="code" href="namespacemoveit__servo.html#a8edf9cfa55723e9959c43228f5cb7f14">TEST_F</a>(ServoFixture, ExternalCollision)</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="comment">// NOTE: This test is meant to be run after the SelfCollision test</span></div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="comment">// It assumes the position is where the robot ends in SelfCollision test</span></div>
@@ -196,7 +196,7 @@ $(function() {
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  watchForStatus(<a class="code" href="namespacemoveit__servo.html#a645be72fe1553806404002b7cb52b43fab45161de0aa61a411dac49050427d55a">moveit_servo::StatusCode::DECELERATE_FOR_COLLISION</a>);</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="comment">// Now publish twist commands that collide with the box</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  rclcpp::Rate publish_loop_rate(test_parameters_-&gt;publish_hz);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  rclcpp::WallRate publish_loop_rate(test_parameters_-&gt;publish_hz);</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  log_time_start = node_-&gt;now();</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keywordtype">size_t</span> iterations = 0;</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keywordflow">while</span> (!sawTrackedStatus() &amp;&amp; iterations++ &lt; test_parameters_-&gt;timeout_iterations)</div>
@@ -229,9 +229,9 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacemoveit__servo_html_a645be72fe1553806404002b7cb52b43fab45161de0aa61a411dac49050427d55a"><div class="ttname"><a href="namespacemoveit__servo.html#a645be72fe1553806404002b7cb52b43fab45161de0aa61a411dac49050427d55a">moveit_servo::StatusCode::DECELERATE_FOR_COLLISION</a></div><div class="ttdeci">@ DECELERATE_FOR_COLLISION</div></div>
 <div class="ttc" id="atest__servo__collision_8cpp_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="test__servo__collision_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="test__servo__collision_8cpp_source.html#l00145">test_servo_collision.cpp:145</a></div></div>
+<div class="ttc" id="anamespacemoveit__servo_html_a8edf9cfa55723e9959c43228f5cb7f14"><div class="ttname"><a href="namespacemoveit__servo.html#a8edf9cfa55723e9959c43228f5cb7f14">moveit_servo::TEST_F</a></div><div class="ttdeci">TEST_F(PoseTrackingFixture, OutgoingMsgTest)</div><div class="ttdef"><b>Definition:</b> <a href="pose__tracking__test_8cpp_source.html#l00156">pose_tracking_test.cpp:156</a></div></div>
 <div class="ttc" id="anamespacemoveit__servo_html"><div class="ttname"><a href="namespacemoveit__servo.html">moveit_servo</a></div><div class="ttdef"><b>Definition:</b> <a href="collision__check_8h_source.html#l00052">collision_check.h:52</a></div></div>
 <div class="ttc" id="aservo__launch__test__common_8hpp_html"><div class="ttname"><a href="servo__launch__test__common_8hpp.html">servo_launch_test_common.hpp</a></div></div>
-<div class="ttc" id="anamespacemoveit__servo_html_ac23c005d46e36b6782e787628a1407fa"><div class="ttname"><a href="namespacemoveit__servo.html#ac23c005d46e36b6782e787628a1407fa">moveit_servo::TEST_F</a></div><div class="ttdeci">TEST_F(ServoFixture, SendTwistStampedTest)</div><div class="ttdef"><b>Definition:</b> <a href="basic__servo__tests_8cpp_source.html#l00087">basic_servo_tests.cpp:87</a></div></div>
 <div class="ttc" id="anamespacemoveit__servo_html_a645be72fe1553806404002b7cb52b43fab8de1fcd01d80732715798df84b0ee39"><div class="ttname"><a href="namespacemoveit__servo.html#a645be72fe1553806404002b7cb52b43fab8de1fcd01d80732715798df84b0ee39">moveit_servo::StatusCode::NO_WARNING</a></div><div class="ttdeci">@ NO_WARNING</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

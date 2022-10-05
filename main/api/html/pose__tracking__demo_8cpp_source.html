@@ -236,7 +236,7 @@ $(function() {
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                                   &lt;&lt; <a class="code" href="namespacemoveit__servo.html#a10063149c6b08a77854ceafff0b68e14">moveit_servo::POSE_TRACKING_STATUS_CODE_MAP</a>.at(tracking_status));</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  });</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  rclcpp::Rate loop_rate(50);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  rclcpp::WallRate loop_rate(50);</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; 500; ++i)</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  {</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="comment">// Modify the pose target a little bit each cycle</span></div>

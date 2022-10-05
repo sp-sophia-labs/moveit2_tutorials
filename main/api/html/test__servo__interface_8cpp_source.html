@@ -115,7 +115,7 @@ $(function() {
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacemoveit__servo.html">moveit_servo</a></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<a class="code" href="namespacemoveit__servo.html#a4802ee551f9163e7929d297f7a7948cc">TEST_F</a>(ServoFixture, SendTwistStampedTest)</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="namespacemoveit__servo.html#ac23c005d46e36b6782e787628a1407fa">   45</a></span>&#160;<a class="code" href="namespacemoveit__servo.html#a4802ee551f9163e7929d297f7a7948cc">TEST_F</a>(<a class="code" href="classmoveit__servo_1_1ServoFixture.html">ServoFixture</a>, SendTwistStampedTest)</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keyword">auto</span> log_time_start = node_-&gt;now();</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  ASSERT_TRUE(setupStartClient());</div>
@@ -131,7 +131,7 @@ $(function() {
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">auto</span> time_start = node_-&gt;now();</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="comment">// Publish N messages with some time between, ensure it&#39;s less than the timeout for Servo</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  rclcpp::Rate publish_loop_rate(test_parameters_-&gt;publish_hz);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  rclcpp::WallRate publish_loop_rate(test_parameters_-&gt;publish_hz);</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keywordtype">size_t</span> num_commands = 30;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  resetNumCommands();</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; num_commands &amp;&amp; rclcpp::ok(); ++i)</div>
@@ -156,7 +156,7 @@ $(function() {
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  EXPECT_LT(num_received, 1.5 * num_expected);</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<a class="code" href="namespacemoveit__servo.html#a4802ee551f9163e7929d297f7a7948cc">TEST_F</a>(ServoFixture, SendJointServoTest)</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="namespacemoveit__servo.html#a515a60c03984fa0b9117f530acf23970">   86</a></span>&#160;<a class="code" href="namespacemoveit__servo.html#a4802ee551f9163e7929d297f7a7948cc">TEST_F</a>(<a class="code" href="classmoveit__servo_1_1ServoFixture.html">ServoFixture</a>, SendJointServoTest)</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keyword">auto</span> log_time_start = node_-&gt;now();</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  ASSERT_TRUE(setupStartClient());</div>
@@ -172,7 +172,7 @@ $(function() {
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keyword">auto</span> time_start = node_-&gt;now();</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="comment">// Publish N messages with some time between, ensure it&#39;s less than the timeout for Servo</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  rclcpp::Rate publish_loop_rate(test_parameters_-&gt;publish_hz);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  rclcpp::WallRate publish_loop_rate(test_parameters_-&gt;publish_hz);</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keywordtype">size_t</span> num_commands = 30;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  resetNumCommands();</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; num_commands &amp;&amp; rclcpp::ok(); ++i)</div>

@@ -1495,36 +1495,37 @@ $(function() {
 <div class="line"><a name="l01422"></a><span class="lineno"> 1422</span>&#160;  <span class="keywordflow">if</span> (int_marker_display_)</div>
 <div class="line"><a name="l01423"></a><span class="lineno"> 1423</span>&#160;    int_marker_display_-&gt;setFixedFrame(fixed_frame_);</div>
 <div class="line"><a name="l01424"></a><span class="lineno"> 1424</span>&#160;  <span class="comment">// When the fixed frame changes we need to tell RViz to update the rendered interactive marker display</span></div>
-<div class="line"><a name="l01425"></a><span class="lineno"> 1425</span>&#160;  frame_-&gt;scene_marker_-&gt;requestPoseUpdate(frame_-&gt;scene_marker_-&gt;getPosition(),</div>
-<div class="line"><a name="l01426"></a><span class="lineno"> 1426</span>&#160;                                           frame_-&gt;scene_marker_-&gt;getOrientation());</div>
-<div class="line"><a name="l01427"></a><span class="lineno"> 1427</span>&#160;  changedPlanningGroup();</div>
-<div class="line"><a name="l01428"></a><span class="lineno"> 1428</span>&#160;}</div>
-<div class="line"><a name="l01429"></a><span class="lineno"> 1429</span>&#160; </div>
-<div class="line"><a name="l01430"></a><span class="lineno"> 1430</span>&#160;<span class="comment">// Pick and place</span></div>
-<div class="line"><a name="l01431"></a><span class="lineno"> 1431</span>&#160;<span class="keywordtype">void</span> MotionPlanningDisplay::clearPlaceLocationsDisplay()</div>
-<div class="line"><a name="l01432"></a><span class="lineno"> 1432</span>&#160;{</div>
-<div class="line"><a name="l01433"></a><span class="lineno"> 1433</span>&#160;  <span class="keywordflow">for</span> (std::shared_ptr&lt;rviz_rendering::Shape&gt;&amp; place_location_shape : place_locations_display_)</div>
-<div class="line"><a name="l01434"></a><span class="lineno"> 1434</span>&#160;    place_location_shape.reset();</div>
-<div class="line"><a name="l01435"></a><span class="lineno"> 1435</span>&#160;  place_locations_display_.clear();</div>
-<div class="line"><a name="l01436"></a><span class="lineno"> 1436</span>&#160;}</div>
-<div class="line"><a name="l01437"></a><span class="lineno"> 1437</span>&#160; </div>
-<div class="line"><a name="l01438"></a><span class="lineno"> 1438</span>&#160;<span class="keywordtype">void</span> MotionPlanningDisplay::visualizePlaceLocations(<span class="keyword">const</span> std::vector&lt;geometry_msgs::msg::PoseStamped&gt;&amp; place_poses)</div>
-<div class="line"><a name="l01439"></a><span class="lineno"> 1439</span>&#160;{</div>
-<div class="line"><a name="l01440"></a><span class="lineno"> 1440</span>&#160;  clearPlaceLocationsDisplay();</div>
-<div class="line"><a name="l01441"></a><span class="lineno"> 1441</span>&#160;  place_locations_display_.resize(place_poses.size());</div>
-<div class="line"><a name="l01442"></a><span class="lineno"> 1442</span>&#160;  <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; place_poses.size(); ++i)</div>
-<div class="line"><a name="l01443"></a><span class="lineno"> 1443</span>&#160;  {</div>
-<div class="line"><a name="l01444"></a><span class="lineno"> 1444</span>&#160;    place_locations_display_[i] =</div>
-<div class="line"><a name="l01445"></a><span class="lineno"> 1445</span>&#160;        std::make_shared&lt;rviz_rendering::Shape&gt;(rviz_rendering::Shape::Sphere, context_-&gt;getSceneManager());</div>
-<div class="line"><a name="l01446"></a><span class="lineno"> 1446</span>&#160;    place_locations_display_[i]-&gt;setColor(1.0<a class="code" href="namespaceround__collada__numbers.html#a271c352f9e000cc3be5a42a78f21083a">f</a>, 0.0<a class="code" href="namespaceround__collada__numbers.html#a271c352f9e000cc3be5a42a78f21083a">f</a>, 0.0<a class="code" href="namespaceround__collada__numbers.html#a271c352f9e000cc3be5a42a78f21083a">f</a>, 0.3<a class="code" href="namespaceround__collada__numbers.html#a271c352f9e000cc3be5a42a78f21083a">f</a>);</div>
-<div class="line"><a name="l01447"></a><span class="lineno"> 1447</span>&#160;    Ogre::Vector3 center(place_poses[i].pose.position.x, place_poses[i].pose.position.y, place_poses[i].pose.position.z);</div>
-<div class="line"><a name="l01448"></a><span class="lineno"> 1448</span>&#160;    Ogre::Vector3 extents(0.02, 0.02, 0.02);</div>
-<div class="line"><a name="l01449"></a><span class="lineno"> 1449</span>&#160;    place_locations_display_[i]-&gt;setScale(extents);</div>
-<div class="line"><a name="l01450"></a><span class="lineno"> 1450</span>&#160;    place_locations_display_[i]-&gt;setPosition(center);</div>
-<div class="line"><a name="l01451"></a><span class="lineno"><a class="line" href="classmoveit__rviz__plugin_1_1MotionPlanningDisplay.html#a80e8b80a8519dac8b9fbdc4e969643f2"> 1451</a></span>&#160;  }</div>
-<div class="line"><a name="l01452"></a><span class="lineno"> 1452</span>&#160;}</div>
-<div class="line"><a name="l01453"></a><span class="lineno"> 1453</span>&#160; </div>
-<div class="line"><a name="l01454"></a><span class="lineno"> 1454</span>&#160;}  <span class="comment">// namespace moveit_rviz_plugin</span></div>
+<div class="line"><a name="l01425"></a><span class="lineno"> 1425</span>&#160;  <span class="keywordflow">if</span> (frame_ &amp;&amp; frame_-&gt;scene_marker_)</div>
+<div class="line"><a name="l01426"></a><span class="lineno"> 1426</span>&#160;    frame_-&gt;scene_marker_-&gt;requestPoseUpdate(frame_-&gt;scene_marker_-&gt;getPosition(),</div>
+<div class="line"><a name="l01427"></a><span class="lineno"> 1427</span>&#160;                                             frame_-&gt;scene_marker_-&gt;getOrientation());</div>
+<div class="line"><a name="l01428"></a><span class="lineno"> 1428</span>&#160;  changedPlanningGroup();</div>
+<div class="line"><a name="l01429"></a><span class="lineno"> 1429</span>&#160;}</div>
+<div class="line"><a name="l01430"></a><span class="lineno"> 1430</span>&#160; </div>
+<div class="line"><a name="l01431"></a><span class="lineno"> 1431</span>&#160;<span class="comment">// Pick and place</span></div>
+<div class="line"><a name="l01432"></a><span class="lineno"> 1432</span>&#160;<span class="keywordtype">void</span> MotionPlanningDisplay::clearPlaceLocationsDisplay()</div>
+<div class="line"><a name="l01433"></a><span class="lineno"> 1433</span>&#160;{</div>
+<div class="line"><a name="l01434"></a><span class="lineno"> 1434</span>&#160;  <span class="keywordflow">for</span> (std::shared_ptr&lt;rviz_rendering::Shape&gt;&amp; place_location_shape : place_locations_display_)</div>
+<div class="line"><a name="l01435"></a><span class="lineno"> 1435</span>&#160;    place_location_shape.reset();</div>
+<div class="line"><a name="l01436"></a><span class="lineno"> 1436</span>&#160;  place_locations_display_.clear();</div>
+<div class="line"><a name="l01437"></a><span class="lineno"> 1437</span>&#160;}</div>
+<div class="line"><a name="l01438"></a><span class="lineno"> 1438</span>&#160; </div>
+<div class="line"><a name="l01439"></a><span class="lineno"> 1439</span>&#160;<span class="keywordtype">void</span> MotionPlanningDisplay::visualizePlaceLocations(<span class="keyword">const</span> std::vector&lt;geometry_msgs::msg::PoseStamped&gt;&amp; place_poses)</div>
+<div class="line"><a name="l01440"></a><span class="lineno"> 1440</span>&#160;{</div>
+<div class="line"><a name="l01441"></a><span class="lineno"> 1441</span>&#160;  clearPlaceLocationsDisplay();</div>
+<div class="line"><a name="l01442"></a><span class="lineno"> 1442</span>&#160;  place_locations_display_.resize(place_poses.size());</div>
+<div class="line"><a name="l01443"></a><span class="lineno"> 1443</span>&#160;  <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; place_poses.size(); ++i)</div>
+<div class="line"><a name="l01444"></a><span class="lineno"> 1444</span>&#160;  {</div>
+<div class="line"><a name="l01445"></a><span class="lineno"> 1445</span>&#160;    place_locations_display_[i] =</div>
+<div class="line"><a name="l01446"></a><span class="lineno"> 1446</span>&#160;        std::make_shared&lt;rviz_rendering::Shape&gt;(rviz_rendering::Shape::Sphere, context_-&gt;getSceneManager());</div>
+<div class="line"><a name="l01447"></a><span class="lineno"> 1447</span>&#160;    place_locations_display_[i]-&gt;setColor(1.0<a class="code" href="namespaceround__collada__numbers.html#a271c352f9e000cc3be5a42a78f21083a">f</a>, 0.0<a class="code" href="namespaceround__collada__numbers.html#a271c352f9e000cc3be5a42a78f21083a">f</a>, 0.0<a class="code" href="namespaceround__collada__numbers.html#a271c352f9e000cc3be5a42a78f21083a">f</a>, 0.3<a class="code" href="namespaceround__collada__numbers.html#a271c352f9e000cc3be5a42a78f21083a">f</a>);</div>
+<div class="line"><a name="l01448"></a><span class="lineno"> 1448</span>&#160;    Ogre::Vector3 center(place_poses[i].pose.position.x, place_poses[i].pose.position.y, place_poses[i].pose.position.z);</div>
+<div class="line"><a name="l01449"></a><span class="lineno"> 1449</span>&#160;    Ogre::Vector3 extents(0.02, 0.02, 0.02);</div>
+<div class="line"><a name="l01450"></a><span class="lineno"> 1450</span>&#160;    place_locations_display_[i]-&gt;setScale(extents);</div>
+<div class="line"><a name="l01451"></a><span class="lineno"><a class="line" href="classmoveit__rviz__plugin_1_1MotionPlanningDisplay.html#a80e8b80a8519dac8b9fbdc4e969643f2"> 1451</a></span>&#160;    place_locations_display_[i]-&gt;setPosition(center);</div>
+<div class="line"><a name="l01452"></a><span class="lineno"> 1452</span>&#160;  }</div>
+<div class="line"><a name="l01453"></a><span class="lineno"> 1453</span>&#160;}</div>
+<div class="line"><a name="l01454"></a><span class="lineno"> 1454</span>&#160; </div>
+<div class="line"><a name="l01455"></a><span class="lineno"> 1455</span>&#160;}  <span class="comment">// namespace moveit_rviz_plugin</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassmoveit_1_1core_1_1LinkModel_html"><div class="ttname"><a href="classmoveit_1_1core_1_1LinkModel.html">moveit::core::LinkModel</a></div><div class="ttdoc">A link from the robot. Contains the constant transform applied to the link and its geometry.</div><div class="ttdef"><b>Definition:</b> <a href="link__model_8h_source.html#l00071">link_model.h:71</a></div></div>
 <div class="ttc" id="ainteractive__marker__display_8h_html"><div class="ttname"><a href="interactive__marker__display_8h.html">interactive_marker_display.h</a></div></div>

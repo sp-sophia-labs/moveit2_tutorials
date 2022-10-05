@@ -418,8 +418,8 @@ $(function() {
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160; </div>
 <div class="line"><a name="l00346"></a><span class="lineno"><a class="line" href="namespaceompl__interface.html#a3010521aa3f126ab1b4c4c8027c19f34">  346</a></span>&#160;<a class="code" href="classompl__interface_1_1Bounds.html">Bounds</a> <a class="code" href="namespaceompl__interface.html#a3010521aa3f126ab1b4c4c8027c19f34">orientationConstraintMsgToBoundVector</a>(<span class="keyword">const</span> moveit_msgs::msg::OrientationConstraint&amp; ori_con)</div>
 <div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;{</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;  std::vector&lt;double&gt; dims = { ori_con.absolute_x_axis_tolerance, ori_con.absolute_y_axis_tolerance,</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                               ori_con.absolute_z_axis_tolerance };</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;  std::vector&lt;double&gt; dims = { ori_con.absolute_x_axis_tolerance * 2.0, ori_con.absolute_y_axis_tolerance * 2.0,</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                               ori_con.absolute_z_axis_tolerance * 2.0 };</div>
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160; </div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;  <span class="comment">// dimension of -1 signifies unconstrained parameter, so set to infinity</span></div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; dim : dims)</div>

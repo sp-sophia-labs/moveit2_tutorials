@@ -148,20 +148,30 @@ Functions</h2></td></tr>
 <tr class="separator:a10063149c6b08a77854ceafff0b68e14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18e079ac3a15166dd1c843c65141816b"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; <a class="el" href="namespacemoveit__servo.html#a645be72fe1553806404002b7cb52b43f">StatusCode</a>, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__servo.html#a18e079ac3a15166dd1c843c65141816b">SERVO_STATUS_CODE_MAP</a> ({ { <a class="el" href="namespacemoveit__servo.html#a645be72fe1553806404002b7cb52b43faccc0377a8afbf50e7094f5c23a8af223">StatusCode::INVALID</a>, &quot;Invalid&quot; }, { StatusCode::NO_WARNING, &quot;No warnings&quot; }, { StatusCode::DECELERATE_FOR_APPROACHING_SINGULARITY, &quot;Moving closer to a singularity, decelerating&quot; }, { StatusCode::HALT_FOR_SINGULARITY, &quot;Very close to a singularity, emergency stop&quot; }, { StatusCode::DECELERATE_FOR_COLLISION, &quot;Close to a collision, decelerating&quot; }, { StatusCode::HALT_FOR_COLLISION, &quot;Collision detected, emergency stop&quot; }, { StatusCode::JOINT_BOUND, &quot;Close to a joint bound (position or velocity), halting&quot; }, { StatusCode::DECELERATE_FOR_LEAVING_SINGULARITY, &quot;Moving away from a singularity, decelerating&quot; } })</td></tr>
 <tr class="separator:a18e079ac3a15166dd1c843c65141816b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac23c005d46e36b6782e787628a1407fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__servo.html#ac23c005d46e36b6782e787628a1407fa">TEST_F</a> (<a class="el" href="classmoveit__servo_1_1ServoFixture.html">ServoFixture</a>, SendTwistStampedTest)</td></tr>
-<tr class="separator:ac23c005d46e36b6782e787628a1407fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a515a60c03984fa0b9117f530acf23970"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__servo.html#a515a60c03984fa0b9117f530acf23970">TEST_F</a> (<a class="el" href="classmoveit__servo_1_1ServoFixture.html">ServoFixture</a>, SendJointServoTest)</td></tr>
-<tr class="separator:a515a60c03984fa0b9117f530acf23970"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab64f0bd28c506f4ebc2e7bbc108e991c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__servo.html#ab64f0bd28c506f4ebc2e7bbc108e991c">isNonZero</a> (const geometry_msgs::msg::TwistStamped &amp;msg)</td></tr>
+<tr class="memdesc:ab64f0bd28c506f4ebc2e7bbc108e991c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function for detecting zeroed message.  <a href="namespacemoveit__servo.html#ab64f0bd28c506f4ebc2e7bbc108e991c">More...</a><br /></td></tr>
+<tr class="separator:ab64f0bd28c506f4ebc2e7bbc108e991c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d1d2f73fe0dcff435431b27c27d5f51"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__servo.html#a6d1d2f73fe0dcff435431b27c27d5f51">isNonZero</a> (const control_msgs::msg::JointJog &amp;msg)</td></tr>
+<tr class="memdesc:a6d1d2f73fe0dcff435431b27c27d5f51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function for detecting zeroed message.  <a href="namespacemoveit__servo.html#a6d1d2f73fe0dcff435431b27c27d5f51">More...</a><br /></td></tr>
+<tr class="separator:a6d1d2f73fe0dcff435431b27c27d5f51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a952f17779c4995da9040695f4e048397"><td class="memItemLeft" align="right" valign="top">geometry_msgs::msg::TransformStamped&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__servo.html#a952f17779c4995da9040695f4e048397">convertIsometryToTransform</a> (const Eigen::Isometry3d &amp;eigen_tf, const std::string &amp;parent_frame, const std::string &amp;child_frame)</td></tr>
+<tr class="memdesc:a952f17779c4995da9040695f4e048397"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function for converting Eigen::Isometry3d to geometry_msgs/TransformStamped.  <a href="namespacemoveit__servo.html#a952f17779c4995da9040695f4e048397">More...</a><br /></td></tr>
+<tr class="separator:a952f17779c4995da9040695f4e048397"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bdbc028c68d4d317086a6e1cb434118"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__servo.html#a3bdbc028c68d4d317086a6e1cb434118">velocityScalingFactorForSingularity</a> (const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">moveit::core::JointModelGroup</a> *joint_model_group, const Eigen::VectorXd &amp;commanded_twist, const Eigen::JacobiSVD&lt; Eigen::MatrixXd &gt; &amp;svd, const Eigen::MatrixXd &amp;pseudo_inverse, const double hard_stop_singularity_threshold, const double lower_singularity_threshold, const double leaving_singularity_threshold_multiplier, rclcpp::Clock &amp;clock, moveit::core::RobotStatePtr current_state, <a class="el" href="namespacemoveit__servo.html#a645be72fe1553806404002b7cb52b43f">StatusCode</a> &amp;status)</td></tr>
+<tr class="memdesc:a3bdbc028c68d4d317086a6e1cb434118"><td class="mdescLeft">&#160;</td><td class="mdescRight">Possibly calculate a velocity scaling factor, due to proximity of singularity and direction of motion.  <a href="namespacemoveit__servo.html#a3bdbc028c68d4d317086a6e1cb434118">More...</a><br /></td></tr>
+<tr class="separator:a3bdbc028c68d4d317086a6e1cb434118"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8edf9cfa55723e9959c43228f5cb7f14"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__servo.html#a8edf9cfa55723e9959c43228f5cb7f14">TEST_F</a> (<a class="el" href="classmoveit__servo_1_1PoseTrackingFixture.html">PoseTrackingFixture</a>, OutgoingMsgTest)</td></tr>
 <tr class="separator:a8edf9cfa55723e9959c43228f5cb7f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a1787c2c61fd83e150e805c85d8e4c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__servo.html#a4a1787c2c61fd83e150e805c85d8e4c0">TEST_F</a> (<a class="el" href="classmoveit__servo_1_1ServoFixture.html">ServoFixture</a>, SelfCollision)</td></tr>
 <tr class="separator:a4a1787c2c61fd83e150e805c85d8e4c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ed7b63fb491b9582b6eb6323973f6ab"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__servo.html#a9ed7b63fb491b9582b6eb6323973f6ab">TEST_F</a> (<a class="el" href="classmoveit__servo_1_1ServoFixture.html">ServoFixture</a>, ExternalCollision)</td></tr>
 <tr class="separator:a9ed7b63fb491b9582b6eb6323973f6ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac23c005d46e36b6782e787628a1407fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__servo.html#ac23c005d46e36b6782e787628a1407fa">TEST_F</a> (<a class="el" href="classmoveit__servo_1_1ServoFixture.html">ServoFixture</a>, SendTwistStampedTest)</td></tr>
+<tr class="separator:ac23c005d46e36b6782e787628a1407fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a515a60c03984fa0b9117f530acf23970"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__servo.html#a515a60c03984fa0b9117f530acf23970">TEST_F</a> (<a class="el" href="classmoveit__servo_1_1ServoFixture.html">ServoFixture</a>, SendJointServoTest)</td></tr>
+<tr class="separator:a515a60c03984fa0b9117f530acf23970"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4802ee551f9163e7929d297f7a7948cc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__servo.html#a4802ee551f9163e7929d297f7a7948cc">TEST_F</a> (<a class="el" href="classmoveit__servo_1_1ServoFixture.html">ServoFixture</a>, DynamicParameterTest)</td></tr>
 <tr class="separator:a4802ee551f9163e7929d297f7a7948cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d8cec09ffe4ef0dfb2366c12739940e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__servo.html#a8d8cec09ffe4ef0dfb2366c12739940e">TEST_F</a> (<a class="el" href="classmoveit__servo_1_1ServoFixture.html">ServoFixture</a>, ReachSingular)</td></tr>
-<tr class="separator:a8d8cec09ffe4ef0dfb2366c12739940e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a5beddf2504c922f63942ca6bff5bef3a"></a>
@@ -284,7 +294,7 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="ab082f4a5d59a0b8b54c3b8bafccc02c4af975a4017d40171c079368ed6e9489dc"></a>JOINT_SPACE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00110">110</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00109">109</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -323,6 +333,54 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a952f17779c4995da9040695f4e048397"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a952f17779c4995da9040695f4e048397">&#9670;&nbsp;</a></span>convertIsometryToTransform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">geometry_msgs::msg::TransformStamped moveit_servo::convertIsometryToTransform </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::Isometry3d &amp;&#160;</td>
+          <td class="paramname"><em>eigen_tf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>parent_frame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>child_frame</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Helper function for converting Eigen::Isometry3d to geometry_msgs/TransformStamped. </p>
+
+<p class="definition">Definition at line <a class="el" href="moveit__ros_2moveit__servo_2src_2utilities_8cpp_source.html#l00064">64</a> of file <a class="el" href="moveit__ros_2moveit__servo_2src_2utilities_8cpp_source.html">utilities.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemoveit__servo_a952f17779c4995da9040695f4e048397_icgraph.png" border="0" usemap="#namespacemoveit__servo_a952f17779c4995da9040695f4e048397_icgraph" alt=""/></div>
+<map name="namespacemoveit__servo_a952f17779c4995da9040695f4e048397_icgraph" id="namespacemoveit__servo_a952f17779c4995da9040695f4e048397_icgraph">
+<area shape="rect" title="Helper function for converting Eigen::Isometry3d to geometry_msgs/TransformStamped." alt="" coords="277,39,504,80"/>
+<area shape="rect" href="classmoveit__servo_1_1ServoCalcs.html#aa92d47666afb7b8124e31fbb38ab6aec" title=" " alt="" coords="5,5,229,47"/>
+<area shape="rect" href="classmoveit__servo_1_1ServoCalcs.html#a0dbbdda0b40fa477937d06531441ae5d" title=" " alt="" coords="22,71,213,112"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="abc9531fe038667750a7a694471760cbb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abc9531fe038667750a7a694471760cbb">&#9670;&nbsp;</a></span>enforceVelocityLimits()</h2>
 
@@ -378,7 +436,61 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="namespacemoveit__servo_abc9531fe038667750a7a694471760cbb_icgraph.png" border="0" usemap="#namespacemoveit__servo_abc9531fe038667750a7a694471760cbb_icgraph" alt=""/></div>
 <map name="namespacemoveit__servo_abc9531fe038667750a7a694471760cbb_icgraph" id="namespacemoveit__servo_abc9531fe038667750a7a694471760cbb_icgraph">
 <area shape="rect" title="Decrease robot position change and velocity, if needed, to satisfy joint velocity limits." alt="" coords="123,5,343,47"/>
-<area shape="rect" href="enforce__limits__tests_8cpp.html#ac2637e106557268dacb4887a8dda41ea" title=" " alt="" coords="5,13,75,39"/>
+<area shape="rect" href="servo__calcs__unit__tests_8cpp.html#a09f1264b619ded2b123e2d70da88a7f6" title=" " alt="" coords="5,13,75,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6d1d2f73fe0dcff435431b27c27d5f51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d1d2f73fe0dcff435431b27c27d5f51">&#9670;&nbsp;</a></span>isNonZero() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool moveit_servo::isNonZero </td>
+          <td>(</td>
+          <td class="paramtype">const control_msgs::msg::JointJog &amp;&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Helper function for detecting zeroed message. </p>
+
+<p class="definition">Definition at line <a class="el" href="moveit__ros_2moveit__servo_2src_2utilities_8cpp_source.html#l00053">53</a> of file <a class="el" href="moveit__ros_2moveit__servo_2src_2utilities_8cpp_source.html">utilities.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab64f0bd28c506f4ebc2e7bbc108e991c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab64f0bd28c506f4ebc2e7bbc108e991c">&#9670;&nbsp;</a></span>isNonZero() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool moveit_servo::isNonZero </td>
+          <td>(</td>
+          <td class="paramtype">const geometry_msgs::msg::TwistStamped &amp;&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Helper function for detecting zeroed message. </p>
+
+<p class="definition">Definition at line <a class="el" href="moveit__ros_2moveit__servo_2src_2utilities_8cpp_source.html#l00046">46</a> of file <a class="el" href="moveit__ros_2moveit__servo_2src_2utilities_8cpp_source.html">utilities.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemoveit__servo_ab64f0bd28c506f4ebc2e7bbc108e991c_icgraph.png" border="0" usemap="#namespacemoveit__servo_ab64f0bd28c506f4ebc2e7bbc108e991c_icgraph" alt=""/></div>
+<map name="namespacemoveit__servo_ab64f0bd28c506f4ebc2e7bbc108e991c_icgraph" id="namespacemoveit__servo_ab64f0bd28c506f4ebc2e7bbc108e991c_icgraph">
+<area shape="rect" title="Helper function for detecting zeroed message." alt="" coords="244,46,431,73"/>
+<area shape="rect" href="classmoveit__servo_1_1ServoCalcs.html#a99b65d45b7da52e43a6bf9d313d8c459" title=" " alt="" coords="5,5,196,47"/>
+<area shape="rect" href="classmoveit__servo_1_1ServoCalcs.html#a33087effbb29d4a2864095a3ec14f9a1" title=" " alt="" coords="5,71,196,112"/>
 </map>
 </div>
 
@@ -421,7 +533,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <a id="a8edf9cfa55723e9959c43228f5cb7f14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8edf9cfa55723e9959c43228f5cb7f14">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[1/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8edf9cfa55723e9959c43228f5cb7f14">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -451,7 +563,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <a id="a4802ee551f9163e7929d297f7a7948cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4802ee551f9163e7929d297f7a7948cc">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[2/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4802ee551f9163e7929d297f7a7948cc">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -481,7 +593,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <a id="a9ed7b63fb491b9582b6eb6323973f6ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ed7b63fb491b9582b6eb6323973f6ab">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[3/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ed7b63fb491b9582b6eb6323973f6ab">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[3/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -510,38 +622,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a8d8cec09ffe4ef0dfb2366c12739940e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d8cec09ffe4ef0dfb2366c12739940e">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[4/7]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">moveit_servo::TEST_F </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classmoveit__servo_1_1ServoFixture.html">ServoFixture</a>&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">ReachSingular&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="test__servo__singularity_8cpp_source.html#l00078">78</a> of file <a class="el" href="test__servo__singularity_8cpp_source.html">test_servo_singularity.cpp</a>.</p>
-
-</div>
-</div>
 <a id="a4a1787c2c61fd83e150e805c85d8e4c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a1787c2c61fd83e150e805c85d8e4c0">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[5/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a1787c2c61fd83e150e805c85d8e4c0">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -571,7 +653,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <a id="a515a60c03984fa0b9117f530acf23970"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a515a60c03984fa0b9117f530acf23970">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[6/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a515a60c03984fa0b9117f530acf23970">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[5/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -596,12 +678,12 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basic__servo__tests_8cpp_source.html#l00137">137</a> of file <a class="el" href="basic__servo__tests_8cpp_source.html">basic_servo_tests.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__servo__interface_8cpp_source.html#l00086">86</a> of file <a class="el" href="test__servo__interface_8cpp_source.html">test_servo_interface.cpp</a>.</p>
 
 </div>
 </div>
 <a id="ac23c005d46e36b6782e787628a1407fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac23c005d46e36b6782e787628a1407fa">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[7/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac23c005d46e36b6782e787628a1407fa">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -626,7 +708,111 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="basic__servo__tests_8cpp_source.html#l00087">87</a> of file <a class="el" href="basic__servo__tests_8cpp_source.html">basic_servo_tests.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__servo__interface_8cpp_source.html#l00045">45</a> of file <a class="el" href="test__servo__interface_8cpp_source.html">test_servo_interface.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3bdbc028c68d4d317086a6e1cb434118"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bdbc028c68d4d317086a6e1cb434118">&#9670;&nbsp;</a></span>velocityScalingFactorForSingularity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double moveit_servo::velocityScalingFactorForSingularity </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">moveit::core::JointModelGroup</a> *&#160;</td>
+          <td class="paramname"><em>joint_model_group</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
+          <td class="paramname"><em>commanded_twist</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::JacobiSVD&lt; Eigen::MatrixXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>svd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::MatrixXd &amp;&#160;</td>
+          <td class="paramname"><em>pseudo_inverse</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>hard_stop_singularity_threshold</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>lower_singularity_threshold</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>leaving_singularity_threshold_multiplier</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">rclcpp::Clock &amp;&#160;</td>
+          <td class="paramname"><em>clock</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">moveit::core::RobotStatePtr&#160;</td>
+          <td class="paramname"><em>current_state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacemoveit__servo.html#a645be72fe1553806404002b7cb52b43f">StatusCode</a> &amp;&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Possibly calculate a velocity scaling factor, due to proximity of singularity and direction of motion. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">joint_model_group</td><td>The MoveIt group </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">commanded_twist</td><td>The commanded Cartesian twist </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">svd</td><td><a class="el" href="classA.html">A</a> singular value decomposition of the Jacobian </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pseudo_inverse</td><td>The pseudo-inverse of the Jacobian </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hard_stop_singularity_threshold</td><td>Halt if condition(Jacobian) &gt; hard_stop_singularity_threshold </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">lower_singularity_threshold</td><td>Decelerate if condition(Jacobian) &gt; lower_singularity_threshold </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">leaving_singularity_threshold_multiplier</td><td>Allow faster motion away from singularity </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">clock</td><td><a class="el" href="classA.html">A</a> ROS clock, for logging </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">current_state</td><td>The state of the robot. Used in internal calculations. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">status</td><td>Singularity status </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="moveit__ros_2moveit__servo_2src_2utilities_8cpp_source.html#l00088">88</a> of file <a class="el" href="moveit__ros_2moveit__servo_2src_2utilities_8cpp_source.html">utilities.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacemoveit__servo_a3bdbc028c68d4d317086a6e1cb434118_icgraph.png" border="0" usemap="#namespacemoveit__servo_a3bdbc028c68d4d317086a6e1cb434118_icgraph" alt=""/></div>
+<map name="namespacemoveit__servo_a3bdbc028c68d4d317086a6e1cb434118_icgraph" id="namespacemoveit__servo_a3bdbc028c68d4d317086a6e1cb434118_icgraph">
+<area shape="rect" title="Possibly calculate a velocity scaling factor, due to proximity of singularity and direction of motion..." alt="" coords="123,5,341,47"/>
+<area shape="rect" href="servo__calcs__unit__tests_8cpp.html#abc2c6e56840e09046938c1608f8cbf5a" title=" " alt="" coords="5,13,75,39"/>
+</map>
+</div>
 
 </div>
 </div>

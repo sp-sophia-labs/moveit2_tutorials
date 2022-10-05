@@ -174,9 +174,9 @@ Additional Inherited Members</h2></td></tr>
 <p>R_error = R_end_effector ^ (-1) * R_target R_error -&gt; rotation angle and axis (using Eigen3) error = angle * axis (vector with three elements)</p>
 <p>And then the constraints can be written as</p>
 <ul>
-<li>absolute_x_axis_tolerance / 2 &lt; error[0] &lt; absolute_x_axis_tolerance / 2</li>
-<li>absolute_y_axis_tolerance / 2 &lt; error[1] &lt; absolute_y_axis_tolerance / 2</li>
-<li>absolute_z_axis_tolerance / 2 &lt; error[2] &lt; absolute_z_axis_tolerance / 2</li>
+<li>absolute_x_axis_tolerance &lt; error[0] &lt; absolute_x_axis_tolerance</li>
+<li>absolute_y_axis_tolerance &lt; error[1] &lt; absolute_y_axis_tolerance</li>
+<li>absolute_z_axis_tolerance &lt; error[2] &lt; absolute_z_axis_tolerance</li>
 </ul>
 <p><b>IMPORTANT</b> It is NOT how orientation error is handled in the default MoveIt constraint samplers, where XYZ intrinsic euler angles are used. Using exponential coordinates is analog to how orientation error is calculated in the TrajOpt motion planner. </p>
 

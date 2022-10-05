@@ -116,7 +116,7 @@ $(function() {
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keywordtype">void</span> XmlSyntaxHighlighter::addTag(<span class="keyword">const</span> QString&amp; tag, <span class="keyword">const</span> QTextCharFormat&amp; format, <span class="keyword">const</span> QString&amp; parent)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__setup_1_1XmlSyntaxHighlighter.html#a93c8acf3359b98faa39ae3886c3ab0b4">XmlSyntaxHighlighter::addTag</a>(<span class="keyword">const</span> QString&amp; tag, <span class="keyword">const</span> QTextCharFormat&amp; format, <span class="keyword">const</span> QString&amp; parent)</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">const</span> QString start_pattern(<span class="stringliteral">&quot;&lt;%1.*?/?&gt;&quot;</span>);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  Rule rule;</div>
@@ -190,7 +190,7 @@ $(function() {
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keywordflow">return</span> next;</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="keywordtype">void</span> XmlSyntaxHighlighter::highlightBlock(<span class="keyword">const</span> QString&amp; <a class="code" href="namespaceround__collada__numbers.html#ac9e7c6037bfef6357cd8067931ad7ff7">text</a>)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__setup_1_1XmlSyntaxHighlighter.html#a20fe9704b138490af6869570b6830e8d">XmlSyntaxHighlighter::highlightBlock</a>(<span class="keyword">const</span> QString&amp; <a class="code" href="namespaceround__collada__numbers.html#ac9e7c6037bfef6357cd8067931ad7ff7">text</a>)</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;{</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  Rules::const_iterator active = previousBlockState() &lt; 0 ? rules.end() : rules.find(previousBlockState());</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordtype">int</span> unused = 0;</div>
@@ -202,7 +202,9 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="axml__syntax__highlighter_8hpp_html"><div class="ttname"><a href="xml__syntax__highlighter_8hpp.html">xml_syntax_highlighter.hpp</a></div></div>
 <div class="ttc" id="anamespacemoveit__setup_html"><div class="ttname"><a href="namespacemoveit__setup.html">moveit_setup</a></div><div class="ttdef"><b>Definition:</b> <a href="launch__bundle_8hpp_source.html#l00041">launch_bundle.hpp:41</a></div></div>
+<div class="ttc" id="aclassmoveit__setup_1_1XmlSyntaxHighlighter_html_a20fe9704b138490af6869570b6830e8d"><div class="ttname"><a href="classmoveit__setup_1_1XmlSyntaxHighlighter.html#a20fe9704b138490af6869570b6830e8d">moveit_setup::XmlSyntaxHighlighter::highlightBlock</a></div><div class="ttdeci">void highlightBlock(const QString &amp;text) override</div><div class="ttdef"><b>Definition:</b> <a href="xml__syntax__highlighter_8cpp_source.html#l00152">xml_syntax_highlighter.cpp:152</a></div></div>
 <div class="ttc" id="aclassmoveit__setup_1_1XmlSyntaxHighlighter_html_ade2e2dbc01bfa5845138ce30754bd294"><div class="ttname"><a href="classmoveit__setup_1_1XmlSyntaxHighlighter.html#ade2e2dbc01bfa5845138ce30754bd294">moveit_setup::XmlSyntaxHighlighter::XmlSyntaxHighlighter</a></div><div class="ttdeci">XmlSyntaxHighlighter(QTextDocument *parent=nullptr)</div><div class="ttdef"><b>Definition:</b> <a href="xml__syntax__highlighter_8cpp_source.html#l00074">xml_syntax_highlighter.cpp:74</a></div></div>
+<div class="ttc" id="aclassmoveit__setup_1_1XmlSyntaxHighlighter_html_a93c8acf3359b98faa39ae3886c3ab0b4"><div class="ttname"><a href="classmoveit__setup_1_1XmlSyntaxHighlighter.html#a93c8acf3359b98faa39ae3886c3ab0b4">moveit_setup::XmlSyntaxHighlighter::addTag</a></div><div class="ttdeci">void addTag(const QString &amp;tag, const QTextCharFormat &amp;format, const QString &amp;parent=QString())</div><div class="ttdef"><b>Definition:</b> <a href="xml__syntax__highlighter_8cpp_source.html#l00078">xml_syntax_highlighter.cpp:78</a></div></div>
 <div class="ttc" id="anamespaceround__collada__numbers_html_ac9e7c6037bfef6357cd8067931ad7ff7"><div class="ttname"><a href="namespaceround__collada__numbers.html#ac9e7c6037bfef6357cd8067931ad7ff7">round_collada_numbers.text</a></div><div class="ttdeci">text</div><div class="ttdef"><b>Definition:</b> <a href="round__collada__numbers_8py_source.html#l00090">round_collada_numbers.py:90</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
