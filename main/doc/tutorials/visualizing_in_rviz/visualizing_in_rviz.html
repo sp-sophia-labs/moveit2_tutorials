@@ -10,7 +10,7 @@
       <link rel="stylesheet" href="../../../_static/tabs.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/override.css" type="text/css" />
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
-    <link rel="canonical" href="https://moveit.picknik.ai/humble//rolling/doc/tutorials/visualizing_in_rviz/visualizing_in_rviz.html" />
+    <link rel="canonical" href="https://moveit.picknik.ai/rolling//rolling/doc/tutorials/visualizing_in_rviz/visualizing_in_rviz.html" />
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -235,14 +235,12 @@ Remote control is a really simple plugin that lets us have a button in RViz to i
 </pre></div>
 </div>
 <p>Each of the three closures capture <code class="docutils literal notranslate"><span class="pre">moveit_visual_tools</span></code> by reference and the last one captures a pointer to the joint model group object we are planning with.
-Each of these call a function on <code class="docutils literal notranslate"><span class="pre">moveit_visual_tools</span></code> that changes something in RViz.
-The first one, <code class="docutils literal notranslate"><span class="pre">draw_title</span></code> adds text one meter above the base of the robot.
-This is a useful way to show the state of your program from a high level.
-The second one calls a function called <code class="docutils literal notranslate"><span class="pre">prompt</span></code>.
-This function blocks your program until the user presses the <code class="docutils literal notranslate"><span class="pre">next</span></code> button in RViz.
-This is helpful for stepping through a program when debugging.
-The last one draws the tool path of a trajectory that we have planned.
-This is often helpful for understanding a planned trajectory from the perspective of the tool.</p>
+Each of these call a function on <code class="docutils literal notranslate"><span class="pre">moveit_visual_tools</span></code> that changes something in RViz.</p>
+<ul class="simple">
+<li><p>The first one, <code class="docutils literal notranslate"><span class="pre">draw_title</span></code> adds text one meter above the base of the robot. This is a useful way to show the state of your program from a high level.</p></li>
+<li><p>The second one calls a function called <code class="docutils literal notranslate"><span class="pre">prompt</span></code>. This function blocks your program until the user presses the <code class="docutils literal notranslate"><span class="pre">next</span></code> button in RViz. This is helpful for stepping through a program when debugging.</p></li>
+<li><p>The last one draws the tool path of a trajectory that we have planned. This is often helpful for understanding a planned trajectory from the perspective of the tool.</p></li>
+</ul>
 <p>You might be asking yourself why we would create lambdas like this, and the reason is simply to make the code that comes later easier to read and understand.
 As your write software, it is often helpful to break up your functionality into named functions which can be easily reused and tested on their own.
 You will see in the next section how we use these functions we created.</p>
@@ -283,7 +281,7 @@ Update your code for planning and executing to include these new features:</p>
 <span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="n">draw_title</span><span class="p">(</span><span class="s">&quot;Planning Failed!&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="w">  </span><span class="n">moveit_visual_tools</span><span class="p">.</span><span class="n">trigger</span><span class="p">();</span><span class="w"></span>
-<span class="w">  </span><span class="n">RCLCPP_ERROR</span><span class="p">(</span><span class="n">logger</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Planing failed!&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">RCLCPP_ERROR</span><span class="p">(</span><span class="n">logger</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Planning failed!&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>

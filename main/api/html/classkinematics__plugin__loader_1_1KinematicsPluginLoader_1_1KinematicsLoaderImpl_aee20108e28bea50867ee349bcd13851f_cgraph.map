@@ -1,0 +1,7 @@
+<map id="kinematics_plugin_loader::KinematicsPluginLoader::KinematicsLoaderImpl::allocKinematicsSolver" name="kinematics_plugin_loader::KinematicsPluginLoader::KinematicsLoaderImpl::allocKinematicsSolver">
+<area shape="rect" id="node1" title=" " alt="" coords="5,119,293,189"/>
+<area shape="rect" id="node2" href="$classkinematics__plugin__loader_1_1KinematicsPluginLoader_1_1KinematicsLoaderImpl.html#a21705804c3e5a36145996b1cbdf24f8b" title="Helper function to decide which, and how many, tip frames a planning group has." alt="" coords="341,5,592,76"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1JointModelGroup.html#a0a52d99429820b1c51838d9408078452" title="Get the default IK timeout." alt="" coords="365,100,569,141"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1JointModelGroup.html#a2f165c9374e28ac4052490819c790f45" title="Get the name of the joint group." alt="" coords="376,165,557,207"/>
+<area shape="rect" id="node5" href="$classmoveit_1_1core_1_1JointModelGroup.html#a854e1c3f7e18cd79755f3e687ad47ccd" title="Get the kinematic model this group is part of." alt="" coords="376,231,557,272"/>
+</map>

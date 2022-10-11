@@ -77,9 +77,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7b716b617a08f6f7b3cfc09274470fdc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkinematics__plugin__loader_1_1KinematicsPluginLoader_1_1KinematicsLoaderImpl.html#a7b716b617a08f6f7b3cfc09274470fdc">KinematicsLoaderImpl</a> (const rclcpp::Node::SharedPtr &amp;node, const std::string &amp;robot_description, const std::map&lt; std::string, std::vector&lt; std::string &gt;&gt; &amp;possible_kinematics_solvers, const std::map&lt; std::string, std::vector&lt; double &gt;&gt; &amp;search_res, const std::map&lt; std::string, std::vector&lt; std::string &gt;&gt; &amp;iksolver_to_tip_links)</td></tr>
-<tr class="memdesc:a7b716b617a08f6f7b3cfc09274470fdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pimpl Implementation of KinematicsLoader.  <a href="classkinematics__plugin__loader_1_1KinematicsPluginLoader_1_1KinematicsLoaderImpl.html#a7b716b617a08f6f7b3cfc09274470fdc">More...</a><br /></td></tr>
-<tr class="separator:a7b716b617a08f6f7b3cfc09274470fdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4244f62b028594f77028231495271fdf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkinematics__plugin__loader_1_1KinematicsPluginLoader_1_1KinematicsLoaderImpl.html#a4244f62b028594f77028231495271fdf">KinematicsLoaderImpl</a> (const rclcpp::Node::SharedPtr &amp;node, const std::string &amp;robot_description, const std::map&lt; std::string, std::string &gt; &amp;possible_kinematics_solvers, const std::map&lt; std::string, double &gt; &amp;search_res)</td></tr>
+<tr class="memdesc:a4244f62b028594f77028231495271fdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pimpl Implementation of KinematicsLoader.  <a href="classkinematics__plugin__loader_1_1KinematicsPluginLoader_1_1KinematicsLoaderImpl.html#a4244f62b028594f77028231495271fdf">More...</a><br /></td></tr>
+<tr class="separator:a4244f62b028594f77028231495271fdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21705804c3e5a36145996b1cbdf24f8b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkinematics__plugin__loader_1_1KinematicsPluginLoader_1_1KinematicsLoaderImpl.html#a21705804c3e5a36145996b1cbdf24f8b">chooseTipFrames</a> (const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">moveit::core::JointModelGroup</a> *jmg)</td></tr>
 <tr class="memdesc:a21705804c3e5a36145996b1cbdf24f8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to decide which, and how many, tip frames a planning group has.  <a href="classkinematics__plugin__loader_1_1KinematicsPluginLoader_1_1KinematicsLoaderImpl.html#a21705804c3e5a36145996b1cbdf24f8b">More...</a><br /></td></tr>
 <tr class="separator:a21705804c3e5a36145996b1cbdf24f8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -92,10 +92,10 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="kinematics__plugin__loader_8cpp_source.html#l00096">96</a> of file <a class="el" href="kinematics__plugin__loader_8cpp_source.html">kinematics_plugin_loader.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kinematics__plugin__loader_8cpp_source.html#l00085">85</a> of file <a class="el" href="kinematics__plugin__loader_8cpp_source.html">kinematics_plugin_loader.cpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a7b716b617a08f6f7b3cfc09274470fdc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b716b617a08f6f7b3cfc09274470fdc">&#9670;&nbsp;</a></span>KinematicsLoaderImpl()</h2>
+<a id="a4244f62b028594f77028231495271fdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4244f62b028594f77028231495271fdf">&#9670;&nbsp;</a></span>KinematicsLoaderImpl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -118,20 +118,14 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::map&lt; std::string, std::vector&lt; std::string &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">const std::map&lt; std::string, std::string &gt; &amp;&#160;</td>
           <td class="paramname"><em>possible_kinematics_solvers</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::map&lt; std::string, std::vector&lt; double &gt;&gt; &amp;&#160;</td>
-          <td class="paramname"><em>search_res</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::map&lt; std::string, std::vector&lt; std::string &gt;&gt; &amp;&#160;</td>
-          <td class="paramname"><em>iksolver_to_tip_links</em>&#160;</td>
+          <td class="paramtype">const std::map&lt; std::string, double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>search_res</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -152,21 +146,11 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">robot_description</td><td></td></tr>
     <tr><td class="paramname">possible_kinematics_solvers</td><td></td></tr>
     <tr><td class="paramname">search_res</td><td></td></tr>
-    <tr><td class="paramname">iksolver_to_tip_links</td><td>- a map between each ik solver and a vector of custom-specified tip link(s) </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="kinematics__plugin__loader_8cpp_source.html#l00106">106</a> of file <a class="el" href="kinematics__plugin__loader_8cpp_source.html">kinematics_plugin_loader.cpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classkinematics__plugin__loader_1_1KinematicsPluginLoader_1_1KinematicsLoaderImpl_a7b716b617a08f6f7b3cfc09274470fdc_cgraph.png" border="0" usemap="#classkinematics__plugin__loader_1_1KinematicsPluginLoader_1_1KinematicsLoaderImpl_a7b716b617a08f6f7b3cfc09274470fdc_cgraph" alt=""/></div>
-<map name="classkinematics__plugin__loader_1_1KinematicsPluginLoader_1_1KinematicsLoaderImpl_a7b716b617a08f6f7b3cfc09274470fdc_cgraph" id="classkinematics__plugin__loader_1_1KinematicsPluginLoader_1_1KinematicsLoaderImpl_a7b716b617a08f6f7b3cfc09274470fdc_cgraph">
-<area shape="rect" title="Pimpl Implementation of KinematicsLoader." alt="" coords="5,5,263,76"/>
-<area shape="rect" href="classmoveit_1_1core_1_1JointModelGroup.html#a2f165c9374e28ac4052490819c790f45" title="Get the name of the joint group." alt="" coords="311,20,492,61"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="kinematics__plugin__loader_8cpp_source.html#l00094">94</a> of file <a class="el" href="kinematics__plugin__loader_8cpp_source.html">kinematics_plugin_loader.cpp</a>.</p>
 
 </div>
 </div>
@@ -195,7 +179,19 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="kinematics__plugin__loader_8cpp_source.html#l00175">175</a> of file <a class="el" href="kinematics__plugin__loader_8cpp_source.html">kinematics_plugin_loader.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kinematics__plugin__loader_8cpp_source.html#l00146">146</a> of file <a class="el" href="kinematics__plugin__loader_8cpp_source.html">kinematics_plugin_loader.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classkinematics__plugin__loader_1_1KinematicsPluginLoader_1_1KinematicsLoaderImpl_aee20108e28bea50867ee349bcd13851f_cgraph.png" border="0" usemap="#classkinematics__plugin__loader_1_1KinematicsPluginLoader_1_1KinematicsLoaderImpl_aee20108e28bea50867ee349bcd13851f_cgraph" alt=""/></div>
+<map name="classkinematics__plugin__loader_1_1KinematicsPluginLoader_1_1KinematicsLoaderImpl_aee20108e28bea50867ee349bcd13851f_cgraph" id="classkinematics__plugin__loader_1_1KinematicsPluginLoader_1_1KinematicsLoaderImpl_aee20108e28bea50867ee349bcd13851f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,119,293,189"/>
+<area shape="rect" href="classkinematics__plugin__loader_1_1KinematicsPluginLoader_1_1KinematicsLoaderImpl.html#a21705804c3e5a36145996b1cbdf24f8b" title="Helper function to decide which, and how many, tip frames a planning group has." alt="" coords="341,5,592,76"/>
+<area shape="rect" href="classmoveit_1_1core_1_1JointModelGroup.html#a0a52d99429820b1c51838d9408078452" title="Get the default IK timeout." alt="" coords="365,100,569,141"/>
+<area shape="rect" href="classmoveit_1_1core_1_1JointModelGroup.html#a2f165c9374e28ac4052490819c790f45" title="Get the name of the joint group." alt="" coords="376,165,557,207"/>
+<area shape="rect" href="classmoveit_1_1core_1_1JointModelGroup.html#a854e1c3f7e18cd79755f3e687ad47ccd" title="Get the kinematic model this group is part of." alt="" coords="376,231,557,272"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -223,7 +219,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="kinematics__plugin__loader_8cpp_source.html#l00259">259</a> of file <a class="el" href="kinematics__plugin__loader_8cpp_source.html">kinematics_plugin_loader.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kinematics__plugin__loader_8cpp_source.html#l00222">222</a> of file <a class="el" href="kinematics__plugin__loader_8cpp_source.html">kinematics_plugin_loader.cpp</a>.</p>
 
 </div>
 </div>
@@ -260,7 +256,16 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>tips - list of valid links in a planning group to plan for </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="kinematics__plugin__loader_8cpp_source.html#l00133">133</a> of file <a class="el" href="kinematics__plugin__loader_8cpp_source.html">kinematics_plugin_loader.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kinematics__plugin__loader_8cpp_source.html#l00119">119</a> of file <a class="el" href="kinematics__plugin__loader_8cpp_source.html">kinematics_plugin_loader.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classkinematics__plugin__loader_1_1KinematicsPluginLoader_1_1KinematicsLoaderImpl_a21705804c3e5a36145996b1cbdf24f8b_icgraph.png" border="0" usemap="#classkinematics__plugin__loader_1_1KinematicsPluginLoader_1_1KinematicsLoaderImpl_a21705804c3e5a36145996b1cbdf24f8b_icgraph" alt=""/></div>
+<map name="classkinematics__plugin__loader_1_1KinematicsPluginLoader_1_1KinematicsLoaderImpl_a21705804c3e5a36145996b1cbdf24f8b_icgraph" id="classkinematics__plugin__loader_1_1KinematicsPluginLoader_1_1KinematicsLoaderImpl_a21705804c3e5a36145996b1cbdf24f8b_icgraph">
+<area shape="rect" title="Helper function to decide which, and how many, tip frames a planning group has." alt="" coords="341,5,592,76"/>
+<area shape="rect" href="classkinematics__plugin__loader_1_1KinematicsPluginLoader_1_1KinematicsLoaderImpl.html#aee20108e28bea50867ee349bcd13851f" title=" " alt="" coords="5,5,293,76"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -287,7 +292,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="kinematics__plugin__loader_8cpp_source.html#l00271">271</a> of file <a class="el" href="kinematics__plugin__loader_8cpp_source.html">kinematics_plugin_loader.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="kinematics__plugin__loader_8cpp_source.html#l00234">234</a> of file <a class="el" href="kinematics__plugin__loader_8cpp_source.html">kinematics_plugin_loader.cpp</a>.</p>
 
 </div>
 </div>

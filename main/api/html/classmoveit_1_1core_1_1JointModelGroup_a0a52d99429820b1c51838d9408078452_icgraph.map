@@ -1,4 +1,5 @@
 <map id="moveit::core::JointModelGroup::getDefaultIKTimeout" name="moveit::core::JointModelGroup::getDefaultIKTimeout">
-<area shape="rect" id="node1" title="Get the default IK timeout." alt="" coords="253,13,457,54"/>
-<area shape="rect" id="node2" href="$structrobot__interaction_1_1KinematicOptions.html#a8d147edc48d29b421f565b3a2733bc0a" title=" " alt="" coords="5,5,205,61"/>
+<area shape="rect" id="node1" title="Get the default IK timeout." alt="" coords="341,64,545,105"/>
+<area shape="rect" id="node2" href="$classkinematics__plugin__loader_1_1KinematicsPluginLoader_1_1KinematicsLoaderImpl.html#aee20108e28bea50867ee349bcd13851f" title=" " alt="" coords="5,5,293,76"/>
+<area shape="rect" id="node3" href="$structrobot__interaction_1_1KinematicOptions.html#a8d147edc48d29b421f565b3a2733bc0a" title=" " alt="" coords="49,101,249,157"/>
 </map>

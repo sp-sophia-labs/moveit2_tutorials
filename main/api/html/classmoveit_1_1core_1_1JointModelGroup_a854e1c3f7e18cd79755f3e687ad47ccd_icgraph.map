@@ -1,0 +1,4 @@
+<map id="moveit::core::JointModelGroup::getParentModel" name="moveit::core::JointModelGroup::getParentModel">
+<area shape="rect" id="node1" title="Get the kinematic model this group is part of." alt="" coords="341,20,523,61"/>
+<area shape="rect" id="node2" href="$classkinematics__plugin__loader_1_1KinematicsPluginLoader_1_1KinematicsLoaderImpl.html#aee20108e28bea50867ee349bcd13851f" title=" " alt="" coords="5,5,293,76"/>
+</map>

@@ -10,7 +10,7 @@
       <link rel="stylesheet" href="../../../_static/tabs.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/override.css" type="text/css" />
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
-    <link rel="canonical" href="https://moveit.picknik.ai/humble//rolling/doc/tutorials/your_first_project/your_first_project.html" />
+    <link rel="canonical" href="https://moveit.picknik.ai/rolling//rolling/doc/tutorials/your_first_project/your_first_project.html" />
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -197,7 +197,7 @@ This will create the necessary changes in the <code class="docutils literal notr
 </div>
 <div class="section" id="examine-the-code">
 <h4>2.2 Examine the code<a class="headerlink" href="#examine-the-code" title="Permalink to this headline"></a></h4>
-<p>The headers included at the top are just some standard C++ headers and the header for ROS and MoveIt that we will use later.</p>
+<p>The headers included at the top are just some standard C++ headers and the headers for ROS and MoveIt that we will use later.</p>
 <p>After that, we have the normal call to initialize rclcpp, and then we create our Node.</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>
 <span class="w">  </span><span class="s">&quot;hello_moveit&quot;</span><span class="p">,</span><span class="w"></span>
@@ -222,7 +222,7 @@ The second is needed for MoveIt because of how we use ROS Parameters.</p>
 </div>
 <div class="section" id="plan-and-execute-using-movegroupinterface">
 <h3>3 Plan and Execute using MoveGroupInterface<a class="headerlink" href="#plan-and-execute-using-movegroupinterface" title="Permalink to this headline"></a></h3>
-<p>In place of the comment that says “Next step goes here,” add this code:</p>
+<p>In place of the comment that says “Next step goes here”, add this code:</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create the MoveIt MoveGroup Interface</span>
 <span class="k">using</span><span class="w"> </span><span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span><span class="p">;</span><span class="w"></span>
 <span class="k">auto</span><span class="w"> </span><span class="n">move_group_interface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MoveGroupInterface</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;panda_arm&quot;</span><span class="p">);</span><span class="w"></span>
@@ -249,7 +249,7 @@ The second is needed for MoveIt because of how we use ROS Parameters.</p>
 <span class="k">if</span><span class="p">(</span><span class="n">success</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="n">move_group_interface</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">plan</span><span class="p">);</span><span class="w"></span>
 <span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">RCLCPP_ERROR</span><span class="p">(</span><span class="n">logger</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Planing failed!&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">RCLCPP_ERROR</span><span class="p">(</span><span class="n">logger</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Planning failed!&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
@@ -283,7 +283,8 @@ If it fails to find that within 10 seconds, it prints this error and terminates 
 </div>
 <div class="section" id="id2">
 <h4>3.2 Examine the code<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h4>
-<p>The first thing we do is create the MoveGroupInterface. This object will be used to interact with move_group, which allows us to plan and execute trajectories.
+<p>The first thing we do is create the <code class="docutils literal notranslate"><span class="pre">MoveGroupInterface</span></code>.
+This object will be used to interact with <code class="docutils literal notranslate"><span class="pre">move_group</span></code>, which allows us to plan and execute trajectories.
 Note that this is the only mutable object that we create in this program.
 Another thing to take note of is the second argument to the <code class="docutils literal notranslate"><span class="pre">MoveGroupInterface</span></code> object we are creating here: <code class="docutils literal notranslate"><span class="pre">&quot;panda_arm&quot;</span></code>.
 That is the group of joints as defined in the robot description that we are going to operate on with this <code class="docutils literal notranslate"><span class="pre">MoveGroupInterface</span></code>.</p>
@@ -291,10 +292,12 @@ That is the group of joints as defined in the robot description that we are goin
 <span class="k">auto</span><span class="w"> </span><span class="n">move_group_interface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MoveGroupInterface</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;panda_arm&quot;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Then, we set our target pose and plan. Note that only the target pose is set (via <code class="docutils literal notranslate"><span class="pre">setPoseTarget</span></code>. The starting pose is implicitly the position published by joint state publisher, which could be changed using the <code class="docutils literal notranslate"><span class="pre">MoveGroupInterface::setStartState*</span></code> family of functions (but is not in this tutorial).</p>
+<p>Then, we set our target pose and plan. Note that only the target pose is set (via <code class="docutils literal notranslate"><span class="pre">setPoseTarget</span></code>).
+The starting pose is implicitly the position published by the joint state publisher, which could be changed using the
+<code class="docutils literal notranslate"><span class="pre">MoveGroupInterface::setStartState*</span></code> family of functions (but is not in this tutorial).</p>
 <p>One more thing to note about this next section is the use of lambdas for constructing the message type <code class="docutils literal notranslate"><span class="pre">target_pose</span></code> and planning.
 This is a pattern you’ll find in modern C++ codebases that enables writing in a more declarative style.
-For more information about this pattern there is a couple of links at the end of this tutorial.</p>
+For more information about this pattern there are a couple of links at the end of this tutorial.</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Set a target Pose</span>
 <span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">target_pose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]{</span><span class="w"></span>
 <span class="w">  </span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Pose</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span><span class="w"></span>
