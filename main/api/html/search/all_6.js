@@ -81,7 +81,7 @@ var searchData=
   ['fix_5fstart_5fstate_5fcollision_2ecpp_1707',['fix_start_state_collision.cpp',['../fix__start__state__collision_8cpp.html',1,'']]],
   ['fix_5fstart_5fstate_5fpath_5fconstraints_2ecpp_1708',['fix_start_state_path_constraints.cpp',['../fix__start__state__path__constraints_8cpp.html',1,'']]],
   ['fix_5fworkspace_5fbounds_2ecpp_1709',['fix_workspace_bounds.cpp',['../fix__workspace__bounds_8cpp.html',1,'']]],
-  ['fixchainedcontrollers_1710',['fixChainedControllers',['../classmoveit__ros__control__interface_1_1MoveItControllerManager.html#a5f6f3358603e94add4221196304e558f',1,'moveit_ros_control_interface::MoveItControllerManager']]],
+  ['fixchainedcontrollers_1710',['fixChainedControllers',['../classmoveit__ros__control__interface_1_1Ros2ControlManager.html#acfe2ce65506f0e0e20e29c0124a85d2f',1,'moveit_ros_control_interface::Ros2ControlManager']]],
   ['fixed_1711',['FIXED',['../classmoveit_1_1core_1_1JointModel.html#a6c1c75a4d125fd607f48bff4ca019b2ca3bb8e782777500ec4a3fd63ab9841d74',1,'moveit::core::JointModel::FIXED()'],['../namespacerobot__interaction_1_1InteractionStyle.html#a93fff5c84d4bf83018257f994ef88058aa44a292ae97a59f172cc6dbffff2d507',1,'robot_interaction::InteractionStyle::FIXED()']]],
   ['fixed_5fjoint_5fmodel_2ecpp_1712',['fixed_joint_model.cpp',['../fixed__joint__model_8cpp.html',1,'']]],
   ['fixed_5fjoint_5fmodel_2eh_1713',['fixed_joint_model.h',['../fixed__joint__model_8h.html',1,'']]],

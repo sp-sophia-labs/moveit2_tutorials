@@ -25,8 +25,10 @@ var searchData=
   ['ros2controllers_7815',['ROS2Controllers',['../classmoveit__setup_1_1controllers_1_1ROS2Controllers.html',1,'moveit_setup::controllers']]],
   ['ros2controllersconfig_7816',['ROS2ControllersConfig',['../classmoveit__setup_1_1controllers_1_1ROS2ControllersConfig.html',1,'moveit_setup::controllers']]],
   ['ros2controllerswidget_7817',['ROS2ControllersWidget',['../classmoveit__setup_1_1controllers_1_1ROS2ControllersWidget.html',1,'moveit_setup::controllers']]],
-  ['roscppinitializer_7818',['ROScppInitializer',['../classmoveit_1_1py__bindings__tools_1_1ROScppInitializer.html',1,'moveit::py_bindings_tools']]],
-  ['rotatedheaderview_7819',['RotatedHeaderView',['../classmoveit__setup_1_1srdf__setup_1_1RotatedHeaderView.html',1,'moveit_setup::srdf_setup']]],
-  ['ruckigsmoothing_7820',['RuckigSmoothing',['../classtrajectory__processing_1_1RuckigSmoothing.html',1,'trajectory_processing']]],
-  ['rvizpanel_7821',['RVizPanel',['../classmoveit__setup_1_1RVizPanel.html',1,'moveit_setup']]]
+  ['ros2controlmanager_7818',['Ros2ControlManager',['../classmoveit__ros__control__interface_1_1Ros2ControlManager.html',1,'moveit_ros_control_interface']]],
+  ['ros2controlmultimanager_7819',['Ros2ControlMultiManager',['../classmoveit__ros__control__interface_1_1Ros2ControlMultiManager.html',1,'moveit_ros_control_interface']]],
+  ['roscppinitializer_7820',['ROScppInitializer',['../classmoveit_1_1py__bindings__tools_1_1ROScppInitializer.html',1,'moveit::py_bindings_tools']]],
+  ['rotatedheaderview_7821',['RotatedHeaderView',['../classmoveit__setup_1_1srdf__setup_1_1RotatedHeaderView.html',1,'moveit_setup::srdf_setup']]],
+  ['ruckigsmoothing_7822',['RuckigSmoothing',['../classtrajectory__processing_1_1RuckigSmoothing.html',1,'trajectory_processing']]],
+  ['rvizpanel_7823',['RVizPanel',['../classmoveit__setup_1_1RVizPanel.html',1,'moveit_setup']]]
 ];

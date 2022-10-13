@@ -84,11 +84,11 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__control__interface_1_1JointTrajectoryControllerAllocator.html">JointTrajectoryControllerAllocator</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple allocator for <a class="el" href="classmoveit__simple__controller__manager_1_1FollowJointTrajectoryControllerHandle.html">moveit_simple_controller_manager::FollowJointTrajectoryControllerHandle</a> instances.  <a href="classmoveit__ros__control__interface_1_1JointTrajectoryControllerAllocator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__control__interface_1_1MoveItControllerManager.html">MoveItControllerManager</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classmoveit__controller__manager_1_1MoveItControllerManager.html" title="MoveIt does not enforce how controllers are implemented. To make your controllers usable by MoveIt,...">moveit_controller_manager::MoveItControllerManager</a> sub class that interfaces one ros_control controller_manager instance. All services and names are relative to ns_.  <a href="classmoveit__ros__control__interface_1_1MoveItControllerManager.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__control__interface_1_1Ros2ControlManager.html">Ros2ControlManager</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">moveit_controller_manager::Ros2ControlManager sub class that interfaces one ros_control controller_manager instance. All services and names are relative to ns_.  <a href="classmoveit__ros__control__interface_1_1Ros2ControlManager.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__control__interface_1_1MoveItMultiControllerManager.html">MoveItMultiControllerManager</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classmoveit__ros__control__interface_1_1MoveItMultiControllerManager.html" title="MoveItMultiControllerManager discovers all running ros_control node and delegates member function to ...">MoveItMultiControllerManager</a> discovers all running ros_control node and delegates member function to the corresponding <a class="el" href="classmoveit__ros__control__interface_1_1MoveItControllerManager.html" title="moveit_controller_manager::MoveItControllerManager sub class that interfaces one ros_control controll...">MoveItControllerManager</a> instances.  <a href="classmoveit__ros__control__interface_1_1MoveItMultiControllerManager.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__ros__control__interface_1_1Ros2ControlMultiManager.html">Ros2ControlMultiManager</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classmoveit__ros__control__interface_1_1Ros2ControlMultiManager.html" title="Ros2ControlMultiManager discovers all running ros_control node and delegates member function to the c...">Ros2ControlMultiManager</a> discovers all running ros_control node and delegates member function to the corresponding <a class="el" href="classmoveit__ros__control__interface_1_1Ros2ControlManager.html" title="moveit_controller_manager::Ros2ControlManager sub class that interfaces one ros_control controller_ma...">Ros2ControlManager</a> instances.  <a href="classmoveit__ros__control__interface_1_1Ros2ControlMultiManager.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -98,8 +98,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a05e6ae5ede13fe1a1c8b80645844c2cb"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__ros__control__interface.html#a05e6ae5ede13fe1a1c8b80645844c2cb">parseJointNameFromResource</a> (const std::string &amp;claimed_interface)</td></tr>
 <tr class="memdesc:a05e6ae5ede13fe1a1c8b80645844c2cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get joint name from resource name reported by ros2_control, since claimed_interfaces return by ros2_control will have the interface name as suffix joint_name/INTERFACE_TYPE.  <a href="namespacemoveit__ros__control__interface.html#a05e6ae5ede13fe1a1c8b80645844c2cb">More...</a><br /></td></tr>
 <tr class="separator:a05e6ae5ede13fe1a1c8b80645844c2cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2eaa975ae3e93aba9cefd961e0a162eb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__ros__control__interface.html#a2eaa975ae3e93aba9cefd961e0a162eb">MOVEIT_CLASS_FORWARD</a> (<a class="el" href="classmoveit__ros__control__interface_1_1MoveItControllerManager.html">MoveItControllerManager</a>)</td></tr>
-<tr class="separator:a2eaa975ae3e93aba9cefd961e0a162eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b3b0570525a5db4ce010bef7e9fb6fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__ros__control__interface.html#a0b3b0570525a5db4ce010bef7e9fb6fd">MOVEIT_CLASS_FORWARD</a> (<a class="el" href="classmoveit__ros__control__interface_1_1Ros2ControlManager.html">Ros2ControlManager</a>)</td></tr>
+<tr class="separator:a0b3b0570525a5db4ce010bef7e9fb6fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a53bf69039098ec9b2875488095d977c5"></a>
@@ -120,8 +120,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a2eaa975ae3e93aba9cefd961e0a162eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2eaa975ae3e93aba9cefd961e0a162eb">&#9670;&nbsp;</a></span>MOVEIT_CLASS_FORWARD() <span class="overload">[2/2]</span></h2>
+<a id="a0b3b0570525a5db4ce010bef7e9fb6fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b3b0570525a5db4ce010bef7e9fb6fd">&#9670;&nbsp;</a></span>MOVEIT_CLASS_FORWARD() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -129,7 +129,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">moveit_ros_control_interface::MOVEIT_CLASS_FORWARD </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classmoveit__ros__control__interface_1_1MoveItControllerManager.html">MoveItControllerManager</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classmoveit__ros__control__interface_1_1Ros2ControlManager.html">Ros2ControlManager</a>&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

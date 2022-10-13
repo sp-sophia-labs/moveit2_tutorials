@@ -1,0 +1,4 @@
+<map id="moveit_ros_control_interface::Ros2ControlManager" name="moveit_ros_control_interface::Ros2ControlManager">
+<area shape="rect" id="node1" title="moveit_controller_manager::Ros2ControlManager sub class that interfaces one ros_control controller_ma..." alt="" coords="5,95,236,136"/>
+<area shape="rect" id="node2" href="$classmoveit__controller__manager_1_1MoveItControllerManager.html" title="MoveIt does not enforce how controllers are implemented. To make your controllers usable by MoveIt,..." alt="" coords="19,5,222,47"/>
+</map>

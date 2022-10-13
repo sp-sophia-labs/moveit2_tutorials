@@ -53,7 +53,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../setup_assistant/setup_assistant_tutorial.html">MoveIt Setup Assistant</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../urdf_srdf/urdf_srdf_tutorial.html">URDF and SRDF</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Low Level Controllers</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#moveit-controller-manager">MoveIt Controller Manager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#moveit-controller-managers">MoveIt Controller Managers</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#moveit-controller-interfaces">MoveIt Controller Interfaces</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#optional-allowed-trajectory-execution-duration-parameters">Optional Allowed Trajectory Execution Duration Parameters</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#debugging-information">Debugging Information</a></li>
@@ -130,9 +130,9 @@
 <li><p>Launch the corresponding <code class="code docutils literal notranslate"><span class="pre">ros2_control</span></code> JointTrajectoryControllers. This is separate from the MoveIt2 ecosystem. <a class="reference external" href="https://github.com/ros-controls/ros2_control_demos">Example ros2_control launching</a>. Each JointTrajectoryController provides an action interface. Given the yaml file above, MoveIt automatically connects to this action interface.</p></li>
 <li><p>Note: it is not required to use <code class="code docutils literal notranslate"><span class="pre">ros2_control</span></code> for your robot. You could write a proprietary action interface. In practice, 99% of users choose <code class="code docutils literal notranslate"><span class="pre">ros2_control</span></code>.</p></li>
 </ol>
-<div class="section" id="moveit-controller-manager">
-<h2>MoveIt Controller Manager<a class="headerlink" href="#moveit-controller-manager" title="Permalink to this headline"></a></h2>
-<p>If using the Move Group or MoveItCpp, a MoveItControllerManager (MICM) can be used to manage controller switching. The MICM can parse the joint names in any command coming from MoveIt and activate the appropriate controllers. For example, it can automatically switch between controlling two manipulators in a single joint group at once to a single manipulator. To use a MICM, just set <code class="code docutils literal notranslate"><span class="pre">moveit_manage_controllers</span> <span class="pre">=</span> <span class="pre">true</span></code> in the launch file. <a class="reference external" href="https://github.com/ros-planning/moveit_resources/blob/ros2/panda_moveit_config/launch/demo.launch.py">Example MICM launch file</a>. Frankly, the MICM is a candidate to be deprecated soon and we do not recommend its use.</p>
+<div class="section" id="moveit-controller-managers">
+<h2>MoveIt Controller Managers<a class="headerlink" href="#moveit-controller-managers" title="Permalink to this headline"></a></h2>
+<p>The base class of controller managers is called MoveItControllerManager (MICM). One of the child classes of MICM is known as Ros2ControlManager (R2CM) and it is the best way to interface with ros2_control. The R2CM can parse the joint names in a trajectory command coming from MoveIt and activate the appropriate controllers. For example, it can automatically switch between controlling two manipulators in a single joint group at once to a single manipulator. To use a R2CM, just set <code class="code docutils literal notranslate"><span class="pre">moveit_manage_controllers</span> <span class="pre">=</span> <span class="pre">true</span></code> in the launch file. <a class="reference external" href="https://github.com/ros-planning/moveit_resources/blob/ros2/panda_moveit_config/launch/demo.launch.py">Example R2CM launch file</a>.</p>
 </div>
 <div class="section" id="moveit-controller-interfaces">
 <h2>MoveIt Controller Interfaces<a class="headerlink" href="#moveit-controller-interfaces" title="Permalink to this headline"></a></h2>
@@ -233,9 +233,8 @@
 </div>
 <div class="section" id="controllers-for-multiple-nodes">
 <h2>Controllers for Multiple Nodes<a class="headerlink" href="#controllers-for-multiple-nodes" title="Permalink to this headline"></a></h2>
-<p>(TODO: update for ROS2)</p>
-<p>MoveItMultiControllerManager can be used for more than one ros_control nodes. It works by creating several MoveItControllerManagers, one for each node. It instantiates them with their respective namespace and takes care of proper delegation. To use it must be added to the launch file.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">param</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;moveit_controller_manager&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;moveit_ros_control_interface::MoveItMultiControllerManager&quot;</span> <span class="o">/&gt;</span>
+<p>There is a variation on the Ros2ControlManager, the Ros2ControlMultiManager. Ros2ControlMultiManager can be used for more than one ros_control nodes. It works by creating several Ros2ControlManagers, one for each node. It instantiates them with their respective namespace and takes care of proper delegation. To use it must be added to the launch file.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">param</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;moveit_controller_manager&quot;</span> <span class="n">value</span><span class="o">=</span><span class="s2">&quot;moveit_ros_control_interface::Ros2ControlMultiManager&quot;</span> <span class="o">/&gt;</span>
 </pre></div>
 </div>
 </div>
