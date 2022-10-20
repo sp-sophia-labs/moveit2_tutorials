@@ -225,7 +225,7 @@ $(function() {
 <div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="classchomp_1_1ChompTrajectory.html#a7a00be5c785764c1a801c8e6364ca32d">  152</a></span>&#160; </div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="comment">// calculate the spline coefficients for each joint:</span></div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="comment">// (these are for the special case of zero start and end vel and acc)</span></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  std::vector&lt;double[6]&gt; coeff(num_joints_);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  std::vector&lt;std::array&lt;double, 6&gt;&gt; coeff(num_joints_);</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; num_joints_; ++i)</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  {</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordtype">double</span> x0 = (*this)(start_index, i);</div>

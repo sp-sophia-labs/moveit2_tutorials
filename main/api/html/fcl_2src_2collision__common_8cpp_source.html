@@ -229,7 +229,7 @@ $(function() {
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    RCLCPP_DEBUG(LOGGER, <span class="stringliteral">&quot;Actually checking collisions between %s and %s&quot;</span>, cd1-&gt;getID().c_str(), cd2-&gt;getID().c_str());</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="comment">// see if we need to compute a contact</span></div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  std::size_t want_contact_count = 0;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  std::size_t want_contact_count{ 0 };</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  <span class="keywordflow">if</span> (cdata-&gt;req_-&gt;contacts)</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">if</span> (cdata-&gt;res_-&gt;contact_count &lt; cdata-&gt;req_-&gt;max_contacts)</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    {</div>
@@ -322,7 +322,7 @@ $(function() {
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;      <span class="comment">// otherwise, we need to compute more things</span></div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;      <span class="keywordtype">bool</span> enable_cost = cdata-&gt;req_-&gt;cost;</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;      std::size_t num_max_cost_sources = cdata-&gt;req_-&gt;max_cost_sources;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      <span class="keywordtype">bool</span> enable_contact = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      <span class="keywordtype">bool</span> enable_contact{ <span class="keyword">true</span> };</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;      <a class="code" href="namespacefcl.html#aa1415f01fe8e7588e8ab66db32c0759f">fcl::CollisionResultd</a> col_result;</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;      <span class="keywordtype">int</span> num_contacts =</div>
