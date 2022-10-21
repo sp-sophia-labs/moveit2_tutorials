@@ -10,7 +10,7 @@
       <link rel="stylesheet" href="../../../_static/tabs.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/override.css" type="text/css" />
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
-    <link rel="canonical" href="https://moveit.picknik.ai/humble//rolling/doc/tutorials/quickstart_in_rviz/quickstart_in_rviz_tutorial.html" />
+    <link rel="canonical" href="https://moveit.picknik.ai/rolling//rolling/doc/tutorials/quickstart_in_rviz/quickstart_in_rviz_tutorial.html" />
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -130,7 +130,7 @@
 <p>This tutorial will teach you how to create motion plans in MoveIt using RViz and the MoveIt Display plugin. Rviz is the primary visualizer in ROS and a very useful tool for debugging robotics. The MoveIt Display plugin allows you to setup virtual environments (planning scenes), create start and goal states for the robot interactively, test various motion planners, and visualize the output. Let’s get started!</p>
 <div class="section" id="getting-started">
 <h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline"></a></h2>
-<p>If you haven’t already done so, make sure you’ve completed the steps in <a class="reference internal" href="../getting_started/getting_started.html"><span class="doc">Getting Started</span></a>.</p>
+<p>If you haven’t already done so, make sure you’ve completed the steps in <a class="reference internal" href="../getting_started/getting_started.html"><span class="doc">Getting Started</span></a> or our <a class="reference internal" href="../../how_to_guides/how_to_setup_docker_containers_in_ubuntu.html"><span class="doc">Docker Guide</span></a>.</p>
 </div>
 <div class="section" id="step-1-launch-the-demo-and-configure-the-plugin">
 <h2>Step 1: Launch the Demo and Configure the Plugin<a class="headerlink" href="#step-1-launch-the-demo-and-configure-the-plugin" title="Permalink to this headline"></a></h2>
@@ -286,7 +286,11 @@ Click on topic name to expose topic-name drop-down.</p></li>
 </div>
 <div class="section" id="saving-your-configuration">
 <h3>Saving Your Configuration<a class="headerlink" href="#saving-your-configuration" title="Permalink to this headline"></a></h3>
-<p>RViz enables you to save your configuration under <code class="docutils literal notranslate"><span class="pre">File-&gt;Save</span> <span class="pre">Config</span></code>. You should do this before continuing on to the next tutorials.</p>
+<p>RViz enables you to save your configuration under <code class="docutils literal notranslate"><span class="pre">File-&gt;Save</span> <span class="pre">Config</span></code>. You should do this before continuing on to the next tutorials. If you choose to save your configuration under a new name, you can use <code class="docutils literal notranslate"><span class="pre">File-&gt;Save</span> <span class="pre">Config</span> <span class="pre">As</span></code> and refer to your configuration file using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">launch</span> <span class="n">moveit2_tutorials</span> <span class="n">demo</span><span class="o">.</span><span class="n">launch</span><span class="o">.</span><span class="n">py</span> <span class="n">rviz_config</span><span class="o">:=</span><span class="n">your_rviz_config</span><span class="o">.</span><span class="n">rviz</span>
+</pre></div>
+</div>
+<p>Replace <code class="docutils literal notranslate"><span class="pre">your_rviz_config.rviz</span></code> with the name of the file you saved to <code class="docutils literal notranslate"><span class="pre">moveit2_tutorials/doc/tutorials/quickstart_in_rviz/launch/</span></code> and build the workspace so it can be found.</p>
 </div>
 <div class="section" id="next-tutorial">
 <h3>Next Tutorial<a class="headerlink" href="#next-tutorial" title="Permalink to this headline"></a></h3>
