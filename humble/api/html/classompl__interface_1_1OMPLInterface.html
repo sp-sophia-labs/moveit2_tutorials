@@ -121,10 +121,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a513acb676a660d6ef38cd1bc87aa3b62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9210622b2cbbedd34bf0492d1abe3081"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classompl__interface_1_1OMPLInterface.html#a9210622b2cbbedd34bf0492d1abe3081">isUsingConstraintsApproximations</a> () const</td></tr>
 <tr class="separator:a9210622b2cbbedd34bf0492d1abe3081"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a82f4a53552499d1222eb7cd3c654e7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classompl__interface_1_1OMPLInterface.html#a6a82f4a53552499d1222eb7cd3c654e7">simplifySolutions</a> () const</td></tr>
-<tr class="separator:a6a82f4a53552499d1222eb7cd3c654e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea48b26229d1ec78e54b8471fd0db100"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classompl__interface_1_1OMPLInterface.html#aea48b26229d1ec78e54b8471fd0db100">simplifySolutions</a> (bool flag)</td></tr>
-<tr class="separator:aea48b26229d1ec78e54b8471fd0db100"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16fa70164546fd5a1356a3593754127b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classompl__interface_1_1OMPLInterface.html#a16fa70164546fd5a1356a3593754127b">printStatus</a> ()</td></tr>
 <tr class="memdesc:a16fa70164546fd5a1356a3593754127b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the status of this node.  <a href="classompl__interface_1_1OMPLInterface.html#a16fa70164546fd5a1356a3593754127b">More...</a><br /></td></tr>
 <tr class="separator:a16fa70164546fd5a1356a3593754127b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,8 +136,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a4eb6c03a78a16c03f2a313805f54270e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classompl__interface_1_1OMPLInterface.html#a4eb6c03a78a16c03f2a313805f54270e">loadConstraintSamplers</a> ()</td></tr>
 <tr class="memdesc:a4eb6c03a78a16c03f2a313805f54270e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the additional plugins for sampling constraints.  <a href="classompl__interface_1_1OMPLInterface.html#a4eb6c03a78a16c03f2a313805f54270e">More...</a><br /></td></tr>
 <tr class="separator:a4eb6c03a78a16c03f2a313805f54270e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab23b8b75036d8cec2bd0498db15ca5bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classompl__interface_1_1OMPLInterface.html#ab23b8b75036d8cec2bd0498db15ca5bc">configureContext</a> (const ModelBasedPlanningContextPtr &amp;context) const</td></tr>
-<tr class="separator:ab23b8b75036d8cec2bd0498db15ca5bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef28916e794ba8cefd26e4471fd3c05d"><td class="memItemLeft" align="right" valign="top">ModelBasedPlanningContextPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classompl__interface_1_1OMPLInterface.html#aef28916e794ba8cefd26e4471fd3c05d">prepareForSolve</a> (const <a class="el" href="namespaceplanning__interface.html#a1307e10a0a3b9ca03406d777b9a938a3">planning_interface::MotionPlanRequest</a> &amp;req, const planning_scene::PlanningSceneConstPtr &amp;planning_scene, moveit_msgs::msg::MoveItErrorCodes *error_code, unsigned int *attempts, double *timeout) const</td></tr>
 <tr class="memdesc:aef28916e794ba8cefd26e4471fd3c05d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the OMPL planning context for a new planning request.  <a href="classompl__interface_1_1OMPLInterface.html#aef28916e794ba8cefd26e4471fd3c05d">More...</a><br /></td></tr>
 <tr class="separator:aef28916e794ba8cefd26e4471fd3c05d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,8 +156,6 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a6b6e24e44294a494ff7ca90d044f24e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f76d62a2423a6e9858cf7a44bc580df"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classompl__interface_1_1OMPLInterface.html#a0f76d62a2423a6e9858cf7a44bc580df">use_constraints_approximations_</a></td></tr>
 <tr class="separator:a0f76d62a2423a6e9858cf7a44bc580df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6cf7f0d771efbc0124007bf118fa623"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classompl__interface_1_1OMPLInterface.html#ac6cf7f0d771efbc0124007bf118fa623">simplify_solutions_</a></td></tr>
-<tr class="separator:ac6cf7f0d771efbc0124007bf118fa623"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class defines the interface to the motion planners in OMPL </p>
@@ -248,7 +240,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Initialize OMPL-based planning for a particular robot model. ROS configuration is read from the specified Node. However, planner configurations are used as specified in <em>pconfig</em> instead of reading them from ROS parameters. </p>
 
-<p class="definition">Definition at line <a class="el" href="ompl__interface_8cpp_source.html#l00096">96</a> of file <a class="el" href="ompl__interface_8cpp_source.html">ompl_interface.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ompl__interface_8cpp_source.html#l00095">95</a> of file <a class="el" href="ompl__interface_8cpp_source.html">ompl_interface.cpp</a>.</p>
 
 </div>
 </div>
@@ -278,43 +270,6 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab23b8b75036d8cec2bd0498db15ca5bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab23b8b75036d8cec2bd0498db15ca5bc">&#9670;&nbsp;</a></span>configureContext()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ompl_interface::OMPLInterface::configureContext </td>
-          <td>(</td>
-          <td class="paramtype">const ModelBasedPlanningContextPtr &amp;&#160;</td>
-          <td class="paramname"><em>context</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="ompl__interface_8cpp_source.html#l00154">154</a> of file <a class="el" href="ompl__interface_8cpp_source.html">ompl_interface.cpp</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classompl__interface_1_1OMPLInterface_ab23b8b75036d8cec2bd0498db15ca5bc_icgraph.png" border="0" usemap="#classompl__interface_1_1OMPLInterface_ab23b8b75036d8cec2bd0498db15ca5bc_icgraph" alt=""/></div>
-<map name="classompl__interface_1_1OMPLInterface_ab23b8b75036d8cec2bd0498db15ca5bc_icgraph" id="classompl__interface_1_1OMPLInterface_ab23b8b75036d8cec2bd0498db15ca5bc_icgraph">
-<area shape="rect" title=" " alt="" coords="276,5,499,47"/>
-<area shape="rect" href="classompl__interface_1_1OMPLInterface.html#a551fec3f29ff48a3c6653c7e9380c07b" title="Specify configurations for the planners." alt="" coords="5,5,228,47"/>
-</map>
-</div>
-
-</div>
-</div>
 <a id="a2a27198901886c37039ad8b8a39804e9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2a27198901886c37039ad8b8a39804e9">&#9670;&nbsp;</a></span>getConstraintSamplerManager() <span class="overload">[1/2]</span></h2>
 
@@ -430,7 +385,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ompl__interface_8cpp_source.html#l00133">133</a> of file <a class="el" href="ompl__interface_8cpp_source.html">ompl_interface.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ompl__interface_8cpp_source.html#l00131">131</a> of file <a class="el" href="ompl__interface_8cpp_source.html">ompl_interface.cpp</a>.</p>
 
 </div>
 </div>
@@ -466,7 +421,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ompl__interface_8cpp_source.html#l00141">141</a> of file <a class="el" href="ompl__interface_8cpp_source.html">ompl_interface.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ompl__interface_8cpp_source.html#l00139">139</a> of file <a class="el" href="ompl__interface_8cpp_source.html">ompl_interface.cpp</a>.</p>
 
 </div>
 </div>
@@ -576,7 +531,7 @@ Here is the caller graph for this function:</div>
 
 <p>Load the additional plugins for sampling constraints. </p>
 
-<p class="definition">Definition at line <a class="el" href="ompl__interface_8cpp_source.html#l00159">159</a> of file <a class="el" href="ompl__interface_8cpp_source.html">ompl_interface.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ompl__interface_8cpp_source.html#l00148">148</a> of file <a class="el" href="ompl__interface_8cpp_source.html">ompl_interface.cpp</a>.</p>
 
 </div>
 </div>
@@ -628,7 +583,7 @@ Here is the caller graph for this function:</div>
 
 <p>Load planner configurations for specified group into planner_config. </p>
 
-<p class="definition">Definition at line <a class="el" href="ompl__interface_8cpp_source.html#l00166">166</a> of file <a class="el" href="ompl__interface_8cpp_source.html">ompl_interface.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ompl__interface_8cpp_source.html#l00155">155</a> of file <a class="el" href="ompl__interface_8cpp_source.html">ompl_interface.cpp</a>.</p>
 
 </div>
 </div>
@@ -657,7 +612,7 @@ Here is the caller graph for this function:</div>
 
 <p>Configure the planners. </p>
 
-<p class="definition">Definition at line <a class="el" href="ompl__interface_8cpp_source.html#l00196">196</a> of file <a class="el" href="ompl__interface_8cpp_source.html">ompl_interface.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ompl__interface_8cpp_source.html#l00185">185</a> of file <a class="el" href="ompl__interface_8cpp_source.html">ompl_interface.cpp</a>.</p>
 
 </div>
 </div>
@@ -734,7 +689,7 @@ Here is the caller graph for this function:</div>
 
 <p>Print the status of this node. </p>
 
-<p class="definition">Definition at line <a class="el" href="ompl__interface_8cpp_source.html#l00292">292</a> of file <a class="el" href="ompl__interface_8cpp_source.html">ompl_interface.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ompl__interface_8cpp_source.html#l00281">281</a> of file <a class="el" href="ompl__interface_8cpp_source.html">ompl_interface.cpp</a>.</p>
 
 </div>
 </div>
@@ -762,71 +717,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="ompl__interface_8cpp_source.html#l00114">114</a> of file <a class="el" href="ompl__interface_8cpp_source.html">ompl_interface.cpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classompl__interface_1_1OMPLInterface_a551fec3f29ff48a3c6653c7e9380c07b_cgraph.png" border="0" usemap="#classompl__interface_1_1OMPLInterface_a551fec3f29ff48a3c6653c7e9380c07b_cgraph" alt=""/></div>
-<map name="classompl__interface_1_1OMPLInterface_a551fec3f29ff48a3c6653c7e9380c07b_cgraph" id="classompl__interface_1_1OMPLInterface_a551fec3f29ff48a3c6653c7e9380c07b_cgraph">
-<area shape="rect" title="Specify configurations for the planners." alt="" coords="5,5,228,47"/>
-<area shape="rect" href="classompl__interface_1_1OMPLInterface.html#ab23b8b75036d8cec2bd0498db15ca5bc" title=" " alt="" coords="276,5,499,47"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a6a82f4a53552499d1222eb7cd3c654e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a82f4a53552499d1222eb7cd3c654e7">&#9670;&nbsp;</a></span>simplifySolutions() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ompl_interface::OMPLInterface::simplifySolutions </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="ompl__interface_8h_source.html#l00150">150</a> of file <a class="el" href="ompl__interface_8h_source.html">ompl_interface.h</a>.</p>
-
-</div>
-</div>
-<a id="aea48b26229d1ec78e54b8471fd0db100"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea48b26229d1ec78e54b8471fd0db100">&#9670;&nbsp;</a></span>simplifySolutions() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ompl_interface::OMPLInterface::simplifySolutions </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>flag</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="ompl__interface_8h_source.html#l00155">155</a> of file <a class="el" href="ompl__interface_8h_source.html">ompl_interface.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ompl__interface_8cpp_source.html#l00112">112</a> of file <a class="el" href="ompl__interface_8cpp_source.html">ompl_interface.cpp</a>.</p>
 
 </div>
 </div>
@@ -879,7 +770,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ompl__interface_8h_source.html#l00189">189</a> of file <a class="el" href="ompl__interface_8h_source.html">ompl_interface.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ompl__interface_8h_source.html#l00178">178</a> of file <a class="el" href="ompl__interface_8h_source.html">ompl_interface.h</a>.</p>
 
 </div>
 </div>
@@ -903,7 +794,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ompl__interface_8h_source.html#l00191">191</a> of file <a class="el" href="ompl__interface_8h_source.html">ompl_interface.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ompl__interface_8h_source.html#l00180">180</a> of file <a class="el" href="ompl__interface_8h_source.html">ompl_interface.h</a>.</p>
 
 </div>
 </div>
@@ -927,7 +818,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ompl__interface_8h_source.html#l00183">183</a> of file <a class="el" href="ompl__interface_8h_source.html">ompl_interface.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ompl__interface_8h_source.html#l00172">172</a> of file <a class="el" href="ompl__interface_8h_source.html">ompl_interface.h</a>.</p>
 
 </div>
 </div>
@@ -953,7 +844,7 @@ Here is the call graph for this function:</div>
 
 <p>The ROS node. </p>
 
-<p class="definition">Definition at line <a class="el" href="ompl__interface_8h_source.html#l00184">184</a> of file <a class="el" href="ompl__interface_8h_source.html">ompl_interface.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ompl__interface_8h_source.html#l00173">173</a> of file <a class="el" href="ompl__interface_8h_source.html">ompl_interface.h</a>.</p>
 
 </div>
 </div>
@@ -979,31 +870,7 @@ Here is the call graph for this function:</div>
 
 <p>The kinematic model for which motion plans are computed. </p>
 
-<p class="definition">Definition at line <a class="el" href="ompl__interface_8h_source.html#l00187">187</a> of file <a class="el" href="ompl__interface_8h_source.html">ompl_interface.h</a>.</p>
-
-</div>
-</div>
-<a id="ac6cf7f0d771efbc0124007bf118fa623"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6cf7f0d771efbc0124007bf118fa623">&#9670;&nbsp;</a></span>simplify_solutions_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ompl_interface::OMPLInterface::simplify_solutions_</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="ompl__interface_8h_source.html#l00195">195</a> of file <a class="el" href="ompl__interface_8h_source.html">ompl_interface.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ompl__interface_8h_source.html#l00176">176</a> of file <a class="el" href="ompl__interface_8h_source.html">ompl_interface.h</a>.</p>
 
 </div>
 </div>
@@ -1027,7 +894,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ompl__interface_8h_source.html#l00193">193</a> of file <a class="el" href="ompl__interface_8h_source.html">ompl_interface.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ompl__interface_8h_source.html#l00182">182</a> of file <a class="el" href="ompl__interface_8h_source.html">ompl_interface.h</a>.</p>
 
 </div>
 </div>

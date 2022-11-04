@@ -127,20 +127,21 @@ Enumerations</h2></td></tr>
 <tr class="memitem:a645be72fe1553806404002b7cb52b43f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__servo.html#a645be72fe1553806404002b7cb52b43f">moveit_servo::StatusCode</a> : int8_t { <br />
 &#160;&#160;<a class="el" href="namespacemoveit__servo.html#a645be72fe1553806404002b7cb52b43faccc0377a8afbf50e7094f5c23a8af223">moveit_servo::StatusCode::INVALID</a> = -1, 
 <a class="el" href="namespacemoveit__servo.html#a645be72fe1553806404002b7cb52b43fab8de1fcd01d80732715798df84b0ee39">moveit_servo::StatusCode::NO_WARNING</a> = 0, 
-<a class="el" href="namespacemoveit__servo.html#a645be72fe1553806404002b7cb52b43fad9d430ee528c6cbe176acef30a1ddfa4">moveit_servo::StatusCode::DECELERATE_FOR_SINGULARITY</a> = 1, 
+<a class="el" href="namespacemoveit__servo.html#a645be72fe1553806404002b7cb52b43faa055aec7b5cb6f4fbffc8cf23834c2de">moveit_servo::StatusCode::DECELERATE_FOR_APPROACHING_SINGULARITY</a> = 1, 
 <a class="el" href="namespacemoveit__servo.html#a645be72fe1553806404002b7cb52b43fa1f729c771424c9a81df6723c41c25500">moveit_servo::StatusCode::HALT_FOR_SINGULARITY</a> = 2, 
 <br />
 &#160;&#160;<a class="el" href="namespacemoveit__servo.html#a645be72fe1553806404002b7cb52b43fab45161de0aa61a411dac49050427d55a">moveit_servo::StatusCode::DECELERATE_FOR_COLLISION</a> = 3, 
 <a class="el" href="namespacemoveit__servo.html#a645be72fe1553806404002b7cb52b43fae17e47b42ff0afd357b70b7c35e72ade">moveit_servo::StatusCode::HALT_FOR_COLLISION</a> = 4, 
-<a class="el" href="namespacemoveit__servo.html#a645be72fe1553806404002b7cb52b43fa15c813efb637d0f8d5bbf446de3e0bf4">moveit_servo::StatusCode::JOINT_BOUND</a> = 5
+<a class="el" href="namespacemoveit__servo.html#a645be72fe1553806404002b7cb52b43fa15c813efb637d0f8d5bbf446de3e0bf4">moveit_servo::StatusCode::JOINT_BOUND</a> = 5, 
+<a class="el" href="namespacemoveit__servo.html#a645be72fe1553806404002b7cb52b43faa5cf16dab4cca11bf71edc0de6902d56">moveit_servo::StatusCode::DECELERATE_FOR_LEAVING_SINGULARITY</a> = 6
 <br />
  }</td></tr>
 <tr class="separator:a645be72fe1553806404002b7cb52b43f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ad7fbffcbbd4f9cea09e63e0a1c81c624"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; StatusCode, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__servo.html#ad7fbffcbbd4f9cea09e63e0a1c81c624">moveit_servo::SERVO_STATUS_CODE_MAP</a> ({ { StatusCode::INVALID, &quot;Invalid&quot; }, { StatusCode::NO_WARNING, &quot;No warnings&quot; }, { StatusCode::DECELERATE_FOR_SINGULARITY, &quot;Close to a singularity, decelerating&quot; }, { StatusCode::HALT_FOR_SINGULARITY, &quot;Very close to a singularity, emergency stop&quot; }, { StatusCode::DECELERATE_FOR_COLLISION, &quot;Close to a collision, decelerating&quot; }, { StatusCode::HALT_FOR_COLLISION, &quot;Collision detected, emergency stop&quot; }, { StatusCode::JOINT_BOUND, &quot;Close to a joint bound (position or velocity), halting&quot; } })</td></tr>
-<tr class="separator:ad7fbffcbbd4f9cea09e63e0a1c81c624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18e079ac3a15166dd1c843c65141816b"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; StatusCode, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__servo.html#a18e079ac3a15166dd1c843c65141816b">moveit_servo::SERVO_STATUS_CODE_MAP</a> ({ { StatusCode::INVALID, &quot;Invalid&quot; }, { StatusCode::NO_WARNING, &quot;No warnings&quot; }, { StatusCode::DECELERATE_FOR_APPROACHING_SINGULARITY, &quot;Moving closer to a singularity, decelerating&quot; }, { StatusCode::HALT_FOR_SINGULARITY, &quot;Very close to a singularity, emergency stop&quot; }, { StatusCode::DECELERATE_FOR_COLLISION, &quot;Close to a collision, decelerating&quot; }, { StatusCode::HALT_FOR_COLLISION, &quot;Collision detected, emergency stop&quot; }, { StatusCode::JOINT_BOUND, &quot;Close to a joint bound (position or velocity), halting&quot; }, { StatusCode::DECELERATE_FOR_LEAVING_SINGULARITY, &quot;Moving away from a singularity, decelerating&quot; } })</td></tr>
+<tr class="separator:a18e079ac3a15166dd1c843c65141816b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

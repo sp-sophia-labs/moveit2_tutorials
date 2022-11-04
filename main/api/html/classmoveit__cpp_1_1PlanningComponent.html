@@ -81,22 +81,27 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1MultiPipelinePlanRequestParameters.html">MultiPipelinePlanRequestParameters</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Planner parameters provided with the MotionPlanRequest.  <a href="structmoveit__cpp_1_1PlanningComponent_1_1MultiPipelinePlanRequestParameters.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1PlanRequestParameters.html">PlanRequestParameters</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Planner parameters provided with the MotionPlanRequest.  <a href="structmoveit__cpp_1_1PlanningComponent_1_1PlanRequestParameters.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1PlanSolution.html">PlanSolution</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The representation of a plan solution.  <a href="structmoveit__cpp_1_1PlanningComponent_1_1PlanSolution.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:ae6352d7155433ba59624c26021b0b538"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#ae6352d7155433ba59624c26021b0b538">MoveItErrorCode</a> = <a class="el" href="classmoveit_1_1core_1_1MoveItErrorCode.html">moveit::core::MoveItErrorCode</a></td></tr>
 <tr class="separator:ae6352d7155433ba59624c26021b0b538"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c463689c88ee9d9c85878014a30d3e5"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; <a class="el" href="structplanning__interface_1_1MotionPlanResponse.html">planning_interface::MotionPlanResponse</a>(const std::vector&lt; <a class="el" href="structplanning__interface_1_1MotionPlanResponse.html">planning_interface::MotionPlanResponse</a> &gt; &amp;solutions)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a7c463689c88ee9d9c85878014a30d3e5">SolutionCallbackFunction</a></td></tr>
+<tr class="memdesc:a7c463689c88ee9d9c85878014a30d3e5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classA.html">A</a> solution callback function type for the parallel planning API of planning component <br  />
+  <a href="classmoveit__cpp_1_1PlanningComponent.html#a7c463689c88ee9d9c85878014a30d3e5">More...</a><br /></td></tr>
+<tr class="separator:a7c463689c88ee9d9c85878014a30d3e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82867c70d29374c3eedfd09f515794e7"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; bool(const <a class="el" href="classmoveit__cpp_1_1PlanSolutions.html">PlanSolutions</a> &amp;solutions, const <a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1MultiPipelinePlanRequestParameters.html">MultiPipelinePlanRequestParameters</a> &amp;plan_request_parameters)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a82867c70d29374c3eedfd09f515794e7">StoppingCriterionFunction</a></td></tr>
+<tr class="memdesc:a82867c70d29374c3eedfd09f515794e7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classA.html">A</a> stopping criterion callback function for the parallel planning API of planning component.  <a href="classmoveit__cpp_1_1PlanningComponent.html#a82867c70d29374c3eedfd09f515794e7">More...</a><br /></td></tr>
+<tr class="separator:a82867c70d29374c3eedfd09f515794e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a84e14f989ae69bf68e79a0e1afce1a46"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a84e14f989ae69bf68e79a0e1afce1a46">MOVEIT_STRUCT_FORWARD</a> (<a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1PlanSolution.html">PlanSolution</a>)</td></tr>
-<tr class="separator:a84e14f989ae69bf68e79a0e1afce1a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb85bebb94c2fb211b62ce34e49500f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#abb85bebb94c2fb211b62ce34e49500f1">PlanningComponent</a> (const std::string &amp;group_name, const rclcpp::Node::SharedPtr &amp;node)</td></tr>
 <tr class="memdesc:abb85bebb94c2fb211b62ce34e49500f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="classmoveit__cpp_1_1PlanningComponent.html#abb85bebb94c2fb211b62ce34e49500f1">More...</a><br /></td></tr>
 <tr class="separator:abb85bebb94c2fb211b62ce34e49500f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,22 +161,28 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac67ce7bf09363e8c2c605c38b0ab092b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#ac67ce7bf09363e8c2c605c38b0ab092b">setPathConstraints</a> (const moveit_msgs::msg::Constraints &amp;path_constraints)</td></tr>
 <tr class="memdesc:ac67ce7bf09363e8c2c605c38b0ab092b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the path constraints generated from a moveit msg Constraints.  <a href="classmoveit__cpp_1_1PlanningComponent.html#ac67ce7bf09363e8c2c605c38b0ab092b">More...</a><br /></td></tr>
 <tr class="separator:ac67ce7bf09363e8c2c605c38b0ab092b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66046e476ffb45002432c9020ff0a91f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1PlanSolution.html">PlanSolution</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a66046e476ffb45002432c9020ff0a91f">plan</a> ()</td></tr>
-<tr class="memdesc:a66046e476ffb45002432c9020ff0a91f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run a plan from start or current state to fulfill the last goal constraints provided by <a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a4a3998f0a28eaac720bc845c81940fe2" title="Set the goal constraints used for planning.">setGoal()</a> using default parameters.  <a href="classmoveit__cpp_1_1PlanningComponent.html#a66046e476ffb45002432c9020ff0a91f">More...</a><br /></td></tr>
-<tr class="separator:a66046e476ffb45002432c9020ff0a91f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c52e5de1c651262b1102405e8a007a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1PlanSolution.html">PlanSolution</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a4c52e5de1c651262b1102405e8a007a4">plan</a> (const <a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1PlanRequestParameters.html">PlanRequestParameters</a> &amp;parameters)</td></tr>
-<tr class="memdesc:a4c52e5de1c651262b1102405e8a007a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run a plan from start or current state to fulfill the last goal constraints provided by <a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a4a3998f0a28eaac720bc845c81940fe2" title="Set the goal constraints used for planning.">setGoal()</a> using the provided <a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1PlanRequestParameters.html" title="Planner parameters provided with the MotionPlanRequest.">PlanRequestParameters</a>.  <a href="classmoveit__cpp_1_1PlanningComponent.html#a4c52e5de1c651262b1102405e8a007a4">More...</a><br /></td></tr>
-<tr class="separator:a4c52e5de1c651262b1102405e8a007a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0b81481bcd675b287cdf8bac39062be"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#ab0b81481bcd675b287cdf8bac39062be">setTrajectoryConstraints</a> (const moveit_msgs::msg::TrajectoryConstraints &amp;trajectory_constraints)</td></tr>
+<tr class="memdesc:ab0b81481bcd675b287cdf8bac39062be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the trajectory constraints generated from a moveit msg Constraints.  <a href="classmoveit__cpp_1_1PlanningComponent.html#ab0b81481bcd675b287cdf8bac39062be">More...</a><br /></td></tr>
+<tr class="separator:ab0b81481bcd675b287cdf8bac39062be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a75ec5db464f21e9ef899bfe2945512"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structplanning__interface_1_1MotionPlanResponse.html">planning_interface::MotionPlanResponse</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a2a75ec5db464f21e9ef899bfe2945512">plan</a> ()</td></tr>
+<tr class="memdesc:a2a75ec5db464f21e9ef899bfe2945512"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run a plan from start or current state to fulfill the last goal constraints provided by <a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a4a3998f0a28eaac720bc845c81940fe2" title="Set the goal constraints used for planning.">setGoal()</a> using default parameters.  <a href="classmoveit__cpp_1_1PlanningComponent.html#a2a75ec5db464f21e9ef899bfe2945512">More...</a><br /></td></tr>
+<tr class="separator:a2a75ec5db464f21e9ef899bfe2945512"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adeb31285287961f5cf24dd38b7705946"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structplanning__interface_1_1MotionPlanResponse.html">planning_interface::MotionPlanResponse</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#adeb31285287961f5cf24dd38b7705946">plan</a> (const <a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1PlanRequestParameters.html">PlanRequestParameters</a> &amp;parameters, const bool store_solution=true)</td></tr>
+<tr class="memdesc:adeb31285287961f5cf24dd38b7705946"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run a plan from start or current state to fulfill the last goal constraints provided by <a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a4a3998f0a28eaac720bc845c81940fe2" title="Set the goal constraints used for planning.">setGoal()</a> using the provided <a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1PlanRequestParameters.html" title="Planner parameters provided with the MotionPlanRequest.">PlanRequestParameters</a>.  <a href="classmoveit__cpp_1_1PlanningComponent.html#adeb31285287961f5cf24dd38b7705946">More...</a><br /></td></tr>
+<tr class="separator:adeb31285287961f5cf24dd38b7705946"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5359bad264372eb83743ed839984a40a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structplanning__interface_1_1MotionPlanResponse.html">planning_interface::MotionPlanResponse</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a5359bad264372eb83743ed839984a40a">plan</a> (const <a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1MultiPipelinePlanRequestParameters.html">MultiPipelinePlanRequestParameters</a> &amp;parameters, <a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a7c463689c88ee9d9c85878014a30d3e5">SolutionCallbackFunction</a> solution_selection_callback=&amp;<a class="el" href="namespacemoveit__cpp.html#aeaa57dcbfc74be4ea60a8db8f75a1c34">getShortestSolution</a>, <a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a82867c70d29374c3eedfd09f515794e7">StoppingCriterionFunction</a> stopping_criterion_callback=nullptr)</td></tr>
+<tr class="memdesc:a5359bad264372eb83743ed839984a40a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run a plan from start or current state to fulfill the last goal constraints provided by <a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a4a3998f0a28eaac720bc845c81940fe2" title="Set the goal constraints used for planning.">setGoal()</a> using the provided <a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1PlanRequestParameters.html" title="Planner parameters provided with the MotionPlanRequest.">PlanRequestParameters</a>.  <a href="classmoveit__cpp_1_1PlanningComponent.html#a5359bad264372eb83743ed839984a40a">More...</a><br /></td></tr>
+<tr class="separator:a5359bad264372eb83743ed839984a40a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeeec940682a69411d1bd164adc059f80"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#aeeec940682a69411d1bd164adc059f80">execute</a> (bool blocking=true)</td></tr>
-<tr class="memdesc:aeeec940682a69411d1bd164adc059f80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute the latest computed solution trajectory computed by <a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a66046e476ffb45002432c9020ff0a91f" title="Run a plan from start or current state to fulfill the last goal constraints provided by setGoal() usi...">plan()</a>. By default this function terminates after the execution is complete. The execution can be run in background by setting blocking to false.  <a href="classmoveit__cpp_1_1PlanningComponent.html#aeeec940682a69411d1bd164adc059f80">More...</a><br /></td></tr>
+<tr class="memdesc:aeeec940682a69411d1bd164adc059f80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute the latest computed solution trajectory computed by <a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a2a75ec5db464f21e9ef899bfe2945512" title="Run a plan from start or current state to fulfill the last goal constraints provided by setGoal() usi...">plan()</a>. By default this function terminates after the execution is complete. The execution can be run in background by setting blocking to false.  <a href="classmoveit__cpp_1_1PlanningComponent.html#aeeec940682a69411d1bd164adc059f80">More...</a><br /></td></tr>
 <tr class="separator:aeeec940682a69411d1bd164adc059f80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96d242897f5a2a3b9505ed254705933b"><td class="memItemLeft" align="right" valign="top">const PlanSolutionPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a96d242897f5a2a3b9505ed254705933b">getLastPlanSolution</a> ()</td></tr>
-<tr class="memdesc:a96d242897f5a2a3b9505ed254705933b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the last plan solution.  <a href="classmoveit__cpp_1_1PlanningComponent.html#a96d242897f5a2a3b9505ed254705933b">More...</a><br /></td></tr>
-<tr class="separator:a96d242897f5a2a3b9505ed254705933b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65f7e1501518eb6ee80424efb97207a0"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structplanning__interface_1_1MotionPlanResponse.html">planning_interface::MotionPlanResponse</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a65f7e1501518eb6ee80424efb97207a0">getLastMotionPlanResponse</a> ()</td></tr>
+<tr class="memdesc:a65f7e1501518eb6ee80424efb97207a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the last plan solution.  <a href="classmoveit__cpp_1_1PlanningComponent.html#a65f7e1501518eb6ee80424efb97207a0">More...</a><br /></td></tr>
+<tr class="separator:a65f7e1501518eb6ee80424efb97207a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="planning__component_8h_source.html#l00083">83</a> of file <a class="el" href="planning__component_8h_source.html">planning_component.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__component_8h_source.html#l00084">84</a> of file <a class="el" href="planning__component_8h_source.html">planning_component.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="ae6352d7155433ba59624c26021b0b538"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae6352d7155433ba59624c26021b0b538">&#9670;&nbsp;</a></span>MoveItErrorCode</h2>
@@ -185,7 +196,44 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="planning__component_8h_source.html#l00088">88</a> of file <a class="el" href="planning__component_8h_source.html">planning_component.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__component_8h_source.html#l00087">87</a> of file <a class="el" href="planning__component_8h_source.html">planning_component.h</a>.</p>
+
+</div>
+</div>
+<a id="a7c463689c88ee9d9c85878014a30d3e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c463689c88ee9d9c85878014a30d3e5">&#9670;&nbsp;</a></span>SolutionCallbackFunction</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::function&lt;<a class="el" href="structplanning__interface_1_1MotionPlanResponse.html">planning_interface::MotionPlanResponse</a>( const std::vector&lt;<a class="el" href="structplanning__interface_1_1MotionPlanResponse.html">planning_interface::MotionPlanResponse</a>&gt;&amp; solutions)&gt; <a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a7c463689c88ee9d9c85878014a30d3e5">moveit_cpp::PlanningComponent::SolutionCallbackFunction</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classA.html">A</a> solution callback function type for the parallel planning API of planning component <br  />
+ </p>
+
+<p class="definition">Definition at line <a class="el" href="planning__component_8h_source.html#l00153">153</a> of file <a class="el" href="planning__component_8h_source.html">planning_component.h</a>.</p>
+
+</div>
+</div>
+<a id="a82867c70d29374c3eedfd09f515794e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82867c70d29374c3eedfd09f515794e7">&#9670;&nbsp;</a></span>StoppingCriterionFunction</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::function&lt;bool(const <a class="el" href="classmoveit__cpp_1_1PlanSolutions.html">PlanSolutions</a>&amp; solutions, const <a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1MultiPipelinePlanRequestParameters.html">MultiPipelinePlanRequestParameters</a>&amp; plan_request_parameters)&gt; <a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a82867c70d29374c3eedfd09f515794e7">moveit_cpp::PlanningComponent::StoppingCriterionFunction</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classA.html">A</a> stopping criterion callback function for the parallel planning API of planning component. </p>
+
+<p class="definition">Definition at line <a class="el" href="planning__component_8h_source.html#l00157">157</a> of file <a class="el" href="planning__component_8h_source.html">planning_component.h</a>.</p>
 
 </div>
 </div>
@@ -218,7 +266,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00103">103</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00104">104</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
 
 </div>
 </div>
@@ -248,7 +296,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00081">81</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00082">82</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
 
 </div>
 </div>
@@ -350,20 +398,20 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Execute the latest computed solution trajectory computed by <a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a66046e476ffb45002432c9020ff0a91f" title="Run a plan from start or current state to fulfill the last goal constraints provided by setGoal() usi...">plan()</a>. By default this function terminates after the execution is complete. The execution can be run in background by setting blocking to false. </p>
+<p>Execute the latest computed solution trajectory computed by <a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a2a75ec5db464f21e9ef899bfe2945512" title="Run a plan from start or current state to fulfill the last goal constraints provided by setGoal() usi...">plan()</a>. By default this function terminates after the execution is complete. The execution can be run in background by setting blocking to false. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00325">325</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00429">429</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a96d242897f5a2a3b9505ed254705933b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96d242897f5a2a3b9505ed254705933b">&#9670;&nbsp;</a></span>getLastPlanSolution()</h2>
+<a id="a65f7e1501518eb6ee80424efb97207a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65f7e1501518eb6ee80424efb97207a0">&#9670;&nbsp;</a></span>getLastMotionPlanResponse()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const PlanningComponent::PlanSolutionPtr moveit_cpp::PlanningComponent::getLastPlanSolution </td>
+          <td class="memname">const <a class="el" href="structplanning__interface_1_1MotionPlanResponse.html">planning_interface::MotionPlanResponse</a> &amp; moveit_cpp::PlanningComponent::getLastMotionPlanResponse </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -373,7 +421,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Return the last plan solution. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00344">344</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00448">448</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
 
 </div>
 </div>
@@ -394,7 +442,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the names of the named robot states available as targets. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00116">116</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00117">117</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
 
 </div>
 </div>
@@ -416,7 +464,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the joint values for targets specified by name. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00268">268</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00372">372</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -452,7 +500,7 @@ Here is the call graph for this function:</div>
 
 <p>Get the name of the planning group. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00131">131</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00132">132</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
 
 </div>
 </div>
@@ -473,25 +521,7 @@ Here is the call graph for this function:</div>
 
 <p>Get the considered start state if defined, otherwise get the current state. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00238">238</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a84e14f989ae69bf68e79a0e1afce1a46"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84e14f989ae69bf68e79a0e1afce1a46">&#9670;&nbsp;</a></span>MOVEIT_STRUCT_FORWARD()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">moveit_cpp::PlanningComponent::MOVEIT_STRUCT_FORWARD </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1PlanSolution.html">PlanSolution</a>&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00342">342</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
 
 </div>
 </div>
@@ -547,14 +577,14 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a66046e476ffb45002432c9020ff0a91f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a66046e476ffb45002432c9020ff0a91f">&#9670;&nbsp;</a></span>plan() <span class="overload">[1/2]</span></h2>
+<a id="a2a75ec5db464f21e9ef899bfe2945512"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a75ec5db464f21e9ef899bfe2945512">&#9670;&nbsp;</a></span>plan() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1PlanSolution.html">PlanningComponent::PlanSolution</a> moveit_cpp::PlanningComponent::plan </td>
+          <td class="memname"><a class="el" href="structplanning__interface_1_1MotionPlanResponse.html">planning_interface::MotionPlanResponse</a> moveit_cpp::PlanningComponent::plan </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -564,12 +594,12 @@ Here is the call graph for this function:</div>
 
 <p>Run a plan from start or current state to fulfill the last goal constraints provided by <a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a4a3998f0a28eaac720bc845c81940fe2" title="Set the goal constraints used for planning.">setGoal()</a> using default parameters. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00227">227</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00331">331</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classmoveit__cpp_1_1PlanningComponent_a66046e476ffb45002432c9020ff0a91f_icgraph.png" border="0" usemap="#classmoveit__cpp_1_1PlanningComponent_a66046e476ffb45002432c9020ff0a91f_icgraph" alt=""/></div>
-<map name="classmoveit__cpp_1_1PlanningComponent_a66046e476ffb45002432c9020ff0a91f_icgraph" id="classmoveit__cpp_1_1PlanningComponent_a66046e476ffb45002432c9020ff0a91f_icgraph">
+<div class="center"><img src="classmoveit__cpp_1_1PlanningComponent_a2a75ec5db464f21e9ef899bfe2945512_icgraph.png" border="0" usemap="#classmoveit__cpp_1_1PlanningComponent_a2a75ec5db464f21e9ef899bfe2945512_icgraph" alt=""/></div>
+<map name="classmoveit__cpp_1_1PlanningComponent_a2a75ec5db464f21e9ef899bfe2945512_icgraph" id="classmoveit__cpp_1_1PlanningComponent_a2a75ec5db464f21e9ef899bfe2945512_icgraph">
 <area shape="rect" title="Run a plan from start or current state to fulfill the last goal constraints provided by setGoal() usi..." alt="" coords="295,71,532,112"/>
 <area shape="rect" href="classrobot__state__update_1_1RobotStateUpdateTest.html#a4b8e555816ac0889d0217261c360bbfe" title=" " alt="" coords="31,5,221,47"/>
 <area shape="rect" href="classpython__move__group_1_1PythonMoveGroupTest.html#a153f7cbf3e9543e4ff77f33cb1196d8a" title=" " alt="" coords="14,71,238,112"/>
@@ -579,30 +609,89 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a4c52e5de1c651262b1102405e8a007a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c52e5de1c651262b1102405e8a007a4">&#9670;&nbsp;</a></span>plan() <span class="overload">[2/2]</span></h2>
+<a id="a5359bad264372eb83743ed839984a40a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5359bad264372eb83743ed839984a40a">&#9670;&nbsp;</a></span>plan() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1PlanSolution.html">PlanningComponent::PlanSolution</a> moveit_cpp::PlanningComponent::plan </td>
+          <td class="memname"><a class="el" href="structplanning__interface_1_1MotionPlanResponse.html">planning_interface::MotionPlanResponse</a> moveit_cpp::PlanningComponent::plan </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1PlanRequestParameters.html">PlanRequestParameters</a> &amp;&#160;</td>
-          <td class="paramname"><em>parameters</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1MultiPipelinePlanRequestParameters.html">MultiPipelinePlanRequestParameters</a> &amp;&#160;</td>
+          <td class="paramname"><em>parameters</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a7c463689c88ee9d9c85878014a30d3e5">SolutionCallbackFunction</a>&#160;</td>
+          <td class="paramname"><em>solution_selection_callback</em> = <code>&amp;<a class="el" href="namespacemoveit__cpp.html#aeaa57dcbfc74be4ea60a8db8f75a1c34">getShortestSolution</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a82867c70d29374c3eedfd09f515794e7">StoppingCriterionFunction</a>&#160;</td>
+          <td class="paramname"><em>stopping_criterion_callback</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Run a plan from start or current state to fulfill the last goal constraints provided by <a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a4a3998f0a28eaac720bc845c81940fe2" title="Set the goal constraints used for planning.">setGoal()</a> using the provided <a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1PlanRequestParameters.html" title="Planner parameters provided with the MotionPlanRequest.">PlanRequestParameters</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00142">142</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00262">262</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classmoveit__cpp_1_1PlanningComponent_a4c52e5de1c651262b1102405e8a007a4_icgraph.png" border="0" usemap="#classmoveit__cpp_1_1PlanningComponent_a4c52e5de1c651262b1102405e8a007a4_icgraph" alt=""/></div>
-<map name="classmoveit__cpp_1_1PlanningComponent_a4c52e5de1c651262b1102405e8a007a4_icgraph" id="classmoveit__cpp_1_1PlanningComponent_a4c52e5de1c651262b1102405e8a007a4_icgraph">
+<div class="center"><img src="classmoveit__cpp_1_1PlanningComponent_a5359bad264372eb83743ed839984a40a_icgraph.png" border="0" usemap="#classmoveit__cpp_1_1PlanningComponent_a5359bad264372eb83743ed839984a40a_icgraph" alt=""/></div>
+<map name="classmoveit__cpp_1_1PlanningComponent_a5359bad264372eb83743ed839984a40a_icgraph" id="classmoveit__cpp_1_1PlanningComponent_a5359bad264372eb83743ed839984a40a_icgraph">
+<area shape="rect" title="Run a plan from start or current state to fulfill the last goal constraints provided by setGoal() usi..." alt="" coords="295,71,532,112"/>
+<area shape="rect" href="classrobot__state__update_1_1RobotStateUpdateTest.html#a4b8e555816ac0889d0217261c360bbfe" title=" " alt="" coords="31,5,221,47"/>
+<area shape="rect" href="classpython__move__group_1_1PythonMoveGroupTest.html#a153f7cbf3e9543e4ff77f33cb1196d8a" title=" " alt="" coords="14,71,238,112"/>
+<area shape="rect" href="classpython__move__group__ns_1_1PythonMoveGroupNsTest.html#af29f67185da298628e58b4fbb46fbf85" title=" " alt="" coords="5,136,247,177"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adeb31285287961f5cf24dd38b7705946"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adeb31285287961f5cf24dd38b7705946">&#9670;&nbsp;</a></span>plan() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structplanning__interface_1_1MotionPlanResponse.html">planning_interface::MotionPlanResponse</a> moveit_cpp::PlanningComponent::plan </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1PlanRequestParameters.html">PlanRequestParameters</a> &amp;&#160;</td>
+          <td class="paramname"><em>parameters</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>store_solution</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Run a plan from start or current state to fulfill the last goal constraints provided by <a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a4a3998f0a28eaac720bc845c81940fe2" title="Set the goal constraints used for planning.">setGoal()</a> using the provided <a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1PlanRequestParameters.html" title="Planner parameters provided with the MotionPlanRequest.">PlanRequestParameters</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00149">149</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmoveit__cpp_1_1PlanningComponent_adeb31285287961f5cf24dd38b7705946_icgraph.png" border="0" usemap="#classmoveit__cpp_1_1PlanningComponent_adeb31285287961f5cf24dd38b7705946_icgraph" alt=""/></div>
+<map name="classmoveit__cpp_1_1PlanningComponent_adeb31285287961f5cf24dd38b7705946_icgraph" id="classmoveit__cpp_1_1PlanningComponent_adeb31285287961f5cf24dd38b7705946_icgraph">
 <area shape="rect" title="Run a plan from start or current state to fulfill the last goal constraints provided by setGoal() usi..." alt="" coords="295,71,532,112"/>
 <area shape="rect" href="classrobot__state__update_1_1RobotStateUpdateTest.html#a4b8e555816ac0889d0217261c360bbfe" title=" " alt="" coords="31,5,221,47"/>
 <area shape="rect" href="classpython__move__group_1_1PythonMoveGroupTest.html#a153f7cbf3e9543e4ff77f33cb1196d8a" title=" " alt="" coords="14,71,238,112"/>
@@ -640,7 +729,7 @@ Here is the caller graph for this function:</div>
 
 <p>Set the goal constraints generated from target pose and robot link. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00306">306</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00410">410</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
 
 </div>
 </div>
@@ -662,7 +751,7 @@ Here is the caller graph for this function:</div>
 
 <p>Set the goal constraints generated from a target state. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00300">300</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00404">404</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
 
 </div>
 </div>
@@ -684,7 +773,7 @@ Here is the caller graph for this function:</div>
 
 <p>Set the goal constraints generated from a named target state. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00312">312</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00416">416</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
 
 </div>
 </div>
@@ -706,7 +795,7 @@ Here is the caller graph for this function:</div>
 
 <p>Set the goal constraints used for planning. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00294">294</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00398">398</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
 
 </div>
 </div>
@@ -728,7 +817,16 @@ Here is the caller graph for this function:</div>
 
 <p>Set the path constraints generated from a moveit msg Constraints. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00136">136</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00137">137</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmoveit__cpp_1_1PlanningComponent_ac67ce7bf09363e8c2c605c38b0ab092b_cgraph.png" border="0" usemap="#classmoveit__cpp_1_1PlanningComponent_ac67ce7bf09363e8c2c605c38b0ab092b_cgraph" alt=""/></div>
+<map name="classmoveit__cpp_1_1PlanningComponent_ac67ce7bf09363e8c2c605c38b0ab092b_cgraph" id="classmoveit__cpp_1_1PlanningComponent_ac67ce7bf09363e8c2c605c38b0ab092b_cgraph">
+<area shape="rect" title="Set the path constraints generated from a moveit msg Constraints." alt="" coords="5,5,243,47"/>
+<area shape="rect" href="classplanning__scene_1_1PlanningScene.html#a2f90ac1da8d266085dea0c4766465f8f" title="Clone a planning scene. Even if the scene scene depends on a parent, the cloned scene will not." alt="" coords="291,5,477,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -750,7 +848,7 @@ Here is the caller graph for this function:</div>
 
 <p>Set the robot state that should be considered as start state for planning. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00232">232</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00336">336</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
 
 </div>
 </div>
@@ -772,7 +870,7 @@ Here is the caller graph for this function:</div>
 
 <p>Set the named robot state that should be considered as start state for planning. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00250">250</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00354">354</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
 
 </div>
 </div>
@@ -793,7 +891,29 @@ Here is the caller graph for this function:</div>
 
 <p>Set the start state for planning to be the current state of the robot. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00263">263</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00367">367</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab0b81481bcd675b287cdf8bac39062be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0b81481bcd675b287cdf8bac39062be">&#9670;&nbsp;</a></span>setTrajectoryConstraints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool moveit_cpp::PlanningComponent::setTrajectoryConstraints </td>
+          <td>(</td>
+          <td class="paramtype">const moveit_msgs::msg::TrajectoryConstraints &amp;&#160;</td>
+          <td class="paramname"><em>trajectory_constraints</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the trajectory constraints generated from a moveit msg Constraints. </p>
+
+<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00143">143</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
 
 </div>
 </div>
@@ -849,7 +969,7 @@ Here is the caller graph for this function:</div>
 
 <p>Specify the workspace bounding box. The box is specified in the planning frame (i.e. relative to the robot root link start position). This is useful when the planning group contains the root joint of the robot &ndash; i.e. when planning motion for the robot relative to the world. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00276">276</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00380">380</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -885,7 +1005,7 @@ Here is the call graph for this function:</div>
 
 <p>Remove the workspace bounding box from planning. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00289">289</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00393">393</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
 
 </div>
 </div>

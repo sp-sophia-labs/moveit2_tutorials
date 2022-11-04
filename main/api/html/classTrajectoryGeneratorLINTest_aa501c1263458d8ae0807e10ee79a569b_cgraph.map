@@ -1,5 +1,5 @@
 <map id="TrajectoryGeneratorLINTest::SetUp" name="TrajectoryGeneratorLINTest::SetUp">
-<area shape="rect" id="node1" title="Create test scenario for lin trajectory generator." alt="" coords="5,667,204,709"/>
+<area shape="rect" id="node1" title="Create test scenario for lin trajectory generator." alt="" coords="5,550,204,591"/>
 <area shape="rect" id="node2" href="$namespacetestutils.html#aee400d4013caab0af4681d89dc96d66c" title=" " alt="" coords="275,195,473,221"/>
 <area shape="rect" id="node3" href="$classpilz__industrial__motion__planner_1_1JointLimitsAggregator.html#a78abef0abbf23021c1edc1451af3e3c8" title="Aggregates(combines) the joint limits from joint model and node parameters. The rules for the combina..." alt="" coords="261,245,487,301"/>
 <area shape="rect" id="node15" href="$classrobot__model__loader_1_1RobotModelLoader.html#a40e202c404ae62a984861b273a401fcd" title="Get the constructed planning_models::RobotModel." alt="" coords="294,325,454,381"/>
@@ -10,13 +10,9 @@
 <area shape="rect" id="node20" href="$unittest__trajectory__generator__lin_8cpp.html#a71fba2ed2fe2866bdf3b45cce5e02e66" title=" " alt="" coords="273,609,475,650"/>
 <area shape="rect" id="node21" href="$unittest__trajectory__generator__lin_8cpp.html#a169f9b6a4f108182586576bf167e8c38" title=" " alt="" coords="272,675,476,701"/>
 <area shape="rect" id="node22" href="$unittest__trajectory__generator__lin_8cpp.html#a22ea2026f42d7d03ff263bb5dadafda7" title=" " alt="" coords="287,726,461,767"/>
-<area shape="rect" id="node23" href="$classpilz__industrial__motion__planner_1_1CartesianLimit.html#a550ec57d1779f6e0b34f27554769d8a2" title="Set the maximum rotational velocity." alt="" coords="275,792,473,848"/>
-<area shape="rect" id="node24" href="$classpilz__industrial__motion__planner_1_1CartesianLimit.html#a98bee11f3336595d2b6a06e7a724e311" title="Set the maximum translational acceleration." alt="" coords="253,872,495,928"/>
-<area shape="rect" id="node25" href="$classpilz__industrial__motion__planner_1_1CartesianLimit.html#afc6ae3a75bde60fd382bd702cf5104dc" title="Set the maximum translational deceleration." alt="" coords="252,952,496,1008"/>
-<area shape="rect" id="node26" href="$classpilz__industrial__motion__planner_1_1CartesianLimit.html#a6cc92d1b40f64bdcbb6fe02b523d9e92" title="Set the maximal translational velocity." alt="" coords="267,1032,481,1088"/>
-<area shape="rect" id="node27" href="$unittest__trajectory__generator__lin_8cpp.html#a4409c5f6b48b286c0bfb7d337c1bb7da" title=" " alt="" coords="301,1112,447,1139"/>
-<area shape="rect" id="node28" href="$unittest__trajectory__generator__lin_8cpp.html#ab52141f7c51b11e67584b679ae66caf7" title=" " alt="" coords="287,1163,461,1189"/>
-<area shape="rect" id="node29" href="$unittest__trajectory__generator__lin_8cpp.html#a46fca6c46f55708a2ce54714b697372c" title=" " alt="" coords="271,1213,477,1240"/>
+<area shape="rect" id="node23" href="$unittest__trajectory__generator__lin_8cpp.html#a4409c5f6b48b286c0bfb7d337c1bb7da" title=" " alt="" coords="301,792,447,819"/>
+<area shape="rect" id="node24" href="$unittest__trajectory__generator__lin_8cpp.html#ab52141f7c51b11e67584b679ae66caf7" title=" " alt="" coords="287,843,461,869"/>
+<area shape="rect" id="node25" href="$unittest__trajectory__generator__lin_8cpp.html#a46fca6c46f55708a2ce54714b697372c" title=" " alt="" coords="271,893,477,920"/>
 <area shape="rect" id="node4" href="$classpilz__industrial__motion__planner_1_1JointLimitsContainer.html#a40383e43f2853d45c9456333cda2a537" title="Add a limit." alt="" coords="566,5,785,61"/>
 <area shape="rect" id="node5" href="$classpilz__industrial__motion__planner_1_1JointLimitsAggregator.html#a442930b2020131d17e2e9248050794ee" title="Checks if the position limits from the given joint_limit are stricter than the limits of the joint_mo..." alt="" coords="561,165,789,221"/>
 <area shape="rect" id="node8" href="$classpilz__industrial__motion__planner_1_1JointLimitsAggregator.html#abf9d281b216ce7c89d930cb00a3b2e4a" title="Checks if the velocity limit from the given joint_limit are stricter than the limit of the joint_mode..." alt="" coords="561,85,789,141"/>

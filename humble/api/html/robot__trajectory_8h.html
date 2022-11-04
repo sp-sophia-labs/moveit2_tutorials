@@ -81,6 +81,7 @@ $(function() {
 <code>#include &lt;moveit_msgs/msg/robot_state.hpp&gt;</code><br />
 <code>#include &lt;deque&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;optional&gt;</code><br />
 <code>#include &quot;rcl/error_handling.h&quot;</code><br />
 <code>#include &quot;rcl/time.h&quot;</code><br />
 <code>#include &quot;rclcpp/clock.hpp&quot;</code><br />
@@ -92,56 +93,56 @@ Include dependency graph for robot_trajectory.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="robot__trajectory_8h__incl.png" border="0" usemap="#moveit__core_2robot__trajectory_2include_2moveit_2robot__trajectory_2robot__trajectory_8h" alt=""/></div>
 <map name="moveit__core_2robot__trajectory_2include_2moveit_2robot__trajectory_2robot__trajectory_8h" id="moveit__core_2robot__trajectory_2include_2moveit_2robot__trajectory_2robot__trajectory_8h">
-<area shape="rect" title=" " alt="" coords="2497,5,2727,61"/>
-<area shape="rect" href="class__forward_8h.html" title=" " alt="" coords="1764,467,1921,508"/>
+<area shape="rect" title=" " alt="" coords="2998,5,3229,61"/>
+<area shape="rect" href="class__forward_8h.html" title=" " alt="" coords="2039,467,2196,508"/>
 <area shape="rect" title=" " alt="" coords="28,645,105,672"/>
-<area shape="rect" href="robot__state_8h.html" title=" " alt="" coords="1353,109,1500,151"/>
-<area shape="rect" title=" " alt="" coords="2109,109,2289,151"/>
-<area shape="rect" title=" " alt="" coords="2313,109,2493,151"/>
-<area shape="rect" title=" " alt="" coords="2517,117,2579,143"/>
-<area shape="rect" title=" " alt="" coords="2603,117,2751,143"/>
-<area shape="rect" title=" " alt="" coords="2775,117,2859,143"/>
-<area shape="rect" title=" " alt="" coords="2883,117,3010,143"/>
-<area shape="rect" title=" " alt="" coords="3034,117,3166,143"/>
-<area shape="rect" title=" " alt="" coords="3191,117,3313,143"/>
-<area shape="rect" title=" " alt="" coords="3338,117,3481,143"/>
-<area shape="rect" href="declare__ptr_8h.html" title=" " alt="" coords="914,556,1086,597"/>
-<area shape="rect" href="robot__model_8h.html" title=" " alt="" coords="749,199,904,240"/>
-<area shape="rect" href="attached__body_8h.html" title=" " alt="" coords="2077,288,2224,329"/>
-<area shape="rect" href="transforms_8h.html" title=" " alt="" coords="1166,385,1397,411"/>
-<area shape="rect" title=" " alt="" coords="1243,199,1415,240"/>
-<area shape="rect" title=" " alt="" coords="1440,199,1611,240"/>
-<area shape="rect" title=" " alt="" coords="1635,199,1787,240"/>
-<area shape="rect" title=" " alt="" coords="1811,206,2034,233"/>
-<area shape="rect" title=" " alt="" coords="928,206,997,233"/>
-<area shape="rect" title=" " alt="" coords="1021,206,1168,233"/>
+<area shape="rect" href="robot__state_8h.html" title=" " alt="" coords="1665,109,1812,151"/>
+<area shape="rect" title=" " alt="" coords="2581,109,2761,151"/>
+<area shape="rect" title=" " alt="" coords="2785,109,2965,151"/>
+<area shape="rect" title=" " alt="" coords="2989,117,3051,143"/>
+<area shape="rect" title=" " alt="" coords="3076,117,3151,143"/>
+<area shape="rect" title=" " alt="" coords="3175,117,3323,143"/>
+<area shape="rect" title=" " alt="" coords="3347,117,3431,143"/>
+<area shape="rect" title=" " alt="" coords="3455,117,3582,143"/>
+<area shape="rect" title=" " alt="" coords="3606,117,3738,143"/>
+<area shape="rect" title=" " alt="" coords="3763,117,3885,143"/>
+<area shape="rect" title=" " alt="" coords="3910,117,4053,143"/>
+<area shape="rect" href="declare__ptr_8h.html" title=" " alt="" coords="1039,556,1211,597"/>
+<area shape="rect" href="robot__model_8h.html" title=" " alt="" coords="1151,199,1305,240"/>
+<area shape="rect" href="attached__body_8h.html" title=" " alt="" coords="1653,288,1800,329"/>
+<area shape="rect" href="transforms_8h.html" title=" " alt="" coords="2223,385,2454,411"/>
+<area shape="rect" title=" " alt="" coords="1715,199,1887,240"/>
+<area shape="rect" title=" " alt="" coords="1912,199,2083,240"/>
+<area shape="rect" title=" " alt="" coords="2107,199,2259,240"/>
+<area shape="rect" title=" " alt="" coords="2283,206,2506,233"/>
+<area shape="rect" title=" " alt="" coords="887,206,956,233"/>
+<area shape="rect" title=" " alt="" coords="980,206,1127,233"/>
 <area shape="rect" href="exceptions_8h.html" title=" " alt="" coords="1113,295,1343,322"/>
-<area shape="rect" title=" " alt="" coords="1008,385,1141,411"/>
-<area shape="rect" href="joint__model__group_8h.html" title=" " alt="" coords="1470,288,1629,329"/>
-<area shape="rect" title=" " alt="" coords="253,474,333,501"/>
-<area shape="rect" title=" " alt="" coords="797,474,923,501"/>
-<area shape="rect" title=" " alt="" coords="2368,474,2509,501"/>
+<area shape="rect" title=" " alt="" coords="1031,385,1164,411"/>
+<area shape="rect" href="joint__model__group_8h.html" title=" " alt="" coords="1419,288,1578,329"/>
+<area shape="rect" title=" " alt="" coords="411,474,491,501"/>
+<area shape="rect" title=" " alt="" coords="1489,474,1615,501"/>
+<area shape="rect" title=" " alt="" coords="951,474,1092,501"/>
 <area shape="rect" href="fixed__joint__model_8h.html" title=" " alt="" coords="933,288,1088,329"/>
 <area shape="rect" href="floating__joint__model_8h.html" title=" " alt="" coords="144,288,315,329"/>
 <area shape="rect" href="planar__joint__model_8h.html" title=" " alt="" coords="339,288,501,329"/>
 <area shape="rect" href="revolute__joint__model_8h.html" title=" " alt="" coords="525,288,701,329"/>
 <area shape="rect" href="prismatic__joint__model_8h.html" title=" " alt="" coords="726,288,909,329"/>
-<area shape="rect" title=" " alt="" coords="897,385,983,411"/>
-<area shape="rect" href="joint__model_8h.html" title=" " alt="" coords="717,377,872,419"/>
-<area shape="rect" title=" " alt="" coords="1360,474,1419,501"/>
-<area shape="rect" href="link__model_8h.html" title=" " alt="" coords="1472,377,1627,419"/>
-<area shape="rect" href="kinematics__base_8h.html" title=" " alt="" coords="1651,377,1834,419"/>
-<area shape="rect" title=" " alt="" coords="2153,474,2239,501"/>
-<area shape="rect" title=" " alt="" coords="1960,385,2003,411"/>
-<area shape="rect" title=" " alt="" coords="947,474,1010,501"/>
-<area shape="rect" title=" " alt="" coords="1285,474,1336,501"/>
-<area shape="rect" title=" " alt="" coords="598,467,773,508"/>
-<area shape="rect" title=" " alt="" coords="1443,474,1503,501"/>
-<area shape="rect" title=" " alt="" coords="1527,467,1739,508"/>
-<area shape="rect" title=" " alt="" coords="1946,467,2129,508"/>
-<area shape="rect" title=" " alt="" coords="2129,377,2301,419"/>
-<area shape="rect" title=" " alt="" coords="2325,377,2483,419"/>
-<area shape="rect" title=" " alt="" coords="1035,467,1261,508"/>
+<area shape="rect" title=" " alt="" coords="919,385,1006,411"/>
+<area shape="rect" href="joint__model_8h.html" title=" " alt="" coords="740,377,895,419"/>
+<area shape="rect" title=" " alt="" coords="1232,474,1291,501"/>
+<area shape="rect" href="link__model_8h.html" title=" " alt="" coords="1665,377,1820,419"/>
+<area shape="rect" href="kinematics__base_8h.html" title=" " alt="" coords="1239,377,1422,419"/>
+<area shape="rect" title=" " alt="" coords="1378,474,1465,501"/>
+<area shape="rect" title=" " alt="" coords="1548,385,1591,411"/>
+<area shape="rect" title=" " alt="" coords="1135,474,1198,501"/>
+<area shape="rect" title=" " alt="" coords="1640,474,1691,501"/>
+<area shape="rect" title=" " alt="" coords="1715,474,1775,501"/>
+<area shape="rect" title=" " alt="" coords="1799,467,2011,508"/>
+<area shape="rect" title=" " alt="" coords="2489,467,2671,508"/>
+<area shape="rect" title=" " alt="" coords="1845,377,2017,419"/>
+<area shape="rect" title=" " alt="" coords="2041,377,2199,419"/>
+<area shape="rect" title=" " alt="" coords="2225,467,2452,508"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -224,6 +225,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a9eedff63f0a0ef50d6dff84db384fb2b"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerobot__trajectory.html#a9eedff63f0a0ef50d6dff84db384fb2b">robot_trajectory::operator&lt;&lt;</a> (std::ostream &amp;out, const RobotTrajectory &amp;trajectory)</td></tr>
 <tr class="memdesc:a9eedff63f0a0ef50d6dff84db384fb2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator overload for printing trajectory to a stream.  <a href="namespacerobot__trajectory.html#a9eedff63f0a0ef50d6dff84db384fb2b">More...</a><br /></td></tr>
 <tr class="separator:a9eedff63f0a0ef50d6dff84db384fb2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0750fe7c58d1a655d83bd177586696ca"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerobot__trajectory.html#a0750fe7c58d1a655d83bd177586696ca">robot_trajectory::path_length</a> (RobotTrajectory const &amp;trajectory)</td></tr>
+<tr class="memdesc:a0750fe7c58d1a655d83bd177586696ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the path length of a given trajectory based on the accumulated robot state distances. The distance between two robot states is calculated based on the sum of active joint distances between the two states (L1 norm).  <a href="namespacerobot__trajectory.html#a0750fe7c58d1a655d83bd177586696ca">More...</a><br /></td></tr>
+<tr class="separator:a0750fe7c58d1a655d83bd177586696ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaea992e4ba6967a7ec88956541d43618"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerobot__trajectory.html#aaea992e4ba6967a7ec88956541d43618">robot_trajectory::smoothness</a> (RobotTrajectory const &amp;trajectory)</td></tr>
+<tr class="memdesc:aaea992e4ba6967a7ec88956541d43618"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the smoothness of a given trajectory.  <a href="namespacerobot__trajectory.html#aaea992e4ba6967a7ec88956541d43618">More...</a><br /></td></tr>
+<tr class="separator:aaea992e4ba6967a7ec88956541d43618"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f564d1e01216ff451b54282b0f6b61c"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerobot__trajectory.html#a8f564d1e01216ff451b54282b0f6b61c">robot_trajectory::waypoint_density</a> (RobotTrajectory const &amp;trajectory)</td></tr>
+<tr class="memdesc:a8f564d1e01216ff451b54282b0f6b61c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the waypoint density of a trajectory.  <a href="namespacerobot__trajectory.html#a8f564d1e01216ff451b54282b0f6b61c">More...</a><br /></td></tr>
+<tr class="separator:a8f564d1e01216ff451b54282b0f6b61c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

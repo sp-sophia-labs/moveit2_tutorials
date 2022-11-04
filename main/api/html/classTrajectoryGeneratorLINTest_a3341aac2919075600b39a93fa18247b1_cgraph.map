@@ -2,7 +2,7 @@
 <area shape="rect" id="node1" title=" " alt="" coords="5,471,204,513"/>
 <area shape="rect" id="node2" href="$namespacetestutils.html#ab92bd7b28971f78ffe134429c7e3d333" title="Check that given trajectory is straight line." alt="" coords="268,158,451,199"/>
 <area shape="rect" id="node11" href="$namespacetestutils.html#a6941dcc98ca4e3988e382fd3de978667" title="check joint trajectory of consistency, position, velocity and acceleration limits" alt="" coords="252,445,467,472"/>
-<area shape="rect" id="node16" href="$structplanning__interface_1_1MotionPlanResponse.html#acec831a8d2cfd2ef0aa0b6ed94d8d59a" title=" " alt="" coords="276,496,443,552"/>
+<area shape="rect" id="node16" href="$structplanning__interface_1_1MotionPlanResponse.html#acec831a8d2cfd2ef0aa0b6ed94d8d59a" title="Construct a ROS message from struct data." alt="" coords="276,496,443,552"/>
 <area shape="rect" id="node18" href="$namespacetestutils.html#a16cef7d20ff377c527415f1898b6d740" title="check if the goal given in joint space is reached Only the last point in the trajectory is veryfied." alt="" coords="269,576,449,603"/>
 <area shape="rect" id="node3" href="$namespacetestutils.html#a6103ebf4ba5ba7a0b6e28c6c4f793bee" title="check SLERP. The orientation should rotate around the same axis linearly." alt="" coords="547,5,709,32"/>
 <area shape="rect" id="node4" href="$namespacepilz__industrial__motion__planner.html#a846707e0c70fe0ce82d46c752642e37e" title="compute the pose of a link at give robot state" alt="" coords="789,49,976,90"/>

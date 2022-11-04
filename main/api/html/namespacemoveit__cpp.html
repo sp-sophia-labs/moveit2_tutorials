@@ -80,11 +80,19 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1PlanningComponent.html">PlanningComponent</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1PlanSolutions.html">PlanSolutions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classA.html">A</a> container to thread-safely store multiple MotionPlanResponses for later usage.  <a href="classmoveit__cpp_1_1PlanSolutions.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:af211ec85b6bedb026a088c4fd4ffd184"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__cpp.html#af211ec85b6bedb026a088c4fd4ffd184">MOVEIT_CLASS_FORWARD</a> (<a class="el" href="classmoveit__cpp_1_1MoveItCpp.html">MoveItCpp</a>)</td></tr>
 <tr class="separator:af211ec85b6bedb026a088c4fd4ffd184"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad69853b96130bc6481fb1694f606b3a0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__cpp.html#ad69853b96130bc6481fb1694f606b3a0">MOVEIT_CLASS_FORWARD</a> (<a class="el" href="classmoveit__cpp_1_1PlanSolutions.html">PlanSolutions</a>)</td></tr>
+<tr class="separator:ad69853b96130bc6481fb1694f606b3a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaa57dcbfc74be4ea60a8db8f75a1c34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structplanning__interface_1_1MotionPlanResponse.html">planning_interface::MotionPlanResponse</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__cpp.html#aeaa57dcbfc74be4ea60a8db8f75a1c34">getShortestSolution</a> (const std::vector&lt; <a class="el" href="structplanning__interface_1_1MotionPlanResponse.html">planning_interface::MotionPlanResponse</a> &gt; &amp;solutions)</td></tr>
+<tr class="memdesc:aeaa57dcbfc74be4ea60a8db8f75a1c34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function that returns the shortest solution out of a vector of solutions based on robot_trajectory::path_length(...)  <a href="namespacemoveit__cpp.html#aeaa57dcbfc74be4ea60a8db8f75a1c34">More...</a><br /></td></tr>
+<tr class="separator:aeaa57dcbfc74be4ea60a8db8f75a1c34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8b17d10914321a81d09cac80d772d07"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__cpp.html#ac8b17d10914321a81d09cac80d772d07">MOVEIT_CLASS_FORWARD</a> (<a class="el" href="classmoveit__cpp_1_1PlanningComponent.html">PlanningComponent</a>)</td></tr>
 <tr class="separator:ac8b17d10914321a81d09cac80d772d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0be9ace3cc0f066454dc07235ba9f293"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__cpp.html#a0be9ace3cc0f066454dc07235ba9f293">TEST_F</a> (<a class="el" href="classmoveit__cpp_1_1MoveItCppTest.html">MoveItCppTest</a>, GetCurrentStateTest)</td></tr>
@@ -114,8 +122,37 @@ Variables</h2></td></tr>
 <tr class="separator:a477953b5748726264bbcef9462a8441d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="aeaa57dcbfc74be4ea60a8db8f75a1c34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaa57dcbfc74be4ea60a8db8f75a1c34">&#9670;&nbsp;</a></span>getShortestSolution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structplanning__interface_1_1MotionPlanResponse.html">planning_interface::MotionPlanResponse</a> moveit_cpp::getShortestSolution </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="structplanning__interface_1_1MotionPlanResponse.html">planning_interface::MotionPlanResponse</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>solutions</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function that returns the shortest solution out of a vector of solutions based on robot_trajectory::path_length(...) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">solutions</td><td>Vector of solutions to chose the shortest one from </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Shortest solution, trajectory_ of the returned MotionPlanResponse is a nullptr if no solution is found! </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="plan__solutions_8hpp_source.html#l00115">115</a> of file <a class="el" href="plan__solutions_8hpp_source.html">plan_solutions.hpp</a>.</p>
+
+</div>
+</div>
 <a id="af211ec85b6bedb026a088c4fd4ffd184"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af211ec85b6bedb026a088c4fd4ffd184">&#9670;&nbsp;</a></span>MOVEIT_CLASS_FORWARD() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af211ec85b6bedb026a088c4fd4ffd184">&#9670;&nbsp;</a></span>MOVEIT_CLASS_FORWARD() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -133,7 +170,7 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a id="ac8b17d10914321a81d09cac80d772d07"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8b17d10914321a81d09cac80d772d07">&#9670;&nbsp;</a></span>MOVEIT_CLASS_FORWARD() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8b17d10914321a81d09cac80d772d07">&#9670;&nbsp;</a></span>MOVEIT_CLASS_FORWARD() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -142,6 +179,24 @@ Variables</h2></td></tr>
           <td class="memname">moveit_cpp::MOVEIT_CLASS_FORWARD </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classmoveit__cpp_1_1PlanningComponent.html">PlanningComponent</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad69853b96130bc6481fb1694f606b3a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad69853b96130bc6481fb1694f606b3a0">&#9670;&nbsp;</a></span>MOVEIT_CLASS_FORWARD() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">moveit_cpp::MOVEIT_CLASS_FORWARD </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmoveit__cpp_1_1PlanSolutions.html">PlanSolutions</a>&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>

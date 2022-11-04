@@ -87,15 +87,18 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a1f8b6c59032a11119e823e15fb446fb9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmoveit_1_1core_1_1CartesianInterpolator_1_1Distance.html">Distance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1CartesianInterpolator.html#a1f8b6c59032a11119e823e15fb446fb9">computeCartesianPath</a> (<a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> *start_state, const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> &gt;&gt; &amp;traj, const <a class="el" href="classmoveit_1_1core_1_1LinkModel.html">LinkModel</a> *link, const Eigen::Vector3d &amp;translation, bool global_reference_frame, const <a class="el" href="structmoveit_1_1core_1_1MaxEEFStep.html">MaxEEFStep</a> &amp;max_step, const <a class="el" href="structmoveit_1_1core_1_1JumpThreshold.html">JumpThreshold</a> &amp;jump_threshold, const <a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a> &amp;validCallback=<a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a>(), const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;options=<a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>(), <a class="el" href="classkinematics_1_1KinematicsBase.html#ab0c60e8e7ba4c4f14e9a26a74b6a7125">kinematics::KinematicsBase::IKCostFn</a> cost_function=<a class="el" href="classkinematics_1_1KinematicsBase.html#ab0c60e8e7ba4c4f14e9a26a74b6a7125">kinematics::KinematicsBase::IKCostFn</a>())</td></tr>
+<tr class="memdesc:a1f8b6c59032a11119e823e15fb446fb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the sequence of joint values that correspond to a straight Cartesian path for a particular link.  <a href="classmoveit_1_1core_1_1CartesianInterpolator.html#a1f8b6c59032a11119e823e15fb446fb9">More...</a><br /></td></tr>
+<tr class="separator:a1f8b6c59032a11119e823e15fb446fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4fe6bd482022274da453095e461207a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmoveit_1_1core_1_1CartesianInterpolator_1_1Distance.html">Distance</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1CartesianInterpolator.html#ae4fe6bd482022274da453095e461207a">computeCartesianPath</a> (<a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> *start_state, const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> &gt;&gt; &amp;traj, const <a class="el" href="classmoveit_1_1core_1_1LinkModel.html">LinkModel</a> *link, const Eigen::Vector3d &amp;direction, bool global_reference_frame, double distance, const <a class="el" href="structmoveit_1_1core_1_1MaxEEFStep.html">MaxEEFStep</a> &amp;max_step, const <a class="el" href="structmoveit_1_1core_1_1JumpThreshold.html">JumpThreshold</a> &amp;jump_threshold, const <a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a> &amp;validCallback=<a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a>(), const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;options=<a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>(), <a class="el" href="classkinematics_1_1KinematicsBase.html#ab0c60e8e7ba4c4f14e9a26a74b6a7125">kinematics::KinematicsBase::IKCostFn</a> cost_function=<a class="el" href="classkinematics_1_1KinematicsBase.html#ab0c60e8e7ba4c4f14e9a26a74b6a7125">kinematics::KinematicsBase::IKCostFn</a>())</td></tr>
-<tr class="memdesc:ae4fe6bd482022274da453095e461207a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the sequence of joint values that correspond to a straight Cartesian path for a particular group.  <a href="classmoveit_1_1core_1_1CartesianInterpolator.html#ae4fe6bd482022274da453095e461207a">More...</a><br /></td></tr>
+<tr class="memdesc:ae4fe6bd482022274da453095e461207a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the sequence of joint values that correspond to a straight Cartesian path, for a particular link.  <a href="classmoveit_1_1core_1_1CartesianInterpolator.html#ae4fe6bd482022274da453095e461207a">More...</a><br /></td></tr>
 <tr class="separator:ae4fe6bd482022274da453095e461207a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a946346ab9048ee25718ab52c6eb7e600"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmoveit_1_1core_1_1CartesianInterpolator_1_1Percentage.html">Percentage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1CartesianInterpolator.html#a946346ab9048ee25718ab52c6eb7e600">computeCartesianPath</a> (<a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> *start_state, const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> &gt;&gt; &amp;traj, const <a class="el" href="classmoveit_1_1core_1_1LinkModel.html">LinkModel</a> *link, const Eigen::Isometry3d &amp;target, bool global_reference_frame, const <a class="el" href="structmoveit_1_1core_1_1MaxEEFStep.html">MaxEEFStep</a> &amp;max_step, const <a class="el" href="structmoveit_1_1core_1_1JumpThreshold.html">JumpThreshold</a> &amp;jump_threshold, const <a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a> &amp;validCallback=<a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a>(), const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;options=<a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>(), <a class="el" href="classkinematics_1_1KinematicsBase.html#ab0c60e8e7ba4c4f14e9a26a74b6a7125">kinematics::KinematicsBase::IKCostFn</a> cost_function=<a class="el" href="classkinematics_1_1KinematicsBase.html#ab0c60e8e7ba4c4f14e9a26a74b6a7125">kinematics::KinematicsBase::IKCostFn</a>())</td></tr>
-<tr class="memdesc:a946346ab9048ee25718ab52c6eb7e600"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the sequence of joint values that correspond to a straight Cartesian path, for a particular group.  <a href="classmoveit_1_1core_1_1CartesianInterpolator.html#a946346ab9048ee25718ab52c6eb7e600">More...</a><br /></td></tr>
-<tr class="separator:a946346ab9048ee25718ab52c6eb7e600"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a609bb9447e9962138335db6d05782aad"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmoveit_1_1core_1_1CartesianInterpolator_1_1Percentage.html">Percentage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1CartesianInterpolator.html#a609bb9447e9962138335db6d05782aad">computeCartesianPath</a> (<a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> *start_state, const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> &gt;&gt; &amp;traj, const <a class="el" href="classmoveit_1_1core_1_1LinkModel.html">LinkModel</a> *link, const EigenSTL::vector_Isometry3d &amp;waypoints, bool global_reference_frame, const <a class="el" href="structmoveit_1_1core_1_1MaxEEFStep.html">MaxEEFStep</a> &amp;max_step, const <a class="el" href="structmoveit_1_1core_1_1JumpThreshold.html">JumpThreshold</a> &amp;jump_threshold, const <a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a> &amp;validCallback=<a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a>(), const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;options=<a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>(), <a class="el" href="classkinematics_1_1KinematicsBase.html#ab0c60e8e7ba4c4f14e9a26a74b6a7125">kinematics::KinematicsBase::IKCostFn</a> cost_function=<a class="el" href="classkinematics_1_1KinematicsBase.html#ab0c60e8e7ba4c4f14e9a26a74b6a7125">kinematics::KinematicsBase::IKCostFn</a>())</td></tr>
-<tr class="memdesc:a609bb9447e9962138335db6d05782aad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the sequence of joint values that perform a general Cartesian path.  <a href="classmoveit_1_1core_1_1CartesianInterpolator.html#a609bb9447e9962138335db6d05782aad">More...</a><br /></td></tr>
-<tr class="separator:a609bb9447e9962138335db6d05782aad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d5e638445c057a443a832039c5e7168"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmoveit_1_1core_1_1CartesianInterpolator_1_1Percentage.html">Percentage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1CartesianInterpolator.html#a7d5e638445c057a443a832039c5e7168">computeCartesianPath</a> (<a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> *start_state, const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> &gt;&gt; &amp;traj, const <a class="el" href="classmoveit_1_1core_1_1LinkModel.html">LinkModel</a> *link, const Eigen::Isometry3d &amp;target, bool global_reference_frame, const <a class="el" href="structmoveit_1_1core_1_1MaxEEFStep.html">MaxEEFStep</a> &amp;max_step, const <a class="el" href="structmoveit_1_1core_1_1JumpThreshold.html">JumpThreshold</a> &amp;jump_threshold, const <a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a> &amp;validCallback=<a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a>(), const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;options=<a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>(), <a class="el" href="classkinematics_1_1KinematicsBase.html#ab0c60e8e7ba4c4f14e9a26a74b6a7125">kinematics::KinematicsBase::IKCostFn</a> cost_function=<a class="el" href="classkinematics_1_1KinematicsBase.html#ab0c60e8e7ba4c4f14e9a26a74b6a7125">kinematics::KinematicsBase::IKCostFn</a>(), const Eigen::Isometry3d &amp;link_offset=Eigen::Isometry3d::Identity())</td></tr>
+<tr class="memdesc:a7d5e638445c057a443a832039c5e7168"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the sequence of joint values that correspond to a straight Cartesian path, for a particular frame.  <a href="classmoveit_1_1core_1_1CartesianInterpolator.html#a7d5e638445c057a443a832039c5e7168">More...</a><br /></td></tr>
+<tr class="separator:a7d5e638445c057a443a832039c5e7168"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0c47a2f2593e3111295d156c5c5194e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmoveit_1_1core_1_1CartesianInterpolator_1_1Percentage.html">Percentage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1CartesianInterpolator.html#af0c47a2f2593e3111295d156c5c5194e">computeCartesianPath</a> (<a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> *start_state, const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> &gt;&gt; &amp;traj, const <a class="el" href="classmoveit_1_1core_1_1LinkModel.html">LinkModel</a> *link, const EigenSTL::vector_Isometry3d &amp;waypoints, bool global_reference_frame, const <a class="el" href="structmoveit_1_1core_1_1MaxEEFStep.html">MaxEEFStep</a> &amp;max_step, const <a class="el" href="structmoveit_1_1core_1_1JumpThreshold.html">JumpThreshold</a> &amp;jump_threshold, const <a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a> &amp;validCallback=<a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a>(), const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;options=<a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>(), <a class="el" href="classkinematics_1_1KinematicsBase.html#ab0c60e8e7ba4c4f14e9a26a74b6a7125">kinematics::KinematicsBase::IKCostFn</a> cost_function=<a class="el" href="classkinematics_1_1KinematicsBase.html#ab0c60e8e7ba4c4f14e9a26a74b6a7125">kinematics::KinematicsBase::IKCostFn</a>(), const Eigen::Isometry3d &amp;link_offset=Eigen::Isometry3d::Identity())</td></tr>
+<tr class="memdesc:af0c47a2f2593e3111295d156c5c5194e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the sequence of joint values that perform a general Cartesian path.  <a href="classmoveit_1_1core_1_1CartesianInterpolator.html#af0c47a2f2593e3111295d156c5c5194e">More...</a><br /></td></tr>
+<tr class="separator:af0c47a2f2593e3111295d156c5c5194e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef25fbb7a6f29cb63cc95009e057bd20"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmoveit_1_1core_1_1CartesianInterpolator_1_1Percentage.html">Percentage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1CartesianInterpolator.html#aef25fbb7a6f29cb63cc95009e057bd20">checkJointSpaceJump</a> (const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *group, std::vector&lt; std::shared_ptr&lt; <a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> &gt;&gt; &amp;traj, const <a class="el" href="structmoveit_1_1core_1_1JumpThreshold.html">JumpThreshold</a> &amp;jump_threshold)</td></tr>
 <tr class="memdesc:aef25fbb7a6f29cb63cc95009e057bd20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests joint space jumps of a trajectory.  <a href="classmoveit_1_1core_1_1CartesianInterpolator.html#aef25fbb7a6f29cb63cc95009e057bd20">More...</a><br /></td></tr>
 <tr class="separator:aef25fbb7a6f29cb63cc95009e057bd20"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -315,8 +318,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a946346ab9048ee25718ab52c6eb7e600"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a946346ab9048ee25718ab52c6eb7e600">&#9670;&nbsp;</a></span>computeCartesianPath() <span class="overload">[1/3]</span></h2>
+<a id="a7d5e638445c057a443a832039c5e7168"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d5e638445c057a443a832039c5e7168">&#9670;&nbsp;</a></span>computeCartesianPath() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -388,7 +391,13 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classkinematics_1_1KinematicsBase.html#ab0c60e8e7ba4c4f14e9a26a74b6a7125">kinematics::KinematicsBase::IKCostFn</a>&#160;</td>
-          <td class="paramname"><em>cost_function</em> = <code><a class="el" href="classkinematics_1_1KinematicsBase.html#ab0c60e8e7ba4c4f14e9a26a74b6a7125">kinematics::KinematicsBase::IKCostFn</a>()</code>&#160;</td>
+          <td class="paramname"><em>cost_function</em> = <code><a class="el" href="classkinematics_1_1KinematicsBase.html#ab0c60e8e7ba4c4f14e9a26a74b6a7125">kinematics::KinematicsBase::IKCostFn</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Isometry3d &amp;&#160;</td>
+          <td class="paramname"><em>link_offset</em> = <code>Eigen::Isometry3d::Identity()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -403,13 +412,13 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Compute the sequence of joint values that correspond to a straight Cartesian path, for a particular group. </p>
-<p>In contrast to the previous function, the Cartesian path is specified as a target frame to be reached (<em>target</em>) for the origin of a robot link (<em>link</em>). The target frame is assumed to be either in a global reference frame or in the local reference frame of the link. In the latter case (<em>global_reference_frame</em> is false) the <em>target</em> is rotated accordingly. All other comments from the previous function apply. </p>
+<p>Compute the sequence of joint values that correspond to a straight Cartesian path, for a particular frame. </p>
+<p>In contrast to the previous function, the Cartesian path is specified as a target frame to be reached (<em>target</em>) for a virtual frame attached to the robot <em>link</em> with the given <em>link_offset</em>. The target frame is assumed to be specified either w.r.t. to the global reference frame or the virtual link frame (<em>global_reference_frame</em> is false). This function returns the percentage (0..1) of the path that was achieved. All other comments from the previous function apply. </p>
 
 </div>
 </div>
 <a id="ae4fe6bd482022274da453095e461207a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4fe6bd482022274da453095e461207a">&#9670;&nbsp;</a></span>computeCartesianPath() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4fe6bd482022274da453095e461207a">&#9670;&nbsp;</a></span>computeCartesianPath() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -497,13 +506,108 @@ Here is the caller graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compute the sequence of joint values that correspond to a straight Cartesian path, for a particular link. </p>
+<p>In contrast to the previous function, the translation vector is specified as a (unit) direction vector and a distance. </p>
+
+<p class="definition">Definition at line <a class="el" href="cartesian__interpolator_8h_source.html#l00255">255</a> of file <a class="el" href="cartesian__interpolator_8h_source.html">cartesian_interpolator.h</a>.</p>
+
+</div>
+</div>
+<a id="a1f8b6c59032a11119e823e15fb446fb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f8b6c59032a11119e823e15fb446fb9">&#9670;&nbsp;</a></span>computeCartesianPath() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="structmoveit_1_1core_1_1CartesianInterpolator_1_1Distance.html">Distance</a> moveit::core::CartesianInterpolator::computeCartesianPath </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> *&#160;</td>
+          <td class="paramname"><em>start_state</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">JointModelGroup</a> *&#160;</td>
+          <td class="paramname"><em>group</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::shared_ptr&lt; <a class="el" href="classmoveit_1_1core_1_1RobotState.html">RobotState</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>traj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classmoveit_1_1core_1_1LinkModel.html">LinkModel</a> *&#160;</td>
+          <td class="paramname"><em>link</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3d &amp;&#160;</td>
+          <td class="paramname"><em>translation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>global_reference_frame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structmoveit_1_1core_1_1MaxEEFStep.html">MaxEEFStep</a> &amp;&#160;</td>
+          <td class="paramname"><em>max_step</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structmoveit_1_1core_1_1JumpThreshold.html">JumpThreshold</a> &amp;&#160;</td>
+          <td class="paramname"><em>jump_threshold</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a> &amp;&#160;</td>
+          <td class="paramname"><em>validCallback</em> = <code><a class="el" href="namespacemoveit_1_1core.html#a0dd89a7f5270847026534c333452bb4d">GroupStateValidityCallbackFn</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a> &amp;&#160;</td>
+          <td class="paramname"><em>options</em> = <code><a class="el" href="structkinematics_1_1KinematicsQueryOptions.html">kinematics::KinematicsQueryOptions</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classkinematics_1_1KinematicsBase.html#ab0c60e8e7ba4c4f14e9a26a74b6a7125">kinematics::KinematicsBase::IKCostFn</a>&#160;</td>
+          <td class="paramname"><em>cost_function</em> = <code><a class="el" href="classkinematics_1_1KinematicsBase.html#ab0c60e8e7ba4c4f14e9a26a74b6a7125">kinematics::KinematicsBase::IKCostFn</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Compute the sequence of joint values that correspond to a straight Cartesian path for a particular group. </p>
-<p>The Cartesian path to be followed is specified as a direction of motion (<em>direction</em>, unit vector) for the origin The Cartesian path to be followed is specified as a direction of motion (<em>direction</em>, unit vector) for the origin of a robot link (<em>link</em>). The direction is assumed to be either in a global reference frame or in the local reference frame of the link. In the latter case (<em>global_reference_frame</em> is false) the <em>direction</em> is rotated accordingly. The link needs to move in a straight line, following the specified direction, for the desired <em>distance</em>. The resulting joint values are stored in the vector <em>traj</em>, one by one. The maximum distance in Cartesian space between consecutive points on the resulting path is specified in the <em><a class="el" href="structmoveit_1_1core_1_1MaxEEFStep.html" title="Struct for containing max_step for computeCartesianPath.">MaxEEFStep</a></em> struct which provides two fields: translation and rotation. If a <em>validCallback</em> is specified, this is passed to the internal call to setFromIK(). In case of IK failure, the computation of the path stops and the value returned corresponds to the distance that was computed and for which corresponding states were added to the path. At the end of the function call, the state of the group corresponds to the last attempted Cartesian pose.</p>
+<p>Compute the sequence of joint values that correspond to a straight Cartesian path for a particular link. </p>
+<p>The Cartesian path to be followed is specified as a <em>translation</em> vector to be followed by the robot <em>link</em>. This vector is assumed to be specified either in the global reference frame or in the local reference frame of the link (<em>global_reference_frame</em> is false). The resulting joint values are stored in the vector <em>traj</em>, one by one. The maximum distance in Cartesian space between consecutive points on the resulting path is specified in the <em><a class="el" href="structmoveit_1_1core_1_1MaxEEFStep.html" title="Struct for containing max_step for computeCartesianPath.">MaxEEFStep</a></em> struct which provides two fields: translation and rotation. If a <em>validCallback</em> is specified, this is passed to the internal call to setFromIK(). In case of IK failure, the computation of the path stops and the value returned corresponds to the distance that was achieved and for which corresponding states were added to the path. At the end of the function call, the state of the group corresponds to the last attempted Cartesian pose.</p>
 <p>During the computation of the trajectory, it is usually preferred if consecutive joint values do not 'jump' by a large amount in joint space, even if the Cartesian distance between the corresponding points is small as expected. To account for this, the <em>jump_threshold</em> struct is provided, which comprises three fields: <em>jump_threshold_factor</em>, <em>revolute_jump_threshold</em> and <em>prismatic_jump_threshold</em>. If either <em>revolute_jump_threshold</em> or <em>prismatic_jump_threshold</em> are non-zero, we test for absolute jumps. If <em>jump_threshold_factor</em> is non-zero, we test for relative jumps. Otherwise (all params are zero), jump detection is disabled.</p>
 <p>For relative jump detection, the average joint-space distance between consecutive points in the trajectory is computed. If any individual joint-space motion delta is larger then this average distance by a factor of <em>jump_threshold_factor</em>, this step is considered a failure and the returned path is truncated up to just before the jump.</p>
 <p>For absolute jump thresholds, if any individual joint-space motion delta is larger then <em>revolute_jump_threshold</em> for revolute joints or <em>prismatic_jump_threshold</em> for prismatic joints then this step is considered a failure and the returned path is truncated up to just before the jump.</p>
@@ -511,8 +615,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a609bb9447e9962138335db6d05782aad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a609bb9447e9962138335db6d05782aad">&#9670;&nbsp;</a></span>computeCartesianPath() <span class="overload">[3/3]</span></h2>
+<a id="af0c47a2f2593e3111295d156c5c5194e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0c47a2f2593e3111295d156c5c5194e">&#9670;&nbsp;</a></span>computeCartesianPath() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -584,7 +688,13 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classkinematics_1_1KinematicsBase.html#ab0c60e8e7ba4c4f14e9a26a74b6a7125">kinematics::KinematicsBase::IKCostFn</a>&#160;</td>
-          <td class="paramname"><em>cost_function</em> = <code><a class="el" href="classkinematics_1_1KinematicsBase.html#ab0c60e8e7ba4c4f14e9a26a74b6a7125">kinematics::KinematicsBase::IKCostFn</a>()</code>&#160;</td>
+          <td class="paramname"><em>cost_function</em> = <code><a class="el" href="classkinematics_1_1KinematicsBase.html#ab0c60e8e7ba4c4f14e9a26a74b6a7125">kinematics::KinematicsBase::IKCostFn</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Isometry3d &amp;&#160;</td>
+          <td class="paramname"><em>link_offset</em> = <code>Eigen::Isometry3d::Identity()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -600,7 +710,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Compute the sequence of joint values that perform a general Cartesian path. </p>
-<p>In contrast to the previous functions, the Cartesian path is specified as a set of <em>waypoints</em> to be sequentially reached for the origin of a robot link (<em>link</em>). The waypoints are transforms given either in a global reference frame or in the local reference frame of the link at the immediately preceding waypoint. The link needs to move in a straight line between two consecutive waypoints. All other comments apply. </p>
+<p>In contrast to the previous functions, the Cartesian path is specified as a set of <em>waypoints</em> to be sequentially reached by the virtual frame attached to the robot <em>link</em>. The waypoints are transforms given either w.r.t. the global reference frame or the virtual frame at the immediately preceding waypoint. The virtual frame needs to move in a straight line between two consecutive waypoints. All other comments apply. </p>
 
 </div>
 </div>

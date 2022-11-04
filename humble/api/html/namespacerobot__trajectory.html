@@ -84,6 +84,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a9eedff63f0a0ef50d6dff84db384fb2b"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerobot__trajectory.html#a9eedff63f0a0ef50d6dff84db384fb2b">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classrobot__trajectory_1_1RobotTrajectory.html">RobotTrajectory</a> &amp;trajectory)</td></tr>
 <tr class="memdesc:a9eedff63f0a0ef50d6dff84db384fb2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator overload for printing trajectory to a stream.  <a href="namespacerobot__trajectory.html#a9eedff63f0a0ef50d6dff84db384fb2b">More...</a><br /></td></tr>
 <tr class="separator:a9eedff63f0a0ef50d6dff84db384fb2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0750fe7c58d1a655d83bd177586696ca"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerobot__trajectory.html#a0750fe7c58d1a655d83bd177586696ca">path_length</a> (<a class="el" href="classrobot__trajectory_1_1RobotTrajectory.html">RobotTrajectory</a> const &amp;trajectory)</td></tr>
+<tr class="memdesc:a0750fe7c58d1a655d83bd177586696ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the path length of a given trajectory based on the accumulated robot state distances. The distance between two robot states is calculated based on the sum of active joint distances between the two states (L1 norm).  <a href="namespacerobot__trajectory.html#a0750fe7c58d1a655d83bd177586696ca">More...</a><br /></td></tr>
+<tr class="separator:a0750fe7c58d1a655d83bd177586696ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaea992e4ba6967a7ec88956541d43618"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerobot__trajectory.html#aaea992e4ba6967a7ec88956541d43618">smoothness</a> (<a class="el" href="classrobot__trajectory_1_1RobotTrajectory.html">RobotTrajectory</a> const &amp;trajectory)</td></tr>
+<tr class="memdesc:aaea992e4ba6967a7ec88956541d43618"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the smoothness of a given trajectory.  <a href="namespacerobot__trajectory.html#aaea992e4ba6967a7ec88956541d43618">More...</a><br /></td></tr>
+<tr class="separator:aaea992e4ba6967a7ec88956541d43618"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f564d1e01216ff451b54282b0f6b61c"><td class="memItemLeft" align="right" valign="top">std::optional&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerobot__trajectory.html#a8f564d1e01216ff451b54282b0f6b61c">waypoint_density</a> (<a class="el" href="classrobot__trajectory_1_1RobotTrajectory.html">RobotTrajectory</a> const &amp;trajectory)</td></tr>
+<tr class="memdesc:a8f564d1e01216ff451b54282b0f6b61c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the waypoint density of a trajectory.  <a href="namespacerobot__trajectory.html#a8f564d1e01216ff451b54282b0f6b61c">More...</a><br /></td></tr>
+<tr class="separator:a8f564d1e01216ff451b54282b0f6b61c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ac4f1b5675c17a914be6251e6e12ff60e"></a>
@@ -132,7 +141,138 @@ Functions</h2></td></tr>
 
 <p>Operator overload for printing trajectory to a stream. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__trajectory_8cpp_source.html#l00629">629</a> of file <a class="el" href="robot__trajectory_8cpp_source.html">robot_trajectory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__trajectory_8cpp_source.html#l00630">630</a> of file <a class="el" href="robot__trajectory_8cpp_source.html">robot_trajectory.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0750fe7c58d1a655d83bd177586696ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0750fe7c58d1a655d83bd177586696ca">&#9670;&nbsp;</a></span>path_length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double robot_trajectory::path_length </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classrobot__trajectory_1_1RobotTrajectory.html">RobotTrajectory</a> const &amp;&#160;</td>
+          <td class="paramname"><em>trajectory</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculate the path length of a given trajectory based on the accumulated robot state distances. The distance between two robot states is calculated based on the sum of active joint distances between the two states (L1 norm). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">trajectory</td><td>Given robot trajectory </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Length of the robot trajectory [rad] </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="robot__trajectory_8cpp_source.html#l00636">636</a> of file <a class="el" href="robot__trajectory_8cpp_source.html">robot_trajectory.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacerobot__trajectory_a0750fe7c58d1a655d83bd177586696ca_cgraph.png" border="0" usemap="#namespacerobot__trajectory_a0750fe7c58d1a655d83bd177586696ca_cgraph" alt=""/></div>
+<map name="namespacerobot__trajectory_a0750fe7c58d1a655d83bd177586696ca_cgraph" id="namespacerobot__trajectory_a0750fe7c58d1a655d83bd177586696ca_cgraph">
+<area shape="rect" title="Calculate the path length of a given trajectory based on the accumulated robot state distances...." alt="" coords="5,5,168,47"/>
+<area shape="rect" href="namespacerobot__trajectory.html#aaea992e4ba6967a7ec88956541d43618" title="Calculate the smoothness of a given trajectory." alt="" coords="216,13,428,39"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacerobot__trajectory_a0750fe7c58d1a655d83bd177586696ca_icgraph.png" border="0" usemap="#namespacerobot__trajectory_a0750fe7c58d1a655d83bd177586696ca_icgraph" alt=""/></div>
+<map name="namespacerobot__trajectory_a0750fe7c58d1a655d83bd177586696ca_icgraph" id="namespacerobot__trajectory_a0750fe7c58d1a655d83bd177586696ca_icgraph">
+<area shape="rect" title="Calculate the path length of a given trajectory based on the accumulated robot state distances...." alt="" coords="467,46,629,87"/>
+<area shape="rect" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a9577c9f07660ef803aabb917aefc82b8" title=" " alt="" coords="236,5,419,61"/>
+<area shape="rect" href="test__robot__trajectory_8cpp.html#ae93bf72402ab01b5ced1fe8f5dc893a5" title=" " alt="" coords="293,85,362,112"/>
+<area shape="rect" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#abf647e82c140649be2188f757c42db6d" title="Execute the given motion plan request on the set of planners for the set number of runs." alt="" coords="5,5,188,61"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aaea992e4ba6967a7ec88956541d43618"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaea992e4ba6967a7ec88956541d43618">&#9670;&nbsp;</a></span>smoothness()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; double &gt; robot_trajectory::smoothness </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classrobot__trajectory_1_1RobotTrajectory.html">RobotTrajectory</a> const &amp;&#160;</td>
+          <td class="paramname"><em>trajectory</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculate the smoothness of a given trajectory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">trajectory</td><td>Given robot trajectory </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Smoothness of the given trajectory or nullopt if it is not possible to calculate the smoothness </dd></dl>
+<p>(a + b);</p>
+<p>(a + b);</p>
+
+<p class="definition">Definition at line <a class="el" href="robot__trajectory_8cpp_source.html#l00648">648</a> of file <a class="el" href="robot__trajectory_8cpp_source.html">robot_trajectory.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacerobot__trajectory_aaea992e4ba6967a7ec88956541d43618_icgraph.png" border="0" usemap="#namespacerobot__trajectory_aaea992e4ba6967a7ec88956541d43618_icgraph" alt=""/></div>
+<map name="namespacerobot__trajectory_aaea992e4ba6967a7ec88956541d43618_icgraph" id="namespacerobot__trajectory_aaea992e4ba6967a7ec88956541d43618_icgraph">
+<area shape="rect" title="Calculate the smoothness of a given trajectory." alt="" coords="677,79,889,105"/>
+<area shape="rect" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a9577c9f07660ef803aabb917aefc82b8" title=" " alt="" coords="236,5,419,61"/>
+<area shape="rect" href="namespacerobot__trajectory.html#a0750fe7c58d1a655d83bd177586696ca" title="Calculate the path length of a given trajectory based on the accumulated robot state distances...." alt="" coords="467,71,629,113"/>
+<area shape="rect" href="test__robot__trajectory_8cpp.html#a8a7aa8ae6cf7c2a9fecb9b33af31f6f4" title=" " alt="" coords="513,137,583,164"/>
+<area shape="rect" href="classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#abf647e82c140649be2188f757c42db6d" title="Execute the given motion plan request on the set of planners for the set number of runs." alt="" coords="5,5,188,61"/>
+<area shape="rect" href="test__robot__trajectory_8cpp.html#ae93bf72402ab01b5ced1fe8f5dc893a5" title=" " alt="" coords="293,85,362,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8f564d1e01216ff451b54282b0f6b61c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f564d1e01216ff451b54282b0f6b61c">&#9670;&nbsp;</a></span>waypoint_density()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; double &gt; robot_trajectory::waypoint_density </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classrobot__trajectory_1_1RobotTrajectory.html">RobotTrajectory</a> const &amp;&#160;</td>
+          <td class="paramname"><em>trajectory</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculate the waypoint density of a trajectory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">trajectory</td><td>Given robot trajectory </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Waypoint density of the given trajectory or nullopt if it is not possible to calculate the density </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="robot__trajectory_8cpp_source.html#l00686">686</a> of file <a class="el" href="robot__trajectory_8cpp_source.html">robot_trajectory.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacerobot__trajectory_a8f564d1e01216ff451b54282b0f6b61c_icgraph.png" border="0" usemap="#namespacerobot__trajectory_a8f564d1e01216ff451b54282b0f6b61c_icgraph" alt=""/></div>
+<map name="namespacerobot__trajectory_a8f564d1e01216ff451b54282b0f6b61c_icgraph" id="namespacerobot__trajectory_a8f564d1e01216ff451b54282b0f6b61c_icgraph">
+<area shape="rect" title="Calculate the waypoint density of a trajectory." alt="" coords="123,5,316,47"/>
+<area shape="rect" href="test__robot__trajectory_8cpp.html#a102898fa0cc22e7d56d37b3aa9c3cc7a" title=" " alt="" coords="5,13,75,39"/>
+</map>
+</div>
 
 </div>
 </div>

@@ -82,7 +82,7 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad2715330ff86343a32509f339c34c9d4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1AttachedBody.html#ad2715330ff86343a32509f339c34c9d4">AttachedBody</a> (const <a class="el" href="classmoveit_1_1core_1_1LinkModel.html">LinkModel</a> *parent, const std::string &amp;id, const Eigen::Isometry3d &amp;pose, const std::vector&lt; shapes::ShapeConstPtr &gt; &amp;shapes, const EigenSTL::vector_Isometry3d &amp;shape_poses, const <a class="el" href="ros_2warehouse_2warehouse_2CMakeLists_8txt.html#af4423e580afb68aec7c40fb0bce7d5d4">std::set</a>&lt; std::string &gt; &amp;touch_links, const trajectory_msgs::msg::JointTrajectory &amp;detach_posture, const <a class="el" href="namespacemoveit_1_1core.html#aaed75968b346de18defad60f19fc2545">moveit::core::FixedTransformsMap</a> &amp;subframe_poses=<a class="el" href="namespacemoveit_1_1core.html#aaed75968b346de18defad60f19fc2545">moveit::core::FixedTransformsMap</a>())</td></tr>
+<tr class="memitem:ad2715330ff86343a32509f339c34c9d4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1AttachedBody.html#ad2715330ff86343a32509f339c34c9d4">AttachedBody</a> (const <a class="el" href="classmoveit_1_1core_1_1LinkModel.html">LinkModel</a> *parent, const std::string &amp;id, const Eigen::Isometry3d &amp;pose, const std::vector&lt; shapes::ShapeConstPtr &gt; &amp;shapes, const EigenSTL::vector_Isometry3d &amp;shape_poses, const <a class="el" href="ros_2visualization_2trajectory__rviz__plugin_2CMakeLists_8txt.html#ad6d3a6a066b9622969c1f3cfc2aa6c94">std::set</a>&lt; std::string &gt; &amp;touch_links, const trajectory_msgs::msg::JointTrajectory &amp;detach_posture, const <a class="el" href="namespacemoveit_1_1core.html#aaed75968b346de18defad60f19fc2545">moveit::core::FixedTransformsMap</a> &amp;subframe_poses=<a class="el" href="namespacemoveit_1_1core.html#aaed75968b346de18defad60f19fc2545">moveit::core::FixedTransformsMap</a>())</td></tr>
 <tr class="memdesc:ad2715330ff86343a32509f339c34c9d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an attached body for a specified <em>link</em>.  <a href="classmoveit_1_1core_1_1AttachedBody.html#ad2715330ff86343a32509f339c34c9d4">More...</a><br /></td></tr>
 <tr class="separator:ad2715330ff86343a32509f339c34c9d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0eb18ac015702bffe9b8c499597ab4a7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1AttachedBody.html#a0eb18ac015702bffe9b8c499597ab4a7">~AttachedBody</a> ()</td></tr>
@@ -108,7 +108,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad7e41060467df2a8db42540d86cfbcf6"><td class="memItemLeft" align="right" valign="top">const EigenSTL::vector_Isometry3d &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1AttachedBody.html#ad7e41060467df2a8db42540d86cfbcf6">getShapePoses</a> () const</td></tr>
 <tr class="memdesc:ad7e41060467df2a8db42540d86cfbcf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the shape poses (the transforms to the shapes of this body, relative to the pose). The returned transforms are guaranteed to be valid isometries.  <a href="classmoveit_1_1core_1_1AttachedBody.html#ad7e41060467df2a8db42540d86cfbcf6">More...</a><br /></td></tr>
 <tr class="separator:ad7e41060467df2a8db42540d86cfbcf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1added4f50dd7c18b8559e160885cbf1"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="ros_2warehouse_2warehouse_2CMakeLists_8txt.html#af4423e580afb68aec7c40fb0bce7d5d4">std::set</a>&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1AttachedBody.html#a1added4f50dd7c18b8559e160885cbf1">getTouchLinks</a> () const</td></tr>
+<tr class="memitem:a1added4f50dd7c18b8559e160885cbf1"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="ros_2visualization_2trajectory__rviz__plugin_2CMakeLists_8txt.html#ad6d3a6a066b9622969c1f3cfc2aa6c94">std::set</a>&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1AttachedBody.html#a1added4f50dd7c18b8559e160885cbf1">getTouchLinks</a> () const</td></tr>
 <tr class="memdesc:a1added4f50dd7c18b8559e160885cbf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the links that the attached body is allowed to touch.  <a href="classmoveit_1_1core_1_1AttachedBody.html#a1added4f50dd7c18b8559e160885cbf1">More...</a><br /></td></tr>
 <tr class="separator:a1added4f50dd7c18b8559e160885cbf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b5208f4d6c74fd1c31d89015f153d93"><td class="memItemLeft" align="right" valign="top">const trajectory_msgs::msg::JointTrajectory &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit_1_1core_1_1AttachedBody.html#a1b5208f4d6c74fd1c31d89015f153d93">getDetachPosture</a> () const</td></tr>
@@ -199,7 +199,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="ros_2warehouse_2warehouse_2CMakeLists_8txt.html#af4423e580afb68aec7c40fb0bce7d5d4">std::set</a>&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="ros_2visualization_2trajectory__rviz__plugin_2CMakeLists_8txt.html#ad6d3a6a066b9622969c1f3cfc2aa6c94">std::set</a>&lt; std::string &gt; &amp;&#160;</td>
           <td class="paramname"><em>touch_links</em>, </td>
         </tr>
         <tr>
@@ -862,7 +862,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="ros_2warehouse_2warehouse_2CMakeLists_8txt.html#af4423e580afb68aec7c40fb0bce7d5d4">std::set</a>&lt;std::string&gt;&amp; moveit::core::AttachedBody::getTouchLinks </td>
+          <td class="memname">const <a class="el" href="ros_2visualization_2trajectory__rviz__plugin_2CMakeLists_8txt.html#ad6d3a6a066b9622969c1f3cfc2aa6c94">std::set</a>&lt;std::string&gt;&amp; moveit::core::AttachedBody::getTouchLinks </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

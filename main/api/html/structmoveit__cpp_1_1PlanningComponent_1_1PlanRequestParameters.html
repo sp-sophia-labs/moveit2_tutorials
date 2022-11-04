@@ -83,8 +83,11 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a85377678127665419e4ffe3ef24f00be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1PlanRequestParameters.html#a85377678127665419e4ffe3ef24f00be">load</a> (const rclcpp::Node::SharedPtr &amp;node)</td></tr>
-<tr class="separator:a85377678127665419e4ffe3ef24f00be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7d07e189e3bb69b61bea86eddc8de0a"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ac7d07e189e3bb69b61bea86eddc8de0a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1PlanRequestParameters.html#ac7d07e189e3bb69b61bea86eddc8de0a">declareOrGetParam</a> (const rclcpp::Node::SharedPtr &amp;node, const std::string &amp;param_name, T &amp;output_value, T default_value)</td></tr>
+<tr class="separator:ac7d07e189e3bb69b61bea86eddc8de0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00e13377c24bc00363a46bd06d891e5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1PlanRequestParameters.html#a00e13377c24bc00363a46bd06d891e5d">load</a> (const rclcpp::Node::SharedPtr &amp;node, const std::string &amp;param_namespace=&quot;&quot;)</td></tr>
+<tr class="separator:a00e13377c24bc00363a46bd06d891e5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -104,10 +107,62 @@ Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Planner parameters provided with the MotionPlanRequest. </p>
 
-<p class="definition">Definition at line <a class="el" href="planning__component_8h_source.html#l00109">109</a> of file <a class="el" href="planning__component_8h_source.html">planning_component.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__component_8h_source.html#l00089">89</a> of file <a class="el" href="planning__component_8h_source.html">planning_component.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a85377678127665419e4ffe3ef24f00be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85377678127665419e4ffe3ef24f00be">&#9670;&nbsp;</a></span>load()</h2>
+<a id="ac7d07e189e3bb69b61bea86eddc8de0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7d07e189e3bb69b61bea86eddc8de0a">&#9670;&nbsp;</a></span>declareOrGetParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void moveit_cpp::PlanningComponent::PlanRequestParameters::declareOrGetParam </td>
+          <td>(</td>
+          <td class="paramtype">const rclcpp::Node::SharedPtr &amp;&#160;</td>
+          <td class="paramname"><em>node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>param_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>output_value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>default_value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="planning__component_8h_source.html#l00099">99</a> of file <a class="el" href="planning__component_8h_source.html">planning_component.h</a>.</p>
+
+</div>
+</div>
+<a id="a00e13377c24bc00363a46bd06d891e5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00e13377c24bc00363a46bd06d891e5d">&#9670;&nbsp;</a></span>load()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -119,8 +174,18 @@ Public Attributes</h2></td></tr>
           <td class="memname">void moveit_cpp::PlanningComponent::PlanRequestParameters::load </td>
           <td>(</td>
           <td class="paramtype">const rclcpp::Node::SharedPtr &amp;&#160;</td>
-          <td class="paramname"><em>node</em></td><td>)</td>
+          <td class="paramname"><em>node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>param_namespace</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -130,7 +195,7 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="planning__component_8h_source.html#l00118">118</a> of file <a class="el" href="planning__component_8h_source.html">planning_component.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__component_8h_source.html#l00112">112</a> of file <a class="el" href="planning__component_8h_source.html">planning_component.h</a>.</p>
 
 </div>
 </div>
@@ -147,7 +212,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="planning__component_8h_source.html#l00116">116</a> of file <a class="el" href="planning__component_8h_source.html">planning_component.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__component_8h_source.html#l00096">96</a> of file <a class="el" href="planning__component_8h_source.html">planning_component.h</a>.</p>
 
 </div>
 </div>
@@ -163,7 +228,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="planning__component_8h_source.html#l00115">115</a> of file <a class="el" href="planning__component_8h_source.html">planning_component.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__component_8h_source.html#l00095">95</a> of file <a class="el" href="planning__component_8h_source.html">planning_component.h</a>.</p>
 
 </div>
 </div>
@@ -179,7 +244,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="planning__component_8h_source.html#l00111">111</a> of file <a class="el" href="planning__component_8h_source.html">planning_component.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__component_8h_source.html#l00091">91</a> of file <a class="el" href="planning__component_8h_source.html">planning_component.h</a>.</p>
 
 </div>
 </div>
@@ -195,7 +260,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="planning__component_8h_source.html#l00113">113</a> of file <a class="el" href="planning__component_8h_source.html">planning_component.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__component_8h_source.html#l00093">93</a> of file <a class="el" href="planning__component_8h_source.html">planning_component.h</a>.</p>
 
 </div>
 </div>
@@ -211,7 +276,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="planning__component_8h_source.html#l00112">112</a> of file <a class="el" href="planning__component_8h_source.html">planning_component.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__component_8h_source.html#l00092">92</a> of file <a class="el" href="planning__component_8h_source.html">planning_component.h</a>.</p>
 
 </div>
 </div>
@@ -227,7 +292,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="planning__component_8h_source.html#l00114">114</a> of file <a class="el" href="planning__component_8h_source.html">planning_component.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__component_8h_source.html#l00094">94</a> of file <a class="el" href="planning__component_8h_source.html">planning_component.h</a>.</p>
 
 </div>
 </div>

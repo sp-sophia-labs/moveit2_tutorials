@@ -278,6 +278,9 @@ Functions</h2></td></tr>
 <tr class="memitem:aa65b82b3453408ac6b77a273a0a080f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit_1_1core.html#aa65b82b3453408ac6b77a273a0a080f4">isEmpty</a> (const geometry_msgs::msg::Pose &amp;msg)</td></tr>
 <tr class="memdesc:aa65b82b3453408ac6b77a273a0a080f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the message contains any non-zero entries.  <a href="namespacemoveit_1_1core.html#aa65b82b3453408ac6b77a273a0a080f4">More...</a><br /></td></tr>
 <tr class="separator:aa65b82b3453408ac6b77a273a0a080f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a480379262c52c8660565e64b0e2559d3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit_1_1core.html#a480379262c52c8660565e64b0e2559d3">error_code_to_string</a> (<a class="el" href="classmoveit_1_1core_1_1MoveItErrorCode.html">MoveItErrorCode</a> error_code)</td></tr>
+<tr class="memdesc:a480379262c52c8660565e64b0e2559d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience function to translated error message into string.  <a href="namespacemoveit_1_1core.html#a480379262c52c8660565e64b0e2559d3">More...</a><br /></td></tr>
+<tr class="separator:a480379262c52c8660565e64b0e2559d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a646367a1863f557a16cb8769a2980604"><td class="memItemLeft" align="right" valign="top">moveit::core::RobotModelPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit_1_1core.html#a646367a1863f557a16cb8769a2980604">loadTestingRobotModel</a> (const std::string &amp;robot_name)</td></tr>
 <tr class="memdesc:a646367a1863f557a16cb8769a2980604"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a robot from moveit_resources.  <a href="namespacemoveit_1_1core.html#a646367a1863f557a16cb8769a2980604">More...</a><br /></td></tr>
 <tr class="separator:a646367a1863f557a16cb8769a2980604"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -690,6 +693,43 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="classmoveit_1_1core_1_1PlanarJointModel.html#a1ee52e6d0291b91a76b8119e74f0a8ae" title="Computes the state that lies at time t in [0, 1] on the segment that connects from state to to state...." alt="" coords="5,5,188,47"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a480379262c52c8660565e64b0e2559d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a480379262c52c8660565e64b0e2559d3">&#9670;&nbsp;</a></span>error_code_to_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string moveit::core::error_code_to_string </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmoveit_1_1core_1_1MoveItErrorCode.html">MoveItErrorCode</a>&#160;</td>
+          <td class="paramname"><em>error_code</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Convenience function to translated error message into string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">error_code</td><td>Error code to be translated to a string </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Error code string </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="moveit__error__code_8h_source.html#l00145">145</a> of file <a class="el" href="moveit__error__code_8h_source.html">moveit_error_code.h</a>.</p>
 
 </div>
 </div>
@@ -1167,7 +1207,7 @@ Here is the caller graph for this function:</div>
 
 <p>Operator overload for printing variable bounds to a stream. </p>
 
-<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02370">2370</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="robot__state_8cpp_source.html#l02367">2367</a> of file <a class="el" href="robot__state_8cpp_source.html">robot_state.cpp</a>.</p>
 
 </div>
 </div>

@@ -341,11 +341,11 @@ $(function() {
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        co.operation = CollisionObject.ADD</div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        co.id = name</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        co.header = pose.header</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        box = SolidPrimitive()</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        box.type = SolidPrimitive.BOX</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        box.dimensions = list(size)</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        co.primitives = [box]</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        co.primitive_poses = [pose.pose]</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        co.pose = pose.pose</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        box = SolidPrimitive()</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        box.type = SolidPrimitive.BOX</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        box.dimensions = list(size)</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        co.primitives = [box]</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keywordflow">return</span> co</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160; </div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    @staticmethod</div>
@@ -363,37 +363,37 @@ $(function() {
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        co.operation = CollisionObject.ADD</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        co.id = name</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        co.header = pose.header</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        mesh = Mesh()</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        first_face = scene.meshes[0].faces[0]</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="keywordflow">if</span> hasattr(first_face, <span class="stringliteral">&quot;__len__&quot;</span>):</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;            <span class="keywordflow">for</span> face <span class="keywordflow">in</span> scene.meshes[0].faces:</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                <span class="keywordflow">if</span> len(face) == 3:</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                    triangle = MeshTriangle()</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                    triangle.vertex_indices = [face[0], face[1], face[2]]</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                    mesh.triangles.append(triangle)</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <span class="keywordflow">elif</span> hasattr(first_face, <span class="stringliteral">&quot;indices&quot;</span>):</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;            <span class="keywordflow">for</span> face <span class="keywordflow">in</span> scene.meshes[0].faces:</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                <span class="keywordflow">if</span> len(face.indices) == 3:</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                    triangle = MeshTriangle()</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                    triangle.vertex_indices = [</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                        face.indices[0],</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                        face.indices[1],</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                        face.indices[2],</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                    ]</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                    mesh.triangles.append(triangle)</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <span class="keywordflow">else</span>:</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            <span class="keywordflow">raise</span> <a class="code" href="classmoveit__commander_1_1exception_1_1MoveItCommanderException.html">MoveItCommanderException</a>(</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                <span class="stringliteral">&quot;Unable to build triangles from mesh due to mesh object structure&quot;</span></div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            )</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <span class="keywordflow">for</span> vertex <span class="keywordflow">in</span> scene.meshes[0].vertices:</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            point = Point()</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            point.x = vertex[0] * scale[0]</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            point.y = vertex[1] * scale[1]</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            point.z = vertex[2] * scale[2]</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            mesh.vertices.append(point)</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        co.meshes = [mesh]</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        co.mesh_poses = [pose.pose]</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        co.pose = pose.pose</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        mesh = Mesh()</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        first_face = scene.meshes[0].faces[0]</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <span class="keywordflow">if</span> hasattr(first_face, <span class="stringliteral">&quot;__len__&quot;</span>):</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            <span class="keywordflow">for</span> face <span class="keywordflow">in</span> scene.meshes[0].faces:</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                <span class="keywordflow">if</span> len(face) == 3:</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                    triangle = MeshTriangle()</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                    triangle.vertex_indices = [face[0], face[1], face[2]]</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                    mesh.triangles.append(triangle)</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <span class="keywordflow">elif</span> hasattr(first_face, <span class="stringliteral">&quot;indices&quot;</span>):</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            <span class="keywordflow">for</span> face <span class="keywordflow">in</span> scene.meshes[0].faces:</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                <span class="keywordflow">if</span> len(face.indices) == 3:</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                    triangle = MeshTriangle()</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                    triangle.vertex_indices = [</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                        face.indices[0],</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                        face.indices[1],</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                        face.indices[2],</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                    ]</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                    mesh.triangles.append(triangle)</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        <span class="keywordflow">else</span>:</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            <span class="keywordflow">raise</span> <a class="code" href="classmoveit__commander_1_1exception_1_1MoveItCommanderException.html">MoveItCommanderException</a>(</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                <span class="stringliteral">&quot;Unable to build triangles from mesh due to mesh object structure&quot;</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            )</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <span class="keywordflow">for</span> vertex <span class="keywordflow">in</span> scene.meshes[0].vertices:</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            point = Point()</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            point.x = vertex[0] * scale[0]</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            point.y = vertex[1] * scale[1]</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            point.z = vertex[2] * scale[2]</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            mesh.vertices.append(point)</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        co.meshes = [mesh]</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        pyassimp.release(scene)</div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        <span class="keywordflow">return</span> co</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160; </div>
@@ -403,11 +403,11 @@ $(function() {
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        co.operation = CollisionObject.ADD</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        co.id = name</div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        co.header = pose.header</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        sphere = SolidPrimitive()</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        sphere.type = SolidPrimitive.SPHERE</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        sphere.dimensions = [radius]</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        co.primitives = [sphere]</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        co.primitive_poses = [pose.pose]</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        co.pose = pose.pose</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        sphere = SolidPrimitive()</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        sphere.type = SolidPrimitive.SPHERE</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        sphere.dimensions = [radius]</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        co.primitives = [sphere]</div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        <span class="keywordflow">return</span> co</div>
 <div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160; </div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    @staticmethod</div>
@@ -416,11 +416,11 @@ $(function() {
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        co.operation = CollisionObject.ADD</div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        co.id = name</div>
 <div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        co.header = pose.header</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        cylinder = SolidPrimitive()</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        cylinder.type = SolidPrimitive.CYLINDER</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        cylinder.dimensions = [height, radius]</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        co.primitives = [cylinder]</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        co.primitive_poses = [pose.pose]</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        co.pose = pose.pose</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        cylinder = SolidPrimitive()</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        cylinder.type = SolidPrimitive.CYLINDER</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        cylinder.dimensions = [height, radius]</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        co.primitives = [cylinder]</div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        <span class="keywordflow">return</span> co</div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160; </div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    @staticmethod</div>

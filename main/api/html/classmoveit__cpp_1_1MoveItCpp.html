@@ -146,6 +146,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a48632e24176193c126eb422ffb49aee2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmoveit__controller__manager_1_1ExecutionStatus.html">moveit_controller_manager::ExecutionStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1MoveItCpp.html#a48632e24176193c126eb422ffb49aee2">execute</a> (const std::string &amp;group_name, const robot_trajectory::RobotTrajectoryPtr &amp;robot_trajectory, bool blocking=true)</td></tr>
 <tr class="memdesc:a48632e24176193c126eb422ffb49aee2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute a trajectory on the planning group specified by group_name using the trajectory execution manager. If blocking is set to false, the execution is run in background and the function returns immediately.  <a href="classmoveit__cpp_1_1MoveItCpp.html#a48632e24176193c126eb422ffb49aee2">More...</a><br /></td></tr>
 <tr class="separator:a48632e24176193c126eb422ffb49aee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3b5ae726e6bca97849ebba0c4de0d56"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1MoveItCpp.html#ab3b5ae726e6bca97849ebba0c4de0d56">terminatePlanningPipeline</a> (const std::string &amp;pipeline_name)</td></tr>
+<tr class="memdesc:ab3b5ae726e6bca97849ebba0c4de0d56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility to terminate all active planning pipelines.  <a href="classmoveit__cpp_1_1MoveItCpp.html#ab3b5ae726e6bca97849ebba0c4de0d56">More...</a><br /></td></tr>
+<tr class="separator:ab3b5ae726e6bca97849ebba0c4de0d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -605,7 +608,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00311">311</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00330">330</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
 
 </div>
 </div>
@@ -698,6 +701,28 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab3b5ae726e6bca97849ebba0c4de0d56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3b5ae726e6bca97849ebba0c4de0d56">&#9670;&nbsp;</a></span>terminatePlanningPipeline()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool moveit_cpp::MoveItCpp::terminatePlanningPipeline </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>pipeline_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Utility to terminate all active planning pipelines. </p>
+
+<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00311">311</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
 
 </div>
 </div>

@@ -1,8 +1,6 @@
 <map id="moveit_controller_manager::MoveItControllerManager" name="moveit_controller_manager::MoveItControllerManager">
-<area shape="rect" id="node1" title="MoveIt does not enforce how controllers are implemented. To make your controllers usable by MoveIt,..." alt="" coords="5,173,208,214"/>
-<area shape="rect" id="node2" href="$classmoveit__controller__manager__example_1_1MoveItControllerManagerExample.html" title=" " alt="" coords="256,5,516,61"/>
-<area shape="rect" id="node3" href="$classmoveit__ros__control__interface_1_1MoveItControllerManager.html" title="moveit_controller_manager::MoveItControllerManager sub class that interfaces one ros_control controll..." alt="" coords="284,85,488,141"/>
-<area shape="rect" id="node4" href="$classmoveit__ros__control__interface_1_1MoveItMultiControllerManager.html" title="MoveItMultiControllerManager discovers all running ros_control node and delegates member function to ..." alt="" coords="267,165,505,221"/>
-<area shape="rect" id="node5" href="$classmoveit__simple__controller__manager_1_1MoveItSimpleControllerManager.html" title=" " alt="" coords="261,245,511,301"/>
-<area shape="rect" id="node6" href="$classtest__moveit__controller__manager_1_1TestMoveItControllerManager.html" title=" " alt="" coords="271,325,501,381"/>
+<area shape="rect" id="node1" title="MoveIt does not enforce how controllers are implemented. To make your controllers usable by MoveIt,..." alt="" coords="5,79,208,120"/>
+<area shape="rect" id="node2" href="$classmoveit__ros__control__interface_1_1Ros2ControlManager.html" title="moveit_controller_manager::Ros2ControlManager sub class that interfaces one ros_control controller_ma..." alt="" coords="265,5,496,47"/>
+<area shape="rect" id="node3" href="$classmoveit__ros__control__interface_1_1Ros2ControlMultiManager.html" title="Ros2ControlMultiManager discovers all running ros_control node and delegates member function to the c..." alt="" coords="277,71,484,127"/>
+<area shape="rect" id="node4" href="$classmoveit__simple__controller__manager_1_1MoveItSimpleControllerManager.html" title=" " alt="" coords="256,151,505,207"/>
 </map>

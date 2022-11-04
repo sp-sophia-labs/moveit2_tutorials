@@ -82,61 +82,62 @@ $(function() {
 <code>#include &lt;<a class="el" href="planning__interface_8h_source.html">moveit/planning_interface/planning_interface.h</a>&gt;</code><br />
 <code>#include &lt;pluginlib/class_loader.hpp&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;cartesian_limits_parameters.hpp&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for pilz_industrial_motion_planner.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="pilz__industrial__motion__planner_8h__incl.png" border="0" usemap="#moveit__planners_2pilz__industrial__motion__planner_2include_2pilz__industrial__motion__planner_2pilz__industrial__motion__planner_8h" alt=""/></div>
 <map name="moveit__planners_2pilz__industrial__motion__planner_2include_2pilz__industrial__motion__planner_2pilz__industrial__motion__planner_8h" id="moveit__planners_2pilz__industrial__motion__planner_2include_2pilz__industrial__motion__planner_2pilz__industrial__motion__planner_8h">
-<area shape="rect" title=" " alt="" coords="833,5,1060,91"/>
-<area shape="rect" title=" " alt="" coords="694,525,826,552"/>
-<area shape="rect" href="joint__limits__extension_8h.html" title=" " alt="" coords="237,615,403,671"/>
-<area shape="rect" href="planning__context__loader_8h.html" title=" " alt="" coords="508,139,703,195"/>
-<area shape="rect" title=" " alt="" coords="1457,987,1535,1013"/>
-<area shape="rect" href="planning__interface_8h.html" title=" " alt="" coords="850,243,1043,284"/>
-<area shape="rect" href="class__forward_8h.html" title=" " alt="" coords="2183,808,2340,849"/>
-<area shape="rect" title=" " alt="" coords="2667,153,2858,180"/>
-<area shape="rect" title=" " alt="" coords="160,815,219,842"/>
-<area shape="rect" href="joint__limits_8hpp.html" title=" " alt="" coords="211,719,378,760"/>
-<area shape="rect" title=" " alt="" coords="437,815,496,842"/>
-<area shape="rect" title=" " alt="" coords="640,815,691,842"/>
-<area shape="rect" title=" " alt="" coords="257,815,332,842"/>
-<area shape="rect" href="limits__container_8h.html" title=" " alt="" coords="331,421,530,463"/>
-<area shape="rect" title=" " alt="" coords="555,629,618,656"/>
-<area shape="rect" href="cartesian__limit_8h.html" title=" " alt="" coords="94,518,285,559"/>
-<area shape="rect" href="joint__limits__container_8h.html" title=" " alt="" coords="309,511,475,567"/>
-<area shape="rect" title=" " alt="" coords="499,525,567,552"/>
-<area shape="rect" href="planning__request_8h.html" title=" " alt="" coords="902,332,1095,373"/>
-<area shape="rect" href="planning__response_8h.html" title=" " alt="" coords="1474,332,1667,373"/>
-<area shape="rect" title=" " alt="" coords="1692,339,1817,366"/>
-<area shape="rect" href="declare__ptr_8h.html" title=" " alt="" coords="1806,897,1978,939"/>
-<area shape="rect" title=" " alt="" coords="903,421,1095,463"/>
-<area shape="rect" href="robot__trajectory_8h.html" title=" " alt="" coords="1380,421,1556,463"/>
-<area shape="rect" title=" " alt="" coords="1581,421,1763,463"/>
-<area shape="rect" title=" " alt="" coords="1788,421,1980,463"/>
-<area shape="rect" title=" " alt="" coords="2004,421,2215,463"/>
-<area shape="rect" href="robot__state_8h.html" title=" " alt="" coords="952,518,1099,559"/>
-<area shape="rect" title=" " alt="" coords="1174,518,1354,559"/>
-<area shape="rect" title=" " alt="" coords="1378,518,1558,559"/>
-<area shape="rect" title=" " alt="" coords="1582,525,1645,552"/>
-<area shape="rect" title=" " alt="" coords="1669,525,1744,552"/>
-<area shape="rect" title=" " alt="" coords="1769,525,1917,552"/>
-<area shape="rect" title=" " alt="" coords="1941,525,2025,552"/>
-<area shape="rect" title=" " alt="" coords="2049,525,2175,552"/>
-<area shape="rect" title=" " alt="" coords="2200,525,2323,552"/>
-<area shape="rect" title=" " alt="" coords="2347,525,2490,552"/>
-<area shape="rect" href="robot__model_8h.html" title=" " alt="" coords="2095,622,2249,663"/>
-<area shape="rect" href="attached__body_8h.html" title=" " alt="" coords="795,622,941,663"/>
-<area shape="rect" href="transforms_8h.html" title=" " alt="" coords="830,726,1061,753"/>
-<area shape="rect" title=" " alt="" coords="1017,622,1189,663"/>
-<area shape="rect" title=" " alt="" coords="1213,622,1384,663"/>
-<area shape="rect" title=" " alt="" coords="1408,622,1560,663"/>
-<area shape="rect" title=" " alt="" coords="1585,629,1807,656"/>
-<area shape="rect" title=" " alt="" coords="1831,629,1900,656"/>
-<area shape="rect" title=" " alt="" coords="1924,629,2071,656"/>
-<area shape="rect" href="exceptions_8h.html" title=" " alt="" coords="1738,726,1969,753"/>
-<area shape="rect" title=" " alt="" coords="1753,815,1887,842"/>
-<area shape="rect" href="joint__model__group_8h.html" title=" " alt="" coords="1555,719,1714,760"/>
-<area shape="rect" href="fixed__joint__model_8h.html" title=" " alt="" coords="2044,719,2199,760"/>
+<area shape="rect" title=" " alt="" coords="2301,5,2528,91"/>
+<area shape="rect" title=" " alt="" coords="2418,525,2550,552"/>
+<area shape="rect" href="joint__limits__extension_8h.html" title=" " alt="" coords="159,615,326,671"/>
+<area shape="rect" href="planning__context__loader_8h.html" title=" " alt="" coords="412,139,607,195"/>
+<area shape="rect" title=" " alt="" coords="93,339,329,366"/>
+<area shape="rect" title=" " alt="" coords="2361,987,2439,1013"/>
+<area shape="rect" href="planning__interface_8h.html" title=" " alt="" coords="1961,243,2154,284"/>
+<area shape="rect" href="class__forward_8h.html" title=" " alt="" coords="2232,808,2389,849"/>
+<area shape="rect" title=" " alt="" coords="2677,153,2867,180"/>
+<area shape="rect" title=" " alt="" coords="103,815,161,842"/>
+<area shape="rect" href="joint__limits_8hpp.html" title=" " alt="" coords="147,719,314,760"/>
+<area shape="rect" title=" " alt="" coords="400,815,459,842"/>
+<area shape="rect" title=" " alt="" coords="628,815,679,842"/>
+<area shape="rect" title=" " alt="" coords="193,815,268,842"/>
+<area shape="rect" href="limits__container_8h.html" title=" " alt="" coords="274,243,473,284"/>
+<area shape="rect" title=" " alt="" coords="459,629,522,656"/>
+<area shape="rect" href="joint__limits__container_8h.html" title=" " alt="" coords="305,511,471,567"/>
+<area shape="rect" title=" " alt="" coords="353,339,421,366"/>
+<area shape="rect" href="planning__request_8h.html" title=" " alt="" coords="2227,332,2421,373"/>
+<area shape="rect" href="planning__response_8h.html" title=" " alt="" coords="1517,332,1710,373"/>
+<area shape="rect" title=" " alt="" coords="1367,339,1492,366"/>
+<area shape="rect" href="declare__ptr_8h.html" title=" " alt="" coords="2238,897,2410,939"/>
+<area shape="rect" title=" " alt="" coords="2228,421,2420,463"/>
+<area shape="rect" href="robot__trajectory_8h.html" title=" " alt="" coords="1743,421,1919,463"/>
+<area shape="rect" href="moveit__error__code_8h.html" title=" " alt="" coords="665,421,815,463"/>
+<area shape="rect" title=" " alt="" coords="1085,421,1267,463"/>
+<area shape="rect" title=" " alt="" coords="1292,421,1484,463"/>
+<area shape="rect" title=" " alt="" coords="1508,421,1719,463"/>
+<area shape="rect" href="robot__state_8h.html" title=" " alt="" coords="2095,518,2241,559"/>
+<area shape="rect" title=" " alt="" coords="1022,518,1202,559"/>
+<area shape="rect" title=" " alt="" coords="1226,518,1406,559"/>
+<area shape="rect" title=" " alt="" coords="1430,525,1493,552"/>
+<area shape="rect" title=" " alt="" coords="1517,525,1592,552"/>
+<area shape="rect" title=" " alt="" coords="1617,525,1765,552"/>
+<area shape="rect" title=" " alt="" coords="1789,525,1873,552"/>
+<area shape="rect" title=" " alt="" coords="1897,525,2020,552"/>
+<area shape="rect" title=" " alt="" coords="855,525,998,552"/>
+<area shape="rect" href="robot__model_8h.html" title=" " alt="" coords="1467,622,1621,663"/>
+<area shape="rect" href="attached__body_8h.html" title=" " alt="" coords="2069,622,2216,663"/>
+<area shape="rect" href="transforms_8h.html" title=" " alt="" coords="2031,726,2262,753"/>
+<area shape="rect" title=" " alt="" coords="1270,622,1442,663"/>
+<area shape="rect" title=" " alt="" coords="1075,622,1245,663"/>
+<area shape="rect" title=" " alt="" coords="1645,622,1797,663"/>
+<area shape="rect" title=" " alt="" coords="1822,629,2045,656"/>
+<area shape="rect" title=" " alt="" coords="811,629,880,656"/>
+<area shape="rect" title=" " alt="" coords="904,629,1051,656"/>
+<area shape="rect" href="exceptions_8h.html" title=" " alt="" coords="1351,726,1582,753"/>
+<area shape="rect" title=" " alt="" coords="1367,815,1500,842"/>
+<area shape="rect" href="joint__model__group_8h.html" title=" " alt="" coords="1169,719,1327,760"/>
+<area shape="rect" title=" " alt="" coords="649,518,831,559"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">

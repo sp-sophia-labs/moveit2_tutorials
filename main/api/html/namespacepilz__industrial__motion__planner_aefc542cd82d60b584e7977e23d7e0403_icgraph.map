@@ -1,5 +1,6 @@
 <map id="pilz_industrial_motion_planner::computePoseIK" name="pilz_industrial_motion_planner::computePoseIK">
-<area shape="rect" id="node1" title="compute the inverse kinematics of a given pose, also check robot self collision" alt="" coords="240,35,427,76"/>
-<area shape="rect" id="node2" href="$namespacepilz__industrial__motion__planner.html#a40ec128f5a3915c2d1d4ad2148a6b05a" title=" " alt="" coords="5,5,192,47"/>
-<area shape="rect" id="node3" href="$unittest__trajectory__functions_8cpp.html#a8507caaa36989e2a020f3836bf2e34f6" title="Test computePoseIK for invalid group_name." alt="" coords="64,71,133,98"/>
+<area shape="rect" id="node1" title="compute the inverse kinematics of a given pose, also check robot self collision" alt="" coords="275,64,461,105"/>
+<area shape="rect" id="node2" href="$namespacepilz__industrial__motion__planner.html#a40ec128f5a3915c2d1d4ad2148a6b05a" title=" " alt="" coords="23,5,209,47"/>
+<area shape="rect" id="node3" href="$unittest__trajectory__functions_8cpp.html#a8507caaa36989e2a020f3836bf2e34f6" title="Test computePoseIK for invalid group_name." alt="" coords="81,71,151,98"/>
+<area shape="rect" id="node4" href="$classpilz__industrial__motion__planner_1_1TrajectoryGeneratorCIRC.html#a237cca58a41bae27f993e74b5ae12d79" title="Constructor of CIRC Trajectory Generator." alt="" coords="5,122,227,178"/>
 </map>

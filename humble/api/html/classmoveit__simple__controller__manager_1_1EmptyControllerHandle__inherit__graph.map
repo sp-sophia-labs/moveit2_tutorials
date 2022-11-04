@@ -1,0 +1,4 @@
+<map id="moveit_simple_controller_manager::EmptyControllerHandle" name="moveit_simple_controller_manager::EmptyControllerHandle">
+<area shape="rect" id="node1" title=" " alt="" coords="5,95,252,136"/>
+<area shape="rect" id="node2" href="$classmoveit__controller__manager_1_1MoveItControllerHandle.html" title="MoveIt sends commands to a controller via a handle that satisfies this interface." alt="" coords="27,5,230,47"/>
+</map>

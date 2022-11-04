@@ -76,23 +76,32 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Response to a planning query.  
+ <a href="structplanning__interface_1_1MotionPlanResponse.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="planning__response_8h_source.html">planning_response.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for planning_interface::MotionPlanResponse:</div>
 <div class="dyncontent">
 <div class="center"><img src="structplanning__interface_1_1MotionPlanResponse__coll__graph.png" border="0" usemap="#planning__interface_1_1MotionPlanResponse_coll__map" alt="Collaboration graph"/></div>
 <map name="planning__interface_1_1MotionPlanResponse_coll__map" id="planning__interface_1_1MotionPlanResponse_coll__map">
-<area shape="rect" title=" " alt="" coords="5,95,172,136"/>
-<area shape="rect" title=" " alt="" coords="19,5,158,32"/>
+<area shape="rect" title="Response to a planning query." alt="" coords="125,171,291,212"/>
+<area shape="rect" href="classmoveit_1_1core_1_1MoveItErrorCode.html" title="a wrapper around moveit_msgs::MoveItErrorCodes to make it easier to return an error code message from..." alt="" coords="5,81,227,108"/>
+<area shape="rect" title=" " alt="" coords="47,5,185,32"/>
+<area shape="rect" title=" " alt="" coords="251,81,346,108"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af662fc8948c37f821ee8b2d212451811"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structplanning__interface_1_1MotionPlanResponse.html#af662fc8948c37f821ee8b2d212451811">MotionPlanResponse</a> ()</td></tr>
+<tr class="memdesc:af662fc8948c37f821ee8b2d212451811"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="structplanning__interface_1_1MotionPlanResponse.html#af662fc8948c37f821ee8b2d212451811">More...</a><br /></td></tr>
 <tr class="separator:af662fc8948c37f821ee8b2d212451811"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acec831a8d2cfd2ef0aa0b6ed94d8d59a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structplanning__interface_1_1MotionPlanResponse.html#acec831a8d2cfd2ef0aa0b6ed94d8d59a">getMessage</a> (moveit_msgs::msg::MotionPlanResponse &amp;msg) const</td></tr>
+<tr class="memdesc:acec831a8d2cfd2ef0aa0b6ed94d8d59a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a ROS message from struct data.  <a href="structplanning__interface_1_1MotionPlanResponse.html#acec831a8d2cfd2ef0aa0b6ed94d8d59a">More...</a><br /></td></tr>
 <tr class="separator:acec831a8d2cfd2ef0aa0b6ed94d8d59a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af34d0a04847eb80fa1d07d406570fe13"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structplanning__interface_1_1MotionPlanResponse.html#af34d0a04847eb80fa1d07d406570fe13">operator bool</a> () const</td></tr>
+<tr class="separator:af34d0a04847eb80fa1d07d406570fe13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -100,12 +109,18 @@ Public Attributes</h2></td></tr>
 <tr class="separator:aba269b9eb8f4d12cdc4fc62728cea619"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a650d90c6d03969c1ff6410d6dfd69968"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structplanning__interface_1_1MotionPlanResponse.html#a650d90c6d03969c1ff6410d6dfd69968">planning_time_</a></td></tr>
 <tr class="separator:a650d90c6d03969c1ff6410d6dfd69968"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae39168510db61336c31f10949a54444a"><td class="memItemLeft" align="right" valign="top">moveit_msgs::msg::MoveItErrorCodes&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structplanning__interface_1_1MotionPlanResponse.html#ae39168510db61336c31f10949a54444a">error_code_</a></td></tr>
-<tr class="separator:ae39168510db61336c31f10949a54444a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2b49a0ae136531de98ca9af7326b96c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmoveit_1_1core_1_1MoveItErrorCode.html">moveit::core::MoveItErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structplanning__interface_1_1MotionPlanResponse.html#aa2b49a0ae136531de98ca9af7326b96c">error_code_</a></td></tr>
+<tr class="separator:aa2b49a0ae136531de98ca9af7326b96c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97971e0150c959de1777dd2508db221a"><td class="memItemLeft" align="right" valign="top">moveit_msgs::msg::RobotState&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structplanning__interface_1_1MotionPlanResponse.html#a97971e0150c959de1777dd2508db221a">start_state_</a></td></tr>
+<tr class="memdesc:a97971e0150c959de1777dd2508db221a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The full starting state used for planning.  <a href="structplanning__interface_1_1MotionPlanResponse.html#a97971e0150c959de1777dd2508db221a">More...</a><br /></td></tr>
+<tr class="separator:a97971e0150c959de1777dd2508db221a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02a6a4efd32ce6ce21f3bc220c8a1291"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structplanning__interface_1_1MotionPlanResponse.html#a02a6a4efd32ce6ce21f3bc220c8a1291">planner_id_</a></td></tr>
+<tr class="separator:a02a6a4efd32ce6ce21f3bc220c8a1291"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="planning__response_8h_source.html#l00078">78</a> of file <a class="el" href="planning__response_8h_source.html">planning_response.h</a>.</p>
+<div class="textblock"><p>Response to a planning query. </p>
+
+<p class="definition">Definition at line <a class="el" href="planning__response_8h_source.html#l00080">80</a> of file <a class="el" href="planning__response_8h_source.html">planning_response.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af662fc8948c37f821ee8b2d212451811"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af662fc8948c37f821ee8b2d212451811">&#9670;&nbsp;</a></span>MotionPlanResponse()</h2>
@@ -130,7 +145,9 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="planning__response_8h_source.html#l00112">112</a> of file <a class="el" href="planning__response_8h_source.html">planning_response.h</a>.</p>
+<p>Constructor. </p>
+
+<p class="definition">Definition at line <a class="el" href="planning__response_8h_source.html#l00115">115</a> of file <a class="el" href="planning__response_8h_source.html">planning_response.h</a>.</p>
 
 </div>
 </div>
@@ -151,13 +168,15 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Construct a ROS message from struct data. </p>
+
 <p class="definition">Definition at line <a class="el" href="planning__response_8cpp_source.html#l00040">40</a> of file <a class="el" href="planning__response_8cpp_source.html">planning_response.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="structplanning__interface_1_1MotionPlanResponse_acec831a8d2cfd2ef0aa0b6ed94d8d59a_cgraph.png" border="0" usemap="#structplanning__interface_1_1MotionPlanResponse_acec831a8d2cfd2ef0aa0b6ed94d8d59a_cgraph" alt=""/></div>
 <map name="structplanning__interface_1_1MotionPlanResponse_acec831a8d2cfd2ef0aa0b6ed94d8d59a_cgraph" id="structplanning__interface_1_1MotionPlanResponse_acec831a8d2cfd2ef0aa0b6ed94d8d59a_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,172,61"/>
+<area shape="rect" title="Construct a ROS message from struct data." alt="" coords="5,5,172,61"/>
 <area shape="rect" href="namespacemoveit_1_1core.html#a0aafbf7242f36d6efd7bd73ecee400e8" title="Convert a MoveIt robot state to a robot state message." alt="" coords="220,13,400,54"/>
 </map>
 </div>
@@ -166,7 +185,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="structplanning__interface_1_1MotionPlanResponse_acec831a8d2cfd2ef0aa0b6ed94d8d59a_icgraph.png" border="0" usemap="#structplanning__interface_1_1MotionPlanResponse_acec831a8d2cfd2ef0aa0b6ed94d8d59a_icgraph" alt=""/></div>
 <map name="structplanning__interface_1_1MotionPlanResponse_acec831a8d2cfd2ef0aa0b6ed94d8d59a_icgraph" id="structplanning__interface_1_1MotionPlanResponse_acec831a8d2cfd2ef0aa0b6ed94d8d59a_icgraph">
-<area shape="rect" title=" " alt="" coords="261,63,428,119"/>
+<area shape="rect" title="Construct a ROS message from struct data." alt="" coords="261,63,428,119"/>
 <area shape="rect" href="classTrajectoryGeneratorCIRCTest.html#aa870399f4f43b67f1a4080a1e79417f9" title=" " alt="" coords="5,5,213,47"/>
 <area shape="rect" href="classTrajectoryGeneratorLINTest.html#a3341aac2919075600b39a93fa18247b1" title=" " alt="" coords="10,71,209,112"/>
 <area shape="rect" href="unittest__trajectory__generator__ptp_8cpp.html#afc270e6306260d6dfbe4f2eba872e929" title="test the ptp trajectory generator of Cartesian space goal" alt="" coords="75,137,144,163"/>
@@ -175,20 +194,63 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="af34d0a04847eb80fa1d07d406570fe13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af34d0a04847eb80fa1d07d406570fe13">&#9670;&nbsp;</a></span>operator bool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">planning_interface::MotionPlanResponse::operator bool </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="planning__response_8h_source.html#l00133">133</a> of file <a class="el" href="planning__response_8h_source.html">planning_response.h</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="ae39168510db61336c31f10949a54444a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae39168510db61336c31f10949a54444a">&#9670;&nbsp;</a></span>error_code_</h2>
+<a id="aa2b49a0ae136531de98ca9af7326b96c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2b49a0ae136531de98ca9af7326b96c">&#9670;&nbsp;</a></span>error_code_</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">moveit_msgs::msg::MoveItErrorCodes planning_interface::MotionPlanResponse::error_code_</td>
+          <td class="memname"><a class="el" href="classmoveit_1_1core_1_1MoveItErrorCode.html">moveit::core::MoveItErrorCode</a> planning_interface::MotionPlanResponse::error_code_</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="planning__response_8h_source.html#l00120">120</a> of file <a class="el" href="planning__response_8h_source.html">planning_response.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__response_8h_source.html#l00127">127</a> of file <a class="el" href="planning__response_8h_source.html">planning_response.h</a>.</p>
+
+</div>
+</div>
+<a id="a02a6a4efd32ce6ce21f3bc220c8a1291"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02a6a4efd32ce6ce21f3bc220c8a1291">&#9670;&nbsp;</a></span>planner_id_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string planning_interface::MotionPlanResponse::planner_id_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="planning__response_8h_source.html#l00130">130</a> of file <a class="el" href="planning__response_8h_source.html">planning_response.h</a>.</p>
 
 </div>
 </div>
@@ -204,7 +266,25 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="planning__response_8h_source.html#l00119">119</a> of file <a class="el" href="planning__response_8h_source.html">planning_response.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__response_8h_source.html#l00125">125</a> of file <a class="el" href="planning__response_8h_source.html">planning_response.h</a>.</p>
+
+</div>
+</div>
+<a id="a97971e0150c959de1777dd2508db221a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97971e0150c959de1777dd2508db221a">&#9670;&nbsp;</a></span>start_state_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">moveit_msgs::msg::RobotState planning_interface::MotionPlanResponse::start_state_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The full starting state used for planning. </p>
+
+<p class="definition">Definition at line <a class="el" href="planning__response_8h_source.html#l00129">129</a> of file <a class="el" href="planning__response_8h_source.html">planning_response.h</a>.</p>
 
 </div>
 </div>
@@ -220,7 +300,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="planning__response_8h_source.html#l00118">118</a> of file <a class="el" href="planning__response_8h_source.html">planning_response.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__response_8h_source.html#l00123">123</a> of file <a class="el" href="planning__response_8h_source.html">planning_response.h</a>.</p>
 
 </div>
 </div>

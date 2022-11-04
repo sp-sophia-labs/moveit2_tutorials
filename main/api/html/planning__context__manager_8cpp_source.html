@@ -609,65 +609,64 @@ $(function() {
 <div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;  <span class="keyword">auto</span> constrained_planning_iterator = pc-&gt;second.config.find(<span class="stringliteral">&quot;enforce_constrained_state_space&quot;</span>);</div>
 <div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;  <span class="keyword">auto</span> joint_space_planning_iterator = pc-&gt;second.config.find(<span class="stringliteral">&quot;enforce_joint_model_state_space&quot;</span>);</div>
 <div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160; </div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;  <span class="comment">// Use ConstrainedPlanningStateSpace if there is exactly one position constraint or one orientation constraint</span></div>
-<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;  <span class="comment">// Mixed constraints are not supported</span></div>
-<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;  <span class="keywordflow">if</span> (constrained_planning_iterator != pc-&gt;second.config.end() &amp;&amp;</div>
-<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;      boost::lexical_cast&lt;bool&gt;(constrained_planning_iterator-&gt;second) &amp;&amp;</div>
-<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;      ((req.path_constraints.position_constraints.size() == 1) !=</div>
-<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;       (req.path_constraints.orientation_constraints.size() == 1)))</div>
-<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;  {</div>
-<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;    factory = <a class="code" href="classompl__interface_1_1PlanningContextManager.html#a1f8f067d6fea3352b8fcc5aeb60e0e20">getStateSpaceFactory</a>(<a class="code" href="classompl__interface_1_1ConstrainedPlanningStateSpace.html#ad595698f9beb7521fd7cfe2f2a2e805e">ConstrainedPlanningStateSpace::PARAMETERIZATION_TYPE</a>);</div>
-<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;  }</div>
-<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (joint_space_planning_iterator != pc-&gt;second.config.end() &amp;&amp;</div>
-<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;           boost::lexical_cast&lt;bool&gt;(joint_space_planning_iterator-&gt;second))</div>
-<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;  {</div>
-<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;    factory = <a class="code" href="classompl__interface_1_1PlanningContextManager.html#a1f8f067d6fea3352b8fcc5aeb60e0e20">getStateSpaceFactory</a>(<a class="code" href="classompl__interface_1_1JointModelStateSpace.html#a1ccc44d817f047ad3158e56ff4ef456b">JointModelStateSpace::PARAMETERIZATION_TYPE</a>);</div>
-<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;  }</div>
-<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;  {</div>
-<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;    factory = <a class="code" href="classompl__interface_1_1PlanningContextManager.html#a1f8f067d6fea3352b8fcc5aeb60e0e20">getStateSpaceFactory</a>(pc-&gt;second.group, req);</div>
-<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;  }</div>
-<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160; </div>
-<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;  ModelBasedPlanningContextPtr context = <a class="code" href="classompl__interface_1_1PlanningContextManager.html#a5c38b048a8cbbc11931d621f565eb7ce">getPlanningContext</a>(pc-&gt;second, factory, req);</div>
-<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160; </div>
-<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;  <span class="keywordflow">if</span> (context)</div>
-<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;  {</div>
-<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;    context-&gt;clear();</div>
-<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160; </div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;    moveit::core::RobotStatePtr start_state = <a class="code" href="namespaceplanning__scene.html">planning_scene</a>-&gt;getCurrentStateUpdated(req.start_state);</div>
-<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160; </div>
-<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;    <span class="comment">// Setup the context</span></div>
-<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;    context-&gt;setPlanningScene(<a class="code" href="namespaceplanning__scene.html">planning_scene</a>);</div>
-<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;    context-&gt;setMotionPlanRequest(req);</div>
-<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;    context-&gt;setCompleteInitialState(*start_state);</div>
-<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160; </div>
-<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;    context-&gt;setPlanningVolume(req.workspace_parameters);</div>
-<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;    <span class="keywordflow">if</span> (!context-&gt;setPathConstraints(req.path_constraints, &amp;error_code))</div>
-<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;    {</div>
-<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;      <span class="keywordflow">return</span> ModelBasedPlanningContextPtr();</div>
-<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;    }</div>
-<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160; </div>
-<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;    <span class="keywordflow">if</span> (!context-&gt;setGoalConstraints(req.goal_constraints, req.path_constraints, &amp;error_code))</div>
-<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;    {</div>
-<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;      <span class="keywordflow">return</span> ModelBasedPlanningContextPtr();</div>
-<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;    }</div>
-<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160; </div>
-<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;    <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;    {</div>
-<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;      context-&gt;configure(node, use_constraints_approximation);</div>
-<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;      RCLCPP_DEBUG(LOGGER, <span class="stringliteral">&quot;%s: New planning context is set.&quot;</span>, context-&gt;getName().c_str());</div>
-<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;      error_code.val = moveit_msgs::msg::MoveItErrorCodes::SUCCESS;</div>
-<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;    }</div>
-<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;    <span class="keywordflow">catch</span> (ompl::Exception&amp; ex)</div>
-<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;    {</div>
-<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;      RCLCPP_ERROR(LOGGER, <span class="stringliteral">&quot;OMPL encountered an error: %s&quot;</span>, ex.what());</div>
-<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;      context.reset();</div>
-<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;    }</div>
-<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;  }</div>
-<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160; </div>
-<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;  <span class="keywordflow">return</span> context;</div>
-<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;}</div>
-<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;}  <span class="comment">// namespace ompl_interface</span></div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;  <span class="comment">// Use ConstrainedPlanningStateSpace if there is exactly one position constraint and/or one orientation constraint</span></div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;  <span class="keywordflow">if</span> (constrained_planning_iterator != pc-&gt;second.config.end() &amp;&amp;</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;      boost::lexical_cast&lt;bool&gt;(constrained_planning_iterator-&gt;second) &amp;&amp;</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;      ((req.path_constraints.position_constraints.size() == 1) ||</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;       (req.path_constraints.orientation_constraints.size() == 1)))</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;  {</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;    factory = <a class="code" href="classompl__interface_1_1PlanningContextManager.html#a1f8f067d6fea3352b8fcc5aeb60e0e20">getStateSpaceFactory</a>(<a class="code" href="classompl__interface_1_1ConstrainedPlanningStateSpace.html#ad595698f9beb7521fd7cfe2f2a2e805e">ConstrainedPlanningStateSpace::PARAMETERIZATION_TYPE</a>);</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;  }</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (joint_space_planning_iterator != pc-&gt;second.config.end() &amp;&amp;</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;           boost::lexical_cast&lt;bool&gt;(joint_space_planning_iterator-&gt;second))</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;  {</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;    factory = <a class="code" href="classompl__interface_1_1PlanningContextManager.html#a1f8f067d6fea3352b8fcc5aeb60e0e20">getStateSpaceFactory</a>(<a class="code" href="classompl__interface_1_1JointModelStateSpace.html#a1ccc44d817f047ad3158e56ff4ef456b">JointModelStateSpace::PARAMETERIZATION_TYPE</a>);</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;  }</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;  {</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;    factory = <a class="code" href="classompl__interface_1_1PlanningContextManager.html#a1f8f067d6fea3352b8fcc5aeb60e0e20">getStateSpaceFactory</a>(pc-&gt;second.group, req);</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;  }</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160; </div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;  ModelBasedPlanningContextPtr context = <a class="code" href="classompl__interface_1_1PlanningContextManager.html#a5c38b048a8cbbc11931d621f565eb7ce">getPlanningContext</a>(pc-&gt;second, factory, req);</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160; </div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;  <span class="keywordflow">if</span> (context)</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;  {</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;    context-&gt;clear();</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160; </div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;    moveit::core::RobotStatePtr start_state = <a class="code" href="namespaceplanning__scene.html">planning_scene</a>-&gt;getCurrentStateUpdated(req.start_state);</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160; </div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;    <span class="comment">// Setup the context</span></div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;    context-&gt;setPlanningScene(<a class="code" href="namespaceplanning__scene.html">planning_scene</a>);</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;    context-&gt;setMotionPlanRequest(req);</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;    context-&gt;setCompleteInitialState(*start_state);</div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160; </div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;    context-&gt;setPlanningVolume(req.workspace_parameters);</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;    <span class="keywordflow">if</span> (!context-&gt;setPathConstraints(req.path_constraints, &amp;error_code))</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;    {</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;      <span class="keywordflow">return</span> ModelBasedPlanningContextPtr();</div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;    }</div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160; </div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;    <span class="keywordflow">if</span> (!context-&gt;setGoalConstraints(req.goal_constraints, req.path_constraints, &amp;error_code))</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;    {</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;      <span class="keywordflow">return</span> ModelBasedPlanningContextPtr();</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;    }</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160; </div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;    <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;    {</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;      context-&gt;configure(node, use_constraints_approximation);</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;      RCLCPP_DEBUG(LOGGER, <span class="stringliteral">&quot;%s: New planning context is set.&quot;</span>, context-&gt;getName().c_str());</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;      error_code.val = moveit_msgs::msg::MoveItErrorCodes::SUCCESS;</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;    }</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;    <span class="keywordflow">catch</span> (ompl::Exception&amp; ex)</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;    {</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;      RCLCPP_ERROR(LOGGER, <span class="stringliteral">&quot;OMPL encountered an error: %s&quot;</span>, ex.what());</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;      context.reset();</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;    }</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;  }</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160; </div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;  <span class="keywordflow">return</span> context;</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;}</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;}  <span class="comment">// namespace ompl_interface</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassompl__interface_1_1PlanningContextManager_html_a993762073473a90231fec5108c53053f"><div class="ttname"><a href="classompl__interface_1_1PlanningContextManager.html#a993762073473a90231fec5108c53053f">ompl_interface::PlanningContextManager::state_space_factories_</a></div><div class="ttdeci">std::map&lt; std::string, ModelBasedStateSpaceFactoryPtr &gt; state_space_factories_</div><div class="ttdef"><b>Definition:</b> <a href="planning__context__manager_8h_source.html#l00265">planning_context_manager.h:265</a></div></div>
 <div class="ttc" id="aconstrained__planning__state__space_8h_html"><div class="ttname"><a href="constrained__planning__state__space_8h.html">constrained_planning_state_space.h</a></div></div>
