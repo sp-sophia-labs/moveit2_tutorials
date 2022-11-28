@@ -854,23 +854,27 @@ $(function() {
 <div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;<span class="keywordtype">void</span> ControllersWidget::alterTree(<span class="keyword">const</span> QString&amp; link)</div>
 <div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;{</div>
 <div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;  <span class="keywordflow">if</span> (link.contains(<span class="stringliteral">&quot;expand&quot;</span>))</div>
-<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;    <a class="code" href="classmoveit__setup_1_1controllers_1_1ControllersWidget.html#a06815d06c59c6d3b1aeba0a38f92147e">controllers_tree_</a>-&gt;expandAll();</div>
-<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;    <a class="code" href="classmoveit__setup_1_1controllers_1_1ControllersWidget.html#a06815d06c59c6d3b1aeba0a38f92147e">controllers_tree_</a>-&gt;collapseAll();</div>
-<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;}</div>
-<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160; </div>
-<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;<span class="keywordtype">void</span> ControllersWidget::itemSelectionChanged()</div>
-<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;{</div>
-<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;  QList&lt;QTreeWidgetItem*&gt; selected_items = <a class="code" href="classmoveit__setup_1_1controllers_1_1ControllersWidget.html#a06815d06c59c6d3b1aeba0a38f92147e">controllers_tree_</a>-&gt;selectedItems();</div>
-<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;  <span class="keywordflow">if</span> (selected_items.empty())</div>
-<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;  {</div>
-<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;    <a class="code" href="classmoveit__setup_1_1controllers_1_1ControllersWidget.html#a7233b8d97375554e9bc1ee1647f6e134">btn_edit_</a>-&gt;setEnabled(<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;    <a class="code" href="classmoveit__setup_1_1controllers_1_1ControllersWidget.html#a222499c019c480858f07cc334f5dbd50">btn_delete_</a>-&gt;setEnabled(<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;  }</div>
-<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;}</div>
-<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160; </div>
-<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;}  <span class="comment">// namespace controllers</span></div>
-<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;}  <span class="comment">// namespace moveit_setup</span></div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;  {</div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;    <a class="code" href="classmoveit__setup_1_1controllers_1_1ControllersWidget.html#a06815d06c59c6d3b1aeba0a38f92147e">controllers_tree_</a>-&gt;expandAll();</div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;  }</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;  {</div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;    <a class="code" href="classmoveit__setup_1_1controllers_1_1ControllersWidget.html#a06815d06c59c6d3b1aeba0a38f92147e">controllers_tree_</a>-&gt;collapseAll();</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;  }</div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;}</div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160; </div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;<span class="keywordtype">void</span> ControllersWidget::itemSelectionChanged()</div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;{</div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;  QList&lt;QTreeWidgetItem*&gt; selected_items = <a class="code" href="classmoveit__setup_1_1controllers_1_1ControllersWidget.html#a06815d06c59c6d3b1aeba0a38f92147e">controllers_tree_</a>-&gt;selectedItems();</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;  <span class="keywordflow">if</span> (selected_items.empty())</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;  {</div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;    <a class="code" href="classmoveit__setup_1_1controllers_1_1ControllersWidget.html#a7233b8d97375554e9bc1ee1647f6e134">btn_edit_</a>-&gt;setEnabled(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;    <a class="code" href="classmoveit__setup_1_1controllers_1_1ControllersWidget.html#a222499c019c480858f07cc334f5dbd50">btn_delete_</a>-&gt;setEnabled(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;  }</div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;}</div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160; </div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;}  <span class="comment">// namespace controllers</span></div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;}  <span class="comment">// namespace moveit_setup</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassmoveit__setup_1_1controllers_1_1ControllerEditWidget_html_ab8e55d027cd429a6277046e74eb3aa51"><div class="ttname"><a href="classmoveit__setup_1_1controllers_1_1ControllerEditWidget.html#ab8e55d027cd429a6277046e74eb3aa51">moveit_setup::controllers::ControllerEditWidget::loadControllersTypesComboBox</a></div><div class="ttdeci">void loadControllersTypesComboBox(const std::vector&lt; std::string &gt; &amp;controller_types)</div><div class="ttdoc">Populate the combo dropdown box with controllers types.</div><div class="ttdef"><b>Definition:</b> <a href="controller__edit__widget_8cpp_source.html#l00272">controller_edit_widget.cpp:272</a></div></div>
 <div class="ttc" id="aclassmoveit__setup_1_1SetupStepWidget_html_a2b605761dcfc759461714fbfd3ac30aa"><div class="ttname"><a href="classmoveit__setup_1_1SetupStepWidget.html#a2b605761dcfc759461714fbfd3ac30aa">moveit_setup::SetupStepWidget::setModalMode</a></div><div class="ttdeci">void setModalMode(bool isModal)</div><div class="ttdoc">Event for when the current screen is in modal view. Disables the left navigation.</div></div>

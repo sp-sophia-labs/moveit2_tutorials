@@ -142,16 +142,16 @@ $(function() {
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  move_action_server_ = rclcpp_action::create_server&lt;moveit_msgs::action::MoveGroupSequence&gt;(</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <a class="code" href="classmove__group_1_1MoveGroupCapability.html#a8210f1b13f0df86dac511ca96765382d">context_</a>-&gt;moveit_cpp_-&gt;getNode(), <span class="stringliteral">&quot;sequence_move_group&quot;</span>,</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      [](<span class="keyword">const</span> rclcpp_action::GoalUUID&amp; <span class="comment">/* unused */</span>,</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;         std::shared_ptr&lt;const moveit_msgs::action::MoveGroupSequence::Goal&gt; <span class="comment">/* unused */</span>) {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;         <span class="keyword">const</span> std::shared_ptr&lt;const moveit_msgs::action::MoveGroupSequence::Goal&gt;&amp; <span class="comment">/* unused */</span>) {</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        RCLCPP_DEBUG(LOGGER, <span class="stringliteral">&quot;Received action goal&quot;</span>);</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        return rclcpp_action::GoalResponse::ACCEPT_AND_EXECUTE;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      },</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      [<span class="keyword">this</span>](<span class="keyword">const</span> std::shared_ptr&lt;MoveGroupSequenceGoalHandle&gt; <span class="comment">/* unused goal_handle */</span>) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      [<span class="keyword">this</span>](<span class="keyword">const</span> std::shared_ptr&lt;MoveGroupSequenceGoalHandle&gt;&amp; <span class="comment">/* unused goal_handle */</span>) {</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        RCLCPP_DEBUG(LOGGER, <span class="stringliteral">&quot;Canceling action goal&quot;</span>);</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        preemptMoveCallback();</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        return rclcpp_action::CancelResponse::ACCEPT;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      },</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      [<span class="keyword">this</span>](<span class="keyword">const</span> std::shared_ptr&lt;MoveGroupSequenceGoalHandle&gt; goal_handle) {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      [<span class="keyword">this</span>](<span class="keyword">const</span> std::shared_ptr&lt;MoveGroupSequenceGoalHandle&gt;&amp; goal_handle) {</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        RCLCPP_DEBUG(LOGGER, <span class="stringliteral">&quot;Accepting new action goal&quot;</span>);</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        executeSequenceCallback(goal_handle);</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      },</div>
@@ -161,7 +161,7 @@ $(function() {
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <a class="code" href="classmove__group_1_1MoveGroupCapability.html#a8210f1b13f0df86dac511ca96765382d">context_</a>-&gt;moveit_cpp_-&gt;getNode(), <a class="code" href="classmove__group_1_1MoveGroupCapability.html#a8210f1b13f0df86dac511ca96765382d">context_</a>-&gt;planning_scene_monitor_-&gt;getRobotModel());</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classpilz__industrial__motion__planner_1_1MoveGroupSequenceAction.html#aa358c40d10589ecaf012617203b981bb">   91</a></span>&#160;<span class="keywordtype">void</span> MoveGroupSequenceAction::executeSequenceCallback(<span class="keyword">const</span> std::shared_ptr&lt;MoveGroupSequenceGoalHandle&gt; goal_handle)</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classpilz__industrial__motion__planner_1_1MoveGroupSequenceAction.html#aa358c40d10589ecaf012617203b981bb">   91</a></span>&#160;<span class="keywordtype">void</span> MoveGroupSequenceAction::executeSequenceCallback(<span class="keyword">const</span> std::shared_ptr&lt;MoveGroupSequenceGoalHandle&gt;&amp; goal_handle)</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="comment">// Notify that goal is being executed</span></div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  goal_handle_ = goal_handle;</div>

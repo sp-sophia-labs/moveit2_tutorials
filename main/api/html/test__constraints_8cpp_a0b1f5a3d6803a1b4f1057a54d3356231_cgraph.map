@@ -14,4 +14,6 @@
 <area shape="rect" id="node7" href="$classmoveit_1_1core_1_1RobotState.html#a867985359844193ea81c2d23ac2c49b4" title="Returns true if anything in this state is dirty." alt="" coords="588,205,772,246"/>
 <area shape="rect" id="node8" href="$classmoveit_1_1core_1_1JointModel.html#a32646942dc054f77e3eff984affb7ced" title="Get the index of this joint within the robot model." alt="" coords="589,270,771,311"/>
 <area shape="rect" id="node9" href="$classmoveit_1_1core_1_1JointModel.html#ac997d44f51ca03d13f0d54cf699e0662" title="Force the specified values to be inside bounds and normalized. Quaternions are normalized,..." alt="" coords="820,270,1001,311"/>
+<area shape="rect" id="node16" href="$classmoveit_1_1core_1_1LinkModel.html#af30cc07d5b7409ac39b152a9cd94b563" title="The index of this joint when traversing the kinematic tree in depth first fashion." alt="" coords="358,621,537,662"/>
+<area shape="rect" id="node17" href="$classmoveit_1_1core_1_1LinkModel.html#ab3f3635f6017122968e2adae85dd56e3" title="Get the link model whose child this link is (through some joint). There may not always be a parent li..." alt="" coords="358,686,537,727"/>
 </map>

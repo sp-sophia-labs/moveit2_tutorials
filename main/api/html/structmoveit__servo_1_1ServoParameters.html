@@ -88,13 +88,13 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa069af03dc6a34c10f0c2bad745e98fa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmoveit__servo_1_1ServoParameters.html#aa069af03dc6a34c10f0c2bad745e98fa">registerSetParameterCallback</a> (const std::string name, <a class="el" href="namespacemoveit__servo.html#a6cd0d54f218835d8727b95a708d2c54e">SetParameterCallbackType</a> callback) const</td></tr>
-<tr class="separator:aa069af03dc6a34c10f0c2bad745e98fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5293af36575e797689d1f0f284e8f87"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmoveit__servo_1_1ServoParameters.html#ae5293af36575e797689d1f0f284e8f87">registerSetParameterCallback</a> (const std::string &amp;name, const <a class="el" href="namespacemoveit__servo.html#a6cd0d54f218835d8727b95a708d2c54e">SetParameterCallbackType</a> &amp;callback) const</td></tr>
+<tr class="separator:ae5293af36575e797689d1f0f284e8f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ae0c07c1d1ce25185738eeaaf2fb45f23"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmoveit__servo_1_1ServoParameters.html#a20068dc44ef620c41f866277102b2edf">SharedConstPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmoveit__servo_1_1ServoParameters.html#ae0c07c1d1ce25185738eeaaf2fb45f23">makeServoParameters</a> (const rclcpp::Node::SharedPtr &amp;node, std::string <a class="el" href="structmoveit__servo_1_1ServoParameters.html#a1368f8559511c5f185e7fb50a9446862">ns</a>=&quot;moveit_servo&quot;, bool dynamic_parameters=true)</td></tr>
-<tr class="separator:ae0c07c1d1ce25185738eeaaf2fb45f23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab185a1bf730d0033ecaa3900b4fe48b5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmoveit__servo_1_1ServoParameters.html#a20068dc44ef620c41f866277102b2edf">SharedConstPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmoveit__servo_1_1ServoParameters.html#ab185a1bf730d0033ecaa3900b4fe48b5">makeServoParameters</a> (const rclcpp::Node::SharedPtr &amp;node, const std::string &amp;<a class="el" href="structmoveit__servo_1_1ServoParameters.html#a1368f8559511c5f185e7fb50a9446862">ns</a>=&quot;moveit_servo&quot;, bool dynamic_parameters=true)</td></tr>
+<tr class="separator:ab185a1bf730d0033ecaa3900b4fe48b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f4ab41fc554a8cc663bb1284cf31ab3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structmoveit__servo_1_1ServoParameters.html">ServoParameters</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmoveit__servo_1_1ServoParameters.html#a8f4ab41fc554a8cc663bb1284cf31ab3">get</a> (const std::string &amp;<a class="el" href="structmoveit__servo_1_1ServoParameters.html#a1368f8559511c5f185e7fb50a9446862">ns</a>, const rclcpp::node_interfaces::NodeParametersInterface::SharedPtr &amp;node_parameters)</td></tr>
 <tr class="separator:a8f4ab41fc554a8cc663bb1284cf31ab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9d863970134f29d7bfe5a038fe01672"><td class="memItemLeft" align="right" valign="top">static std::optional&lt; <a class="el" href="structmoveit__servo_1_1ServoParameters.html">ServoParameters</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmoveit__servo_1_1ServoParameters.html#af9d863970134f29d7bfe5a038fe01672">validate</a> (<a class="el" href="structmoveit__servo_1_1ServoParameters.html">ServoParameters</a> parameters)</td></tr>
@@ -236,8 +236,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ae0c07c1d1ce25185738eeaaf2fb45f23"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0c07c1d1ce25185738eeaaf2fb45f23">&#9670;&nbsp;</a></span>makeServoParameters()</h2>
+<a id="ab185a1bf730d0033ecaa3900b4fe48b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab185a1bf730d0033ecaa3900b4fe48b5">&#9670;&nbsp;</a></span>makeServoParameters()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -254,7 +254,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>ns</em> = <code>&quot;moveit_servo&quot;</code>, </td>
         </tr>
         <tr>
@@ -291,8 +291,8 @@ Public Attributes</h2></td></tr>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="structmoveit__servo_1_1ServoParameters_ae0c07c1d1ce25185738eeaaf2fb45f23_icgraph.png" border="0" usemap="#structmoveit__servo_1_1ServoParameters_ae0c07c1d1ce25185738eeaaf2fb45f23_icgraph" alt=""/></div>
-<map name="structmoveit__servo_1_1ServoParameters_ae0c07c1d1ce25185738eeaaf2fb45f23_icgraph" id="structmoveit__servo_1_1ServoParameters_ae0c07c1d1ce25185738eeaaf2fb45f23_icgraph">
+<div class="center"><img src="structmoveit__servo_1_1ServoParameters_ab185a1bf730d0033ecaa3900b4fe48b5_icgraph.png" border="0" usemap="#structmoveit__servo_1_1ServoParameters_ab185a1bf730d0033ecaa3900b4fe48b5_icgraph" alt=""/></div>
+<map name="structmoveit__servo_1_1ServoParameters_ab185a1bf730d0033ecaa3900b4fe48b5_icgraph" id="structmoveit__servo_1_1ServoParameters_ab185a1bf730d0033ecaa3900b4fe48b5_icgraph">
 <area shape="rect" title=" " alt="" coords="257,57,488,98"/>
 <area shape="rect" href="pose__tracking__demo_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="80,5,135,32"/>
 <area shape="rect" href="classmoveit__servo_1_1ServoFixture.html#a4074cdb745d060f7f187f912306b49f6" title=" " alt="" coords="7,57,208,98"/>
@@ -302,8 +302,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="aa069af03dc6a34c10f0c2bad745e98fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa069af03dc6a34c10f0c2bad745e98fa">&#9670;&nbsp;</a></span>registerSetParameterCallback()</h2>
+<a id="ae5293af36575e797689d1f0f284e8f87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5293af36575e797689d1f0f284e8f87">&#9670;&nbsp;</a></span>registerSetParameterCallback()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -314,13 +314,13 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">bool moveit_servo::ServoParameters::registerSetParameterCallback </td>
           <td>(</td>
-          <td class="paramtype">const std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>name</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacemoveit__servo.html#a6cd0d54f218835d8727b95a708d2c54e">SetParameterCallbackType</a>&#160;</td>
+          <td class="paramtype">const <a class="el" href="namespacemoveit__servo.html#a6cd0d54f218835d8727b95a708d2c54e">SetParameterCallbackType</a> &amp;&#160;</td>
           <td class="paramname"><em>callback</em>&#160;</td>
         </tr>
         <tr>

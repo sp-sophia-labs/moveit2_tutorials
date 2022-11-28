@@ -157,9 +157,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a952f17779c4995da9040695f4e048397"><td class="memItemLeft" align="right" valign="top">geometry_msgs::msg::TransformStamped&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__servo.html#a952f17779c4995da9040695f4e048397">convertIsometryToTransform</a> (const Eigen::Isometry3d &amp;eigen_tf, const std::string &amp;parent_frame, const std::string &amp;child_frame)</td></tr>
 <tr class="memdesc:a952f17779c4995da9040695f4e048397"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function for converting Eigen::Isometry3d to geometry_msgs/TransformStamped.  <a href="namespacemoveit__servo.html#a952f17779c4995da9040695f4e048397">More...</a><br /></td></tr>
 <tr class="separator:a952f17779c4995da9040695f4e048397"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bdbc028c68d4d317086a6e1cb434118"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__servo.html#a3bdbc028c68d4d317086a6e1cb434118">velocityScalingFactorForSingularity</a> (const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">moveit::core::JointModelGroup</a> *joint_model_group, const Eigen::VectorXd &amp;commanded_twist, const Eigen::JacobiSVD&lt; Eigen::MatrixXd &gt; &amp;svd, const Eigen::MatrixXd &amp;pseudo_inverse, const double hard_stop_singularity_threshold, const double lower_singularity_threshold, const double leaving_singularity_threshold_multiplier, rclcpp::Clock &amp;clock, moveit::core::RobotStatePtr current_state, <a class="el" href="namespacemoveit__servo.html#a645be72fe1553806404002b7cb52b43f">StatusCode</a> &amp;status)</td></tr>
-<tr class="memdesc:a3bdbc028c68d4d317086a6e1cb434118"><td class="mdescLeft">&#160;</td><td class="mdescRight">Possibly calculate a velocity scaling factor, due to proximity of singularity and direction of motion.  <a href="namespacemoveit__servo.html#a3bdbc028c68d4d317086a6e1cb434118">More...</a><br /></td></tr>
-<tr class="separator:a3bdbc028c68d4d317086a6e1cb434118"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed557ac11d9f357031f34e9b50ee2ed5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__servo.html#aed557ac11d9f357031f34e9b50ee2ed5">velocityScalingFactorForSingularity</a> (const <a class="el" href="classmoveit_1_1core_1_1JointModelGroup.html">moveit::core::JointModelGroup</a> *joint_model_group, const Eigen::VectorXd &amp;commanded_twist, const Eigen::JacobiSVD&lt; Eigen::MatrixXd &gt; &amp;svd, const Eigen::MatrixXd &amp;pseudo_inverse, const double hard_stop_singularity_threshold, const double lower_singularity_threshold, const double leaving_singularity_threshold_multiplier, rclcpp::Clock &amp;clock, const moveit::core::RobotStatePtr &amp;current_state, <a class="el" href="namespacemoveit__servo.html#a645be72fe1553806404002b7cb52b43f">StatusCode</a> &amp;status)</td></tr>
+<tr class="memdesc:aed557ac11d9f357031f34e9b50ee2ed5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Possibly calculate a velocity scaling factor, due to proximity of singularity and direction of motion.  <a href="namespacemoveit__servo.html#aed557ac11d9f357031f34e9b50ee2ed5">More...</a><br /></td></tr>
+<tr class="separator:aed557ac11d9f357031f34e9b50ee2ed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8edf9cfa55723e9959c43228f5cb7f14"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__servo.html#a8edf9cfa55723e9959c43228f5cb7f14">TEST_F</a> (<a class="el" href="classmoveit__servo_1_1PoseTrackingFixture.html">PoseTrackingFixture</a>, OutgoingMsgTest)</td></tr>
 <tr class="separator:a8edf9cfa55723e9959c43228f5cb7f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a1787c2c61fd83e150e805c85d8e4c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacemoveit__servo.html#a4a1787c2c61fd83e150e805c85d8e4c0">TEST_F</a> (<a class="el" href="classmoveit__servo_1_1ServoFixture.html">ServoFixture</a>, SelfCollision)</td></tr>
@@ -489,8 +489,8 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="namespacemoveit__servo_ab64f0bd28c506f4ebc2e7bbc108e991c_icgraph.png" border="0" usemap="#namespacemoveit__servo_ab64f0bd28c506f4ebc2e7bbc108e991c_icgraph" alt=""/></div>
 <map name="namespacemoveit__servo_ab64f0bd28c506f4ebc2e7bbc108e991c_icgraph" id="namespacemoveit__servo_ab64f0bd28c506f4ebc2e7bbc108e991c_icgraph">
 <area shape="rect" title="Helper function for detecting zeroed message." alt="" coords="244,46,431,73"/>
-<area shape="rect" href="classmoveit__servo_1_1ServoCalcs.html#a99b65d45b7da52e43a6bf9d313d8c459" title=" " alt="" coords="5,5,196,47"/>
-<area shape="rect" href="classmoveit__servo_1_1ServoCalcs.html#a33087effbb29d4a2864095a3ec14f9a1" title=" " alt="" coords="5,71,196,112"/>
+<area shape="rect" href="classmoveit__servo_1_1ServoCalcs.html#ac1f476d21605dac8d0b2df3f9cabf7cc" title=" " alt="" coords="5,5,196,47"/>
+<area shape="rect" href="classmoveit__servo_1_1ServoCalcs.html#aacecad425858ca51d81d65aba517f306" title=" " alt="" coords="5,71,196,112"/>
 </map>
 </div>
 
@@ -712,8 +712,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a3bdbc028c68d4d317086a6e1cb434118"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3bdbc028c68d4d317086a6e1cb434118">&#9670;&nbsp;</a></span>velocityScalingFactorForSingularity()</h2>
+<a id="aed557ac11d9f357031f34e9b50ee2ed5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed557ac11d9f357031f34e9b50ee2ed5">&#9670;&nbsp;</a></span>velocityScalingFactorForSingularity()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -769,7 +769,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">moveit::core::RobotStatePtr&#160;</td>
+          <td class="paramtype">const moveit::core::RobotStatePtr &amp;&#160;</td>
           <td class="paramname"><em>current_state</em>, </td>
         </tr>
         <tr>
@@ -807,8 +807,8 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespacemoveit__servo_a3bdbc028c68d4d317086a6e1cb434118_icgraph.png" border="0" usemap="#namespacemoveit__servo_a3bdbc028c68d4d317086a6e1cb434118_icgraph" alt=""/></div>
-<map name="namespacemoveit__servo_a3bdbc028c68d4d317086a6e1cb434118_icgraph" id="namespacemoveit__servo_a3bdbc028c68d4d317086a6e1cb434118_icgraph">
+<div class="center"><img src="namespacemoveit__servo_aed557ac11d9f357031f34e9b50ee2ed5_icgraph.png" border="0" usemap="#namespacemoveit__servo_aed557ac11d9f357031f34e9b50ee2ed5_icgraph" alt=""/></div>
+<map name="namespacemoveit__servo_aed557ac11d9f357031f34e9b50ee2ed5_icgraph" id="namespacemoveit__servo_aed557ac11d9f357031f34e9b50ee2ed5_icgraph">
 <area shape="rect" title="Possibly calculate a velocity scaling factor, due to proximity of singularity and direction of motion..." alt="" coords="123,5,341,47"/>
 <area shape="rect" href="servo__calcs__unit__tests_8cpp.html#abc2c6e56840e09046938c1608f8cbf5a" title=" " alt="" coords="5,13,75,39"/>
 </map>

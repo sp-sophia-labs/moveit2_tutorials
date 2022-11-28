@@ -8,4 +8,6 @@
 <area shape="rect" id="node4" href="$classmoveit_1_1core_1_1RobotState.html#a3c2938fb8c9467dff253db4b5c1992ca" title="For a given group, copy the velocity values of the variables that make up the group into another loca..." alt="" coords="591,5,783,47"/>
 <area shape="rect" id="node5" href="$classmoveit_1_1core_1_1RobotState.html#a47eb1edf2046387de44c3a9dee3433e6" title="Given accelerations for the variables that make up a group, in the order found in the group (includin..." alt="" coords="831,5,1037,47"/>
 <area shape="rect" id="node6" href="$classmoveit_1_1core_1_1RobotState.html#ac39ff2e3e4801ba1092a4c8eb44dd071" title="For a given group, copy the acceleration values of the variables that make up the group into another ..." alt="" coords="1085,5,1303,47"/>
+<area shape="rect" id="node10" href="$classmoveit_1_1core_1_1LinkModel.html#af30cc07d5b7409ac39b152a9cd94b563" title="The index of this joint when traversing the kinematic tree in depth first fashion." alt="" coords="361,168,540,209"/>
+<area shape="rect" id="node11" href="$classmoveit_1_1core_1_1LinkModel.html#ab3f3635f6017122968e2adae85dd56e3" title="Get the link model whose child this link is (through some joint). There may not always be a parent li..." alt="" coords="361,233,540,275"/>
 </map>

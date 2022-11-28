@@ -624,22 +624,22 @@ $(function() {
 <div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;    <a class="code" href="classmoveit__rviz__plugin_1_1MotionPlanningFrame.html#ac26d099c6725780cb726b1be95667bc6">planning_display_</a>-&gt;<a class="code" href="classmoveit__rviz__plugin_1_1MotionPlanningDisplay.html#a6e67913761c9520c15eb9b74b57341d9">dropVisualizedTrajectory</a>();</div>
 <div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;}</div>
 <div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160; </div>
-<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;<span class="keywordtype">void</span> MotionPlanningFrame::remotePlanCallback(<span class="keyword">const</span> std_msgs::msg::Empty::ConstSharedPtr <span class="comment">/*msg*/</span>)</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;<span class="keywordtype">void</span> MotionPlanningFrame::remotePlanCallback(<span class="keyword">const</span> std_msgs::msg::Empty::ConstSharedPtr&amp; <span class="comment">/*msg*/</span>)</div>
 <div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;{</div>
 <div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;  planButtonClicked();</div>
 <div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;}</div>
 <div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160; </div>
-<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;<span class="keywordtype">void</span> MotionPlanningFrame::remoteExecuteCallback(<span class="keyword">const</span> std_msgs::msg::Empty::ConstSharedPtr <span class="comment">/*msg*/</span>)</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;<span class="keywordtype">void</span> MotionPlanningFrame::remoteExecuteCallback(<span class="keyword">const</span> std_msgs::msg::Empty::ConstSharedPtr&amp; <span class="comment">/*msg*/</span>)</div>
 <div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;{</div>
 <div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;  executeButtonClicked();</div>
 <div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;}</div>
 <div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160; </div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;<span class="keywordtype">void</span> MotionPlanningFrame::remoteStopCallback(<span class="keyword">const</span> std_msgs::msg::Empty::ConstSharedPtr <span class="comment">/*msg*/</span>)</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;<span class="keywordtype">void</span> MotionPlanningFrame::remoteStopCallback(<span class="keyword">const</span> std_msgs::msg::Empty::ConstSharedPtr&amp; <span class="comment">/*msg*/</span>)</div>
 <div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;{</div>
 <div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;  stopButtonClicked();</div>
 <div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;}</div>
 <div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160; </div>
-<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;<span class="keywordtype">void</span> MotionPlanningFrame::remoteUpdateStartStateCallback(<span class="keyword">const</span> std_msgs::msg::Empty::ConstSharedPtr <span class="comment">/*msg*/</span>)</div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;<span class="keywordtype">void</span> MotionPlanningFrame::remoteUpdateStartStateCallback(<span class="keyword">const</span> std_msgs::msg::Empty::ConstSharedPtr&amp; <span class="comment">/*msg*/</span>)</div>
 <div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;{</div>
 <div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classmoveit__rviz__plugin_1_1MotionPlanningFrame.html#a9d7e49b2d5cd73aa4425348da09a8c0c">move_group_</a> &amp;&amp; <a class="code" href="classmoveit__rviz__plugin_1_1MotionPlanningFrame.html#ac26d099c6725780cb726b1be95667bc6">planning_display_</a>)</div>
 <div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;  {</div>
@@ -653,7 +653,7 @@ $(function() {
 <div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;  }</div>
 <div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;}</div>
 <div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160; </div>
-<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;<span class="keywordtype">void</span> MotionPlanningFrame::remoteUpdateGoalStateCallback(<span class="keyword">const</span> std_msgs::msg::Empty::ConstSharedPtr <span class="comment">/*msg*/</span>)</div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;<span class="keywordtype">void</span> MotionPlanningFrame::remoteUpdateGoalStateCallback(<span class="keyword">const</span> std_msgs::msg::Empty::ConstSharedPtr&amp; <span class="comment">/*msg*/</span>)</div>
 <div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;{</div>
 <div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classmoveit__rviz__plugin_1_1MotionPlanningFrame.html#a9d7e49b2d5cd73aa4425348da09a8c0c">move_group_</a> &amp;&amp; <a class="code" href="classmoveit__rviz__plugin_1_1MotionPlanningFrame.html#ac26d099c6725780cb726b1be95667bc6">planning_display_</a>)</div>
 <div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;  {</div>
@@ -667,7 +667,7 @@ $(function() {
 <div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;  }</div>
 <div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;}</div>
 <div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160; </div>
-<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;<span class="keywordtype">void</span> MotionPlanningFrame::remoteUpdateCustomStartStateCallback(<span class="keyword">const</span> moveit_msgs::msg::RobotState::ConstSharedPtr msg)</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;<span class="keywordtype">void</span> MotionPlanningFrame::remoteUpdateCustomStartStateCallback(<span class="keyword">const</span> moveit_msgs::msg::RobotState::ConstSharedPtr&amp; msg)</div>
 <div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;{</div>
 <div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;  moveit_msgs::msg::RobotState msg_no_attached(*msg);</div>
 <div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;  msg_no_attached.attached_collision_objects.clear();</div>
@@ -685,7 +685,7 @@ $(function() {
 <div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;  }</div>
 <div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;}</div>
 <div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160; </div>
-<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;<span class="keywordtype">void</span> MotionPlanningFrame::remoteUpdateCustomGoalStateCallback(<span class="keyword">const</span> moveit_msgs::msg::RobotState::ConstSharedPtr msg)</div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;<span class="keywordtype">void</span> MotionPlanningFrame::remoteUpdateCustomGoalStateCallback(<span class="keyword">const</span> moveit_msgs::msg::RobotState::ConstSharedPtr&amp; msg)</div>
 <div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;{</div>
 <div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;  moveit_msgs::msg::RobotState msg_no_attached(*msg);</div>
 <div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;  msg_no_attached.attached_collision_objects.clear();</div>

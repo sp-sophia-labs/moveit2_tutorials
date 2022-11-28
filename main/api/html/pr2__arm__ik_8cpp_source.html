@@ -856,15 +856,21 @@ $(function() {
 <div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;  <span class="keywordtype">double</span> jv;</div>
 <div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;  <span class="keywordflow">if</span> (continuous_joint_[joint_num])</div>
-<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;    jv = angles::normalize_angle(joint_value * angle_multipliers_[joint_num]);</div>
-<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (joint_num == 2)</div>
-<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;    jv = joint_value * angle_multipliers_[joint_num];</div>
-<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;    jv = angles::normalize_angle(joint_value * angle_multipliers_[joint_num]);</div>
-<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160; </div>
-<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;  <span class="keywordflow">return</span> !(jv &lt; min_angles_[joint_num] || jv &gt; max_angles_[joint_num]);</div>
-<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;}</div>
-<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;}  <span class="comment">// namespace pr2_arm_kinematics</span></div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;  {</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;    jv = angles::normalize_angle(joint_value * angle_multipliers_[joint_num]);</div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;  }</div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (joint_num == 2)</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;  {</div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;    jv = joint_value * angle_multipliers_[joint_num];</div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;  }</div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;  {</div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;    jv = angles::normalize_angle(joint_value * angle_multipliers_[joint_num]);</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;  }</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160; </div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;  <span class="keywordflow">return</span> !(jv &lt; min_angles_[joint_num] || jv &gt; max_angles_[joint_num]);</div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;}</div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;}  <span class="comment">// namespace pr2_arm_kinematics</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacerobot__interaction_1_1InteractionStyle_html_a93fff5c84d4bf83018257f994ef88058aa44a292ae97a59f172cc6dbffff2d507"><div class="ttname"><a href="namespacerobot__interaction_1_1InteractionStyle.html#a93fff5c84d4bf83018257f994ef88058aa44a292ae97a59f172cc6dbffff2d507">robot_interaction::InteractionStyle::FIXED</a></div><div class="ttdeci">@ FIXED</div><div class="ttdef"><b>Definition:</b> <a href="interaction_8h_source.html#l00068">interaction.h:68</a></div></div>
 <div class="ttc" id="anamespacepr2__arm__kinematics_html"><div class="ttname"><a href="namespacepr2__arm__kinematics.html">pr2_arm_kinematics</a></div><div class="ttdef"><b>Definition:</b> <a href="pr2__arm__ik_8cpp_source.html#l00050">pr2_arm_ik.cpp:50</a></div></div>

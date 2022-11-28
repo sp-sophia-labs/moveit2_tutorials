@@ -172,7 +172,7 @@ $(function() {
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="comment">// Connect to Servo ROS interfaces</span></div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  target_pose_sub_ = node_-&gt;create_subscription&lt;geometry_msgs::msg::PoseStamped&gt;(</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      <span class="stringliteral">&quot;target_pose&quot;</span>, rclcpp::SystemDefaultsQoS(),</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      [<span class="keyword">this</span>](<span class="keyword">const</span> geometry_msgs::msg::PoseStamped::ConstSharedPtr msg) { <span class="keywordflow">return</span> targetPoseCallback(msg); });</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      [<span class="keyword">this</span>](<span class="keyword">const</span> geometry_msgs::msg::PoseStamped::ConstSharedPtr&amp; msg) { <span class="keywordflow">return</span> targetPoseCallback(msg); });</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="comment">// Publish outgoing twist commands to the Servo object</span></div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  twist_stamped_pub_ = node_-&gt;create_publisher&lt;geometry_msgs::msg::TwistStamped&gt;(</div>
@@ -326,7 +326,7 @@ $(function() {
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;          (std::abs(z_error) &lt; positional_tolerance(2)) &amp;&amp; (std::abs(*angular_error_) &lt; angular_tolerance));</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;}</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="keywordtype">void</span> PoseTracking::targetPoseCallback(<span class="keyword">const</span> geometry_msgs::msg::PoseStamped::ConstSharedPtr msg)</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="keywordtype">void</span> PoseTracking::targetPoseCallback(<span class="keyword">const</span> geometry_msgs::msg::PoseStamped::ConstSharedPtr&amp; msg)</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;{</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  std::lock_guard&lt;std::mutex&gt; lock(target_pose_mtx_);</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  target_pose_ = *msg;</div>

@@ -122,12 +122,12 @@ $(function() {
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  service_ = context_-&gt;moveit_cpp_-&gt;getNode()-&gt;create_service&lt;std_srvs::srv::Empty&gt;(</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      CLEAR_OCTOMAP_SERVICE_NAME,</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      [<span class="keyword">this</span>](<span class="keyword">const</span> std::shared_ptr&lt;std_srvs::srv::Empty::Request&gt; req,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;             std::shared_ptr&lt;std_srvs::srv::Empty::Response&gt; res) { <span class="keywordflow">return</span> clearOctomap(req, res); });</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      [<span class="keyword">this</span>](<span class="keyword">const</span> std::shared_ptr&lt;std_srvs::srv::Empty::Request&gt;&amp; req,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;             <span class="keyword">const</span> std::shared_ptr&lt;std_srvs::srv::Empty::Response&gt;&amp; res) { <span class="keywordflow">return</span> clearOctomap(req, res); });</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">void</span> move_group::ClearOctomapService::clearOctomap(<span class="keyword">const</span> std::shared_ptr&lt;std_srvs::srv::Empty::Request&gt; <span class="comment">/*req*/</span>,</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                                                   std::shared_ptr&lt;std_srvs::srv::Empty::Response&gt; <span class="comment">/*res*/</span>)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">void</span> move_group::ClearOctomapService::clearOctomap(<span class="keyword">const</span> std::shared_ptr&lt;std_srvs::srv::Empty::Request&gt;&amp; <span class="comment">/*req*/</span>,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                                                   <span class="keyword">const</span> std::shared_ptr&lt;std_srvs::srv::Empty::Response&gt;&amp; <span class="comment">/*res*/</span>)</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordflow">if</span> (!context_-&gt;planning_scene_monitor_)</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    RCLCPP_ERROR(LOGGER, <span class="stringliteral">&quot;Cannot clear octomap since planning_scene_monitor_ does not exist.&quot;</span>);</div>

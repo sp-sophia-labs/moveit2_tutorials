@@ -158,25 +158,29 @@ $(function() {
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcollision__detection_1_1WorldDiff.html#a57346d0e8e39dd931cc58bd62e2c0319">set</a>(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>, World::Action val)</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  {</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">if</span> (val)</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      changes_[id] = val;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="classcollision__detection_1_1WorldDiff.html#a8a009f8308e7fd9d9f20f3be643ec485">  106</a></span>&#160;      changes_.erase(<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  }</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcollision__detection_1_1WorldDiff.html#ab10f96dd369d24ca5e6eff3f2fbfb0d3">clearChanges</a>();</div>
-<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classcollision__detection_1_1WorldDiff.html#aef5221881ecbbf73cd0558f0ab61259e">  111</a></span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keywordtype">void</span> notify(<span class="keyword">const</span> World::ObjectConstPtr&amp; <span class="comment">/*obj*/</span>, <a class="code" href="classcollision__detection_1_1World_1_1Action.html">World::Action</a> <span class="comment">/*action*/</span>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      changes_[id] = val;</div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="classcollision__detection_1_1WorldDiff.html#a8a009f8308e7fd9d9f20f3be643ec485">  106</a></span>&#160;    }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      changes_.erase(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    }</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classcollision__detection_1_1WorldDiff.html#aef5221881ecbbf73cd0558f0ab61259e">  111</a></span>&#160;  }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classcollision__detection_1_1WorldDiff.html#ab10f96dd369d24ca5e6eff3f2fbfb0d3">clearChanges</a>();</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  std::map&lt;std::string, World::Action&gt; changes_;</div>
-<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="classcollision__detection_1_1WorldDiff.html#ad8ec0699dedee3782dece1a145eb37c3">  118</a></span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="comment">/* observer handle for world callback */</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <a class="code" href="classcollision__detection_1_1World_1_1ObserverHandle.html">World::ObserverHandle</a> observer_handle_;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="comment">/* used to unregister the notifier */</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="classcollision__detection_1_1WorldDiff.html#a0f1770ab590b63b8c451c33c03cae4ba">  123</a></span>&#160;  WorldWeakPtr world_;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;};</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;}  <span class="comment">// namespace collision_detection</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="classcollision__detection_1_1WorldDiff.html#ad8ec0699dedee3782dece1a145eb37c3">  118</a></span>&#160;  <span class="keywordtype">void</span> notify(<span class="keyword">const</span> World::ObjectConstPtr&amp; <span class="comment">/*obj*/</span>, <a class="code" href="classcollision__detection_1_1World_1_1Action.html">World::Action</a> <span class="comment">/*action*/</span>);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  std::map&lt;std::string, World::Action&gt; changes_;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="classcollision__detection_1_1WorldDiff.html#a0f1770ab590b63b8c451c33c03cae4ba">  123</a></span>&#160;  <span class="comment">/* observer handle for world callback */</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <a class="code" href="classcollision__detection_1_1World_1_1ObserverHandle.html">World::ObserverHandle</a> observer_handle_;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="comment">/* used to unregister the notifier */</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  WorldWeakPtr world_;</div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="classcollision__detection_1_1WorldDiff.html#a015e4ef4d46deee0688752c0acbe3472">  128</a></span>&#160;};</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;}  <span class="comment">// namespace collision_detection</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclasscollision__detection_1_1WorldDiff_html_a3b4f7b7b8346fd6182d2725190bb6e9b"><div class="ttname"><a href="classcollision__detection_1_1WorldDiff.html#a3b4f7b7b8346fd6182d2725190bb6e9b">collision_detection::WorldDiff::WorldDiff</a></div><div class="ttdeci">WorldDiff()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="world__diff_8cpp_source.html#l00081">world_diff.cpp:81</a></div></div>
 <div class="ttc" id="aclasscollision__detection_1_1WorldDiff_html_ab10f96dd369d24ca5e6eff3f2fbfb0d3"><div class="ttname"><a href="classcollision__detection_1_1WorldDiff.html#ab10f96dd369d24ca5e6eff3f2fbfb0d3">collision_detection::WorldDiff::clearChanges</a></div><div class="ttdeci">void clearChanges()</div><div class="ttdoc">Clear the internally maintained vector of changes.</div><div class="ttdef"><b>Definition:</b> <a href="world__diff_8cpp_source.html#l00144">world_diff.cpp:144</a></div></div>

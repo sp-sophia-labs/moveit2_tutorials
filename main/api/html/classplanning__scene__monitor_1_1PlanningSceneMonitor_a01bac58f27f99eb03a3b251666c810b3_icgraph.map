@@ -1,0 +1,4 @@
+<map id="planning_scene_monitor::PlanningSceneMonitor::lockSceneRead" name="planning_scene_monitor::PlanningSceneMonitor::lockSceneRead">
+<area shape="rect" id="node1" title="Lock the scene for reading (multiple threads can lock for reading at the same time)" alt="" coords="248,5,429,61"/>
+<area shape="rect" id="node2" href="$classplanning__scene__monitor_1_1LockedPlanningSceneRO.html#a16da0db96eb6cacacd0b3871fa0f7209" title=" " alt="" coords="5,5,200,61"/>
+</map>

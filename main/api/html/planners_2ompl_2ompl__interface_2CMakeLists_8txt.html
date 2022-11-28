@@ -72,23 +72,25 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a4a70c8c7ca6d6274d5f704d38d0514fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="planners_2ompl_2ompl__interface_2CMakeLists_8txt.html#a4a70c8c7ca6d6274d5f704d38d0514fa">set</a> (MOVEIT_LIB_NAME moveit_ompl_interface) <a class="el" href="ros_2visualization_2trajectory__rviz__plugin_2CMakeLists_8txt.html#a03796c90fa97f184ccbf04cff4c28036">add_library</a>($</td></tr>
-<tr class="separator:a4a70c8c7ca6d6274d5f704d38d0514fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4ac6a0414478e14d71da874db318494"><td class="memItemLeft" align="right" valign="top">SHARED src ompl_interface cpp src planning_context_manager cpp src model_based_planning_context cpp src parameterization model_based_state_space cpp src parameterization model_based_state_space_factory cpp src parameterization joint_space constrained_planning_state_space cpp src parameterization joint_space constrained_planning_state_space_factory cpp src parameterization joint_space joint_model_state_space cpp src parameterization joint_space joint_model_state_space_factory cpp src parameterization work_space pose_model_state_space cpp src parameterization work_space pose_model_state_space_factory cpp src detail ompl_constraints cpp src detail threadsafe_state_storage cpp src detail state_validity_checker cpp src detail projection_evaluators cpp src detail goal_union cpp src detail constraints_library cpp src detail constrained_sampler cpp src detail constrained_goal_sampler cpp&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="planners_2ompl_2ompl__interface_2CMakeLists_8txt.html#ac4ac6a0414478e14d71da874db318494">set_target_properties</a> (${MOVEIT_LIB_NAME} PROPERTIES <a class="el" href="core_2collision__detection__fcl_2CMakeLists_8txt.html#a099a1e7af54672f18be1c1b68d86c19f">VERSION</a> &quot;${${PROJECT_NAME}_VERSION}&quot;) find_package(OpenMP REQUIRED) if(APPLE) target_link_directories($</td></tr>
-<tr class="separator:ac4ac6a0414478e14d71da874db318494"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac5b7a1b0965732b3a556958e9b7f6c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="planners_2ompl_2ompl__interface_2CMakeLists_8txt.html#aac5b7a1b0965732b3a556958e9b7f6c4">add_library</a> (moveit_ompl_interface SHARED src/ompl_interface.cpp src/planning_context_manager.cpp src/model_based_planning_context.cpp src/parameterization/model_based_state_space.cpp src/parameterization/model_based_state_space_factory.cpp src/parameterization/joint_space/constrained_planning_state_space.cpp src/parameterization/joint_space/constrained_planning_state_space_factory.cpp src/parameterization/joint_space/joint_model_state_space.cpp src/parameterization/joint_space/joint_model_state_space_factory.cpp src/parameterization/work_space/pose_model_state_space.cpp src/parameterization/work_space/pose_model_state_space_factory.cpp src/detail/ompl_constraints.cpp src/detail/threadsafe_state_storage.cpp src/detail/state_validity_checker.cpp src/detail/projection_evaluators.cpp src/detail/goal_union.cpp src/detail/constraints_library.cpp src/detail/constrained_sampler.cpp src/detail/constrained_goal_sampler.cpp) <a class="el" href="ros_2warehouse_2CMakeLists_8txt.html#ab86eb14578ea4437b20495eac3bbb4bf">set_target_properties</a>(moveit_ompl_interface PROPERTIES VERSION &quot;$</td></tr>
+<tr class="separator:aac5b7a1b0965732b3a556958e9b7f6c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6b1096e29411c65eb1c3ff432677c94"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="planners_2ompl_2ompl__interface_2CMakeLists_8txt.html#ad6b1096e29411c65eb1c3ff432677c94">find_package</a> (OpenMP REQUIRED) <a class="el" href="ros_2robot__interaction_2CMakeLists_8txt.html#a97c00bdf2c73d4a54e183fec4b49be37">if</a>(APPLE) target_link_directories(moveit_ompl_interface PUBLIC $</td></tr>
+<tr class="separator:ad6b1096e29411c65eb1c3ff432677c94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af63ffe4356d820f487352a8eccb8ed37"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="planners_2ompl_2ompl__interface_2CMakeLists_8txt.html#af63ffe4356d820f487352a8eccb8ed37">endif</a> () <a class="el" href="setup__assistant_2moveit__setup__assistant_2CMakeLists_8txt.html#ade28da176835a0a56c34308935e0b004">ament_target_dependencies</a>(moveit_ompl_interface moveit_core moveit_msgs moveit_ros_planning rclcpp pluginlib tf2_eigen tf2_ros OMPL Boost) <a class="el" href="ros_2warehouse_2CMakeLists_8txt.html#ab86eb14578ea4437b20495eac3bbb4bf">set_target_properties</a>(moveit_ompl_interface PROPERTIES COMPILE_FLAGS &quot;$</td></tr>
+<tr class="separator:af63ffe4356d820f487352a8eccb8ed37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a4a70c8c7ca6d6274d5f704d38d0514fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a70c8c7ca6d6274d5f704d38d0514fa">&#9670;&nbsp;</a></span>set()</h2>
+<a id="aac5b7a1b0965732b3a556958e9b7f6c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac5b7a1b0965732b3a556958e9b7f6c4">&#9670;&nbsp;</a></span>add_library()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">set </td>
+          <td class="memname">add_library </td>
           <td>(</td>
-          <td class="paramtype">MOVEIT_LIB_NAME&#160;</td>
-          <td class="paramname"><em>moveit_ompl_interface</em></td><td>)</td>
+          <td class="paramtype">moveit_ompl_interface SHARED src/ompl_interface.cpp src/planning_context_manager.cpp src/model_based_planning_context.cpp src/parameterization/model_based_state_space.cpp src/parameterization/model_based_state_space_factory.cpp src/parameterization/joint_space/constrained_planning_state_space.cpp src/parameterization/joint_space/constrained_planning_state_space_factory.cpp src/parameterization/joint_space/joint_model_state_space.cpp src/parameterization/joint_space/joint_model_state_space_factory.cpp src/parameterization/work_space/pose_model_state_space.cpp src/parameterization/work_space/pose_model_state_space_factory.cpp src/detail/ompl_constraints.cpp src/detail/threadsafe_state_storage.cpp src/detail/state_validity_checker.cpp src/detail/projection_evaluators.cpp src/detail/goal_union.cpp src/detail/constraints_library.cpp src/detail/constrained_sampler.cpp src/detail/constrained_goal_sampler.&#160;</td>
+          <td class="paramname"><em>cpp</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -98,17 +100,36 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac4ac6a0414478e14d71da874db318494"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4ac6a0414478e14d71da874db318494">&#9670;&nbsp;</a></span>set_target_properties()</h2>
+<a id="af63ffe4356d820f487352a8eccb8ed37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af63ffe4356d820f487352a8eccb8ed37">&#9670;&nbsp;</a></span>endif()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">SHARED src ompl_interface cpp src planning_context_manager cpp src model_based_planning_context cpp src parameterization model_based_state_space cpp src parameterization model_based_state_space_factory cpp src parameterization joint_space constrained_planning_state_space cpp src parameterization joint_space constrained_planning_state_space_factory cpp src parameterization joint_space joint_model_state_space cpp src parameterization joint_space joint_model_state_space_factory cpp src parameterization work_space pose_model_state_space cpp src parameterization work_space pose_model_state_space_factory cpp src detail ompl_constraints cpp src detail threadsafe_state_storage cpp src detail state_validity_checker cpp src detail projection_evaluators cpp src detail goal_union cpp src detail constraints_library cpp src detail constrained_sampler cpp src detail constrained_goal_sampler cpp set_target_properties </td>
+          <td class="memname">endif </td>
           <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>${MOVEIT_LIB_NAME} PROPERTIES VERSION &quot;${${PROJECT_NAME}_VERSION}&quot;</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="planners_2ompl_2ompl__interface_2CMakeLists_8txt_source.html#l00029">29</a> of file <a class="el" href="planners_2ompl_2ompl__interface_2CMakeLists_8txt_source.html">CMakeLists.txt</a>.</p>
+
+</div>
+</div>
+<a id="ad6b1096e29411c65eb1c3ff432677c94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6b1096e29411c65eb1c3ff432677c94">&#9670;&nbsp;</a></span>find_package()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">find_package </td>
+          <td>(</td>
+          <td class="paramtype">OpenMP&#160;</td>
+          <td class="paramname"><em>REQUIRED</em></td><td>)</td>
           <td></td>
         </tr>
       </table>

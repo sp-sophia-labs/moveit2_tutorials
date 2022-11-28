@@ -221,13 +221,13 @@ $(function() {
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  }</div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  <span class="keywordtype">bool</span> saveMapCallback(<span class="keyword">const</span> std::shared_ptr&lt;rmw_request_id_t&gt; request_header,</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                       <span class="keyword">const</span> std::shared_ptr&lt;moveit_msgs::srv::SaveMap::Request&gt; request,</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                       std::shared_ptr&lt;moveit_msgs::srv::SaveMap::Response&gt; response);</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  <span class="keywordtype">bool</span> saveMapCallback(<span class="keyword">const</span> std::shared_ptr&lt;rmw_request_id_t&gt;&amp; request_header,</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                       <span class="keyword">const</span> std::shared_ptr&lt;moveit_msgs::srv::SaveMap::Request&gt;&amp; request,</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                       <span class="keyword">const</span> std::shared_ptr&lt;moveit_msgs::srv::SaveMap::Response&gt;&amp; response);</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  <span class="keywordtype">bool</span> loadMapCallback(<span class="keyword">const</span> std::shared_ptr&lt;rmw_request_id_t&gt; request_header,</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                       <span class="keyword">const</span> std::shared_ptr&lt;moveit_msgs::srv::LoadMap::Request&gt; request,</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                       std::shared_ptr&lt;moveit_msgs::srv::LoadMap::Response&gt; response);</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  <span class="keywordtype">bool</span> loadMapCallback(<span class="keyword">const</span> std::shared_ptr&lt;rmw_request_id_t&gt;&amp; request_header,</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                       <span class="keyword">const</span> std::shared_ptr&lt;moveit_msgs::srv::LoadMap::Request&gt;&amp; request,</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                       <span class="keyword">const</span> std::shared_ptr&lt;moveit_msgs::srv::LoadMap::Response&gt;&amp; response);</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  <span class="keywordtype">bool</span> getShapeTransformCache(std::size_t index, <span class="keyword">const</span> std::string&amp; target_frame, <span class="keyword">const</span> rclcpp::Time&amp; target_time,</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                              <a class="code" href="namespaceoccupancy__map__monitor.html#aa2ac7bf5c7f8d0791375eada8a4873e3">ShapeTransformCache</a>&amp; cache) <span class="keyword">const</span>;</div>

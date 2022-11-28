@@ -1,5 +1,6 @@
 <map id="moveit::core::RobotState::satisfiesBounds" name="moveit::core::RobotState::satisfiesBounds">
-<area shape="rect" id="node1" title=" " alt="" coords="309,46,493,87"/>
-<area shape="rect" id="node2" href="$classmoveit_1_1planning__interface_1_1MoveGroupInterface.html#a71e3819bd31711dcb81c18305ca9a521" title="Set the JointValueTarget and use it for future planning requests." alt="" coords="5,5,261,61"/>
-<area shape="rect" id="node3" href="$robot__state__test_8cpp.html#adb3b487fd2559db6519d52dec17ab77d" title=" " alt="" coords="99,85,168,112"/>
+<area shape="rect" id="node1" title=" " alt="" coords="613,46,797,87"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1planning__interface_1_1MoveGroupInterface.html#a71e3819bd31711dcb81c18305ca9a521" title="Set the JointValueTarget and use it for future planning requests." alt="" coords="309,5,565,61"/>
+<area shape="rect" id="node4" href="$robot__state__test_8cpp.html#adb3b487fd2559db6519d52dec17ab77d" title=" " alt="" coords="403,85,472,112"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1planning__interface_1_1MoveGroupInterface.html#abe1de96366109bdfe47aa6448b2fa121" title="If a different start state should be considered instead of the current state of the robot,..." alt="" coords="5,13,261,54"/>
 </map>

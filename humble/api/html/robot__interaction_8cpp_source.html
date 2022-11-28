@@ -644,7 +644,7 @@ $(function() {
 <div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;        std::string topic_name = int_marker_move_topics_[i];</div>
 <div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;        std::string marker_name = int_marker_names_[i];</div>
 <div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;        std::function&lt;void(<span class="keyword">const</span> geometry_msgs::msg::PoseStamped::SharedPtr)&gt; subscription_callback =</div>
-<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;            [<span class="keyword">this</span>, marker_name](<span class="keyword">const</span> geometry_msgs::msg::PoseStamped::SharedPtr msg) {</div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;            [<span class="keyword">this</span>, marker_name](<span class="keyword">const</span> geometry_msgs::msg::PoseStamped::SharedPtr&amp; msg) {</div>
 <div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;              moveInteractiveMarker(marker_name, *msg);</div>
 <div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;            };</div>
 <div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;        <span class="keyword">auto</span> subscription =</div>

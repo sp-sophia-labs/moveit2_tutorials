@@ -1,0 +1,4 @@
+<map id="robot_interaction::RobotInteraction::decideActiveComponents" name="robot_interaction::RobotInteraction::decideActiveComponents">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,228,61"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1LinkModel.html#a5691f5a8779d9536a3f15cb08a8961ab" title="Get the extents of the link&#39;s geometry (dimensions of axis&#45;aligned bounding box around all shapes tha..." alt="" coords="276,13,469,54"/>
+</map>

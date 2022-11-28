@@ -223,12 +223,12 @@ $(function() {
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      this-&gt;get_node_waitables_interface(), hybrid_planning_action_name,</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;      <span class="comment">// Goal callback</span></div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;      [](<span class="keyword">const</span> rclcpp_action::GoalUUID&amp; <span class="comment">/*unused*/</span>,</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;         std::shared_ptr&lt;const moveit_msgs::action::HybridPlanner::Goal&gt; <span class="comment">/*unused*/</span>) {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;         <span class="keyword">const</span> std::shared_ptr&lt;const moveit_msgs::action::HybridPlanner::Goal&gt;&amp; <span class="comment">/*unused*/</span>) {</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        RCLCPP_INFO(LOGGER, <span class="stringliteral">&quot;Received goal request&quot;</span>);</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordflow">return</span> rclcpp_action::GoalResponse::ACCEPT_AND_EXECUTE;</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;      },</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;      <span class="comment">// Cancel callback</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;      [<span class="keyword">this</span>](std::shared_ptr&lt;rclcpp_action::ServerGoalHandle&lt;moveit_msgs::action::HybridPlanner&gt;&gt; <span class="comment">/*unused*/</span>) {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;      [<span class="keyword">this</span>](<span class="keyword">const</span> std::shared_ptr&lt;rclcpp_action::ServerGoalHandle&lt;moveit_msgs::action::HybridPlanner&gt;&gt;&amp; <span class="comment">/*unused*/</span>) {</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <a class="code" href="classmoveit_1_1hybrid__planning_1_1HybridPlanningManager.html#a60956f795e5892328cc211875592b8cc">cancelHybridManagerGoals</a>();</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        RCLCPP_INFO(LOGGER, <span class="stringliteral">&quot;Received request to cancel goal&quot;</span>);</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordflow">return</span> rclcpp_action::CancelResponse::ACCEPT;</div>
@@ -247,7 +247,7 @@ $(function() {
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  <span class="comment">// Initialize global solution subscriber</span></div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  global_solution_sub_ = create_subscription&lt;moveit_msgs::msg::MotionPlanResponse&gt;(</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;      <span class="stringliteral">&quot;global_trajectory&quot;</span>, rclcpp::SystemDefaultsQoS(),</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;      [<span class="keyword">this</span>](<span class="keyword">const</span> moveit_msgs::msg::MotionPlanResponse::SharedPtr <span class="comment">/* unused */</span>) {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;      [<span class="keyword">this</span>](<span class="keyword">const</span> moveit_msgs::msg::MotionPlanResponse::ConstSharedPtr&amp; <span class="comment">/* unused */</span>) {</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="comment">// react is defined in a hybrid_planning_manager plugin</span></div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <a class="code" href="structmoveit_1_1hybrid__planning_1_1ReactionResult.html">ReactionResult</a> reaction_result = planner_logic_instance_-&gt;react(<a class="code" href="namespacemoveit_1_1hybrid__planning.html#ae2cab91c85583e7a3024014a4994fd06a2fb20760b563fc2c429c550c4f95b4e2">HybridPlanningEvent::GLOBAL_SOLUTION_AVAILABLE</a>);</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordflow">if</span> (reaction_result.<a class="code" href="structmoveit_1_1hybrid__planning_1_1ReactionResult.html#ad162cab74e0bd98c62dfbf9c91221bec">error_code</a>.val != moveit_msgs::msg::MoveItErrorCodes::SUCCESS)</div>
@@ -304,7 +304,7 @@ $(function() {
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  <span class="comment">// Add goal response callback</span></div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  global_goal_options.goal_response_callback =</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;      [<span class="keyword">this</span>](rclcpp_action::ClientGoalHandle&lt;moveit_msgs::action::GlobalPlanner&gt;::SharedPtr goal_handle) {</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;      [<span class="keyword">this</span>](<span class="keyword">const</span> rclcpp_action::ClientGoalHandle&lt;moveit_msgs::action::GlobalPlanner&gt;::SharedPtr&amp; goal_handle) {</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="keyword">auto</span> planning_progress = std::make_shared&lt;moveit_msgs::action::HybridPlanner::Feedback&gt;();</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <span class="keyword">auto</span>&amp; feedback = planning_progress-&gt;feedback;</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <span class="keywordflow">if</span> (!goal_handle)</div>
@@ -374,7 +374,7 @@ $(function() {
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160; </div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  <span class="comment">// Add goal response callback</span></div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  local_goal_options.goal_response_callback =</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;      [<span class="keyword">this</span>](rclcpp_action::ClientGoalHandle&lt;moveit_msgs::action::LocalPlanner&gt;::SharedPtr goal_handle) {</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;      [<span class="keyword">this</span>](<span class="keyword">const</span> rclcpp_action::ClientGoalHandle&lt;moveit_msgs::action::LocalPlanner&gt;::SharedPtr&amp; goal_handle) {</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <span class="keyword">auto</span> planning_progress = std::make_shared&lt;moveit_msgs::action::HybridPlanner::Feedback&gt;();</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <span class="keyword">auto</span>&amp; feedback = planning_progress-&gt;feedback;</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <span class="keywordflow">if</span> (!goal_handle)</div>
@@ -390,8 +390,8 @@ $(function() {
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160; </div>
 <div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;  <span class="comment">// Add feedback callback</span></div>
 <div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;  local_goal_options.feedback_callback =</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;      [<span class="keyword">this</span>](rclcpp_action::ClientGoalHandle&lt;moveit_msgs::action::LocalPlanner&gt;::SharedPtr <span class="comment">/*unused*/</span>,</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;             <span class="keyword">const</span> std::shared_ptr&lt;const moveit_msgs::action::LocalPlanner::Feedback&gt; local_planner_feedback) {</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;      [<span class="keyword">this</span>](<span class="keyword">const</span> rclcpp_action::ClientGoalHandle&lt;moveit_msgs::action::LocalPlanner&gt;::SharedPtr&amp; <span class="comment">/*unused*/</span>,</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;             <span class="keyword">const</span> std::shared_ptr&lt;const moveit_msgs::action::LocalPlanner::Feedback&gt;&amp; local_planner_feedback) {</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <span class="comment">// react is defined in a hybrid_planning_manager plugin</span></div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        <a class="code" href="structmoveit_1_1hybrid__planning_1_1ReactionResult.html">ReactionResult</a> reaction_result = planner_logic_instance_-&gt;react(local_planner_feedback-&gt;feedback);</div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        <span class="keywordflow">if</span> (reaction_result.<a class="code" href="structmoveit_1_1hybrid__planning_1_1ReactionResult.html#ad162cab74e0bd98c62dfbf9c91221bec">error_code</a>.val != moveit_msgs::msg::MoveItErrorCodes::SUCCESS)</div>

@@ -1,4 +1,5 @@
 <map id="moveit::core::RobotModel::getURDF" name="moveit::core::RobotModel::getURDF">
-<area shape="rect" id="node1" title="Get the parsed URDF model." alt="" coords="248,13,439,54"/>
+<area shape="rect" id="node1" title="Get the parsed URDF model." alt="" coords="248,53,439,94"/>
 <area shape="rect" id="node2" href="$classpr2__arm__kinematics_1_1PR2ArmKinematicsPlugin.html#a4af26a6d1abd0a16f8223ab56272ca80" title="Initialization function for the kinematics." alt="" coords="5,5,200,61"/>
+<area shape="rect" id="node3" href="$classlma__kinematics__plugin_1_1LMAKinematicsPlugin.html#a40ece21dea9653ed56ac42dae024f45b" title="Default constructor." alt="" coords="16,85,189,141"/>
 </map>

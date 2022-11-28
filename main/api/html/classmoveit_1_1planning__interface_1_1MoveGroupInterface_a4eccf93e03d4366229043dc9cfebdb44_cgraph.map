@@ -1,0 +1,4 @@
+<map id="moveit::planning_interface::MoveGroupInterface::getCurrentJointValues" name="moveit::planning_interface::MoveGroupInterface::getCurrentJointValues">
+<area shape="rect" id="node1" title="Get the current joint values for the joints planned for by this instance (see getJoints())" alt="" coords="5,5,245,61"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1planning__interface_1_1MoveGroupInterface.html#a10a9d94597ba094bd59cb1ca9f69e75e" title="Get the current end&#45;effector link. This returns the value set by setEndEffectorLink() (or indirectly ..." alt="" coords="293,13,587,54"/>
+</map>

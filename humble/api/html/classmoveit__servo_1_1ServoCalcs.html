@@ -103,8 +103,8 @@ Collaboration diagram for moveit_servo::ServoCalcs:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a012db9b11d6b1888b1f703c31c70836d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__servo_1_1ServoCalcs.html#a012db9b11d6b1888b1f703c31c70836d">ServoCalcs</a> (rclcpp::Node::SharedPtr node, const std::shared_ptr&lt; const <a class="el" href="structmoveit__servo_1_1ServoParameters.html">moveit_servo::ServoParameters</a> &gt; &amp;parameters, const planning_scene_monitor::PlanningSceneMonitorPtr &amp;planning_scene_monitor)</td></tr>
-<tr class="separator:a012db9b11d6b1888b1f703c31c70836d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af442336111ac1dea7022f724b46d840d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__servo_1_1ServoCalcs.html#af442336111ac1dea7022f724b46d840d">ServoCalcs</a> (const rclcpp::Node::SharedPtr &amp;node, const std::shared_ptr&lt; const <a class="el" href="structmoveit__servo_1_1ServoParameters.html">moveit_servo::ServoParameters</a> &gt; &amp;parameters, const planning_scene_monitor::PlanningSceneMonitorPtr &amp;planning_scene_monitor)</td></tr>
+<tr class="separator:af442336111ac1dea7022f724b46d840d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae9ff6c93e17c079703c0f5815b57a1c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__servo_1_1ServoCalcs.html#aae9ff6c93e17c079703c0f5815b57a1c">~ServoCalcs</a> ()</td></tr>
 <tr class="separator:aae9ff6c93e17c079703c0f5815b57a1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad942432113d0c473d1b04acfcb21e052"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__servo_1_1ServoCalcs.html#ad942432113d0c473d1b04acfcb21e052">start</a> ()</td></tr>
@@ -187,20 +187,20 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:adc8a971bac39624e373bea2ae1d76006"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fe09e31d91e68ca30f24345dd58f57b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__servo_1_1ServoCalcs.html#a6fe09e31d91e68ca30f24345dd58f57b">jointStateCB</a> (const sensor_msgs::msg::JointState::SharedPtr msg)</td></tr>
 <tr class="separator:a6fe09e31d91e68ca30f24345dd58f57b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33087effbb29d4a2864095a3ec14f9a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__servo_1_1ServoCalcs.html#a33087effbb29d4a2864095a3ec14f9a1">twistStampedCB</a> (const geometry_msgs::msg::TwistStamped::SharedPtr msg)</td></tr>
-<tr class="separator:a33087effbb29d4a2864095a3ec14f9a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99b65d45b7da52e43a6bf9d313d8c459"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__servo_1_1ServoCalcs.html#a99b65d45b7da52e43a6bf9d313d8c459">jointCmdCB</a> (const control_msgs::msg::JointJog::SharedPtr msg)</td></tr>
-<tr class="separator:a99b65d45b7da52e43a6bf9d313d8c459"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc168aced07f49d0dbdd689a833cdb2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__servo_1_1ServoCalcs.html#abc168aced07f49d0dbdd689a833cdb2c">collisionVelocityScaleCB</a> (const std_msgs::msg::Float64::SharedPtr msg)</td></tr>
-<tr class="separator:abc168aced07f49d0dbdd689a833cdb2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a460d0ab6ed8d2bc767561080d433e143"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__servo_1_1ServoCalcs.html#a460d0ab6ed8d2bc767561080d433e143">changeDriftDimensions</a> (const std::shared_ptr&lt; moveit_msgs::srv::ChangeDriftDimensions::Request &gt; req, std::shared_ptr&lt; moveit_msgs::srv::ChangeDriftDimensions::Response &gt; res)</td></tr>
-<tr class="separator:a460d0ab6ed8d2bc767561080d433e143"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cc6ea34ba37025f94bd6d0e0380acf6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__servo_1_1ServoCalcs.html#a7cc6ea34ba37025f94bd6d0e0380acf6">changeControlDimensions</a> (const std::shared_ptr&lt; moveit_msgs::srv::ChangeControlDimensions::Request &gt; req, std::shared_ptr&lt; moveit_msgs::srv::ChangeControlDimensions::Response &gt; res)</td></tr>
-<tr class="memdesc:a7cc6ea34ba37025f94bd6d0e0380acf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the main calculation timer.  <a href="classmoveit__servo_1_1ServoCalcs.html#a7cc6ea34ba37025f94bd6d0e0380acf6">More...</a><br /></td></tr>
-<tr class="separator:a7cc6ea34ba37025f94bd6d0e0380acf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab31f2d250be5e0e214d2839d5493b832"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__servo_1_1ServoCalcs.html#ab31f2d250be5e0e214d2839d5493b832">resetServoStatus</a> (const std::shared_ptr&lt; std_srvs::srv::Empty::Request &gt; req, std::shared_ptr&lt; std_srvs::srv::Empty::Response &gt; res)</td></tr>
-<tr class="memdesc:ab31f2d250be5e0e214d2839d5493b832"><td class="mdescLeft">&#160;</td><td class="mdescRight">Service callback to reset <a class="el" href="classmoveit__servo_1_1Servo.html">Servo</a> status, e.g. so the arm can move again after a collision.  <a href="classmoveit__servo_1_1ServoCalcs.html#ab31f2d250be5e0e214d2839d5493b832">More...</a><br /></td></tr>
-<tr class="separator:ab31f2d250be5e0e214d2839d5493b832"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacecad425858ca51d81d65aba517f306"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__servo_1_1ServoCalcs.html#aacecad425858ca51d81d65aba517f306">twistStampedCB</a> (const geometry_msgs::msg::TwistStamped::ConstSharedPtr &amp;msg)</td></tr>
+<tr class="separator:aacecad425858ca51d81d65aba517f306"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1f476d21605dac8d0b2df3f9cabf7cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__servo_1_1ServoCalcs.html#ac1f476d21605dac8d0b2df3f9cabf7cc">jointCmdCB</a> (const control_msgs::msg::JointJog::ConstSharedPtr &amp;msg)</td></tr>
+<tr class="separator:ac1f476d21605dac8d0b2df3f9cabf7cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3aa90f66458b17898bf20b23e514f2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__servo_1_1ServoCalcs.html#aa3aa90f66458b17898bf20b23e514f2b">collisionVelocityScaleCB</a> (const std_msgs::msg::Float64::ConstSharedPtr &amp;msg)</td></tr>
+<tr class="separator:aa3aa90f66458b17898bf20b23e514f2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d3dfe082458546ee747faf03a28fa48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__servo_1_1ServoCalcs.html#a1d3dfe082458546ee747faf03a28fa48">changeDriftDimensions</a> (const std::shared_ptr&lt; moveit_msgs::srv::ChangeDriftDimensions::Request &gt; &amp;req, const std::shared_ptr&lt; moveit_msgs::srv::ChangeDriftDimensions::Response &gt; &amp;res)</td></tr>
+<tr class="separator:a1d3dfe082458546ee747faf03a28fa48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f2bf91f3f5c2bcc0b604222d7815815"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__servo_1_1ServoCalcs.html#a9f2bf91f3f5c2bcc0b604222d7815815">changeControlDimensions</a> (const std::shared_ptr&lt; moveit_msgs::srv::ChangeControlDimensions::Request &gt; &amp;req, const std::shared_ptr&lt; moveit_msgs::srv::ChangeControlDimensions::Response &gt; &amp;res)</td></tr>
+<tr class="memdesc:a9f2bf91f3f5c2bcc0b604222d7815815"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the main calculation timer.  <a href="classmoveit__servo_1_1ServoCalcs.html#a9f2bf91f3f5c2bcc0b604222d7815815">More...</a><br /></td></tr>
+<tr class="separator:a9f2bf91f3f5c2bcc0b604222d7815815"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf24b92e8a2084ac6f8e8e04b0292ba0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__servo_1_1ServoCalcs.html#adf24b92e8a2084ac6f8e8e04b0292ba0">resetServoStatus</a> (const std::shared_ptr&lt; std_srvs::srv::Empty::Request &gt; &amp;req, const std::shared_ptr&lt; std_srvs::srv::Empty::Response &gt; &amp;res)</td></tr>
+<tr class="memdesc:adf24b92e8a2084ac6f8e8e04b0292ba0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Service callback to reset <a class="el" href="classmoveit__servo_1_1Servo.html">Servo</a> status, e.g. so the arm can move again after a collision.  <a href="classmoveit__servo_1_1ServoCalcs.html#adf24b92e8a2084ac6f8e8e04b0292ba0">More...</a><br /></td></tr>
+<tr class="separator:adf24b92e8a2084ac6f8e8e04b0292ba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abad5862e7dd2dee0bfefac50ec8c103d"><td class="memItemLeft" align="right" valign="top">rcl_interfaces::msg::SetParametersResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__servo_1_1ServoCalcs.html#abad5862e7dd2dee0bfefac50ec8c103d">robotLinkCommandFrameCallback</a> (const rclcpp::Parameter &amp;parameter)</td></tr>
 <tr class="separator:abad5862e7dd2dee0bfefac50ec8c103d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -329,8 +329,8 @@ Protected Attributes</h2></td></tr>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00116">116</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a012db9b11d6b1888b1f703c31c70836d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a012db9b11d6b1888b1f703c31c70836d">&#9670;&nbsp;</a></span>ServoCalcs()</h2>
+<a id="af442336111ac1dea7022f724b46d840d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af442336111ac1dea7022f724b46d840d">&#9670;&nbsp;</a></span>ServoCalcs()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -338,7 +338,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">moveit_servo::ServoCalcs::ServoCalcs </td>
           <td>(</td>
-          <td class="paramtype">rclcpp::Node::SharedPtr&#160;</td>
+          <td class="paramtype">const rclcpp::Node::SharedPtr &amp;&#160;</td>
           <td class="paramname"><em>node</em>, </td>
         </tr>
         <tr>
@@ -380,7 +380,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00236">236</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00237">237</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -439,7 +439,7 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns false if there is a problem, true otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00764">764</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00765">765</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 
 </div>
 </div>
@@ -468,7 +468,7 @@ Here is the call graph for this function:</div>
 
 <p>Do calculations for a single iteration. Publish one outgoing command. </p>
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00349">349</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00350">350</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -539,7 +539,7 @@ Here is the caller graph for this function:</div>
 
 <p>Do servoing calculations for Cartesian twist commands. </p>
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00551">551</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00552">552</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -567,8 +567,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a7cc6ea34ba37025f94bd6d0e0380acf6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7cc6ea34ba37025f94bd6d0e0380acf6">&#9670;&nbsp;</a></span>changeControlDimensions()</h2>
+<a id="a9f2bf91f3f5c2bcc0b604222d7815815"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f2bf91f3f5c2bcc0b604222d7815815">&#9670;&nbsp;</a></span>changeControlDimensions()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -579,13 +579,13 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void moveit_servo::ServoCalcs::changeControlDimensions </td>
           <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; moveit_msgs::srv::ChangeControlDimensions::Request &gt;&#160;</td>
+          <td class="paramtype">const std::shared_ptr&lt; moveit_msgs::srv::ChangeControlDimensions::Request &gt; &amp;&#160;</td>
           <td class="paramname"><em>req</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::shared_ptr&lt; moveit_msgs::srv::ChangeControlDimensions::Response &gt;&#160;</td>
+          <td class="paramtype">const std::shared_ptr&lt; moveit_msgs::srv::ChangeControlDimensions::Response &gt; &amp;&#160;</td>
           <td class="paramname"><em>res</em>&#160;</td>
         </tr>
         <tr>
@@ -603,12 +603,12 @@ Here is the caller graph for this function:</div>
 
 <p>Start the main calculation timer. </p>
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01302">1302</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01303">1303</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a460d0ab6ed8d2bc767561080d433e143"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a460d0ab6ed8d2bc767561080d433e143">&#9670;&nbsp;</a></span>changeDriftDimensions()</h2>
+<a id="a1d3dfe082458546ee747faf03a28fa48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d3dfe082458546ee747faf03a28fa48">&#9670;&nbsp;</a></span>changeDriftDimensions()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -619,13 +619,13 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void moveit_servo::ServoCalcs::changeDriftDimensions </td>
           <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; moveit_msgs::srv::ChangeDriftDimensions::Request &gt;&#160;</td>
+          <td class="paramtype">const std::shared_ptr&lt; moveit_msgs::srv::ChangeDriftDimensions::Request &gt; &amp;&#160;</td>
           <td class="paramname"><em>req</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::shared_ptr&lt; moveit_msgs::srv::ChangeDriftDimensions::Response &gt;&#160;</td>
+          <td class="paramtype">const std::shared_ptr&lt; moveit_msgs::srv::ChangeDriftDimensions::Response &gt; &amp;&#160;</td>
           <td class="paramname"><em>res</em>&#160;</td>
         </tr>
         <tr>
@@ -650,7 +650,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the adjustment was made </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01289">1289</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01290">1290</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 
 </div>
 </div>
@@ -685,7 +685,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if this represents a valid joint servo command, false otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01050">1050</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01051">1051</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -733,12 +733,12 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if this represents a valid servo twist command, false otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01065">1065</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01066">1066</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 
 </div>
 </div>
-<a id="abc168aced07f49d0dbdd689a833cdb2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc168aced07f49d0dbdd689a833cdb2c">&#9670;&nbsp;</a></span>collisionVelocityScaleCB()</h2>
+<a id="aa3aa90f66458b17898bf20b23e514f2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3aa90f66458b17898bf20b23e514f2b">&#9670;&nbsp;</a></span>collisionVelocityScaleCB()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -749,7 +749,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void moveit_servo::ServoCalcs::collisionVelocityScaleCB </td>
           <td>(</td>
-          <td class="paramtype">const std_msgs::msg::Float64::SharedPtr&#160;</td>
+          <td class="paramtype">const std_msgs::msg::Float64::ConstSharedPtr &amp;&#160;</td>
           <td class="paramname"><em>msg</em></td><td>)</td>
           <td></td>
         </tr>
@@ -761,7 +761,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01284">1284</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01285">1285</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 
 </div>
 </div>
@@ -801,7 +801,7 @@ Here is the caller graph for this function:</div>
 
 <p>Compose the outgoing JointTrajectory message. </p>
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00818">818</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00819">819</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 
 </div>
 </div>
@@ -836,7 +836,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01193">1193</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01194">1194</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -879,7 +879,7 @@ Here is the caller graph for this function:</div>
 <p>Avoid overshooting joint limits. </p>
 <dl class="section return"><dt>Returns</dt><dd>Vector of the joints that would move farther past position margin limits </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00920">920</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00921">921</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -919,7 +919,7 @@ Here is the call graph for this function:</div>
 
 <p>Come to a halt in a smooth way. Apply a smoothing plugin, if one is configured. </p>
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00972">972</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00973">973</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -967,7 +967,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if a valid transform was available </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01210">1210</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01211">1211</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -996,7 +996,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01219">1219</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01220">1220</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 
 </div>
 </div>
@@ -1024,7 +1024,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if a valid transform was available </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01233">1233</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01234">1234</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 
 </div>
 </div>
@@ -1044,7 +1044,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01242">1242</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01243">1243</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 
 </div>
 </div>
@@ -1084,7 +1084,7 @@ Here is the caller graph for this function:</div>
 
 <p>Gazebo simulations have very strict message timestamp requirements. Satisfy Gazebo by stuffing multiple messages into one. </p>
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00797">797</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00798">798</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 
 </div>
 </div>
@@ -1137,7 +1137,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00695">695</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00696">696</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1153,8 +1153,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a99b65d45b7da52e43a6bf9d313d8c459"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99b65d45b7da52e43a6bf9d313d8c459">&#9670;&nbsp;</a></span>jointCmdCB()</h2>
+<a id="ac1f476d21605dac8d0b2df3f9cabf7cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1f476d21605dac8d0b2df3f9cabf7cc">&#9670;&nbsp;</a></span>jointCmdCB()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1165,7 +1165,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">void moveit_servo::ServoCalcs::jointCmdCB </td>
           <td>(</td>
-          <td class="paramtype">const control_msgs::msg::JointJog::SharedPtr&#160;</td>
+          <td class="paramtype">const control_msgs::msg::JointJog::ConstSharedPtr &amp;&#160;</td>
           <td class="paramname"><em>msg</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1177,7 +1177,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01270">1270</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01271">1271</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 
 </div>
 </div>
@@ -1217,7 +1217,7 @@ Here is the caller graph for this function:</div>
 
 <p>Do servoing calculations for direct commands to a joint. </p>
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00681">681</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00682">682</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1294,7 +1294,7 @@ Here is the caller graph for this function:</div>
 
 <p>Run the main calculation loop. </p>
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00308">308</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00309">309</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1378,7 +1378,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01162">1162</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01163">1163</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1437,7 +1437,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01178">1178</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01179">1179</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1488,7 +1488,7 @@ Here is the caller graph for this function:</div>
 
 <p>Set the filters to the specified values. </p>
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00812">812</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00813">813</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1503,8 +1503,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ab31f2d250be5e0e214d2839d5493b832"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab31f2d250be5e0e214d2839d5493b832">&#9670;&nbsp;</a></span>resetServoStatus()</h2>
+<a id="adf24b92e8a2084ac6f8e8e04b0292ba0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf24b92e8a2084ac6f8e8e04b0292ba0">&#9670;&nbsp;</a></span>resetServoStatus()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1515,13 +1515,13 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">bool moveit_servo::ServoCalcs::resetServoStatus </td>
           <td>(</td>
-          <td class="paramtype">const std::shared_ptr&lt; std_srvs::srv::Empty::Request &gt;&#160;</td>
+          <td class="paramtype">const std::shared_ptr&lt; std_srvs::srv::Empty::Request &gt; &amp;&#160;</td>
           <td class="paramname"><em>req</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::shared_ptr&lt; std_srvs::srv::Empty::Response &gt;&#160;</td>
+          <td class="paramtype">const std::shared_ptr&lt; std_srvs::srv::Empty::Response &gt; &amp;&#160;</td>
           <td class="paramname"><em>res</em>&#160;</td>
         </tr>
         <tr>
@@ -1539,7 +1539,7 @@ Here is the caller graph for this function:</div>
 
 <p>Service callback to reset <a class="el" href="classmoveit__servo_1_1Servo.html">Servo</a> status, e.g. so the arm can move again after a collision. </p>
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01315">1315</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01316">1316</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 
 </div>
 </div>
@@ -1567,7 +1567,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00540">540</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00541">541</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 
 </div>
 </div>
@@ -1598,7 +1598,7 @@ Here is the caller graph for this function:</div>
 <p>If incoming velocity commands are from a unitless joystick, scale them to physical units. Also, multiply by timestep to calculate a position change. </p>
 <dl class="section return"><dt>Returns</dt><dd>a vector of position deltas </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01093">1093</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01094">1094</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1641,7 +1641,7 @@ Here is the caller graph for this function:</div>
 <p>If incoming velocity commands are from a unitless joystick, scale them to physical units. Also, multiply by timestep to calculate a position change. </p>
 <dl class="section return"><dt>Returns</dt><dd>a vector of position deltas </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01127">1127</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01128">1128</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1675,7 +1675,7 @@ Here is the caller graph for this function:</div>
 
 <p>Pause or unpause processing servo commands while keeping the timers alive. </p>
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01322">1322</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01323">1323</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 
 </div>
 </div>
@@ -1696,7 +1696,7 @@ Here is the caller graph for this function:</div>
 
 <p>Start the timer where we do work and publish outputs. </p>
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00241">241</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00242">242</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1749,7 +1749,7 @@ Here is the call graph for this function:</div>
 
 <p>Stop the currently running thread. </p>
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00287">287</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00288">288</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1799,7 +1799,7 @@ Here is the caller graph for this function:</div>
 
 <p>Suddenly halt for a joint limit or other critical issue. Is handled differently for position vs. velocity control. </p>
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01023">1023</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01024">1024</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1812,8 +1812,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a33087effbb29d4a2864095a3ec14f9a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33087effbb29d4a2864095a3ec14f9a1">&#9670;&nbsp;</a></span>twistStampedCB()</h2>
+<a id="aacecad425858ca51d81d65aba517f306"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacecad425858ca51d81d65aba517f306">&#9670;&nbsp;</a></span>twistStampedCB()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1824,7 +1824,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void moveit_servo::ServoCalcs::twistStampedCB </td>
           <td>(</td>
-          <td class="paramtype">const geometry_msgs::msg::TwistStamped::SharedPtr&#160;</td>
+          <td class="paramtype">const geometry_msgs::msg::TwistStamped::ConstSharedPtr &amp;&#160;</td>
           <td class="paramname"><em>msg</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1836,7 +1836,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01256">1256</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01257">1257</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 
 </div>
 </div>
@@ -1865,7 +1865,7 @@ Here is the call graph for this function:</div>
 
 <p>Parse the incoming joint msg for the joints of our MoveGroup. </p>
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01039">1039</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l01040">1040</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1922,7 +1922,7 @@ Here is the caller graph for this function:</div>
 
 <p>Possibly calculate a velocity scaling factor, due to proximity of singularity and direction of motion. </p>
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00845">845</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8cpp_source.html#l00846">846</a> of file <a class="el" href="servo__calcs_8cpp_source.html">servo_calcs.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1956,7 +1956,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00368">368</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00369">369</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -1980,7 +1980,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00348">348</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00349">349</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2004,7 +2004,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00352">352</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00353">353</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2028,7 +2028,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00381">381</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00382">382</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2052,7 +2052,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00353">353</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00354">354</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2076,7 +2076,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00330">330</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00331">331</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2100,7 +2100,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00371">371</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00372">372</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2124,7 +2124,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00360">360</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00361">361</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2148,7 +2148,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00378">378</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00379">379</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2172,7 +2172,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00354">354</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00355">355</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2196,7 +2196,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00373">373</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00374">374</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2220,7 +2220,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00322">322</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00323">323</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2244,7 +2244,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00321">321</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00322">322</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2268,7 +2268,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00320">320</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00321">321</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2292,7 +2292,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00406">406</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00407">407</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2316,7 +2316,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00405">405</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00406">406</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2340,7 +2340,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00395">395</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00396">396</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2364,7 +2364,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00336">336</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00337">337</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2388,7 +2388,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00347">347</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00348">348</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2412,7 +2412,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00366">366</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00367">367</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2436,7 +2436,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00328">328</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00329">329</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2460,7 +2460,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00326">326</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00327">327</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2484,7 +2484,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00337">337</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00338">338</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2508,7 +2508,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00345">345</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00346">346</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2532,7 +2532,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00342">342</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00343">343</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2556,7 +2556,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00388">388</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00389">389</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2580,7 +2580,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00392">392</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00393">393</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2604,7 +2604,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00390">390</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00391">391</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2628,7 +2628,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00391">391</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00392">392</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2652,7 +2652,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00389">389</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00390">390</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2676,7 +2676,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00387">387</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00388">388</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2700,7 +2700,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00384">384</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00385">385</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2724,7 +2724,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00351">351</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00352">352</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2748,7 +2748,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00396">396</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00397">397</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2772,7 +2772,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00301">301</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00302">302</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2796,7 +2796,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00375">375</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00376">376</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2820,7 +2820,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00367">367</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00368">368</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2844,7 +2844,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00336">336</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00337">337</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2868,7 +2868,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00304">304</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00305">305</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2892,7 +2892,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00364">364</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00365">365</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2916,7 +2916,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00307">307</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00308">308</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2940,7 +2940,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00355">355</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00356">356</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2964,7 +2964,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00399">399</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00400">400</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -2988,7 +2988,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00340">340</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00341">341</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -3012,7 +3012,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00403">403</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00404">404</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -3036,7 +3036,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00363">363</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00364">364</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -3060,7 +3060,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00349">349</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00350">350</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -3084,7 +3084,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00359">359</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00360">360</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -3108,7 +3108,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00386">386</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00387">387</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -3132,7 +3132,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00385">385</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00386">386</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -3156,7 +3156,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00358">358</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00359">359</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -3180,7 +3180,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00350">350</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00351">351</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -3204,7 +3204,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00365">365</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00366">366</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -3228,7 +3228,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00325">325</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00326">326</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -3252,7 +3252,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00346">346</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00347">347</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -3276,7 +3276,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00317">317</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00318">318</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -3300,7 +3300,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00407">407</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00408">408</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -3324,7 +3324,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00314">314</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00315">315</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>
@@ -3348,7 +3348,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00311">311</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="servo__calcs_8h_source.html#l00312">312</a> of file <a class="el" href="servo__calcs_8h_source.html">servo_calcs.h</a>.</p>
 
 </div>
 </div>

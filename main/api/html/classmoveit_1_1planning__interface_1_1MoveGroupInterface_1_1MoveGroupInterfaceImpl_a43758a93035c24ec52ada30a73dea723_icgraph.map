@@ -1,4 +1,6 @@
 <map id="moveit::planning_interface::MoveGroupInterface::MoveGroupInterfaceImpl::getGoalJointTolerance" name="moveit::planning_interface::MoveGroupInterface::MoveGroupInterfaceImpl::getGoalJointTolerance">
-<area shape="rect" id="node1" title=" " alt="" coords="309,5,568,61"/>
-<area shape="rect" id="node2" href="$classmoveit_1_1planning__interface_1_1MoveGroupInterface.html#a71e3819bd31711dcb81c18305ca9a521" title="Set the JointValueTarget and use it for future planning requests." alt="" coords="5,5,261,61"/>
+<area shape="rect" id="node1" title=" " alt="" coords="613,45,872,101"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1planning__interface_1_1MoveGroupInterface.html#a71e3819bd31711dcb81c18305ca9a521" title="Set the JointValueTarget and use it for future planning requests." alt="" coords="309,5,565,61"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1planning__interface_1_1MoveGroupInterface_1_1MoveGroupInterfaceImpl.html#a4377be76c003cb52c7e2ff8ec1538878" title=" " alt="" coords="312,85,563,141"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1planning__interface_1_1MoveGroupInterface.html#abe1de96366109bdfe47aa6448b2fa121" title="If a different start state should be considered instead of the current state of the robot,..." alt="" coords="5,13,261,54"/>
 </map>

@@ -1,0 +1,4 @@
+<map id="moveit::core::JointModelGroup::isSingleDOFJoints" name="moveit::core::JointModelGroup::isSingleDOFJoints">
+<area shape="rect" id="node1" title="Return true if the group consists only of joints that are single DOF." alt="" coords="227,13,411,54"/>
+<area shape="rect" id="node2" href="$classlma__kinematics__plugin_1_1LMAKinematicsPlugin.html#a40ece21dea9653ed56ac42dae024f45b" title="Default constructor." alt="" coords="5,5,179,61"/>
+</map>

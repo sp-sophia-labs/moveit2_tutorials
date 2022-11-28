@@ -301,249 +301,253 @@ $(function() {
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> std::string&amp; link : links)</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    {</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      <span class="comment">// Check if string matches either of user specified links</span></div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      <span class="keywordflow">if</span> (link.compare(tip) == 0)  <span class="comment">// they are same</span></div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        found_tip = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (link.compare(base) == 0)  <span class="comment">// they are same</span></div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        found_base = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;      <span class="comment">// Check if we are done searching</span></div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;      <span class="keywordflow">if</span> (found_tip &amp;&amp; found_base)</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    }</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="comment">// Check if we found both links</span></div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keywordflow">if</span> (!found_tip || !found_base)</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    {</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;      <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Tip or base link(s) were not found in kinematic chain.&quot;</span>);</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    }</div>
-<div class="line"><a name="l00247"></a><span class="lineno"><a class="line" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#aed08a2885cd3f2a26d9eb2155e5e2cbe">  247</a></span>&#160;  }</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  <span class="comment">// Find the group we are editing based on the group name string</span></div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  srdf::Model::Group* searched_group = <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1SuperSRDFStep.html#a1ef32faab24ffa33117a70e81a1d2d9e">find</a>(group_name);</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  <span class="comment">// clear the old data</span></div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  searched_group-&gt;chains_.clear();</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  <span class="comment">// Save the data if there is data to save</span></div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  <span class="keywordflow">if</span> (!tip.empty() &amp;&amp; !base.empty())</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  {</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    searched_group-&gt;chains_.push_back(std::pair&lt;std::string, std::string&gt;(base, tip));</div>
-<div class="line"><a name="l00259"></a><span class="lineno"><a class="line" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a36fdd727f9787e432fca922884583d7f">  259</a></span>&#160;  }</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  <span class="comment">// Update the kinematic model with changes</span></div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1SRDFStep.html#af8600747694d4af1cfbea0ecd7a8895e">srdf_config_</a>-&gt;updateRobotModel(<a class="code" href="namespacemoveit__setup.html#a625b629c296c9d1d627f617557df5833a53d0da95f9fd7b35e7db8c3af7dc3bb7">GROUP_CONTENTS</a>);</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;}</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      <span class="keywordflow">if</span> (link.compare(tip) == 0)</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;      {  <span class="comment">// they are same</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        found_tip = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;      }</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (link.compare(base) == 0)</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;      {  <span class="comment">// they are same</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        found_base = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;      }</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;      <span class="comment">// Check if we are done searching</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;      <span class="keywordflow">if</span> (found_tip &amp;&amp; found_base)</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    }</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="comment">// Check if we found both links</span></div>
+<div class="line"><a name="l00247"></a><span class="lineno"><a class="line" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#aed08a2885cd3f2a26d9eb2155e5e2cbe">  247</a></span>&#160;    <span class="keywordflow">if</span> (!found_tip || !found_base)</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    {</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;      <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Tip or base link(s) were not found in kinematic chain.&quot;</span>);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    }</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  }</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  <span class="comment">// Find the group we are editing based on the group name string</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  srdf::Model::Group* searched_group = <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1SuperSRDFStep.html#a1ef32faab24ffa33117a70e81a1d2d9e">find</a>(group_name);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  <span class="comment">// clear the old data</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  searched_group-&gt;chains_.clear();</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
+<div class="line"><a name="l00259"></a><span class="lineno"><a class="line" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a36fdd727f9787e432fca922884583d7f">  259</a></span>&#160;  <span class="comment">// Save the data if there is data to save</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  <span class="keywordflow">if</span> (!tip.empty() &amp;&amp; !base.empty())</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  {</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    searched_group-&gt;chains_.push_back(std::pair&lt;std::string, std::string&gt;(base, tip));</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  }</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160; </div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a38690dcfd146a0d9cbc289aa2acb36f7">PlanningGroups::setSubgroups</a>(<span class="keyword">const</span> std::string&amp; selected_group_name, <span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; subgroups)</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;{</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  <span class="comment">// Check for cycles -------------------------------</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  <span class="comment">// Update the kinematic model with changes</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1SRDFStep.html#af8600747694d4af1cfbea0ecd7a8895e">srdf_config_</a>-&gt;updateRobotModel(<a class="code" href="namespacemoveit__setup.html#a625b629c296c9d1d627f617557df5833a53d0da95f9fd7b35e7db8c3af7dc3bb7">GROUP_CONTENTS</a>);</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;}</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  <span class="comment">// Create vector index of all nodes</span></div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  std::map&lt;std::string, int&gt; group_nodes;</div>
-<div class="line"><a name="l00271"></a><span class="lineno"><a class="line" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a06b4898368d37649011427f953e01efe">  271</a></span>&#160; </div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  <span class="comment">// Create vector of all nodes for use as id&#39;s</span></div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  <span class="keywordtype">int</span> node_id = 0;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> std::string&amp; group_name : <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a6bc37f841d1df6f303c4a0c2f7a8d382">getGroupNames</a>())</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  {</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="comment">// Add string to vector</span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    group_nodes.insert(std::pair&lt;std::string, int&gt;(group_name, node_id));</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    ++node_id;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  }</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <span class="comment">// Create the empty graph</span></div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  <span class="keyword">typedef</span> boost::adjacency_list&lt;boost::vecS, boost::vecS, boost::bidirectionalS&gt; Graph;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  Graph g(group_nodes.size());</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a38690dcfd146a0d9cbc289aa2acb36f7">PlanningGroups::setSubgroups</a>(<span class="keyword">const</span> std::string&amp; selected_group_name, <span class="keyword">const</span> std::vector&lt;std::string&gt;&amp; subgroups)</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;{</div>
+<div class="line"><a name="l00271"></a><span class="lineno"><a class="line" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a06b4898368d37649011427f953e01efe">  271</a></span>&#160;  <span class="comment">// Check for cycles -------------------------------</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  <span class="comment">// Create vector index of all nodes</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  std::map&lt;std::string, int&gt; group_nodes;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  <span class="comment">// Create vector of all nodes for use as id&#39;s</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  <span class="keywordtype">int</span> node_id = 0;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> std::string&amp; group_name : <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a6bc37f841d1df6f303c4a0c2f7a8d382">getGroupNames</a>())</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  {</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="comment">// Add string to vector</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    group_nodes.insert(std::pair&lt;std::string, int&gt;(group_name, node_id));</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    ++node_id;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  }</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160; </div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;  <span class="comment">// Traverse the group list again, this time inserting subgroups into graph</span></div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  <span class="keywordtype">int</span> from_id = 0;  <span class="comment">// track the outer node we are on to reduce searches performed</span></div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  <span class="keywordflow">for</span> (srdf::Model::Group&amp; <a class="code" href="namespacetest__cleanup.html#a121623a04b6c3260c0e3e9c8cb74d9f9">group</a> : <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1SRDFStep.html#af8600747694d4af1cfbea0ecd7a8895e">srdf_config_</a>-&gt;getGroups())</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;  {</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="comment">// Check if group_it is same as current group</span></div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="namespacetest__cleanup.html#a121623a04b6c3260c0e3e9c8cb74d9f9">group</a>.name_ == selected_group_name)  <span class="comment">// yes, same group</span></div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    {</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;      <span class="comment">// add new subgroup list from widget, not old one. this way we can check for new cycles</span></div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">const</span> std::string&amp; to_string : subgroups)</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;      {</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="comment">// convert subgroup string to associated id</span></div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="keywordtype">int</span> to_id = group_nodes[to_string];</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        <span class="comment">// Add edge from from_id to to_id</span></div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        add_edge(from_id, to_id, g);</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;      }</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    }</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordflow">else</span>  <span class="comment">// this group is not the group we are editing, so just add subgroups from memory</span></div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    {</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;      <span class="comment">// add new subgroup list from widget, not old one. this way we can check for new cycles</span></div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">const</span> std::string&amp; to_string : <a class="code" href="namespacetest__cleanup.html#a121623a04b6c3260c0e3e9c8cb74d9f9">group</a>.subgroups_)</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;      {</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <span class="comment">// Get std::string of subgroup</span></div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <span class="comment">// convert subgroup string to associated id</span></div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="keywordtype">int</span> to_id = group_nodes[to_string];</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <span class="comment">// Add edge from from_id to to_id</span></div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        add_edge(from_id, to_id, g);</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;      }</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    }</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    ++from_id;</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  }</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;  <span class="comment">// Check for cycles</span></div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  <span class="keywordtype">bool</span> has_cycle = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  CycleDetector vis(has_cycle);</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;  boost::depth_first_search(g, visitor(vis));</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;  <span class="keywordflow">if</span> (has_cycle)</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  {</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Depth first search reveals a cycle in the subgroups&quot;</span>);</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;  }</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
-<div class="line"><a name="l00329"></a><span class="lineno"><a class="line" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a38690dcfd146a0d9cbc289aa2acb36f7">  329</a></span>&#160;  <span class="comment">// Find the group we are editing based on the group name string</span></div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;  srdf::Model::Group* searched_group = <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1SuperSRDFStep.html#a1ef32faab24ffa33117a70e81a1d2d9e">find</a>(selected_group_name);</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160; </div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;  <span class="comment">// save the data</span></div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;  searched_group-&gt;subgroups_ = subgroups;</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160; </div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;  <span class="comment">// Update the kinematic model with changes</span></div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;  <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1SRDFStep.html#af8600747694d4af1cfbea0ecd7a8895e">srdf_config_</a>-&gt;updateRobotModel(<a class="code" href="namespacemoveit__setup.html#a625b629c296c9d1d627f617557df5833a53d0da95f9fd7b35e7db8c3af7dc3bb7">GROUP_CONTENTS</a>);</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;}</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;  <span class="comment">// Create the empty graph</span></div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  <span class="keyword">typedef</span> boost::adjacency_list&lt;boost::vecS, boost::vecS, boost::bidirectionalS&gt; Graph;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  Graph g(group_nodes.size());</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160; </div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  <span class="comment">// Traverse the group list again, this time inserting subgroups into graph</span></div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  <span class="keywordtype">int</span> from_id = 0;  <span class="comment">// track the outer node we are on to reduce searches performed</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  <span class="keywordflow">for</span> (srdf::Model::Group&amp; <a class="code" href="namespacetest__cleanup.html#a121623a04b6c3260c0e3e9c8cb74d9f9">group</a> : <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1SRDFStep.html#af8600747694d4af1cfbea0ecd7a8895e">srdf_config_</a>-&gt;getGroups())</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="comment">// Check if group_it is same as current group</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="namespacetest__cleanup.html#a121623a04b6c3260c0e3e9c8cb74d9f9">group</a>.name_ == selected_group_name)  <span class="comment">// yes, same group</span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    {</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;      <span class="comment">// add new subgroup list from widget, not old one. this way we can check for new cycles</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">const</span> std::string&amp; to_string : subgroups)</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;      {</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="comment">// convert subgroup string to associated id</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="keywordtype">int</span> to_id = group_nodes[to_string];</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160; </div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <span class="comment">// Add edge from from_id to to_id</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        add_edge(from_id, to_id, g);</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;      }</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    }</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keywordflow">else</span>  <span class="comment">// this group is not the group we are editing, so just add subgroups from memory</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    {</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;      <span class="comment">// add new subgroup list from widget, not old one. this way we can check for new cycles</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;      <span class="keywordflow">for</span> (<span class="keyword">const</span> std::string&amp; to_string : <a class="code" href="namespacetest__cleanup.html#a121623a04b6c3260c0e3e9c8cb74d9f9">group</a>.subgroups_)</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;      {</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <span class="comment">// Get std::string of subgroup</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <span class="comment">// convert subgroup string to associated id</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        <span class="keywordtype">int</span> to_id = group_nodes[to_string];</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <span class="comment">// Add edge from from_id to to_id</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        add_edge(from_id, to_id, g);</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;      }</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    }</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160; </div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    ++from_id;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  }</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;  <span class="comment">// Check for cycles</span></div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;  <span class="keywordtype">bool</span> has_cycle = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  CycleDetector vis(has_cycle);</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;  boost::depth_first_search(g, visitor(vis));</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160; </div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;  <span class="keywordflow">if</span> (has_cycle)</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;  {</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Depth first search reveals a cycle in the subgroups&quot;</span>);</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;  }</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
+<div class="line"><a name="l00333"></a><span class="lineno"><a class="line" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a38690dcfd146a0d9cbc289aa2acb36f7">  333</a></span>&#160;  <span class="comment">// Find the group we are editing based on the group name string</span></div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;  srdf::Model::Group* searched_group = <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1SuperSRDFStep.html#a1ef32faab24ffa33117a70e81a1d2d9e">find</a>(selected_group_name);</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160; </div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;  <span class="comment">// save the data</span></div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;  searched_group-&gt;subgroups_ = subgroups;</div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160; </div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;std::string <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a500e2b9aeeeef06730fc40b931ffd221">PlanningGroups::getChildOfJoint</a>(<span class="keyword">const</span> std::string&amp; joint_name)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1SRDFStep.html#af8600747694d4af1cfbea0ecd7a8895e">srdf_config_</a>-&gt;getChildOfJoint(joint_name);</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;}</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160; </div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;std::string <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a64488fc000d1a547e17932f00b2025b2">PlanningGroups::getJointType</a>(<span class="keyword">const</span> std::string&amp; joint_name)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;  <span class="keyword">const</span> <a class="code" href="classmoveit_1_1core_1_1JointModel.html">moveit::core::JointModel</a>* joint_model = <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1SRDFStep.html#af8600747694d4af1cfbea0ecd7a8895e">srdf_config_</a>-&gt;getRobotModel()-&gt;getJointModel(joint_name);</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;  <span class="keywordflow">if</span> (!joint_model)</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;  {</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;  }</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;  <span class="keywordflow">return</span> joint_model-&gt;<a class="code" href="classmoveit_1_1core_1_1JointModel.html#af1db07d2843b0c6435415dd53b3aa433">getTypeName</a>();</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;}</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160; </div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;LinkNameTree <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#af776ee75dafec12910f792820b653f29">PlanningGroups::getLinkNameTree</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;  <span class="keyword">const</span> <a class="code" href="classmoveit_1_1core_1_1JointModel.html">moveit::core::JointModel</a>* root_joint = <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1SRDFStep.html#af8600747694d4af1cfbea0ecd7a8895e">srdf_config_</a>-&gt;getRobotModel()-&gt;getRootJoint();</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="namespacemoveit__setup_1_1srdf__setup.html#a0569e4cf08e1d4e1dfb5931ac25a79db">buildLinkNameTree</a>(root_joint-&gt;<a class="code" href="classmoveit_1_1core_1_1JointModel.html#a43a3a6bd53bd7a4eda4768d7444a384d">getChildLinkModel</a>());</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;}</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160; </div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;std::vector&lt;std::string&gt; <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a5c40ba305681032f99fd975ce46dcdec">PlanningGroups::getPosesByGroup</a>(<span class="keyword">const</span> std::string&amp; group_name)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;  std::vector&lt;std::string&gt; pose_names;</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> srdf::Model::GroupState&amp; pose : <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1SRDFStep.html#af8600747694d4af1cfbea0ecd7a8895e">srdf_config_</a>-&gt;getGroupStates())</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;  {</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="keywordflow">if</span> (pose.group_ == group_name)</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    {</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;      pose_names.push_back(pose.name_);</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    }</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;  }</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;  <span class="keywordflow">return</span> pose_names;</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;}</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160; </div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;std::vector&lt;std::string&gt; <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#aea5644fb7134583bbe643f47368887e8">PlanningGroups::getEndEffectorsByGroup</a>(<span class="keyword">const</span> std::string&amp; group_name)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;  std::vector&lt;std::string&gt; eef_names;</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> srdf::Model::EndEffector&amp; eef : <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1SRDFStep.html#af8600747694d4af1cfbea0ecd7a8895e">srdf_config_</a>-&gt;getEndEffectors())</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;  {</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keywordflow">if</span> (eef.component_group_ == group_name)</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    {</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;      eef_names.push_back(eef.name_);</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    }</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;  }</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;  <span class="keywordflow">return</span> eef_names;</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;}</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160; </div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;std::vector&lt;std::string&gt; <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a9cde5f7ff9de0401555ccdde37a49db0">PlanningGroups::getKinematicPlanners</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;  <span class="comment">// load all avail kin planners</span></div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;  std::unique_ptr&lt;pluginlib::ClassLoader&lt;kinematics::KinematicsBase&gt;&gt; loader;</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;  <span class="keywordflow">try</span></div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;  {</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    loader = std::make_unique&lt;pluginlib::ClassLoader&lt;kinematics::KinematicsBase&gt;&gt;(<span class="stringliteral">&quot;moveit_core&quot;</span>,</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;                                                                                  <span class="stringliteral">&quot;kinematics::KinematicsBase&quot;</span>);</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;  }</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;  <span class="keywordflow">catch</span> (pluginlib::PluginlibException&amp; ex)</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;  {</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keywordflow">throw</span> std::runtime_error(std::string(<span class="stringliteral">&quot;Exception while creating class loader for kinematic &quot;</span></div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;                                         <span class="stringliteral">&quot;solver plugins: &quot;</span>) +</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                             ex.what());</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;  }</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160; </div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;  std::vector&lt;std::string&gt; planners(loader-&gt;getDeclaredClasses());</div>
-<div class="line"><a name="l00403"></a><span class="lineno"><a class="line" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a500e2b9aeeeef06730fc40b931ffd221">  403</a></span>&#160; </div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;  <span class="comment">// Warn if no plugins are found</span></div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;  <span class="keywordflow">if</span> (planners.empty())</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;  {</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;No MoveIt-compatible kinematics solvers found. Try &quot;</span></div>
-<div class="line"><a name="l00408"></a><span class="lineno"><a class="line" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a64488fc000d1a547e17932f00b2025b2">  408</a></span>&#160;                             <span class="stringliteral">&quot;installing moveit_kinematics (sudo apt-get install &quot;</span></div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;                             <span class="stringliteral">&quot;ros-${ROS_DISTRO}-moveit-kinematics)&quot;</span>);</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;  }</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;  <span class="keywordflow">return</span> planners;</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;}</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160; </div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;std::vector&lt;std::string&gt; <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#ad004848e5fe7a2b9c0353fc383fd31ed">PlanningGroups::getOMPLPlanners</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;  std::vector&lt;std::string&gt; planner_names;</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;  <span class="comment">// TODO: This should call ompl_interface::PlanningContextManager::getRegisteredPlannerAllocators to load the</span></div>
-<div class="line"><a name="l00418"></a><span class="lineno"><a class="line" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#af776ee75dafec12910f792820b653f29">  418</a></span>&#160;  <span class="comment">//       names dynamically</span></div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;AnytimePathShortening&quot;</span>);</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;SBL&quot;</span>);</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;EST&quot;</span>);</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;LBKPIECE&quot;</span>);</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;BKPIECE&quot;</span>);</div>
-<div class="line"><a name="l00424"></a><span class="lineno"><a class="line" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a5c40ba305681032f99fd975ce46dcdec">  424</a></span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;KPIECE&quot;</span>);</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;RRT&quot;</span>);</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;RRTConnect&quot;</span>);</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;RRTstar&quot;</span>);</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;TRRT&quot;</span>);</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;PRM&quot;</span>);</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;PRMstar&quot;</span>);</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;FMT&quot;</span>);</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;BFMT&quot;</span>);</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;PDST&quot;</span>);</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;STRIDE&quot;</span>);</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;BiTRRT&quot;</span>);</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;LBTRRT&quot;</span>);</div>
-<div class="line"><a name="l00437"></a><span class="lineno"><a class="line" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#aea5644fb7134583bbe643f47368887e8">  437</a></span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;BiEST&quot;</span>);</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;ProjEST&quot;</span>);</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;LazyPRM&quot;</span>);</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;LazyPRMstar&quot;</span>);</div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;SPARS&quot;</span>);</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;SPARStwo&quot;</span>);</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160; </div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;  <span class="keywordflow">return</span> planner_names;</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;}</div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160; </div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;}  <span class="comment">// namespace srdf_setup</span></div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;}  <span class="comment">// namespace moveit_setup</span></div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;  <span class="comment">// Update the kinematic model with changes</span></div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;  <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1SRDFStep.html#af8600747694d4af1cfbea0ecd7a8895e">srdf_config_</a>-&gt;updateRobotModel(<a class="code" href="namespacemoveit__setup.html#a625b629c296c9d1d627f617557df5833a53d0da95f9fd7b35e7db8c3af7dc3bb7">GROUP_CONTENTS</a>);</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;}</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160; </div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;std::string <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a500e2b9aeeeef06730fc40b931ffd221">PlanningGroups::getChildOfJoint</a>(<span class="keyword">const</span> std::string&amp; joint_name)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1SRDFStep.html#af8600747694d4af1cfbea0ecd7a8895e">srdf_config_</a>-&gt;getChildOfJoint(joint_name);</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;}</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;std::string <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a64488fc000d1a547e17932f00b2025b2">PlanningGroups::getJointType</a>(<span class="keyword">const</span> std::string&amp; joint_name)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;  <span class="keyword">const</span> <a class="code" href="classmoveit_1_1core_1_1JointModel.html">moveit::core::JointModel</a>* joint_model = <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1SRDFStep.html#af8600747694d4af1cfbea0ecd7a8895e">srdf_config_</a>-&gt;getRobotModel()-&gt;getJointModel(joint_name);</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;  <span class="keywordflow">if</span> (!joint_model)</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;  {</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;  }</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;  <span class="keywordflow">return</span> joint_model-&gt;<a class="code" href="classmoveit_1_1core_1_1JointModel.html#af1db07d2843b0c6435415dd53b3aa433">getTypeName</a>();</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;}</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160; </div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;LinkNameTree <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#af776ee75dafec12910f792820b653f29">PlanningGroups::getLinkNameTree</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;  <span class="keyword">const</span> <a class="code" href="classmoveit_1_1core_1_1JointModel.html">moveit::core::JointModel</a>* root_joint = <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1SRDFStep.html#af8600747694d4af1cfbea0ecd7a8895e">srdf_config_</a>-&gt;getRobotModel()-&gt;getRootJoint();</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;  <span class="keywordflow">return</span> <a class="code" href="namespacemoveit__setup_1_1srdf__setup.html#a0569e4cf08e1d4e1dfb5931ac25a79db">buildLinkNameTree</a>(root_joint-&gt;<a class="code" href="classmoveit_1_1core_1_1JointModel.html#a43a3a6bd53bd7a4eda4768d7444a384d">getChildLinkModel</a>());</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;}</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160; </div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;std::vector&lt;std::string&gt; <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a5c40ba305681032f99fd975ce46dcdec">PlanningGroups::getPosesByGroup</a>(<span class="keyword">const</span> std::string&amp; group_name)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;  std::vector&lt;std::string&gt; pose_names;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> srdf::Model::GroupState&amp; pose : <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1SRDFStep.html#af8600747694d4af1cfbea0ecd7a8895e">srdf_config_</a>-&gt;getGroupStates())</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;  {</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="keywordflow">if</span> (pose.group_ == group_name)</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    {</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;      pose_names.push_back(pose.name_);</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    }</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;  }</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;  <span class="keywordflow">return</span> pose_names;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;}</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160; </div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;std::vector&lt;std::string&gt; <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#aea5644fb7134583bbe643f47368887e8">PlanningGroups::getEndEffectorsByGroup</a>(<span class="keyword">const</span> std::string&amp; group_name)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;  std::vector&lt;std::string&gt; eef_names;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> srdf::Model::EndEffector&amp; eef : <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1SRDFStep.html#af8600747694d4af1cfbea0ecd7a8895e">srdf_config_</a>-&gt;getEndEffectors())</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  {</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    <span class="keywordflow">if</span> (eef.component_group_ == group_name)</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    {</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;      eef_names.push_back(eef.name_);</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    }</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;  }</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;  <span class="keywordflow">return</span> eef_names;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;}</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160; </div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;std::vector&lt;std::string&gt; <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a9cde5f7ff9de0401555ccdde37a49db0">PlanningGroups::getKinematicPlanners</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;  <span class="comment">// load all avail kin planners</span></div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;  std::unique_ptr&lt;pluginlib::ClassLoader&lt;kinematics::KinematicsBase&gt;&gt; loader;</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;  <span class="keywordflow">try</span></div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;  {</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    loader = std::make_unique&lt;pluginlib::ClassLoader&lt;kinematics::KinematicsBase&gt;&gt;(<span class="stringliteral">&quot;moveit_core&quot;</span>,</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;                                                                                  <span class="stringliteral">&quot;kinematics::KinematicsBase&quot;</span>);</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;  }</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;  <span class="keywordflow">catch</span> (pluginlib::PluginlibException&amp; ex)</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;  {</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    <span class="keywordflow">throw</span> std::runtime_error(std::string(<span class="stringliteral">&quot;Exception while creating class loader for kinematic &quot;</span></div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;                                         <span class="stringliteral">&quot;solver plugins: &quot;</span>) +</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;                             ex.what());</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;  }</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160; </div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;  std::vector&lt;std::string&gt; planners(loader-&gt;getDeclaredClasses());</div>
+<div class="line"><a name="l00407"></a><span class="lineno"><a class="line" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a500e2b9aeeeef06730fc40b931ffd221">  407</a></span>&#160; </div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;  <span class="comment">// Warn if no plugins are found</span></div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;  <span class="keywordflow">if</span> (planners.empty())</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;  {</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;No MoveIt-compatible kinematics solvers found. Try &quot;</span></div>
+<div class="line"><a name="l00412"></a><span class="lineno"><a class="line" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a64488fc000d1a547e17932f00b2025b2">  412</a></span>&#160;                             <span class="stringliteral">&quot;installing moveit_kinematics (sudo apt-get install &quot;</span></div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;                             <span class="stringliteral">&quot;ros-${ROS_DISTRO}-moveit-kinematics)&quot;</span>);</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;  }</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;  <span class="keywordflow">return</span> planners;</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;}</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160; </div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;std::vector&lt;std::string&gt; <a class="code" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#ad004848e5fe7a2b9c0353fc383fd31ed">PlanningGroups::getOMPLPlanners</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;  std::vector&lt;std::string&gt; planner_names;</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;  <span class="comment">// TODO: This should call ompl_interface::PlanningContextManager::getRegisteredPlannerAllocators to load the</span></div>
+<div class="line"><a name="l00422"></a><span class="lineno"><a class="line" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#af776ee75dafec12910f792820b653f29">  422</a></span>&#160;  <span class="comment">//       names dynamically</span></div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;AnytimePathShortening&quot;</span>);</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;SBL&quot;</span>);</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;EST&quot;</span>);</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;LBKPIECE&quot;</span>);</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;BKPIECE&quot;</span>);</div>
+<div class="line"><a name="l00428"></a><span class="lineno"><a class="line" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a5c40ba305681032f99fd975ce46dcdec">  428</a></span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;KPIECE&quot;</span>);</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;RRT&quot;</span>);</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;RRTConnect&quot;</span>);</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;RRTstar&quot;</span>);</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;TRRT&quot;</span>);</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;PRM&quot;</span>);</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;PRMstar&quot;</span>);</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;FMT&quot;</span>);</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;BFMT&quot;</span>);</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;PDST&quot;</span>);</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;STRIDE&quot;</span>);</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;BiTRRT&quot;</span>);</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;LBTRRT&quot;</span>);</div>
+<div class="line"><a name="l00441"></a><span class="lineno"><a class="line" href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#aea5644fb7134583bbe643f47368887e8">  441</a></span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;BiEST&quot;</span>);</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;ProjEST&quot;</span>);</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;LazyPRM&quot;</span>);</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;LazyPRMstar&quot;</span>);</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;SPARS&quot;</span>);</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;  planner_names.push_back(<span class="stringliteral">&quot;SPARStwo&quot;</span>);</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160; </div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;  <span class="keywordflow">return</span> planner_names;</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;}</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160; </div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;}  <span class="comment">// namespace srdf_setup</span></div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;}  <span class="comment">// namespace moveit_setup</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacemoveit__setup_html_a625b629c296c9d1d627f617557df5833a53d0da95f9fd7b35e7db8c3af7dc3bb7"><div class="ttname"><a href="namespacemoveit__setup.html#a625b629c296c9d1d627f617557df5833a53d0da95f9fd7b35e7db8c3af7dc3bb7">moveit_setup::GROUP_CONTENTS</a></div><div class="ttdeci">@ GROUP_CONTENTS</div><div class="ttdef"><b>Definition:</b> <a href="srdf__config_8hpp_source.html#l00118">srdf_config.hpp:118</a></div></div>
-<div class="ttc" id="aclassmoveit__setup_1_1srdf__setup_1_1PlanningGroups_html_a500e2b9aeeeef06730fc40b931ffd221"><div class="ttname"><a href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a500e2b9aeeeef06730fc40b931ffd221">moveit_setup::srdf_setup::PlanningGroups::getChildOfJoint</a></div><div class="ttdeci">std::string getChildOfJoint(const std::string &amp;joint_name) const</div><div class="ttdef"><b>Definition:</b> <a href="planning__groups_8cpp_source.html#l00403">planning_groups.cpp:403</a></div></div>
+<div class="ttc" id="aclassmoveit__setup_1_1srdf__setup_1_1PlanningGroups_html_a500e2b9aeeeef06730fc40b931ffd221"><div class="ttname"><a href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a500e2b9aeeeef06730fc40b931ffd221">moveit_setup::srdf_setup::PlanningGroups::getChildOfJoint</a></div><div class="ttdeci">std::string getChildOfJoint(const std::string &amp;joint_name) const</div><div class="ttdef"><b>Definition:</b> <a href="planning__groups_8cpp_source.html#l00407">planning_groups.cpp:407</a></div></div>
 <div class="ttc" id="aclassmoveit__setup_1_1srdf__setup_1_1SuperSRDFStep_html_a1ef32faab24ffa33117a70e81a1d2d9e"><div class="ttname"><a href="classmoveit__setup_1_1srdf__setup_1_1SuperSRDFStep.html#a1ef32faab24ffa33117a70e81a1d2d9e">moveit_setup::srdf_setup::SuperSRDFStep&lt; srdf::Model::Group &gt;::find</a></div><div class="ttdeci">srdf::Model::Group * find(const std::string &amp;name)</div><div class="ttdoc">Return a pointer to an item with the given name if it exists, otherwise null.</div><div class="ttdef"><b>Definition:</b> <a href="srdf__step_8hpp_source.html#l00162">srdf_step.hpp:162</a></div></div>
 <div class="ttc" id="anamespacemoveit__setup_html"><div class="ttname"><a href="namespacemoveit__setup.html">moveit_setup</a></div><div class="ttdef"><b>Definition:</b> <a href="launch__bundle_8hpp_source.html#l00041">launch_bundle.hpp:41</a></div></div>
 <div class="ttc" id="aclassmoveit__setup_1_1srdf__setup_1_1PlanningGroups_html_a06b4898368d37649011427f953e01efe"><div class="ttname"><a href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a06b4898368d37649011427f953e01efe">moveit_setup::srdf_setup::PlanningGroups::setChain</a></div><div class="ttdeci">void setChain(const std::string &amp;group_name, const std::string &amp;base, const std::string &amp;tip)</div><div class="ttdoc">Set the specified group's kinematic chain.</div><div class="ttdef"><b>Definition:</b> <a href="planning__groups_8cpp_source.html#l00271">planning_groups.cpp:271</a></div></div>
-<div class="ttc" id="aclassmoveit__setup_1_1srdf__setup_1_1PlanningGroups_html_a5c40ba305681032f99fd975ce46dcdec"><div class="ttname"><a href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a5c40ba305681032f99fd975ce46dcdec">moveit_setup::srdf_setup::PlanningGroups::getPosesByGroup</a></div><div class="ttdeci">std::vector&lt; std::string &gt; getPosesByGroup(const std::string &amp;group_name) const</div><div class="ttdef"><b>Definition:</b> <a href="planning__groups_8cpp_source.html#l00424">planning_groups.cpp:424</a></div></div>
+<div class="ttc" id="aclassmoveit__setup_1_1srdf__setup_1_1PlanningGroups_html_a5c40ba305681032f99fd975ce46dcdec"><div class="ttname"><a href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a5c40ba305681032f99fd975ce46dcdec">moveit_setup::srdf_setup::PlanningGroups::getPosesByGroup</a></div><div class="ttdeci">std::vector&lt; std::string &gt; getPosesByGroup(const std::string &amp;group_name) const</div><div class="ttdef"><b>Definition:</b> <a href="planning__groups_8cpp_source.html#l00428">planning_groups.cpp:428</a></div></div>
 <div class="ttc" id="akinematics__base_8h_html"><div class="ttname"><a href="kinematics__base_8h.html">kinematics_base.h</a></div></div>
 <div class="ttc" id="anamespacemoveit__setup_html_a625b629c296c9d1d627f617557df5833a0292ff4aedd9c5a421e71c15450f1474"><div class="ttname"><a href="namespacemoveit__setup.html#a625b629c296c9d1d627f617557df5833a0292ff4aedd9c5a421e71c15450f1474">moveit_setup::END_EFFECTORS</a></div><div class="ttdeci">@ END_EFFECTORS</div><div class="ttdef"><b>Definition:</b> <a href="srdf__config_8hpp_source.html#l00120">srdf_config.hpp:120</a></div></div>
 <div class="ttc" id="anamespacemoveit__setup_1_1srdf__setup_html_a0569e4cf08e1d4e1dfb5931ac25a79db"><div class="ttname"><a href="namespacemoveit__setup_1_1srdf__setup.html#a0569e4cf08e1d4e1dfb5931ac25a79db">moveit_setup::srdf_setup::buildLinkNameTree</a></div><div class="ttdeci">LinkNameTree buildLinkNameTree(const moveit::core::LinkModel *link)</div><div class="ttdef"><b>Definition:</b> <a href="planning__groups_8hpp_source.html#l00118">planning_groups.hpp:118</a></div></div>
-<div class="ttc" id="aclassmoveit__setup_1_1srdf__setup_1_1PlanningGroups_html_a38690dcfd146a0d9cbc289aa2acb36f7"><div class="ttname"><a href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a38690dcfd146a0d9cbc289aa2acb36f7">moveit_setup::srdf_setup::PlanningGroups::setSubgroups</a></div><div class="ttdeci">void setSubgroups(const std::string &amp;selected_group_name, const std::vector&lt; std::string &gt; &amp;subgroups)</div><div class="ttdoc">Set the specified group's subgroups.</div><div class="ttdef"><b>Definition:</b> <a href="planning__groups_8cpp_source.html#l00329">planning_groups.cpp:329</a></div></div>
+<div class="ttc" id="aclassmoveit__setup_1_1srdf__setup_1_1PlanningGroups_html_a38690dcfd146a0d9cbc289aa2acb36f7"><div class="ttname"><a href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a38690dcfd146a0d9cbc289aa2acb36f7">moveit_setup::srdf_setup::PlanningGroups::setSubgroups</a></div><div class="ttdeci">void setSubgroups(const std::string &amp;selected_group_name, const std::vector&lt; std::string &gt; &amp;subgroups)</div><div class="ttdoc">Set the specified group's subgroups.</div><div class="ttdef"><b>Definition:</b> <a href="planning__groups_8cpp_source.html#l00333">planning_groups.cpp:333</a></div></div>
 <div class="ttc" id="aclassmoveit__setup_1_1srdf__setup_1_1PlanningGroups_html_a6b00133f9d7394aa4a14c88f4b804adc"><div class="ttname"><a href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a6b00133f9d7394aa4a14c88f4b804adc">moveit_setup::srdf_setup::PlanningGroups::group_meta_config_</a></div><div class="ttdeci">std::shared_ptr&lt; GroupMetaConfig &gt; group_meta_config_</div><div class="ttdef"><b>Definition:</b> <a href="planning__groups_8hpp_source.html#l00214">planning_groups.hpp:214</a></div></div>
 <div class="ttc" id="aclassmoveit__setup_1_1srdf__setup_1_1SuperSRDFStep_html_aef7aa319e9dbe1e704a065dce62e5a96"><div class="ttname"><a href="classmoveit__setup_1_1srdf__setup_1_1SuperSRDFStep.html#aef7aa319e9dbe1e704a065dce62e5a96">moveit_setup::srdf_setup::SuperSRDFStep&lt; srdf::Model::Group &gt;::rename</a></div><div class="ttdeci">srdf::Model::Group * rename(const std::string &amp;old_name, const std::string &amp;new_name)</div><div class="ttdoc">Renames an item and returns a pointer to the item.</div><div class="ttdef"><b>Definition:</b> <a href="srdf__step_8hpp_source.html#l00192">srdf_step.hpp:192</a></div></div>
 <div class="ttc" id="aclassmoveit_1_1core_1_1JointModel_html_a43a3a6bd53bd7a4eda4768d7444a384d"><div class="ttname"><a href="classmoveit_1_1core_1_1JointModel.html#a43a3a6bd53bd7a4eda4768d7444a384d">moveit::core::JointModel::getChildLinkModel</a></div><div class="ttdeci">const LinkModel * getChildLinkModel() const</div><div class="ttdoc">Get the link that this joint connects to. There will always be such a link.</div><div class="ttdef"><b>Definition:</b> <a href="joint__model_8h_source.html#l00234">joint_model.h:234</a></div></div>
 <div class="ttc" id="aclassmoveit__setup_1_1SetupStep_html_a47dd66dee8a9b8cebc0b7f73c9d01288"><div class="ttname"><a href="classmoveit__setup_1_1SetupStep.html#a47dd66dee8a9b8cebc0b7f73c9d01288">moveit_setup::SetupStep::config_data_</a></div><div class="ttdeci">DataWarehousePtr config_data_</div><div class="ttdef"><b>Definition:</b> <a href="setup__step_8hpp_source.html#l00154">setup_step.hpp:154</a></div></div>
 <div class="ttc" id="aclassmoveit__setup_1_1srdf__setup_1_1SuperSRDFStep_html_ad49630316e84c92da1fa96f4a2f9f234"><div class="ttname"><a href="classmoveit__setup_1_1srdf__setup_1_1SuperSRDFStep.html#ad49630316e84c92da1fa96f4a2f9f234">moveit_setup::srdf_setup::SuperSRDFStep&lt; srdf::Model::Group &gt;::remove</a></div><div class="ttdeci">bool remove(const std::string &amp;name)</div><div class="ttdoc">Delete an item with the given name from the list.</div><div class="ttdef"><b>Definition:</b> <a href="srdf__step_8hpp_source.html#l00209">srdf_step.hpp:209</a></div></div>
-<div class="ttc" id="aclassmoveit__setup_1_1srdf__setup_1_1PlanningGroups_html_a64488fc000d1a547e17932f00b2025b2"><div class="ttname"><a href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a64488fc000d1a547e17932f00b2025b2">moveit_setup::srdf_setup::PlanningGroups::getJointType</a></div><div class="ttdeci">std::string getJointType(const std::string &amp;joint_name) const</div><div class="ttdef"><b>Definition:</b> <a href="planning__groups_8cpp_source.html#l00408">planning_groups.cpp:408</a></div></div>
+<div class="ttc" id="aclassmoveit__setup_1_1srdf__setup_1_1PlanningGroups_html_a64488fc000d1a547e17932f00b2025b2"><div class="ttname"><a href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a64488fc000d1a547e17932f00b2025b2">moveit_setup::srdf_setup::PlanningGroups::getJointType</a></div><div class="ttdeci">std::string getJointType(const std::string &amp;joint_name) const</div><div class="ttdef"><b>Definition:</b> <a href="planning__groups_8cpp_source.html#l00412">planning_groups.cpp:412</a></div></div>
 <div class="ttc" id="anamespacemoveit__setup_html_a625b629c296c9d1d627f617557df5833a842ad2cd5f7d6048582e2426042f9355"><div class="ttname"><a href="namespacemoveit__setup.html#a625b629c296c9d1d627f617557df5833a842ad2cd5f7d6048582e2426042f9355">moveit_setup::POSES</a></div><div class="ttdeci">@ POSES</div><div class="ttdef"><b>Definition:</b> <a href="srdf__config_8hpp_source.html#l00119">srdf_config.hpp:119</a></div></div>
 <div class="ttc" id="aclassmoveit__setup_1_1srdf__setup_1_1PlanningGroups_html_a47ed23f4938fa764f3be91ba704254e6"><div class="ttname"><a href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a47ed23f4938fa764f3be91ba704254e6">moveit_setup::srdf_setup::PlanningGroups::renameGroup</a></div><div class="ttdeci">void renameGroup(const std::string &amp;old_group_name, const std::string &amp;new_group_name)</div><div class="ttdef"><b>Definition:</b> <a href="planning__groups_8cpp_source.html#l00137">planning_groups.cpp:137</a></div></div>
 <div class="ttc" id="aclassmoveit__setup_1_1srdf__setup_1_1SRDFStep_html_ae82f8c7edb1da9476ea19f8f46fad99a"><div class="ttname"><a href="classmoveit__setup_1_1srdf__setup_1_1SRDFStep.html#ae82f8c7edb1da9476ea19f8f46fad99a">moveit_setup::srdf_setup::SRDFStep::onInit</a></div><div class="ttdeci">void onInit() override</div><div class="ttdoc">Overridable initialization method.</div><div class="ttdef"><b>Definition:</b> <a href="srdf__step_8hpp_source.html#l00147">srdf_step.hpp:147</a></div></div>
 <div class="ttc" id="astructmoveit__setup_1_1srdf__setup_1_1CycleDetector_html_a61fdafe9bb7fd4e871b490f8fb8dc6a5"><div class="ttname"><a href="structmoveit__setup_1_1srdf__setup_1_1CycleDetector.html#a61fdafe9bb7fd4e871b490f8fb8dc6a5">moveit_setup::srdf_setup::CycleDetector::backEdge</a></div><div class="ttdeci">void backEdge(Edge, Graph &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="planning__groups_8cpp_source.html#l00153">planning_groups.cpp:153</a></div></div>
 <div class="ttc" id="astructmoveit__setup_1_1srdf__setup_1_1CycleDetector_html_a8a98fbe83e248a78b4a4a8aaf058b825"><div class="ttname"><a href="structmoveit__setup_1_1srdf__setup_1_1CycleDetector.html#a8a98fbe83e248a78b4a4a8aaf058b825">moveit_setup::srdf_setup::CycleDetector::m_has_cycle</a></div><div class="ttdeci">bool &amp; m_has_cycle</div><div class="ttdef"><b>Definition:</b> <a href="planning__groups_8cpp_source.html#l00159">planning_groups.cpp:159</a></div></div>
-<div class="ttc" id="aclassmoveit__setup_1_1srdf__setup_1_1PlanningGroups_html_aea5644fb7134583bbe643f47368887e8"><div class="ttname"><a href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#aea5644fb7134583bbe643f47368887e8">moveit_setup::srdf_setup::PlanningGroups::getEndEffectorsByGroup</a></div><div class="ttdeci">std::vector&lt; std::string &gt; getEndEffectorsByGroup(const std::string &amp;group_name) const</div><div class="ttdef"><b>Definition:</b> <a href="planning__groups_8cpp_source.html#l00437">planning_groups.cpp:437</a></div></div>
+<div class="ttc" id="aclassmoveit__setup_1_1srdf__setup_1_1PlanningGroups_html_aea5644fb7134583bbe643f47368887e8"><div class="ttname"><a href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#aea5644fb7134583bbe643f47368887e8">moveit_setup::srdf_setup::PlanningGroups::getEndEffectorsByGroup</a></div><div class="ttdeci">std::vector&lt; std::string &gt; getEndEffectorsByGroup(const std::string &amp;group_name) const</div><div class="ttdef"><b>Definition:</b> <a href="planning__groups_8cpp_source.html#l00441">planning_groups.cpp:441</a></div></div>
 <div class="ttc" id="aclassmoveit__setup_1_1srdf__setup_1_1PlanningGroups_html_a1b0b096e7e4a1917c3d6a8b2a42d0585"><div class="ttname"><a href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a1b0b096e7e4a1917c3d6a8b2a42d0585">moveit_setup::srdf_setup::PlanningGroups::getLinkNames</a></div><div class="ttdeci">const std::vector&lt; std::string &gt; &amp; getLinkNames() const</div><div class="ttdef"><b>Definition:</b> <a href="planning__groups_8hpp_source.html#l00200">planning_groups.hpp:200</a></div></div>
 <div class="ttc" id="aclassmoveit__setup_1_1srdf__setup_1_1PlanningGroups_html_a36fdd727f9787e432fca922884583d7f"><div class="ttname"><a href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a36fdd727f9787e432fca922884583d7f">moveit_setup::srdf_setup::PlanningGroups::setLinks</a></div><div class="ttdeci">void setLinks(const std::string &amp;group_name, const std::vector&lt; std::string &gt; &amp;link_names)</div><div class="ttdoc">Set the specified group's link names.</div><div class="ttdef"><b>Definition:</b> <a href="planning__groups_8cpp_source.html#l00259">planning_groups.cpp:259</a></div></div>
-<div class="ttc" id="aclassmoveit__setup_1_1srdf__setup_1_1PlanningGroups_html_a9cde5f7ff9de0401555ccdde37a49db0"><div class="ttname"><a href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a9cde5f7ff9de0401555ccdde37a49db0">moveit_setup::srdf_setup::PlanningGroups::getKinematicPlanners</a></div><div class="ttdeci">std::vector&lt; std::string &gt; getKinematicPlanners() const</div><div class="ttdef"><b>Definition:</b> <a href="planning__groups_8cpp_source.html#l00450">planning_groups.cpp:450</a></div></div>
+<div class="ttc" id="aclassmoveit__setup_1_1srdf__setup_1_1PlanningGroups_html_a9cde5f7ff9de0401555ccdde37a49db0"><div class="ttname"><a href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a9cde5f7ff9de0401555ccdde37a49db0">moveit_setup::srdf_setup::PlanningGroups::getKinematicPlanners</a></div><div class="ttdeci">std::vector&lt; std::string &gt; getKinematicPlanners() const</div><div class="ttdef"><b>Definition:</b> <a href="planning__groups_8cpp_source.html#l00454">planning_groups.cpp:454</a></div></div>
 <div class="ttc" id="aclassmoveit__setup_1_1srdf__setup_1_1PlanningGroups_html_a08340dfd044c48c511e0e510924bc02f"><div class="ttname"><a href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a08340dfd044c48c511e0e510924bc02f">moveit_setup::srdf_setup::PlanningGroups::onInit</a></div><div class="ttdeci">void onInit() override</div><div class="ttdoc">Overridable initialization method.</div><div class="ttdef"><b>Definition:</b> <a href="planning__groups_8cpp_source.html#l00130">planning_groups.cpp:130</a></div></div>
 <div class="ttc" id="aclassmoveit__setup_1_1srdf__setup_1_1SRDFStep_html_af8600747694d4af1cfbea0ecd7a8895e"><div class="ttname"><a href="classmoveit__setup_1_1srdf__setup_1_1SRDFStep.html#af8600747694d4af1cfbea0ecd7a8895e">moveit_setup::srdf_setup::SRDFStep::srdf_config_</a></div><div class="ttdeci">std::shared_ptr&lt; SRDFConfig &gt; srdf_config_</div><div class="ttdef"><b>Definition:</b> <a href="srdf__step_8hpp_source.html#l00163">srdf_step.hpp:163</a></div></div>
 <div class="ttc" id="aclassmoveit_1_1core_1_1JointModel_html_af1db07d2843b0c6435415dd53b3aa433"><div class="ttname"><a href="classmoveit_1_1core_1_1JointModel.html#af1db07d2843b0c6435415dd53b3aa433">moveit::core::JointModel::getTypeName</a></div><div class="ttdeci">std::string getTypeName() const</div><div class="ttdoc">Get the type of joint as a string.</div><div class="ttdef"><b>Definition:</b> <a href="joint__model_8cpp_source.html#l00130">joint_model.cpp:130</a></div></div>
@@ -554,10 +558,10 @@ $(function() {
 <div class="ttc" id="aclassmoveit__setup_1_1SetupStep_html_aad46e3a5e97e5c94f15143f19ded7dbe"><div class="ttname"><a href="classmoveit__setup_1_1SetupStep.html#aad46e3a5e97e5c94f15143f19ded7dbe">moveit_setup::SetupStep::logger_</a></div><div class="ttdeci">std::shared_ptr&lt; rclcpp::Logger &gt; logger_</div><div class="ttdef"><b>Definition:</b> <a href="setup__step_8hpp_source.html#l00156">setup_step.hpp:156</a></div></div>
 <div class="ttc" id="aplanning__groups_8hpp_html"><div class="ttname"><a href="planning__groups_8hpp.html">planning_groups.hpp</a></div></div>
 <div class="ttc" id="aclassmoveit_1_1core_1_1JointModel_html"><div class="ttname"><a href="classmoveit_1_1core_1_1JointModel.html">moveit::core::JointModel</a></div><div class="ttdoc">A joint from the robot. Models the transform that this joint applies in the kinematic chain....</div><div class="ttdef"><b>Definition:</b> <a href="joint__model_8h_source.html#l00182">joint_model.h:182</a></div></div>
-<div class="ttc" id="aclassmoveit__setup_1_1srdf__setup_1_1PlanningGroups_html_af776ee75dafec12910f792820b653f29"><div class="ttname"><a href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#af776ee75dafec12910f792820b653f29">moveit_setup::srdf_setup::PlanningGroups::getLinkNameTree</a></div><div class="ttdeci">LinkNameTree getLinkNameTree() const</div><div class="ttdef"><b>Definition:</b> <a href="planning__groups_8cpp_source.html#l00418">planning_groups.cpp:418</a></div></div>
+<div class="ttc" id="aclassmoveit__setup_1_1srdf__setup_1_1PlanningGroups_html_af776ee75dafec12910f792820b653f29"><div class="ttname"><a href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#af776ee75dafec12910f792820b653f29">moveit_setup::srdf_setup::PlanningGroups::getLinkNameTree</a></div><div class="ttdeci">LinkNameTree getLinkNameTree() const</div><div class="ttdef"><b>Definition:</b> <a href="planning__groups_8cpp_source.html#l00422">planning_groups.cpp:422</a></div></div>
 <div class="ttc" id="astructmoveit__setup_1_1srdf__setup_1_1CycleDetector_html_a278a684c5d31f28f67861cbd2526938e"><div class="ttname"><a href="structmoveit__setup_1_1srdf__setup_1_1CycleDetector.html#a278a684c5d31f28f67861cbd2526938e">moveit_setup::srdf_setup::CycleDetector::CycleDetector</a></div><div class="ttdeci">CycleDetector(bool &amp;has_cycle)</div><div class="ttdef"><b>Definition:</b> <a href="planning__groups_8cpp_source.html#l00148">planning_groups.cpp:148</a></div></div>
 <div class="ttc" id="anamespacetest__cleanup_html_a121623a04b6c3260c0e3e9c8cb74d9f9"><div class="ttname"><a href="namespacetest__cleanup.html#a121623a04b6c3260c0e3e9c8cb74d9f9">test_cleanup.group</a></div><div class="ttdeci">group</div><div class="ttdef"><b>Definition:</b> <a href="test__cleanup_8py_source.html#l00008">test_cleanup.py:8</a></div></div>
-<div class="ttc" id="aclassmoveit__setup_1_1srdf__setup_1_1PlanningGroups_html_ad004848e5fe7a2b9c0353fc383fd31ed"><div class="ttname"><a href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#ad004848e5fe7a2b9c0353fc383fd31ed">moveit_setup::srdf_setup::PlanningGroups::getOMPLPlanners</a></div><div class="ttdeci">std::vector&lt; std::string &gt; getOMPLPlanners() const</div><div class="ttdef"><b>Definition:</b> <a href="planning__groups_8cpp_source.html#l00478">planning_groups.cpp:478</a></div></div>
+<div class="ttc" id="aclassmoveit__setup_1_1srdf__setup_1_1PlanningGroups_html_ad004848e5fe7a2b9c0353fc383fd31ed"><div class="ttname"><a href="classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#ad004848e5fe7a2b9c0353fc383fd31ed">moveit_setup::srdf_setup::PlanningGroups::getOMPLPlanners</a></div><div class="ttdeci">std::vector&lt; std::string &gt; getOMPLPlanners() const</div><div class="ttdef"><b>Definition:</b> <a href="planning__groups_8cpp_source.html#l00482">planning_groups.cpp:482</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

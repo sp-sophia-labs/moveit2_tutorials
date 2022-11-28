@@ -123,12 +123,12 @@ $(function() {
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classmove__group_1_1MoveGroupKinematicsService.html#a5f7431ad977ffa26914345d0769d6ce8">initialize</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">bool</span> computeIKService(<span class="keyword">const</span> std::shared_ptr&lt;rmw_request_id_t&gt; request_header,</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                        <span class="keyword">const</span> std::shared_ptr&lt;moveit_msgs::srv::GetPositionIK::Request&gt; req,</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                        std::shared_ptr&lt;moveit_msgs::srv::GetPositionIK::Response&gt; res);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordtype">bool</span> computeFKService(<span class="keyword">const</span> std::shared_ptr&lt;rmw_request_id_t&gt; request_header,</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                        <span class="keyword">const</span> std::shared_ptr&lt;moveit_msgs::srv::GetPositionFK::Request&gt; req,</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                        std::shared_ptr&lt;moveit_msgs::srv::GetPositionFK::Response&gt; res);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">bool</span> computeIKService(<span class="keyword">const</span> std::shared_ptr&lt;rmw_request_id_t&gt;&amp; request_header,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                        <span class="keyword">const</span> std::shared_ptr&lt;moveit_msgs::srv::GetPositionIK::Request&gt;&amp; req,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                        <span class="keyword">const</span> std::shared_ptr&lt;moveit_msgs::srv::GetPositionIK::Response&gt;&amp; res);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordtype">bool</span> computeFKService(<span class="keyword">const</span> std::shared_ptr&lt;rmw_request_id_t&gt;&amp; request_header,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                        <span class="keyword">const</span> std::shared_ptr&lt;moveit_msgs::srv::GetPositionFK::Request&gt;&amp; req,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                        <span class="keyword">const</span> std::shared_ptr&lt;moveit_msgs::srv::GetPositionFK::Response&gt;&amp; res);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keywordtype">void</span> computeIK(moveit_msgs::msg::PositionIKRequest&amp; req, moveit_msgs::msg::RobotState&amp; solution,</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                 moveit_msgs::msg::MoveItErrorCodes&amp; error_code, <a class="code" href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a>&amp; rs,</div>

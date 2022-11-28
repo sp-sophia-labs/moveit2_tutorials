@@ -12,5 +12,7 @@
 <area shape="rect" id="node11" href="$classconstraint__samplers_1_1UnionConstraintSampler.html#aaa99ce5e81c9a71c32bbf8688610f9e8" title="Produces a sample from all configured samplers." alt="" coords="125,671,315,727"/>
 <area shape="rect" id="node12" href="$classmoveit_1_1core_1_1RobotState.html#aba31c6f758e3dabd32c1acbd069e189e" title="Set all joints to their default positions. The default position is 0, or if that is not within bounds..." alt="" coords="128,752,312,793"/>
 <area shape="rect" id="node13" href="$classmoveit_1_1core_1_1RobotState.html#aaec5557d55b862d9dd832b3d4c221836" title="Update all transforms." alt="" coords="128,817,312,859"/>
-<area shape="rect" id="node14" href="$classmoveit_1_1core_1_1RobotState.html#a8778df1884c3caaf47558c939832cd9e" title="Update the reference frame transforms for links. This call is needed before using the transforms of l..." alt="" coords="128,883,312,924"/>
+<area shape="rect" id="node16" href="$classmoveit_1_1core_1_1RobotState.html#a8778df1884c3caaf47558c939832cd9e" title="Update the reference frame transforms for links. This call is needed before using the transforms of l..." alt="" coords="128,883,312,924"/>
+<area shape="rect" id="node14" href="$classmoveit_1_1core_1_1LinkModel.html#af30cc07d5b7409ac39b152a9cd94b563" title="The index of this joint when traversing the kinematic tree in depth first fashion." alt="" coords="365,784,544,825"/>
+<area shape="rect" id="node15" href="$classmoveit_1_1core_1_1LinkModel.html#ab3f3635f6017122968e2adae85dd56e3" title="Get the link model whose child this link is (through some joint). There may not always be a parent li..." alt="" coords="365,849,544,891"/>
 </map>

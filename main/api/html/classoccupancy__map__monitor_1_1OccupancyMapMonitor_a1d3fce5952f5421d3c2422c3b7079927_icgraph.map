@@ -1,4 +1,6 @@
 <map id="occupancy_map_monitor::OccupancyMapMonitor::getMapFrame" name="occupancy_map_monitor::OccupancyMapMonitor::getMapFrame">
-<area shape="rect" id="node1" title="Gets the map frame (this is set either by the constor or a parameter)." alt="" coords="275,5,460,61"/>
+<area shape="rect" id="node1" title="Gets the map frame (this is set either by the constor or a parameter)." alt="" coords="275,85,460,141"/>
 <area shape="rect" id="node2" href="$classoccupancy__map__monitor_1_1DepthImageOctomapUpdater.html#a0401b374c913cad7cc1b8cfb7e1d65b7" title=" " alt="" coords="5,5,227,61"/>
+<area shape="rect" id="node3" href="$classoccupancy__map__monitor_1_1PointCloudOctomapUpdater.html#a768bb0ba26eb037d7e9c99bb57b1ddc6" title="Do any necessary setup (subscribe to ros topics, etc.). This call assumes setMonitor() and setParams(..." alt="" coords="11,85,221,141"/>
+<area shape="rect" id="node4" href="$classoccupancy__map__monitor_1_1PointCloudOctomapUpdater.html#a627c9ae531be4559a952207712dcb97d" title=" " alt="" coords="11,165,221,221"/>
 </map>

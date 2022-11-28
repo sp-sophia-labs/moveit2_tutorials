@@ -358,7 +358,7 @@ $(function() {
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;  {</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    planning_group_sub_ = node_-&gt;create_subscription&lt;std_msgs::msg::String&gt;(</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="stringliteral">&quot;/rviz/moveit/select_planning_group&quot;</span>, 1,</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        [<span class="keyword">this</span>](<span class="keyword">const</span> std_msgs::msg::String::ConstSharedPtr msg) { <span class="keywordflow">return</span> selectPlanningGroupCallback(msg); });</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        [<span class="keyword">this</span>](<span class="keyword">const</span> std_msgs::msg::String::ConstSharedPtr&amp; msg) { <span class="keywordflow">return</span> selectPlanningGroupCallback(msg); });</div>
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  }</div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  {</div>
@@ -366,7 +366,7 @@ $(function() {
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;  }</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;}</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="keywordtype">void</span> MotionPlanningDisplay::selectPlanningGroupCallback(<span class="keyword">const</span> std_msgs::msg::String::ConstSharedPtr msg)</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="keywordtype">void</span> MotionPlanningDisplay::selectPlanningGroupCallback(<span class="keyword">const</span> std_msgs::msg::String::ConstSharedPtr&amp; msg)</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;{</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  <span class="comment">// synchronize ROS callback with main loop</span></div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  addMainLoopJob([<span class="keyword">this</span>, <a class="code" href="namespacetest__cleanup.html#a121623a04b6c3260c0e3e9c8cb74d9f9">group</a> = msg-&gt;data] { changePlanningGroup(group); });</div>
@@ -398,7 +398,7 @@ $(function() {
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                                                <span class="keyword">const</span> std::string&amp; <span class="comment">/*unused*/</span>)</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;{</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;  addMainLoopJob([<span class="keyword">this</span>] { updateBackgroundJobProgressBar(); });</div>
-<div class="line"><a name="l00328"></a><span class="lineno"><a class="line" href="classmoveit__rviz__plugin_1_1MotionPlanningDisplay.html#a0f087cb3c047d0ed674768016d0ac346">  328</a></span>&#160;}</div>
+<div class="line"><a name="l00328"></a><span class="lineno"><a class="line" href="classmoveit__rviz__plugin_1_1MotionPlanningDisplay.html#ae8e978b112af447bee67bcf29ec5467b">  328</a></span>&#160;}</div>
 <div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160; </div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<span class="keywordtype">void</span> MotionPlanningDisplay::updateBackgroundJobProgressBar()</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;{</div>

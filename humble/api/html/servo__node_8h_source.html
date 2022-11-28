@@ -135,20 +135,20 @@ $(function() {
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  std::shared_ptr&lt;tf2_ros::Buffer&gt; tf_buffer_;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  std::shared_ptr&lt;planning_scene_monitor::PlanningSceneMonitor&gt; planning_scene_monitor_;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordtype">void</span> startCB(<span class="keyword">const</span> std::shared_ptr&lt;std_srvs::srv::Trigger::Request&gt; request,</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;               std::shared_ptr&lt;std_srvs::srv::Trigger::Response&gt; response);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordtype">void</span> startCB(<span class="keyword">const</span> std::shared_ptr&lt;std_srvs::srv::Trigger::Request&gt;&amp; request,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;               <span class="keyword">const</span> std::shared_ptr&lt;std_srvs::srv::Trigger::Response&gt;&amp; response);</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  rclcpp::Service&lt;std_srvs::srv::Trigger&gt;::SharedPtr start_servo_service_;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordtype">void</span> stopCB(<span class="keyword">const</span> std::shared_ptr&lt;std_srvs::srv::Trigger::Request&gt; request,</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;              std::shared_ptr&lt;std_srvs::srv::Trigger::Response&gt; response);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordtype">void</span> stopCB(<span class="keyword">const</span> std::shared_ptr&lt;std_srvs::srv::Trigger::Request&gt;&amp; request,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;              <span class="keyword">const</span> std::shared_ptr&lt;std_srvs::srv::Trigger::Response&gt;&amp; response);</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  rclcpp::Service&lt;std_srvs::srv::Trigger&gt;::SharedPtr stop_servo_service_;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordtype">void</span> pauseCB(<span class="keyword">const</span> std::shared_ptr&lt;std_srvs::srv::Trigger::Request&gt; request,</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;               std::shared_ptr&lt;std_srvs::srv::Trigger::Response&gt; response);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordtype">void</span> pauseCB(<span class="keyword">const</span> std::shared_ptr&lt;std_srvs::srv::Trigger::Request&gt;&amp; request,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;               <span class="keyword">const</span> std::shared_ptr&lt;std_srvs::srv::Trigger::Response&gt;&amp; response);</div>
 <div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classmoveit__servo_1_1ServoNode.html">   80</a></span>&#160;  rclcpp::Service&lt;std_srvs::srv::Trigger&gt;::SharedPtr pause_servo_service_;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordtype">void</span> unpauseCB(<span class="keyword">const</span> std::shared_ptr&lt;std_srvs::srv::Trigger::Request&gt; request,</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                 std::shared_ptr&lt;std_srvs::srv::Trigger::Response&gt; response);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordtype">void</span> unpauseCB(<span class="keyword">const</span> std::shared_ptr&lt;std_srvs::srv::Trigger::Request&gt;&amp; request,</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                 <span class="keyword">const</span> std::shared_ptr&lt;std_srvs::srv::Trigger::Response&gt;&amp; response);</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  rclcpp::Service&lt;std_srvs::srv::Trigger&gt;::SharedPtr unpause_servo_service_;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;};</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}  <span class="comment">// namespace moveit_servo</span></div>

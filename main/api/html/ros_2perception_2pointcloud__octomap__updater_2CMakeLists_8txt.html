@@ -72,25 +72,23 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab4f14f170875be3adae09b6fd5134257"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ros_2perception_2pointcloud__octomap__updater_2CMakeLists_8txt.html#ab4f14f170875be3adae09b6fd5134257">set</a> (MOVEIT_LIB_NAME moveit_pointcloud_octomap_updater) <a class="el" href="ros_2visualization_2trajectory__rviz__plugin_2CMakeLists_8txt.html#a03796c90fa97f184ccbf04cff4c28036">add_library</a>($</td></tr>
-<tr class="separator:ab4f14f170875be3adae09b6fd5134257"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a873a35e23258bb400c65a23d3bde18a2"><td class="memItemLeft" align="right" valign="top">_core SHARED src pointcloud_octomap_updater cpp&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ros_2perception_2pointcloud__octomap__updater_2CMakeLists_8txt.html#a873a35e23258bb400c65a23d3bde18a2">set_target_properties</a> (${MOVEIT_LIB_NAME}_core PROPERTIES <a class="el" href="core_2collision__detection__fcl_2CMakeLists_8txt.html#a099a1e7af54672f18be1c1b68d86c19f">VERSION</a> &quot;${${PROJECT_NAME}_VERSION}&quot;) ament_target_dependencies($</td></tr>
-<tr class="separator:a873a35e23258bb400c65a23d3bde18a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52fcf86cba33489aa2745e8c1d9e1547"><td class="memItemLeft" align="right" valign="top">_core rclcpp moveit_core tf2_ros message_filters sensor_msgs moveit_ros_occupancy_map_monitor tf2_geometry_msgs tf2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ros_2perception_2pointcloud__octomap__updater_2CMakeLists_8txt.html#a52fcf86cba33489aa2745e8c1d9e1547">target_link_libraries</a> (${MOVEIT_LIB_NAME}_core moveit_point_containment_filter) <a class="el" href="ros_2warehouse_2CMakeLists_8txt.html#ab86eb14578ea4437b20495eac3bbb4bf">set_target_properties</a>($</td></tr>
-<tr class="separator:a52fcf86cba33489aa2745e8c1d9e1547"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5acd22951d3b1f124bea2312f59a3acb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ros_2perception_2pointcloud__octomap__updater_2CMakeLists_8txt.html#a5acd22951d3b1f124bea2312f59a3acb">add_library</a> (moveit_pointcloud_octomap_updater_core SHARED src/pointcloud_octomap_updater.cpp) <a class="el" href="ros_2warehouse_2CMakeLists_8txt.html#ab86eb14578ea4437b20495eac3bbb4bf">set_target_properties</a>(moveit_pointcloud_octomap_updater_core PROPERTIES VERSION &quot;$</td></tr>
+<tr class="separator:a5acd22951d3b1f124bea2312f59a3acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a456084d7e33df338779d61ea9965adcf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ros_2perception_2pointcloud__octomap__updater_2CMakeLists_8txt.html#a456084d7e33df338779d61ea9965adcf">ament_target_dependencies</a> (moveit_pointcloud_octomap_updater_core rclcpp moveit_core tf2_ros message_filters sensor_msgs moveit_ros_occupancy_map_monitor tf2_geometry_msgs tf2) <a class="el" href="ros_2warehouse_2CMakeLists_8txt.html#accbde6cbc0a13cd8f20c38ade4e02065">target_link_libraries</a>(moveit_pointcloud_octomap_updater_core moveit_point_containment_filter) <a class="el" href="ros_2warehouse_2CMakeLists_8txt.html#ab86eb14578ea4437b20495eac3bbb4bf">set_target_properties</a>(moveit_pointcloud_octomap_updater_core PROPERTIES COMPILE_FLAGS &quot;$</td></tr>
+<tr class="separator:a456084d7e33df338779d61ea9965adcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ab4f14f170875be3adae09b6fd5134257"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4f14f170875be3adae09b6fd5134257">&#9670;&nbsp;</a></span>set()</h2>
+<a id="a5acd22951d3b1f124bea2312f59a3acb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5acd22951d3b1f124bea2312f59a3acb">&#9670;&nbsp;</a></span>add_library()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">set </td>
+          <td class="memname">add_library </td>
           <td>(</td>
-          <td class="paramtype">MOVEIT_LIB_NAME&#160;</td>
-          <td class="paramname"><em>moveit_pointcloud_octomap_updater</em></td><td>)</td>
+          <td class="paramtype">moveit_pointcloud_octomap_updater_core SHARED src/pointcloud_octomap_updater.&#160;</td>
+          <td class="paramname"><em>cpp</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -100,43 +98,23 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a873a35e23258bb400c65a23d3bde18a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a873a35e23258bb400c65a23d3bde18a2">&#9670;&nbsp;</a></span>set_target_properties()</h2>
+<a id="a456084d7e33df338779d61ea9965adcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a456084d7e33df338779d61ea9965adcf">&#9670;&nbsp;</a></span>ament_target_dependencies()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">_core SHARED src pointcloud_octomap_updater cpp set_target_properties </td>
+          <td class="memname">ament_target_dependencies </td>
           <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>${MOVEIT_LIB_NAME}_core PROPERTIES VERSION &quot;${${PROJECT_NAME}_VERSION}&quot;</em></td><td>)</td>
+          <td class="paramtype">moveit_pointcloud_octomap_updater_core rclcpp moveit_core tf2_ros message_filters sensor_msgs moveit_ros_occupancy_map_monitor tf2_geometry_msgs&#160;</td>
+          <td class="paramname"><em>tf2</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ros_2perception_2pointcloud__octomap__updater_2CMakeLists_8txt_source.html#l00004">4</a> of file <a class="el" href="ros_2perception_2pointcloud__octomap__updater_2CMakeLists_8txt_source.html">CMakeLists.txt</a>.</p>
-
-</div>
-</div>
-<a id="a52fcf86cba33489aa2745e8c1d9e1547"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52fcf86cba33489aa2745e8c1d9e1547">&#9670;&nbsp;</a></span>target_link_libraries()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">_core rclcpp moveit_core tf2_ros message_filters sensor_msgs moveit_ros_occupancy_map_monitor tf2_geometry_msgs tf2 target_link_libraries </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>${MOVEIT_LIB_NAME}_core</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="ros_2perception_2pointcloud__octomap__updater_2CMakeLists_8txt_source.html#l00015">15</a> of file <a class="el" href="ros_2perception_2pointcloud__octomap__updater_2CMakeLists_8txt_source.html">CMakeLists.txt</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ros_2perception_2pointcloud__octomap__updater_2CMakeLists_8txt_source.html#l00003">3</a> of file <a class="el" href="ros_2perception_2pointcloud__octomap__updater_2CMakeLists_8txt_source.html">CMakeLists.txt</a>.</p>
 
 </div>
 </div>

@@ -1,4 +1,5 @@
 <map id="moveit::core::JointModelGroup::isChain" name="moveit::core::JointModelGroup::isChain">
-<area shape="rect" id="node1" title="Check if this group is a linear chain." alt="" coords="252,13,433,54"/>
+<area shape="rect" id="node1" title="Check if this group is a linear chain." alt="" coords="252,53,433,94"/>
 <area shape="rect" id="node2" href="$classkinematics__metrics_1_1KinematicsMetrics.html#ad22d055eb2c52844c2028b53253771c4" title="Get the (translation) manipulability ellipsoid for a given group at a given joint configuration." alt="" coords="5,5,204,61"/>
+<area shape="rect" id="node3" href="$classlma__kinematics__plugin_1_1LMAKinematicsPlugin.html#a40ece21dea9653ed56ac42dae024f45b" title="Default constructor." alt="" coords="18,85,191,141"/>
 </map>

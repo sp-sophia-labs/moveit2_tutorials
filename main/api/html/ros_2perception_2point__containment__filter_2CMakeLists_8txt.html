@@ -72,23 +72,23 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a0f097928c117029054586bc4e984d107"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ros_2perception_2point__containment__filter_2CMakeLists_8txt.html#a0f097928c117029054586bc4e984d107">set</a> (MOVEIT_LIB_NAME moveit_point_containment_filter) <a class="el" href="ros_2visualization_2trajectory__rviz__plugin_2CMakeLists_8txt.html#a03796c90fa97f184ccbf04cff4c28036">add_library</a>($</td></tr>
-<tr class="separator:a0f097928c117029054586bc4e984d107"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36ba98670397227692ae63c0d8e56d5e"><td class="memItemLeft" align="right" valign="top">SHARED src shape_mask cpp&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ros_2perception_2point__containment__filter_2CMakeLists_8txt.html#a36ba98670397227692ae63c0d8e56d5e">set_target_properties</a> (${MOVEIT_LIB_NAME} PROPERTIES <a class="el" href="core_2collision__detection__fcl_2CMakeLists_8txt.html#a099a1e7af54672f18be1c1b68d86c19f">VERSION</a> &quot;${${PROJECT_NAME}_VERSION}&quot;) set_target_properties($</td></tr>
-<tr class="separator:a36ba98670397227692ae63c0d8e56d5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedfbbe1d7ded57311f50004a1d3a9093"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ros_2perception_2point__containment__filter_2CMakeLists_8txt.html#aedfbbe1d7ded57311f50004a1d3a9093">add_library</a> (moveit_point_containment_filter SHARED src/shape_mask.cpp) <a class="el" href="ros_2warehouse_2CMakeLists_8txt.html#ab86eb14578ea4437b20495eac3bbb4bf">set_target_properties</a>(moveit_point_containment_filter PROPERTIES VERSION &quot;$</td></tr>
+<tr class="separator:aedfbbe1d7ded57311f50004a1d3a9093"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4950f9c829824dfbd1c9858a28f2c207"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ros_2perception_2point__containment__filter_2CMakeLists_8txt.html#a4950f9c829824dfbd1c9858a28f2c207">set_target_properties</a> (moveit_point_containment_filter PROPERTIES COMPILE_FLAGS &quot;${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}&quot;) set_target_properties(moveit_point_containment_filter PROPERTIES LINK_FLAGS &quot;$</td></tr>
+<tr class="separator:a4950f9c829824dfbd1c9858a28f2c207"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a0f097928c117029054586bc4e984d107"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f097928c117029054586bc4e984d107">&#9670;&nbsp;</a></span>set()</h2>
+<a id="aedfbbe1d7ded57311f50004a1d3a9093"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedfbbe1d7ded57311f50004a1d3a9093">&#9670;&nbsp;</a></span>add_library()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">set </td>
+          <td class="memname">add_library </td>
           <td>(</td>
-          <td class="paramtype">MOVEIT_LIB_NAME&#160;</td>
-          <td class="paramname"><em>moveit_point_containment_filter</em></td><td>)</td>
+          <td class="paramtype">moveit_point_containment_filter SHARED src/shape_mask.&#160;</td>
+          <td class="paramname"><em>cpp</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -98,23 +98,23 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a36ba98670397227692ae63c0d8e56d5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36ba98670397227692ae63c0d8e56d5e">&#9670;&nbsp;</a></span>set_target_properties()</h2>
+<a id="a4950f9c829824dfbd1c9858a28f2c207"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4950f9c829824dfbd1c9858a28f2c207">&#9670;&nbsp;</a></span>set_target_properties()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">SHARED src shape_mask cpp set_target_properties </td>
+          <td class="memname">set_target_properties </td>
           <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>${MOVEIT_LIB_NAME} PROPERTIES VERSION &quot;${${PROJECT_NAME}_VERSION}&quot;</em></td><td>)</td>
+          <td class="paramtype">moveit_point_containment_filter PROPERTIES COMPILE_FLAGS &quot;${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ros_2perception_2point__containment__filter_2CMakeLists_8txt_source.html#l00004">4</a> of file <a class="el" href="ros_2perception_2point__containment__filter_2CMakeLists_8txt_source.html">CMakeLists.txt</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ros_2perception_2point__containment__filter_2CMakeLists_8txt_source.html#l00003">3</a> of file <a class="el" href="ros_2perception_2point__containment__filter_2CMakeLists_8txt_source.html">CMakeLists.txt</a>.</p>
 
 </div>
 </div>

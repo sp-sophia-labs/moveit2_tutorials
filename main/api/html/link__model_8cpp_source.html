@@ -183,21 +183,25 @@ $(function() {
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
 <div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classmoveit_1_1core_1_1LinkModel.html#aac4dc58423b4b4287585c1cafbd18d58">  111</a></span>&#160;  centered_bounding_box_offset_ = aabb.center();</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keywordflow">if</span> (shapes_.empty())</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    shape_extents_.setZero();</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    shape_extents_ = aabb.sizes();</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit_1_1core_1_1LinkModel.html#acdcc97346a86f9e615998ad806eee159">LinkModel::setVisualMesh</a>(<span class="keyword">const</span> std::string&amp; visual_mesh, <span class="keyword">const</span> Eigen::Isometry3d&amp; origin,</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                              <span class="keyword">const</span> <a class="code" href="namespacefcl.html#a0288e6b07bc0c851a9503dbaea7a0f19">Eigen::Vector3d</a>&amp; scale)</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;{</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  visual_mesh_filename_ = visual_mesh;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  visual_mesh_origin_ = origin;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  visual_mesh_scale_ = scale;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
-<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="classmoveit_1_1core_1_1LinkModel.html#ad05b5801a30446406198e220fdbe6b8a">  125</a></span>&#160; </div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}  <span class="comment">// end of namespace core</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}  <span class="comment">// end of namespace moveit</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    shape_extents_.setZero();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  {</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    shape_extents_ = aabb.sizes();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit_1_1core_1_1LinkModel.html#acdcc97346a86f9e615998ad806eee159">LinkModel::setVisualMesh</a>(<span class="keyword">const</span> std::string&amp; visual_mesh, <span class="keyword">const</span> Eigen::Isometry3d&amp; origin,</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                              <span class="keyword">const</span> <a class="code" href="namespacefcl.html#a0288e6b07bc0c851a9503dbaea7a0f19">Eigen::Vector3d</a>&amp; scale)</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;{</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="classmoveit_1_1core_1_1LinkModel.html#ad05b5801a30446406198e220fdbe6b8a">  125</a></span>&#160;  visual_mesh_filename_ = visual_mesh;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  visual_mesh_origin_ = origin;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  visual_mesh_scale_ = scale;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;}  <span class="comment">// end of namespace core</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;}  <span class="comment">// end of namespace moveit</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassmoveit_1_1core_1_1LinkModel_html_ad05b5801a30446406198e220fdbe6b8a"><div class="ttname"><a href="classmoveit_1_1core_1_1LinkModel.html#ad05b5801a30446406198e220fdbe6b8a">moveit::core::LinkModel::setJointOriginTransform</a></div><div class="ttdeci">void setJointOriginTransform(const Eigen::Isometry3d &amp;transform)</div><div class="ttdef"><b>Definition:</b> <a href="link__model_8cpp_source.html#l00125">link_model.cpp:125</a></div></div>
 <div class="ttc" id="anamespaceshapes_html"><div class="ttname"><a href="namespaceshapes.html">shapes</a></div><div class="ttdef"><b>Definition:</b> <a href="world_8h_source.html#l00048">world.h:48</a></div></div>
@@ -212,7 +216,7 @@ $(function() {
 <div class="ttc" id="anamespacemoveit_html"><div class="ttname"><a href="namespacemoveit.html">moveit</a></div><div class="ttdoc">Main namespace for MoveIt.</div><div class="ttdef"><b>Definition:</b> <a href="exceptions_8h_source.html#l00042">exceptions.h:42</a></div></div>
 <div class="ttc" id="ajoint__model_8h_html"><div class="ttname"><a href="joint__model_8h.html">joint_model.h</a></div></div>
 <div class="ttc" id="aclassmoveit_1_1core_1_1JointModel_html_a6c1c75a4d125fd607f48bff4ca019b2ca3bb8e782777500ec4a3fd63ab9841d74"><div class="ttname"><a href="classmoveit_1_1core_1_1JointModel.html#a6c1c75a4d125fd607f48bff4ca019b2ca3bb8e782777500ec4a3fd63ab9841d74">moveit::core::JointModel::FIXED</a></div><div class="ttdeci">@ FIXED</div><div class="ttdef"><b>Definition:</b> <a href="joint__model_8h_source.html#l00193">joint_model.h:193</a></div></div>
-<div class="ttc" id="aclassmoveit_1_1core_1_1LinkModel_html_acdcc97346a86f9e615998ad806eee159"><div class="ttname"><a href="classmoveit_1_1core_1_1LinkModel.html#acdcc97346a86f9e615998ad806eee159">moveit::core::LinkModel::setVisualMesh</a></div><div class="ttdeci">void setVisualMesh(const std::string &amp;visual_mesh, const Eigen::Isometry3d &amp;origin, const Eigen::Vector3d &amp;scale)</div><div class="ttdef"><b>Definition:</b> <a href="link__model_8cpp_source.html#l00182">link_model.cpp:182</a></div></div>
+<div class="ttc" id="aclassmoveit_1_1core_1_1LinkModel_html_acdcc97346a86f9e615998ad806eee159"><div class="ttname"><a href="classmoveit_1_1core_1_1LinkModel.html#acdcc97346a86f9e615998ad806eee159">moveit::core::LinkModel::setVisualMesh</a></div><div class="ttdeci">void setVisualMesh(const std::string &amp;visual_mesh, const Eigen::Isometry3d &amp;origin, const Eigen::Vector3d &amp;scale)</div><div class="ttdef"><b>Definition:</b> <a href="link__model_8cpp_source.html#l00186">link_model.cpp:186</a></div></div>
 <div class="ttc" id="anamespacefcl_html_a0288e6b07bc0c851a9503dbaea7a0f19"><div class="ttname"><a href="namespacefcl.html#a0288e6b07bc0c851a9503dbaea7a0f19">fcl::Vector3d</a></div><div class="ttdeci">Vec3fX&lt; details::Vec3Data&lt; double &gt; &gt; Vector3d</div><div class="ttdef"><b>Definition:</b> <a href="fcl__compat_8h_source.html#l00089">fcl_compat.h:89</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

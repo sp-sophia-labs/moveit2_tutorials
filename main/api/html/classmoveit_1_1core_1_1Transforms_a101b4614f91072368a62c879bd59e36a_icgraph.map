@@ -1,4 +1,5 @@
 <map id="moveit::core::Transforms::sameFrame" name="moveit::core::Transforms::sameFrame">
-<area shape="rect" id="node1" title="Check if two frames end up being the same once the missing / are added as prefix (if they are missing..." alt="" coords="216,13,400,54"/>
+<area shape="rect" id="node1" title="Check if two frames end up being the same once the missing / are added as prefix (if they are missing..." alt="" coords="216,53,400,94"/>
 <area shape="rect" id="node2" href="$classconstraint__samplers_1_1IKConstraintSampler.html#a1fc93305d848dbc5e21af78e0ba1d82e" title="Gets the link name associated with this sampler." alt="" coords="5,5,168,61"/>
+<area shape="rect" id="node3" href="$classconstraint__samplers_1_1IKConstraintSampler.html#a1fa42512ec6d3b2e83bcbeb8de6a77d4" title="Performs checks and sets various internal values associated with the IK solver." alt="" coords="5,85,168,141"/>
 </map>

@@ -1,0 +1,5 @@
+<map id="planning_scene::PlanningScene::setObjectColor" name="planning_scene::PlanningScene::setObjectColor">
+<area shape="rect" id="node1" title=" " alt="" coords="5,39,192,80"/>
+<area shape="rect" id="node2" href="$classplanning__scene_1_1PlanningScene.html#ab4de68060bb1d854e4d37f26436b7ebb" title="Get the state at which the robot is assumed to be." alt="" coords="240,5,427,47"/>
+<area shape="rect" id="node3" href="$classplanning__scene_1_1PlanningScene.html#abd102b8b63f64ce9c31ce5cf4588a542" title="Check if the current state is in collision (with the environment or self collision)...." alt="" coords="240,71,427,112"/>
+</map>

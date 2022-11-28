@@ -1,8 +1,7 @@
 <map id="moveit::core::RobotState::knowsFrameTransform" name="moveit::core::RobotState::knowsFrameTransform">
-<area shape="rect" id="node1" title="Check if a transformation matrix from the model frame (root of model) to frame frame_id is known." alt="" coords="1000,271,1184,312"/>
-<area shape="rect" id="node2" href="$namespacepilz__industrial__motion__planner.html#a846707e0c70fe0ce82d46c752642e37e" title="compute the pose of a link at give robot state" alt="" coords="761,151,947,192"/>
-<area shape="rect" id="node10" href="$namespacetestutils.html#a1f9f24ec7611a5e7888c3e1564457c44" title="computeLinkFK" alt="" coords="762,278,946,305"/>
-<area shape="rect" id="node12" href="$classplanning__scene_1_1PlanningScene.html#a2c3bbf6773f402ff76f70c4218756054" title="Get the transform corresponding to the frame id. This will be known if id is a link name,..." alt="" coords="756,329,952,371"/>
+<area shape="rect" id="node1" title="Check if a transformation matrix from the model frame (root of model) to frame frame_id is known." alt="" coords="991,216,1175,257"/>
+<area shape="rect" id="node2" href="$namespacepilz__industrial__motion__planner.html#a846707e0c70fe0ce82d46c752642e37e" title="compute the pose of a link at give robot state" alt="" coords="756,151,943,192"/>
+<area shape="rect" id="node10" href="$namespacetestutils.html#a1f9f24ec7611a5e7888c3e1564457c44" title="computeLinkFK" alt="" coords="757,253,941,279"/>
 <area shape="rect" id="node3" href="$namespacetestutils.html#ab92bd7b28971f78ffe134429c7e3d333" title="Check that given trajectory is straight line." alt="" coords="252,35,435,76"/>
 <area shape="rect" id="node6" href="$namespacetestutils.html#a3adb3ee10723d5a032569890776fc5ea" title="Determines the goal position from the given request. TRUE if successful, FALSE otherwise." alt="" coords="483,82,708,109"/>
 <area shape="rect" id="node7" href="$namespacetestutils.html#a435b47ce199b64cc63117aad099c5cbf" title="check if the goal given in cartesian space is reached Only the last point in the trajectory is veryfi..." alt="" coords="253,111,433,138"/>

@@ -1,6 +1,0 @@
-<map id="moveit_setup::srdf_setup::PlanningGroupsWidget::focusGiven" name="moveit_setup::srdf_setup::PlanningGroupsWidget::focusGiven">
-<area shape="rect" id="node1" title="Received when this widget is chosen from the navigation menu." alt="" coords="5,79,227,135"/>
-<area shape="rect" id="node2" href="$classmoveit__setup_1_1srdf__setup_1_1PlanningGroups.html#a500e2b9aeeeef06730fc40b931ffd221" title=" " alt="" coords="279,5,453,61"/>
-<area shape="rect" id="node3" href="$classmoveit__setup_1_1RVizPanel.html#a9eade3d8c212c9dd0b316d479edec2cd" title=" " alt="" coords="275,86,457,127"/>
-<area shape="rect" id="node4" href="$classmoveit__setup_1_1RVizPanel.html#a3a6c0fc34ca09a858a81d5e72b76a165" title=" " alt="" coords="275,151,457,193"/>
-</map>

@@ -194,6 +194,9 @@ Functions</h2></td></tr>
 <tr class="memitem:aeb17bd73b900717780a6d2236468b07e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecollision__detection__bullet.html#aeb17bd73b900717780a6d2236468b07e">createConvexHull</a> (<a class="el" href="namespacecollision__detection__bullet.html#a53d1bf4a0e8e2d02ed253703e0d79e74">AlignedVector</a>&lt; Eigen::Vector3d &gt; &amp;vertices, std::vector&lt; int &gt; &amp;faces, const <a class="el" href="namespacecollision__detection__bullet.html#a53d1bf4a0e8e2d02ed253703e0d79e74">AlignedVector</a>&lt; Eigen::Vector3d &gt; &amp;input, double shrink=-1, double shrinkClamp=-1)</td></tr>
 <tr class="memdesc:aeb17bd73b900717780a6d2236468b07e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a convex hull from vertices using Bullet Convex Hull Computer.  <a href="namespacecollision__detection__bullet.html#aeb17bd73b900717780a6d2236468b07e">More...</a><br /></td></tr>
 <tr class="separator:aeb17bd73b900717780a6d2236468b07e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac905daae5b5f3820f748d48a389c2e38"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecollision__detection__bullet.html#ac905daae5b5f3820f748d48a389c2e38">getActiveLinkNamesRecursive</a> (std::vector&lt; std::string &gt; &amp;active_links, const urdf::LinkConstSharedPtr &amp;urdf_link, bool active)</td></tr>
+<tr class="memdesc:ac905daae5b5f3820f748d48a389c2e38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursively traverses robot from root to get all active links.  <a href="namespacecollision__detection__bullet.html#ac905daae5b5f3820f748d48a389c2e38">More...</a><br /></td></tr>
+<tr class="separator:ac905daae5b5f3820f748d48a389c2e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5214824afd0d2e6bd0bf77ba17f6629"><td class="memItemLeft" align="right" valign="top">shapes::ShapePtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecollision__detection__bullet.html#ad5214824afd0d2e6bd0bf77ba17f6629">constructShape</a> (const urdf::Geometry *geom)</td></tr>
 <tr class="separator:ad5214824afd0d2e6bd0bf77ba17f6629"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a087947c111851e345100a17d335d63d7"><td class="memItemLeft" align="right" valign="top">Eigen::Isometry3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecollision__detection__bullet.html#a087947c111851e345100a17d335d63d7">urdfPose2Eigen</a> (const urdf::Pose &amp;pose)</td></tr>
@@ -1069,6 +1072,52 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="bullet__utils_8cpp_source.html#l00098">98</a> of file <a class="el" href="bullet__utils_8cpp_source.html">bullet_utils.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac905daae5b5f3820f748d48a389c2e38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac905daae5b5f3820f748d48a389c2e38">&#9670;&nbsp;</a></span>getActiveLinkNamesRecursive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void collision_detection_bullet::getActiveLinkNamesRecursive </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>active_links</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const urdf::LinkConstSharedPtr &amp;&#160;</td>
+          <td class="paramname"><em>urdf_link</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>active</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Recursively traverses robot from root to get all active links. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">active_links</td><td>Stores the active links </td></tr>
+    <tr><td class="paramname">urdf_link</td><td>The current urdf link representation </td></tr>
+    <tr><td class="paramname">active</td><td>Indicates if link is considered active </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="ros__bullet__utils_8cpp_source.html#l00043">43</a> of file <a class="el" href="ros__bullet__utils_8cpp_source.html">ros_bullet_utils.cpp</a>.</p>
 
 </div>
 </div>

@@ -72,45 +72,25 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8fd903f72d6cc4d947a4077f66f0a525"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2planning__scene_2CMakeLists_8txt.html#a8fd903f72d6cc4d947a4077f66f0a525">set</a> (MOVEIT_LIB_NAME moveit_planning_scene) <a class="el" href="ros_2visualization_2trajectory__rviz__plugin_2CMakeLists_8txt.html#a03796c90fa97f184ccbf04cff4c28036">add_library</a>($</td></tr>
-<tr class="separator:a8fd903f72d6cc4d947a4077f66f0a525"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6f82087f59822c77e305ec13f4bdfc7"><td class="memItemLeft" align="right" valign="top">SHARED src planning_scene cpp&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2planning__scene_2CMakeLists_8txt.html#ae6f82087f59822c77e305ec13f4bdfc7">include</a> (GenerateExportHeader) generate_export_header($</td></tr>
-<tr class="separator:ae6f82087f59822c77e305ec13f4bdfc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe7b6aa051f4a332a0c8ee67f07f3612"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2planning__scene_2CMakeLists_8txt.html#abe7b6aa051f4a332a0c8ee67f07f3612">target_include_directories</a> (${MOVEIT_LIB_NAME} PUBLIC $&lt; BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}&gt;) <a class="el" href="ros_2warehouse_2CMakeLists_8txt.html#ab86eb14578ea4437b20495eac3bbb4bf">set_target_properties</a>($</td></tr>
-<tr class="separator:abe7b6aa051f4a332a0c8ee67f07f3612"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaa6378a81e6aac833f87da23138f747"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2planning__scene_2CMakeLists_8txt.html#abaa6378a81e6aac833f87da23138f747">add_library</a> (moveit_planning_scene SHARED src/planning_scene.cpp) <a class="el" href="core_2online__signal__smoothing_2CMakeLists_8txt.html#ac83505fbd0a524fbaea846dc98eafc97">include</a>(GenerateExportHeader) generate_export_header(moveit_planning_scene) <a class="el" href="core_2online__signal__smoothing_2CMakeLists_8txt.html#a366cfdb8ca01b02e991df1f6e1da9474">target_include_directories</a>(moveit_planning_scene PUBLIC $&lt; BUILD_INTERFACE</td></tr>
+<tr class="separator:abaa6378a81e6aac833f87da23138f747"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a235ac2b407503538dafe9ba3022398c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2planning__scene_2CMakeLists_8txt.html#a235ac2b407503538dafe9ba3022398c4">set_target_properties</a> (moveit_planning_scene PROPERTIES VERSION &quot;${${PROJECT_NAME}_VERSION}&quot;) ament_target_dependencies(moveit_planning_scene Boost rclcpp urdfdom urdfdom_headers octomap_msgs OCTOMAP) <a class="el" href="ros_2warehouse_2CMakeLists_8txt.html#accbde6cbc0a13cd8f20c38ade4e02065">target_link_libraries</a>(moveit_planning_scene moveit_robot_model moveit_robot_state moveit_exceptions moveit_transforms moveit_collision_detection_fcl moveit_collision_detection moveit_kinematic_constraints moveit_robot_trajectory moveit_trajectory_processing moveit_utils) <a class="el" href="setup__assistant_2moveit__setup__framework_2templates_2CMakeLists_8txt.html#a8afc5ff5a953737941da2bfbeed5978c">install</a>(DIRECTORY <a class="el" href="core_2online__signal__smoothing_2CMakeLists_8txt.html#ac83505fbd0a524fbaea846dc98eafc97">include</a>/DESTINATION <a class="el" href="core_2online__signal__smoothing_2CMakeLists_8txt.html#ac83505fbd0a524fbaea846dc98eafc97">include</a>) <a class="el" href="setup__assistant_2moveit__setup__framework_2templates_2CMakeLists_8txt.html#a8afc5ff5a953737941da2bfbeed5978c">install</a>(FILES $</td></tr>
+<tr class="separator:a235ac2b407503538dafe9ba3022398c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28354cc17f84451f20eaf4c75a1f7328"><td class="memItemLeft" align="right" valign="top">moveit_planning_scene_export h DESTINATION <a class="el" href="core_2online__signal__smoothing_2CMakeLists_8txt.html#ac83505fbd0a524fbaea846dc98eafc97">include</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_2planning__scene_2CMakeLists_8txt.html#a28354cc17f84451f20eaf4c75a1f7328">if</a> (BUILD_TESTING) <a class="el" href="ros_2moveit__servo_2CMakeLists_8txt.html#a0bb0ea91f5db40b16d9543fb0ea209b9">find_package</a>(ament_cmake_gtest REQUIRED) if(UNIX OR APPLE) <a class="el" href="ros_2visualization_2trajectory__rviz__plugin_2CMakeLists_8txt.html#ac512e339bdc410cf8f7b86c71df9fb69">set</a>(append_library_dirs &quot;$</td></tr>
+<tr class="separator:a28354cc17f84451f20eaf4c75a1f7328"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ae6f82087f59822c77e305ec13f4bdfc7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae6f82087f59822c77e305ec13f4bdfc7">&#9670;&nbsp;</a></span>include()</h2>
+<a id="abaa6378a81e6aac833f87da23138f747"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaa6378a81e6aac833f87da23138f747">&#9670;&nbsp;</a></span>add_library()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">SHARED src planning_scene cpp include </td>
+          <td class="memname">add_library </td>
           <td>(</td>
-          <td class="paramtype">GenerateExportHeader&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="core_2planning__scene_2CMakeLists_8txt_source.html#l00004">4</a> of file <a class="el" href="core_2planning__scene_2CMakeLists_8txt_source.html">CMakeLists.txt</a>.</p>
-
-</div>
-</div>
-<a id="a8fd903f72d6cc4d947a4077f66f0a525"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8fd903f72d6cc4d947a4077f66f0a525">&#9670;&nbsp;</a></span>set()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">set </td>
-          <td>(</td>
-          <td class="paramtype">MOVEIT_LIB_NAME&#160;</td>
-          <td class="paramname"><em>moveit_planning_scene</em></td><td>)</td>
+          <td class="paramtype">moveit_planning_scene SHARED src/planning_scene.&#160;</td>
+          <td class="paramname"><em>cpp</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -120,17 +100,37 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="abe7b6aa051f4a332a0c8ee67f07f3612"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe7b6aa051f4a332a0c8ee67f07f3612">&#9670;&nbsp;</a></span>target_include_directories()</h2>
+<a id="a28354cc17f84451f20eaf4c75a1f7328"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28354cc17f84451f20eaf4c75a1f7328">&#9670;&nbsp;</a></span>if()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">target_include_directories </td>
+          <td class="memname">moveit_planning_scene_export h DESTINATION <a class="el" href="core_2online__signal__smoothing_2CMakeLists_8txt.html#ac83505fbd0a524fbaea846dc98eafc97">include</a> if </td>
           <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>${MOVEIT_LIB_NAME} PUBLIC $&lt; BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}&gt;</em></td><td>)</td>
+          <td class="paramtype">BUILD_TESTING&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="core_2planning__scene_2CMakeLists_8txt_source.html#l00032">32</a> of file <a class="el" href="core_2planning__scene_2CMakeLists_8txt_source.html">CMakeLists.txt</a>.</p>
+
+</div>
+</div>
+<a id="a235ac2b407503538dafe9ba3022398c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a235ac2b407503538dafe9ba3022398c4">&#9670;&nbsp;</a></span>set_target_properties()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">set_target_properties </td>
+          <td>(</td>
+          <td class="paramtype">moveit_planning_scene PROPERTIES VERSION &quot;${${PROJECT_NAME}_VERSION}&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>

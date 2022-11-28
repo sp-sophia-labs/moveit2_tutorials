@@ -1,4 +1,4 @@
 <map id="moveit::core::JointModelGroup::satisfiesPositionBounds" name="moveit::core::JointModelGroup::satisfiesPositionBounds">
-<area shape="rect" id="node1" title=" " alt="" coords="309,5,532,47"/>
-<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1JointModelGroup.html#a0b7113f86b64023b07e14fa8c86adb1e" title=" " alt="" coords="5,5,261,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="309,13,532,54"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1JointModelGroup.html#ae41e12083325e4ea0564fedb9743463f" title="Compute random values for the state of the joint group." alt="" coords="5,5,261,61"/>
 </map>

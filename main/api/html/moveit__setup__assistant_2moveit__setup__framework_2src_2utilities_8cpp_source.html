@@ -163,50 +163,54 @@ $(function() {
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      <span class="keywordflow">continue</span>;  <span class="comment">// attribute not required</span></div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* value = e.Attribute(attr.name);</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">if</span> (value &amp;&amp; strcmp(attr.value, value) == 0)</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <span class="keywordflow">continue</span>;  <span class="comment">// attribute has required value</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  }</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;};</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;tinyxml2::XMLElement* <a class="code" href="namespacemoveit__setup.html#a762d54388d110ce4ea9f52f728675e51">uniqueInsert</a>(tinyxml2::XMLDocument&amp; doc, tinyxml2::XMLElement&amp; element, <span class="keyword">const</span> <span class="keywordtype">char</span>* tag,</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                                   <span class="keyword">const</span> std::vector&lt;XMLAttribute&gt;&amp; attributes, <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="namespaceround__collada__numbers.html#ac9e7c6037bfef6357cd8067931ad7ff7">text</a>)</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;{</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="comment">// search for existing element with required tag name and attributes</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  tinyxml2::XMLElement* result = element.FirstChildElement(tag);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordflow">while</span> (result &amp;&amp; !<a class="code" href="namespacemoveit__setup.html#a05304782b64c23e1d4fd151923c47625">hasRequiredAttributes</a>(*result, attributes))</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    result = result-&gt;NextSiblingElement(tag);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keywordflow">if</span> (!result)  <span class="comment">// if not yet present, create new element</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  {</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    result = doc.NewElement(tag);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    element.InsertEndChild(result);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  }</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="comment">// set (not-yet existing) attributes</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; attr : attributes)</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  {</div>
-<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="namespacemoveit__setup.html#a05304782b64c23e1d4fd151923c47625">  117</a></span>&#160;    <span class="keywordflow">if</span> (!result-&gt;Attribute(attr.name))</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      result-&gt;SetAttribute(attr.name, attr.value);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  }</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="comment">// insert text if required</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="namespaceround__collada__numbers.html#ac9e7c6037bfef6357cd8067931ad7ff7">text</a> &amp;&amp; !result-&gt;GetText())</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  {</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    tinyxml2::XMLText* text_el = doc.NewText(<a class="code" href="namespaceround__collada__numbers.html#ac9e7c6037bfef6357cd8067931ad7ff7">text</a>);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    result-&gt;InsertEndChild(text_el);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  }</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;}</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;}  <span class="comment">// namespace moveit_setup</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      <span class="keywordflow">continue</span>;  <span class="comment">// attribute has required value</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;};</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;tinyxml2::XMLElement* <a class="code" href="namespacemoveit__setup.html#a762d54388d110ce4ea9f52f728675e51">uniqueInsert</a>(tinyxml2::XMLDocument&amp; doc, tinyxml2::XMLElement&amp; element, <span class="keyword">const</span> <span class="keywordtype">char</span>* tag,</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                                   <span class="keyword">const</span> std::vector&lt;XMLAttribute&gt;&amp; attributes, <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="namespaceround__collada__numbers.html#ac9e7c6037bfef6357cd8067931ad7ff7">text</a>)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;{</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="comment">// search for existing element with required tag name and attributes</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  tinyxml2::XMLElement* result = element.FirstChildElement(tag);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="keywordflow">while</span> (result &amp;&amp; !<a class="code" href="namespacemoveit__setup.html#a05304782b64c23e1d4fd151923c47625">hasRequiredAttributes</a>(*result, attributes))</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    result = result-&gt;NextSiblingElement(tag);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keywordflow">if</span> (!result)  <span class="comment">// if not yet present, create new element</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    result = doc.NewElement(tag);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    element.InsertEndChild(result);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  }</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="namespacemoveit__setup.html#a05304782b64c23e1d4fd151923c47625">  117</a></span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="comment">// set (not-yet existing) attributes</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; attr : attributes)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">if</span> (!result-&gt;Attribute(attr.name))</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      result-&gt;SetAttribute(attr.name, attr.value);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="comment">// insert text if required</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="namespaceround__collada__numbers.html#ac9e7c6037bfef6357cd8067931ad7ff7">text</a> &amp;&amp; !result-&gt;GetText())</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    tinyxml2::XMLText* text_el = doc.NewText(<a class="code" href="namespaceround__collada__numbers.html#ac9e7c6037bfef6357cd8067931ad7ff7">text</a>);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    result-&gt;InsertEndChild(text_el);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;}</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}  <span class="comment">// namespace moveit_setup</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespacesetup_html_a3c783d982ab5a3d08b5fcf646a62976d"><div class="ttname"><a href="namespacesetup.html#a3c783d982ab5a3d08b5fcf646a62976d">setup.package_name</a></div><div class="ttdeci">string package_name</div><div class="ttdef"><b>Definition:</b> <a href="moveit__configs__utils_2setup_8py_source.html#l00004">setup.py:4</a></div></div>
 <div class="ttc" id="anamespacemoveit__setup_html"><div class="ttname"><a href="namespacemoveit__setup.html">moveit_setup</a></div><div class="ttdef"><b>Definition:</b> <a href="launch__bundle_8hpp_source.html#l00041">launch_bundle.hpp:41</a></div></div>
 <div class="ttc" id="anamespacemoveit__setup_html_aae7c778bf896afd5dac629e3d8fbd5bb"><div class="ttname"><a href="namespacemoveit__setup.html#aae7c778bf896afd5dac629e3d8fbd5bb">moveit_setup::extractPackageNameFromPath</a></div><div class="ttdeci">bool extractPackageNameFromPath(const std::filesystem::path &amp;path, std::string &amp;package_name, std::filesystem::path &amp;relative_filepath)</div><div class="ttdef"><b>Definition:</b> <a href="moveit__setup__assistant_2moveit__setup__framework_2src_2utilities_8cpp_source.html#l00073">utilities.cpp:73</a></div></div>
-<div class="ttc" id="anamespacemoveit__setup_html_a762d54388d110ce4ea9f52f728675e51"><div class="ttname"><a href="namespacemoveit__setup.html#a762d54388d110ce4ea9f52f728675e51">moveit_setup::uniqueInsert</a></div><div class="ttdeci">tinyxml2::XMLElement * uniqueInsert(tinyxml2::XMLDocument &amp;doc, tinyxml2::XMLElement &amp;element, const char *tag, const std::vector&lt; XMLAttribute &gt; &amp;attributes={}, const char *text=nullptr)</div><div class="ttdoc">Insert a new XML element with a given tag, attributes, and text.</div><div class="ttdef"><b>Definition:</b> <a href="moveit__setup__assistant_2moveit__setup__framework_2src_2utilities_8cpp_source.html#l00132">utilities.cpp:132</a></div></div>
+<div class="ttc" id="anamespacemoveit__setup_html_a762d54388d110ce4ea9f52f728675e51"><div class="ttname"><a href="namespacemoveit__setup.html#a762d54388d110ce4ea9f52f728675e51">moveit_setup::uniqueInsert</a></div><div class="ttdeci">tinyxml2::XMLElement * uniqueInsert(tinyxml2::XMLDocument &amp;doc, tinyxml2::XMLElement &amp;element, const char *tag, const std::vector&lt; XMLAttribute &gt; &amp;attributes={}, const char *text=nullptr)</div><div class="ttdoc">Insert a new XML element with a given tag, attributes, and text.</div><div class="ttdef"><b>Definition:</b> <a href="moveit__setup__assistant_2moveit__setup__framework_2src_2utilities_8cpp_source.html#l00136">utilities.cpp:136</a></div></div>
 <div class="ttc" id="anamespaceround__collada__numbers_html_ac9e7c6037bfef6357cd8067931ad7ff7"><div class="ttname"><a href="namespaceround__collada__numbers.html#ac9e7c6037bfef6357cd8067931ad7ff7">round_collada_numbers.text</a></div><div class="ttdeci">text</div><div class="ttdef"><b>Definition:</b> <a href="round__collada__numbers_8py_source.html#l00090">round_collada_numbers.py:90</a></div></div>
 <div class="ttc" id="anamespacemoveit__setup_html_a05304782b64c23e1d4fd151923c47625"><div class="ttname"><a href="namespacemoveit__setup.html#a05304782b64c23e1d4fd151923c47625">moveit_setup::hasRequiredAttributes</a></div><div class="ttdeci">bool hasRequiredAttributes(const tinyxml2::XMLElement &amp;e, const std::vector&lt; XMLAttribute &gt; &amp;attributes)</div><div class="ttdef"><b>Definition:</b> <a href="moveit__setup__assistant_2moveit__setup__framework_2src_2utilities_8cpp_source.html#l00117">utilities.cpp:117</a></div></div>
 <div class="ttc" id="autilities_8hpp_html"><div class="ttname"><a href="utilities_8hpp.html">utilities.hpp</a></div></div>

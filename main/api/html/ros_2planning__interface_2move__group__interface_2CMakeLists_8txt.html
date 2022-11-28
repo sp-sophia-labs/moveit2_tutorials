@@ -72,45 +72,25 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a26fb17c45f4335cfa63a22b2d25aea9d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ros_2planning__interface_2move__group__interface_2CMakeLists_8txt.html#a26fb17c45f4335cfa63a22b2d25aea9d">set</a> (MOVEIT_LIB_NAME moveit_move_group_interface) <a class="el" href="ros_2visualization_2trajectory__rviz__plugin_2CMakeLists_8txt.html#a03796c90fa97f184ccbf04cff4c28036">add_library</a>($</td></tr>
-<tr class="separator:a26fb17c45f4335cfa63a22b2d25aea9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cf11952a1ce895832831025e1f006a3"><td class="memItemLeft" align="right" valign="top">SHARED src move_group_interface cpp&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ros_2planning__interface_2move__group__interface_2CMakeLists_8txt.html#a6cf11952a1ce895832831025e1f006a3">include</a> (GenerateExportHeader) generate_export_header($</td></tr>
-<tr class="separator:a6cf11952a1ce895832831025e1f006a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe7b6aa051f4a332a0c8ee67f07f3612"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ros_2planning__interface_2move__group__interface_2CMakeLists_8txt.html#abe7b6aa051f4a332a0c8ee67f07f3612">target_include_directories</a> (${MOVEIT_LIB_NAME} PUBLIC $&lt; BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}&gt;) <a class="el" href="ros_2warehouse_2CMakeLists_8txt.html#ab86eb14578ea4437b20495eac3bbb4bf">set_target_properties</a>($</td></tr>
-<tr class="separator:abe7b6aa051f4a332a0c8ee67f07f3612"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43c7ec490b8adb0aafa7536233aa5de4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ros_2planning__interface_2move__group__interface_2CMakeLists_8txt.html#a43c7ec490b8adb0aafa7536233aa5de4">add_library</a> (moveit_move_group_interface SHARED src/move_group_interface.cpp) <a class="el" href="core_2online__signal__smoothing_2CMakeLists_8txt.html#ac83505fbd0a524fbaea846dc98eafc97">include</a>(GenerateExportHeader) generate_export_header(moveit_move_group_interface) <a class="el" href="core_2online__signal__smoothing_2CMakeLists_8txt.html#a366cfdb8ca01b02e991df1f6e1da9474">target_include_directories</a>(moveit_move_group_interface PUBLIC $&lt; BUILD_INTERFACE</td></tr>
+<tr class="separator:a43c7ec490b8adb0aafa7536233aa5de4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a3972b8ddcdb9d2bacc942d2da9ec9b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ros_2planning__interface_2move__group__interface_2CMakeLists_8txt.html#a4a3972b8ddcdb9d2bacc942d2da9ec9b">set_target_properties</a> (moveit_move_group_interface PROPERTIES VERSION &quot;${${PROJECT_NAME}_VERSION}&quot;) target_link_libraries(moveit_move_group_interface moveit_common_planning_interface_objects moveit_planning_scene_interface $</td></tr>
+<tr class="separator:a4a3972b8ddcdb9d2bacc942d2da9ec9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80fda5c06e6cf70852517554685e1d3f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ros_2planning__interface_2move__group__interface_2CMakeLists_8txt.html#a80fda5c06e6cf70852517554685e1d3f">ament_target_dependencies</a> (moveit_move_group_interface moveit_core moveit_msgs moveit_ros_move_group moveit_ros_occupancy_map_monitor moveit_ros_planning moveit_ros_warehouse) <a class="el" href="ros_2robot__interaction_2CMakeLists_8txt.html#a97c00bdf2c73d4a54e183fec4b49be37">if</a>(WIN32) <a class="el" href="planners_2test__configs_2prbt__ikfast__manipulator__plugin_2CMakeLists_8txt.html#aa683d78e99d223092f4d593f23b83028">endif</a>() <a class="el" href="setup__assistant_2moveit__setup__framework_2templates_2CMakeLists_8txt.html#a8afc5ff5a953737941da2bfbeed5978c">install</a>(DIRECTORY <a class="el" href="core_2online__signal__smoothing_2CMakeLists_8txt.html#ac83505fbd0a524fbaea846dc98eafc97">include</a>/DESTINATION <a class="el" href="core_2online__signal__smoothing_2CMakeLists_8txt.html#ac83505fbd0a524fbaea846dc98eafc97">include</a>) <a class="el" href="setup__assistant_2moveit__setup__framework_2templates_2CMakeLists_8txt.html#a8afc5ff5a953737941da2bfbeed5978c">install</a>(FILES $</td></tr>
+<tr class="separator:a80fda5c06e6cf70852517554685e1d3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a6cf11952a1ce895832831025e1f006a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6cf11952a1ce895832831025e1f006a3">&#9670;&nbsp;</a></span>include()</h2>
+<a id="a43c7ec490b8adb0aafa7536233aa5de4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43c7ec490b8adb0aafa7536233aa5de4">&#9670;&nbsp;</a></span>add_library()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">SHARED src move_group_interface cpp include </td>
+          <td class="memname">add_library </td>
           <td>(</td>
-          <td class="paramtype">GenerateExportHeader&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="ros_2planning__interface_2move__group__interface_2CMakeLists_8txt_source.html#l00004">4</a> of file <a class="el" href="ros_2planning__interface_2move__group__interface_2CMakeLists_8txt_source.html">CMakeLists.txt</a>.</p>
-
-</div>
-</div>
-<a id="a26fb17c45f4335cfa63a22b2d25aea9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26fb17c45f4335cfa63a22b2d25aea9d">&#9670;&nbsp;</a></span>set()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">set </td>
-          <td>(</td>
-          <td class="paramtype">MOVEIT_LIB_NAME&#160;</td>
-          <td class="paramname"><em>moveit_move_group_interface</em></td><td>)</td>
+          <td class="paramtype">moveit_move_group_interface SHARED src/move_group_interface.&#160;</td>
+          <td class="paramname"><em>cpp</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -120,23 +100,43 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="abe7b6aa051f4a332a0c8ee67f07f3612"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abe7b6aa051f4a332a0c8ee67f07f3612">&#9670;&nbsp;</a></span>target_include_directories()</h2>
+<a id="a80fda5c06e6cf70852517554685e1d3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80fda5c06e6cf70852517554685e1d3f">&#9670;&nbsp;</a></span>ament_target_dependencies()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">target_include_directories </td>
+          <td class="memname">ament_target_dependencies </td>
           <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>${MOVEIT_LIB_NAME} PUBLIC $&lt; BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}&gt;</em></td><td>)</td>
+          <td class="paramtype">moveit_move_group_interface moveit_core moveit_msgs moveit_ros_move_group moveit_ros_occupancy_map_monitor moveit_ros_planning&#160;</td>
+          <td class="paramname"><em>moveit_ros_warehouse</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ros_2planning__interface_2move__group__interface_2CMakeLists_8txt_source.html#l00006">6</a> of file <a class="el" href="ros_2planning__interface_2move__group__interface_2CMakeLists_8txt_source.html">CMakeLists.txt</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ros_2planning__interface_2move__group__interface_2CMakeLists_8txt_source.html#l00007">7</a> of file <a class="el" href="ros_2planning__interface_2move__group__interface_2CMakeLists_8txt_source.html">CMakeLists.txt</a>.</p>
+
+</div>
+</div>
+<a id="a4a3972b8ddcdb9d2bacc942d2da9ec9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a3972b8ddcdb9d2bacc942d2da9ec9b">&#9670;&nbsp;</a></span>set_target_properties()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">set_target_properties </td>
+          <td>(</td>
+          <td class="paramtype">moveit_move_group_interface PROPERTIES VERSION &quot;${${PROJECT_NAME}_VERSION}&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ros_2planning__interface_2move__group__interface_2CMakeLists_8txt_source.html#l00005">5</a> of file <a class="el" href="ros_2planning__interface_2move__group__interface_2CMakeLists_8txt_source.html">CMakeLists.txt</a>.</p>
 
 </div>
 </div>

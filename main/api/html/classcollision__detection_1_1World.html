@@ -354,7 +354,7 @@ Public Member Functions</h2></td></tr>
 
 <p>register a callback function for notification of changes. <em>callback</em> will be called right after any change occurs to any <a class="el" href="structcollision__detection_1_1World_1_1Object.html" title="A representation of an object.">Object</a>. <em>observer</em> is the object which is requesting the changes. It is only used for identifying the callback in <a class="el" href="classcollision__detection_1_1World.html#a0d94126a3e3046ddc264213b319a2655" title="remove a notifier callback">removeObserver()</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00396">396</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00408">408</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -637,7 +637,7 @@ Here is the call graph for this function:</div>
 
 <p>Clear all objects. If there are no other pointers to corresponding instances of Objects, the memory is freed. </p>
 
-<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00354">354</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00364">364</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -735,7 +735,7 @@ Here is the caller graph for this function:</div>
 
 <p>Get the global transform to a shape of an object with multiple shapes. shape_index is the index of the object (counting from 0) and needs to be valid. This function is used to construct the collision environment. </p>
 
-<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00227">227</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00233">233</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
 
 </div>
 </div>
@@ -757,7 +757,7 @@ Here is the caller graph for this function:</div>
 
 <p>Get the global transforms to the shapes of an object. This function is used to construct the collision environment. </p>
 
-<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00242">242</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00248">248</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
 
 </div>
 </div>
@@ -831,7 +831,7 @@ Here is the caller graph for this function:</div>
 
 <p>Get the transform to an object or subframe with given name. If name does not exist, a std::runtime_error is thrown. <a class="el" href="classA.html">A</a> subframe name needs to be prefixed with the object's name separated by a slash. The transform is global (relative to the world origin). The returned transform is guaranteed to be a valid isometry. </p>
 
-<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00185">185</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00191">191</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
 
 </div>
 </div>
@@ -863,7 +863,7 @@ Here is the caller graph for this function:</div>
 
 <p>Get the transform to an object or subframe with given name. If name does not exist, returns an identity transform and sets frame_found to false. <a class="el" href="classA.html">A</a> subframe name needs to be prefixed with the object's name separated by a slash. The transform is global (relative to the world origin). The returned transform is guaranteed to be a valid isometry. </p>
 
-<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00194">194</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00200">200</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
 
 </div>
 </div>
@@ -885,7 +885,7 @@ Here is the caller graph for this function:</div>
 
 <p>Check if a particular object exists in the collision world. </p>
 
-<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00158">158</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00162">162</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -916,7 +916,7 @@ Here is the caller graph for this function:</div>
 
 <p>Check if an object or subframe with given name exists in the collision world. <a class="el" href="classA.html">A</a> subframe name needs to be prefixed with the object's name separated by a slash. </p>
 
-<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00163">163</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00167">167</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
 
 </div>
 </div>
@@ -966,7 +966,7 @@ Here is the caller graph for this function:</div>
 
 <p>Move the object pose (thus moving all shapes and subframes in the object) according to the given transform specified in world frame. The transform is relative to and changes the object pose. It does not replace it. </p>
 
-<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00279">279</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00287">287</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
 
 </div>
 </div>
@@ -1004,7 +1004,7 @@ Here is the caller graph for this function:</div>
 
 <p>Update the pose of a shape in an object. Shape equality is verified by comparing pointers. Returns true on success. </p>
 
-<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00257">257</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00263">263</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1044,7 +1044,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>send notification of change to all objects to a particular observer. Used which switching from one world to another. </p>
 
-<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00428">428</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00440">440</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
 
 </div>
 </div>
@@ -1066,7 +1066,7 @@ Here is the caller graph for this function:</div>
 
 <p>Remove a particular object. If there are no external pointers to the corresponding instance of <a class="el" href="structcollision__detection_1_1World_1_1Object.html" title="A representation of an object.">Object</a>, the memory is freed. Returns true on success and false if no such object was found. </p>
 
-<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00342">342</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00352">352</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1097,7 +1097,7 @@ Here is the caller graph for this function:</div>
 
 <p>remove a notifier callback </p>
 
-<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00403">403</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00415">415</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
 
 </div>
 </div>
@@ -1129,7 +1129,7 @@ Here is the caller graph for this function:</div>
 
 <p>Remove shape from object. Shape equality is verified by comparing pointers. Ownership of the object is renounced (i.e. object is deleted if no external references exist) if this was the last shape in the object. Returns true on success and false if the object did not exist or did not contain the shape. </p>
 
-<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00313">313</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00321">321</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1170,7 +1170,7 @@ Here is the caller graph for this function:</div>
 
 <p>Set the pose of an object. The pose is specified in the world frame. </p>
 
-<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00291">291</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00299">299</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
 
 </div>
 </div>
@@ -1202,7 +1202,7 @@ Here is the caller graph for this function:</div>
 
 <p>Set subframes on an object. The frames are relative to the object pose. </p>
 
-<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00360">360</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="world_8cpp_source.html#l00370">370</a> of file <a class="el" href="world_8cpp_source.html">world.cpp</a>.</p>
 
 </div>
 </div>

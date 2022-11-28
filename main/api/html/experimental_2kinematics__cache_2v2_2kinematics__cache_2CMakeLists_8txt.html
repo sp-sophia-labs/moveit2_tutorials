@@ -72,23 +72,45 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a3a7375e3551cd712486fb51cc0c20b54"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="experimental_2kinematics__cache_2v2_2kinematics__cache_2CMakeLists_8txt.html#a3a7375e3551cd712486fb51cc0c20b54">set</a> (MOVEIT_LIB_NAME moveit_kinematics_cache) <a class="el" href="ros_2visualization_2trajectory__rviz__plugin_2CMakeLists_8txt.html#a03796c90fa97f184ccbf04cff4c28036">add_library</a>($</td></tr>
-<tr class="separator:a3a7375e3551cd712486fb51cc0c20b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4928086683252e27ff8fae23aef8feda"><td class="memItemLeft" align="right" valign="top">src kinematics_cache cpp&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="experimental_2kinematics__cache_2v2_2kinematics__cache_2CMakeLists_8txt.html#a4928086683252e27ff8fae23aef8feda">set_target_properties</a> (${MOVEIT_LIB_NAME} PROPERTIES <a class="el" href="core_2collision__detection__fcl_2CMakeLists_8txt.html#a099a1e7af54672f18be1c1b68d86c19f">VERSION</a> &quot;${${PROJECT_NAME}_VERSION}&quot;) add_dependencies($</td></tr>
-<tr class="separator:a4928086683252e27ff8fae23aef8feda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b02a8b0b01bd6194a6da3357d6bf544"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="experimental_2kinematics__cache_2v2_2kinematics__cache_2CMakeLists_8txt.html#a1b02a8b0b01bd6194a6da3357d6bf544">add_library</a> (moveit_kinematics_cache src/kinematics_cache.cpp) <a class="el" href="ros_2warehouse_2CMakeLists_8txt.html#ab86eb14578ea4437b20495eac3bbb4bf">set_target_properties</a>(moveit_kinematics_cache PROPERTIES VERSION &quot;$</td></tr>
+<tr class="separator:a1b02a8b0b01bd6194a6da3357d6bf544"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5c502b9e558ff7973416255cb795dd9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="experimental_2kinematics__cache_2v2_2kinematics__cache_2CMakeLists_8txt.html#af5c502b9e558ff7973416255cb795dd9">add_dependencies</a> (moveit_kinematics_cache ${catkin_EXPORTED_TARGETS}) <a class="el" href="ros_2warehouse_2CMakeLists_8txt.html#accbde6cbc0a13cd8f20c38ade4e02065">target_link_libraries</a>(moveit_kinematics_cache moveit_robot_model $</td></tr>
+<tr class="separator:af5c502b9e558ff7973416255cb795dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af631a0f5f7b10927fd2015dea7dfdbb7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="experimental_2kinematics__cache_2v2_2kinematics__cache_2CMakeLists_8txt.html#af631a0f5f7b10927fd2015dea7dfdbb7">install</a> (TARGETS moveit_kinematics_cache EXPORT moveit_kinematics_cache LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION} ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION} RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION}) install(DIRECTORY <a class="el" href="core_2online__signal__smoothing_2CMakeLists_8txt.html#ac83505fbd0a524fbaea846dc98eafc97">include</a>/DESTINATION $</td></tr>
+<tr class="separator:af631a0f5f7b10927fd2015dea7dfdbb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a3a7375e3551cd712486fb51cc0c20b54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a7375e3551cd712486fb51cc0c20b54">&#9670;&nbsp;</a></span>set()</h2>
+<a id="af5c502b9e558ff7973416255cb795dd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5c502b9e558ff7973416255cb795dd9">&#9670;&nbsp;</a></span>add_dependencies()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">set </td>
+          <td class="memname">add_dependencies </td>
           <td>(</td>
-          <td class="paramtype">MOVEIT_LIB_NAME&#160;</td>
-          <td class="paramname"><em>moveit_kinematics_cache</em></td><td>)</td>
+          <td class="paramtype">moveit_kinematics_cache ${catkin_EXPORTED_TARGETS}&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="experimental_2kinematics__cache_2v2_2kinematics__cache_2CMakeLists_8txt_source.html#l00006">6</a> of file <a class="el" href="experimental_2kinematics__cache_2v2_2kinematics__cache_2CMakeLists_8txt_source.html">CMakeLists.txt</a>.</p>
+
+</div>
+</div>
+<a id="a1b02a8b0b01bd6194a6da3357d6bf544"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b02a8b0b01bd6194a6da3357d6bf544">&#9670;&nbsp;</a></span>add_library()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">add_library </td>
+          <td>(</td>
+          <td class="paramtype">moveit_kinematics_cache src/kinematics_cache.&#160;</td>
+          <td class="paramname"><em>cpp</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -98,23 +120,23 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4928086683252e27ff8fae23aef8feda"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4928086683252e27ff8fae23aef8feda">&#9670;&nbsp;</a></span>set_target_properties()</h2>
+<a id="af631a0f5f7b10927fd2015dea7dfdbb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af631a0f5f7b10927fd2015dea7dfdbb7">&#9670;&nbsp;</a></span>install()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">src kinematics_cache cpp set_target_properties </td>
+          <td class="memname">install </td>
           <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>${MOVEIT_LIB_NAME} PROPERTIES VERSION &quot;${${PROJECT_NAME}_VERSION}&quot;</em></td><td>)</td>
+          <td class="paramtype">TARGETS moveit_kinematics_cache EXPORT moveit_kinematics_cache LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION} ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION} RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION}&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="experimental_2kinematics__cache_2v2_2kinematics__cache_2CMakeLists_8txt_source.html#l00006">6</a> of file <a class="el" href="experimental_2kinematics__cache_2v2_2kinematics__cache_2CMakeLists_8txt_source.html">CMakeLists.txt</a>.</p>
+<p class="definition">Definition at line <a class="el" href="experimental_2kinematics__cache_2v2_2kinematics__cache_2CMakeLists_8txt_source.html#l00010">10</a> of file <a class="el" href="experimental_2kinematics__cache_2v2_2kinematics__cache_2CMakeLists_8txt_source.html">CMakeLists.txt</a>.</p>
 
 </div>
 </div>

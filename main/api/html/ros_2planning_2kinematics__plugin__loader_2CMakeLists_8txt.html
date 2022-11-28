@@ -72,45 +72,23 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab5f4b42679b937226d43d0978d2b4ccf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ros_2planning_2kinematics__plugin__loader_2CMakeLists_8txt.html#ab5f4b42679b937226d43d0978d2b4ccf">set</a> (MOVEIT_LIB_NAME moveit_kinematics_plugin_loader) <a class="el" href="ros_2visualization_2trajectory__rviz__plugin_2CMakeLists_8txt.html#a03796c90fa97f184ccbf04cff4c28036">add_library</a>($</td></tr>
-<tr class="separator:ab5f4b42679b937226d43d0978d2b4ccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a320c178bed51d58abb33fa663f1ae183"><td class="memItemLeft" align="right" valign="top">SHARED src kinematics_plugin_loader cpp&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ros_2planning_2kinematics__plugin__loader_2CMakeLists_8txt.html#a320c178bed51d58abb33fa663f1ae183">set_target_properties</a> (${MOVEIT_LIB_NAME} PROPERTIES <a class="el" href="core_2collision__detection__fcl_2CMakeLists_8txt.html#a099a1e7af54672f18be1c1b68d86c19f">VERSION</a> &quot;${${PROJECT_NAME}_VERSION}&quot;) ament_target_dependencies($</td></tr>
-<tr class="separator:a320c178bed51d58abb33fa663f1ae183"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeec08421178db1fec2177ccab109ae3d"><td class="memItemLeft" align="right" valign="top">rclcpp urdf pluginlib class_loader moveit_core&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ros_2planning_2kinematics__plugin__loader_2CMakeLists_8txt.html#aeec08421178db1fec2177ccab109ae3d">generate_parameter_library</a> (kinematics_parameters # cmake target name for the parameter library src/kinematics_parameters.yaml # path to input yaml file) <a class="el" href="ros_2warehouse_2CMakeLists_8txt.html#accbde6cbc0a13cd8f20c38ade4e02065">target_link_libraries</a>($</td></tr>
-<tr class="separator:aeec08421178db1fec2177ccab109ae3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0039f32e27cbf055606e5ee5dc3f6950"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ros_2planning_2kinematics__plugin__loader_2CMakeLists_8txt.html#a0039f32e27cbf055606e5ee5dc3f6950">add_library</a> (moveit_kinematics_plugin_loader SHARED src/kinematics_plugin_loader.cpp) <a class="el" href="ros_2warehouse_2CMakeLists_8txt.html#ab86eb14578ea4437b20495eac3bbb4bf">set_target_properties</a>(moveit_kinematics_plugin_loader PROPERTIES VERSION &quot;$</td></tr>
+<tr class="separator:a0039f32e27cbf055606e5ee5dc3f6950"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7dd72d3a2ff1b9ddeb1816b0a0f437e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ros_2planning_2kinematics__plugin__loader_2CMakeLists_8txt.html#aa7dd72d3a2ff1b9ddeb1816b0a0f437e">ament_target_dependencies</a> (moveit_kinematics_plugin_loader rclcpp urdf pluginlib class_loader moveit_core) <a class="el" href="kinematics_2srv__kinematics__plugin_2CMakeLists_8txt.html#a7914e8a0bb4d7ca89a1550b0ee59b09b">generate_parameter_library</a>(kinematics_parameters src/kinematics_parameters.yaml) <a class="el" href="ros_2warehouse_2CMakeLists_8txt.html#accbde6cbc0a13cd8f20c38ade4e02065">target_link_libraries</a>(moveit_kinematics_plugin_loader moveit_rdf_loader kinematics_parameters) <a class="el" href="setup__assistant_2moveit__setup__framework_2templates_2CMakeLists_8txt.html#a8afc5ff5a953737941da2bfbeed5978c">install</a>(TARGETS kinematics_parameters EXPORT $</td></tr>
+<tr class="separator:aa7dd72d3a2ff1b9ddeb1816b0a0f437e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="aeec08421178db1fec2177ccab109ae3d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeec08421178db1fec2177ccab109ae3d">&#9670;&nbsp;</a></span>generate_parameter_library()</h2>
+<a id="a0039f32e27cbf055606e5ee5dc3f6950"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0039f32e27cbf055606e5ee5dc3f6950">&#9670;&nbsp;</a></span>add_library()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">rclcpp urdf pluginlib class_loader moveit_core generate_parameter_library </td>
+          <td class="memname">add_library </td>
           <td>(</td>
-          <td class="paramtype">kinematics_parameters # cmake target name for the parameter library src/kinematics_parameters.yaml # path to input yaml&#160;</td>
-          <td class="paramname"><em>file</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="ros_2planning_2kinematics__plugin__loader_2CMakeLists_8txt_source.html#l00013">13</a> of file <a class="el" href="ros_2planning_2kinematics__plugin__loader_2CMakeLists_8txt_source.html">CMakeLists.txt</a>.</p>
-
-</div>
-</div>
-<a id="ab5f4b42679b937226d43d0978d2b4ccf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5f4b42679b937226d43d0978d2b4ccf">&#9670;&nbsp;</a></span>set()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">set </td>
-          <td>(</td>
-          <td class="paramtype">MOVEIT_LIB_NAME&#160;</td>
-          <td class="paramname"><em>moveit_kinematics_plugin_loader</em></td><td>)</td>
+          <td class="paramtype">moveit_kinematics_plugin_loader SHARED src/kinematics_plugin_loader.&#160;</td>
+          <td class="paramname"><em>cpp</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -120,23 +98,23 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a320c178bed51d58abb33fa663f1ae183"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a320c178bed51d58abb33fa663f1ae183">&#9670;&nbsp;</a></span>set_target_properties()</h2>
+<a id="aa7dd72d3a2ff1b9ddeb1816b0a0f437e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7dd72d3a2ff1b9ddeb1816b0a0f437e">&#9670;&nbsp;</a></span>ament_target_dependencies()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">SHARED src kinematics_plugin_loader cpp set_target_properties </td>
+          <td class="memname">ament_target_dependencies </td>
           <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>${MOVEIT_LIB_NAME} PROPERTIES VERSION &quot;${${PROJECT_NAME}_VERSION}&quot;</em></td><td>)</td>
+          <td class="paramtype">moveit_kinematics_plugin_loader rclcpp urdf pluginlib class_loader&#160;</td>
+          <td class="paramname"><em>moveit_core</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="ros_2planning_2kinematics__plugin__loader_2CMakeLists_8txt_source.html#l00004">4</a> of file <a class="el" href="ros_2planning_2kinematics__plugin__loader_2CMakeLists_8txt_source.html">CMakeLists.txt</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ros_2planning_2kinematics__plugin__loader_2CMakeLists_8txt_source.html#l00003">3</a> of file <a class="el" href="ros_2planning_2kinematics__plugin__loader_2CMakeLists_8txt_source.html">CMakeLists.txt</a>.</p>
 
 </div>
 </div>

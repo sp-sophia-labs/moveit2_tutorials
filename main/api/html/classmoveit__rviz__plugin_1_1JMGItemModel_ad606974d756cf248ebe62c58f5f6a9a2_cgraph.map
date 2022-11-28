@@ -1,0 +1,4 @@
+<map id="moveit_rviz_plugin::JMGItemModel::rowCount" name="moveit_rviz_plugin::JMGItemModel::rowCount">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,201,47"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1JointModelGroup.html#ab0d0e29514820e4ccb2647456ba5cc25" title="Get the index locations in the complete robot state for all the variables in this group." alt="" coords="249,5,452,47"/>
+</map>

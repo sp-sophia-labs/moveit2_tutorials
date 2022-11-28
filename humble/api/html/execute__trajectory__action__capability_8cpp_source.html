@@ -134,7 +134,7 @@ $(function() {
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  execute_action_server_ = rclcpp_action::create_server&lt;ExecTrajectory&gt;(</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      node-&gt;get_node_base_interface(), node-&gt;get_node_clock_interface(), node-&gt;get_node_logging_interface(),</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      node-&gt;get_node_waitables_interface(), EXECUTE_ACTION_NAME,</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      [](<span class="keyword">const</span> rclcpp_action::GoalUUID&amp; <span class="comment">/*unused*/</span>, std::shared_ptr&lt;const ExecTrajectory::Goal&gt; <span class="comment">/*unused*/</span>) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      [](<span class="keyword">const</span> rclcpp_action::GoalUUID&amp; <span class="comment">/*unused*/</span>, <span class="keyword">const</span> std::shared_ptr&lt;const ExecTrajectory::Goal&gt;&amp; <span class="comment">/*unused*/</span>) {</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        RCLCPP_INFO(LOGGER, <span class="stringliteral">&quot;Received goal request&quot;</span>);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        return rclcpp_action::GoalResponse::ACCEPT_AND_EXECUTE;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      },</div>
@@ -145,7 +145,7 @@ $(function() {
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      [<span class="keyword">this</span>](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; goal) { executePathCallback(goal); });</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keywordtype">void</span> MoveGroupExecuteTrajectoryAction::executePathCallback(std::shared_ptr&lt;ExecTrajectoryGoal&gt; goal)</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keywordtype">void</span> MoveGroupExecuteTrajectoryAction::executePathCallback(<span class="keyword">const</span> std::shared_ptr&lt;ExecTrajectoryGoal&gt;&amp; goal)</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keyword">auto</span> action_res = std::make_shared&lt;ExecTrajectory::Result&gt;();</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="classmove__group_1_1MoveGroupCapability.html#a8210f1b13f0df86dac511ca96765382d">context_</a>-&gt;trajectory_execution_manager_)</div>

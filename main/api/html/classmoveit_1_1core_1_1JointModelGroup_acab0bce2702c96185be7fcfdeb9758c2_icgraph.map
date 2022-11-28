@@ -1,4 +1,5 @@
 <map id="moveit::core::JointModelGroup::getVariableDefaultPositions" name="moveit::core::JointModelGroup::getVariableDefaultPositions">
-<area shape="rect" id="node1" title="Get the values that correspond to a named state as read from the URDF. Return false on failure." alt="" coords="272,5,523,47"/>
-<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1JointModelGroup.html#af8402d9c18d16c01cfdb35bbd8b08dae" title=" " alt="" coords="5,5,224,47"/>
+<area shape="rect" id="node1" title="Get the values that correspond to a named state as read from the URDF. Return false on failure." alt="" coords="291,39,541,80"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1JointModelGroup.html#a9bdc5951995f765ead88c2a8bc6b2e74" title=" " alt="" coords="25,5,223,47"/>
+<area shape="rect" id="node3" href="$classmoveit__cpp_1_1PlanningComponent.html#af78dc3381b208f8c03b5bdcd9093b76d" title="Get the considered start state if defined, otherwise get the current state." alt="" coords="5,71,243,112"/>
 </map>

@@ -1,0 +1,4 @@
+<map id="moveit::core::JointModelGroup::isValidVelocityMove" name="moveit::core::JointModelGroup::isValidVelocityMove">
+<area shape="rect" id="node1" title="Check that the time to move between two waypoints is sufficient given velocity limits." alt="" coords="235,5,435,47"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1JointModelGroup.html#afbc255c0832b70bee552c7537f889dc5" title="Print information about the constructed model." alt="" coords="5,5,187,47"/>
+</map>

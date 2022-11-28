@@ -370,7 +370,7 @@ $(function() {
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;  std::string selected_support_surface_name_;</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  rclcpp_action::Client&lt;object_recognition_msgs::action::ObjectRecognition&gt;::SharedPtr object_recognition_client_;</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  <span class="keywordtype">void</span> listenDetectedObjects(<span class="keyword">const</span> object_recognition_msgs::msg::RecognizedObjectArray::ConstSharedPtr msg);</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  <span class="keywordtype">void</span> listenDetectedObjects(<span class="keyword">const</span> object_recognition_msgs::msg::RecognizedObjectArray::ConstSharedPtr&amp; msg);</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  rclcpp::Subscription&lt;object_recognition_msgs::msg::RecognizedObjectArray&gt;::SharedPtr object_recognition_subscriber_;</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  rclcpp::Subscription&lt;std_msgs::msg::Empty&gt;::SharedPtr plan_subscriber_;</div>
@@ -386,13 +386,13 @@ $(function() {
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  shapes::ShapePtr loadMeshResource(<span class="keyword">const</span> std::string&amp; url);</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  <span class="keywordtype">void</span> loadStoredStates(<span class="keyword">const</span> std::string&amp; pattern);</div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  <span class="keywordtype">void</span> remotePlanCallback(<span class="keyword">const</span> std_msgs::msg::Empty::ConstSharedPtr msg);</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  <span class="keywordtype">void</span> remoteExecuteCallback(<span class="keyword">const</span> std_msgs::msg::Empty::ConstSharedPtr msg);</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;  <span class="keywordtype">void</span> remoteStopCallback(<span class="keyword">const</span> std_msgs::msg::Empty::ConstSharedPtr msg);</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;  <span class="keywordtype">void</span> remoteUpdateStartStateCallback(<span class="keyword">const</span> std_msgs::msg::Empty::ConstSharedPtr msg);</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  <span class="keywordtype">void</span> remoteUpdateGoalStateCallback(<span class="keyword">const</span> std_msgs::msg::Empty::ConstSharedPtr msg);</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  <span class="keywordtype">void</span> remoteUpdateCustomStartStateCallback(<span class="keyword">const</span> moveit_msgs::msg::RobotState::ConstSharedPtr msg);</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;  <span class="keywordtype">void</span> remoteUpdateCustomGoalStateCallback(<span class="keyword">const</span> moveit_msgs::msg::RobotState::ConstSharedPtr msg);</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  <span class="keywordtype">void</span> remotePlanCallback(<span class="keyword">const</span> std_msgs::msg::Empty::ConstSharedPtr&amp; msg);</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  <span class="keywordtype">void</span> remoteExecuteCallback(<span class="keyword">const</span> std_msgs::msg::Empty::ConstSharedPtr&amp; msg);</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;  <span class="keywordtype">void</span> remoteStopCallback(<span class="keyword">const</span> std_msgs::msg::Empty::ConstSharedPtr&amp; msg);</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;  <span class="keywordtype">void</span> remoteUpdateStartStateCallback(<span class="keyword">const</span> std_msgs::msg::Empty::ConstSharedPtr&amp; msg);</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  <span class="keywordtype">void</span> remoteUpdateGoalStateCallback(<span class="keyword">const</span> std_msgs::msg::Empty::ConstSharedPtr&amp; msg);</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  <span class="keywordtype">void</span> remoteUpdateCustomStartStateCallback(<span class="keyword">const</span> moveit_msgs::msg::RobotState::ConstSharedPtr&amp; msg);</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;  <span class="keywordtype">void</span> remoteUpdateCustomGoalStateCallback(<span class="keyword">const</span> moveit_msgs::msg::RobotState::ConstSharedPtr&amp; msg);</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;  <span class="comment">/* Selects or unselects a item in a list by the item name */</span></div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  <span class="keywordtype">void</span> setItemSelectionInList(<span class="keyword">const</span> std::string&amp; item_name, <span class="keywordtype">bool</span> selection, QListWidget* list);</div>

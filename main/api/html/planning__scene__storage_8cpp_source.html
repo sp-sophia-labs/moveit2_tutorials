@@ -199,328 +199,344 @@ $(function() {
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">if</span> (serial_size != serial_size_arg)</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keywordflow">if</span> (memcmp(data_arg, data, serial_size) == 0)</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;      <span class="comment">// we found the same message twice</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      <span class="keywordflow">return</span> existing_request-&gt;lookupString(MOTION_PLAN_REQUEST_ID_NAME);</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  }</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;}</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
-<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a16a9dfe2badec685f9feba529b127edb">  135</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a16a9dfe2badec685f9feba529b127edb">moveit_warehouse::PlanningSceneStorage::addPlanningQuery</a>(<span class="keyword">const</span> <a class="code" href="namespaceplanning__interface.html#a1307e10a0a3b9ca03406d777b9a938a3">moveit_msgs::msg::MotionPlanRequest</a>&amp; planning_query,</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                                                              <span class="keyword">const</span> std::string&amp; scene_name,</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                                                              <span class="keyword">const</span> std::string&amp; query_name)</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;{</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  std::string <span class="keywordtype">id</span> = getMotionPlanRequestName(planning_query, scene_name);</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <span class="comment">// if we are trying to overwrite, we remove the old query first (if it exists).</span></div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keywordflow">if</span> (!query_name.empty() &amp;&amp; <span class="keywordtype">id</span>.empty())</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    removePlanningQuery(scene_name, query_name);</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  <span class="keywordflow">if</span> (<span class="keywordtype">id</span> != query_name || <span class="keywordtype">id</span>.empty())</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    addNewPlanningRequest(planning_query, scene_name, query_name);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;}</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;std::string</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;moveit_warehouse::PlanningSceneStorage::addNewPlanningRequest(<span class="keyword">const</span> <a class="code" href="namespaceplanning__interface.html#a1307e10a0a3b9ca03406d777b9a938a3">moveit_msgs::msg::MotionPlanRequest</a>&amp; planning_query,</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                                                              <span class="keyword">const</span> std::string&amp; scene_name,</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                                                              <span class="keyword">const</span> std::string&amp; query_name)</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;{</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  std::string <span class="keywordtype">id</span> = query_name;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <span class="keywordflow">if</span> (<span class="keywordtype">id</span>.empty())</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  {</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    std::set&lt;std::string&gt; used;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    Query::Ptr q = motion_plan_request_collection_-&gt;createQuery();</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    q-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    std::vector&lt;MotionPlanRequestWithMetadata&gt; existing_requests = motion_plan_request_collection_-&gt;queryList(q, <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="namespacemoveit__warehouse.html#aef7ae2cdb77d30eb8747edd4f16c34b1">MotionPlanRequestWithMetadata</a>&amp; existing_request : existing_requests)</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      used.insert(existing_request-&gt;lookupString(MOTION_PLAN_REQUEST_ID_NAME));</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    std::size_t index = existing_requests.size();</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordflow">do</span></div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    {</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;      <span class="keywordtype">id</span> = <span class="stringliteral">&quot;Motion Plan Request &quot;</span> + std::to_string(index);</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      index++;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    } <span class="keywordflow">while</span> (used.find(<span class="keywordtype">id</span>) != used.end());</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  }</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  Metadata::Ptr metadata = motion_plan_request_collection_-&gt;createMetadata();</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  metadata-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  metadata-&gt;append(MOTION_PLAN_REQUEST_ID_NAME, <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  motion_plan_request_collection_-&gt;insert(planning_query, metadata);</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  RCLCPP_DEBUG(LOGGER, <span class="stringliteral">&quot;Saved planning query &#39;%s&#39; for scene &#39;%s&#39;&quot;</span>, <span class="keywordtype">id</span>.c_str(), scene_name.c_str());</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  <span class="keywordflow">return</span> id;</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;}</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
-<div class="line"><a name="l00178"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a7c95f3bcb0406dab88f46bbbcd8bf80f">  178</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a7c95f3bcb0406dab88f46bbbcd8bf80f">moveit_warehouse::PlanningSceneStorage::addPlanningResult</a>(<span class="keyword">const</span> <a class="code" href="namespaceplanning__interface.html#a1307e10a0a3b9ca03406d777b9a938a3">moveit_msgs::msg::MotionPlanRequest</a>&amp; planning_query,</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                                                               <span class="keyword">const</span> moveit_msgs::msg::RobotTrajectory&amp; result,</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                                                               <span class="keyword">const</span> std::string&amp; scene_name)</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;{</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  std::string <span class="keywordtype">id</span> = getMotionPlanRequestName(planning_query, scene_name);</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <span class="keywordflow">if</span> (<span class="keywordtype">id</span>.empty())</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordtype">id</span> = addNewPlanningRequest(planning_query, scene_name, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  Metadata::Ptr metadata = robot_trajectory_collection_-&gt;createMetadata();</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  metadata-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  metadata-&gt;append(MOTION_PLAN_REQUEST_ID_NAME, <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  robot_trajectory_collection_-&gt;insert(result, metadata);</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;}</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
-<div class="line"><a name="l00191"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#ade312ff93b5fa23a28a45837706c55b1">  191</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#ade312ff93b5fa23a28a45837706c55b1">moveit_warehouse::PlanningSceneStorage::getPlanningSceneNames</a>(std::vector&lt;std::string&gt;&amp; names)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  names.clear();</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  Query::Ptr q = planning_scene_collection_-&gt;createQuery();</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  std::vector&lt;PlanningSceneWithMetadata&gt; planning_scenes =</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;      planning_scene_collection_-&gt;queryList(q, <span class="keyword">true</span>, PLANNING_SCENE_ID_NAME, <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  <span class="keywordflow">for</span> (<a class="code" href="namespacemoveit__warehouse.html#a27b8025d106e8cae5c30dd5fb61f0a05">PlanningSceneWithMetadata</a>&amp; <a class="code" href="namespaceplanning__scene.html">planning_scene</a> : planning_scenes)</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="namespaceplanning__scene.html">planning_scene</a>-&gt;lookupField(PLANNING_SCENE_ID_NAME))</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;      names.push_back(<a class="code" href="namespaceplanning__scene.html">planning_scene</a>-&gt;lookupString(PLANNING_SCENE_ID_NAME));</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;}</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
-<div class="line"><a name="l00202"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a8f7fb77976982d4d16266f2dd5e3e267">  202</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#ade312ff93b5fa23a28a45837706c55b1">moveit_warehouse::PlanningSceneStorage::getPlanningSceneNames</a>(<span class="keyword">const</span> std::string&amp; regex,</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                                                                   std::vector&lt;std::string&gt;&amp; names)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  getPlanningSceneNames(names);</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  filterNames(regex, names);</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;}</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
-<div class="line"><a name="l00209"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a0666d5f969833f6d70c7a687bfa8eb33">  209</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a0666d5f969833f6d70c7a687bfa8eb33">moveit_warehouse::PlanningSceneStorage::getPlanningSceneWorld</a>(moveit_msgs::msg::PlanningSceneWorld&amp; world,</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                                                                   <span class="keyword">const</span> std::string&amp; scene_name)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  <a class="code" href="namespacemoveit__warehouse.html#a27b8025d106e8cae5c30dd5fb61f0a05">PlanningSceneWithMetadata</a> scene_m;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  <span class="keywordflow">if</span> (getPlanningScene(scene_m, scene_name))</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  {</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    world = scene_m-&gt;world;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  }</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;}</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
-<div class="line"><a name="l00222"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#af5014412053aeff8443a4f83845bf2d7">  222</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#af5014412053aeff8443a4f83845bf2d7">moveit_warehouse::PlanningSceneStorage::getPlanningScene</a>(<a class="code" href="namespacemoveit__warehouse.html#a27b8025d106e8cae5c30dd5fb61f0a05">PlanningSceneWithMetadata</a>&amp; scene_m,</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                                                              <span class="keyword">const</span> std::string&amp; scene_name)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  Query::Ptr q = planning_scene_collection_-&gt;createQuery();</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  q-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  std::vector&lt;PlanningSceneWithMetadata&gt; planning_scenes = planning_scene_collection_-&gt;queryList(q, <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  <span class="keywordflow">if</span> (planning_scenes.empty())</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  {</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    RCLCPP_WARN(LOGGER, <span class="stringliteral">&quot;Planning scene &#39;%s&#39; was not found in the database&quot;</span>, scene_name.c_str());</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  }</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  scene_m = planning_scenes.back();</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  <span class="comment">// in case the scene was renamed, the name in the message may be out of date</span></div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  <span class="keyword">const_cast&lt;</span>moveit_msgs::msg::PlanningScene*<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keyword">const </span>moveit_msgs::msg::PlanningScene*<span class="keyword">&gt;</span>(scene_m.get()))-&gt;name =</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;      scene_name;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;}</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
-<div class="line"><a name="l00240"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#ac38090f120f5068fa3ec7984c2027d9d">  240</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#ac38090f120f5068fa3ec7984c2027d9d">moveit_warehouse::PlanningSceneStorage::getPlanningQuery</a>(<a class="code" href="namespacemoveit__warehouse.html#aef7ae2cdb77d30eb8747edd4f16c34b1">MotionPlanRequestWithMetadata</a>&amp; query_m,</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                                                              <span class="keyword">const</span> std::string&amp; scene_name,</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                                                              <span class="keyword">const</span> std::string&amp; query_name)</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;{</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  Query::Ptr q = motion_plan_request_collection_-&gt;createQuery();</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  q-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  q-&gt;append(MOTION_PLAN_REQUEST_ID_NAME, query_name);</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  std::vector&lt;MotionPlanRequestWithMetadata&gt; planning_queries = motion_plan_request_collection_-&gt;queryList(q, <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  <span class="keywordflow">if</span> (planning_queries.empty())</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  {</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    RCLCPP_ERROR(LOGGER, <span class="stringliteral">&quot;Planning query &#39;%s&#39; not found for scene &#39;%s&#39;&quot;</span>, query_name.c_str(), scene_name.c_str());</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  }</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  {</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    query_m = planning_queries.front();</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  }</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;}</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
-<div class="line"><a name="l00260"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#aa1329b2f07e068f32a15e2ef11ce9993">  260</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#aa1329b2f07e068f32a15e2ef11ce9993">moveit_warehouse::PlanningSceneStorage::getPlanningQueries</a>(</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    std::vector&lt;MotionPlanRequestWithMetadata&gt;&amp; planning_queries, <span class="keyword">const</span> std::string&amp; scene_name)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  Query::Ptr q = motion_plan_request_collection_-&gt;createQuery();</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  q-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  planning_queries = motion_plan_request_collection_-&gt;queryList(q, <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;}</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
-<div class="line"><a name="l00268"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#ae698793cd3189e55acd56d3254384257">  268</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#ae698793cd3189e55acd56d3254384257">moveit_warehouse::PlanningSceneStorage::getPlanningQueriesNames</a>(std::vector&lt;std::string&gt;&amp; query_names,</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                                                                     <span class="keyword">const</span> std::string&amp; scene_name)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  Query::Ptr q = motion_plan_request_collection_-&gt;createQuery();</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  q-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  std::vector&lt;MotionPlanRequestWithMetadata&gt; planning_queries = motion_plan_request_collection_-&gt;queryList(q, <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  query_names.clear();</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  <span class="keywordflow">for</span> (<a class="code" href="namespacemoveit__warehouse.html#aef7ae2cdb77d30eb8747edd4f16c34b1">MotionPlanRequestWithMetadata</a>&amp; planning_query : planning_queries)</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordflow">if</span> (planning_query-&gt;lookupField(MOTION_PLAN_REQUEST_ID_NAME))</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;      query_names.push_back(planning_query-&gt;lookupString(MOTION_PLAN_REQUEST_ID_NAME));</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;}</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
-<div class="line"><a name="l00280"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#ad946c90da9558f59adff41a96327813d">  280</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#ae698793cd3189e55acd56d3254384257">moveit_warehouse::PlanningSceneStorage::getPlanningQueriesNames</a>(<span class="keyword">const</span> std::string&amp; regex,</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                                                                     std::vector&lt;std::string&gt;&amp; query_names,</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                                                                     <span class="keyword">const</span> std::string&amp; scene_name)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  getPlanningQueriesNames(query_names, scene_name);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      <span class="comment">// we found the same message twice</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;      <span class="keywordflow">return</span> existing_request-&gt;lookupString(MOTION_PLAN_REQUEST_ID_NAME);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keywordflow">return</span> <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a16a9dfe2badec685f9feba529b127edb">  137</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a16a9dfe2badec685f9feba529b127edb">moveit_warehouse::PlanningSceneStorage::addPlanningQuery</a>(<span class="keyword">const</span> <a class="code" href="namespaceplanning__interface.html#a1307e10a0a3b9ca03406d777b9a938a3">moveit_msgs::msg::MotionPlanRequest</a>&amp; planning_query,</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                                                              <span class="keyword">const</span> std::string&amp; scene_name,</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                                                              <span class="keyword">const</span> std::string&amp; query_name)</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;{</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  std::string <span class="keywordtype">id</span> = getMotionPlanRequestName(planning_query, scene_name);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="comment">// if we are trying to overwrite, we remove the old query first (if it exists).</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <span class="keywordflow">if</span> (!query_name.empty() &amp;&amp; <span class="keywordtype">id</span>.empty())</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    removePlanningQuery(scene_name, query_name);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  <span class="keywordflow">if</span> (<span class="keywordtype">id</span> != query_name || <span class="keywordtype">id</span>.empty())</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    addNewPlanningRequest(planning_query, scene_name, query_name);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;}</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;std::string</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;moveit_warehouse::PlanningSceneStorage::addNewPlanningRequest(<span class="keyword">const</span> <a class="code" href="namespaceplanning__interface.html#a1307e10a0a3b9ca03406d777b9a938a3">moveit_msgs::msg::MotionPlanRequest</a>&amp; planning_query,</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                                                              <span class="keyword">const</span> std::string&amp; scene_name,</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                                                              <span class="keyword">const</span> std::string&amp; query_name)</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;{</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  std::string <span class="keywordtype">id</span> = query_name;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <span class="keywordflow">if</span> (<span class="keywordtype">id</span>.empty())</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    std::set&lt;std::string&gt; used;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    Query::Ptr q = motion_plan_request_collection_-&gt;createQuery();</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    q-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    std::vector&lt;MotionPlanRequestWithMetadata&gt; existing_requests = motion_plan_request_collection_-&gt;queryList(q, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="namespacemoveit__warehouse.html#aef7ae2cdb77d30eb8747edd4f16c34b1">MotionPlanRequestWithMetadata</a>&amp; existing_request : existing_requests)</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;      used.insert(existing_request-&gt;lookupString(MOTION_PLAN_REQUEST_ID_NAME));</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    std::size_t index = existing_requests.size();</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordflow">do</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;      <span class="keywordtype">id</span> = <span class="stringliteral">&quot;Motion Plan Request &quot;</span> + std::to_string(index);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;      index++;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    } <span class="keywordflow">while</span> (used.find(<span class="keywordtype">id</span>) != used.end());</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  Metadata::Ptr metadata = motion_plan_request_collection_-&gt;createMetadata();</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  metadata-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  metadata-&gt;append(MOTION_PLAN_REQUEST_ID_NAME, <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  motion_plan_request_collection_-&gt;insert(planning_query, metadata);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  RCLCPP_DEBUG(LOGGER, <span class="stringliteral">&quot;Saved planning query &#39;%s&#39; for scene &#39;%s&#39;&quot;</span>, <span class="keywordtype">id</span>.c_str(), scene_name.c_str());</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  <span class="keywordflow">return</span> id;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;}</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a7c95f3bcb0406dab88f46bbbcd8bf80f">  180</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a7c95f3bcb0406dab88f46bbbcd8bf80f">moveit_warehouse::PlanningSceneStorage::addPlanningResult</a>(<span class="keyword">const</span> <a class="code" href="namespaceplanning__interface.html#a1307e10a0a3b9ca03406d777b9a938a3">moveit_msgs::msg::MotionPlanRequest</a>&amp; planning_query,</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                                                               <span class="keyword">const</span> moveit_msgs::msg::RobotTrajectory&amp; result,</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                                                               <span class="keyword">const</span> std::string&amp; scene_name)</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;{</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  std::string <span class="keywordtype">id</span> = getMotionPlanRequestName(planning_query, scene_name);</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <span class="keywordflow">if</span> (<span class="keywordtype">id</span>.empty())</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordtype">id</span> = addNewPlanningRequest(planning_query, scene_name, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  Metadata::Ptr metadata = robot_trajectory_collection_-&gt;createMetadata();</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  metadata-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  metadata-&gt;append(MOTION_PLAN_REQUEST_ID_NAME, <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  robot_trajectory_collection_-&gt;insert(result, metadata);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;}</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#ade312ff93b5fa23a28a45837706c55b1">  193</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#ade312ff93b5fa23a28a45837706c55b1">moveit_warehouse::PlanningSceneStorage::getPlanningSceneNames</a>(std::vector&lt;std::string&gt;&amp; names)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  names.clear();</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  Query::Ptr q = planning_scene_collection_-&gt;createQuery();</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  std::vector&lt;PlanningSceneWithMetadata&gt; planning_scenes =</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;      planning_scene_collection_-&gt;queryList(q, <span class="keyword">true</span>, PLANNING_SCENE_ID_NAME, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  <span class="keywordflow">for</span> (<a class="code" href="namespacemoveit__warehouse.html#a27b8025d106e8cae5c30dd5fb61f0a05">PlanningSceneWithMetadata</a>&amp; <a class="code" href="namespaceplanning__scene.html">planning_scene</a> : planning_scenes)</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="namespaceplanning__scene.html">planning_scene</a>-&gt;lookupField(PLANNING_SCENE_ID_NAME))</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;      names.push_back(<a class="code" href="namespaceplanning__scene.html">planning_scene</a>-&gt;lookupString(PLANNING_SCENE_ID_NAME));</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  }</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;}</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00206"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a8f7fb77976982d4d16266f2dd5e3e267">  206</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#ade312ff93b5fa23a28a45837706c55b1">moveit_warehouse::PlanningSceneStorage::getPlanningSceneNames</a>(<span class="keyword">const</span> std::string&amp; regex,</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                                                                   std::vector&lt;std::string&gt;&amp; names)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  getPlanningSceneNames(names);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  filterNames(regex, names);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;}</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a0666d5f969833f6d70c7a687bfa8eb33">  213</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a0666d5f969833f6d70c7a687bfa8eb33">moveit_warehouse::PlanningSceneStorage::getPlanningSceneWorld</a>(moveit_msgs::msg::PlanningSceneWorld&amp; world,</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                                                                   <span class="keyword">const</span> std::string&amp; scene_name)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  <a class="code" href="namespacemoveit__warehouse.html#a27b8025d106e8cae5c30dd5fb61f0a05">PlanningSceneWithMetadata</a> scene_m;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  <span class="keywordflow">if</span> (getPlanningScene(scene_m, scene_name))</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  {</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    world = scene_m-&gt;world;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  }</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;}</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#af5014412053aeff8443a4f83845bf2d7">  226</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#af5014412053aeff8443a4f83845bf2d7">moveit_warehouse::PlanningSceneStorage::getPlanningScene</a>(<a class="code" href="namespacemoveit__warehouse.html#a27b8025d106e8cae5c30dd5fb61f0a05">PlanningSceneWithMetadata</a>&amp; scene_m,</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                                                              <span class="keyword">const</span> std::string&amp; scene_name)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  Query::Ptr q = planning_scene_collection_-&gt;createQuery();</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  q-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  std::vector&lt;PlanningSceneWithMetadata&gt; planning_scenes = planning_scene_collection_-&gt;queryList(q, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  <span class="keywordflow">if</span> (planning_scenes.empty())</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  {</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    RCLCPP_WARN(LOGGER, <span class="stringliteral">&quot;Planning scene &#39;%s&#39; was not found in the database&quot;</span>, scene_name.c_str());</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  scene_m = planning_scenes.back();</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  <span class="comment">// in case the scene was renamed, the name in the message may be out of date</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <span class="keyword">const_cast&lt;</span>moveit_msgs::msg::PlanningScene*<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keyword">const </span>moveit_msgs::msg::PlanningScene*<span class="keyword">&gt;</span>(scene_m.get()))-&gt;name =</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;      scene_name;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;}</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#ac38090f120f5068fa3ec7984c2027d9d">  244</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#ac38090f120f5068fa3ec7984c2027d9d">moveit_warehouse::PlanningSceneStorage::getPlanningQuery</a>(<a class="code" href="namespacemoveit__warehouse.html#aef7ae2cdb77d30eb8747edd4f16c34b1">MotionPlanRequestWithMetadata</a>&amp; query_m,</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                                                              <span class="keyword">const</span> std::string&amp; scene_name,</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                                                              <span class="keyword">const</span> std::string&amp; query_name)</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;{</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  Query::Ptr q = motion_plan_request_collection_-&gt;createQuery();</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  q-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  q-&gt;append(MOTION_PLAN_REQUEST_ID_NAME, query_name);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;  std::vector&lt;MotionPlanRequestWithMetadata&gt; planning_queries = motion_plan_request_collection_-&gt;queryList(q, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  <span class="keywordflow">if</span> (planning_queries.empty())</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  {</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    RCLCPP_ERROR(LOGGER, <span class="stringliteral">&quot;Planning query &#39;%s&#39; not found for scene &#39;%s&#39;&quot;</span>, query_name.c_str(), scene_name.c_str());</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  }</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  {</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    query_m = planning_queries.front();</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  }</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;}</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
+<div class="line"><a name="l00264"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#aa1329b2f07e068f32a15e2ef11ce9993">  264</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#aa1329b2f07e068f32a15e2ef11ce9993">moveit_warehouse::PlanningSceneStorage::getPlanningQueries</a>(</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    std::vector&lt;MotionPlanRequestWithMetadata&gt;&amp; planning_queries, <span class="keyword">const</span> std::string&amp; scene_name)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  Query::Ptr q = motion_plan_request_collection_-&gt;createQuery();</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  q-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  planning_queries = motion_plan_request_collection_-&gt;queryList(q, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;}</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
+<div class="line"><a name="l00272"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#ae698793cd3189e55acd56d3254384257">  272</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#ae698793cd3189e55acd56d3254384257">moveit_warehouse::PlanningSceneStorage::getPlanningQueriesNames</a>(std::vector&lt;std::string&gt;&amp; query_names,</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                                                                     <span class="keyword">const</span> std::string&amp; scene_name)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;  Query::Ptr q = motion_plan_request_collection_-&gt;createQuery();</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  q-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  std::vector&lt;MotionPlanRequestWithMetadata&gt; planning_queries = motion_plan_request_collection_-&gt;queryList(q, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  query_names.clear();</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  <span class="keywordflow">for</span> (<a class="code" href="namespacemoveit__warehouse.html#aef7ae2cdb77d30eb8747edd4f16c34b1">MotionPlanRequestWithMetadata</a>&amp; planning_query : planning_queries)</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  {</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keywordflow">if</span> (planning_query-&gt;lookupField(MOTION_PLAN_REQUEST_ID_NAME))</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;      query_names.push_back(planning_query-&gt;lookupString(MOTION_PLAN_REQUEST_ID_NAME));</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  }</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;}</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  <span class="keywordflow">if</span> (!regex.empty())</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  {</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    std::vector&lt;std::string&gt; fnames;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    std::regex <a class="code" href="namespaceplan.html#ab9a5624d048e6b841d11a5f223f02870">r</a>(regex);</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> std::string&amp; query_name : query_names)</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    {</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;      std::smatch match;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      <span class="keywordflow">if</span> (std::regex_match(query_name, match, <a class="code" href="namespaceplan.html#ab9a5624d048e6b841d11a5f223f02870">r</a>))</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;      {</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        fnames.push_back(query_name);</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;      }</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    }</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    query_names.swap(fnames);</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  }</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;}</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160; </div>
-<div class="line"><a name="l00302"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a0cb34df9070a020616b7e56d24e43033">  302</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#aa1329b2f07e068f32a15e2ef11ce9993">moveit_warehouse::PlanningSceneStorage::getPlanningQueries</a>(</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    std::vector&lt;MotionPlanRequestWithMetadata&gt;&amp; planning_queries, std::vector&lt;std::string&gt;&amp; query_names,</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keyword">const</span> std::string&amp; scene_name)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  Query::Ptr q = motion_plan_request_collection_-&gt;createQuery();</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  q-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  planning_queries = motion_plan_request_collection_-&gt;queryList(q, <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  query_names.resize(planning_queries.size());</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;  <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; planning_queries.size(); ++i)</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <span class="keywordflow">if</span> (planning_queries[i]-&gt;lookupField(MOTION_PLAN_REQUEST_ID_NAME))</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;      query_names[i] = planning_queries[i]-&gt;lookupString(MOTION_PLAN_REQUEST_ID_NAME);</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;      query_names[i].clear();</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;}</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160; </div>
-<div class="line"><a name="l00317"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a29e9056434405047560148b936d73c17">  317</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a29e9056434405047560148b936d73c17">moveit_warehouse::PlanningSceneStorage::getPlanningResults</a>(</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    std::vector&lt;RobotTrajectoryWithMetadata&gt;&amp; planning_results, <span class="keyword">const</span> std::string&amp; scene_name,</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespaceplanning__interface.html#a1307e10a0a3b9ca03406d777b9a938a3">moveit_msgs::msg::MotionPlanRequest</a>&amp; planning_query)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  std::string <span class="keywordtype">id</span> = getMotionPlanRequestName(planning_query, scene_name);</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;  <span class="keywordflow">if</span> (<span class="keywordtype">id</span>.empty())</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    planning_results.clear();</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    getPlanningResults(planning_results, <span class="keywordtype">id</span>, scene_name);</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;}</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160; </div>
-<div class="line"><a name="l00328"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a32b790e6a27ea9d4ee069be3a91acf93">  328</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a29e9056434405047560148b936d73c17">moveit_warehouse::PlanningSceneStorage::getPlanningResults</a>(</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    std::vector&lt;RobotTrajectoryWithMetadata&gt;&amp; planning_results, <span class="keyword">const</span> std::string&amp; scene_name,</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <span class="keyword">const</span> std::string&amp; planning_query)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;  Query::Ptr q = robot_trajectory_collection_-&gt;createQuery();</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;  q-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;  q-&gt;append(MOTION_PLAN_REQUEST_ID_NAME, planning_query);</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;  planning_results = robot_trajectory_collection_-&gt;queryList(q, <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;}</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160; </div>
-<div class="line"><a name="l00338"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a8fd40e9edf8d07ab914b84f055b6ccee">  338</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a8fd40e9edf8d07ab914b84f055b6ccee">moveit_warehouse::PlanningSceneStorage::hasPlanningQuery</a>(<span class="keyword">const</span> std::string&amp; scene_name,</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                                                              <span class="keyword">const</span> std::string&amp; query_name)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;  Query::Ptr q = motion_plan_request_collection_-&gt;createQuery();</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;  q-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;  q-&gt;append(MOTION_PLAN_REQUEST_ID_NAME, query_name);</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;  std::vector&lt;MotionPlanRequestWithMetadata&gt; queries = motion_plan_request_collection_-&gt;queryList(q, <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;  <span class="keywordflow">return</span> !queries.empty();</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;}</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
-<div class="line"><a name="l00348"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#ad3c19ca6a5ef7683beefff6f18913698">  348</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#ad3c19ca6a5ef7683beefff6f18913698">moveit_warehouse::PlanningSceneStorage::renamePlanningScene</a>(<span class="keyword">const</span> std::string&amp; old_scene_name,</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                                                                 <span class="keyword">const</span> std::string&amp; new_scene_name)</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;{</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;  Query::Ptr q = planning_scene_collection_-&gt;createQuery();</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;  q-&gt;append(PLANNING_SCENE_ID_NAME, old_scene_name);</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;  Metadata::Ptr m = planning_scene_collection_-&gt;createMetadata();</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;  m-&gt;append(PLANNING_SCENE_ID_NAME, new_scene_name);</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;  planning_scene_collection_-&gt;modifyMetadata(q, m);</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;  RCLCPP_DEBUG(LOGGER, <span class="stringliteral">&quot;Renamed planning scene from &#39;%s&#39; to &#39;%s&#39;&quot;</span>, old_scene_name.c_str(), new_scene_name.c_str());</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;}</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160; </div>
-<div class="line"><a name="l00359"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a82bdecbcad6b6c5db8f305105d945364">  359</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a82bdecbcad6b6c5db8f305105d945364">moveit_warehouse::PlanningSceneStorage::renamePlanningQuery</a>(<span class="keyword">const</span> std::string&amp; scene_name,</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                                                                 <span class="keyword">const</span> std::string&amp; old_query_name,</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                                                                 <span class="keyword">const</span> std::string&amp; new_query_name)</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;{</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;  Query::Ptr q = motion_plan_request_collection_-&gt;createQuery();</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;  q-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;  q-&gt;append(MOTION_PLAN_REQUEST_ID_NAME, old_query_name);</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;  Metadata::Ptr m = motion_plan_request_collection_-&gt;createMetadata();</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;  m-&gt;append(MOTION_PLAN_REQUEST_ID_NAME, new_query_name);</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;  motion_plan_request_collection_-&gt;modifyMetadata(q, m);</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;  RCLCPP_DEBUG(LOGGER, <span class="stringliteral">&quot;Renamed planning query for scene &#39;%s&#39; from &#39;%s&#39; to &#39;%s&#39;&quot;</span>, scene_name.c_str(),</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;               old_query_name.c_str(), new_query_name.c_str());</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;}</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160; </div>
-<div class="line"><a name="l00373"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a0dc286b43f7c438a1323fc775c185b7a">  373</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a0dc286b43f7c438a1323fc775c185b7a">moveit_warehouse::PlanningSceneStorage::removePlanningScene</a>(<span class="keyword">const</span> std::string&amp; scene_name)</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;{</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;  removePlanningQueries(scene_name);</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;  Query::Ptr q = planning_scene_collection_-&gt;createQuery();</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;  q-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> rem = planning_scene_collection_-&gt;removeMessages(q);</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;  RCLCPP_DEBUG(LOGGER, <span class="stringliteral">&quot;Removed %u PlanningScene messages (named &#39;%s&#39;)&quot;</span>, rem, scene_name.c_str());</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;}</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160; </div>
-<div class="line"><a name="l00382"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a65615e97604a32259a1519f45bc691cc">  382</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a65615e97604a32259a1519f45bc691cc">moveit_warehouse::PlanningSceneStorage::removePlanningQueries</a>(<span class="keyword">const</span> std::string&amp; scene_name)</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;{</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;  removePlanningResults(scene_name);</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;  Query::Ptr q = motion_plan_request_collection_-&gt;createQuery();</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;  q-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> rem = motion_plan_request_collection_-&gt;removeMessages(q);</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;  RCLCPP_DEBUG(LOGGER, <span class="stringliteral">&quot;Removed %u MotionPlanRequest messages for scene &#39;%s&#39;&quot;</span>, rem, scene_name.c_str());</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;}</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160; </div>
-<div class="line"><a name="l00391"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a1c710d76abcbca59a7ccf5bea1926778">  391</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a1c710d76abcbca59a7ccf5bea1926778">moveit_warehouse::PlanningSceneStorage::removePlanningQuery</a>(<span class="keyword">const</span> std::string&amp; scene_name,</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;                                                                 <span class="keyword">const</span> std::string&amp; query_name)</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;{</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;  removePlanningResults(scene_name, query_name);</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;  Query::Ptr q = motion_plan_request_collection_-&gt;createQuery();</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;  q-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;  q-&gt;append(MOTION_PLAN_REQUEST_ID_NAME, query_name);</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> rem = motion_plan_request_collection_-&gt;removeMessages(q);</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;  RCLCPP_DEBUG(LOGGER, <span class="stringliteral">&quot;Removed %u MotionPlanRequest messages for scene &#39;%s&#39;, query &#39;%s&#39;&quot;</span>, rem, scene_name.c_str(),</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;               query_name.c_str());</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;}</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160; </div>
-<div class="line"><a name="l00403"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#aa304c6e78e245a0d67020b16319c020e">  403</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#aa304c6e78e245a0d67020b16319c020e">moveit_warehouse::PlanningSceneStorage::removePlanningResults</a>(<span class="keyword">const</span> std::string&amp; scene_name)</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;{</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;  Query::Ptr q = robot_trajectory_collection_-&gt;createQuery();</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;  q-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> rem = robot_trajectory_collection_-&gt;removeMessages(q);</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;  RCLCPP_DEBUG(LOGGER, <span class="stringliteral">&quot;Removed %u RobotTrajectory messages for scene &#39;%s&#39;&quot;</span>, rem, scene_name.c_str());</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;}</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160; </div>
-<div class="line"><a name="l00411"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a287d4564671c0a4278568b8c14f91579">  411</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#aa304c6e78e245a0d67020b16319c020e">moveit_warehouse::PlanningSceneStorage::removePlanningResults</a>(<span class="keyword">const</span> std::string&amp; scene_name,</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;                                                                   <span class="keyword">const</span> std::string&amp; query_name)</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;{</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;  Query::Ptr q = robot_trajectory_collection_-&gt;createQuery();</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;  q-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;  q-&gt;append(MOTION_PLAN_REQUEST_ID_NAME, query_name);</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> rem = robot_trajectory_collection_-&gt;removeMessages(q);</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;  RCLCPP_DEBUG(LOGGER, <span class="stringliteral">&quot;Removed %u RobotTrajectory messages for scene &#39;%s&#39;, query &#39;%s&#39;&quot;</span>, rem, scene_name.c_str(),</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;               query_name.c_str());</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;}</div>
+<div class="line"><a name="l00286"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#ad946c90da9558f59adff41a96327813d">  286</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#ae698793cd3189e55acd56d3254384257">moveit_warehouse::PlanningSceneStorage::getPlanningQueriesNames</a>(<span class="keyword">const</span> std::string&amp; regex,</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                                                                     std::vector&lt;std::string&gt;&amp; query_names,</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                                                                     <span class="keyword">const</span> std::string&amp; scene_name)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  getPlanningQueriesNames(query_names, scene_name);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  <span class="keywordflow">if</span> (!regex.empty())</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;  {</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    std::vector&lt;std::string&gt; fnames;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    std::regex <a class="code" href="namespaceplan.html#ab9a5624d048e6b841d11a5f223f02870">r</a>(regex);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> std::string&amp; query_name : query_names)</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    {</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;      std::smatch match;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;      <span class="keywordflow">if</span> (std::regex_match(query_name, match, <a class="code" href="namespaceplan.html#ab9a5624d048e6b841d11a5f223f02870">r</a>))</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;      {</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        fnames.push_back(query_name);</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;      }</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    }</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    query_names.swap(fnames);</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  }</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;}</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
+<div class="line"><a name="l00308"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a0cb34df9070a020616b7e56d24e43033">  308</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#aa1329b2f07e068f32a15e2ef11ce9993">moveit_warehouse::PlanningSceneStorage::getPlanningQueries</a>(</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    std::vector&lt;MotionPlanRequestWithMetadata&gt;&amp; planning_queries, std::vector&lt;std::string&gt;&amp; query_names,</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keyword">const</span> std::string&amp; scene_name)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  Query::Ptr q = motion_plan_request_collection_-&gt;createQuery();</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  q-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  planning_queries = motion_plan_request_collection_-&gt;queryList(q, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  query_names.resize(planning_queries.size());</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; planning_queries.size(); ++i)</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  {</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    <span class="keywordflow">if</span> (planning_queries[i]-&gt;lookupField(MOTION_PLAN_REQUEST_ID_NAME))</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    {</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;      query_names[i] = planning_queries[i]-&gt;lookupString(MOTION_PLAN_REQUEST_ID_NAME);</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    }</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    {</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;      query_names[i].clear();</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    }</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;  }</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;}</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
+<div class="line"><a name="l00329"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a29e9056434405047560148b936d73c17">  329</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a29e9056434405047560148b936d73c17">moveit_warehouse::PlanningSceneStorage::getPlanningResults</a>(</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    std::vector&lt;RobotTrajectoryWithMetadata&gt;&amp; planning_results, <span class="keyword">const</span> std::string&amp; scene_name,</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <span class="keyword">const</span> <a class="code" href="namespaceplanning__interface.html#a1307e10a0a3b9ca03406d777b9a938a3">moveit_msgs::msg::MotionPlanRequest</a>&amp; planning_query)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;  std::string <span class="keywordtype">id</span> = getMotionPlanRequestName(planning_query, scene_name);</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;  <span class="keywordflow">if</span> (<span class="keywordtype">id</span>.empty())</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;  {</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    planning_results.clear();</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;  }</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;  {</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    getPlanningResults(planning_results, <span class="keywordtype">id</span>, scene_name);</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;  }</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;}</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160; </div>
+<div class="line"><a name="l00344"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a32b790e6a27ea9d4ee069be3a91acf93">  344</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a29e9056434405047560148b936d73c17">moveit_warehouse::PlanningSceneStorage::getPlanningResults</a>(</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    std::vector&lt;RobotTrajectoryWithMetadata&gt;&amp; planning_results, <span class="keyword">const</span> std::string&amp; scene_name,</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <span class="keyword">const</span> std::string&amp; planning_query)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;  Query::Ptr q = robot_trajectory_collection_-&gt;createQuery();</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;  q-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;  q-&gt;append(MOTION_PLAN_REQUEST_ID_NAME, planning_query);</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;  planning_results = robot_trajectory_collection_-&gt;queryList(q, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;}</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160; </div>
+<div class="line"><a name="l00354"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a8fd40e9edf8d07ab914b84f055b6ccee">  354</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a8fd40e9edf8d07ab914b84f055b6ccee">moveit_warehouse::PlanningSceneStorage::hasPlanningQuery</a>(<span class="keyword">const</span> std::string&amp; scene_name,</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;                                                              <span class="keyword">const</span> std::string&amp; query_name)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;  Query::Ptr q = motion_plan_request_collection_-&gt;createQuery();</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;  q-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;  q-&gt;append(MOTION_PLAN_REQUEST_ID_NAME, query_name);</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;  std::vector&lt;MotionPlanRequestWithMetadata&gt; queries = motion_plan_request_collection_-&gt;queryList(q, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;  <span class="keywordflow">return</span> !queries.empty();</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;}</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160; </div>
+<div class="line"><a name="l00364"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#ad3c19ca6a5ef7683beefff6f18913698">  364</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#ad3c19ca6a5ef7683beefff6f18913698">moveit_warehouse::PlanningSceneStorage::renamePlanningScene</a>(<span class="keyword">const</span> std::string&amp; old_scene_name,</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                                                                 <span class="keyword">const</span> std::string&amp; new_scene_name)</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;{</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;  Query::Ptr q = planning_scene_collection_-&gt;createQuery();</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;  q-&gt;append(PLANNING_SCENE_ID_NAME, old_scene_name);</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;  Metadata::Ptr m = planning_scene_collection_-&gt;createMetadata();</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;  m-&gt;append(PLANNING_SCENE_ID_NAME, new_scene_name);</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;  planning_scene_collection_-&gt;modifyMetadata(q, m);</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;  RCLCPP_DEBUG(LOGGER, <span class="stringliteral">&quot;Renamed planning scene from &#39;%s&#39; to &#39;%s&#39;&quot;</span>, old_scene_name.c_str(), new_scene_name.c_str());</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;}</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160; </div>
+<div class="line"><a name="l00375"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a82bdecbcad6b6c5db8f305105d945364">  375</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a82bdecbcad6b6c5db8f305105d945364">moveit_warehouse::PlanningSceneStorage::renamePlanningQuery</a>(<span class="keyword">const</span> std::string&amp; scene_name,</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;                                                                 <span class="keyword">const</span> std::string&amp; old_query_name,</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                                                                 <span class="keyword">const</span> std::string&amp; new_query_name)</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;{</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;  Query::Ptr q = motion_plan_request_collection_-&gt;createQuery();</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;  q-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  q-&gt;append(MOTION_PLAN_REQUEST_ID_NAME, old_query_name);</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;  Metadata::Ptr m = motion_plan_request_collection_-&gt;createMetadata();</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;  m-&gt;append(MOTION_PLAN_REQUEST_ID_NAME, new_query_name);</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;  motion_plan_request_collection_-&gt;modifyMetadata(q, m);</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;  RCLCPP_DEBUG(LOGGER, <span class="stringliteral">&quot;Renamed planning query for scene &#39;%s&#39; from &#39;%s&#39; to &#39;%s&#39;&quot;</span>, scene_name.c_str(),</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;               old_query_name.c_str(), new_query_name.c_str());</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;}</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160; </div>
+<div class="line"><a name="l00389"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a0dc286b43f7c438a1323fc775c185b7a">  389</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a0dc286b43f7c438a1323fc775c185b7a">moveit_warehouse::PlanningSceneStorage::removePlanningScene</a>(<span class="keyword">const</span> std::string&amp; scene_name)</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;{</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;  removePlanningQueries(scene_name);</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;  Query::Ptr q = planning_scene_collection_-&gt;createQuery();</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;  q-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> rem = planning_scene_collection_-&gt;removeMessages(q);</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;  RCLCPP_DEBUG(LOGGER, <span class="stringliteral">&quot;Removed %u PlanningScene messages (named &#39;%s&#39;)&quot;</span>, rem, scene_name.c_str());</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;}</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160; </div>
+<div class="line"><a name="l00398"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a65615e97604a32259a1519f45bc691cc">  398</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a65615e97604a32259a1519f45bc691cc">moveit_warehouse::PlanningSceneStorage::removePlanningQueries</a>(<span class="keyword">const</span> std::string&amp; scene_name)</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;{</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;  removePlanningResults(scene_name);</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;  Query::Ptr q = motion_plan_request_collection_-&gt;createQuery();</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;  q-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> rem = motion_plan_request_collection_-&gt;removeMessages(q);</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;  RCLCPP_DEBUG(LOGGER, <span class="stringliteral">&quot;Removed %u MotionPlanRequest messages for scene &#39;%s&#39;&quot;</span>, rem, scene_name.c_str());</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;}</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160; </div>
+<div class="line"><a name="l00407"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a1c710d76abcbca59a7ccf5bea1926778">  407</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a1c710d76abcbca59a7ccf5bea1926778">moveit_warehouse::PlanningSceneStorage::removePlanningQuery</a>(<span class="keyword">const</span> std::string&amp; scene_name,</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;                                                                 <span class="keyword">const</span> std::string&amp; query_name)</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;{</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;  removePlanningResults(scene_name, query_name);</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;  Query::Ptr q = motion_plan_request_collection_-&gt;createQuery();</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;  q-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;  q-&gt;append(MOTION_PLAN_REQUEST_ID_NAME, query_name);</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> rem = motion_plan_request_collection_-&gt;removeMessages(q);</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;  RCLCPP_DEBUG(LOGGER, <span class="stringliteral">&quot;Removed %u MotionPlanRequest messages for scene &#39;%s&#39;, query &#39;%s&#39;&quot;</span>, rem, scene_name.c_str(),</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;               query_name.c_str());</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;}</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160; </div>
+<div class="line"><a name="l00419"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#aa304c6e78e245a0d67020b16319c020e">  419</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#aa304c6e78e245a0d67020b16319c020e">moveit_warehouse::PlanningSceneStorage::removePlanningResults</a>(<span class="keyword">const</span> std::string&amp; scene_name)</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;{</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;  Query::Ptr q = robot_trajectory_collection_-&gt;createQuery();</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;  q-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> rem = robot_trajectory_collection_-&gt;removeMessages(q);</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;  RCLCPP_DEBUG(LOGGER, <span class="stringliteral">&quot;Removed %u RobotTrajectory messages for scene &#39;%s&#39;&quot;</span>, rem, scene_name.c_str());</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;}</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160; </div>
+<div class="line"><a name="l00427"></a><span class="lineno"><a class="line" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a287d4564671c0a4278568b8c14f91579">  427</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__warehouse_1_1PlanningSceneStorage.html#aa304c6e78e245a0d67020b16319c020e">moveit_warehouse::PlanningSceneStorage::removePlanningResults</a>(<span class="keyword">const</span> std::string&amp; scene_name,</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;                                                                   <span class="keyword">const</span> std::string&amp; query_name)</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;{</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;  Query::Ptr q = robot_trajectory_collection_-&gt;createQuery();</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;  q-&gt;append(PLANNING_SCENE_ID_NAME, scene_name);</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;  q-&gt;append(MOTION_PLAN_REQUEST_ID_NAME, query_name);</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> rem = robot_trajectory_collection_-&gt;removeMessages(q);</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;  RCLCPP_DEBUG(LOGGER, <span class="stringliteral">&quot;Removed %u RobotTrajectory messages for scene &#39;%s&#39;, query &#39;%s&#39;&quot;</span>, rem, scene_name.c_str(),</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;               query_name.c_str());</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_a0dc286b43f7c438a1323fc775c185b7a"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a0dc286b43f7c438a1323fc775c185b7a">moveit_warehouse::PlanningSceneStorage::removePlanningScene</a></div><div class="ttdeci">void removePlanningScene(const std::string &amp;scene_name)</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00373">planning_scene_storage.cpp:373</a></div></div>
+<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_a0dc286b43f7c438a1323fc775c185b7a"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a0dc286b43f7c438a1323fc775c185b7a">moveit_warehouse::PlanningSceneStorage::removePlanningScene</a></div><div class="ttdeci">void removePlanningScene(const std::string &amp;scene_name)</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00389">planning_scene_storage.cpp:389</a></div></div>
 <div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_a8ed13d912d8b98123ff9acc3a86ac2dd"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a8ed13d912d8b98123ff9acc3a86ac2dd">moveit_warehouse::PlanningSceneStorage::DATABASE_NAME</a></div><div class="ttdeci">static const std::string DATABASE_NAME</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8h_source.html#l00094">planning_scene_storage.h:94</a></div></div>
-<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_af5014412053aeff8443a4f83845bf2d7"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#af5014412053aeff8443a4f83845bf2d7">moveit_warehouse::PlanningSceneStorage::getPlanningScene</a></div><div class="ttdeci">bool getPlanningScene(PlanningSceneWithMetadata &amp;scene_m, const std::string &amp;scene_name) const</div><div class="ttdoc">Get the latest planning scene named scene_name.</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00222">planning_scene_storage.cpp:222</a></div></div>
-<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_a1c710d76abcbca59a7ccf5bea1926778"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a1c710d76abcbca59a7ccf5bea1926778">moveit_warehouse::PlanningSceneStorage::removePlanningQuery</a></div><div class="ttdeci">void removePlanningQuery(const std::string &amp;scene_name, const std::string &amp;query_name)</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00391">planning_scene_storage.cpp:391</a></div></div>
+<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_af5014412053aeff8443a4f83845bf2d7"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#af5014412053aeff8443a4f83845bf2d7">moveit_warehouse::PlanningSceneStorage::getPlanningScene</a></div><div class="ttdeci">bool getPlanningScene(PlanningSceneWithMetadata &amp;scene_m, const std::string &amp;scene_name) const</div><div class="ttdoc">Get the latest planning scene named scene_name.</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00226">planning_scene_storage.cpp:226</a></div></div>
+<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_a1c710d76abcbca59a7ccf5bea1926778"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a1c710d76abcbca59a7ccf5bea1926778">moveit_warehouse::PlanningSceneStorage::removePlanningQuery</a></div><div class="ttdeci">void removePlanningQuery(const std::string &amp;scene_name, const std::string &amp;query_name)</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00407">planning_scene_storage.cpp:407</a></div></div>
 <div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_aeee79786dd08067397959337489a021d"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#aeee79786dd08067397959337489a021d">moveit_warehouse::PlanningSceneStorage::MOTION_PLAN_REQUEST_ID_NAME</a></div><div class="ttdeci">static const std::string MOTION_PLAN_REQUEST_ID_NAME</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8h_source.html#l00097">planning_scene_storage.h:97</a></div></div>
-<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_a16a9dfe2badec685f9feba529b127edb"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a16a9dfe2badec685f9feba529b127edb">moveit_warehouse::PlanningSceneStorage::addPlanningQuery</a></div><div class="ttdeci">void addPlanningQuery(const moveit_msgs::msg::MotionPlanRequest &amp;planning_query, const std::string &amp;scene_name, const std::string &amp;query_name=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00135">planning_scene_storage.cpp:135</a></div></div>
-<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_a0666d5f969833f6d70c7a687bfa8eb33"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a0666d5f969833f6d70c7a687bfa8eb33">moveit_warehouse::PlanningSceneStorage::getPlanningSceneWorld</a></div><div class="ttdeci">bool getPlanningSceneWorld(moveit_msgs::msg::PlanningSceneWorld &amp;world, const std::string &amp;scene_name) const</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00209">planning_scene_storage.cpp:209</a></div></div>
-<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_a82bdecbcad6b6c5db8f305105d945364"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a82bdecbcad6b6c5db8f305105d945364">moveit_warehouse::PlanningSceneStorage::renamePlanningQuery</a></div><div class="ttdeci">void renamePlanningQuery(const std::string &amp;scene_name, const std::string &amp;old_query_name, const std::string &amp;new_query_name)</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00359">planning_scene_storage.cpp:359</a></div></div>
+<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_a16a9dfe2badec685f9feba529b127edb"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a16a9dfe2badec685f9feba529b127edb">moveit_warehouse::PlanningSceneStorage::addPlanningQuery</a></div><div class="ttdeci">void addPlanningQuery(const moveit_msgs::msg::MotionPlanRequest &amp;planning_query, const std::string &amp;scene_name, const std::string &amp;query_name=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00137">planning_scene_storage.cpp:137</a></div></div>
+<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_a0666d5f969833f6d70c7a687bfa8eb33"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a0666d5f969833f6d70c7a687bfa8eb33">moveit_warehouse::PlanningSceneStorage::getPlanningSceneWorld</a></div><div class="ttdeci">bool getPlanningSceneWorld(moveit_msgs::msg::PlanningSceneWorld &amp;world, const std::string &amp;scene_name) const</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00213">planning_scene_storage.cpp:213</a></div></div>
+<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_a82bdecbcad6b6c5db8f305105d945364"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a82bdecbcad6b6c5db8f305105d945364">moveit_warehouse::PlanningSceneStorage::renamePlanningQuery</a></div><div class="ttdeci">void renamePlanningQuery(const std::string &amp;scene_name, const std::string &amp;old_query_name, const std::string &amp;new_query_name)</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00375">planning_scene_storage.cpp:375</a></div></div>
 <div class="ttc" id="anamespacepick_html_a2ee00a4cb697b06d098335ade68b33ae"><div class="ttname"><a href="namespacepick.html#a2ee00a4cb697b06d098335ade68b33ae">pick.scene</a></div><div class="ttdeci">scene</div><div class="ttdef"><b>Definition:</b> <a href="pick_8py_source.html#l00052">pick.py:52</a></div></div>
-<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_aa304c6e78e245a0d67020b16319c020e"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#aa304c6e78e245a0d67020b16319c020e">moveit_warehouse::PlanningSceneStorage::removePlanningResults</a></div><div class="ttdeci">void removePlanningResults(const std::string &amp;scene_name)</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00403">planning_scene_storage.cpp:403</a></div></div>
-<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_a29e9056434405047560148b936d73c17"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a29e9056434405047560148b936d73c17">moveit_warehouse::PlanningSceneStorage::getPlanningResults</a></div><div class="ttdeci">void getPlanningResults(std::vector&lt; RobotTrajectoryWithMetadata &gt; &amp;planning_results, const std::string &amp;scene_name, const moveit_msgs::msg::MotionPlanRequest &amp;planning_query) const</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00317">planning_scene_storage.cpp:317</a></div></div>
+<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_aa304c6e78e245a0d67020b16319c020e"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#aa304c6e78e245a0d67020b16319c020e">moveit_warehouse::PlanningSceneStorage::removePlanningResults</a></div><div class="ttdeci">void removePlanningResults(const std::string &amp;scene_name)</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00419">planning_scene_storage.cpp:419</a></div></div>
+<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_a29e9056434405047560148b936d73c17"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a29e9056434405047560148b936d73c17">moveit_warehouse::PlanningSceneStorage::getPlanningResults</a></div><div class="ttdeci">void getPlanningResults(std::vector&lt; RobotTrajectoryWithMetadata &gt; &amp;planning_results, const std::string &amp;scene_name, const moveit_msgs::msg::MotionPlanRequest &amp;planning_query) const</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00329">planning_scene_storage.cpp:329</a></div></div>
 <div class="ttc" id="anamespaceplan_html_ab9a5624d048e6b841d11a5f223f02870"><div class="ttname"><a href="namespaceplan.html#ab9a5624d048e6b841d11a5f223f02870">plan.r</a></div><div class="ttdeci">r</div><div class="ttdef"><b>Definition:</b> <a href="plan_8py_source.html#l00056">plan.py:56</a></div></div>
 <div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_a74e7fd00debe0c3cb8b871f5abbbcfad"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a74e7fd00debe0c3cb8b871f5abbbcfad">moveit_warehouse::PlanningSceneStorage::PlanningSceneStorage</a></div><div class="ttdeci">PlanningSceneStorage(warehouse_ros::DatabaseConnection::Ptr conn)</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00052">planning_scene_storage.cpp:52</a></div></div>
-<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_a8fd40e9edf8d07ab914b84f055b6ccee"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a8fd40e9edf8d07ab914b84f055b6ccee">moveit_warehouse::PlanningSceneStorage::hasPlanningQuery</a></div><div class="ttdeci">bool hasPlanningQuery(const std::string &amp;scene_name, const std::string &amp;query_name) const</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00338">planning_scene_storage.cpp:338</a></div></div>
-<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_a7c95f3bcb0406dab88f46bbbcd8bf80f"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a7c95f3bcb0406dab88f46bbbcd8bf80f">moveit_warehouse::PlanningSceneStorage::addPlanningResult</a></div><div class="ttdeci">void addPlanningResult(const moveit_msgs::msg::MotionPlanRequest &amp;planning_query, const moveit_msgs::msg::RobotTrajectory &amp;result, const std::string &amp;scene_name)</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00178">planning_scene_storage.cpp:178</a></div></div>
+<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_a8fd40e9edf8d07ab914b84f055b6ccee"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a8fd40e9edf8d07ab914b84f055b6ccee">moveit_warehouse::PlanningSceneStorage::hasPlanningQuery</a></div><div class="ttdeci">bool hasPlanningQuery(const std::string &amp;scene_name, const std::string &amp;query_name) const</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00354">planning_scene_storage.cpp:354</a></div></div>
+<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_a7c95f3bcb0406dab88f46bbbcd8bf80f"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a7c95f3bcb0406dab88f46bbbcd8bf80f">moveit_warehouse::PlanningSceneStorage::addPlanningResult</a></div><div class="ttdeci">void addPlanningResult(const moveit_msgs::msg::MotionPlanRequest &amp;planning_query, const moveit_msgs::msg::RobotTrajectory &amp;result, const std::string &amp;scene_name)</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00180">planning_scene_storage.cpp:180</a></div></div>
 <div class="ttc" id="aplanning__scene__storage_8h_html"><div class="ttname"><a href="planning__scene__storage_8h.html">planning_scene_storage.h</a></div></div>
 <div class="ttc" id="anamespacesetup_html_ab3a7a0638d76a01367c5bc3cc699447f"><div class="ttname"><a href="namespacesetup.html#ab3a7a0638d76a01367c5bc3cc699447f">setup.name</a></div><div class="ttdeci">name</div><div class="ttdef"><b>Definition:</b> <a href="moveit__configs__utils_2setup_8py_source.html#l00007">setup.py:7</a></div></div>
-<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_a65615e97604a32259a1519f45bc691cc"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a65615e97604a32259a1519f45bc691cc">moveit_warehouse::PlanningSceneStorage::removePlanningQueries</a></div><div class="ttdeci">void removePlanningQueries(const std::string &amp;scene_name)</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00382">planning_scene_storage.cpp:382</a></div></div>
-<div class="ttc" id="anamespaceplanning__request__adapter_html_af64b3fa8ebc256d9c5133c6c80ade28f"><div class="ttname"><a href="namespaceplanning__request__adapter.html#af64b3fa8ebc256d9c5133c6c80ade28f">planning_request_adapter::LOGGER</a></div><div class="ttdeci">rclcpp::Logger LOGGER</div><div class="ttdef"><b>Definition:</b> <a href="planning__request__adapter_8cpp_source.html#l00076">planning_request_adapter.cpp:76</a></div></div>
-<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_ad3c19ca6a5ef7683beefff6f18913698"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#ad3c19ca6a5ef7683beefff6f18913698">moveit_warehouse::PlanningSceneStorage::renamePlanningScene</a></div><div class="ttdeci">void renamePlanningScene(const std::string &amp;old_scene_name, const std::string &amp;new_scene_name)</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00348">planning_scene_storage.cpp:348</a></div></div>
+<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_a65615e97604a32259a1519f45bc691cc"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a65615e97604a32259a1519f45bc691cc">moveit_warehouse::PlanningSceneStorage::removePlanningQueries</a></div><div class="ttdeci">void removePlanningQueries(const std::string &amp;scene_name)</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00398">planning_scene_storage.cpp:398</a></div></div>
+<div class="ttc" id="anamespaceplanning__request__adapter_html_af64b3fa8ebc256d9c5133c6c80ade28f"><div class="ttname"><a href="namespaceplanning__request__adapter.html#af64b3fa8ebc256d9c5133c6c80ade28f">planning_request_adapter::LOGGER</a></div><div class="ttdeci">rclcpp::Logger LOGGER</div><div class="ttdef"><b>Definition:</b> <a href="planning__request__adapter_8cpp_source.html#l00077">planning_request_adapter.cpp:77</a></div></div>
+<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_ad3c19ca6a5ef7683beefff6f18913698"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#ad3c19ca6a5ef7683beefff6f18913698">moveit_warehouse::PlanningSceneStorage::renamePlanningScene</a></div><div class="ttdeci">void renamePlanningScene(const std::string &amp;old_scene_name, const std::string &amp;new_scene_name)</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00364">planning_scene_storage.cpp:364</a></div></div>
 <div class="ttc" id="anamespacemoveit__warehouse_html_aef7ae2cdb77d30eb8747edd4f16c34b1"><div class="ttname"><a href="namespacemoveit__warehouse.html#aef7ae2cdb77d30eb8747edd4f16c34b1">moveit_warehouse::MotionPlanRequestWithMetadata</a></div><div class="ttdeci">warehouse_ros::MessageWithMetadata&lt; moveit_msgs::msg::MotionPlanRequest &gt;::ConstPtr MotionPlanRequestWithMetadata</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8h_source.html#l00082">planning_scene_storage.h:82</a></div></div>
 <div class="ttc" id="anamespaceplanning__interface_html_a1307e10a0a3b9ca03406d777b9a938a3"><div class="ttname"><a href="namespaceplanning__interface.html#a1307e10a0a3b9ca03406d777b9a938a3">planning_interface::MotionPlanRequest</a></div><div class="ttdeci">moveit_msgs::msg::MotionPlanRequest MotionPlanRequest</div><div class="ttdef"><b>Definition:</b> <a href="planning__request_8h_source.html#l00077">planning_request.h:77</a></div></div>
 <div class="ttc" id="aclassmoveit__warehouse_1_1MoveItMessageStorage_html"><div class="ttname"><a href="classmoveit__warehouse_1_1MoveItMessageStorage.html">moveit_warehouse::MoveItMessageStorage</a></div><div class="ttdoc">This class provides the mechanism to connect to a database and reads needed ROS parameters when appro...</div><div class="ttdef"><b>Definition:</b> <a href="moveit__message__storage_8h_source.html#l00079">moveit_message_storage.h:79</a></div></div>
-<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_ae698793cd3189e55acd56d3254384257"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#ae698793cd3189e55acd56d3254384257">moveit_warehouse::PlanningSceneStorage::getPlanningQueriesNames</a></div><div class="ttdeci">void getPlanningQueriesNames(std::vector&lt; std::string &gt; &amp;query_names, const std::string &amp;scene_name) const</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00268">planning_scene_storage.cpp:268</a></div></div>
+<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_ae698793cd3189e55acd56d3254384257"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#ae698793cd3189e55acd56d3254384257">moveit_warehouse::PlanningSceneStorage::getPlanningQueriesNames</a></div><div class="ttdeci">void getPlanningQueriesNames(std::vector&lt; std::string &gt; &amp;query_names, const std::string &amp;scene_name) const</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00272">planning_scene_storage.cpp:272</a></div></div>
 <div class="ttc" id="anamespacemoveit__warehouse_html_a27b8025d106e8cae5c30dd5fb61f0a05"><div class="ttname"><a href="namespacemoveit__warehouse.html#a27b8025d106e8cae5c30dd5fb61f0a05">moveit_warehouse::PlanningSceneWithMetadata</a></div><div class="ttdeci">warehouse_ros::MessageWithMetadata&lt; moveit_msgs::msg::PlanningScene &gt;::ConstPtr PlanningSceneWithMetadata</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8h_source.html#l00081">planning_scene_storage.h:81</a></div></div>
-<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_ade312ff93b5fa23a28a45837706c55b1"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#ade312ff93b5fa23a28a45837706c55b1">moveit_warehouse::PlanningSceneStorage::getPlanningSceneNames</a></div><div class="ttdeci">void getPlanningSceneNames(std::vector&lt; std::string &gt; &amp;names) const</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00191">planning_scene_storage.cpp:191</a></div></div>
-<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_ac38090f120f5068fa3ec7984c2027d9d"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#ac38090f120f5068fa3ec7984c2027d9d">moveit_warehouse::PlanningSceneStorage::getPlanningQuery</a></div><div class="ttdeci">bool getPlanningQuery(MotionPlanRequestWithMetadata &amp;query_m, const std::string &amp;scene_name, const std::string &amp;query_name)</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00240">planning_scene_storage.cpp:240</a></div></div>
+<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_ade312ff93b5fa23a28a45837706c55b1"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#ade312ff93b5fa23a28a45837706c55b1">moveit_warehouse::PlanningSceneStorage::getPlanningSceneNames</a></div><div class="ttdeci">void getPlanningSceneNames(std::vector&lt; std::string &gt; &amp;names) const</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00193">planning_scene_storage.cpp:193</a></div></div>
+<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_ac38090f120f5068fa3ec7984c2027d9d"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#ac38090f120f5068fa3ec7984c2027d9d">moveit_warehouse::PlanningSceneStorage::getPlanningQuery</a></div><div class="ttdeci">bool getPlanningQuery(MotionPlanRequestWithMetadata &amp;query_m, const std::string &amp;scene_name, const std::string &amp;query_name)</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00244">planning_scene_storage.cpp:244</a></div></div>
 <div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_a88cd7b09833dec4b96f7d9b77c45ac61"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a88cd7b09833dec4b96f7d9b77c45ac61">moveit_warehouse::PlanningSceneStorage::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00068">planning_scene_storage.cpp:68</a></div></div>
-<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_aa1329b2f07e068f32a15e2ef11ce9993"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#aa1329b2f07e068f32a15e2ef11ce9993">moveit_warehouse::PlanningSceneStorage::getPlanningQueries</a></div><div class="ttdeci">void getPlanningQueries(std::vector&lt; MotionPlanRequestWithMetadata &gt; &amp;planning_queries, const std::string &amp;scene_name) const</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00260">planning_scene_storage.cpp:260</a></div></div>
+<div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_aa1329b2f07e068f32a15e2ef11ce9993"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#aa1329b2f07e068f32a15e2ef11ce9993">moveit_warehouse::PlanningSceneStorage::getPlanningQueries</a></div><div class="ttdeci">void getPlanningQueries(std::vector&lt; MotionPlanRequestWithMetadata &gt; &amp;planning_queries, const std::string &amp;scene_name) const</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00264">planning_scene_storage.cpp:264</a></div></div>
 <div class="ttc" id="anamespaceplanning__scene_html"><div class="ttname"><a href="namespaceplanning__scene.html">planning_scene</a></div><div class="ttdoc">This namespace includes the central class for representing planning contexts.</div><div class="ttdef"><b>Definition:</b> <a href="planning__interface_8h_source.html#l00047">planning_interface.h:47</a></div></div>
 <div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_aedbbc7d951d8c25abea4568164462258"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#aedbbc7d951d8c25abea4568164462258">moveit_warehouse::PlanningSceneStorage::hasPlanningScene</a></div><div class="ttdeci">bool hasPlanningScene(const std::string &amp;name) const</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8cpp_source.html#l00091">planning_scene_storage.cpp:91</a></div></div>
 <div class="ttc" id="aclassmoveit__warehouse_1_1PlanningSceneStorage_html_a224762734d8f24c791b8bdac9265c2b8"><div class="ttname"><a href="classmoveit__warehouse_1_1PlanningSceneStorage.html#a224762734d8f24c791b8bdac9265c2b8">moveit_warehouse::PlanningSceneStorage::PLANNING_SCENE_ID_NAME</a></div><div class="ttdeci">static const std::string PLANNING_SCENE_ID_NAME</div><div class="ttdef"><b>Definition:</b> <a href="planning__scene__storage_8h_source.html#l00096">planning_scene_storage.h:96</a></div></div>

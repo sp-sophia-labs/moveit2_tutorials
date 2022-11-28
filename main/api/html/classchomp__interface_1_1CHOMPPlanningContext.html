@@ -110,8 +110,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4e1a85b20ef0b7813f9dc73908a57952"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classchomp__interface_1_1CHOMPPlanningContext.html#a4e1a85b20ef0b7813f9dc73908a57952">terminate</a> () override</td></tr>
 <tr class="memdesc:a4e1a85b20ef0b7813f9dc73908a57952"><td class="mdescLeft">&#160;</td><td class="mdescRight">If <a class="el" href="classchomp__interface_1_1CHOMPPlanningContext.html#af657437b44bf4b529074ca3aeab7c4a7" title="Solve the motion planning problem and store the result in res. This function should not clear data st...">solve()</a> is running, terminate the computation. Return false if termination not possible. No-op if <a class="el" href="classchomp__interface_1_1CHOMPPlanningContext.html#af657437b44bf4b529074ca3aeab7c4a7" title="Solve the motion planning problem and store the result in res. This function should not clear data st...">solve()</a> is not running (returns true).  <a href="classchomp__interface_1_1CHOMPPlanningContext.html#a4e1a85b20ef0b7813f9dc73908a57952">More...</a><br /></td></tr>
 <tr class="separator:a4e1a85b20ef0b7813f9dc73908a57952"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a651cc9ce65980cdfb3b8a5b82c667cf1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classchomp__interface_1_1CHOMPPlanningContext.html#a651cc9ce65980cdfb3b8a5b82c667cf1">CHOMPPlanningContext</a> (const std::string &amp;name, const std::string &amp;group, const moveit::core::RobotModelConstPtr &amp;model, rclcpp::Node::SharedPtr node)</td></tr>
-<tr class="separator:a651cc9ce65980cdfb3b8a5b82c667cf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbee931fc3d115ab22cedb72882d4db1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classchomp__interface_1_1CHOMPPlanningContext.html#adbee931fc3d115ab22cedb72882d4db1">CHOMPPlanningContext</a> (const std::string &amp;name, const std::string &amp;group, const moveit::core::RobotModelConstPtr &amp;model, const rclcpp::Node::SharedPtr &amp;node)</td></tr>
+<tr class="separator:adbee931fc3d115ab22cedb72882d4db1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa24745645049d53de977c97fa2bf4d5f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classchomp__interface_1_1CHOMPPlanningContext.html#aa24745645049d53de977c97fa2bf4d5f">~CHOMPPlanningContext</a> () override=default</td></tr>
 <tr class="separator:aa24745645049d53de977c97fa2bf4d5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf3f59c2e9730fd2991ee60b8a458282"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classchomp__interface_1_1CHOMPPlanningContext.html#abf3f59c2e9730fd2991ee60b8a458282">initialize</a> ()</td></tr>
@@ -161,8 +161,8 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="chomp__planning__context_8h_source.html#l00080">80</a> of file <a class="el" href="chomp__planning__context_8h_source.html">chomp_planning_context.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a651cc9ce65980cdfb3b8a5b82c667cf1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a651cc9ce65980cdfb3b8a5b82c667cf1">&#9670;&nbsp;</a></span>CHOMPPlanningContext()</h2>
+<a id="adbee931fc3d115ab22cedb72882d4db1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbee931fc3d115ab22cedb72882d4db1">&#9670;&nbsp;</a></span>CHOMPPlanningContext()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -188,7 +188,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">rclcpp::Node::SharedPtr&#160;</td>
+          <td class="paramtype">const rclcpp::Node::SharedPtr &amp;&#160;</td>
           <td class="paramname"><em>node</em>&#160;</td>
         </tr>
         <tr>
@@ -256,7 +256,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classplanning__interface_1_1PlanningContext.html#a92cfedf0e29ce7596c9bff24cee04b0f">planning_interface::PlanningContext</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="chomp__planning__context_8cpp_source.html#l00108">108</a> of file <a class="el" href="chomp__planning__context_8cpp_source.html">chomp_planning_context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chomp__planning__context_8cpp_source.html#l00109">109</a> of file <a class="el" href="chomp__planning__context_8cpp_source.html">chomp_planning_context.cpp</a>.</p>
 
 </div>
 </div>
@@ -305,7 +305,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classplanning__interface_1_1PlanningContext.html#a7590fdf69a8cf0801799e802f9ea4d08">planning_interface::PlanningContext</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="chomp__planning__context_8cpp_source.html#l00081">81</a> of file <a class="el" href="chomp__planning__context_8cpp_source.html">chomp_planning_context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chomp__planning__context_8cpp_source.html#l00082">82</a> of file <a class="el" href="chomp__planning__context_8cpp_source.html">chomp_planning_context.cpp</a>.</p>
 
 </div>
 </div>
@@ -337,7 +337,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classplanning__interface_1_1PlanningContext.html#af3d95dd741609c58847bd312b8b033e0">planning_interface::PlanningContext</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="chomp__planning__context_8cpp_source.html#l00086">86</a> of file <a class="el" href="chomp__planning__context_8cpp_source.html">chomp_planning_context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chomp__planning__context_8cpp_source.html#l00087">87</a> of file <a class="el" href="chomp__planning__context_8cpp_source.html">chomp_planning_context.cpp</a>.</p>
 
 </div>
 </div>
@@ -368,7 +368,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implements <a class="el" href="classplanning__interface_1_1PlanningContext.html#a79272b058a0eeb78e64179cd044d779d">planning_interface::PlanningContext</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="chomp__planning__context_8cpp_source.html#l00102">102</a> of file <a class="el" href="chomp__planning__context_8cpp_source.html">chomp_planning_context.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="chomp__planning__context_8cpp_source.html#l00103">103</a> of file <a class="el" href="chomp__planning__context_8cpp_source.html">chomp_planning_context.cpp</a>.</p>
 
 </div>
 </div>

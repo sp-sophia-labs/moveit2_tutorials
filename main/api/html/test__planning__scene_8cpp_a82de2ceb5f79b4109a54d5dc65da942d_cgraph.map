@@ -1,4 +1,7 @@
 <map id="get_collision_objects_names" name="get_collision_objects_names">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,164,47"/>
-<area shape="rect" id="node2" href="$classplanning__scene_1_1PlanningScene.html#a510692917f61e707ede37c2899312139" title="Construct a vector of messages (collision_objects) with the collision object data for all objects in ..." alt="" coords="212,5,435,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,71,164,112"/>
+<area shape="rect" id="node2" href="$classplanning__scene_1_1PlanningScene.html#a510692917f61e707ede37c2899312139" title="Construct a vector of messages (collision_objects) with the collision object data for all objects in ..." alt="" coords="212,71,435,112"/>
+<area shape="rect" id="node3" href="$namespacemoveit_1_1core.html#a6fc54b52fbf87b115d32a4fe475b80fd" title="Convert AttachedBodies to AttachedCollisionObjects." alt="" coords="483,5,709,47"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1RobotState.html#a449158e2e8aeba947bbc1a4473400ff7" title="Get all bodies attached to the model corresponding to this state." alt="" coords="504,71,688,112"/>
+<area shape="rect" id="node5" href="$classplanning__scene_1_1PlanningScene.html#ab4de68060bb1d854e4d37f26436b7ebb" title="Get the state at which the robot is assumed to be." alt="" coords="503,136,689,177"/>
 </map>

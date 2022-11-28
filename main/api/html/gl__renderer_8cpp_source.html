@@ -362,177 +362,179 @@ $(function() {
 <div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;<span class="keywordtype">void</span> mesh_filter::GLRenderer::readShaderCodeFromFile(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; filename, <span class="keywordtype">string</span>&amp; shader)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  <span class="keywordflow">if</span> (filename.empty())</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    shader = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  {</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="keywordtype">string</span> shader_code;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    fstream shader_file(filename.c_str(), ios::in);</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordflow">if</span> (shader_file.is_open())</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    {</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;      stringstream buffer;</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;      buffer &lt;&lt; shader_file.rdbuf();</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;      shader = buffer.str();</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    }</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    {</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;      stringstream error_stream;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;      error_stream &lt;&lt; <span class="stringliteral">&quot;Could not open shader code in file \&quot;&quot;</span> &lt;&lt; filename &lt;&lt; <span class="stringliteral">&quot;\&quot;&quot;</span>;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;      <span class="keywordflow">throw</span> runtime_error(error_stream.str());</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    }</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  }</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;}</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160; </div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;GLuint mesh_filter::GLRenderer::loadShaders(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; vertex_source, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; fragment_source)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  <span class="keywordflow">if</span> (vertex_source.empty() &amp;&amp; fragment_source.empty())</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160; </div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  GLuint program_id = glCreateProgram();</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;  GLuint vertex_shader_id = 0;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;  GLuint fragment_shader_id = 0;</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  <span class="keywordflow">if</span> (!vertex_source.empty())</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;  {</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    GLuint vertex_shader_id = createShader(GL_VERTEX_SHADER, vertex_source);</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    glAttachShader(program_id, vertex_shader_id);</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  }</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160; </div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;  <span class="keywordflow">if</span> (!fragment_source.empty())</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;  {</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    GLuint fragment_shader_id = createShader(GL_FRAGMENT_SHADER, fragment_source);</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    glAttachShader(program_id, fragment_shader_id);</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;  }</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;  glLinkProgram(program_id);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    shader = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  }</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  {</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordtype">string</span> shader_code;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    fstream shader_file(filename.c_str(), ios::in);</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordflow">if</span> (shader_file.is_open())</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    {</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;      stringstream buffer;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;      buffer &lt;&lt; shader_file.rdbuf();</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;      shader = buffer.str();</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    }</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    {</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;      stringstream error_stream;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;      error_stream &lt;&lt; <span class="stringliteral">&quot;Could not open shader code in file \&quot;&quot;</span> &lt;&lt; filename &lt;&lt; <span class="stringliteral">&quot;\&quot;&quot;</span>;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;      <span class="keywordflow">throw</span> runtime_error(error_stream.str());</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    }</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  }</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;}</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;GLuint mesh_filter::GLRenderer::loadShaders(<span class="keyword">const</span> <span class="keywordtype">string</span>&amp; vertex_source, <span class="keyword">const</span> <span class="keywordtype">string</span>&amp; fragment_source)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  <span class="keywordflow">if</span> (vertex_source.empty() &amp;&amp; fragment_source.empty())</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;  GLuint program_id = glCreateProgram();</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  GLuint vertex_shader_id = 0;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  GLuint fragment_shader_id = 0;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;  <span class="keywordflow">if</span> (!vertex_source.empty())</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;  {</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    GLuint vertex_shader_id = createShader(GL_VERTEX_SHADER, vertex_source);</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    glAttachShader(program_id, vertex_shader_id);</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;  }</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;  <span class="keywordflow">if</span> (!fragment_source.empty())</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;  {</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    GLuint fragment_shader_id = createShader(GL_FRAGMENT_SHADER, fragment_source);</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    glAttachShader(program_id, fragment_shader_id);</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;  }</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160; </div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;  <span class="comment">// Check the program</span></div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;  GLint result = GL_FALSE;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;  GLint info_log_length;</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;  glGetProgramiv(program_id, GL_LINK_STATUS, &amp;result);</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;  glGetProgramiv(program_id, GL_INFO_LOG_LENGTH, &amp;info_log_length);</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;  <span class="keywordflow">if</span> (info_log_length &gt; 0)</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;  {</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    vector&lt;char&gt; program_error_message(info_log_length + 1);</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    glGetProgramInfoLog(program_id, info_log_length, <span class="keyword">nullptr</span>, &amp;program_error_message[0]);</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    std::size_t l = strnlen(&amp;program_error_message[0], program_error_message.size());</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordflow">if</span> (l &gt; 0)</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;      RCLCPP_ERROR(LOGGER, <span class="stringliteral">&quot;%s\n&quot;</span>, &amp;program_error_message[0]);</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;  }</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160; </div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;  <span class="keywordflow">if</span> (vertex_shader_id)</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    glDeleteShader(vertex_shader_id);</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;  <span class="keywordflow">if</span> (fragment_shader_id)</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    glDeleteShader(fragment_shader_id);</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160; </div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;  <span class="keywordflow">return</span> program_id;</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;}</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160; </div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;map&lt;std::thread::id, pair&lt;unsigned, GLuint&gt; &gt; mesh_filter::GLRenderer::context_;</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;std::mutex mesh_filter::GLRenderer::context_lock_;</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;<span class="keywordtype">bool</span> mesh_filter::GLRenderer::glutInitialized_ = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160; </div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="keyword">namespace</span></div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;{</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;<span class="keywordtype">void</span> nullDisplayFunction()</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;  glLinkProgram(program_id);</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160; </div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;  <span class="comment">// Check the program</span></div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;  GLint result = GL_FALSE;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;  GLint info_log_length;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;  glGetProgramiv(program_id, GL_LINK_STATUS, &amp;result);</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;  glGetProgramiv(program_id, GL_INFO_LOG_LENGTH, &amp;info_log_length);</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;  <span class="keywordflow">if</span> (info_log_length &gt; 0)</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;  {</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    vector&lt;char&gt; program_error_message(info_log_length + 1);</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    glGetProgramInfoLog(program_id, info_log_length, <span class="keyword">nullptr</span>, &amp;program_error_message[0]);</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    std::size_t l = strnlen(&amp;program_error_message[0], program_error_message.size());</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="keywordflow">if</span> (l &gt; 0)</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;      RCLCPP_ERROR(LOGGER, <span class="stringliteral">&quot;%s\n&quot;</span>, &amp;program_error_message[0]);</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;  }</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160; </div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;  <span class="keywordflow">if</span> (vertex_shader_id)</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    glDeleteShader(vertex_shader_id);</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160; </div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;  <span class="keywordflow">if</span> (fragment_shader_id)</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    glDeleteShader(fragment_shader_id);</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160; </div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;  <span class="keywordflow">return</span> program_id;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;}</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160; </div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;map&lt;std::thread::id, pair&lt;unsigned, GLuint&gt; &gt; mesh_filter::GLRenderer::context_;</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;std::mutex mesh_filter::GLRenderer::context_lock_;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="keywordtype">bool</span> mesh_filter::GLRenderer::glutInitialized_ = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160; </div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;<span class="keyword">namespace</span></div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;{</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;}</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;}  <span class="comment">// namespace</span></div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160; </div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<span class="keywordtype">void</span> mesh_filter::GLRenderer::createGLContext()</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;{</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;  std::unique_lock&lt;std::mutex&gt; _(context_lock_);</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;  <span class="keywordflow">if</span> (!glutInitialized_)</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;  {</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <span class="keywordtype">char</span> buffer[1];</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <span class="keywordtype">char</span>* <a class="code" href="namespacemoveit__benchmark__statistics.html#af7da173b56c68aaaf775a442f98e347a">args</a> = buffer;</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="keywordtype">int</span> n = 1;</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160; </div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    glutInit(&amp;n, &amp;<a class="code" href="namespacemoveit__benchmark__statistics.html#af7da173b56c68aaaf775a442f98e347a">args</a>);</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB | GLUT_DEPTH);</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    glutInitialized_ = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  }</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160; </div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;  <span class="comment">// check if our thread is initialized</span></div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;  std::thread::id thread_id = std::this_thread::get_id();</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;  map&lt;std::thread::id, pair&lt;unsigned, GLuint&gt; &gt;::iterator context_it = context_.find(thread_id);</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160; </div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;  <span class="keywordflow">if</span> (context_it == context_.end())</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;  {</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    context_[thread_id] = std::pair&lt;unsigned, GLuint&gt;(1, 0);</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160; </div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    glutInitWindowPosition(glutGet(GLUT_SCREEN_WIDTH) + 30000, 0);</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    glutInitWindowSize(1, 1);</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    GLuint window_id = glutCreateWindow(<span class="stringliteral">&quot;mesh_filter&quot;</span>);</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    glutDisplayFunc(nullDisplayFunction);</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160; </div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    GLenum err = glewInit();</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keywordflow">if</span> (GLEW_OK != err)</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    {</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;      stringstream error_stream;</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;      error_stream &lt;&lt; <span class="stringliteral">&quot;Unable to initialize GLEW: &quot;</span> &lt;&lt; glewGetErrorString(err);</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160; </div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;      <span class="keywordflow">throw</span>(runtime_error(error_stream.str()));</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    }</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;    glutIconifyWindow();</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    glutHideWindow();</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160; </div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 10; ++i)</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;      glutMainLoopEvent();</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160; </div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    context_[thread_id] = std::pair&lt;unsigned, GLuint&gt;(1, window_id);</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;  }</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    ++(context_it-&gt;second.first);</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;}</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160; </div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;<span class="keywordtype">void</span> mesh_filter::GLRenderer::deleteGLContext()</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;{</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;  std::unique_lock&lt;std::mutex&gt; _(context_lock_);</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;  std::thread::id thread_id = std::this_thread::get_id();</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;  map&lt;std::thread::id, pair&lt;unsigned, GLuint&gt; &gt;::iterator context_it = context_.find(thread_id);</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;  <span class="keywordflow">if</span> (context_it == context_.end())</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;  {</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    stringstream error_msg;</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    error_msg &lt;&lt; <span class="stringliteral">&quot;No OpenGL context exists for Thread &quot;</span> &lt;&lt; thread_id;</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    <span class="keywordflow">throw</span> runtime_error(error_msg.str());</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;  }</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160; </div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;  <span class="keywordflow">if</span> (--(context_it-&gt;second.first) == 0)</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;  {</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;    glutDestroyWindow(context_it-&gt;second.second);</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    context_.erase(context_it);</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;  }</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;}</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160; </div>
-<div class="line"><a name="l00435"></a><span class="lineno"><a class="line" href="classmesh__filter_1_1GLRenderer.html#a3b4cadb085fec3123e3f1b5d5fbd5432">  435</a></span>&#160;GLuint <a class="code" href="classmesh__filter_1_1GLRenderer.html#a3b4cadb085fec3123e3f1b5d5fbd5432">mesh_filter::GLRenderer::getColorTexture</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;  <span class="keywordflow">return</span> rgb_id_;</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;}</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160; </div>
-<div class="line"><a name="l00440"></a><span class="lineno"><a class="line" href="classmesh__filter_1_1GLRenderer.html#a47c408ebecefce0bce1b12b388adcc69">  440</a></span>&#160;GLuint <a class="code" href="classmesh__filter_1_1GLRenderer.html#a47c408ebecefce0bce1b12b388adcc69">mesh_filter::GLRenderer::getDepthTexture</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;  <span class="keywordflow">return</span> depth_id_;</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;}</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160; </div>
-<div class="line"><a name="l00445"></a><span class="lineno"><a class="line" href="classmesh__filter_1_1GLRenderer.html#a4a3858bac19810cf2e87b392e7b6c35c">  445</a></span>&#160;<span class="keywordtype">unsigned</span> <a class="code" href="classmesh__filter_1_1GLRenderer.html#a4a3858bac19810cf2e87b392e7b6c35c">mesh_filter::GLRenderer::getWidth</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;  <span class="keywordflow">return</span> width_;</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;}</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160; </div>
-<div class="line"><a name="l00450"></a><span class="lineno"><a class="line" href="classmesh__filter_1_1GLRenderer.html#ac30359d6f24593ad9cfc19cd5b9b9a72">  450</a></span>&#160;<span class="keywordtype">unsigned</span> <a class="code" href="classmesh__filter_1_1GLRenderer.html#ac30359d6f24593ad9cfc19cd5b9b9a72">mesh_filter::GLRenderer::getHeight</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;  <span class="keywordflow">return</span> height_;</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;}</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="keywordtype">void</span> nullDisplayFunction()</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;{</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;}</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;}  <span class="comment">// namespace</span></div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160; </div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="keywordtype">void</span> mesh_filter::GLRenderer::createGLContext()</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;{</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;  std::unique_lock&lt;std::mutex&gt; _(context_lock_);</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;  <span class="keywordflow">if</span> (!glutInitialized_)</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;  {</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="keywordtype">char</span> buffer[1];</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="keywordtype">char</span>* <a class="code" href="namespacemoveit__benchmark__statistics.html#af7da173b56c68aaaf775a442f98e347a">args</a> = buffer;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keywordtype">int</span> n = 1;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160; </div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    glutInit(&amp;n, &amp;<a class="code" href="namespacemoveit__benchmark__statistics.html#af7da173b56c68aaaf775a442f98e347a">args</a>);</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB | GLUT_DEPTH);</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    glutInitialized_ = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;  }</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160; </div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;  <span class="comment">// check if our thread is initialized</span></div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;  std::thread::id thread_id = std::this_thread::get_id();</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;  map&lt;std::thread::id, pair&lt;unsigned, GLuint&gt; &gt;::iterator context_it = context_.find(thread_id);</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160; </div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;  <span class="keywordflow">if</span> (context_it == context_.end())</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;  {</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    context_[thread_id] = std::pair&lt;unsigned, GLuint&gt;(1, 0);</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160; </div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    glutInitWindowPosition(glutGet(GLUT_SCREEN_WIDTH) + 30000, 0);</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    glutInitWindowSize(1, 1);</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    GLuint window_id = glutCreateWindow(<span class="stringliteral">&quot;mesh_filter&quot;</span>);</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    glutDisplayFunc(nullDisplayFunction);</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160; </div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    GLenum err = glewInit();</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    <span class="keywordflow">if</span> (GLEW_OK != err)</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    {</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;      stringstream error_stream;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;      error_stream &lt;&lt; <span class="stringliteral">&quot;Unable to initialize GLEW: &quot;</span> &lt;&lt; glewGetErrorString(err);</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160; </div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;      <span class="keywordflow">throw</span>(runtime_error(error_stream.str()));</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    }</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    glutIconifyWindow();</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    glutHideWindow();</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160; </div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 10; ++i)</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;      glutMainLoopEvent();</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160; </div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    context_[thread_id] = std::pair&lt;unsigned, GLuint&gt;(1, window_id);</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;  }</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;    ++(context_it-&gt;second.first);</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;}</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160; </div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;<span class="keywordtype">void</span> mesh_filter::GLRenderer::deleteGLContext()</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;{</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;  std::unique_lock&lt;std::mutex&gt; _(context_lock_);</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;  std::thread::id thread_id = std::this_thread::get_id();</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;  map&lt;std::thread::id, pair&lt;unsigned, GLuint&gt; &gt;::iterator context_it = context_.find(thread_id);</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;  <span class="keywordflow">if</span> (context_it == context_.end())</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;  {</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    stringstream error_msg;</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    error_msg &lt;&lt; <span class="stringliteral">&quot;No OpenGL context exists for Thread &quot;</span> &lt;&lt; thread_id;</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    <span class="keywordflow">throw</span> runtime_error(error_msg.str());</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;  }</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160; </div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;  <span class="keywordflow">if</span> (--(context_it-&gt;second.first) == 0)</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;  {</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;    glutDestroyWindow(context_it-&gt;second.second);</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    context_.erase(context_it);</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;  }</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;}</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160; </div>
+<div class="line"><a name="l00437"></a><span class="lineno"><a class="line" href="classmesh__filter_1_1GLRenderer.html#a3b4cadb085fec3123e3f1b5d5fbd5432">  437</a></span>&#160;GLuint <a class="code" href="classmesh__filter_1_1GLRenderer.html#a3b4cadb085fec3123e3f1b5d5fbd5432">mesh_filter::GLRenderer::getColorTexture</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;  <span class="keywordflow">return</span> rgb_id_;</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;}</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160; </div>
+<div class="line"><a name="l00442"></a><span class="lineno"><a class="line" href="classmesh__filter_1_1GLRenderer.html#a47c408ebecefce0bce1b12b388adcc69">  442</a></span>&#160;GLuint <a class="code" href="classmesh__filter_1_1GLRenderer.html#a47c408ebecefce0bce1b12b388adcc69">mesh_filter::GLRenderer::getDepthTexture</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;  <span class="keywordflow">return</span> depth_id_;</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;}</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160; </div>
+<div class="line"><a name="l00447"></a><span class="lineno"><a class="line" href="classmesh__filter_1_1GLRenderer.html#a4a3858bac19810cf2e87b392e7b6c35c">  447</a></span>&#160;<span class="keywordtype">unsigned</span> <a class="code" href="classmesh__filter_1_1GLRenderer.html#a4a3858bac19810cf2e87b392e7b6c35c">mesh_filter::GLRenderer::getWidth</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;  <span class="keywordflow">return</span> width_;</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;}</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160; </div>
+<div class="line"><a name="l00452"></a><span class="lineno"><a class="line" href="classmesh__filter_1_1GLRenderer.html#ac30359d6f24593ad9cfc19cd5b9b9a72">  452</a></span>&#160;<span class="keywordtype">unsigned</span> <a class="code" href="classmesh__filter_1_1GLRenderer.html#ac30359d6f24593ad9cfc19cd5b9b9a72">mesh_filter::GLRenderer::getHeight</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;  <span class="keywordflow">return</span> height_;</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassmesh__filter_1_1GLRenderer_html_ac2f283e1fd228485f6d8066d437bcbbe"><div class="ttname"><a href="classmesh__filter_1_1GLRenderer.html#ac2f283e1fd228485f6d8066d437bcbbe">mesh_filter::GLRenderer::getColorBuffer</a></div><div class="ttdeci">void getColorBuffer(unsigned char *buffer) const</div><div class="ttdoc">retrieves the color buffer from OpenGL</div><div class="ttdef"><b>Definition:</b> <a href="gl__renderer_8cpp_source.html#l00209">gl_renderer.cpp:209</a></div></div>
 <div class="ttc" id="aclassmesh__filter_1_1GLRenderer_html_ac014a369ec4c6a6100aa0fa43b4aad60"><div class="ttname"><a href="classmesh__filter_1_1GLRenderer.html#ac014a369ec4c6a6100aa0fa43b4aad60">mesh_filter::GLRenderer::setClippingRange</a></div><div class="ttdeci">void setClippingRange(float near, float far)</div><div class="ttdoc">sets the near and far clipping plane distances in meters</div><div class="ttdef"><b>Definition:</b> <a href="gl__renderer_8cpp_source.html#l00095">gl_renderer.cpp:95</a></div></div>
 <div class="ttc" id="aclassmesh__filter_1_1GLRenderer_html_a277ac95d491ba30ee3d7a51a2938c7df"><div class="ttname"><a href="classmesh__filter_1_1GLRenderer.html#a277ac95d491ba30ee3d7a51a2938c7df">mesh_filter::GLRenderer::getDepthBuffer</a></div><div class="ttdeci">void getDepthBuffer(float *buffer) const</div><div class="ttdoc">retrieves the depth buffer from OpenGL</div><div class="ttdef"><b>Definition:</b> <a href="gl__renderer_8cpp_source.html#l00217">gl_renderer.cpp:217</a></div></div>
 <div class="ttc" id="aclassmesh__filter_1_1GLRenderer_html_a33a8cc093fba5384d03694a82f22dae7"><div class="ttname"><a href="classmesh__filter_1_1GLRenderer.html#a33a8cc093fba5384d03694a82f22dae7">mesh_filter::GLRenderer::callList</a></div><div class="ttdeci">void callList(GLuint list) const</div><div class="ttdoc">executes a OpenGL list</div><div class="ttdef"><b>Definition:</b> <a href="gl__renderer_8cpp_source.html#l00195">gl_renderer.cpp:195</a></div></div>
-<div class="ttc" id="aclassmesh__filter_1_1GLRenderer_html_a3b4cadb085fec3123e3f1b5d5fbd5432"><div class="ttname"><a href="classmesh__filter_1_1GLRenderer.html#a3b4cadb085fec3123e3f1b5d5fbd5432">mesh_filter::GLRenderer::getColorTexture</a></div><div class="ttdeci">GLuint getColorTexture() const</div><div class="ttdoc">returns the handle of the color buffer as an OpenGL texture object</div><div class="ttdef"><b>Definition:</b> <a href="gl__renderer_8cpp_source.html#l00435">gl_renderer.cpp:435</a></div></div>
+<div class="ttc" id="aclassmesh__filter_1_1GLRenderer_html_a3b4cadb085fec3123e3f1b5d5fbd5432"><div class="ttname"><a href="classmesh__filter_1_1GLRenderer.html#a3b4cadb085fec3123e3f1b5d5fbd5432">mesh_filter::GLRenderer::getColorTexture</a></div><div class="ttdeci">GLuint getColorTexture() const</div><div class="ttdoc">returns the handle of the color buffer as an OpenGL texture object</div><div class="ttdef"><b>Definition:</b> <a href="gl__renderer_8cpp_source.html#l00437">gl_renderer.cpp:437</a></div></div>
 <div class="ttc" id="aclassmesh__filter_1_1GLRenderer_html_a67947397417b548917a05434f8f078b2"><div class="ttname"><a href="classmesh__filter_1_1GLRenderer.html#a67947397417b548917a05434f8f078b2">mesh_filter::GLRenderer::end</a></div><div class="ttdeci">void end() const</div><div class="ttdoc">finalizes the frame buffers after rendering and/or manipulating</div><div class="ttdef"><b>Definition:</b> <a href="gl__renderer_8cpp_source.html#l00202">gl_renderer.cpp:202</a></div></div>
 <div class="ttc" id="aclassmesh__filter_1_1GLRenderer_html_ae7dfa6fe5f91836e86ad732ae8f88af7"><div class="ttname"><a href="classmesh__filter_1_1GLRenderer.html#ae7dfa6fe5f91836e86ad732ae8f88af7">mesh_filter::GLRenderer::setShadersFromString</a></div><div class="ttdeci">GLuint setShadersFromString(const std::string &amp;vertex_shader, const std::string &amp;fragment_shader)</div><div class="ttdoc">loads, compiles, links and adds GLSL shaders from string to the current OpenGL context.</div><div class="ttdef"><b>Definition:</b> <a href="gl__renderer_8cpp_source.html#l00238">gl_renderer.cpp:238</a></div></div>
-<div class="ttc" id="aclassmesh__filter_1_1GLRenderer_html_a47c408ebecefce0bce1b12b388adcc69"><div class="ttname"><a href="classmesh__filter_1_1GLRenderer.html#a47c408ebecefce0bce1b12b388adcc69">mesh_filter::GLRenderer::getDepthTexture</a></div><div class="ttdeci">GLuint getDepthTexture() const</div><div class="ttdoc">returns the handle of the depth buffer as an OpenGL texture object</div><div class="ttdef"><b>Definition:</b> <a href="gl__renderer_8cpp_source.html#l00440">gl_renderer.cpp:440</a></div></div>
+<div class="ttc" id="aclassmesh__filter_1_1GLRenderer_html_a47c408ebecefce0bce1b12b388adcc69"><div class="ttname"><a href="classmesh__filter_1_1GLRenderer.html#a47c408ebecefce0bce1b12b388adcc69">mesh_filter::GLRenderer::getDepthTexture</a></div><div class="ttdeci">GLuint getDepthTexture() const</div><div class="ttdoc">returns the handle of the depth buffer as an OpenGL texture object</div><div class="ttdef"><b>Definition:</b> <a href="gl__renderer_8cpp_source.html#l00442">gl_renderer.cpp:442</a></div></div>
 <div class="ttc" id="anamespacemoveit__benchmark__statistics_html_af7da173b56c68aaaf775a442f98e347a"><div class="ttname"><a href="namespacemoveit__benchmark__statistics.html#af7da173b56c68aaaf775a442f98e347a">moveit_benchmark_statistics.args</a></div><div class="ttdeci">args</div><div class="ttdef"><b>Definition:</b> <a href="moveit__benchmark__statistics_8py_source.html#l00772">moveit_benchmark_statistics.py:772</a></div></div>
 <div class="ttc" id="aclassmesh__filter_1_1GLRenderer_html_ac75b76f53d22ee78b6f4d73997ed9fcb"><div class="ttname"><a href="classmesh__filter_1_1GLRenderer.html#ac75b76f53d22ee78b6f4d73997ed9fcb">mesh_filter::GLRenderer::getNearClippingDistance</a></div><div class="ttdeci">const float &amp; getNearClippingDistance() const</div><div class="ttdoc">returns the distance of the near clipping plane in meters</div><div class="ttdef"><b>Definition:</b> <a href="gl__renderer_8cpp_source.html#l00249">gl_renderer.cpp:249</a></div></div>
 <div class="ttc" id="aclassmesh__filter_1_1GLRenderer_html_a89c300c6151390193128d2b7b328e161"><div class="ttname"><a href="classmesh__filter_1_1GLRenderer.html#a89c300c6151390193128d2b7b328e161">mesh_filter::GLRenderer::setShadersFromFile</a></div><div class="ttdeci">GLuint setShadersFromFile(const std::string &amp;vertex_filename, const std::string &amp;fragment_filename)</div><div class="ttdoc">loads, compiles, links and adds GLSL shaders from files to the current OpenGL context.</div><div class="ttdef"><b>Definition:</b> <a href="gl__renderer_8cpp_source.html#l00225">gl_renderer.cpp:225</a></div></div>
@@ -540,13 +542,13 @@ $(function() {
 <div class="ttc" id="aclassmesh__filter_1_1GLRenderer_html_a5291985a5255c18d941ab3022e9d9a08"><div class="ttname"><a href="classmesh__filter_1_1GLRenderer.html#a5291985a5255c18d941ab3022e9d9a08">mesh_filter::GLRenderer::setCameraParameters</a></div><div class="ttdeci">void setCameraParameters(float fx, float fy, float cx, float cy)</div><div class="ttdoc">set the camera parameters</div><div class="ttdef"><b>Definition:</b> <a href="gl__renderer_8cpp_source.html#l00105">gl_renderer.cpp:105</a></div></div>
 <div class="ttc" id="aclassmesh__filter_1_1GLRenderer_html_a707697a074c42cd355abe6d285d6fabd"><div class="ttname"><a href="classmesh__filter_1_1GLRenderer.html#a707697a074c42cd355abe6d285d6fabd">mesh_filter::GLRenderer::begin</a></div><div class="ttdeci">void begin() const</div><div class="ttdoc">initializes the frame buffers for rendering and or manipulating</div><div class="ttdef"><b>Definition:</b> <a href="gl__renderer_8cpp_source.html#l00185">gl_renderer.cpp:185</a></div></div>
 <div class="ttc" id="aclassmesh__filter_1_1GLRenderer_html_ae89d12631b3e18ca6fcc757e7a92579d"><div class="ttname"><a href="classmesh__filter_1_1GLRenderer.html#ae89d12631b3e18ca6fcc757e7a92579d">mesh_filter::GLRenderer::~GLRenderer</a></div><div class="ttdeci">~GLRenderer()</div><div class="ttdoc">destructor, destroys frame buffer objects and OpenGL context</div><div class="ttdef"><b>Definition:</b> <a href="gl__renderer_8cpp_source.html#l00077">gl_renderer.cpp:77</a></div></div>
-<div class="ttc" id="anamespaceplanning__request__adapter_html_af64b3fa8ebc256d9c5133c6c80ade28f"><div class="ttname"><a href="namespaceplanning__request__adapter.html#af64b3fa8ebc256d9c5133c6c80ade28f">planning_request_adapter::LOGGER</a></div><div class="ttdeci">rclcpp::Logger LOGGER</div><div class="ttdef"><b>Definition:</b> <a href="planning__request__adapter_8cpp_source.html#l00076">planning_request_adapter.cpp:76</a></div></div>
+<div class="ttc" id="anamespaceplanning__request__adapter_html_af64b3fa8ebc256d9c5133c6c80ade28f"><div class="ttname"><a href="namespaceplanning__request__adapter.html#af64b3fa8ebc256d9c5133c6c80ade28f">planning_request_adapter::LOGGER</a></div><div class="ttdeci">rclcpp::Logger LOGGER</div><div class="ttdef"><b>Definition:</b> <a href="planning__request__adapter_8cpp_source.html#l00077">planning_request_adapter.cpp:77</a></div></div>
 <div class="ttc" id="aclassmesh__filter_1_1GLRenderer_html_a58740c7da0284f1e9ef735c9f19ea3dc"><div class="ttname"><a href="classmesh__filter_1_1GLRenderer.html#a58740c7da0284f1e9ef735c9f19ea3dc">mesh_filter::GLRenderer::GLRenderer</a></div><div class="ttdeci">GLRenderer(unsigned width, unsigned height, float near=0.1, float far=10.0)</div><div class="ttdoc">constructs the frame buffer object in a new OpenGL context.</div><div class="ttdef"><b>Definition:</b> <a href="gl__renderer_8cpp_source.html#l00058">gl_renderer.cpp:58</a></div></div>
 <div class="ttc" id="agl__renderer_8h_html"><div class="ttname"><a href="gl__renderer_8h.html">gl_renderer.h</a></div></div>
-<div class="ttc" id="aclassmesh__filter_1_1GLRenderer_html_a4a3858bac19810cf2e87b392e7b6c35c"><div class="ttname"><a href="classmesh__filter_1_1GLRenderer.html#a4a3858bac19810cf2e87b392e7b6c35c">mesh_filter::GLRenderer::getWidth</a></div><div class="ttdeci">unsigned getWidth() const</div><div class="ttdoc">returns the width of the frame buffer objectsin pixels</div><div class="ttdef"><b>Definition:</b> <a href="gl__renderer_8cpp_source.html#l00445">gl_renderer.cpp:445</a></div></div>
+<div class="ttc" id="aclassmesh__filter_1_1GLRenderer_html_a4a3858bac19810cf2e87b392e7b6c35c"><div class="ttname"><a href="classmesh__filter_1_1GLRenderer.html#a4a3858bac19810cf2e87b392e7b6c35c">mesh_filter::GLRenderer::getWidth</a></div><div class="ttdeci">unsigned getWidth() const</div><div class="ttdoc">returns the width of the frame buffer objectsin pixels</div><div class="ttdef"><b>Definition:</b> <a href="gl__renderer_8cpp_source.html#l00447">gl_renderer.cpp:447</a></div></div>
 <div class="ttc" id="aclassmesh__filter_1_1GLRenderer_html_acb806737dafba10e730c0a85e934786e"><div class="ttname"><a href="classmesh__filter_1_1GLRenderer.html#acb806737dafba10e730c0a85e934786e">mesh_filter::GLRenderer::getFarClippingDistance</a></div><div class="ttdeci">const float &amp; getFarClippingDistance() const</div><div class="ttdoc">returns the distance of the far clipping plane in meters</div><div class="ttdef"><b>Definition:</b> <a href="gl__renderer_8cpp_source.html#l00254">gl_renderer.cpp:254</a></div></div>
 <div class="ttc" id="aclassmesh__filter_1_1GLRenderer_html_afe5974fd742221b3fd1479ca318e5889"><div class="ttname"><a href="classmesh__filter_1_1GLRenderer.html#afe5974fd742221b3fd1479ca318e5889">mesh_filter::GLRenderer::getProgramID</a></div><div class="ttdeci">const GLuint &amp; getProgramID() const</div><div class="ttdef"><b>Definition:</b> <a href="gl__renderer_8cpp_source.html#l00244">gl_renderer.cpp:244</a></div></div>
-<div class="ttc" id="aclassmesh__filter_1_1GLRenderer_html_ac30359d6f24593ad9cfc19cd5b9b9a72"><div class="ttname"><a href="classmesh__filter_1_1GLRenderer.html#ac30359d6f24593ad9cfc19cd5b9b9a72">mesh_filter::GLRenderer::getHeight</a></div><div class="ttdeci">unsigned getHeight() const</div><div class="ttdoc">returns the height of the frame buffer objects in pixels</div><div class="ttdef"><b>Definition:</b> <a href="gl__renderer_8cpp_source.html#l00450">gl_renderer.cpp:450</a></div></div>
+<div class="ttc" id="aclassmesh__filter_1_1GLRenderer_html_ac30359d6f24593ad9cfc19cd5b9b9a72"><div class="ttname"><a href="classmesh__filter_1_1GLRenderer.html#ac30359d6f24593ad9cfc19cd5b9b9a72">mesh_filter::GLRenderer::getHeight</a></div><div class="ttdeci">unsigned getHeight() const</div><div class="ttdoc">returns the height of the frame buffer objects in pixels</div><div class="ttdef"><b>Definition:</b> <a href="gl__renderer_8cpp_source.html#l00452">gl_renderer.cpp:452</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

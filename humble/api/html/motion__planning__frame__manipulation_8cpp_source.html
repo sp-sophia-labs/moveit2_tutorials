@@ -232,7 +232,7 @@ $(function() {
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;}</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="keywordtype">void</span> MotionPlanningFrame::listenDetectedObjects(</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keyword">const</span> object_recognition_msgs::msg::RecognizedObjectArray::ConstSharedPtr <span class="comment">/*msg*/</span>)</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keyword">const</span> object_recognition_msgs::msg::RecognizedObjectArray::ConstSharedPtr&amp; <span class="comment">/*msg*/</span>)</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;{</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  rclcpp::sleep_for(std::chrono::seconds(1));</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <a class="code" href="classmoveit__rviz__plugin_1_1MotionPlanningFrame.html#ac26d099c6725780cb726b1be95667bc6">planning_display_</a>-&gt;<a class="code" href="classmoveit__rviz__plugin_1_1PlanningSceneDisplay.html#a920ac69f439f677204b580d659fc762a">addMainLoopJob</a>([<span class="keyword">this</span>] { processDetectedObjects(); });</div>

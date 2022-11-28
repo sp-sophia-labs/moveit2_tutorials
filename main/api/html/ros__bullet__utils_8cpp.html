@@ -75,7 +75,7 @@ $(function() {
 <div class="title">ros_bullet_utils.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="ros__bullet__utils_8h_source.html">moveit/collision_detection_bullet/bullet_integration/ros_bullet_utils.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="ros__bullet__utils_8h_source.html">moveit/collision_detection_bullet/bullet_integration/ros_bullet_utils.h</a>&gt;</code><br />
 <code>#include &lt;rclcpp/logger.hpp&gt;</code><br />
 <code>#include &lt;rclcpp/logging.hpp&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -142,6 +142,9 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ac905daae5b5f3820f748d48a389c2e38"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecollision__detection__bullet.html#ac905daae5b5f3820f748d48a389c2e38">collision_detection_bullet::getActiveLinkNamesRecursive</a> (std::vector&lt; std::string &gt; &amp;active_links, const urdf::LinkConstSharedPtr &amp;urdf_link, bool active)</td></tr>
+<tr class="memdesc:ac905daae5b5f3820f748d48a389c2e38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recursively traverses robot from root to get all active links.  <a href="namespacecollision__detection__bullet.html#ac905daae5b5f3820f748d48a389c2e38">More...</a><br /></td></tr>
+<tr class="separator:ac905daae5b5f3820f748d48a389c2e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5214824afd0d2e6bd0bf77ba17f6629"><td class="memItemLeft" align="right" valign="top">shapes::ShapePtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecollision__detection__bullet.html#ad5214824afd0d2e6bd0bf77ba17f6629">collision_detection_bullet::constructShape</a> (const urdf::Geometry *geom)</td></tr>
 <tr class="separator:ad5214824afd0d2e6bd0bf77ba17f6629"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a087947c111851e345100a17d335d63d7"><td class="memItemLeft" align="right" valign="top">Eigen::Isometry3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecollision__detection__bullet.html#a087947c111851e345100a17d335d63d7">collision_detection_bullet::urdfPose2Eigen</a> (const urdf::Pose &amp;pose)</td></tr>

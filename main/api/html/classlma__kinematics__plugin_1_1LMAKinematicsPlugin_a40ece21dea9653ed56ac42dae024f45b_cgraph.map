@@ -1,0 +1,7 @@
+<map id="lma_kinematics_plugin::LMAKinematicsPlugin::LMAKinematicsPlugin" name="lma_kinematics_plugin::LMAKinematicsPlugin::LMAKinematicsPlugin">
+<area shape="rect" id="node1" title="Default constructor." alt="" coords="5,97,179,153"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1RobotModel.html#a000d9e24a0c24a909b58c6a5b4b82a32" title="Get the parsed URDF model." alt="" coords="235,5,425,47"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1JointModelGroup.html#a0db655aa0f72015d6d6531fa2cc48965" title="Check if this group is a linear chain." alt="" coords="239,71,421,112"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1JointModelGroup.html#a9a0642700aead33b3f6bb3d454039bae" title="Return true if the group consists only of joints that are single DOF." alt="" coords="238,136,422,177"/>
+<area shape="rect" id="node5" href="$classkinematics_1_1KinematicsBase.html#a2c8ecd6268c1aef0fbcfde3b7a42809e" title=" " alt="" coords="227,201,433,243"/>
+</map>

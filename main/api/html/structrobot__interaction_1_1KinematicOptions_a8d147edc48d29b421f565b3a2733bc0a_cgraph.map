@@ -2,6 +2,8 @@
 <area shape="rect" id="node1" title=" " alt="" coords="5,97,205,153"/>
 <area shape="rect" id="node2" href="$classmoveit_1_1core_1_1JointModelGroup.html#a0a52d99429820b1c51838d9408078452" title="Get the default IK timeout." alt="" coords="253,5,457,47"/>
 <area shape="rect" id="node3" href="$classmoveit_1_1core_1_1RobotState.html#a7504fac0746b7254f45e3c27f2a4c6da" title="Get the model of a particular joint group." alt="" coords="263,71,447,112"/>
-<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1RobotState.html#a00a1dc64cd55d4148a6dbb2572c622a8" title="If the group this state corresponds to is a chain and a solver is available, then the joint values ca..." alt="" coords="263,136,447,177"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1RobotState.html#afaa27c95c0c973c434b838fd6e354392" title="If the group this state corresponds to is a chain and a solver is available, then the joint values ca..." alt="" coords="263,136,447,177"/>
 <area shape="rect" id="node5" href="$classmoveit_1_1core_1_1RobotState.html#aaec5557d55b862d9dd832b3d4c221836" title="Update all transforms." alt="" coords="263,201,447,243"/>
+<area shape="rect" id="node6" href="$classmoveit_1_1core_1_1LinkModel.html#af30cc07d5b7409ac39b152a9cd94b563" title="The index of this joint when traversing the kinematic tree in depth first fashion." alt="" coords="505,168,684,209"/>
+<area shape="rect" id="node7" href="$classmoveit_1_1core_1_1LinkModel.html#ab3f3635f6017122968e2adae85dd56e3" title="Get the link model whose child this link is (through some joint). There may not always be a parent li..." alt="" coords="505,233,684,275"/>
 </map>

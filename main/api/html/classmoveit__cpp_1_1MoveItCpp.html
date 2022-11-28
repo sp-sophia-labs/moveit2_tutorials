@@ -128,9 +128,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a609f2ac79314d52b44688a922e96110d"><td class="memItemLeft" align="right" valign="top">const std::map&lt; std::string, planning_pipeline::PlanningPipelinePtr &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1MoveItCpp.html#a609f2ac79314d52b44688a922e96110d">getPlanningPipelines</a> () const</td></tr>
 <tr class="memdesc:a609f2ac79314d52b44688a922e96110d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all loaded planning pipeline instances mapped to their reference names.  <a href="classmoveit__cpp_1_1MoveItCpp.html#a609f2ac79314d52b44688a922e96110d">More...</a><br /></td></tr>
 <tr class="separator:a609f2ac79314d52b44688a922e96110d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bf4aa034f9f8739f8932fe3319445f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ros_2visualization_2trajectory__rviz__plugin_2CMakeLists_8txt.html#ad6d3a6a066b9622969c1f3cfc2aa6c94">std::set</a>&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1MoveItCpp.html#a4bf4aa034f9f8739f8932fe3319445f7">getPlanningPipelineNames</a> (const std::string &amp;group_name=&quot;&quot;) const</td></tr>
-<tr class="memdesc:a4bf4aa034f9f8739f8932fe3319445f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the names of all loaded planning pipelines. Specify group_name to filter the results by planning group.  <a href="classmoveit__cpp_1_1MoveItCpp.html#a4bf4aa034f9f8739f8932fe3319445f7">More...</a><br /></td></tr>
-<tr class="separator:a4bf4aa034f9f8739f8932fe3319445f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a977bf730ca7ea29c596f82c0345512ca"><td class="memItemLeft" align="right" valign="top">const planning_scene_monitor::PlanningSceneMonitorPtr &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1MoveItCpp.html#a977bf730ca7ea29c596f82c0345512ca">getPlanningSceneMonitor</a> () const</td></tr>
 <tr class="memdesc:a977bf730ca7ea29c596f82c0345512ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the stored instance of the planning scene monitor.  <a href="classmoveit__cpp_1_1MoveItCpp.html#a977bf730ca7ea29c596f82c0345512ca">More...</a><br /></td></tr>
 <tr class="separator:a977bf730ca7ea29c596f82c0345512ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,7 +144,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a48632e24176193c126eb422ffb49aee2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute a trajectory on the planning group specified by group_name using the trajectory execution manager. If blocking is set to false, the execution is run in background and the function returns immediately.  <a href="classmoveit__cpp_1_1MoveItCpp.html#a48632e24176193c126eb422ffb49aee2">More...</a><br /></td></tr>
 <tr class="separator:a48632e24176193c126eb422ffb49aee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3b5ae726e6bca97849ebba0c4de0d56"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1MoveItCpp.html#ab3b5ae726e6bca97849ebba0c4de0d56">terminatePlanningPipeline</a> (const std::string &amp;pipeline_name)</td></tr>
-<tr class="memdesc:ab3b5ae726e6bca97849ebba0c4de0d56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility to terminate all active planning pipelines.  <a href="classmoveit__cpp_1_1MoveItCpp.html#ab3b5ae726e6bca97849ebba0c4de0d56">More...</a><br /></td></tr>
+<tr class="memdesc:ab3b5ae726e6bca97849ebba0c4de0d56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility to terminate the given planning pipeline.  <a href="classmoveit__cpp_1_1MoveItCpp.html#ab3b5ae726e6bca97849ebba0c4de0d56">More...</a><br /></td></tr>
 <tr class="separator:ab3b5ae726e6bca97849ebba0c4de0d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -398,7 +395,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Execute a trajectory on the planning group specified by group_name using the trajectory execution manager. If blocking is set to false, the execution is run in background and the function returns immediately. </p>
 
-<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00281">281</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00252">252</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
 
 </div>
 </div>
@@ -426,7 +423,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00236">236</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00219">219</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
 
 </div>
 </div>
@@ -464,7 +461,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00222">222</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00205">205</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
 
 </div>
 </div>
@@ -485,29 +482,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the ROS node this instance operates on. </p>
 
-<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00217">217</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a4bf4aa034f9f8739f8932fe3319445f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4bf4aa034f9f8739f8932fe3319445f7">&#9670;&nbsp;</a></span>getPlanningPipelineNames()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="ros_2visualization_2trajectory__rviz__plugin_2CMakeLists_8txt.html#ad6d3a6a066b9622969c1f3cfc2aa6c94">std::set</a>&lt; std::string &gt; moveit_cpp::MoveItCpp::getPlanningPipelineNames </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>group_name</em> = <code>&quot;&quot;</code></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the names of all loaded planning pipelines. Specify group_name to filter the results by planning group. </p>
-
-<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00248">248</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00200">200</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
 
 </div>
 </div>
@@ -528,7 +503,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get all loaded planning pipeline instances mapped to their reference names. </p>
 
-<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00243">243</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00226">226</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
 
 </div>
 </div>
@@ -549,7 +524,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the stored instance of the planning scene monitor. </p>
 
-<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00260">260</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00231">231</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
 
 </div>
 </div>
@@ -568,7 +543,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00265">265</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00236">236</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
 
 </div>
 </div>
@@ -589,7 +564,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the RobotModel object. </p>
 
-<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00212">212</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00195">195</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
 
 </div>
 </div>
@@ -608,7 +583,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00330">330</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00301">301</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
 
 </div>
 </div>
@@ -629,7 +604,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Get the stored instance of the trajectory execution manager. </p>
 
-<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00270">270</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00241">241</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
 
 </div>
 </div>
@@ -648,7 +623,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00275">275</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00246">246</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
 
 </div>
 </div>
@@ -720,9 +695,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Utility to terminate all active planning pipelines. </p>
+<p>Utility to terminate the given planning pipeline. </p>
 
-<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00311">311</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00282">282</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
 
 </div>
 </div>

@@ -124,16 +124,16 @@ $(function() {
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classmove__group_1_1MoveGroupQueryPlannersService.html#aa2c3172bccbee2d02094814ce24e99ce">initialize</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordtype">bool</span> queryInterface(<span class="keyword">const</span> std::shared_ptr&lt;rmw_request_id_t&gt; request_header,</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                      <span class="keyword">const</span> std::shared_ptr&lt;moveit_msgs::srv::QueryPlannerInterfaces::Request&gt; <span class="comment">/*req*/</span>,</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                      std::shared_ptr&lt;moveit_msgs::srv::QueryPlannerInterfaces::Response&gt; res);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordtype">bool</span> queryInterface(<span class="keyword">const</span> std::shared_ptr&lt;rmw_request_id_t&gt;&amp; request_header,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                      <span class="keyword">const</span> std::shared_ptr&lt;moveit_msgs::srv::QueryPlannerInterfaces::Request&gt;&amp; <span class="comment">/*req*/</span>,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                      <span class="keyword">const</span> std::shared_ptr&lt;moveit_msgs::srv::QueryPlannerInterfaces::Response&gt;&amp; res);</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">bool</span> getParams(<span class="keyword">const</span> std::shared_ptr&lt;rmw_request_id_t&gt; request_header,</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                 <span class="keyword">const</span> std::shared_ptr&lt;moveit_msgs::srv::GetPlannerParams::Request&gt; req,</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                 std::shared_ptr&lt;moveit_msgs::srv::GetPlannerParams::Response&gt; res);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordtype">bool</span> setParams(<span class="keyword">const</span> std::shared_ptr&lt;rmw_request_id_t&gt; request_header,</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                 <span class="keyword">const</span> std::shared_ptr&lt;moveit_msgs::srv::SetPlannerParams::Request&gt; req,</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                 std::shared_ptr&lt;moveit_msgs::srv::SetPlannerParams::Response&gt; <span class="comment">/*res*/</span>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">bool</span> getParams(<span class="keyword">const</span> std::shared_ptr&lt;rmw_request_id_t&gt;&amp; request_header,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                 <span class="keyword">const</span> std::shared_ptr&lt;moveit_msgs::srv::GetPlannerParams::Request&gt;&amp; req,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                 <span class="keyword">const</span> std::shared_ptr&lt;moveit_msgs::srv::GetPlannerParams::Response&gt;&amp; res);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordtype">bool</span> setParams(<span class="keyword">const</span> std::shared_ptr&lt;rmw_request_id_t&gt;&amp; request_header,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                 <span class="keyword">const</span> std::shared_ptr&lt;moveit_msgs::srv::SetPlannerParams::Request&gt;&amp; req,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                 <span class="keyword">const</span> std::shared_ptr&lt;moveit_msgs::srv::SetPlannerParams::Response&gt;&amp; <span class="comment">/*res*/</span>);</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  rclcpp::Service&lt;moveit_msgs::srv::QueryPlannerInterfaces&gt;::SharedPtr query_service_;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  rclcpp::Service&lt;moveit_msgs::srv::GetPlannerParams&gt;::SharedPtr get_service_;</div>

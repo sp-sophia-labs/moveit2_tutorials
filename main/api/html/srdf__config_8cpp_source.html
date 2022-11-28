@@ -357,36 +357,44 @@ $(function() {
 <div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="comment">// Output property</span></div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    emitter &lt;&lt; YAML::Key &lt;&lt; <span class="stringliteral">&quot;has_velocity_limits&quot;</span>;</div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keywordflow">if</span> (b.<a class="code" href="structmoveit_1_1core_1_1VariableBounds.html#a7e0a5703c51621d5cff73259d1295fd6">velocity_bounded_</a>)</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      emitter &lt;&lt; YAML::Value &lt;&lt; <span class="stringliteral">&quot;true&quot;</span>;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;      emitter &lt;&lt; YAML::Value &lt;&lt; <span class="stringliteral">&quot;false&quot;</span>;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="comment">// Output property</span></div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    emitter &lt;&lt; YAML::Key &lt;&lt; <span class="stringliteral">&quot;max_velocity&quot;</span>;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    emitter &lt;&lt; YAML::Value &lt;&lt; std::min(fabs(b.<a class="code" href="structmoveit_1_1core_1_1VariableBounds.html#a084bb6fc28ab6b811248378ddfda89e5">max_velocity_</a>), fabs(b.<a class="code" href="structmoveit_1_1core_1_1VariableBounds.html#af5c3f11dbfcdc2278c85ec3ee131feb0">min_velocity_</a>));</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    {</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;      emitter &lt;&lt; YAML::Value &lt;&lt; <span class="stringliteral">&quot;true&quot;</span>;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    }</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    {</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;      emitter &lt;&lt; YAML::Value &lt;&lt; <span class="stringliteral">&quot;false&quot;</span>;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    }</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="comment">// Output property</span></div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    emitter &lt;&lt; YAML::Key &lt;&lt; <span class="stringliteral">&quot;has_acceleration_limits&quot;</span>;</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordflow">if</span> (b.<a class="code" href="structmoveit_1_1core_1_1VariableBounds.html#af0e83ca67bd560c306f76fb57828584c">acceleration_bounded_</a>)</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;      emitter &lt;&lt; YAML::Value &lt;&lt; <span class="stringliteral">&quot;true&quot;</span>;</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;      emitter &lt;&lt; YAML::Value &lt;&lt; <span class="stringliteral">&quot;false&quot;</span>;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="comment">// Output property</span></div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    emitter &lt;&lt; YAML::Key &lt;&lt; <span class="stringliteral">&quot;max_acceleration&quot;</span>;</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    emitter &lt;&lt; YAML::Value &lt;&lt; std::min(fabs(b.<a class="code" href="structmoveit_1_1core_1_1VariableBounds.html#a48db40fdae153da78abbb3003f9250f4">max_acceleration_</a>), fabs(b.<a class="code" href="structmoveit_1_1core_1_1VariableBounds.html#a85f88ecc1edf9f96091ba0f379dd9d1a">min_acceleration_</a>));</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160; </div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    emitter &lt;&lt; YAML::EndMap;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  }</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  emitter &lt;&lt; YAML::EndMap;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;  <span class="comment">// file created successfully</span></div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;}</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;}  <span class="comment">// namespace moveit_setup</span></div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="preprocessor">#include &lt;pluginlib/class_list_macros.hpp&gt;</span>  <span class="comment">// NOLINT</span></div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;<a class="code" href="cached__ik__kinematics__plugin_8cpp.html#a884b04add2682e16aefe27c649c9bee1">PLUGINLIB_EXPORT_CLASS</a>(<a class="code" href="classmoveit__setup_1_1SRDFConfig.html">moveit_setup::SRDFConfig</a>, <a class="code" href="classmoveit__setup_1_1SetupConfig.html">moveit_setup::SetupConfig</a>)</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    emitter &lt;&lt; YAML::Key &lt;&lt; <span class="stringliteral">&quot;max_velocity&quot;</span>;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    emitter &lt;&lt; YAML::Value &lt;&lt; std::min(fabs(b.<a class="code" href="structmoveit_1_1core_1_1VariableBounds.html#a084bb6fc28ab6b811248378ddfda89e5">max_velocity_</a>), fabs(b.<a class="code" href="structmoveit_1_1core_1_1VariableBounds.html#af5c3f11dbfcdc2278c85ec3ee131feb0">min_velocity_</a>));</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="comment">// Output property</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    emitter &lt;&lt; YAML::Key &lt;&lt; <span class="stringliteral">&quot;has_acceleration_limits&quot;</span>;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keywordflow">if</span> (b.<a class="code" href="structmoveit_1_1core_1_1VariableBounds.html#af0e83ca67bd560c306f76fb57828584c">acceleration_bounded_</a>)</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    {</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;      emitter &lt;&lt; YAML::Value &lt;&lt; <span class="stringliteral">&quot;true&quot;</span>;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    }</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    {</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;      emitter &lt;&lt; YAML::Value &lt;&lt; <span class="stringliteral">&quot;false&quot;</span>;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    }</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="comment">// Output property</span></div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    emitter &lt;&lt; YAML::Key &lt;&lt; <span class="stringliteral">&quot;max_acceleration&quot;</span>;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    emitter &lt;&lt; YAML::Value &lt;&lt; std::min(fabs(b.<a class="code" href="structmoveit_1_1core_1_1VariableBounds.html#a48db40fdae153da78abbb3003f9250f4">max_acceleration_</a>), fabs(b.<a class="code" href="structmoveit_1_1core_1_1VariableBounds.html#a85f88ecc1edf9f96091ba0f379dd9d1a">min_acceleration_</a>));</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160; </div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    emitter &lt;&lt; YAML::EndMap;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  }</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;  emitter &lt;&lt; YAML::EndMap;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;  <span class="comment">// file created successfully</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;}</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160; </div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;}  <span class="comment">// namespace moveit_setup</span></div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;<span class="preprocessor">#include &lt;pluginlib/class_list_macros.hpp&gt;</span>  <span class="comment">// NOLINT</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<a class="code" href="cached__ik__kinematics__plugin_8cpp.html#a884b04add2682e16aefe27c649c9bee1">PLUGINLIB_EXPORT_CLASS</a>(<a class="code" href="classmoveit__setup_1_1SRDFConfig.html">moveit_setup::SRDFConfig</a>, <a class="code" href="classmoveit__setup_1_1SetupConfig.html">moveit_setup::SetupConfig</a>)</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassmoveit_1_1core_1_1LinkModel_html"><div class="ttname"><a href="classmoveit_1_1core_1_1LinkModel.html">moveit::core::LinkModel</a></div><div class="ttdoc">A link from the robot. Contains the constant transform applied to the link and its geometry.</div><div class="ttdef"><b>Definition:</b> <a href="link__model_8h_source.html#l00071">link_model.h:71</a></div></div>
 <div class="ttc" id="aclassmoveit_1_1core_1_1JointModelGroup_html_a14fb89fcb1b1d7297b5ddd3d063c715f"><div class="ttname"><a href="classmoveit_1_1core_1_1JointModelGroup.html#a14fb89fcb1b1d7297b5ddd3d063c715f">moveit::core::JointModelGroup::getActiveJointModels</a></div><div class="ttdeci">const std::vector&lt; const JointModel * &gt; &amp; getActiveJointModels() const</div><div class="ttdoc">Get the active joints in this group (that have controllable DOF). This does not include mimic joints.</div><div class="ttdef"><b>Definition:</b> <a href="joint__model__group_8h_source.html#l00223">joint_model_group.h:223</a></div></div>
