@@ -1,0 +1,4 @@
+<map id="moveit_setup_assistant::MOVEIT_CLASS_FORWARD" name="moveit_setup_assistant::MOVEIT_CLASS_FORWARD">
+<area shape="rect" id="node1" title="This class is shared with all widgets and contains the common configuration data needed for generatin..." alt="" coords="5,5,209,47"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1JointModel.html#aa1d2f99c9025d01a92e47bc356938f77" title="Get the name of the joint." alt="" coords="257,5,439,47"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="moveit_setup_assistant::GroupEditWidget::save" name="moveit_setup_assistant::GroupEditWidget::save">
+<area shape="rect" id="node1" title="Button event for just saving, when in edit mode." alt="" coords="265,13,444,54"/>
+<area shape="rect" id="node2" href="$classmoveit__setup__assistant_1_1GroupEditWidget.html#a28d7cee43923faaeb1278005f89f4a5d" title="Constructor." alt="" coords="5,5,217,61"/>
+</map>

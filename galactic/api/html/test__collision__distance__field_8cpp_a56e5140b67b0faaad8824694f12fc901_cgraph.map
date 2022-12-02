@@ -1,10 +1,16 @@
 <map id="TEST_F" name="TEST_F">
-<area shape="rect" id="node1" title=" " alt="" coords="5,177,75,203"/>
-<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1RobotState.html#a5969cc58a617a8c117cbb888e0034b4b" title="Add an attached body to this state. Ownership of the memory for the attached body is assumed by the s..." alt="" coords="123,5,307,47"/>
-<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1RobotState.html#a5c3129e7624ffe8c47dfaffee5c85560" title="Remove the attached body named id. Return false if the object was not found (and thus not removed)...." alt="" coords="123,71,307,112"/>
-<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1RobotState.html#a2b2cdba896e3cda3e307e117eaef39c2" title="Get the model of a particular link." alt="" coords="123,136,307,177"/>
-<area shape="rect" id="node6" href="$classmoveit_1_1core_1_1RobotState.html#aba31c6f758e3dabd32c1acbd069e189e" title="Set all joints to their default positions. The default position is 0, or if that is not within bounds..." alt="" coords="123,201,307,243"/>
-<area shape="rect" id="node7" href="$classmoveit_1_1core_1_1RobotState.html#aaec5557d55b862d9dd832b3d4c221836" title="Update all transforms." alt="" coords="123,267,307,308"/>
-<area shape="rect" id="node8" href="$classmoveit_1_1core_1_1RobotState.html#a30c47230782e953d54774bf135d62249" title="Update the state after setting a particular link to the input global transform pose." alt="" coords="123,332,307,373"/>
-<area shape="rect" id="node5" href="$classmoveit_1_1core_1_1RobotState.html#a54879052daa602ea0319cbe3ded82ff3" title="Set the position of a single variable. An exception is thrown if the variable name is not known." alt="" coords="355,136,539,177"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,242,75,269"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1RobotState.html#a5969cc58a617a8c117cbb888e0034b4b" title="Add an attached body to this state. Ownership of the memory for the attached body is assumed by the s..." alt="" coords="123,136,307,177"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1RobotState.html#a5c3129e7624ffe8c47dfaffee5c85560" title="Remove the attached body named id. Return false if the object was not found (and thus not removed)...." alt="" coords="381,5,565,47"/>
+<area shape="rect" id="node8" href="$classmoveit_1_1core_1_1RobotState.html#a2b2cdba896e3cda3e307e117eaef39c2" title="Get the model of a particular link." alt="" coords="123,201,307,243"/>
+<area shape="rect" id="node9" href="$classmoveit_1_1core_1_1RobotState.html#aba31c6f758e3dabd32c1acbd069e189e" title="Set all joints to their default positions. The default position is 0, or if that is not within bounds..." alt="" coords="123,267,307,308"/>
+<area shape="rect" id="node10" href="$classmoveit_1_1core_1_1RobotState.html#aaec5557d55b862d9dd832b3d4c221836" title="Update all transforms." alt="" coords="123,332,307,373"/>
+<area shape="rect" id="node14" href="$classmoveit_1_1core_1_1RobotState.html#a30c47230782e953d54774bf135d62249" title="Update the state after setting a particular link to the input global transform pose." alt="" coords="123,397,307,439"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1AttachedBody.html#aa5e40477524aac82bacb4f705c4cc1ea" title="Recompute global_collision_body_transform given the transform of the parent link." alt="" coords="371,71,574,112"/>
+<area shape="rect" id="node5" href="$classmoveit_1_1core_1_1AttachedBody.html#a88861172146386df7197f08eee50b1a7" title="Get the model of the link this body is attached to." alt="" coords="371,136,574,177"/>
+<area shape="rect" id="node6" href="$classmoveit_1_1core_1_1RobotState.html#a309800a933676917ea4848b972a4318b" title="Get the link transform w.r.t. the root link (model frame) of the RobotModel. This is typically the ro..." alt="" coords="380,201,565,243"/>
+<area shape="rect" id="node7" href="$classmoveit_1_1core_1_1AttachedBody.html#a857be05cdda0157e486176c034105426" title="Get the name of the attached body." alt="" coords="371,267,574,308"/>
+<area shape="rect" id="node11" href="$classmoveit_1_1core_1_1RobotState.html#afa1f72a766bdf75d81f4404058322576" title="Update the transforms for the collision bodies. This call is needed before calling collision checking..." alt="" coords="355,332,591,373"/>
+<area shape="rect" id="node12" href="$classmoveit_1_1core_1_1JointModel.html#aa6dbe9f994aca22adf80add175d10681" title="Get all the link models that descend from this joint, in the kinematic tree." alt="" coords="639,299,841,340"/>
+<area shape="rect" id="node13" href="$classmoveit_1_1core_1_1RobotState.html#a8778df1884c3caaf47558c939832cd9e" title="Update the reference frame transforms for links. This call is needed before using the transforms of l..." alt="" coords="648,364,832,405"/>
 </map>

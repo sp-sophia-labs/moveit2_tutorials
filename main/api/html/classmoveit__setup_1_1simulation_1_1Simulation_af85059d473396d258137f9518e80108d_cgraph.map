@@ -1,4 +1,0 @@
-<map id="moveit_setup::simulation::Simulation::getJointHardwareInterface" name="moveit_setup::simulation::Simulation::getJointHardwareInterface">
-<area shape="rect" id="node1" title="Helper function to get the controller that is controlling the joint." alt="" coords="5,5,227,61"/>
-<area shape="rect" id="node2" href="$namespacemoveit__setup.html#a762d54388d110ce4ea9f52f728675e51" title="Insert a new XML element with a given tag, attributes, and text." alt="" coords="275,20,475,47"/>
-</map>

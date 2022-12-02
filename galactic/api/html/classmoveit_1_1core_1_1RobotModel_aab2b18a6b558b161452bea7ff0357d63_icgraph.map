@@ -1,6 +1,6 @@
 <map id="moveit::core::RobotModel::getEndEffector" name="moveit::core::RobotModel::getEndEffector">
-<area shape="rect" id="node1" title="Get the joint group that corresponds to a given end&#45;effector name." alt="" coords="548,43,739,84"/>
-<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1JointModelGroup.html#a8c796aff98af787009d7eabbedd5f9c8" title="Update the variable values for the state of a group with respect to the mimic joints...." alt="" coords="309,43,500,84"/>
-<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1JointModelGroup.html#af8402d9c18d16c01cfdb35bbd8b08dae" title=" " alt="" coords="24,5,243,47"/>
-<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1JointModelGroup.html#ae41e12083325e4ea0564fedb9743463f" title="Compute random values for the state of the joint group." alt="" coords="5,71,261,127"/>
+<area shape="rect" id="node1" title="Get the joint group that corresponds to a given end&#45;effector name." alt="" coords="532,39,723,80"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1JointModelGroup.html#a0f60ea765fd917f911480a7615f8ff32" title="Get the unique set of end effector tips included in a particular joint model group as defined by the ..." alt="" coords="293,39,484,80"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1JointModelGroup.html#a9aaa2a2b9846475665d27ac91c0817e7" title="Get the unique set of end effector tips included in a particular joint model group as defined by the ..." alt="" coords="30,5,221,47"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1JointModelGroup.html#a7df35063c14cf1c267be5d6b63cb6b9d" title="Get one end effector tip, throwing an error if there ends up being more in the joint model group This..." alt="" coords="5,71,245,112"/>
 </map>

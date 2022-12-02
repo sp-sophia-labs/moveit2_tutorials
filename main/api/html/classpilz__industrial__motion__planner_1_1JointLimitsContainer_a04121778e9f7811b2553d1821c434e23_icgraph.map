@@ -1,5 +1,7 @@
 <map id="pilz_industrial_motion_planner::JointLimitsContainer::hasLimit" name="pilz_industrial_motion_planner::JointLimitsContainer::hasLimit">
-<area shape="rect" id="node1" title="Check if there is a limit for a joint with the given name in this container." alt="" coords="539,5,757,61"/>
-<area shape="rect" id="node2" href="$classpilz__industrial__motion__planner_1_1JointLimitsContainer.html#a3cc9639bb5a0fd2b928991c3ad4c7706" title="Returns joint limit fusion of all(position, velocity, acceleration, deceleration) limits for given jo..." alt="" coords="5,5,224,61"/>
-<area shape="rect" id="node3" href="$classpilz__industrial__motion__planner_1_1JointLimitsContainer.html#a040d5fa11dbedd32a857862bd4ce0b67" title="getLimit get the limit for the given joint name" alt="" coords="272,37,491,93"/>
+<area shape="rect" id="node1" title="Check if there is a limit for a joint with the given name in this container." alt="" coords="272,125,491,181"/>
+<area shape="rect" id="node2" href="$classpilz__industrial__motion__planner_1_1JointLimitsContainer.html#adc3fe6ab09a8c3cde2413944a100e346" title="verify acceleration limit of single joint" alt="" coords="5,5,224,61"/>
+<area shape="rect" id="node3" href="$classpilz__industrial__motion__planner_1_1JointLimitsContainer.html#af3680fed604d05665d14b4bb5ad30c4b" title="verify deceleration limit of single joint" alt="" coords="5,85,224,141"/>
+<area shape="rect" id="node4" href="$classpilz__industrial__motion__planner_1_1JointLimitsContainer.html#ad57a2ad1f97a170d481b971e1cba7fc9" title="verify position limit of single joint" alt="" coords="5,165,224,221"/>
+<area shape="rect" id="node5" href="$classpilz__industrial__motion__planner_1_1JointLimitsContainer.html#aca823b6a9657a7f067fc064d1d1cf5d6" title="verify velocity limit of single joint" alt="" coords="5,245,224,301"/>
 </map>

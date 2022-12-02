@@ -1,4 +1,8 @@
 <map id="moveit::core::RobotState::distance" name="moveit::core::RobotState::distance">
-<area shape="rect" id="node1" title="Return the sum of joint distances to &quot;other&quot; state. An L1 norm. Only considers active joints." alt="" coords="253,13,437,54"/>
-<area shape="rect" id="node2" href="$classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a4602671783e5fdb62207685fbaea5dce" title=" " alt="" coords="5,5,205,61"/>
+<area shape="rect" id="node1" title="Return the sum of joint distances to &quot;other&quot; state. An L1 norm. Only considers active joints." alt="" coords="417,116,601,157"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1RobotState.html#ac920b75bd636551e31bb36db696910f9" title="Compute the sequence of joint values that correspond to a straight Cartesian path for a particular gr..." alt="" coords="154,5,338,47"/>
+<area shape="rect" id="node3" href="$classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a4602671783e5fdb62207685fbaea5dce" title=" " alt="" coords="146,71,346,127"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1RobotState.html#a7e3f94838ea766a251459e4d48adef92" title="Get the minimm distance from a set of joints in the state to the bounds. The minimum distance and the..." alt="" coords="123,152,369,193"/>
+<area shape="rect" id="node5" href="$classmoveit_1_1core_1_1RobotState.html#a4f0f2685e224216449a6117661d3b4fa" title="Set all joints in group to random values near the value in \near. distance is the maximum amount each..." alt="" coords="133,217,359,259"/>
+<area shape="rect" id="node6" href="$test__kinematics__plugin_8cpp.html#afcd2b64a418d005505b11261ea7793e8" title=" " alt="" coords="5,225,75,251"/>
 </map>

@@ -1,0 +1,4 @@
+<map id="pick_place::PickPlace::planPlace" name="pick_place::PickPlace::planPlace">
+<area shape="rect" id="node1" title="Plan the sequence of motions that perform a placement action." alt="" coords="5,5,167,47"/>
+<area shape="rect" id="node2" href="$namespacemoveit_1_1core.html#a192b65b3ebc8eb7b6ccd155808c68aa1" title="Check if a message includes any information about a planning scene, or whether it is empty." alt="" coords="215,13,380,39"/>
+</map>

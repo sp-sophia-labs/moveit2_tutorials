@@ -1,0 +1,4 @@
+<map id="moveit_setup_assistant::MoveItConfigData::decideProjectionJoints" name="moveit_setup_assistant::MoveItConfigData::decideProjectionJoints">
+<area shape="rect" id="node1" title="Decide the best two joints to be used for the projection evaluator." alt="" coords="5,5,268,61"/>
+<area shape="rect" id="node2" href="$classmoveit__setup__assistant_1_1MoveItConfigData.html#a5c212f371115d13ebd7301fd6b744674" title="Provide a shared kinematic model loader." alt="" coords="316,13,571,54"/>
+</map>

@@ -1,5 +1,4 @@
 <map id="moveit::core::LinkModel::getShapeExtentsAtOrigin" name="moveit::core::LinkModel::getShapeExtentsAtOrigin">
-<area shape="rect" id="node1" title="Get the extents of the link&#39;s geometry (dimensions of axis&#45;aligned bounding box around all shapes tha..." alt="" coords="276,46,469,87"/>
-<area shape="rect" id="node2" href="$classrobot__interaction_1_1RobotInteraction.html#aa942462739d349300493cf7182386eb2" title=" " alt="" coords="5,5,228,61"/>
-<area shape="rect" id="node3" href="$test__aabb_8cpp.html#a3fa5c4d317ef11767124171449c95a90" title=" " alt="" coords="82,85,151,112"/>
+<area shape="rect" id="node1" title="Get the extents of the link&#39;s geometry (dimensions of axis&#45;aligned bounding box around all shapes tha..." alt="" coords="123,5,316,47"/>
+<area shape="rect" id="node2" href="$test__aabb_8cpp.html#a3fa5c4d317ef11767124171449c95a90" title=" " alt="" coords="5,13,75,39"/>
 </map>

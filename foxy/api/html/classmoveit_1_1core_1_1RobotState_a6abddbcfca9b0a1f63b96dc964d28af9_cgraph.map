@@ -1,0 +1,4 @@
+<map id="moveit::core::RobotState::setToRandomPositionsNearBy" name="moveit::core::RobotState::setToRandomPositionsNearBy">
+<area shape="rect" id="node1" title="Set all joints in group to random values near the value in \near. distances MUST have the same size a..." alt="" coords="5,5,231,47"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1RobotState.html#ae63329caf8ee84e856ae3cee0db069f3" title="Return the instance of a random number generator." alt="" coords="279,5,501,47"/>
+</map>

@@ -1,0 +1,16 @@
+<map id="moveit::core::RobotModel::buildJointInfo" name="moveit::core::RobotModel::buildJointInfo">
+<area shape="rect" id="node1" title="Compute helpful information about joints." alt="" coords="5,136,196,177"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1RobotModel.html#ab79cc844a13ea80b854f7d391ec023c1" title="For every pair of joints, pre&#45;compute the common roots of the joints." alt="" coords="245,5,436,47"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1RobotModel.html#a32a3a06b04a9ca84486f0baba80dd073" title="For every joint, pre&#45;compute the list of descendant joints &amp; links." alt="" coords="245,71,436,112"/>
+<area shape="rect" id="node7" href="$classmoveit_1_1core_1_1RobotModel.html#a21ffe6c8000be76c7585c289e08c8627" title="Get the transforms between link and all its rigidly attached descendants." alt="" coords="244,136,437,177"/>
+<area shape="rect" id="node10" href="$classmoveit_1_1core_1_1RobotModel.html#afd860df7ef193cce7aa74717e8579577" title="Get the model name." alt="" coords="245,201,436,243"/>
+<area shape="rect" id="node11" href="$classmoveit_1_1core_1_1RobotModel.html#a0e6fe94c867b3452abdeecc2d7373ca2" title="Get the bounds for a specific variable. Throw an exception of variable is not found." alt="" coords="245,267,436,308"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1JointModel.html#a9c6aba80a57f945cfd6eaf27e77f62a0" title=" " alt="" coords="485,5,685,47"/>
+<area shape="rect" id="node6" href="$classmoveit_1_1core_1_1JointModel.html#af2ff54654807c779e5d26447e3c04731" title=" " alt="" coords="486,71,685,112"/>
+<area shape="rect" id="node5" href="$classmoveit_1_1core_1_1JointModel.html#add20b6d4e10df54752f2c9ba61d8ee0a" title="Get the type of joint." alt="" coords="733,5,915,47"/>
+<area shape="rect" id="node8" href="$classmoveit_1_1core_1_1LinkModel.html#abc83d6b16c5ee4c8231ee54fa1d5b195" title="A link may have 0 or more child joints. From those joints there will certainly be other descendant li..." alt="" coords="496,136,675,177"/>
+<area shape="rect" id="node9" href="$classmoveit_1_1core_1_1LinkModel.html#ab2e96123b03397f470da2425b2778354" title="When transforms are computed for this link, they are usually applied to the link&#39;s origin...." alt="" coords="493,201,677,243"/>
+<area shape="rect" id="node12" href="$classmoveit_1_1core_1_1RobotModel.html#ad1420044a13284ba2602dc0e9784d20c" title=" " alt="" coords="490,267,681,308"/>
+<area shape="rect" id="node13" href="$classmoveit_1_1core_1_1JointModel.html#ad55551ed55d54b9d67e6e7d7865330d1" title="Get the bounds for a variable. Throw an exception if the variable was not found." alt="" coords="495,332,676,373"/>
+<area shape="rect" id="node14" href="$classmoveit_1_1core_1_1JointModel.html#a984c8d6c1e4bb5fff24bb1917a8985e6" title="Get the index of the variable within this joint." alt="" coords="733,332,915,373"/>
+</map>

@@ -1,7 +1,10 @@
 <map id="planning_scene::PlanningScene::getObjectType" name="planning_scene::PlanningScene::getObjectType">
-<area shape="rect" id="node1" title=" " alt="" coords="368,71,555,112"/>
-<area shape="rect" id="node2" href="$classplanning__scene_1_1PlanningScene.html#a86bafea7f524e4974764b001778268dc" title="Clear the diffs accumulated for this planning scene, with respect to: the parent PlanningScene (if it..." alt="" coords="121,5,307,47"/>
-<area shape="rect" id="node3" href="$classplanning__scene_1_1PlanningScene.html#a1c4051599aa9702d96097634db499621" title="Construct a message (scene) with all the necessary data so that the scene can be later reconstructed ..." alt="" coords="108,71,320,112"/>
-<area shape="rect" id="node5" href="$classplanning__scene_1_1PlanningScene.html#a8b45bb8fb3fecb10013000eeb728429d" title="If there is a parent specified for this scene, then the diffs with respect to that parent are applied..." alt="" coords="121,136,307,177"/>
-<area shape="rect" id="node4" href="$test__planning__scene_8cpp.html#a8657479fb681ab94486683c9e03019fa" title=" " alt="" coords="5,78,60,105"/>
+<area shape="rect" id="node1" title=" " alt="" coords="913,103,1100,144"/>
+<area shape="rect" id="node2" href="$classplanning__scene_1_1PlanningScene.html#a3cdfa9abf8da01609621f275816a298b" title="Construct a message (collision_object) with the collision object data from the planning_scene for the..." alt="" coords="651,37,865,79"/>
+<area shape="rect" id="node7" href="$classplanning__scene_1_1PlanningScene.html#a063befaa099e1ccd7c6827a6776dcc0b" title="Construct a message (scene) with the data requested in comp. If all options in comp are filled,..." alt="" coords="652,103,864,144"/>
+<area shape="rect" id="node8" href="$classplanning__scene_1_1PlanningScene.html#a8b45bb8fb3fecb10013000eeb728429d" title="If there is a parent specified for this scene, then the diffs with respect to that parent are applied..." alt="" coords="665,168,851,209"/>
+<area shape="rect" id="node3" href="$classplanning__scene_1_1PlanningScene.html#a510692917f61e707ede37c2899312139" title="Construct a vector of messages (collision_objects) with the collision object data for all objects in ..." alt="" coords="374,5,597,47"/>
+<area shape="rect" id="node6" href="$classplanning__scene_1_1PlanningScene.html#a5a59948c5ffe6c34ffc7a7a779d36ebc" title="Fill the message scene with the differences between this instance of PlanningScene with respect to th..." alt="" coords="368,71,603,112"/>
+<area shape="rect" id="node4" href="$classplanning__scene_1_1PlanningScene.html#a1c4051599aa9702d96097634db499621" title="Construct a message (scene) with all the necessary data so that the scene can be later reconstructed ..." alt="" coords="108,5,320,47"/>
+<area shape="rect" id="node5" href="$test__planning__scene_8cpp.html#a8657479fb681ab94486683c9e03019fa" title=" " alt="" coords="5,13,60,39"/>
 </map>

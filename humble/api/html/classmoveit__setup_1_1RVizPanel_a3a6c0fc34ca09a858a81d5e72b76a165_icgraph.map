@@ -1,5 +1,5 @@
 <map id="moveit_setup::RVizPanel::unhighlightAll" name="moveit_setup::RVizPanel::unhighlightAll">
-<area shape="rect" id="node1" title=" " alt="" coords="276,53,459,94"/>
-<area shape="rect" id="node2" href="$classmoveit__setup_1_1srdf__setup_1_1KinematicChainWidget.html#a443874d757d2893e3721477e8e04f0c9" title=" " alt="" coords="5,5,228,61"/>
-<area shape="rect" id="node3" href="$classmoveit__setup_1_1srdf__setup_1_1PlanningGroupsWidget.html#a9fb3639159467d3c19e922711aa2e3bf" title="Received when this widget is chosen from the navigation menu." alt="" coords="6,85,227,141"/>
+<area shape="rect" id="node1" title=" " alt="" coords="459,13,641,54"/>
+<area shape="rect" id="node2" href="$classmoveit__setup_1_1assistant_1_1SetupAssistantWidget.html#a2aa8b8dc125b3e0966deef3784bea121" title=" " alt="" coords="232,5,411,61"/>
+<area shape="rect" id="node3" href="$classmoveit__setup_1_1assistant_1_1SetupAssistantWidget.html#a0ed54166cc2266fac7b27c4df884aec7" title=" " alt="" coords="5,5,184,61"/>
 </map>

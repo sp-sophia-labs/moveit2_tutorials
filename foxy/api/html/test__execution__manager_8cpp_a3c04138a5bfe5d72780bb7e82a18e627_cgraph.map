@@ -1,5 +1,9 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title=" " alt="" coords="5,60,60,87"/>
-<area shape="rect" id="node2" href="$classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#af06325b16c85d82275912345d6b97f73" title="Make sure the active controllers are such that trajectories that actuate joints in the specified set ..." alt="" coords="108,5,407,61"/>
-<area shape="rect" id="node3" href="$classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a9f0d71b4061e6f4474c310d940bc3e91" title="Get the stored instance of the stored current state monitor." alt="" coords="167,85,348,141"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,167,60,193"/>
+<area shape="rect" id="node2" href="$classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#af06325b16c85d82275912345d6b97f73" title="Make sure the active controllers are such that trajectories that actuate joints in the specified set ..." alt="" coords="108,112,407,168"/>
+<area shape="rect" id="node7" href="$classplanning__scene__monitor_1_1PlanningSceneMonitor.html#a9f0d71b4061e6f4474c310d940bc3e91" title="Get the stored instance of the stored current state monitor." alt="" coords="167,192,348,248"/>
+<area shape="rect" id="node3" href="$classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#af1e37b58cb12f213f17fae6b4cc57253" title="Make sure a particular set of controllers are active." alt="" coords="455,5,697,61"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1JointModel.html#aea3af43bb2808c5e8b15047b8b52c5ed" title="Get the joint this one is mimicking." alt="" coords="485,86,667,127"/>
+<area shape="rect" id="node5" href="$classmoveit_1_1core_1_1JointModel.html#add20b6d4e10df54752f2c9ba61d8ee0a" title="Get the type of joint." alt="" coords="485,151,667,193"/>
+<area shape="rect" id="node6" href="$classmoveit_1_1core_1_1JointModel.html#ab8ece3a19d360dcc9f3e29fd85b3e3fe" title="Check if this joint is passive." alt="" coords="485,217,667,258"/>
 </map>

@@ -1,9 +1,16 @@
 <map id="planning_scene::PlanningScene::getRobotModel" name="planning_scene::PlanningScene::getRobotModel">
-<area shape="rect" id="node1" title="Get the kinematic model for which the planning scene is maintained." alt="" coords="517,136,704,177"/>
-<area shape="rect" id="node2" href="$classplanning__scene_1_1PlanningScene.html#a548ecbe8c71328bcebb516eae50a7d20" title="Check whether the current state is in collision, but use a collision_detection::CollisionRobot instan..." alt="" coords="240,5,469,47"/>
-<area shape="rect" id="node3" href="$classplanning__scene_1_1PlanningScene.html#a148e13eac088c22bedfd39eb004eb3be" title="Return a new child PlanningScene that uses this one as parent and has the diffs specified by msg appl..." alt="" coords="261,71,448,112"/>
-<area shape="rect" id="node4" href="$classplanning__scene_1_1PlanningScene.html#a46f024838af9e42c7afb0950c11a97f7" title="Check if a given path is valid. Each state is checked for validity (collision avoidance and feasibili..." alt="" coords="261,136,448,177"/>
-<area shape="rect" id="node6" href="$classplanning__scene_1_1PlanningScene.html#afadcb6c1258754b333aab83e643278b4" title=" " alt="" coords="257,201,453,243"/>
-<area shape="rect" id="node7" href="$test__planning__scene_8cpp.html#a8657479fb681ab94486683c9e03019fa" title=" " alt="" coords="327,267,382,294"/>
-<area shape="rect" id="node5" href="$classplanning__scene_1_1PlanningScene.html#ad4bd37ca382d39ef17072e73e806cc3b" title="Check if a given state is valid. This means checking for collisions, feasibility and whether the user..." alt="" coords="5,136,192,177"/>
+<area shape="rect" id="node1" title="Get the kinematic model for which the planning scene is maintained." alt="" coords="1093,247,1280,288"/>
+<area shape="rect" id="node2" href="$classplanning__scene_1_1PlanningScene.html#aac195370d32ef1ad1fa81fca8e20db46" title="Get the names of the links that are involved in collisions for the state robot_state given the allowe..." alt="" coords="835,5,1021,47"/>
+<area shape="rect" id="node3" href="$classplanning__scene_1_1PlanningScene.html#a5a59948c5ffe6c34ffc7a7a779d36ebc" title="Fill the message scene with the differences between this instance of PlanningScene with respect to th..." alt="" coords="811,71,1045,112"/>
+<area shape="rect" id="node4" href="$classplanning__scene_1_1PlanningScene.html#a1c4051599aa9702d96097634db499621" title="Construct a message (scene) with all the necessary data so that the scene can be later reconstructed ..." alt="" coords="551,188,763,229"/>
+<area shape="rect" id="node5" href="$test__planning__scene_8cpp.html#a8657479fb681ab94486683c9e03019fa" title=" " alt="" coords="85,195,140,222"/>
+<area shape="rect" id="node6" href="$classplanning__scene_1_1PlanningScene.html#a48c7c2c555e531d0cdc0bc4aa1e5acc6" title="Check if a given path is valid. Each state is checked for validity (collision avoidance,..." alt="" coords="835,436,1021,477"/>
+<area shape="rect" id="node7" href="$classplanning__scene_1_1PlanningScene.html#a530ec54860f5a757d64ae462d6f8b5ea" title="Check if a given state satisfies a set of constraints." alt="" coords="832,501,1024,543"/>
+<area shape="rect" id="node8" href="$classplanning__scene_1_1PlanningScene.html#a6f16582ddf99b615ef69c658521731ff" title=" " alt="" coords="811,305,1045,361"/>
+<area shape="rect" id="node12" href="$classplanning__scene_1_1PlanningScene.html#a6b9894a14d5757ea4317d0be4ebb5b6e" title="Apply changes to this planning scene as diffs, even if the message itself is not marked as being a di..." alt="" coords="268,377,503,419"/>
+<area shape="rect" id="node14" href="$classplanning__scene_1_1PlanningScene.html#acb5c51321f5d908072920ee2a2f1db58" title="Set this instance of a planning scene to be the same as the one serialized in the scene message,..." alt="" coords="280,247,491,288"/>
+<area shape="rect" id="node9" href="$classplanning__scene_1_1PlanningScene.html#a30e14e2ee05a53a1b6536930acb9d188" title="Set the current robot state to be state. If not all joint values are specified, the previously mainta..." alt="" coords="563,312,750,353"/>
+<area shape="rect" id="node10" href="$pyplanning__scene_8cpp.html#acdb1e01a5a6ec640937d8c69c0f7d045" title=" " alt="" coords="310,312,461,353"/>
+<area shape="rect" id="node11" href="$pymoveit__core_8cpp.html#aae5c18014d007aef7676d42ced1ba2b0" title=" " alt="" coords="37,319,188,346"/>
+<area shape="rect" id="node13" href="$classplanning__scene_1_1PlanningScene.html#a17eaa549d0279f01f8b26e4c04c05d6f" title="Call setPlanningSceneMsg() or setPlanningSceneDiffMsg() depending on how the is_diff member of the me..." alt="" coords="5,373,220,415"/>
 </map>

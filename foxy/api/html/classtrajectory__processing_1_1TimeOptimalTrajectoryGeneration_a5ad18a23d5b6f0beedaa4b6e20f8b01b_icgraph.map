@@ -1,0 +1,4 @@
+<map id="trajectory_processing::TimeOptimalTrajectoryGeneration::computeTimeStamps" name="trajectory_processing::TimeOptimalTrajectoryGeneration::computeTimeStamps">
+<area shape="rect" id="node1" title=" " alt="" coords="368,5,619,61"/>
+<area shape="rect" id="node2" href="$classdefault__planner__request__adapters_1_1AddTimeOptimalParameterization.html#addb58f9acb48922a5a6fb7c8aa4aacf2" title="Adapt the planning request if needed, call the planner function planner and update the planning respo..." alt="" coords="5,5,320,61"/>
+</map>

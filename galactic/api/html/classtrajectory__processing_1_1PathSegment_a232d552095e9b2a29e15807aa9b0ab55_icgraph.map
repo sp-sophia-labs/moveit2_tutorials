@@ -1,7 +1,9 @@
 <map id="trajectory_processing::PathSegment::getConfig" name="trajectory_processing::PathSegment::getConfig">
-<area shape="rect" id="node1" title=" " alt="" coords="737,46,924,87"/>
-<area shape="rect" id="node2" href="$classtrajectory__processing_1_1Path.html#a8fb3dbb1e543ba4ae6c12bb6f238700f" title=" " alt="" coords="527,46,689,87"/>
-<area shape="rect" id="node3" href="$classtrajectory__processing_1_1Trajectory.html#a42dc127a1d865ac21fe38a8fab206253" title="Return the position/configuration vector for a given point in time." alt="" coords="304,46,479,87"/>
-<area shape="rect" id="node4" href="$classtrajectory__processing_1_1TimeOptimalTrajectoryGeneration.html#a5ad18a23d5b6f0beedaa4b6e20f8b01b" title=" " alt="" coords="5,5,256,61"/>
-<area shape="rect" id="node5" href="$test__time__optimal__trajectory__generation_8cpp.html#a58fafeea33a2ccaaa2ed7335eaef0b11" title=" " alt="" coords="103,85,158,112"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1100,86,1287,127"/>
+<area shape="rect" id="node2" href="$classtrajectory__processing_1_1Path.html#a8fb3dbb1e543ba4ae6c12bb6f238700f" title=" " alt="" coords="889,86,1052,127"/>
+<area shape="rect" id="node3" href="$classtrajectory__processing_1_1Trajectory.html#a42dc127a1d865ac21fe38a8fab206253" title="Return the position/configuration vector for a given point in time." alt="" coords="667,86,841,127"/>
+<area shape="rect" id="node4" href="$classtrajectory__processing_1_1TimeOptimalTrajectoryGeneration.html#a5ad18a23d5b6f0beedaa4b6e20f8b01b" title=" " alt="" coords="368,45,619,101"/>
+<area shape="rect" id="node7" href="$test__time__optimal__trajectory__generation_8cpp.html#a58fafeea33a2ccaaa2ed7335eaef0b11" title=" " alt="" coords="466,125,521,152"/>
+<area shape="rect" id="node5" href="$classdefault__planner__request__adapters_1_1AddTimeOptimalParameterization.html#addb58f9acb48922a5a6fb7c8aa4aacf2" title="Adapt the planning request if needed, call the planner function planner and update the planning respo..." alt="" coords="5,5,320,61"/>
+<area shape="rect" id="node6" href="$classmoveit_1_1hybrid__planning_1_1SimpleSampler.html#a7c6b3f8cb49983fd8fd6559b6be922c8" title=" " alt="" coords="50,85,275,141"/>
 </map>

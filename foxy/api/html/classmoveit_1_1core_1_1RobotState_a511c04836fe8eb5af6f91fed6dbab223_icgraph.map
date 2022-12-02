@@ -1,0 +1,4 @@
+<map id="moveit::core::RobotState::hasAccelerations" name="moveit::core::RobotState::hasAccelerations">
+<area shape="rect" id="node1" title="By default, if accelerations are never set or initialized, the state remembers that there are no acce..." alt="" coords="235,13,419,54"/>
+<area shape="rect" id="node2" href="$classplanning__scene__monitor_1_1CurrentStateMonitor.html#a4de1dba0bdf28ab261818b93b9e06dd2" title="Set the state upd to the current state maintained by this class." alt="" coords="5,5,187,61"/>
+</map>

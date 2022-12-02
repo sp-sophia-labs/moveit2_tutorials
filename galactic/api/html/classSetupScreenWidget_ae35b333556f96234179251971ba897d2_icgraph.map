@@ -1,4 +1,5 @@
 <map id="SetupScreenWidget::isModal" name="SetupScreenWidget::isModal">
-<area shape="rect" id="node1" title="Event for when the current screen is in modal view. Essential disabled the left navigation." alt="" coords="232,13,389,54"/>
-<area shape="rect" id="node2" href="$classmoveit__setup__assistant_1_1PlanningGroupsWidget.html#a556671cc9b95237051958662433e195a" title="Received when this widget is chosen from the navigation menu." alt="" coords="5,5,184,61"/>
+<area shape="rect" id="node1" title="Event for when the current screen is in modal view. Essential disabled the left navigation." alt="" coords="232,53,389,94"/>
+<area shape="rect" id="node2" href="$classmoveit__setup__assistant_1_1PlanningGroupsWidget.html#ae28e1187ff0f945e04e5788c792c7717" title=" " alt="" coords="5,5,184,61"/>
+<area shape="rect" id="node3" href="$classmoveit__setup__assistant_1_1ROSControllersWidget.html#a80c89e72166ac60ed2085c0275c0de46" title=" " alt="" coords="6,85,183,141"/>
 </map>

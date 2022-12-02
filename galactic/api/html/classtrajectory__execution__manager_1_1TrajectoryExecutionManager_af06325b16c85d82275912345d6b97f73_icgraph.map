@@ -1,4 +1,5 @@
 <map id="trajectory_execution_manager::TrajectoryExecutionManager::ensureActiveControllersForJoints" name="trajectory_execution_manager::TrajectoryExecutionManager::ensureActiveControllersForJoints">
-<area shape="rect" id="node1" title="Make sure the active controllers are such that trajectories that actuate joints in the specified set ..." alt="" coords="108,5,407,61"/>
-<area shape="rect" id="node2" href="$test__execution__manager_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,20,60,47"/>
+<area shape="rect" id="node1" title="Make sure the active controllers are such that trajectories that actuate joints in the specified set ..." alt="" coords="356,39,655,95"/>
+<area shape="rect" id="node2" href="$classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#a2719329cedf99f117b37cb3744a2387a" title="Make sure the active controllers are such that trajectories that actuate joints in the specified grou..." alt="" coords="5,5,308,61"/>
+<area shape="rect" id="node3" href="$test__execution__manager_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="129,85,184,112"/>
 </map>

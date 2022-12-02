@@ -1,0 +1,4 @@
+<map id="moveit::core::JointModel::getVariableBoundsMsg" name="moveit::core::JointModel::getVariableBoundsMsg">
+<area shape="rect" id="node1" title="Get the joint limits known to this model, as a message." alt="" coords="257,5,439,47"/>
+<area shape="rect" id="node2" href="$classmoveit__setup__assistant_1_1SliderWidget.html#a94af29f324f14dbdccaffd879ac0c022" title=" " alt="" coords="5,5,209,47"/>
+</map>

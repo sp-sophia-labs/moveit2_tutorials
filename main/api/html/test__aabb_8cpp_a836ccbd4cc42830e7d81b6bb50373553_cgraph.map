@@ -7,5 +7,7 @@
 <area shape="rect" id="node6" href="$classmoveit_1_1core_1_1RobotModelBuilder.html#a9d71dd9c8cc3f34ad687b860a5fa80de" title="Adds a virtual joint to the SRDF." alt="" coords="123,267,313,308"/>
 <area shape="rect" id="node7" href="$classmoveit_1_1core_1_1RobotModelBuilder.html#a742857e69f69dcf03f647aa98a44498d" title="Builds and returns the robot model added to the builder." alt="" coords="123,332,313,373"/>
 <area shape="rect" id="node8" href="$classmoveit_1_1core_1_1RobotState.html#a55cae73d3315d1283436db1df51f4fe0" title="Compute an axis&#45;aligned bounding box that contains the current state. The format for aabb is (minx,..." alt="" coords="126,397,310,439"/>
-<area shape="rect" id="node9" href="$classmoveit_1_1core_1_1RobotModelBuilder.html#a3d8ec06341b89b1545ac0b385c4bbc0e" title="Returns true if the building process so far has been valid." alt="" coords="123,463,313,504"/>
+<area shape="rect" id="node11" href="$classmoveit_1_1core_1_1RobotModelBuilder.html#a3d8ec06341b89b1545ac0b385c4bbc0e" title="Returns true if the building process so far has been valid." alt="" coords="123,463,313,504"/>
+<area shape="rect" id="node9" href="$classmoveit_1_1core_1_1AABB.html#a5b6cb47c75fa4619863fe0cc6c4d5e41" title="Extend with a box transformed by the given transform." alt="" coords="361,365,572,407"/>
+<area shape="rect" id="node10" href="$classmoveit_1_1core_1_1RobotState.html#a309800a933676917ea4848b972a4318b" title="Get the link transform w.r.t. the root link (model frame) of the RobotModel. This is typically the ro..." alt="" coords="374,431,559,472"/>
 </map>

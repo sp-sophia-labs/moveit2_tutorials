@@ -1,0 +1,4 @@
+<map id="moveit_setup_assistant::PerceptionWidget::focusGiven" name="moveit_setup_assistant::PerceptionWidget::focusGiven">
+<area shape="rect" id="node1" title="Received when this widget is chosen from the navigation menu." alt="" coords="5,13,232,54"/>
+<area shape="rect" id="node2" href="$classmoveit__setup__assistant_1_1PerceptionWidget.html#a0a353fefae9142a5aca9254408f8a82d" title="Populate the combo dropdown box with sensor plugins." alt="" coords="280,5,505,61"/>
+</map>

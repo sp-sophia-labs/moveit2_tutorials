@@ -1,5 +1,5 @@
 <map id="distance_field::PropagationDistanceField::getCell" name="distance_field::PropagationDistanceField::getCell">
-<area shape="rect" id="node1" title="Gets full cell data given an index." alt="" coords="1513,560,1712,601"/>
+<area shape="rect" id="node1" title="Gets full cell data given an index." alt="" coords="1513,585,1712,627"/>
 <area shape="rect" id="node2" href="$test__distance__field_8cpp.html#a5aae4127e3013a1426bb6a579e697569" title=" " alt="" coords="1255,384,1457,425"/>
 <area shape="rect" id="node3" href="$test__distance__field_8cpp.html#a36ef155023115e2a57fbc7f2dc0bfa9b" title=" " alt="" coords="1277,450,1435,477"/>
 <area shape="rect" id="node4" href="$test__distance__field_8cpp.html#ac4b804d42ddeee2cdda9c1f51e7d820a" title=" " alt="" coords="1247,501,1465,543"/>
@@ -7,6 +7,7 @@
 <area shape="rect" id="node6" href="$test__distance__field_8cpp.html#a16b85a4c2ca8d6178abdd90d9c441e9a" title=" " alt="" coords="1330,618,1382,645"/>
 <area shape="rect" id="node33" href="$test__distance__field_8cpp.html#a6fb4f3b23fe1268982dfa1f6279c9c98" title=" " alt="" coords="1315,669,1397,695"/>
 <area shape="rect" id="node34" href="$test__distance__field_8cpp.html#aceb5540b8f976d06f0ad572e3ad42e99" title=" " alt="" coords="1317,719,1395,746"/>
+<area shape="rect" id="node35" href="$classdistance__field_1_1PropagationDistanceField.html#a8c612812cf5abf0908ce1bf8ded280d0" title="Writes the contents of the distance field to the supplied stream." alt="" coords="1250,771,1462,812"/>
 <area shape="rect" id="node7" href="$namespacecreate__ikfast__moveit__plugin.html#adec89093bfb6aac2e9ee710153282ae0" title=" " alt="" coords="975,5,1135,47"/>
 <area shape="rect" id="node8" href="$namespacecreate__ikfast__moveit__plugin.html#afe859322880add061d6be702c98de41e" title=" " alt="" coords="639,42,802,98"/>
 <area shape="rect" id="node9" href="$namespacecreate__ikfast__moveit__plugin.html#ad819134a697fd1d68bf196710ebe5649" title=" " alt="" coords="314,273,474,315"/>

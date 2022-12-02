@@ -1,4 +1,7 @@
 <map id="moveit::core::JointModel::getChildLinkModel" name="moveit::core::JointModel::getChildLinkModel">
-<area shape="rect" id="node1" title="Get the link that this joint connects to. There will always be such a link." alt="" coords="232,13,413,54"/>
-<area shape="rect" id="node2" href="$classmoveit__setup__assistant_1_1PlanningGroupsWidget.html#ae28e1187ff0f945e04e5788c792c7717" title=" " alt="" coords="5,5,184,61"/>
+<area shape="rect" id="node1" title="Get the link that this joint connects to. There will always be such a link." alt="" coords="721,35,903,76"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1RobotModel.html#afa81298bc190af38d3393eeb5c2762be" title="Given an URDF model and a SRDF model, build a full kinematic model." alt="" coords="244,5,435,47"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1RobotModel.html#af3885dc69c0dae39cdfac05b9f498114" title="(This function is mostly intended for internal use). Given a parent link, build up (recursively),..." alt="" coords="483,35,673,76"/>
+<area shape="rect" id="node5" href="$classmoveit__setup__assistant_1_1KinematicChainWidget.html#a4de7aefa1fd0a6b58dd04f7ee6d0b5d3" title="Loads the availble data list." alt="" coords="489,101,667,157"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1RobotModel.html#ab2d8a71b22b1659634434f9badaa706b" title="Construct a kinematic model from a parsed description and a list of planning groups." alt="" coords="5,5,196,47"/>
 </map>

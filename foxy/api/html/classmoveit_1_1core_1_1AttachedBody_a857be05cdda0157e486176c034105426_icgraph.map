@@ -1,8 +1,7 @@
 <map id="moveit::core::AttachedBody::getName" name="moveit::core::AttachedBody::getName">
-<area shape="rect" id="node1" title="Get the name of the attached body." alt="" coords="505,104,708,145"/>
-<area shape="rect" id="node2" href="$classpick__place_1_1PlacePlan.html#a6bda9b638f22f01f7828c5920f71ec02" title=" " alt="" coords="295,104,457,145"/>
-<area shape="rect" id="node3" href="$classpick__place_1_1PickPlacePlanBase.html#a3c52473c7048898a1406d13864ae0727" title=" " alt="" coords="31,5,221,47"/>
-<area shape="rect" id="node4" href="$classrobot__state__update_1_1RobotStateUpdateTest.html#a4b8e555816ac0889d0217261c360bbfe" title=" " alt="" coords="31,71,221,112"/>
-<area shape="rect" id="node5" href="$classpython__move__group_1_1PythonMoveGroupTest.html#a153f7cbf3e9543e4ff77f33cb1196d8a" title=" " alt="" coords="14,136,238,177"/>
-<area shape="rect" id="node6" href="$classpython__move__group__ns_1_1PythonMoveGroupNsTest.html#af29f67185da298628e58b4fbb46fbf85" title=" " alt="" coords="5,201,247,243"/>
+<area shape="rect" id="node1" title="Get the name of the attached body." alt="" coords="469,64,672,105"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1RobotState.html#a5969cc58a617a8c117cbb888e0034b4b" title="Add an attached body to this state. Ownership of the memory for the attached body is assumed by the s..." alt="" coords="237,64,421,105"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1RobotState.html#a49aa8e1d1b084bc6533770c13a7eeca5" title="Add an attached body to a link." alt="" coords="5,5,189,47"/>
+<area shape="rect" id="node4" href="$test__collision__distance__field_8cpp.html#a56e5140b67b0faaad8824694f12fc901" title=" " alt="" coords="63,71,132,98"/>
+<area shape="rect" id="node5" href="$test__collision__common__pr2_8h.html#a164d50285b5759151d1378ebf66a3747" title=" " alt="" coords="38,122,157,149"/>
 </map>

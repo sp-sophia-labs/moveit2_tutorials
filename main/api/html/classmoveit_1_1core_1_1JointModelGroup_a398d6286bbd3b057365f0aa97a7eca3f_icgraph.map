@@ -1,11 +1,5 @@
 <map id="moveit::core::JointModelGroup::distance" name="moveit::core::JointModelGroup::distance">
-<area shape="rect" id="node1" title=" " alt="" coords="840,166,1021,207"/>
-<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1JointModelGroup.html#a6b5fffc4c9d577eeb7efb013b7b99df6" title="Get the names of the links returned by getUpdatedLinkModels()" alt="" coords="543,5,792,61"/>
-<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1JointModelGroup.html#a5d4310920202175313140c60eb2ea956" title="Get the names of the links returned by getUpdatedLinkModels()" alt="" coords="543,85,792,141"/>
-<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1JointModelGroup.html#a7af014f4116c40ea1884cd7ae82f8da6" title="Check if a joint is part of this group." alt="" coords="577,166,758,207"/>
-<area shape="rect" id="node8" href="$classmoveit_1_1core_1_1JointModelGroup.html#a8c1668a6ef27e60f1bff7d0c19282c00" title="Check if a link is part of this group." alt="" coords="577,231,758,273"/>
-<area shape="rect" id="node9" href="$classmoveit_1_1core_1_1JointModelGroup.html#ae4fe1ec476ac40a3d5c0c08482d71678" title="Set the names of the subgroups for this group." alt="" coords="569,297,765,338"/>
-<area shape="rect" id="node5" href="$classmoveit_1_1core_1_1JointModelGroup.html#a0f60ea765fd917f911480a7615f8ff32" title="Get the unique set of end effector tips included in a particular joint model group as defined by the ..." alt="" coords="304,166,495,207"/>
-<area shape="rect" id="node6" href="$classmoveit_1_1core_1_1JointModelGroup.html#a06509f71422b63c90552127ce2ca4cee" title="Compute the default values for the joint group." alt="" coords="5,133,256,174"/>
-<area shape="rect" id="node7" href="$classmoveit_1_1core_1_1JointModelGroup.html#a7dd1f78e9dfdbc0875d2f7edead6daca" title=" " alt="" coords="40,198,221,239"/>
+<area shape="rect" id="node1" title=" " alt="" coords="613,13,795,54"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1JointModelGroup.html#a3a893bcd372e65bfdad62d43de3ee9e7" title="Compute random values for the state of the joint group." alt="" coords="309,5,565,61"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1JointModelGroup.html#ab882824a2f112698811a28355b06b3d3" title="Compute random values for the state of the joint group." alt="" coords="5,5,261,61"/>
 </map>

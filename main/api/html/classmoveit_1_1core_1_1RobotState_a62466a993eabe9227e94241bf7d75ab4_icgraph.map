@@ -1,9 +1,5 @@
 <map id="moveit::core::RobotState::dirtyCollisionBodyTransforms" name="moveit::core::RobotState::dirtyCollisionBodyTransforms">
-<area shape="rect" id="node1" title=" " alt="" coords="679,78,900,119"/>
-<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1RobotState.html#a22c47153cf437cbbd3914f15d177dd3d" title="Get the link transform w.r.t. the root link (model frame) of the RobotModel. This is typically the ro..." alt="" coords="425,78,631,119"/>
-<area shape="rect" id="node3" href="$classcollision__detection_1_1CollisionEnvBullet.html#a7d61a67dcd95b0e223cf483643727cd3" title=" " alt="" coords="172,5,377,61"/>
-<area shape="rect" id="node4" href="$robot__state__test_8cpp.html#af3f503f9c9cd0b80c36d72fb0679dfe5" title=" " alt="" coords="240,85,309,112"/>
-<area shape="rect" id="node5" href="$classmoveit_1_1core_1_1RobotState.html#a30c47230782e953d54774bf135d62249" title="Update the state after setting a particular link to the input global transform pose." alt="" coords="183,137,367,178"/>
-<area shape="rect" id="node6" href="$test__collision__distance__field_8cpp.html#a0b2cb582338c9b38b99cf1ac6e6a4ab7" title=" " alt="" coords="30,119,99,145"/>
-<area shape="rect" id="node7" href="$test__collision__common__pr2_8h.html#a02b332627ab378437cf5b833a952c7c0" title=" " alt="" coords="5,169,124,196"/>
+<area shape="rect" id="node1" title=" " alt="" coords="469,5,691,47"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1RobotState.html#a867985359844193ea81c2d23ac2c49b4" title="Returns true if anything in this state is dirty." alt="" coords="237,5,421,47"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1RobotState.html#a625a8417945d6c318a5eaf84ab085f4f" title=" " alt="" coords="5,5,189,47"/>
 </map>

@@ -1,0 +1,5 @@
+<map id="moveit::core::RobotState::getJointModel" name="moveit::core::RobotState::getJointModel">
+<area shape="rect" id="node1" title="Get the model of a particular joint." alt="" coords="617,13,801,54"/>
+<area shape="rect" id="node2" href="$classmoveit__fake__controller__manager_1_1MoveItFakeControllerManager.html#ab77886b13944daa6e6bb0163d9e1acd5" title=" " alt="" coords="336,5,569,61"/>
+<area shape="rect" id="node3" href="$classmoveit__fake__controller__manager_1_1MoveItFakeControllerManager.html#a7ebe5aff35e25deea4f5e851ab6c0d6d" title=" " alt="" coords="5,5,288,61"/>
+</map>

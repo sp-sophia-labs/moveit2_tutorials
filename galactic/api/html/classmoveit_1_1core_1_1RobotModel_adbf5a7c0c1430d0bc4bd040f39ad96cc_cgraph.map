@@ -1,0 +1,15 @@
+<map id="moveit::core::RobotModel::constructJointModel" name="moveit::core::RobotModel::constructJointModel">
+<area shape="rect" id="node1" title="Given a urdf joint model, a child link and a set of virtual joints, build up the corresponding JointM..." alt="" coords="5,300,196,341"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1JointModel.html#aa1d2f99c9025d01a92e47bc356938f77" title="Get the name of the joint." alt="" coords="255,5,436,47"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1JointModel.html#a46cac444de8f276139ff53359823f6fb" title="Get the dimension of the state space that corresponds to this joint." alt="" coords="248,71,443,112"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1JointModel.html#add20b6d4e10df54752f2c9ba61d8ee0a" title="Get the type of joint." alt="" coords="255,136,436,177"/>
+<area shape="rect" id="node5" href="$classmoveit_1_1core_1_1JointModel.html#af1db07d2843b0c6435415dd53b3aa433" title="Get the type of joint as a string." alt="" coords="255,201,436,243"/>
+<area shape="rect" id="node6" href="$classmoveit_1_1core_1_1PrismaticJointModel.html#ad8f130d51b3cbb4525bc549b002663e2" title="Set the axis of translation." alt="" coords="244,267,447,308"/>
+<area shape="rect" id="node7" href="$classmoveit_1_1core_1_1RevoluteJointModel.html#aa8afe131d73feede28c02e9e35a42eba" title="Set the axis of rotation." alt="" coords="246,332,445,373"/>
+<area shape="rect" id="node8" href="$classmoveit_1_1core_1_1RevoluteJointModel.html#af72d2977e918e77d47401028c8563a3e" title=" " alt="" coords="246,397,445,439"/>
+<area shape="rect" id="node10" href="$classmoveit_1_1core_1_1JointModel.html#a5ef18e2febdec02d920ad360790c7555" title="Set the factor that should be applied to the value returned by distance() when that value is used in ..." alt="" coords="255,463,436,504"/>
+<area shape="rect" id="node11" href="$classmoveit_1_1core_1_1JointModel.html#ae56f7b5353ea04884521b4b648811330" title=" " alt="" coords="255,528,436,569"/>
+<area shape="rect" id="node12" href="$classmoveit_1_1core_1_1JointModel.html#a4aa3e6fa081382e311a4d81beefbb16c" title="Set the lower and upper bounds for a variable. Throw an exception if the variable was not found." alt="" coords="255,593,436,635"/>
+<area shape="rect" id="node9" href="$classmoveit_1_1core_1_1JointModel.html#ab28d5b68df30fb92b77c42e353f6051c" title=" " alt="" coords="495,463,709,504"/>
+<area shape="rect" id="node13" href="$classmoveit_1_1core_1_1JointModel.html#a984c8d6c1e4bb5fff24bb1917a8985e6" title="Get the index of the variable within this joint." alt="" coords="511,593,693,635"/>
+</map>

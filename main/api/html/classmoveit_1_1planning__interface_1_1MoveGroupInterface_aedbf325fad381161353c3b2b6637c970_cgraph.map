@@ -1,6 +1,4 @@
 <map id="moveit::planning_interface::MoveGroupInterface::getGoalPositionTolerance" name="moveit::planning_interface::MoveGroupInterface::getGoalPositionTolerance">
-<area shape="rect" id="node1" title="Get the tolerance that is used for reaching a position goal. This is be the radius of a sphere where ..." alt="" coords="5,45,280,101"/>
-<area shape="rect" id="node2" href="$classmoveit_1_1planning__interface_1_1MoveGroupInterface_1_1MoveGroupInterfaceImpl.html#a559c3c9af128d75d878d09fce60be941" title=" " alt="" coords="328,5,575,61"/>
-<area shape="rect" id="node4" href="$classmoveit_1_1planning__interface_1_1MoveGroupInterface_1_1MoveGroupInterfaceImpl.html#a85c033ed09c50bc557955b3b190548fc" title=" " alt="" coords="328,85,575,141"/>
-<area shape="rect" id="node3" href="$classmoveit_1_1planning__interface_1_1MoveGroupInterface_1_1MoveGroupInterfaceImpl.html#a2b63591645e3ef521e31597f5c049bc5" title=" " alt="" coords="623,5,869,61"/>
+<area shape="rect" id="node1" title="Get the tolerance that is used for reaching a position goal. This is be the radius of a sphere where ..." alt="" coords="5,5,280,61"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1planning__interface_1_1MoveGroupInterface_1_1MoveGroupInterfaceImpl.html#a1694a7fadc2d40fa4e244cf823d96566" title=" " alt="" coords="328,5,611,61"/>
 </map>

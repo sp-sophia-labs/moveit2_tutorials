@@ -1,0 +1,10 @@
+<map id="moveit::core::RobotModel::getLinkModel" name="moveit::core::RobotModel::getLinkModel">
+<area shape="rect" id="node1" title="Get a link by its name. Output error and return NULL when the link is missing." alt="" coords="1009,39,1200,80"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1RobotModel.html#adcb9130929d85fdec8a04e79849351d8" title="Construct a JointModelGroup given a SRDF description group." alt="" coords="771,5,961,47"/>
+<area shape="rect" id="node6" href="$classmoveit_1_1core_1_1JointModelGroup.html#a0f60ea765fd917f911480a7615f8ff32" title="Get the unique set of end effector tips included in a particular joint model group as defined by the ..." alt="" coords="771,71,961,112"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1RobotModel.html#ad17bd8a8142ec84e4d8d3eb1fdfe162a" title="Given a SRDF model describing the groups, build up the groups in this kinematic model." alt="" coords="507,5,698,47"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1RobotModel.html#afa81298bc190af38d3393eeb5c2762be" title="Given an URDF model and a SRDF model, build a full kinematic model." alt="" coords="244,5,435,47"/>
+<area shape="rect" id="node5" href="$classmoveit_1_1core_1_1RobotModel.html#ab2d8a71b22b1659634434f9badaa706b" title="Construct a kinematic model from a parsed description and a list of planning groups." alt="" coords="5,5,196,47"/>
+<area shape="rect" id="node7" href="$classmoveit_1_1core_1_1JointModelGroup.html#a9aaa2a2b9846475665d27ac91c0817e7" title="Get the unique set of end effector tips included in a particular joint model group as defined by the ..." alt="" coords="507,71,698,112"/>
+<area shape="rect" id="node8" href="$classmoveit_1_1core_1_1JointModelGroup.html#a7df35063c14cf1c267be5d6b63cb6b9d" title="Get one end effector tip, throwing an error if there ends up being more in the joint model group This..." alt="" coords="483,136,723,177"/>
+</map>

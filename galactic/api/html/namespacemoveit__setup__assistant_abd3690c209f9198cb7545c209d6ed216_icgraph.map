@@ -1,0 +1,4 @@
+<map id="moveit_setup_assistant::disabledReasonFromString" name="moveit_setup_assistant::disabledReasonFromString">
+<area shape="rect" id="node1" title="Converts a string reason for disabling a link pair into a struct data type." alt="" coords="240,13,444,54"/>
+<area shape="rect" id="node2" href="$classmoveit__setup__assistant_1_1DefaultCollisionsWidget.html#a5cd105f70248ca83a0b279368e6b550f" title="Load Link Pairs from SRDF Format." alt="" coords="5,5,192,61"/>
+</map>

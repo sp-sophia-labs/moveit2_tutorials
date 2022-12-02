@@ -1,0 +1,10 @@
+<map id="moveit::core::JointModelGroup::getMimicJointModels" name="moveit::core::JointModelGroup::getMimicJointModels">
+<area shape="rect" id="node1" title="Get the mimic joints that are part of this group." alt="" coords="975,108,1181,149"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1RobotModel.html#adcb9130929d85fdec8a04e79849351d8" title="Construct a JointModelGroup given a SRDF description group." alt="" coords="729,5,919,47"/>
+<area shape="rect" id="node6" href="$classdynamics__solver_1_1DynamicsSolver.html#a526e0867a5f44135d4d3ed409358fbc5" title="Initialize the dynamics solver." alt="" coords="721,71,927,112"/>
+<area shape="rect" id="node7" href="$classkdl__kinematics__plugin_1_1KDLKinematicsPlugin.html#a3a705baf29bf253ebc242eac5a64d7fe" title="Initialization function for the kinematics, for use with kinematic chain IK solvers." alt="" coords="739,137,909,193"/>
+<area shape="rect" id="node8" href="$classsrv__kinematics__plugin_1_1SrvKinematicsPlugin.html#aad70fc7c31d0f4e022d1508acfa1aa7f" title="Initialization function for the kinematics, for use with kinematic chain IK solvers." alt="" coords="740,217,908,273"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1RobotModel.html#ad17bd8a8142ec84e4d8d3eb1fdfe162a" title="Given a SRDF model describing the groups, build up the groups in this kinematic model." alt="" coords="483,5,673,47"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1RobotModel.html#afa81298bc190af38d3393eeb5c2762be" title="Given an URDF model and a SRDF model, build a full kinematic model." alt="" coords="244,5,435,47"/>
+<area shape="rect" id="node5" href="$classmoveit_1_1core_1_1RobotModel.html#ab2d8a71b22b1659634434f9badaa706b" title="Construct a kinematic model from a parsed description and a list of planning groups." alt="" coords="5,5,196,47"/>
+</map>

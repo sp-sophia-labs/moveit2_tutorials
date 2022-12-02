@@ -7,6 +7,7 @@
 <area shape="rect" id="node6" href="$classmoveit_1_1core_1_1RobotState.html#aba31c6f758e3dabd32c1acbd069e189e" title="Set all joints to their default positions. The default position is 0, or if that is not within bounds..." alt="" coords="139,312,323,353"/>
 <area shape="rect" id="node7" href="$classmoveit_1_1core_1_1RobotState.html#a04b9343fdf57f04895fa21c326164d0f" title="It is assumed positions is an array containing the new positions for all variables in this state...." alt="" coords="139,377,323,419"/>
 <area shape="rect" id="node8" href="$classmoveit_1_1core_1_1RobotState.html#aaec5557d55b862d9dd832b3d4c221836" title="Update all transforms." alt="" coords="139,443,323,484"/>
-<area shape="rect" id="node9" href="$classmoveit_1_1core_1_1LinkModel.html#af30cc07d5b7409ac39b152a9cd94b563" title="The index of this joint when traversing the kinematic tree in depth first fashion." alt="" coords="387,409,565,451"/>
-<area shape="rect" id="node10" href="$classmoveit_1_1core_1_1LinkModel.html#ab3f3635f6017122968e2adae85dd56e3" title="Get the link model whose child this link is (through some joint). There may not always be a parent li..." alt="" coords="387,475,565,516"/>
+<area shape="rect" id="node9" href="$classmoveit_1_1core_1_1RobotState.html#afa1f72a766bdf75d81f4404058322576" title="Update the transforms for the collision bodies. This call is needed before calling collision checking..." alt="" coords="387,443,623,484"/>
+<area shape="rect" id="node10" href="$classmoveit_1_1core_1_1JointModel.html#aa6dbe9f994aca22adf80add175d10681" title="Get all the link models that descend from this joint, in the kinematic tree." alt="" coords="671,409,873,451"/>
+<area shape="rect" id="node11" href="$classmoveit_1_1core_1_1RobotState.html#a8778df1884c3caaf47558c939832cd9e" title="Update the reference frame transforms for links. This call is needed before using the transforms of l..." alt="" coords="680,475,864,516"/>
 </map>

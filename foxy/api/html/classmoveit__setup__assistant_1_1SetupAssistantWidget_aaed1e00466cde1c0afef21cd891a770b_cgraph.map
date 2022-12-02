@@ -1,0 +1,7 @@
+<map id="moveit_setup_assistant::SetupAssistantWidget::SetupAssistantWidget" name="moveit_setup_assistant::SetupAssistantWidget::SetupAssistantWidget">
+<area shape="rect" id="node1" title=" " alt="" coords="5,63,183,119"/>
+<area shape="rect" id="node2" href="$classmoveit__setup__assistant_1_1NavigationWidget.html#aa9fe586e9f73985ee1c0d443cf92e449" title=" " alt="" coords="242,5,450,47"/>
+<area shape="rect" id="node3" href="$classmoveit__setup__assistant_1_1LoadPathWidget.html#a0bc7a050652f2e07f1ee81c45430adfc" title="Set the path with QString." alt="" coords="251,71,441,112"/>
+<area shape="rect" id="node4" href="$classmoveit__setup__assistant_1_1NavigationWidget.html#a59d27e3d70a9fbdaed09beaeda595b24" title=" " alt="" coords="231,136,461,177"/>
+<area shape="rect" id="node5" href="$classmoveit__setup__assistant_1_1NavigationWidget.html#a4a1e8c3777f9e682b5afb606a4f1a55e" title=" " alt="" coords="509,136,736,177"/>
+</map>

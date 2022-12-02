@@ -1,0 +1,11 @@
+<map id="collision_detection::CollisionEnv::getLinkPadding" name="collision_detection::CollisionEnv::getLinkPadding">
+<area shape="rect" id="node1" title="Get the link paddings as a map (from link names to padding value)" alt="" coords="765,213,981,254"/>
+<area shape="rect" id="node2" href="$classcollision__detection_1_1CollisionEnvBullet.html#ad1cb16714714db53e59333dd8f6e7a4c" title="Construts a bullet collision object out of a robot link." alt="" coords="511,85,705,141"/>
+<area shape="rect" id="node5" href="$classcollision__detection_1_1CollisionEnvDistanceField.html#abd358f319ed4288d36081777401a3095" title=" " alt="" coords="499,165,717,221"/>
+<area shape="rect" id="node8" href="$classcollision__detection_1_1CollisionEnvFCL.html#aec0e2ac5157fcb386597513655e365ec" title=" " alt="" coords="509,245,707,301"/>
+<area shape="rect" id="node9" href="$classcollision__detection_1_1CollisionEnvFCL.html#a6b79be4232e4824a978dfd14a6d184e7" title="Updates the FCL collision geometry and objects saved in the CollisionRobotFCL members to reflect a ne..." alt="" coords="511,325,705,381"/>
+<area shape="rect" id="node3" href="$classcollision__detection_1_1CollisionEnvBullet.html#a1a54677bace8c4a6b96c3507ced8b3f3" title=" " alt="" coords="277,5,425,61"/>
+<area shape="rect" id="node4" href="$classcollision__detection_1_1CollisionEnvBullet.html#a3ac9509ce428e25996d93e80efb2c979" title="Updates the collision objects saved in the manager to reflect a new padding or scaling of the robot l..." alt="" coords="253,85,449,141"/>
+<area shape="rect" id="node6" href="$classcollision__detection_1_1CollisionEnvDistanceField.html#a2f4e06b0836194ca842b9914c3fe2328" title=" " alt="" coords="252,165,451,221"/>
+<area shape="rect" id="node7" href="$classcollision__detection_1_1CollisionEnvDistanceField.html#a34498751eb6fe388f991bf8c8e623612" title=" " alt="" coords="5,165,204,221"/>
+</map>

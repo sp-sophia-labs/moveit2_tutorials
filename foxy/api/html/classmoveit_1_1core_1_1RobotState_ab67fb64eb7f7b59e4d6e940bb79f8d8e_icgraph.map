@@ -1,6 +1,23 @@
 <map id="moveit::core::RobotState::getAttachedBody" name="moveit::core::RobotState::getAttachedBody">
-<area shape="rect" id="node1" title="Get the attached body named name. Return NULL if not found." alt="" coords="335,93,519,134"/>
-<area shape="rect" id="node2" href="$classcollision__detection_1_1CollisionEnvBullet.html#a7d61a67dcd95b0e223cf483643727cd3" title=" " alt="" coords="43,5,249,61"/>
-<area shape="rect" id="node3" href="$classcollision__detection_1_1CollisionEnvDistanceField.html#ac995657ee4e300570b7b90baed15014a" title=" " alt="" coords="5,85,287,141"/>
-<area shape="rect" id="node4" href="$classcollision__detection_1_1CollisionEnvBullet.html#adf0dea35ea4440d2a714edb446ffd59e" title=" " alt="" coords="67,165,225,221"/>
+<area shape="rect" id="node1" title="Get the attached body named name. Return NULL if not found." alt="" coords="1109,293,1293,334"/>
+<area shape="rect" id="node2" href="$classcollision__detection_1_1CollisionEnvBullet.html#a7d61a67dcd95b0e223cf483643727cd3" title=" " alt="" coords="842,5,1047,61"/>
+<area shape="rect" id="node4" href="$classcollision__detection_1_1CollisionEnvBullet.html#a67f5817d78fd75717100c6cd019e8310" title=" " alt="" coords="828,85,1061,141"/>
+<area shape="rect" id="node6" href="$classcollision__detection_1_1CollisionEnvBullet.html#a9555a43d4e99787690858d4ab95b5812" title="Bundles the different checkSelfCollision functions into a single function." alt="" coords="849,165,1041,221"/>
+<area shape="rect" id="node8" href="$namespacecollision__detection.html#ae464989e3e669c57edfc7076190d51c5" title=" " alt="" coords="838,245,1051,301"/>
+<area shape="rect" id="node9" href="$classcollision__detection_1_1CollisionEnvDistanceField.html#af400aea77ce050ce31d43aa3af95da15" title=" " alt="" coords="833,325,1056,381"/>
+<area shape="rect" id="node19" href="$classmoveit_1_1core_1_1RobotState.html#a7df9d1db14d7fbe00b9644729d7d88bf" title="Warning: This function inefficiently copies all transforms around. If the group consists of a set of ..." alt="" coords="547,497,731,538"/>
+<area shape="rect" id="node20" href="$classmoveit_1_1core_1_1RobotState.html#a7bbd086fed1babcc8e5492e0d9c80614" title="setFromIK for multiple poses and tips (end effectors) when no solver exists for the jmg that can solv..." alt="" coords="853,507,1037,549"/>
+<area shape="rect" id="node21" href="$classcollision__detection_1_1CollisionEnvDistanceField.html#a9c18224b768db7a07da8c0c8761a744d" title=" " alt="" coords="499,405,780,461"/>
+<area shape="rect" id="node3" href="$classcollision__detection_1_1CollisionEnvBullet.html#a89db36a1da5227a92674d92eaad90672" title="Check whether the robot model is in collision with the world. Any collisions between a robot link and..." alt="" coords="558,5,721,61"/>
+<area shape="rect" id="node5" href="$classcollision__detection_1_1CollisionEnvBullet.html#a0cece70f739e32fbf4ad8bf5c6b7a1a4" title="Check whether the robot model is in collision with the world in a continuous manner (between two robo..." alt="" coords="558,85,721,141"/>
+<area shape="rect" id="node7" href="$classcollision__detection_1_1CollisionEnvBullet.html#a92d5eb356e4ce32a736956cf8b2b3cac" title="Check for robot self collision. Any collision between any pair of links is checked for,..." alt="" coords="565,165,714,221"/>
+<area shape="rect" id="node10" href="$classcollision__detection_1_1CollisionEnvDistanceField.html#a7d1360bcf901b3dad6fbc19ee0f07f5b" title=" " alt="" coords="504,325,775,381"/>
+<area shape="rect" id="node17" href="$classcollision__detection_1_1CollisionEnvDistanceField.html#a2f4e06b0836194ca842b9914c3fe2328" title=" " alt="" coords="540,245,739,301"/>
+<area shape="rect" id="node11" href="$classcollision__detection_1_1CollisionEnvDistanceField.html#a0e00b6568d3190cc9c0ef01e7cf87e74" title=" " alt="" coords="252,325,451,381"/>
+<area shape="rect" id="node12" href="$classcollision__detection_1_1CollisionEnvDistanceField.html#adbf0d0348b86c2ad9a6075d8da03ed8d" title=" " alt="" coords="252,405,451,461"/>
+<area shape="rect" id="node13" href="$classcollision__detection_1_1CollisionEnvDistanceField.html#a6aa331e371df277cbfe6cf0f56043c2e" title=" " alt="" coords="252,485,451,541"/>
+<area shape="rect" id="node15" href="$classcollision__detection_1_1CollisionEnvDistanceField.html#aaa983cca54d16df1054d30abdc365fcc" title=" " alt="" coords="252,565,451,621"/>
+<area shape="rect" id="node16" href="$classcollision__detection_1_1CollisionEnvDistanceField.html#af493bb45e29b51b54ee99c3c18e5e2bb" title=" " alt="" coords="252,245,451,301"/>
+<area shape="rect" id="node14" href="$classcollision__detection_1_1CollisionEnvDistanceField.html#add2cbd856521f2041bf3b72a190a35fb" title="Check for robot self collision. Any collision between any pair of links is checked for,..." alt="" coords="5,485,204,541"/>
+<area shape="rect" id="node18" href="$classcollision__detection_1_1CollisionEnvDistanceField.html#a34498751eb6fe388f991bf8c8e623612" title=" " alt="" coords="252,165,451,221"/>
 </map>

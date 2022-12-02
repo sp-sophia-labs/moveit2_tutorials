@@ -1,5 +1,8 @@
 <map id="moveit::core::LinkModel::getLinkIndex" name="moveit::core::LinkModel::getLinkIndex">
-<area shape="rect" id="node1" title="The index of this joint when traversing the kinematic tree in depth first fashion." alt="" coords="271,39,449,80"/>
-<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1RobotState.html#a4eccb598b81de1f2b8238bb0f2f58acb" title="Clear the bodies attached to a specific group." alt="" coords="22,5,206,47"/>
-<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1RobotState.html#af8cd62bf201a3d2a7ae739d4f117a3a4" title="For a given group, copy the acceleration values of the variables that make up the group into another ..." alt="" coords="5,71,223,112"/>
+<area shape="rect" id="node1" title="The index of this joint when traversing the kinematic tree in depth first fashion." alt="" coords="471,104,649,145"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1RobotState.html#aeafe685444a15143853e4bbc6209d335" title="Get the transformation matrix from the model frame (root of model) to the frame identified by frame_i..." alt="" coords="238,5,422,47"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1RobotState.html#ab45c4d8ffa470ae3cc17d82d0def6415" title=" " alt="" coords="237,71,423,112"/>
+<area shape="rect" id="node5" href="$classmoveit_1_1core_1_1RobotState.html#ad7b55432ace2ce78e93a4833ba0574df" title="Get a MarkerArray that fully describes the robot markers for a given robot." alt="" coords="238,136,422,177"/>
+<area shape="rect" id="node6" href="$classmoveit_1_1core_1_1RobotState.html#a68c8658ddae9d80648201e5a19058459" title="Update the state after setting a particular link to the input global transform pose." alt="" coords="238,201,422,243"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1RobotState.html#af0f7b5f4350977bdbcb7a7ed94fd1918" title="Get the transformation matrix from the model frame (root of model) to the frame identified by frame_i..." alt="" coords="5,5,189,47"/>
 </map>

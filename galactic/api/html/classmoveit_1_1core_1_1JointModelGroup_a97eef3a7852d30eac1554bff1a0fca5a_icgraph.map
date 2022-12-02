@@ -1,0 +1,6 @@
+<map id="moveit::core::JointModelGroup::addDefaultState" name="moveit::core::JointModelGroup::addDefaultState">
+<area shape="rect" id="node1" title=" " alt="" coords="721,5,903,47"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1RobotModel.html#a8388447dc6f8330b37ce186f93c1e413" title="Given a SRDF model describing the groups, build the default states defined in the SRDF." alt="" coords="483,5,673,47"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1RobotModel.html#afa81298bc190af38d3393eeb5c2762be" title="Given an URDF model and a SRDF model, build a full kinematic model." alt="" coords="244,5,435,47"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1RobotModel.html#ab2d8a71b22b1659634434f9badaa706b" title="Construct a kinematic model from a parsed description and a list of planning groups." alt="" coords="5,5,196,47"/>
+</map>

@@ -1,4 +1,5 @@
 <map id="moveit::core::RobotModel::getRootJoint" name="moveit::core::RobotModel::getRootJoint">
-<area shape="rect" id="node1" title="Get the root joint. There will be one root joint unless the model is empty. This is either extracted ..." alt="" coords="123,5,313,47"/>
-<area shape="rect" id="node2" href="$test__kinematic__complex_8cpp.html#a0e801af07878675ef75fa777a90a6eb9" title=" " alt="" coords="5,13,75,39"/>
+<area shape="rect" id="node1" title="Get the root joint. There will be one root joint unless the model is empty. This is either extracted ..." alt="" coords="244,35,435,76"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1RobotModel.html#a6be4adcfa93aa895cdbee5e9fe5bb981" title="Return the name of the root joint. Throws an exception if there is no root joint." alt="" coords="5,5,196,47"/>
+<area shape="rect" id="node3" href="$test__kinematic__complex_8cpp.html#a0e801af07878675ef75fa777a90a6eb9" title=" " alt="" coords="66,71,135,98"/>
 </map>

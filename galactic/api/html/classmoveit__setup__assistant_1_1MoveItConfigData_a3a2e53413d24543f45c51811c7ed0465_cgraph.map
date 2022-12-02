@@ -1,4 +1,6 @@
 <map id="moveit_setup_assistant::MoveItConfigData::inputROSControllersYAML" name="moveit_setup_assistant::MoveItConfigData::inputROSControllersYAML">
 <area shape="rect" id="node1" title=" " alt="" coords="5,5,327,47"/>
-<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1JointModelGroup.html#a14fb89fcb1b1d7297b5ddd3d063c715f" title="Get the active joints in this group (that have controllable DOF). This does not include mimic joints." alt="" coords="375,5,581,47"/>
+<area shape="rect" id="node2" href="$classmoveit__setup__assistant_1_1MoveItConfigData.html#a6492625ebb15b387b663c31703b30b59" title=" " alt="" coords="375,5,677,47"/>
+<area shape="rect" id="node3" href="$classmoveit__setup__assistant_1_1MoveItConfigData.html#ac093cd2b6ef50c27cbe6b20730dbbd24" title=" " alt="" coords="725,5,1008,47"/>
+<area shape="rect" id="node4" href="$namespacemoveit__setup__assistant.html#ad257fca3c7dfcf73ae4434b210ccafc7" title=" " alt="" coords="1056,5,1233,47"/>
 </map>

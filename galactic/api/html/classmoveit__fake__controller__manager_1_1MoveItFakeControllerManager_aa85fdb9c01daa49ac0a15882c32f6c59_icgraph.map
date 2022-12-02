@@ -1,4 +1,5 @@
 <map id="moveit_fake_controller_manager::MoveItFakeControllerManager::getControllersList" name="moveit_fake_controller_manager::MoveItFakeControllerManager::getControllersList">
-<area shape="rect" id="node1" title="Get the list of known controller names." alt="" coords="287,5,520,61"/>
-<area shape="rect" id="node2" href="$classmoveit__fake__controller__manager_1_1MoveItFakeControllerManager.html#a68839abb08cbf418b6f15dd9dee4b50b" title="Return a given named controller." alt="" coords="5,5,239,61"/>
+<area shape="rect" id="node1" title="Get the list of known controller names." alt="" coords="287,45,520,101"/>
+<area shape="rect" id="node2" href="$classmoveit__fake__controller__manager_1_1MoveItFakeControllerManager.html#a6c3b544746ba7b686d78269d7ceeebcd" title="Get the list of active controllers." alt="" coords="5,5,239,61"/>
+<area shape="rect" id="node3" href="$classmoveit__fake__controller__manager_1_1MoveItFakeControllerManager.html#a870038635a2d0ecbeaf533f0b280f950" title=" " alt="" coords="5,85,239,141"/>
 </map>

@@ -1,6 +1,11 @@
 <map id="moveit::core::JointModelGroup::hasJointModel" name="moveit::core::JointModelGroup::hasJointModel">
-<area shape="rect" id="node1" title="Check if a joint is part of this group." alt="" coords="543,39,724,80"/>
-<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1JointModelGroup.html#a0f60ea765fd917f911480a7615f8ff32" title="Get the unique set of end effector tips included in a particular joint model group as defined by the ..." alt="" coords="304,39,495,80"/>
-<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1JointModelGroup.html#a06509f71422b63c90552127ce2ca4cee" title="Compute the default values for the joint group." alt="" coords="5,5,256,47"/>
-<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1JointModelGroup.html#a7dd1f78e9dfdbc0875d2f7edead6daca" title=" " alt="" coords="40,71,221,112"/>
+<area shape="rect" id="node1" title="Check if a joint is part of this group." alt="" coords="767,144,948,185"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1RobotModel.html#a8388447dc6f8330b37ce186f93c1e413" title="Given a SRDF model describing the groups, build the default states defined in the SRDF." alt="" coords="507,5,698,47"/>
+<area shape="rect" id="node5" href="$classmoveit_1_1core_1_1JointModelGroup.html#abc36f85e8064845d63632045dfc77334" title=" " alt="" coords="487,71,719,112"/>
+<area shape="rect" id="node7" href="$classconstraint__samplers_1_1JointConstraintSampler.html#ae8d005674ad13829c59268417125cbdc" title="Configures a joint constraint given a vector of constraints." alt="" coords="513,137,693,193"/>
+<area shape="rect" id="node8" href="$classkdl__kinematics__plugin_1_1KDLKinematicsPlugin.html#a3a705baf29bf253ebc242eac5a64d7fe" title="Initialization function for the kinematics, for use with kinematic chain IK solvers." alt="" coords="518,217,687,273"/>
+<area shape="rect" id="node9" href="$classmoveit_1_1core_1_1JointModelGroup.html#a6577c9a301c97b83ef75f11943160c56" title=" " alt="" coords="512,297,693,339"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1RobotModel.html#afa81298bc190af38d3393eeb5c2762be" title="Given an URDF model and a SRDF model, build a full kinematic model." alt="" coords="246,5,437,47"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1RobotModel.html#ab2d8a71b22b1659634434f9badaa706b" title="Construct a kinematic model from a parsed description and a list of planning groups." alt="" coords="5,5,196,47"/>
+<area shape="rect" id="node6" href="$classmoveit_1_1core_1_1JointModelGroup.html#a14667b0e463d402bd94adc8a1b6e1800" title=" " alt="" coords="244,71,439,112"/>
 </map>

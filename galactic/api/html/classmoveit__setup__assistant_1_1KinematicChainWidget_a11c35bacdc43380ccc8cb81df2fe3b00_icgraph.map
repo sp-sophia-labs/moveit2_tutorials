@@ -1,0 +1,4 @@
+<map id="moveit_setup_assistant::KinematicChainWidget::doneEditing" name="moveit_setup_assistant::KinematicChainWidget::doneEditing">
+<area shape="rect" id="node1" title="Event sent when this widget is done making data changes and parent widget can save." alt="" coords="232,5,411,61"/>
+<area shape="rect" id="node2" href="$classmoveit__setup__assistant_1_1KinematicChainWidget.html#a3968ef25bfd16e885fc0e1b16f447616" title="Constructor." alt="" coords="5,5,184,61"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="moveit_setup_assistant::MoveItConfigData::appendPaths" name="moveit_setup_assistant::MoveItConfigData::appendPaths">
+<area shape="rect" id="node1" title=" " alt="" coords="272,93,511,134"/>
+<area shape="rect" id="node2" href="$classmoveit__setup__assistant_1_1MoveItConfigData.html#ad5332ef7d3154a0f8cb5448557558f04" title="Make the full SRDF path using the loaded .setup_assistant data." alt="" coords="5,5,224,61"/>
+<area shape="rect" id="node3" href="$classmoveit__setup__assistant_1_1MoveItConfigData.html#ab5d21aacbe0036a6dd9282fcf5a1211b" title="Make the full URDF path using the loaded .setup_assistant data." alt="" coords="5,85,224,141"/>
+<area shape="rect" id="node4" href="$classmoveit__setup__assistant_1_1MoveItConfigData.html#a563c3c5fb54455620a0c58ec2b622421" title=" " alt="" coords="8,165,221,221"/>
+</map>

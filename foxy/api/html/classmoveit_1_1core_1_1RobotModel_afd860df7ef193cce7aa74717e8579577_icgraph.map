@@ -1,4 +1,8 @@
 <map id="moveit::core::RobotModel::getName" name="moveit::core::RobotModel::getName">
-<area shape="rect" id="node1" title="Get the model name." alt="" coords="244,5,435,47"/>
-<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1RobotModel.html#ab79cc844a13ea80b854f7d391ec023c1" title="For every pair of joints, pre&#45;compute the common roots of the joints." alt="" coords="5,5,196,47"/>
+<area shape="rect" id="node1" title="Get the model name." alt="" coords="795,71,985,112"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1RobotModel.html#a8388447dc6f8330b37ce186f93c1e413" title="Given a SRDF model describing the groups, build the default states defined in the SRDF." alt="" coords="519,5,710,47"/>
+<area shape="rect" id="node5" href="$classmoveit_1_1core_1_1RobotModel.html#afc454aa8fc3cac50d0b3172a37140365" title="Compute helpful information about joints." alt="" coords="519,71,710,112"/>
+<area shape="rect" id="node6" href="$classcached__ik__kinematics__plugin_1_1CachedMultiTipIKKinematicsPlugin.html#a5e5f65798095ad0bf7dcce9ff5a685be" title=" " alt="" coords="483,137,747,193"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1RobotModel.html#afa81298bc190af38d3393eeb5c2762be" title="Given an URDF model and a SRDF model, build a full kinematic model." alt="" coords="244,39,435,80"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1RobotModel.html#ab2d8a71b22b1659634434f9badaa706b" title="Construct a kinematic model from a parsed description and a list of planning groups." alt="" coords="5,39,196,80"/>
 </map>

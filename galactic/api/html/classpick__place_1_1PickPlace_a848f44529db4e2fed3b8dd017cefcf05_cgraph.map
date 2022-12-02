@@ -1,0 +1,8 @@
+<map id="pick_place::PickPlace::visualizeGrasps" name="pick_place::PickPlace::visualizeGrasps">
+<area shape="rect" id="node1" title=" " alt="" coords="5,136,167,177"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1JointModelGroup.html#a0b1752d210db29e6a05f7d0e70c4ce4f" title="Get the names of the links that are part of this joint group." alt="" coords="215,5,417,47"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1RobotState.html#ab483f513ee7bf499efcd6aa59086b815" title="Get a MarkerArray that fully describes the robot markers for a given robot." alt="" coords="224,71,408,112"/>
+<area shape="rect" id="node4" href="$classpick__place_1_1PickPlace.html#ad311b40d713e931ddc1f0d61c65fd8d1" title=" " alt="" coords="235,136,397,177"/>
+<area shape="rect" id="node5" href="$classmoveit_1_1core_1_1RobotState.html#aba31c6f758e3dabd32c1acbd069e189e" title="Set all joints to their default positions. The default position is 0, or if that is not within bounds..." alt="" coords="224,201,408,243"/>
+<area shape="rect" id="node6" href="$classmoveit_1_1core_1_1RobotState.html#a30c47230782e953d54774bf135d62249" title="Update the state after setting a particular link to the input global transform pose." alt="" coords="224,267,408,308"/>
+</map>

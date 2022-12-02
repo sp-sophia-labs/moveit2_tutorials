@@ -1,7 +1,12 @@
 <map id="moveit::core::RobotModel::getVariableBounds" name="moveit::core::RobotModel::getVariableBounds">
-<area shape="rect" id="node1" title="Get the bounds for a specific variable. Throw an exception of variable is not found." alt="" coords="407,79,597,120"/>
-<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1RobotModel.html#ab79cc844a13ea80b854f7d391ec023c1" title="For every pair of joints, pre&#45;compute the common roots of the joints." alt="" coords="138,5,329,47"/>
-<area shape="rect" id="node3" href="$classtrajectory__processing_1_1IterativeSplineParameterization.html#ab01c18e50f1663358c658651e1fde2c5" title=" " alt="" coords="115,71,351,127"/>
-<area shape="rect" id="node5" href="$classtrajectory__processing_1_1TimeOptimalTrajectoryGeneration.html#a5ad18a23d5b6f0beedaa4b6e20f8b01b" title=" " alt="" coords="108,151,359,207"/>
-<area shape="rect" id="node4" href="$test__time__parameterization_8cpp.html#a1fb67aa34417d03016c74d44bd7f54e0" title=" " alt="" coords="5,86,60,113"/>
+<area shape="rect" id="node1" title="Get the bounds for a specific variable. Throw an exception of variable is not found." alt="" coords="905,157,1096,199"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1RobotModel.html#afc454aa8fc3cac50d0b3172a37140365" title="Compute helpful information about joints." alt="" coords="637,19,827,60"/>
+<area shape="rect" id="node5" href="$classtrajectory__processing_1_1IterativeSplineParameterization.html#ab01c18e50f1663358c658651e1fde2c5" title=" " alt="" coords="614,110,850,166"/>
+<area shape="rect" id="node8" href="$classtrajectory__processing_1_1TimeOptimalTrajectoryGeneration.html#a5ad18a23d5b6f0beedaa4b6e20f8b01b" title=" " alt="" coords="607,190,857,246"/>
+<area shape="rect" id="node10" href="$classmoveit_1_1core_1_1JointModelGroup.html#afbc255c0832b70bee552c7537f889dc5" title="Print information about the constructed model." alt="" coords="641,271,823,312"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1RobotModel.html#afa81298bc190af38d3393eeb5c2762be" title="Given an URDF model and a SRDF model, build a full kinematic model." alt="" coords="306,5,497,47"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1RobotModel.html#ab2d8a71b22b1659634434f9badaa706b" title="Construct a kinematic model from a parsed description and a list of planning groups." alt="" coords="5,5,196,47"/>
+<area shape="rect" id="node6" href="$classdefault__planner__request__adapters_1_1AddIterativeSplineParameterization.html#a630967a9aade69aa8cc49f5ece102785" title="Adapt the planning request if needed, call the planner function planner and update the planning respo..." alt="" coords="286,71,517,127"/>
+<area shape="rect" id="node7" href="$test__time__parameterization_8cpp.html#a1fb67aa34417d03016c74d44bd7f54e0" title=" " alt="" coords="374,151,429,178"/>
+<area shape="rect" id="node9" href="$classdefault__planner__request__adapters_1_1AddTimeOptimalParameterization.html#addb58f9acb48922a5a6fb7c8aa4aacf2" title="Adapt the planning request if needed, call the planner function planner and update the planning respo..." alt="" coords="244,202,559,258"/>
 </map>

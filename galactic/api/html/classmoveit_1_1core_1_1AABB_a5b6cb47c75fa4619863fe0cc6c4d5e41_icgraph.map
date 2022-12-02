@@ -1,4 +1,11 @@
 <map id="moveit::core::AABB::extendWithTransformedBox" name="moveit::core::AABB::extendWithTransformedBox">
-<area shape="rect" id="node1" title="Extend with a box transformed by the given transform." alt="" coords="123,5,333,47"/>
-<area shape="rect" id="node2" href="$test__aabb_8cpp.html#a3fa5c4d317ef11767124171449c95a90" title=" " alt="" coords="5,13,75,39"/>
+<area shape="rect" id="node1" title="Extend with a box transformed by the given transform." alt="" coords="1192,64,1403,105"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1RobotState.html#a55cae73d3315d1283436db1df51f4fe0" title="Compute an axis&#45;aligned bounding box that contains the current state. The format for aabb is (minx,..." alt="" coords="960,5,1144,47"/>
+<area shape="rect" id="node4" href="$test__aabb_8cpp.html#a3fa5c4d317ef11767124171449c95a90" title=" " alt="" coords="782,71,851,98"/>
+<area shape="rect" id="node5" href="$classmoveit_1_1core_1_1LinkModel.html#a7d1a02097cc8d310d11506d89cd87560" title=" " alt="" coords="963,123,1141,164"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1RobotState.html#ad6919686feee89138316eb279794b71f" title="Compute an axis&#45;aligned bounding box that contains the current state. The format for aabb is (minx,..." alt="" coords="725,5,909,47"/>
+<area shape="rect" id="node6" href="$classmoveit_1_1core_1_1RobotModel.html#a4984ed960df65c297658d488dc7148e1" title="Given a urdf link, build the corresponding LinkModel object." alt="" coords="721,123,912,164"/>
+<area shape="rect" id="node7" href="$classmoveit_1_1core_1_1RobotModel.html#af3885dc69c0dae39cdfac05b9f498114" title="(This function is mostly intended for internal use). Given a parent link, build up (recursively),..." alt="" coords="483,123,673,164"/>
+<area shape="rect" id="node8" href="$classmoveit_1_1core_1_1RobotModel.html#afa81298bc190af38d3393eeb5c2762be" title="Given an URDF model and a SRDF model, build a full kinematic model." alt="" coords="244,123,435,164"/>
+<area shape="rect" id="node9" href="$classmoveit_1_1core_1_1RobotModel.html#ab2d8a71b22b1659634434f9badaa706b" title="Construct a kinematic model from a parsed description and a list of planning groups." alt="" coords="5,123,196,164"/>
 </map>

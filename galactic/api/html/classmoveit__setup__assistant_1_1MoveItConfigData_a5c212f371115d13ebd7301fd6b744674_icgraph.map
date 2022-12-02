@@ -1,0 +1,11 @@
+<map id="moveit_setup_assistant::MoveItConfigData::getRobotModel" name="moveit_setup_assistant::MoveItConfigData::getRobotModel">
+<area shape="rect" id="node1" title="Provide a shared kinematic model loader." alt="" coords="757,203,1012,245"/>
+<area shape="rect" id="node2" href="$classmoveit__setup__assistant_1_1MoveItConfigData.html#a0f715dd88874c91d2caca931bdd05016" title="Add a Follow Joint Trajectory action Controller for each Planning Group." alt="" coords="431,5,657,61"/>
+<area shape="rect" id="node3" href="$classmoveit__setup__assistant_1_1MoveItConfigData.html#a9537552cf5d2ae485e83d5bed32ce5dd" title="Decide the best two joints to be used for the projection evaluator." alt="" coords="413,85,675,141"/>
+<area shape="rect" id="node5" href="$classmoveit__setup__assistant_1_1MoveItConfigData.html#ac122baeece09695a27f21d3a52d57a11" title="Provide a shared planning scene." alt="" coords="409,166,679,207"/>
+<area shape="rect" id="node7" href="$classmoveit__setup__assistant_1_1MoveItConfigData.html#ac96c73240c5f73d83e6909610f45f409" title=" " alt="" coords="431,232,657,288"/>
+<area shape="rect" id="node8" href="$classmoveit__setup__assistant_1_1MoveItConfigData.html#a0cb060e532a3dbc7af728ea612de0d30" title=" " alt="" coords="431,312,657,368"/>
+<area shape="rect" id="node9" href="$classmoveit__setup__assistant_1_1MoveItConfigData.html#ad65ed096455399bca0ae1f16be175f90" title=" " alt="" coords="379,393,709,434"/>
+<area shape="rect" id="node4" href="$classmoveit__setup__assistant_1_1MoveItConfigData.html#ae4a7605cf75901915b28d3f893733836" title=" " alt="" coords="5,93,331,134"/>
+<area shape="rect" id="node6" href="$collisions__updater_8cpp.html#a0255f83644fb7cd23a2bf00cdc6eef64" title=" " alt="" coords="129,173,207,200"/>
+</map>

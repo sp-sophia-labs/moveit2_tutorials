@@ -1,10 +1,31 @@
 <map id="robot_trajectory::RobotTrajectory::getWayPointCount" name="robot_trajectory::RobotTrajectory::getWayPointCount">
-<area shape="rect" id="node1" title=" " alt="" coords="415,196,649,237"/>
-<area shape="rect" id="node2" href="$classtrajectory__processing_1_1RuckigSmoothing.html#ad70304532097ece8d0820c567797ba46" title=" " alt="" coords="108,5,367,47"/>
-<area shape="rect" id="node3" href="$classtrajectory__processing_1_1IterativeSplineParameterization.html#ac65a0bed2a3d103913f7179b18efb6ab" title=" " alt="" coords="119,71,355,127"/>
-<area shape="rect" id="node5" href="$classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a4602671783e5fdb62207685fbaea5dce" title=" " alt="" coords="137,151,337,207"/>
-<area shape="rect" id="node6" href="$namespacetrajectory__processing.html#abc470821d79a10aff1491c1d7d6e64b4" title=" " alt="" coords="156,232,319,273"/>
-<area shape="rect" id="node7" href="$test__time__parameterization_8cpp.html#aa51b79e24472e01dd59a8f68878e719e" title=" " alt="" coords="210,298,265,325"/>
-<area shape="rect" id="node8" href="$test__robot__trajectory_8cpp.html#ac2eca9d77186f589d9148d63fbef0006" title=" " alt="" coords="203,349,272,375"/>
-<area shape="rect" id="node4" href="$test__time__parameterization_8cpp.html#a1fb67aa34417d03016c74d44bd7f54e0" title=" " alt="" coords="5,86,60,113"/>
+<area shape="rect" id="node1" title=" " alt="" coords="889,509,1124,551"/>
+<area shape="rect" id="node2" href="$classtrajectory__processing_1_1RuckigSmoothing.html#ad70304532097ece8d0820c567797ba46" title=" " alt="" coords="568,5,827,47"/>
+<area shape="rect" id="node3" href="$classtrajectory__processing_1_1IterativeSplineParameterization.html#ac65a0bed2a3d103913f7179b18efb6ab" title=" " alt="" coords="579,71,815,127"/>
+<area shape="rect" id="node6" href="$classtrajectory__processing_1_1IterativeParabolicTimeParameterization.html#a9178f8f9ae2540954879925f56ca0138" title=" " alt="" coords="553,298,841,354"/>
+<area shape="rect" id="node9" href="$classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a4602671783e5fdb62207685fbaea5dce" title=" " alt="" coords="597,218,797,274"/>
+<area shape="rect" id="node10" href="$classchomp_1_1ChompTrajectory.html#a7c699cdfffe049e9b9e103d787b41b39" title="Receives the path obtained from a given MotionPlanDetailedResponse res object&#39;s trajectory (e...." alt="" coords="605,152,789,193"/>
+<area shape="rect" id="node13" href="$classplanning__scene_1_1PlanningScene.html#ab536eaccd77e4e1f495b782e44ecab5d" title="Get the top max_costs cost sources for a specified trajectory, but only for group group_name...." alt="" coords="604,379,791,420"/>
+<area shape="rect" id="node14" href="$classrobot__trajectory_1_1RobotTrajectory.html#a63a1b941a949379a408bf10f97aa2267" title="Gets a robot state corresponding to a supplied duration from start for the trajectory,..." alt="" coords="580,444,815,485"/>
+<area shape="rect" id="node15" href="$namespacetrajectory__processing.html#abc470821d79a10aff1491c1d7d6e64b4" title=" " alt="" coords="616,509,779,551"/>
+<area shape="rect" id="node16" href="$classplanning__scene_1_1PlanningScene.html#aefbe70b8d2e85494322c20802240aad0" title="Check if a given path is valid. Each state is checked for validity (collision avoidance,..." alt="" coords="604,575,791,616"/>
+<area shape="rect" id="node17" href="$namespacerobot__trajectory.html#a0750fe7c58d1a655d83bd177586696ca" title="Calculate the path length of a given trajectory based on the accumulated robot state distances...." alt="" coords="616,757,779,799"/>
+<area shape="rect" id="node21" href="$namespacerobot__trajectory.html#a8f564d1e01216ff451b54282b0f6b61c" title="Calculate the waypoint density of a trajectory." alt="" coords="277,699,471,740"/>
+<area shape="rect" id="node23" href="$classrobot__trajectory_1_1RobotTrajectory.html#a55e7beedfc60e0a6e523bd7d9278d884" title="Print information about the trajectory." alt="" coords="580,640,815,681"/>
+<area shape="rect" id="node26" href="$namespacerobot__trajectory.html#aaea992e4ba6967a7ec88956541d43618" title="Calculate the smoothness of a given trajectory." alt="" coords="591,823,803,850"/>
+<area shape="rect" id="node28" href="$test__time__optimal__trajectory__generation_8cpp.html#aa7457c60f1de979e840ab210f031cb45" title=" " alt="" coords="670,874,725,901"/>
+<area shape="rect" id="node29" href="$test__robot__trajectory_8cpp.html#ac2eca9d77186f589d9148d63fbef0006" title=" " alt="" coords="663,925,732,951"/>
+<area shape="rect" id="node4" href="$classdefault__planner__request__adapters_1_1AddIterativeSplineParameterization.html#a630967a9aade69aa8cc49f5ece102785" title="Adapt the planning request if needed, call the planner function planner and update the planning respo..." alt="" coords="259,71,489,127"/>
+<area shape="rect" id="node5" href="$test__time__parameterization_8cpp.html#a1fb67aa34417d03016c74d44bd7f54e0" title=" " alt="" coords="347,21,401,47"/>
+<area shape="rect" id="node7" href="$classdefault__planner__request__adapters_1_1AddTimeParameterization.html#a66404b1e7b0f950d035929c33a748a7b" title="Adapt the planning request if needed, call the planner function planner and update the planning respo..." alt="" coords="243,298,505,354"/>
+<area shape="rect" id="node8" href="$test__time__parameterization_8cpp.html#aa51b79e24472e01dd59a8f68878e719e" title=" " alt="" coords="73,487,127,514"/>
+<area shape="rect" id="node11" href="$classchomp_1_1ChompPlanner.html#a15329905603fe1bf38e84a3973dc3e83" title=" " alt="" coords="289,152,459,193"/>
+<area shape="rect" id="node12" href="$classchomp_1_1OptimizerAdapter.html#ac4b3582c46aba259952e593ebce7fcdb" title="Adapt the planning request if needed, call the planner function planner and update the planning respo..." alt="" coords="5,152,195,193"/>
+<area shape="rect" id="node18" href="$classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a9577c9f07660ef803aabb917aefc82b8" title=" " alt="" coords="283,815,465,871"/>
+<area shape="rect" id="node20" href="$test__robot__trajectory_8cpp.html#ae93bf72402ab01b5ced1fe8f5dc893a5" title=" " alt="" coords="339,765,409,791"/>
+<area shape="rect" id="node19" href="$classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#abf647e82c140649be2188f757c42db6d" title="Execute the given motion plan request on the set of planners for the set number of runs." alt="" coords="9,815,191,871"/>
+<area shape="rect" id="node22" href="$test__robot__trajectory_8cpp.html#a102898fa0cc22e7d56d37b3aa9c3cc7a" title=" " alt="" coords="65,706,135,733"/>
+<area shape="rect" id="node24" href="$namespacerobot__trajectory.html#a9eedff63f0a0ef50d6dff84db384fb2b" title="Operator overload for printing trajectory to a stream." alt="" coords="269,647,479,674"/>
+<area shape="rect" id="node25" href="$test__time__parameterization_8cpp.html#a9e9c53951a8d9ae89aa8517fe0a63df8" title=" " alt="" coords="316,554,432,581"/>
+<area shape="rect" id="node27" href="$test__robot__trajectory_8cpp.html#a8a7aa8ae6cf7c2a9fecb9b33af31f6f4" title=" " alt="" coords="339,895,409,922"/>
 </map>

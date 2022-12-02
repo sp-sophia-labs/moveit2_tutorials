@@ -1,15 +1,26 @@
 <map id="moveit::core::RobotState::setToDefaultValues" name="moveit::core::RobotState::setToDefaultValues">
-<area shape="rect" id="node1" title="Set all joints to their default positions. The default position is 0, or if that is not within bounds..." alt="" coords="573,297,757,338"/>
-<area shape="rect" id="node2" href="$classTestAABB.html#a7d865d1fd465e11c563a0864cc705671" title=" " alt="" coords="309,5,469,32"/>
-<area shape="rect" id="node3" href="$classompl__interface_1_1ModelBasedPlanningContext.html#a4bc253bf6e37d00cf414a3e2fa33fb75" title=" " alt="" coords="252,56,525,112"/>
-<area shape="rect" id="node4" href="$test__collision__common__panda_8h.html#a894803518e93708a180036f3541da9e1" title="Brings the panda robot in user defined home position." alt="" coords="341,136,436,163"/>
-<area shape="rect" id="node6" href="$classTestStateValidityChecker.html#a53d7ba4d8f9ee76a5ae88dc9e22d2d7f" title=" " alt="" coords="297,187,480,229"/>
-<area shape="rect" id="node7" href="$robot__state__test_8cpp.html#a3f9c85cd3634062dbfc3758043c4b16c" title=" " alt="" coords="361,253,416,280"/>
-<area shape="rect" id="node8" href="$test__collision__distance__field_8cpp.html#a3fa91ff9d909d272a406ee230cd957ac" title=" " alt="" coords="354,304,423,331"/>
-<area shape="rect" id="node9" href="$classTestConstrainedStateSpace.html#af0ad5874dee12235148c97c0ef28433e" title=" " alt="" coords="287,355,490,397"/>
-<area shape="rect" id="node10" href="$classTestConstrainedStateSpace.html#af60229649c7fde9698845838cd5def17" title=" " alt="" coords="289,421,488,462"/>
-<area shape="rect" id="node11" href="$classTestConstrainedStateSpace.html#ac198f32011feba35df006da6336011b8" title=" " alt="" coords="289,486,488,527"/>
-<area shape="rect" id="node12" href="$classompl__interface_1_1TSStateStorage.html#aee607a0273b5a50f55277ef4454b569b" title=" " alt="" coords="275,551,503,593"/>
-<area shape="rect" id="node13" href="$test__collision__common__pr2_8h.html#a6c87f5349fd29014a139bb3d711b8b46" title=" " alt="" coords="329,617,448,644"/>
-<area shape="rect" id="node5" href="$classCollisionDetectorPandaTest.html#ac80f4ae223ee276d35b520c06f20b23f" title=" " alt="" coords="5,129,204,170"/>
+<area shape="rect" id="node1" title="Set all joints to their default positions. The default position is 0, or if that is not within bounds..." alt="" coords="807,564,991,605"/>
+<area shape="rect" id="node2" href="$classTestPlanningContext.html#a41eb3e50154a77cf3eead6a7add81cf7" title=" " alt="" coords="542,37,697,79"/>
+<area shape="rect" id="node5" href="$classTestAABB.html#a7d865d1fd465e11c563a0864cc705671" title=" " alt="" coords="539,103,699,130"/>
+<area shape="rect" id="node6" href="$classompl__interface_1_1ModelBasedPlanningContext.html#a4bc253bf6e37d00cf414a3e2fa33fb75" title=" " alt="" coords="483,154,756,210"/>
+<area shape="rect" id="node7" href="$classmoveit__cpp_1_1PlanningComponent.html#aa89cf6ec7cf184c07fd78e3ed1a39c5a" title="Set the goal constraints generated from a named target state." alt="" coords="501,235,738,276"/>
+<area shape="rect" id="node8" href="$classmoveit_1_1planning__interface_1_1MoveGroupInterface.html#a5262ff42a454b499d3608b384957a5e4" title="Set the current joint values to be ones previously remembered by rememberJointValues() or,..." alt="" coords="480,300,759,341"/>
+<area shape="rect" id="node9" href="$classmoveit__rviz__plugin_1_1MotionPlanningDisplay.html#a73f2aea25f7b25da00b2568964b013c4" title=" " alt="" coords="529,366,709,422"/>
+<area shape="rect" id="node12" href="$classmoveit__cpp_1_1PlanningComponent.html#aedceb6351645033d1f46de88c3b78e73" title="Set the named robot state that should be considered as start state for planning." alt="" coords="501,447,738,488"/>
+<area shape="rect" id="node13" href="$test__collision__common__panda_8h.html#a894803518e93708a180036f3541da9e1" title="Brings the panda robot in user defined home position." alt="" coords="572,513,667,539"/>
+<area shape="rect" id="node15" href="$classTestStateValidityChecker.html#a53d7ba4d8f9ee76a5ae88dc9e22d2d7f" title=" " alt="" coords="528,564,711,605"/>
+<area shape="rect" id="node16" href="$robot__state__test_8cpp.html#a3f9c85cd3634062dbfc3758043c4b16c" title=" " alt="" coords="592,630,647,657"/>
+<area shape="rect" id="node17" href="$test__collision__distance__field_8cpp.html#a3fa91ff9d909d272a406ee230cd957ac" title=" " alt="" coords="585,681,654,707"/>
+<area shape="rect" id="node18" href="$classTestConstrainedStateSpace.html#af0ad5874dee12235148c97c0ef28433e" title=" " alt="" coords="518,732,721,773"/>
+<area shape="rect" id="node19" href="$classTestConstrainedStateSpace.html#af60229649c7fde9698845838cd5def17" title=" " alt="" coords="520,797,719,839"/>
+<area shape="rect" id="node20" href="$classTestConstrainedStateSpace.html#ac198f32011feba35df006da6336011b8" title=" " alt="" coords="520,863,719,904"/>
+<area shape="rect" id="node21" href="$classompl__interface_1_1TSStateStorage.html#aee607a0273b5a50f55277ef4454b569b" title=" " alt="" coords="505,928,733,969"/>
+<area shape="rect" id="node22" href="$test__collision__common__pr2_8h.html#a6c87f5349fd29014a139bb3d711b8b46" title=" " alt="" coords="560,994,679,1021"/>
+<area shape="rect" id="node23" href="$classpick__place_1_1PickPlace.html#a848f44529db4e2fed3b8dd017cefcf05" title=" " alt="" coords="539,1045,700,1087"/>
+<area shape="rect" id="node3" href="$classTestPlanningContext.html#a8f4f3b99518372988da125d40652e4d7" title=" " alt="" coords="254,5,411,47"/>
+<area shape="rect" id="node4" href="$classTestPlanningContext.html#a8843ac6094d78c509e1ec3da3141e118" title=" " alt="" coords="255,71,410,112"/>
+<area shape="rect" id="node10" href="$classmoveit__rviz__plugin_1_1MotionPlanningDisplay.html#a09f09b17e295d496999b0c1b65731986" title=" " alt="" coords="243,366,423,422"/>
+<area shape="rect" id="node11" href="$classmoveit__rviz__plugin_1_1MotionPlanningDisplay.html#aee4a87243cf759854077cff4e8a152ab" title="This is an event called by loadRobotModel() in the MainLoop; do not call directly." alt="" coords="5,366,185,422"/>
+<area shape="rect" id="node14" href="$classCollisionDetectorPandaTest.html#ac80f4ae223ee276d35b520c06f20b23f" title=" " alt="" coords="233,505,432,547"/>
+<area shape="rect" id="node24" href="$classpick__place_1_1PickPlace.html#a64a18c66f4a8e5ac106df5a07d03d22c" title=" " alt="" coords="252,1045,413,1087"/>
 </map>

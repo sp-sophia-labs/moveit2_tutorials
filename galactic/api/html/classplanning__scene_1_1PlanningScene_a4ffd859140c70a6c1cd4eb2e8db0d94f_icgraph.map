@@ -1,5 +1,5 @@
 <map id="planning_scene::PlanningScene::knowsFrameTransform" name="planning_scene::PlanningScene::knowsFrameTransform">
-<area shape="rect" id="node1" title="Check if a transform to the frame id is known. This will be known if id is a link name,..." alt="" coords="531,13,748,54"/>
-<area shape="rect" id="node2" href="$classplanning__scene_1_1PlanningScene.html#a351202a8fec49dff6646a454ac3e9a7e" title="Get the transform corresponding to the frame id. This will be known if id is a link name,..." alt="" coords="287,13,483,54"/>
-<area shape="rect" id="node3" href="$classplanning__scene_1_1PlanningScene.html#a6f16582ddf99b615ef69c658521731ff" title=" " alt="" coords="5,5,239,61"/>
+<area shape="rect" id="node1" title="Check if a transform to the frame id is known. This will be known if id is a link name,..." alt="" coords="296,39,513,80"/>
+<area shape="rect" id="node2" href="$classplanning__scene_1_1SceneTransforms.html#ade722cf9faaf59d0b1c02f2cbb0121ef" title="Check whether data can be transformed from a particular frame." alt="" coords="5,5,248,47"/>
+<area shape="rect" id="node3" href="$classplanning__scene_1_1PlanningScene.html#a09bd2c2d55541033dcf1cd4ebb0a5292" title="Check if a transform to the frame id is known. This will be known if id is a link name,..." alt="" coords="18,71,235,112"/>
 </map>

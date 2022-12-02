@@ -1,4 +1,5 @@
 <map id="moveit_setup_assistant::NavigationWidget::setSelected" name="moveit_setup_assistant::NavigationWidget::setSelected">
-<area shape="rect" id="node1" title=" " alt="" coords="237,13,468,54"/>
-<area shape="rect" id="node2" href="$classmoveit__setup__assistant_1_1SetupAssistantWidget.html#a6e2aec9a124259b7f5eb14774a48993d" title=" " alt="" coords="5,5,189,61"/>
+<area shape="rect" id="node1" title=" " alt="" coords="231,53,461,94"/>
+<area shape="rect" id="node2" href="$classmoveit__setup__assistant_1_1SetupAssistantWidget.html#addd49ec21ffb77ecfe20a2583e47497f" title=" " alt="" coords="5,5,183,61"/>
+<area shape="rect" id="node3" href="$classmoveit__setup__assistant_1_1SetupAssistantWidget.html#aaed1e00466cde1c0afef21cd891a770b" title=" " alt="" coords="5,85,183,141"/>
 </map>

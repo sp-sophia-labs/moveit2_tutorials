@@ -1,4 +1,0 @@
-<map id="robot_interaction::RobotInteraction::addActiveComponent" name="robot_interaction::RobotInteraction::addActiveComponent">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,208,61"/>
-<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1LinkModel.html#ab3f3635f6017122968e2adae85dd56e3" title="Get the link model whose child this link is (through some joint). There may not always be a parent li..." alt="" coords="256,13,435,54"/>
-</map>

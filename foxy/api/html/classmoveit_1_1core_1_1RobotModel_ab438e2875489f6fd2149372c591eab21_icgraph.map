@@ -1,4 +1,13 @@
 <map id="moveit::core::RobotModel::getJointModelGroup" name="moveit::core::RobotModel::getJointModelGroup">
-<area shape="rect" id="node1" title="Get a joint group from this model (by name)" alt="" coords="123,5,313,47"/>
-<area shape="rect" id="node2" href="$test__kinematic__complex_8cpp.html#a21a56d609cf50d6d770a29e8edc10a43" title=" " alt="" coords="5,13,75,39"/>
+<area shape="rect" id="node1" title="Get a joint group from this model (by name)" alt="" coords="960,129,1151,171"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1RobotModel.html#adcb9130929d85fdec8a04e79849351d8" title="Construct a JointModelGroup given a SRDF description group." alt="" coords="721,9,912,51"/>
+<area shape="rect" id="node6" href="$classmoveit_1_1core_1_1RobotModel.html#a8388447dc6f8330b37ce186f93c1e413" title="Given a SRDF model describing the groups, build the default states defined in the SRDF." alt="" coords="483,71,673,112"/>
+<area shape="rect" id="node7" href="$classmoveit_1_1core_1_1JointModelGroup.html#a9cfcfdbd77e2bb1f18c526e0b7b29414" title="Get the groups that are subsets of this one (in terms of joints set)" alt="" coords="726,129,907,171"/>
+<area shape="rect" id="node10" href="$classmoveit_1_1core_1_1RobotModel.html#af78afbd7f6d3a858d0f4645ca1210f5c" title="A map of known kinematics solvers (associated to their group name)" alt="" coords="721,195,912,236"/>
+<area shape="rect" id="node11" href="$test__kinematic__complex_8cpp.html#a21a56d609cf50d6d770a29e8edc10a43" title=" " alt="" coords="782,261,851,287"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1RobotModel.html#ad17bd8a8142ec84e4d8d3eb1fdfe162a" title="Given a SRDF model describing the groups, build up the groups in this kinematic model." alt="" coords="483,5,673,47"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1RobotModel.html#afa81298bc190af38d3393eeb5c2762be" title="Given an URDF model and a SRDF model, build a full kinematic model." alt="" coords="244,39,435,80"/>
+<area shape="rect" id="node5" href="$classmoveit_1_1core_1_1RobotModel.html#ab2d8a71b22b1659634434f9badaa706b" title="Construct a kinematic model from a parsed description and a list of planning groups." alt="" coords="5,39,196,80"/>
+<area shape="rect" id="node8" href="$classmoveit_1_1core_1_1RobotState.html#a7bbd086fed1babcc8e5492e0d9c80614" title="setFromIK for multiple poses and tips (end effectors) when no solver exists for the jmg that can solv..." alt="" coords="486,136,670,177"/>
+<area shape="rect" id="node9" href="$classmoveit_1_1core_1_1RobotState.html#a7df9d1db14d7fbe00b9644729d7d88bf" title="Warning: This function inefficiently copies all transforms around. If the group consists of a set of ..." alt="" coords="247,136,431,177"/>
 </map>

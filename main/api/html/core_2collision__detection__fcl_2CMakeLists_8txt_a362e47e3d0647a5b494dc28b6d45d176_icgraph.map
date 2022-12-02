@@ -1,7 +1,0 @@
-<map id="if" name="if">
-<area shape="rect" id="node1" title=" " alt="" coords="789,46,828,73"/>
-<area shape="rect" id="node2" href="$classmoveit__servo_1_1ServoCalcs.html#ad7ef47a7a6e5c288bec894d4fd53fdd1" title="Come to a halt in a smooth way. Apply a smoothing plugin, if one is configured." alt="" coords="517,5,707,47"/>
-<area shape="rect" id="node5" href="$classmove__group_1_1MoveGroupKinematicsService.html#a5f7431ad977ffa26914345d0769d6ce8" title=" " alt="" coords="483,71,741,112"/>
-<area shape="rect" id="node3" href="$classmoveit__servo_1_1ServoCalcs.html#abc7fc9277c10322e7af56c7e889c2cd8" title="Do calculations for a single iteration. Publish one outgoing command." alt="" coords="244,5,435,47"/>
-<area shape="rect" id="node4" href="$classmoveit__servo_1_1ServoCalcs.html#abada414babad9c28179c0ce88ca6917b" title="Run the main calculation loop." alt="" coords="5,5,196,47"/>
-</map>

@@ -1,0 +1,6 @@
+<map id="moveit::core::RobotModel::computeDescendants" name="moveit::core::RobotModel::computeDescendants">
+<area shape="rect" id="node1" title="For every joint, pre&#45;compute the list of descendant joints &amp; links." alt="" coords="721,5,912,47"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1RobotModel.html#afc454aa8fc3cac50d0b3172a37140365" title="Compute helpful information about joints." alt="" coords="483,5,673,47"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1RobotModel.html#afa81298bc190af38d3393eeb5c2762be" title="Given an URDF model and a SRDF model, build a full kinematic model." alt="" coords="244,5,435,47"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1RobotModel.html#ab2d8a71b22b1659634434f9badaa706b" title="Construct a kinematic model from a parsed description and a list of planning groups." alt="" coords="5,5,196,47"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="pick_place::ApproachAndTranslateStage::evaluate" name="pick_place::ApproachAndTranslateStage::evaluate">
+<area shape="rect" id="node1" title=" " alt="" coords="5,141,249,183"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1CartesianInterpolator.html#ae8e2f4be4098480869bb8a55340f6483" title="Compute the sequence of joint values that correspond to a straight Cartesian path for a particular gr..." alt="" coords="316,31,567,72"/>
+<area shape="rect" id="node3" href="$classtrajectory__processing_1_1IterativeParabolicTimeParameterization.html#add98b37306db64f26057b71e45592a57" title=" " alt="" coords="297,97,585,153"/>
+<area shape="rect" id="node9" href="$classmoveit_1_1core_1_1JointModelGroup.html#abc7f6fa56cde459d36117d481a244dde" title=" " alt="" coords="342,177,541,219"/>
+<area shape="rect" id="node10" href="$classmoveit_1_1core_1_1Transforms.html#a101b4614f91072368a62c879bd59e36a" title="Check if two frames end up being the same once the missing / are added as prefix (if they are missing..." alt="" coords="349,243,533,284"/>
+<area shape="rect" id="node4" href="$classrobot__trajectory_1_1RobotTrajectory.html#afdd5cc4e84e484af2dc6ea337f62719e" title=" " alt="" coords="633,5,868,47"/>
+<area shape="rect" id="node5" href="$classrobot__trajectory_1_1RobotTrajectory.html#a6eaef50c3127c83dbc5ca393376435b1" title=" " alt="" coords="633,71,868,112"/>
+<area shape="rect" id="node6" href="$classrobot__trajectory_1_1RobotTrajectory.html#ababf812aa287c586d9ad0b190e1d2482" title=" " alt="" coords="633,136,868,177"/>
+<area shape="rect" id="node7" href="$classrobot__trajectory_1_1RobotTrajectory.html#a336c915269b3139b7ae53fb2af6ab5a0" title=" " alt="" coords="633,201,868,243"/>
+<area shape="rect" id="node8" href="$classmoveit_1_1core_1_1JointModelGroup.html#a53c98940d80e6dd37cbe787f86d4155d" title="Get the array of continuous joints used in this group (may include mimic joints)." alt="" coords="916,201,1155,243"/>
+</map>

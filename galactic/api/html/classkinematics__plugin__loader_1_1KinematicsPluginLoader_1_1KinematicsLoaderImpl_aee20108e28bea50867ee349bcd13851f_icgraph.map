@@ -1,0 +1,5 @@
+<map id="kinematics_plugin_loader::KinematicsPluginLoader::KinematicsLoaderImpl::allocKinematicsSolver" name="kinematics_plugin_loader::KinematicsPluginLoader::KinematicsLoaderImpl::allocKinematicsSolver">
+<area shape="rect" id="node1" title=" " alt="" coords="579,5,867,76"/>
+<area shape="rect" id="node2" href="$classkinematics__plugin__loader_1_1KinematicsPluginLoader_1_1KinematicsLoaderImpl.html#a446a75b8254780e7c170bf509c87aa9e" title=" " alt="" coords="243,5,531,76"/>
+<area shape="rect" id="node3" href="$classkinematics__plugin__loader_1_1KinematicsPluginLoader.html#a5fbe986aeb678a96a3237b5e531ef75e" title="Get a function pointer that allocates and initializes a kinematics solver. If not previously called,..." alt="" coords="5,13,195,69"/>
+</map>

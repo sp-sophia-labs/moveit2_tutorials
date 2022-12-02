@@ -1,0 +1,4 @@
+<map id="moveit_setup_assistant::LoadPathWidget::getPath" name="moveit_setup_assistant::LoadPathWidget::getPath">
+<area shape="rect" id="node1" title="Returns the file path in std::string format." alt="" coords="5,5,197,47"/>
+<area shape="rect" id="node2" href="$classmoveit__setup__assistant_1_1LoadPathWidget.html#acb338a2424a1a4a7e0547a1f5085d139" title="Returns the file path in QString format." alt="" coords="245,5,448,47"/>
+</map>

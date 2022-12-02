@@ -1,5 +1,4 @@
 <map id="trajectory_execution_manager::TrajectoryExecutionManager::push" name="trajectory_execution_manager::TrajectoryExecutionManager::push">
-<area shape="rect" id="node1" title=" " alt="" coords="576,5,799,61"/>
-<area shape="rect" id="node2" href="$classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#ad5b806e21fdc1ee497db6f0973aa39c1" title="Execute a named event (e.g., &#39;stop&#39;)" alt="" coords="305,5,528,61"/>
-<area shape="rect" id="node3" href="$classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#acb49903f2327ea2e8009d3b21762ff36" title="Set joint&#45;value tolerance for validating trajectory&#39;s start point against current robot state." alt="" coords="5,5,257,61"/>
+<area shape="rect" id="node1" title=" " alt="" coords="276,5,499,61"/>
+<area shape="rect" id="node2" href="$classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#a9f2eb53ee6e934a45fc8e7c68f7c5d32" title=" " alt="" coords="5,5,228,61"/>
 </map>

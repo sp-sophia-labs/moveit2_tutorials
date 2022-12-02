@@ -1,4 +1,7 @@
 <map id="pick_place::PickPlacePlanBase::PickPlacePlanBase" name="pick_place::PickPlacePlanBase::PickPlacePlanBase">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,195,47"/>
-<area shape="rect" id="node2" href="$BenchmarkExecutor_8cpp.html#aca04eccd5f0d7c2b3e8b4728fdb1b9d7" title=" " alt="" coords="243,13,315,39"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,104,195,145"/>
+<area shape="rect" id="node2" href="$classpick__place_1_1PickPlacePlanBase.html#a99145c72225a411186bce74f63ea3b3c" title=" " alt="" coords="269,5,459,47"/>
+<area shape="rect" id="node3" href="$classpick__place_1_1PickPlacePlanBase.html#aeb0ce390c5b1b97993baa76825034409" title=" " alt="" coords="269,71,459,112"/>
+<area shape="rect" id="node4" href="$classpick__place_1_1ManipulationPipeline.html#a0832acb877295e4fec74eae4954ee61f" title=" " alt="" coords="243,136,485,177"/>
+<area shape="rect" id="node5" href="$classpick__place_1_1ManipulationPipeline.html#a2adf50931d91005e37a42f50f3b92b4f" title=" " alt="" coords="259,201,469,243"/>
 </map>

@@ -1,0 +1,6 @@
+<map id="planning_scene::PlanningScene::checkCollision" name="planning_scene::PlanningScene::checkCollision">
+<area shape="rect" id="node1" title="Check whether a specified state (robot_state) is in collision. The collision transforms of robot_stat..." alt="" coords="5,71,192,112"/>
+<area shape="rect" id="node2" href="$classplanning__scene_1_1PlanningScene.html#a7a90a85d8dcfd1f2aea3cd019db399c8" title="Get the allowed collision matrix." alt="" coords="240,5,480,47"/>
+<area shape="rect" id="node3" href="$classplanning__scene_1_1PlanningScene.html#aeed4b8e82fc31eb7abb405429877343e" title="Get the active collision environment." alt="" coords="267,71,453,112"/>
+<area shape="rect" id="node4" href="$classplanning__scene_1_1PlanningScene.html#a6841b7eae6f77d00e36d30ea255bb053" title="Get the active collision detector for the robot." alt="" coords="242,136,478,177"/>
+</map>

@@ -1,6 +1,4 @@
 <map id="moveit_warehouse::loadDatabase" name="moveit_warehouse::loadDatabase">
-<area shape="rect" id="node1" title="Load a database connection." alt="" coords="632,53,876,80"/>
-<area shape="rect" id="node2" href="$classmoveit_1_1planning__interface_1_1MoveGroupInterface_1_1MoveGroupInterfaceImpl.html#a079301970a5557ee31eafe5d75c4d856" title=" " alt="" coords="328,5,584,61"/>
-<area shape="rect" id="node4" href="$broadcast_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="429,85,483,112"/>
-<area shape="rect" id="node3" href="$classmoveit_1_1planning__interface_1_1MoveGroupInterface.html#a92ff1a7ceec9f299988ded4e72d5cce5" title="Get the current state of the robot within the duration specified by wait." alt="" coords="5,13,280,54"/>
+<area shape="rect" id="node1" title="Load a database connection." alt="" coords="108,5,352,32"/>
+<area shape="rect" id="node2" href="$broadcast_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,60,32"/>
 </map>

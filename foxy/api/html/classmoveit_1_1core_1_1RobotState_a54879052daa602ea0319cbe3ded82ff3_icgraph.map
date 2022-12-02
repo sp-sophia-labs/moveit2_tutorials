@@ -1,10 +1,13 @@
 <map id="moveit::core::RobotState::setVariablePosition" name="moveit::core::RobotState::setVariablePosition">
-<area shape="rect" id="node1" title="Set the position of a single variable. An exception is thrown if the variable name is not known." alt="" coords="421,166,605,207"/>
-<area shape="rect" id="node2" href="$classtrajectory__processing_1_1IterativeSplineParameterization.html#ab01c18e50f1663358c658651e1fde2c5" title=" " alt="" coords="130,5,366,61"/>
-<area shape="rect" id="node4" href="$classtrajectory__processing_1_1TimeOptimalTrajectoryGeneration.html#a5ad18a23d5b6f0beedaa4b6e20f8b01b" title=" " alt="" coords="123,85,373,141"/>
-<area shape="rect" id="node5" href="$classmoveit_1_1core_1_1RobotState.html#a2b2cdba896e3cda3e307e117eaef39c2" title="Get the model of a particular link." alt="" coords="156,166,340,207"/>
-<area shape="rect" id="node7" href="$classMyInfo.html#a8e06fb9175c741fad9477fe8674eeb0a" title=" " alt="" coords="163,232,333,259"/>
-<area shape="rect" id="node8" href="$robot__state__test_8cpp.html#adb3b487fd2559db6519d52dec17ab77d" title=" " alt="" coords="213,283,283,309"/>
-<area shape="rect" id="node3" href="$test__time__parameterization_8cpp.html#a1fb67aa34417d03016c74d44bd7f54e0" title=" " alt="" coords="13,20,67,47"/>
-<area shape="rect" id="node6" href="$test__collision__distance__field_8cpp.html#a56e5140b67b0faaad8824694f12fc901" title=" " alt="" coords="5,173,75,200"/>
+<area shape="rect" id="node1" title="Set the position of a single variable. An exception is thrown if the variable name is not known." alt="" coords="667,253,851,294"/>
+<area shape="rect" id="node2" href="$classtrajectory__processing_1_1IterativeSplineParameterization.html#ab01c18e50f1663358c658651e1fde2c5" title=" " alt="" coords="375,63,611,119"/>
+<area shape="rect" id="node5" href="$classtrajectory__processing_1_1TimeOptimalTrajectoryGeneration.html#a5ad18a23d5b6f0beedaa4b6e20f8b01b" title=" " alt="" coords="368,143,619,199"/>
+<area shape="rect" id="node7" href="$classmoveit__rviz__plugin_1_1JMGItemModel.html#ae8dbdea6ac0b78064b76341ee645bd12" title=" " alt="" coords="401,223,586,265"/>
+<area shape="rect" id="node8" href="$classMyInfo.html#a8e06fb9175c741fad9477fe8674eeb0a" title=" " alt="" coords="408,289,579,316"/>
+<area shape="rect" id="node9" href="$classchomp_1_1ChompPlanner.html#a15329905603fe1bf38e84a3973dc3e83" title=" " alt="" coords="409,341,578,382"/>
+<area shape="rect" id="node11" href="$robot__state__test_8cpp.html#adb3b487fd2559db6519d52dec17ab77d" title=" " alt="" coords="459,407,528,433"/>
+<area shape="rect" id="node3" href="$classdefault__planner__request__adapters_1_1AddIterativeSplineParameterization.html#a630967a9aade69aa8cc49f5ece102785" title="Adapt the planning request if needed, call the planner function planner and update the planning respo..." alt="" coords="47,5,278,61"/>
+<area shape="rect" id="node4" href="$test__time__parameterization_8cpp.html#a1fb67aa34417d03016c74d44bd7f54e0" title=" " alt="" coords="135,85,190,112"/>
+<area shape="rect" id="node6" href="$classdefault__planner__request__adapters_1_1AddTimeOptimalParameterization.html#addb58f9acb48922a5a6fb7c8aa4aacf2" title="Adapt the planning request if needed, call the planner function planner and update the planning respo..." alt="" coords="5,143,320,199"/>
+<area shape="rect" id="node10" href="$classchomp_1_1OptimizerAdapter.html#ac4b3582c46aba259952e593ebce7fcdb" title="Adapt the planning request if needed, call the planner function planner and update the planning respo..." alt="" coords="68,341,257,382"/>
 </map>

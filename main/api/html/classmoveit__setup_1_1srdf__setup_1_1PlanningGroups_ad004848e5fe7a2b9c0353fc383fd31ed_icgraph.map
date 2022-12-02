@@ -1,4 +1,4 @@
 <map id="moveit_setup::srdf_setup::PlanningGroups::getOMPLPlanners" name="moveit_setup::srdf_setup::PlanningGroups::getOMPLPlanners">
-<area shape="rect" id="node1" title=" " alt="" coords="236,5,411,61"/>
-<area shape="rect" id="node2" href="$classmoveit__setup_1_1srdf__setup_1_1GroupEditWidget.html#add76c823e400930e3b74cc404017ea05" title="Set the previous data." alt="" coords="5,5,188,61"/>
+<area shape="rect" id="node1" title=" " alt="" coords="304,5,479,61"/>
+<area shape="rect" id="node2" href="$classmoveit__setup_1_1srdf__setup_1_1GroupEditWidget.html#a80ba264a17ba1b9b653eede630470521" title="Populate the combo dropdown box with kinematic planners." alt="" coords="5,5,256,61"/>
 </map>

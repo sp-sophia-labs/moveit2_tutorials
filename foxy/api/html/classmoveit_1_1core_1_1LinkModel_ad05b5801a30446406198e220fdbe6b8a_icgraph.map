@@ -1,0 +1,7 @@
+<map id="moveit::core::LinkModel::setJointOriginTransform" name="moveit::core::LinkModel::setJointOriginTransform">
+<area shape="rect" id="node1" title=" " alt="" coords="960,5,1143,47"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1RobotModel.html#a4984ed960df65c297658d488dc7148e1" title="Given a urdf link, build the corresponding LinkModel object." alt="" coords="721,5,912,47"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1RobotModel.html#af3885dc69c0dae39cdfac05b9f498114" title="(This function is mostly intended for internal use). Given a parent link, build up (recursively),..." alt="" coords="483,5,673,47"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1RobotModel.html#afa81298bc190af38d3393eeb5c2762be" title="Given an URDF model and a SRDF model, build a full kinematic model." alt="" coords="244,5,435,47"/>
+<area shape="rect" id="node5" href="$classmoveit_1_1core_1_1RobotModel.html#ab2d8a71b22b1659634434f9badaa706b" title="Construct a kinematic model from a parsed description and a list of planning groups." alt="" coords="5,5,196,47"/>
+</map>

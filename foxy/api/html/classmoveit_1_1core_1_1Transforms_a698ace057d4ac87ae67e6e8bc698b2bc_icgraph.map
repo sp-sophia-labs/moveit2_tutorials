@@ -1,6 +1,8 @@
 <map id="moveit::core::Transforms::setTransform" name="moveit::core::Transforms::setTransform">
-<area shape="rect" id="node1" title="Set a transform in the transform tree (adding it if necessary)" alt="" coords="435,23,619,65"/>
-<area shape="rect" id="node2" href="$pytransforms_8cpp.html#a2366f3da99cebc8483ab7d7fb8b9af76" title=" " alt="" coords="204,5,387,32"/>
-<area shape="rect" id="node4" href="$test__transforms_8cpp.html#aa55abc90e544baffe5b886de21a2a886" title=" " alt="" coords="268,56,323,83"/>
-<area shape="rect" id="node3" href="$pymoveit__core_8cpp.html#aae5c18014d007aef7676d42ced1ba2b0" title=" " alt="" coords="5,5,156,32"/>
+<area shape="rect" id="node1" title="Set a transform in the transform tree (adding it if necessary)" alt="" coords="667,63,851,104"/>
+<area shape="rect" id="node2" href="$pymoveit__core_8cpp.html#a2366f3da99cebc8483ab7d7fb8b9af76" title=" " alt="" coords="204,41,387,67"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1Transforms.html#afaa58b69143340c408017910eae1683f" title="Set a transform in the transform tree (adding it if necessary)" alt="" coords="435,29,619,71"/>
+<area shape="rect" id="node5" href="$classmoveit_1_1core_1_1Transforms.html#a03d696cafc730b5e9516b7bbe9e8e8c9" title="Set a transform in the transform tree (adding it if necessary)" alt="" coords="435,95,619,136"/>
+<area shape="rect" id="node6" href="$test__transforms_8cpp.html#aa55abc90e544baffe5b886de21a2a886" title=" " alt="" coords="499,161,554,187"/>
+<area shape="rect" id="node3" href="$pymoveit__core_8cpp.html#aae5c18014d007aef7676d42ced1ba2b0" title=" " alt="" coords="5,41,156,67"/>
 </map>

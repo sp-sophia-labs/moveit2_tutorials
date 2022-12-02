@@ -1,6 +1,10 @@
 <map id="moveit::core::JointModelGroup::getActiveJointModelNames" name="moveit::core::JointModelGroup::getActiveJointModelNames">
-<area shape="rect" id="node1" title="Get the names of the active joints in this group. These are the names of the joints returned by getJo..." alt="" coords="284,57,531,98"/>
-<area shape="rect" id="node2" href="$unittest__trajectory__functions_8cpp.html#a69bc93d1a78b8b17050bea973e8ef88e" title="Test the inverse kinematics directly through ikfast solver." alt="" coords="86,5,155,32"/>
-<area shape="rect" id="node3" href="$classTestConstrainedStateSpace.html#af0ad5874dee12235148c97c0ef28433e" title=" " alt="" coords="19,57,222,98"/>
-<area shape="rect" id="node4" href="$classtrajopt__interface_1_1TrajOptProblem.html#a1203cf4beb21e269c6e049043c41f26d" title=" " alt="" coords="5,122,236,163"/>
+<area shape="rect" id="node1" title="Get the names of the active joints in this group. These are the names of the joints returned by getJo..." alt="" coords="617,195,864,237"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1planning__interface_1_1MoveGroupInterface.html#a9603eb67712ae165a9aa494c283af164" title="Get only the active (actuated) joints this instance operates on." alt="" coords="336,5,569,61"/>
+<area shape="rect" id="node3" href="$classmoveit__fake__controller__manager_1_1MoveItFakeControllerManager.html#ab77886b13944daa6e6bb0163d9e1acd5" title=" " alt="" coords="336,85,569,141"/>
+<area shape="rect" id="node5" href="$classtrajopt__interface_1_1TrajOptInterface.html#a6b9e2fb0c9c463675e653160b015ee3c" title=" " alt="" coords="368,166,537,207"/>
+<area shape="rect" id="node6" href="$unittest__trajectory__functions_8cpp.html#a69bc93d1a78b8b17050bea973e8ef88e" title="Test the inverse kinematics directly through ikfast solver." alt="" coords="418,232,487,259"/>
+<area shape="rect" id="node7" href="$classTestConstrainedStateSpace.html#af0ad5874dee12235148c97c0ef28433e" title=" " alt="" coords="351,283,554,325"/>
+<area shape="rect" id="node8" href="$classtrajopt__interface_1_1TrajOptProblem.html#a1203cf4beb21e269c6e049043c41f26d" title=" " alt="" coords="337,349,568,390"/>
+<area shape="rect" id="node4" href="$classmoveit__fake__controller__manager_1_1MoveItFakeControllerManager.html#a7ebe5aff35e25deea4f5e851ab6c0d6d" title=" " alt="" coords="5,85,288,141"/>
 </map>

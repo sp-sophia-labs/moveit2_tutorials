@@ -1,0 +1,4 @@
+<map id="moveit_setup_assistant::MoveItConfigData::addROSController" name="moveit_setup_assistant::MoveItConfigData::addROSController">
+<area shape="rect" id="node1" title="Adds a ROS controller to ros_controllers_config_ vector." alt="" coords="5,13,276,54"/>
+<area shape="rect" id="node2" href="$classmoveit__setup__assistant_1_1MoveItConfigData.html#aa16c3a5bee3c19ebea816a9cee4cfae1" title=" " alt="" coords="324,5,595,61"/>
+</map>

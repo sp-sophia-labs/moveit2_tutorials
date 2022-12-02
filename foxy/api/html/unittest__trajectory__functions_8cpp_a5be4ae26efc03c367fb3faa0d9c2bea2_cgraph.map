@@ -1,7 +1,8 @@
 <map id="TEST_P" name="TEST_P">
-<area shape="rect" id="node1" title="Test if activated self collision for a pose that would be in self collision without the check results..." alt="" coords="5,78,75,105"/>
-<area shape="rect" id="node2" href="$classplanning__scene_1_1PlanningScene.html#aea9edbc5c65137a736db5a86bd1fed08" title="Check whether the current state is in self collision." alt="" coords="123,5,311,47"/>
-<area shape="rect" id="node4" href="$namespacepilz__industrial__motion__planner.html#a2e27e4f0615a094f669c0cfb12f83725" title="compute the inverse kinematics of a given pose, also check robot self collision" alt="" coords="123,71,310,112"/>
-<area shape="rect" id="node5" href="$trajectory__functions_8h.html#adbc6c11b26dd0f3116a0f20a352a1f03" title=" " alt="" coords="137,137,296,163"/>
-<area shape="rect" id="node3" href="$classplanning__scene_1_1PlanningScene.html#a6841b7eae6f77d00e36d30ea255bb053" title="Get the active collision detector for the robot." alt="" coords="359,5,595,47"/>
+<area shape="rect" id="node1" title="Test if activated self collision for a pose that would be in self collision without the check results..." alt="" coords="5,110,75,137"/>
+<area shape="rect" id="node2" href="$classplanning__scene_1_1PlanningScene.html#aea9edbc5c65137a736db5a86bd1fed08" title="Check whether the current state is in self collision." alt="" coords="123,37,311,79"/>
+<area shape="rect" id="node5" href="$namespacepilz__industrial__motion__planner.html#a2e27e4f0615a094f669c0cfb12f83725" title="compute the inverse kinematics of a given pose, also check robot self collision" alt="" coords="123,103,310,144"/>
+<area shape="rect" id="node6" href="$trajectory__functions_8h.html#adbc6c11b26dd0f3116a0f20a352a1f03" title=" " alt="" coords="137,169,296,195"/>
+<area shape="rect" id="node3" href="$classplanning__scene_1_1PlanningScene.html#ab4de68060bb1d854e4d37f26436b7ebb" title="Get the state at which the robot is assumed to be." alt="" coords="383,5,569,47"/>
+<area shape="rect" id="node4" href="$classplanning__scene_1_1PlanningScene.html#a519f8e3d99bad7027334f83432b9fad9" title="Get the state at which the robot is assumed to be." alt="" coords="359,71,593,112"/>
 </map>

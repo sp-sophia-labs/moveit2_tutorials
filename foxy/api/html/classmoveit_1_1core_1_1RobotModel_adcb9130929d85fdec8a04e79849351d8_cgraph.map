@@ -1,0 +1,11 @@
+<map id="moveit::core::RobotModel::addJointModelGroup" name="moveit::core::RobotModel::addJointModelGroup">
+<area shape="rect" id="node1" title="Construct a JointModelGroup given a SRDF description group." alt="" coords="5,235,196,276"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1JointModelGroup.html#a08c3ff8fac56e0044b5b1ec595268cf1" title="Get the fixed joints that are part of this group." alt="" coords="247,5,447,47"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1RobotModel.html#afb12941677dbbae66a30531c5dfd2dd6" title="Get a joint by its name. Output error and return NULL when the joint is missing." alt="" coords="252,71,443,112"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1RobotModel.html#ab438e2875489f6fd2149372c591eab21" title="Get a joint group from this model (by name)" alt="" coords="252,136,443,177"/>
+<area shape="rect" id="node5" href="$classmoveit_1_1core_1_1JointModelGroup.html#a5c96362127bca0b1263983def71cf86a" title="Get all the joints in this group (including fixed and mimic joints)." alt="" coords="257,201,438,243"/>
+<area shape="rect" id="node6" href="$classmoveit_1_1core_1_1RobotModel.html#aef85568fb4db9d1615c20bdf249fb147" title="Get a link by its name. Output error and return NULL when the link is missing." alt="" coords="252,267,443,308"/>
+<area shape="rect" id="node7" href="$classmoveit_1_1core_1_1JointModelGroup.html#ab136f94a385f74db2880055aee5d4afa" title="Get the mimic joints that are part of this group." alt="" coords="244,332,451,373"/>
+<area shape="rect" id="node8" href="$classmoveit_1_1core_1_1LinkModel.html#a75e688fa2530138639292bed0ae3f541" title="Get the joint model whose child this link is. There will always be a parent joint." alt="" coords="258,397,437,439"/>
+<area shape="rect" id="node9" href="$classmoveit_1_1core_1_1JointModel.html#a048a1922efedcb55f66421d6e261c41f" title="Get the link that this joint connects to. The robot is assumed to start with a joint,..." alt="" coords="257,463,438,504"/>
+</map>

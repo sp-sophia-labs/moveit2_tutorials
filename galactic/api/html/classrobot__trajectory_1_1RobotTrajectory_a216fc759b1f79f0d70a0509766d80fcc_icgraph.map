@@ -1,4 +1,7 @@
 <map id="robot_trajectory::RobotTrajectory::getRobotModel" name="robot_trajectory::RobotTrajectory::getRobotModel">
-<area shape="rect" id="node1" title=" " alt="" coords="241,5,476,47"/>
-<area shape="rect" id="node2" href="$classmoveit_1_1hybrid__planning_1_1ForwardTrajectory.html#a49dba1b9183969a92b7a8c9c23cb2fed" title=" " alt="" coords="5,5,193,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="696,39,931,80"/>
+<area shape="rect" id="node2" href="$classchomp_1_1ChompTrajectory.html#a7c699cdfffe049e9b9e103d787b41b39" title="Receives the path obtained from a given MotionPlanDetailedResponse res object&#39;s trajectory (e...." alt="" coords="462,5,646,47"/>
+<area shape="rect" id="node5" href="$classmoveit_1_1hybrid__planning_1_1ForwardTrajectory.html#a49dba1b9183969a92b7a8c9c23cb2fed" title=" " alt="" coords="460,71,648,112"/>
+<area shape="rect" id="node3" href="$classchomp_1_1ChompPlanner.html#a15329905603fe1bf38e84a3973dc3e83" title=" " alt="" coords="243,5,412,47"/>
+<area shape="rect" id="node4" href="$classchomp_1_1OptimizerAdapter.html#ac4b3582c46aba259952e593ebce7fcdb" title="Adapt the planning request if needed, call the planner function planner and update the planning respo..." alt="" coords="5,5,195,47"/>
 </map>

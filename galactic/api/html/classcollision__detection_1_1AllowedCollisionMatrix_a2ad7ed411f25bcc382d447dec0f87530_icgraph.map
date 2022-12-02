@@ -1,6 +1,8 @@
 <map id="collision_detection::AllowedCollisionMatrix::setEntry" name="collision_detection::AllowedCollisionMatrix::setEntry">
-<area shape="rect" id="node1" title="Set an entry corresponding to a pair of elements." alt="" coords="432,35,612,91"/>
-<area shape="rect" id="node2" href="$pymoveit__core_8cpp.html#acc94745d086d831b81cd77df07b4f1b9" title=" " alt="" coords="208,5,380,47"/>
-<area shape="rect" id="node4" href="$classcollision__detection_1_1AllowedCollisionMatrix.html#ac07583f079b22f00386ec20abf69f03a" title="Remove an entry corresponding to a pair of elements. Nothing happens if the pair does not exist in th..." alt="" coords="204,71,384,127"/>
-<area shape="rect" id="node3" href="$pymoveit__core_8cpp.html#aae5c18014d007aef7676d42ced1ba2b0" title=" " alt="" coords="5,13,156,39"/>
+<area shape="rect" id="node1" title="Set an entry corresponding to a pair of elements." alt="" coords="487,116,667,172"/>
+<area shape="rect" id="node2" href="$classcollision__detection_1_1AllowedCollisionMatrix.html#a27818d1c0c20f67e63565ab6a1f52c93" title="Instantiate using a vector of names (corresponding to all the elements in the collision world)." alt="" coords="231,5,411,61"/>
+<area shape="rect" id="node3" href="$pycollision__detection_8cpp.html#a92cf5322d7fb248ba6c692b7bc361ae8" title=" " alt="" coords="235,86,407,127"/>
+<area shape="rect" id="node5" href="$classmoveit__setup__assistant_1_1MoveItConfigData.html#a135a32c2f1a8f2d4a36e8793a1b52547" title="Load the allowed collision matrix from the SRDF&#39;s list of link pairs." alt="" coords="204,152,439,208"/>
+<area shape="rect" id="node6" href="$classcollision__detection_1_1AllowedCollisionMatrix.html#a8e61b060037cf82a5937da6cf0852355" title="Set multiple entries. Pairs of names are formed using name and other_names." alt="" coords="231,232,411,288"/>
+<area shape="rect" id="node4" href="$pymoveit__core_8cpp.html#aae5c18014d007aef7676d42ced1ba2b0" title=" " alt="" coords="5,93,156,120"/>
 </map>

@@ -1,0 +1,14 @@
+<map id="planning_scene::PlanningScene::processAttachedCollisionObjectMsg" name="planning_scene::PlanningScene::processAttachedCollisionObjectMsg">
+<area shape="rect" id="node1" title=" " alt="" coords="5,259,239,315"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1AttachedBody.html#a11d6a3b22ff5b6be47352f9621783f22" title="Get the name of the link this body is attached to." alt="" coords="287,5,489,47"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1AttachedBody.html#a1b5208f4d6c74fd1c31d89015f153d93" title="Return the posture that is necessary for the object to be released, (if any). This is useful for exam..." alt="" coords="287,71,489,112"/>
+<area shape="rect" id="node5" href="$classmoveit_1_1core_1_1AttachedBody.html#a6ad0a458fbb1d88eefd0d9866020912d" title="Get the fixed transforms (the transforms to the shapes of this body, relative to the link)...." alt="" coords="287,136,489,177"/>
+<area shape="rect" id="node6" href="$classplanning__scene_1_1PlanningScene.html#a351202a8fec49dff6646a454ac3e9a7e" title="Get the transform corresponding to the frame id. This will be known if id is a link name,..." alt="" coords="290,201,486,243"/>
+<area shape="rect" id="node8" href="$classplanning__scene_1_1PlanningScene.html#ae1789ae10386a21ffe1fa41e1a590a6c" title="Get the kinematic model for which the planning scene is maintained." alt="" coords="295,267,481,308"/>
+<area shape="rect" id="node9" href="$classmoveit_1_1core_1_1AttachedBody.html#a8832405dda038c3e28a7969cb63993d1" title="Get the shapes that make up this attached body." alt="" coords="287,332,489,373"/>
+<area shape="rect" id="node10" href="$classmoveit_1_1core_1_1AttachedBody.html#a625360c145f93840d145328ea02836b5" title="Get subframes of this object (relative to the link). The returned transforms are guaranteed to be val..." alt="" coords="287,397,489,439"/>
+<area shape="rect" id="node11" href="$classmoveit_1_1core_1_1AttachedBody.html#a1added4f50dd7c18b8559e160885cbf1" title="Get the links that the attached body is allowed to touch." alt="" coords="287,463,489,504"/>
+<area shape="rect" id="node12" href="$classplanning__scene_1_1PlanningScene.html#a8794b3be8e182d38fe962855c570ac40" title=" " alt="" coords="295,528,481,569"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1LinkModel.html#a99ed1c1c371bdb1b007484fd399e435c" title="The name of this link." alt="" coords="541,5,720,47"/>
+<area shape="rect" id="node7" href="$classplanning__scene_1_1PlanningScene.html#ab4de68060bb1d854e4d37f26436b7ebb" title="Get the state at which the robot is assumed to be." alt="" coords="537,201,724,243"/>
+</map>

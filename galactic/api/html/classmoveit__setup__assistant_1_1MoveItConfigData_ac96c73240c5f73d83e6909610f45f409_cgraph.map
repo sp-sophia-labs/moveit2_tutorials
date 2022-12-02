@@ -1,0 +1,5 @@
+<map id="moveit_setup_assistant::MoveItConfigData::outputFakeControllersYAML" name="moveit_setup_assistant::MoveItConfigData::outputFakeControllersYAML">
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,232,87"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1JointModelGroup.html#a14fb89fcb1b1d7297b5ddd3d063c715f" title="Get the active joints in this group (that have controllable DOF). This does not include mimic joints." alt="" coords="304,5,511,47"/>
+<area shape="rect" id="node3" href="$classmoveit__setup__assistant_1_1MoveItConfigData.html#a5c212f371115d13ebd7301fd6b744674" title="Provide a shared kinematic model loader." alt="" coords="280,71,535,112"/>
+</map>

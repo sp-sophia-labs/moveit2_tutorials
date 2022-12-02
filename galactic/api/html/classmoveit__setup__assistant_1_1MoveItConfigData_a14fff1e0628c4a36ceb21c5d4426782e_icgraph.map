@@ -1,0 +1,4 @@
+<map id="moveit_setup_assistant::MoveItConfigData::addROSController" name="moveit_setup_assistant::MoveItConfigData::addROSController">
+<area shape="rect" id="node1" title="Adds a ROS controller to ros_controllers_config_ vector." alt="" coords="280,13,551,54"/>
+<area shape="rect" id="node2" href="$classmoveit__setup__assistant_1_1MoveItConfigData.html#a0f715dd88874c91d2caca931bdd05016" title="Add a Follow Joint Trajectory action Controller for each Planning Group." alt="" coords="5,5,232,61"/>
+</map>

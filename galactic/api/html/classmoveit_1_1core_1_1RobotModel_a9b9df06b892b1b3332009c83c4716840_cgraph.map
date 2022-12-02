@@ -1,0 +1,6 @@
+<map id="moveit::core::RobotModel::buildGroupsInfoEndEffectors" name="moveit::core::RobotModel::buildGroupsInfoEndEffectors">
+<area shape="rect" id="node1" title="Compute helpful information about groups (that can be queried later)" alt="" coords="5,71,220,112"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1RobotModel.html#a2de4bbefe50f27a0ad891c75aef4918c" title="Get the array of joints, in the order they appear in the robot state." alt="" coords="275,5,465,47"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1JointModelGroup.html#a2f165c9374e28ac4052490819c790f45" title="Get the name of the joint group." alt="" coords="279,71,461,112"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1JointModelGroup.html#aedc11a9de50041c4fb2fcde24c8c9e1e" title="If this group is an end&#45;effector, specify the parent group (e.g., the arm holding the eef) and the li..." alt="" coords="268,136,472,177"/>
+</map>

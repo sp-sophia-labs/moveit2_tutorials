@@ -1,4 +1,13 @@
 <map id="moveit::core::JointModel::computeVariableBoundsMsg" name="moveit::core::JointModel::computeVariableBoundsMsg">
-<area shape="rect" id="node1" title=" " alt="" coords="235,5,449,47"/>
-<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1JointModel.html#af1db07d2843b0c6435415dd53b3aa433" title="Get the type of joint as a string." alt="" coords="5,5,187,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1211,169,1425,211"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1FloatingJointModel.html#afb8df46752a23ff52b42d7a5f2b315dc" title=" " alt="" coords="964,5,1159,47"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1PlanarJointModel.html#a3c5ea7b3ddec05cb0bed05fff3bbd348" title=" " alt="" coords="970,71,1153,112"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1PrismaticJointModel.html#a4513ea7ca1db60f782a7c9d95ce7b81b" title=" " alt="" coords="960,136,1163,177"/>
+<area shape="rect" id="node5" href="$classmoveit_1_1core_1_1RevoluteJointModel.html#a505e3bcf1943ccdb6d1b755d443fa885" title=" " alt="" coords="962,201,1161,243"/>
+<area shape="rect" id="node6" href="$classmoveit_1_1core_1_1RevoluteJointModel.html#af72d2977e918e77d47401028c8563a3e" title=" " alt="" coords="962,267,1161,308"/>
+<area shape="rect" id="node11" href="$classmoveit_1_1core_1_1JointModel.html#a4aa3e6fa081382e311a4d81beefbb16c" title="Set the lower and upper bounds for a variable. Throw an exception if the variable was not found." alt="" coords="971,332,1152,373"/>
+<area shape="rect" id="node7" href="$classmoveit_1_1core_1_1RobotModel.html#adbf5a7c0c1430d0bc4bd040f39ad96cc" title="Given a urdf joint model, a child link and a set of virtual joints, build up the corresponding JointM..." alt="" coords="721,300,912,341"/>
+<area shape="rect" id="node8" href="$classmoveit_1_1core_1_1RobotModel.html#af3885dc69c0dae39cdfac05b9f498114" title="(This function is mostly intended for internal use). Given a parent link, build up (recursively),..." alt="" coords="483,300,673,341"/>
+<area shape="rect" id="node9" href="$classmoveit_1_1core_1_1RobotModel.html#afa81298bc190af38d3393eeb5c2762be" title="Given an URDF model and a SRDF model, build a full kinematic model." alt="" coords="244,300,435,341"/>
+<area shape="rect" id="node10" href="$classmoveit_1_1core_1_1RobotModel.html#ab2d8a71b22b1659634434f9badaa706b" title="Construct a kinematic model from a parsed description and a list of planning groups." alt="" coords="5,300,196,341"/>
 </map>

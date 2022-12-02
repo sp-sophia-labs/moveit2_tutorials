@@ -1,4 +1,9 @@
 <map id="collision_detection::CollisionEnv::getLinkScale" name="collision_detection::CollisionEnv::getLinkScale">
-<area shape="rect" id="node1" title="Get the link scaling as a map (from link names to scale value)" alt="" coords="252,5,452,47"/>
-<area shape="rect" id="node2" href="$classcollision__detection_1_1CollisionEnv.html#ac71945fac22cb7e6117e6134374a9a08" title="Set the link scaling using a map (from link names to scale value)" alt="" coords="5,5,204,47"/>
+<area shape="rect" id="node1" title="Get the link scaling as a map (from link names to scale value)" alt="" coords="496,170,696,211"/>
+<area shape="rect" id="node2" href="$classcollision__detection_1_1CollisionEnvBullet.html#ad1cb16714714db53e59333dd8f6e7a4c" title="Construts a bullet collision object out of a robot link." alt="" coords="251,45,446,101"/>
+<area shape="rect" id="node5" href="$classcollision__detection_1_1CollisionEnvFCL.html#aec0e2ac5157fcb386597513655e365ec" title=" " alt="" coords="249,125,448,181"/>
+<area shape="rect" id="node6" href="$classcollision__detection_1_1CollisionEnv.html#ac71945fac22cb7e6117e6134374a9a08" title="Set the link scaling using a map (from link names to scale value)" alt="" coords="249,206,448,247"/>
+<area shape="rect" id="node7" href="$classcollision__detection_1_1CollisionEnvFCL.html#a6b79be4232e4824a978dfd14a6d184e7" title="Updates the FCL collision geometry and objects saved in the CollisionRobotFCL members to reflect a ne..." alt="" coords="251,272,446,328"/>
+<area shape="rect" id="node3" href="$classcollision__detection_1_1CollisionEnvBullet.html#a1a54677bace8c4a6b96c3507ced8b3f3" title=" " alt="" coords="29,5,177,61"/>
+<area shape="rect" id="node4" href="$classcollision__detection_1_1CollisionEnvBullet.html#a3ac9509ce428e25996d93e80efb2c979" title="Updates the collision objects saved in the manager to reflect a new padding or scaling of the robot l..." alt="" coords="5,85,201,141"/>
 </map>

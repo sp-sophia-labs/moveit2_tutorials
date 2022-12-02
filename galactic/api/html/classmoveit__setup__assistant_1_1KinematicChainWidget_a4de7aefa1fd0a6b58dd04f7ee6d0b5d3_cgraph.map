@@ -1,0 +1,8 @@
+<map id="moveit_setup_assistant::KinematicChainWidget::setAvailable" name="moveit_setup_assistant::KinematicChainWidget::setAvailable">
+<area shape="rect" id="node1" title="Loads the available data list." alt="" coords="5,108,184,164"/>
+<area shape="rect" id="node2" href="$classmoveit__setup__assistant_1_1KinematicChainWidget.html#a8dc4bb1c71fe15497f518f1331115442" title=" " alt="" coords="232,71,417,127"/>
+<area shape="rect" id="node6" href="$classmoveit_1_1core_1_1JointModel.html#a43a3a6bd53bd7a4eda4768d7444a384d" title="Get the link that this joint connects to. There will always be such a link." alt="" coords="234,151,415,193"/>
+<area shape="rect" id="node3" href="$classmoveit__setup__assistant_1_1KinematicChainWidget.html#a95336e373185c31b7d54357c8c679cf2" title=" " alt="" coords="465,5,644,61"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1LinkModel.html#a99ed1c1c371bdb1b007484fd399e435c" title="The name of this link." alt="" coords="692,46,871,87"/>
+<area shape="rect" id="node5" href="$classmoveit_1_1core_1_1LinkModel.html#abc83d6b16c5ee4c8231ee54fa1d5b195" title="A link may have 0 or more child joints. From those joints there will certainly be other descendant li..." alt="" coords="465,137,644,178"/>
+</map>

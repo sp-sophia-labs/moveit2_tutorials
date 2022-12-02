@@ -1,6 +1,11 @@
 <map id="collision_detection::CollisionEnvFCL::allocSelfCollisionBroadPhase" name="collision_detection::CollisionEnvFCL::allocSelfCollisionBroadPhase">
-<area shape="rect" id="node1" title="Prepares for the collision check through constructing an FCL collision object out of the current robo..." alt="" coords="5,63,204,119"/>
-<area shape="rect" id="node2" href="$classcollision__detection_1_1CollisionEnvFCL.html#a5b29374dd49530e84986558352ff71a3" title="The distance to self&#45;collision given the robot is at state state." alt="" coords="256,5,479,47"/>
-<area shape="rect" id="node3" href="$structcollision__detection_1_1DistanceRequest.html#a3b9a173e3ac3bc7c653f4cdac75f3101" title="Compute active_components_only_ based on req_." alt="" coords="252,71,483,112"/>
-<area shape="rect" id="node4" href="$classcollision__detection_1_1CollisionEnv.html#adc7afd7a2e3ff0fed04bc26717816e26" title="The kinematic model corresponding to this collision model." alt="" coords="259,136,475,177"/>
+<area shape="rect" id="node1" title="Prepares for the collision check through constructing an FCL collision object out of the current robo..." alt="" coords="5,146,204,202"/>
+<area shape="rect" id="node2" href="$classcollision__detection_1_1CollisionEnvFCL.html#a0935099d879f803214d40d596bbc4290" title="Out of the current robot state and its attached bodies construct an FCLObject which can then be used ..." alt="" coords="252,109,455,165"/>
+<area shape="rect" id="node9" href="$structcollision__detection_1_1FCLObject.html#abd36fd23b06fc160206799d414457e8c" title=" " alt="" coords="269,189,437,231"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1RobotState.html#a449158e2e8aeba947bbc1a4473400ff7" title="Get all bodies attached to the model corresponding to this state." alt="" coords="521,5,705,47"/>
+<area shape="rect" id="node4" href="$classcollision__detection_1_1CollisionEnvFCL.html#acb2f3068450b7fdb7498b2818d5b3b18" title="Converts all shapes which make up an atttached body into a vector of FCLGeometryConstPtr." alt="" coords="503,71,724,127"/>
+<area shape="rect" id="node7" href="$classmoveit_1_1core_1_1RobotState.html#a22c47153cf437cbbd3914f15d177dd3d" title="Get the link transform w.r.t. the root link (model frame) of the RobotModel. This is typically the ro..." alt="" coords="511,152,716,193"/>
+<area shape="rect" id="node8" href="$namespacecollision__detection.html#aa3716d448ea9297f9a5e06218600de4e" title="Transforms an Eigen Isometry3d to FCL coordinate transformation." alt="" coords="541,217,685,259"/>
+<area shape="rect" id="node5" href="$namespacecollision__detection.html#a24c8b3bbb04f17230ca03c012ee9a597" title="Create new FCLGeometry object out of robot link model." alt="" coords="777,47,969,88"/>
+<area shape="rect" id="node6" href="$classmoveit_1_1core_1_1AttachedBody.html#a8832405dda038c3e28a7969cb63993d1" title="Get the shapes that make up this attached body." alt="" coords="772,112,975,153"/>
 </map>

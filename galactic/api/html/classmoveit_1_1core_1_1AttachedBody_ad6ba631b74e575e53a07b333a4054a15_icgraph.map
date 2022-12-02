@@ -1,6 +1,14 @@
 <map id="moveit::core::AttachedBody::getPose" name="moveit::core::AttachedBody::getPose">
-<area shape="rect" id="node1" title="Get the pose of the attached body relative to the parent link." alt="" coords="287,86,489,127"/>
-<area shape="rect" id="node2" href="$classplanning__scene_1_1PlanningScene.html#a6f16582ddf99b615ef69c658521731ff" title=" " alt="" coords="5,5,239,61"/>
-<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1RobotState.html#a7bbd086fed1babcc8e5492e0d9c80614" title="setFromIK for multiple poses and tips (end effectors) when no solver exists for the jmg that can solv..." alt="" coords="30,86,214,127"/>
-<area shape="rect" id="node4" href="$test__kinematic__complex_8cpp.html#aa1450fb7f87ddc5fe47f1d52fe1a62dc" title=" " alt="" coords="87,152,157,179"/>
+<area shape="rect" id="node1" title="Get the pose of the attached body relative to the parent link." alt="" coords="1067,165,1269,207"/>
+<area shape="rect" id="node2" href="$classplanning__scene_1_1PlanningScene.html#a6f16582ddf99b615ef69c658521731ff" title=" " alt="" coords="785,63,1019,119"/>
+<area shape="rect" id="node10" href="$classmoveit_1_1core_1_1RobotState.html#a7df9d1db14d7fbe00b9644729d7d88bf" title="Warning: This function inefficiently copies all transforms around. If the group consists of a set of ..." alt="" coords="552,165,736,207"/>
+<area shape="rect" id="node11" href="$classmoveit_1_1core_1_1RobotState.html#a7bbd086fed1babcc8e5492e0d9c80614" title="setFromIK for multiple poses and tips (end effectors) when no solver exists for the jmg that can solv..." alt="" coords="810,195,994,236"/>
+<area shape="rect" id="node12" href="$test__kinematic__complex_8cpp.html#aa1450fb7f87ddc5fe47f1d52fe1a62dc" title=" " alt="" coords="867,261,937,287"/>
+<area shape="rect" id="node3" href="$classplanning__scene_1_1PlanningScene.html#a30e14e2ee05a53a1b6536930acb9d188" title="Set the current robot state to be state. If not all joint values are specified, the previously mainta..." alt="" coords="551,71,737,112"/>
+<area shape="rect" id="node4" href="$pyplanning__scene_8cpp.html#acdb1e01a5a6ec640937d8c69c0f7d045" title=" " alt="" coords="310,5,461,47"/>
+<area shape="rect" id="node6" href="$classplanning__scene_1_1PlanningScene.html#a6b9894a14d5757ea4317d0be4ebb5b6e" title="Apply changes to this planning scene as diffs, even if the message itself is not marked as being a di..." alt="" coords="268,71,503,112"/>
+<area shape="rect" id="node8" href="$classplanning__scene_1_1PlanningScene.html#acb5c51321f5d908072920ee2a2f1db58" title="Set this instance of a planning scene to be the same as the one serialized in the scene message,..." alt="" coords="280,136,491,177"/>
+<area shape="rect" id="node5" href="$pymoveit__core_8cpp.html#aae5c18014d007aef7676d42ced1ba2b0" title=" " alt="" coords="37,13,188,39"/>
+<area shape="rect" id="node7" href="$classplanning__scene_1_1PlanningScene.html#a17eaa549d0279f01f8b26e4c04c05d6f" title="Call setPlanningSceneMsg() or setPlanningSceneDiffMsg() depending on how the is_diff member of the me..." alt="" coords="5,73,220,115"/>
+<area shape="rect" id="node9" href="$test__planning__scene_8cpp.html#a8657479fb681ab94486683c9e03019fa" title=" " alt="" coords="85,143,140,170"/>
 </map>

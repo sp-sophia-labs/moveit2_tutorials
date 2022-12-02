@@ -1,0 +1,5 @@
+<map id="moveit_setup_assistant::disabledReasonToString" name="moveit_setup_assistant::disabledReasonToString">
+<area shape="rect" id="node1" title="Converts a reason for disabling a link pair into a string." alt="" coords="284,53,469,94"/>
+<area shape="rect" id="node2" href="$classmoveit__setup__assistant_1_1DefaultCollisionsWidget.html#aa8c24e4301b9827a1c654f7ff767587a" title="Output Link Pairs to SRDF Format." alt="" coords="27,5,214,61"/>
+<area shape="rect" id="node3" href="$classmoveit__setup__assistant_1_1MoveItConfigData.html#adf3502ac4d463355c3f31e7c6ba42d8e" title="Set list of collision link pairs in SRDF; sorted; with optional filter." alt="" coords="5,85,236,141"/>
+</map>

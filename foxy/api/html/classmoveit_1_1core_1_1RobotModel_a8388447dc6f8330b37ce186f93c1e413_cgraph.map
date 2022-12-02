@@ -1,0 +1,12 @@
+<map id="moveit::core::RobotModel::buildGroupStates" name="moveit::core::RobotModel::buildGroupStates">
+<area shape="rect" id="node1" title="Given a SRDF model describing the groups, build the default states defined in the SRDF." alt="" coords="5,267,196,308"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1JointModelGroup.html#a97eef3a7852d30eac1554bff1a0fca5a" title=" " alt="" coords="257,5,438,47"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1JointModelGroup.html#a14fb89fcb1b1d7297b5ddd3d063c715f" title="Get the active joints in this group (that have controllable DOF). This does not include mimic joints." alt="" coords="244,71,451,112"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1JointModelGroup.html#a71f71bbb186917dd5fcf41bf88b2e5fb" title="Get a joint by its name. Throw an exception if the joint is not part of this group." alt="" coords="257,136,438,177"/>
+<area shape="rect" id="node5" href="$classmoveit_1_1core_1_1RobotModel.html#ab438e2875489f6fd2149372c591eab21" title="Get a joint group from this model (by name)" alt="" coords="252,201,443,243"/>
+<area shape="rect" id="node6" href="$classmoveit_1_1core_1_1JointModelGroup.html#a2f165c9374e28ac4052490819c790f45" title="Get the name of the joint group." alt="" coords="257,267,438,308"/>
+<area shape="rect" id="node7" href="$classmoveit_1_1core_1_1RobotModel.html#afd860df7ef193cce7aa74717e8579577" title="Get the model name." alt="" coords="252,332,443,373"/>
+<area shape="rect" id="node8" href="$classmoveit_1_1core_1_1JointModel.html#a09b0ad5f0d57c67a1fd7cde8d494519d" title="Get the names of the variables that make up this joint, in the order they appear in corresponding sta..." alt="" coords="257,397,438,439"/>
+<area shape="rect" id="node9" href="$classmoveit_1_1core_1_1JointModelGroup.html#a7af014f4116c40ea1884cd7ae82f8da6" title="Check if a joint is part of this group." alt="" coords="257,463,438,504"/>
+<area shape="rect" id="node10" href="$classmoveit_1_1core_1_1RobotModel.html#a1ceef8255ce5c2235b4796952ac5b773" title="Check if the JointModelGroup group exists." alt="" coords="252,528,443,569"/>
+</map>

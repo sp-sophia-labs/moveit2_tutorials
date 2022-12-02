@@ -1,6 +1,8 @@
 <map id="moveit::core::JointModelGroup::getActiveJointModelNames" name="moveit::core::JointModelGroup::getActiveJointModelNames">
-<area shape="rect" id="node1" title="Get the names of the active joints in this group. These are the names of the joints returned by getJo..." alt="" coords="284,71,531,112"/>
-<area shape="rect" id="node2" href="$classmoveit__servo_1_1ServoCalcs.html#a012db9b11d6b1888b1f703c31c70836d" title=" " alt="" coords="25,5,216,47"/>
-<area shape="rect" id="node3" href="$classTestConstrainedStateSpace.html#af0ad5874dee12235148c97c0ef28433e" title=" " alt="" coords="19,71,222,112"/>
-<area shape="rect" id="node4" href="$classtrajopt__interface_1_1TrajOptProblem.html#a1203cf4beb21e269c6e049043c41f26d" title=" " alt="" coords="5,136,236,177"/>
+<area shape="rect" id="node1" title="Get the names of the active joints in this group. These are the names of the joints returned by getJo..." alt="" coords="287,151,533,193"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1planning__interface_1_1MoveGroupInterface.html#a9603eb67712ae165a9aa494c283af164" title="Get only the active (actuated) joints this instance operates on." alt="" coords="5,5,239,61"/>
+<area shape="rect" id="node3" href="$classmoveit__servo_1_1ServoCalcs.html#a012db9b11d6b1888b1f703c31c70836d" title=" " alt="" coords="27,86,217,127"/>
+<area shape="rect" id="node4" href="$classtrajopt__interface_1_1TrajOptInterface.html#a6b9e2fb0c9c463675e653160b015ee3c" title=" " alt="" coords="37,151,207,193"/>
+<area shape="rect" id="node5" href="$classTestConstrainedStateSpace.html#af0ad5874dee12235148c97c0ef28433e" title=" " alt="" coords="21,217,223,258"/>
+<area shape="rect" id="node6" href="$classtrajopt__interface_1_1TrajOptProblem.html#a1203cf4beb21e269c6e049043c41f26d" title=" " alt="" coords="7,282,237,323"/>
 </map>

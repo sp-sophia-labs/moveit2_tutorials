@@ -1,0 +1,4 @@
+<map id="collision_detection::AllowedCollisionMatrix::clear" name="collision_detection::AllowedCollisionMatrix::clear">
+<area shape="rect" id="node1" title="Clear the allowed collision matrix." alt="" coords="288,5,468,61"/>
+<area shape="rect" id="node2" href="$classmoveit__setup__assistant_1_1MoveItConfigData.html#a135a32c2f1a8f2d4a36e8793a1b52547" title="Load the allowed collision matrix from the SRDF&#39;s list of link pairs." alt="" coords="5,5,240,61"/>
+</map>

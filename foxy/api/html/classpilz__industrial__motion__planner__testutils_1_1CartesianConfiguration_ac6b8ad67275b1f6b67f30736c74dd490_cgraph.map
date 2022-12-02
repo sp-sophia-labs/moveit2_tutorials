@@ -1,6 +1,13 @@
 <map id="pilz_industrial_motion_planner_testutils::CartesianConfiguration::toMoveitMsgsRobotState" name="pilz_industrial_motion_planner_testutils::CartesianConfiguration::toMoveitMsgsRobotState">
 <area shape="rect" id="node1" title=" " alt="" coords="5,85,287,141"/>
-<area shape="rect" id="node2" href="$classpilz__industrial__motion__planner__testutils_1_1RobotConfiguration.html#ad0c113de35ab3de2d398977370d9c3ee" title=" " alt="" coords="335,5,605,61"/>
-<area shape="rect" id="node3" href="$classpilz__industrial__motion__planner__testutils_1_1CartesianConfiguration.html#ab316173bb810cd4b63f4bb1d17da2d8d" title=" " alt="" coords="366,85,574,141"/>
-<area shape="rect" id="node4" href="$classpilz__industrial__motion__planner__testutils_1_1CartesianConfiguration.html#a9cab5148e28fe08ccc0f8a30a84758aa" title=" " alt="" coords="366,165,574,221"/>
+<area shape="rect" id="node2" href="$classpilz__industrial__motion__planner__testutils_1_1CartesianConfiguration.html#afdd25dd550fd4b203746c4b13660a1f0" title=" " alt="" coords="335,5,543,61"/>
+<area shape="rect" id="node3" href="$classpilz__industrial__motion__planner__testutils_1_1CartesianConfiguration.html#a91fca0c47b91e342f86f6d10ba29ff4a" title="States if a seed for the cartesian configuration is set." alt="" coords="335,85,543,141"/>
+<area shape="rect" id="node4" href="$namespacemoveit_1_1core.html#a0aafbf7242f36d6efd7bd73ecee400e8" title="Convert a MoveIt robot state to a robot state message." alt="" coords="349,166,529,207"/>
+<area shape="rect" id="node5" href="$namespacemoveit_1_1core.html#a6fc54b52fbf87b115d32a4fe475b80fd" title="Convert AttachedBodies to AttachedCollisionObjects." alt="" coords="591,101,817,142"/>
+<area shape="rect" id="node6" href="$classmoveit_1_1core_1_1RobotState.html#a449158e2e8aeba947bbc1a4473400ff7" title="Get all bodies attached to the model corresponding to this state." alt="" coords="612,166,796,207"/>
+<area shape="rect" id="node7" href="$namespacemoveit_1_1core.html#abadb5ddc3cb497b1704dff5c9c3144ed" title="Convert a MoveIt robot state to a joint state message." alt="" coords="614,231,794,273"/>
+<area shape="rect" id="node8" href="$classmoveit_1_1core_1_1RobotState.html#a5ecd3e71d7283f30be300c83cfd84041" title="Get the robot model this state is constructed for." alt="" coords="865,133,1049,174"/>
+<area shape="rect" id="node9" href="$classmoveit_1_1core_1_1RobotState.html#aae57a83ed9ad7c34982b6a943341026c" title="Get the position of a particular variable. An exception is thrown if the variable is not known." alt="" coords="865,198,1049,239"/>
+<area shape="rect" id="node10" href="$classmoveit_1_1core_1_1RobotState.html#a4445bddc825e02d3ab8347b7ea948371" title="Get the velocity of a particular variable. An exception is thrown if the variable is not known." alt="" coords="865,263,1049,305"/>
+<area shape="rect" id="node11" href="$classmoveit_1_1core_1_1RobotState.html#a3c363244052c265d92180ee2fd3a5eb9" title="By default, if velocities are never set or initialized, the state remembers that there are no velocit..." alt="" coords="865,329,1049,370"/>
 </map>

@@ -1,9 +1,5 @@
 <map id="moveit_setup::RVizPanel::highlightLink" name="moveit_setup::RVizPanel::highlightLink">
-<area shape="rect" id="node1" title=" " alt="" coords="577,173,760,214"/>
-<area shape="rect" id="node2" href="$classmoveit__setup_1_1srdf__setup_1_1KinematicChainWidget.html#a443874d757d2893e3721477e8e04f0c9" title=" " alt="" coords="295,5,517,61"/>
-<area shape="rect" id="node3" href="$classmoveit__setup_1_1srdf__setup_1_1PlanningGroupsWidget.html#a9fb3639159467d3c19e922711aa2e3bf" title="Received when this widget is chosen from the navigation menu." alt="" coords="295,85,517,141"/>
-<area shape="rect" id="node4" href="$classmoveit__setup_1_1controllers_1_1ControllersWidget.html#a7bbd50c9592556a2802f18a381084078" title=" " alt="" coords="283,165,529,221"/>
-<area shape="rect" id="node6" href="$classmoveit__setup_1_1srdf__setup_1_1PassiveJointsWidget.html#a385a20185dc49fbde7300c72278cbd9d" title=" " alt="" coords="304,245,508,301"/>
-<area shape="rect" id="node7" href="$classmoveit__setup_1_1RVizPanel.html#a1aee819eda5a717edc00020e6951797a" title=" " alt="" coords="315,326,497,367"/>
-<area shape="rect" id="node5" href="$classmoveit__setup_1_1controllers_1_1ControllersWidget.html#ad592df2830dd9b6d5d54b4035a7938fc" title=" " alt="" coords="5,165,235,221"/>
+<area shape="rect" id="node1" title=" " alt="" coords="467,5,649,47"/>
+<area shape="rect" id="node2" href="$classmoveit__setup_1_1RVizPanel.html#a772c9d309115ea365ffe4e04a41faef5" title=" " alt="" coords="236,5,419,47"/>
+<area shape="rect" id="node3" href="$classmoveit__setup_1_1RVizPanel.html#ab8f2b1ccd2abd837ad8ed13f124680a5" title=" " alt="" coords="5,5,188,47"/>
 </map>

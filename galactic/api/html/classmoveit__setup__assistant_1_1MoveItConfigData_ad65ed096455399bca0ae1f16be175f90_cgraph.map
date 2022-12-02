@@ -1,0 +1,7 @@
+<map id="moveit_setup_assistant::MoveItConfigData::outputROSControllersYAML" name="moveit_setup_assistant::MoveItConfigData::outputROSControllersYAML">
+<area shape="rect" id="node1" title=" " alt="" coords="5,116,336,157"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1JointModelGroup.html#a14fb89fcb1b1d7297b5ddd3d063c715f" title="Get the active joints in this group (that have controllable DOF). This does not include mimic joints." alt="" coords="408,5,615,47"/>
+<area shape="rect" id="node3" href="$classmoveit__setup__assistant_1_1MoveItConfigData.html#a1bf89a363f7e390fd9efd73b355e3a3e" title="Helper function to get the default start pose for moveit_sim_hw_interface." alt="" coords="399,71,623,127"/>
+<area shape="rect" id="node4" href="$classmoveit__setup__assistant_1_1MoveItConfigData.html#a5c212f371115d13ebd7301fd6b744674" title="Provide a shared kinematic model loader." alt="" coords="384,152,639,193"/>
+<area shape="rect" id="node5" href="$classmoveit__setup__assistant_1_1MoveItConfigData.html#ad9fa2cc331cfc8977f39bd8700eeb71f" title=" " alt="" coords="392,218,631,274"/>
+</map>

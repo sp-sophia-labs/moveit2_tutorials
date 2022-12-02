@@ -1,0 +1,6 @@
+<map id="pilz_industrial_motion_planner::JointLimitsContainer::verifyPositionLimits" name="pilz_industrial_motion_planner::JointLimitsContainer::verifyPositionLimits">
+<area shape="rect" id="node1" title="verify position limits of multiple joints" alt="" coords="5,45,224,101"/>
+<area shape="rect" id="node2" href="$classpilz__industrial__motion__planner_1_1JointLimitsContainer.html#a20338a7021bc88ba3eaf4cb28e7b7b5a" title="verify position limit of single joint" alt="" coords="272,45,491,101"/>
+<area shape="rect" id="node3" href="$classpilz__industrial__motion__planner_1_1JointLimitsContainer.html#a040d5fa11dbedd32a857862bd4ce0b67" title="getLimit get the limit for the given joint name" alt="" coords="539,5,757,61"/>
+<area shape="rect" id="node4" href="$classpilz__industrial__motion__planner_1_1JointLimitsContainer.html#a04121778e9f7811b2553d1821c434e23" title="Check if there is a limit for a joint with the given name in this container." alt="" coords="539,85,757,141"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="pilz_industrial_motion_planner::TrajectoryGenerator::cartesianTrapVelocityProfile" name="pilz_industrial_motion_planner::TrajectoryGenerator::cartesianTrapVelocityProfile">
+<area shape="rect" id="node1" title="build cartesian velocity profile for the path" alt="" coords="5,5,220,61"/>
+<area shape="rect" id="node2" href="$classpilz__industrial__motion__planner_1_1LimitsContainer.html#ab6bc8f2fa39d05ed69bb40c34fc1bfa6" title="Return the cartesian limits." alt="" coords="268,5,457,61"/>
+</map>

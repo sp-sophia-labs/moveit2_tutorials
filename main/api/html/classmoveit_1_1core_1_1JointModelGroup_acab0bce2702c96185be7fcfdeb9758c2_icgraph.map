@@ -1,5 +1,6 @@
 <map id="moveit::core::JointModelGroup::getVariableDefaultPositions" name="moveit::core::JointModelGroup::getVariableDefaultPositions">
-<area shape="rect" id="node1" title="Get the values that correspond to a named state as read from the URDF. Return false on failure." alt="" coords="291,39,541,80"/>
-<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1JointModelGroup.html#a9bdc5951995f765ead88c2a8bc6b2e74" title=" " alt="" coords="25,5,223,47"/>
-<area shape="rect" id="node3" href="$classmoveit__cpp_1_1PlanningComponent.html#af78dc3381b208f8c03b5bdcd9093b76d" title="Get the considered start state if defined, otherwise get the current state." alt="" coords="5,71,243,112"/>
+<area shape="rect" id="node1" title="Get the values that correspond to a named state as read from the URDF. Return false on failure." alt="" coords="332,79,583,120"/>
+<area shape="rect" id="node2" href="$classmoveit__cpp_1_1PlanningComponent.html#a1b48a15df3246b58b7ce1f58ecf501bd" title="Get the joint values for targets specified by name." alt="" coords="26,5,263,47"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1planning__interface_1_1MoveGroupInterface.html#ae3c2924b909d335f04bac8bf5a329d34" title="Get the joint angles for targets specified by name." alt="" coords="5,71,284,127"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1JointModelGroup.html#a962af6b5289ea549da9f3cb130d49b55" title="Compute the default values for the joint group." alt="" coords="19,152,270,193"/>
 </map>

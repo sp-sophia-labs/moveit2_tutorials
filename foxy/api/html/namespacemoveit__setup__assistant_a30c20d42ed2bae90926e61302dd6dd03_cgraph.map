@@ -1,0 +1,4 @@
+<map id="moveit_setup_assistant::computeDefaultCollisions" name="moveit_setup_assistant::computeDefaultCollisions">
+<area shape="rect" id="node1" title="Generate an adjacency list of links that are always and never in collision, to speed up collision det..." alt="" coords="5,5,204,47"/>
+<area shape="rect" id="node2" href="$namespacemoveit__setup__assistant.html#abee52e259b0b11ad3f92365e1f3cae6e" title="Generate a list of unique link pairs for all links with geometry. Order pairs alphabetically...." alt="" coords="252,5,429,47"/>
+</map>

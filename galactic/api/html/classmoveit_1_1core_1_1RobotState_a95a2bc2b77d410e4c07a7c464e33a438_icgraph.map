@@ -1,5 +1,13 @@
 <map id="moveit::core::RobotState::distance" name="moveit::core::RobotState::distance">
-<area shape="rect" id="node1" title="Return the sum of joint distances to &quot;other&quot; state. An L1 norm. Only considers active joints." alt="" coords="253,46,437,87"/>
-<area shape="rect" id="node2" href="$classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a4602671783e5fdb62207685fbaea5dce" title=" " alt="" coords="5,5,205,61"/>
-<area shape="rect" id="node3" href="$robot__state__test_8cpp.html#af3f503f9c9cd0b80c36d72fb0679dfe5" title=" " alt="" coords="71,85,140,112"/>
+<area shape="rect" id="node1" title="Return the sum of joint distances to &quot;other&quot; state. An L1 norm. Only considers active joints." alt="" coords="583,217,767,259"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1RobotState.html#ac920b75bd636551e31bb36db696910f9" title="Compute the sequence of joint values that correspond to a straight Cartesian path for a particular gr..." alt="" coords="315,5,499,47"/>
+<area shape="rect" id="node3" href="$classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a4602671783e5fdb62207685fbaea5dce" title=" " alt="" coords="307,71,507,127"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1hybrid__planning_1_1SimpleSampler.html#a929a8386c5fd245a43e3527be865b57c" title=" " alt="" coords="279,152,535,193"/>
+<area shape="rect" id="node5" href="$classmoveit_1_1core_1_1RobotState.html#a7e3f94838ea766a251459e4d48adef92" title="Get the minimm distance from a set of joints in the state to the bounds. The minimum distance and the..." alt="" coords="283,217,530,259"/>
+<area shape="rect" id="node6" href="$namespacepilz__industrial__motion__planner__testutils.html#a7242377d139606206292fe4cbd51f285" title=" " alt="" coords="291,283,522,339"/>
+<area shape="rect" id="node8" href="$classmoveit_1_1core_1_1RobotState.html#a80efcd6dc42960d6a2054dfe7bbce448" title="Set all joints in group to random values near the value in seed. distance is the maximum amount each ..." alt="" coords="294,364,519,405"/>
+<area shape="rect" id="node11" href="$robot__state__test_8cpp.html#af3f503f9c9cd0b80c36d72fb0679dfe5" title=" " alt="" coords="372,430,441,457"/>
+<area shape="rect" id="node7" href="$integrationtest__sequence__action_8cpp.html#a3f35690ca0dd42181e2f98a9b2a9e5a8" title="Tests the &quot;only planning&quot; flag." alt="" coords="83,298,153,325"/>
+<area shape="rect" id="node9" href="$classmoveit_1_1core_1_1RobotState.html#a0613ebcd26af7d856096447fa66bc069" title="Set all joints in group to random values near the value in seed. distances MUST have the same size as..." alt="" coords="5,356,231,397"/>
+<area shape="rect" id="node10" href="$test__kinematics__plugin_8cpp.html#afcd2b64a418d005505b11261ea7793e8" title=" " alt="" coords="83,422,153,449"/>
 </map>

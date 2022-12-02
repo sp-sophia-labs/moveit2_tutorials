@@ -1,0 +1,4 @@
+<map id="moveit_setup_assistant::StartScreenWidget::StartScreenWidget" name="moveit_setup_assistant::StartScreenWidget::StartScreenWidget">
+<area shape="rect" id="node1" title="Start screen user interface for MoveIt Configuration Assistant." alt="" coords="5,5,240,61"/>
+<area shape="rect" id="node2" href="$classmoveit__setup__assistant_1_1LoadPathArgsWidget.html#a2b67e8390abcc78fee44b9bf3adc910a" title=" " alt="" coords="288,5,465,61"/>
+</map>

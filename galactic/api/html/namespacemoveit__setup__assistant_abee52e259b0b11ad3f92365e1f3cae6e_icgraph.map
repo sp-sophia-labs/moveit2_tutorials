@@ -1,0 +1,6 @@
+<map id="moveit_setup_assistant::computeLinkPairs" name="moveit_setup_assistant::computeLinkPairs">
+<area shape="rect" id="node1" title="Generate a list of unique link pairs for all links with geometry. Order pairs alphabetically...." alt="" coords="379,43,556,84"/>
+<area shape="rect" id="node2" href="$namespacemoveit__setup__assistant.html#a30c20d42ed2bae90926e61302dd6dd03" title="Generate an adjacency list of links that are always and never in collision, to speed up collision det..." alt="" coords="132,5,331,47"/>
+<area shape="rect" id="node4" href="$classmoveit__setup__assistant_1_1DefaultCollisionsWidget.html#a5cd105f70248ca83a0b279368e6b550f" title="Load Link Pairs from SRDF Format." alt="" coords="138,71,325,127"/>
+<area shape="rect" id="node3" href="$collisions__updater_8cpp.html#a0255f83644fb7cd23a2bf00cdc6eef64" title=" " alt="" coords="5,13,84,39"/>
+</map>

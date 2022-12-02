@@ -1,0 +1,6 @@
+<map id="moveit_setup_assistant::DoubleListWidget::setTable" name="moveit_setup_assistant::DoubleListWidget::setTable">
+<area shape="rect" id="node1" title="Convenience function for reusing set table code." alt="" coords="512,39,719,80"/>
+<area shape="rect" id="node2" href="$classmoveit__setup__assistant_1_1DoubleListWidget.html#a88869262d12146423fdd82540a055acb" title="Loads the availble data list." alt="" coords="231,5,464,47"/>
+<area shape="rect" id="node4" href="$classmoveit__setup__assistant_1_1DoubleListWidget.html#a17d90edd2c976c7875ec2eb5d8c27d96" title="Set the right box." alt="" coords="233,71,462,112"/>
+<area shape="rect" id="node3" href="$classmoveit__setup__assistant_1_1PassiveJointsWidget.html#adfad0fb1a83566f5741df416852af639" title="Received when this widget is chosen from the navigation menu." alt="" coords="5,31,183,87"/>
+</map>

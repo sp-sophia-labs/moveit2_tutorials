@@ -1,4 +1,6 @@
 <map id="pilz_industrial_motion_planner::CartesianLimitsAggregator::getAggregatedLimits" name="pilz_industrial_motion_planner::CartesianLimitsAggregator::getAggregatedLimits">
-<area shape="rect" id="node1" title="Loads cartesian limits from the parameter server." alt="" coords="123,5,383,61"/>
-<area shape="rect" id="node2" href="$unittest__cartesian__limits__aggregator_8cpp.html#ad4d89f3f967085d3a51c3b8442117b64" title="Check if only velocity is set." alt="" coords="5,20,75,47"/>
+<area shape="rect" id="node1" title="Loads cartesian limits from the parameter server." alt="" coords="287,85,547,141"/>
+<area shape="rect" id="node2" href="$classpilz__industrial__motion__planner_1_1CommandListManager.html#a3372f4e68bac2974ce2b2cde4ad872ca" title=" " alt="" coords="5,5,239,61"/>
+<area shape="rect" id="node3" href="$classpilz__industrial__motion__planner_1_1CommandPlanner.html#a1c42b47de97a164ea7db7c32b729b8c8" title="Initializes the planner Upon initialization this planner will look for plugins implementing pilz_indu..." alt="" coords="21,85,223,141"/>
+<area shape="rect" id="node4" href="$unittest__cartesian__limits__aggregator_8cpp.html#ad4d89f3f967085d3a51c3b8442117b64" title="Check if only velocity is set." alt="" coords="87,165,157,192"/>
 </map>

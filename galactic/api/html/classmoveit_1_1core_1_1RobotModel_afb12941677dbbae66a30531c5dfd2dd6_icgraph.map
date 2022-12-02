@@ -1,0 +1,7 @@
+<map id="moveit::core::RobotModel::getJointModel" name="moveit::core::RobotModel::getJointModel">
+<area shape="rect" id="node1" title="Get a joint by its name. Output error and return NULL when the joint is missing." alt="" coords="960,5,1151,47"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1RobotModel.html#adcb9130929d85fdec8a04e79849351d8" title="Construct a JointModelGroup given a SRDF description group." alt="" coords="721,5,912,47"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1RobotModel.html#ad17bd8a8142ec84e4d8d3eb1fdfe162a" title="Given a SRDF model describing the groups, build up the groups in this kinematic model." alt="" coords="483,5,673,47"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1RobotModel.html#afa81298bc190af38d3393eeb5c2762be" title="Given an URDF model and a SRDF model, build a full kinematic model." alt="" coords="244,5,435,47"/>
+<area shape="rect" id="node5" href="$classmoveit_1_1core_1_1RobotModel.html#ab2d8a71b22b1659634434f9badaa706b" title="Construct a kinematic model from a parsed description and a list of planning groups." alt="" coords="5,5,196,47"/>
+</map>

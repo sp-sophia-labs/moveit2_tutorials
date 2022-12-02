@@ -1,0 +1,4 @@
+<map id="moveit_setup_assistant::ControllerEditWidget::deleteController" name="moveit_setup_assistant::ControllerEditWidget::deleteController">
+<area shape="rect" id="node1" title="Event sent when delete is being requested for controller." alt="" coords="231,5,408,61"/>
+<area shape="rect" id="node2" href="$classmoveit__setup__assistant_1_1ControllerEditWidget.html#a3ed80d2ab27641f3d3d060b2ec15c22c" title="Constructor." alt="" coords="5,5,183,61"/>
+</map>

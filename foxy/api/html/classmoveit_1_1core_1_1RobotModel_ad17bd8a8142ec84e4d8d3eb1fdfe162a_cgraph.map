@@ -1,5 +1,18 @@
 <map id="moveit::core::RobotModel::buildGroups" name="moveit::core::RobotModel::buildGroups">
-<area shape="rect" id="node1" title="Given a SRDF model describing the groups, build up the groups in this kinematic model." alt="" coords="5,39,196,80"/>
-<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1JointModelGroup.html#a5c96362127bca0b1263983def71cf86a" title="Get all the joints in this group (including fixed and mimic joints)." alt="" coords="244,5,425,47"/>
-<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1JointModelGroup.html#a2f165c9374e28ac4052490819c790f45" title="Get the name of the joint group." alt="" coords="244,71,425,112"/>
+<area shape="rect" id="node1" title="Given a SRDF model describing the groups, build up the groups in this kinematic model." alt="" coords="5,593,196,635"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1RobotModel.html#adcb9130929d85fdec8a04e79849351d8" title="Construct a JointModelGroup given a SRDF description group." alt="" coords="256,267,447,308"/>
+<area shape="rect" id="node11" href="$classmoveit_1_1core_1_1RobotModel.html#a9b9df06b892b1b3332009c83c4716840" title="Compute helpful information about groups (that can be queried later)" alt="" coords="244,593,459,635"/>
+<area shape="rect" id="node15" href="$classmoveit_1_1core_1_1RobotModel.html#af84fe435cb031b355f5bca6e72332537" title="Compute helpful information about groups (that can be queried later)" alt="" coords="251,659,452,700"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1JointModelGroup.html#a08c3ff8fac56e0044b5b1ec595268cf1" title="Get the fixed joints that are part of this group." alt="" coords="510,71,710,112"/>
+<area shape="rect" id="node4" href="$classmoveit_1_1core_1_1RobotModel.html#afb12941677dbbae66a30531c5dfd2dd6" title="Get a joint by its name. Output error and return NULL when the joint is missing." alt="" coords="515,136,705,177"/>
+<area shape="rect" id="node5" href="$classmoveit_1_1core_1_1RobotModel.html#ab438e2875489f6fd2149372c591eab21" title="Get a joint group from this model (by name)" alt="" coords="515,201,705,243"/>
+<area shape="rect" id="node6" href="$classmoveit_1_1core_1_1JointModelGroup.html#a5c96362127bca0b1263983def71cf86a" title="Get all the joints in this group (including fixed and mimic joints)." alt="" coords="519,463,701,504"/>
+<area shape="rect" id="node7" href="$classmoveit_1_1core_1_1RobotModel.html#aef85568fb4db9d1615c20bdf249fb147" title="Get a link by its name. Output error and return NULL when the link is missing." alt="" coords="515,267,705,308"/>
+<area shape="rect" id="node8" href="$classmoveit_1_1core_1_1JointModelGroup.html#ab136f94a385f74db2880055aee5d4afa" title="Get the mimic joints that are part of this group." alt="" coords="507,332,713,373"/>
+<area shape="rect" id="node9" href="$classmoveit_1_1core_1_1LinkModel.html#a75e688fa2530138639292bed0ae3f541" title="Get the joint model whose child this link is. There will always be a parent joint." alt="" coords="521,397,699,439"/>
+<area shape="rect" id="node10" href="$classmoveit_1_1core_1_1JointModel.html#a048a1922efedcb55f66421d6e261c41f" title="Get the link that this joint connects to. The robot is assumed to start with a joint,..." alt="" coords="519,5,701,47"/>
+<area shape="rect" id="node12" href="$classmoveit_1_1core_1_1RobotModel.html#a2de4bbefe50f27a0ad891c75aef4918c" title="Get the array of joints, in the order they appear in the robot state." alt="" coords="515,528,705,569"/>
+<area shape="rect" id="node13" href="$classmoveit_1_1core_1_1JointModelGroup.html#a2f165c9374e28ac4052490819c790f45" title="Get the name of the joint group." alt="" coords="519,659,701,700"/>
+<area shape="rect" id="node14" href="$classmoveit_1_1core_1_1JointModelGroup.html#aedc11a9de50041c4fb2fcde24c8c9e1e" title="If this group is an end&#45;effector, specify the parent group (e.g., the arm holding the eef) and the li..." alt="" coords="508,593,712,635"/>
+<area shape="rect" id="node16" href="$classmoveit_1_1core_1_1JointModelGroup.html#ae4fe1ec476ac40a3d5c0c08482d71678" title="Set the names of the subgroups for this group." alt="" coords="512,724,708,765"/>
 </map>

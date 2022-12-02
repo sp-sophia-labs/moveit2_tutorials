@@ -1,0 +1,28 @@
+<map id="planning_scene::PlanningScene::setPlanningSceneMsg" name="planning_scene::PlanningScene::setPlanningSceneMsg">
+<area shape="rect" id="node1" title="Set this instance of a planning scene to be the same as the one serialized in the scene message,..." alt="" coords="5,159,216,200"/>
+<area shape="rect" id="node2" href="$classplanning__scene_1_1PlanningScene.html#a9c1ced2bcec5848f91244342bb7dd571" title="Make sure that all the data maintained in this scene is local. All unmodified data is copied from the..." alt="" coords="310,5,497,47"/>
+<area shape="rect" id="node3" href="$classplanning__scene_1_1PlanningScene.html#a343bc168dde9e2c211d2450f4eb0921a" title="Get the name of the planning scene. This is empty by default." alt="" coords="310,71,497,112"/>
+<area shape="rect" id="node4" href="$classplanning__scene_1_1PlanningScene.html#ae1789ae10386a21ffe1fa41e1a590a6c" title="Get the kinematic model for which the planning scene is maintained." alt="" coords="891,108,1077,149"/>
+<area shape="rect" id="node5" href="$classplanning__scene_1_1PlanningScene.html#a769413a3663cdc1280f4bb6ea9dbf460" title=" " alt="" coords="264,188,543,229"/>
+<area shape="rect" id="node10" href="$classplanning__scene_1_1PlanningScene.html#a30e14e2ee05a53a1b6536930acb9d188" title="Set the current robot state to be state. If not all joint values are specified, the previously mainta..." alt="" coords="310,355,497,396"/>
+<area shape="rect" id="node26" href="$classplanning__scene_1_1PlanningScene.html#a7885dfde509fd051ecae69c4bc0a5b80" title=" " alt="" coords="310,420,497,461"/>
+<area shape="rect" id="node6" href="$classplanning__scene_1_1PlanningScene.html#a304eaffcb834ec62a26e1d296c72b726" title=" " alt="" coords="591,253,835,295"/>
+<area shape="rect" id="node7" href="$classplanning__scene_1_1PlanningScene.html#a558cfa9e121bc0ce7aa3499629caf6c1" title=" " alt="" coords="610,188,815,229"/>
+<area shape="rect" id="node8" href="$classplanning__scene_1_1PlanningScene.html#a351202a8fec49dff6646a454ac3e9a7e" title="Get the transform corresponding to the frame id. This will be known if id is a link name,..." alt="" coords="886,173,1082,215"/>
+<area shape="rect" id="node9" href="$classplanning__scene_1_1PlanningScene.html#ab4de68060bb1d854e4d37f26436b7ebb" title="Get the state at which the robot is assumed to be." alt="" coords="1158,173,1345,215"/>
+<area shape="rect" id="node11" href="$classplanning__scene_1_1PlanningScene.html#abe6960d32fe24ce453ff2f86ef834485" title="Get the set of fixed transforms from known frames to the planning frame." alt="" coords="619,428,806,469"/>
+<area shape="rect" id="node12" href="$classplanning__scene_1_1PlanningScene.html#a6f16582ddf99b615ef69c658521731ff" title=" " alt="" coords="596,347,829,403"/>
+<area shape="rect" id="node21" href="$namespacemoveit_1_1core.html#af616e81ab82b75721fdbfcd77892c92a" title="Convert a robot state msg (with accompanying extra transforms) to a MoveIt robot state." alt="" coords="623,587,803,628"/>
+<area shape="rect" id="node13" href="$classmoveit_1_1core_1_1AttachedBody.html#a11d6a3b22ff5b6be47352f9621783f22" title="Get the name of the link this body is attached to." alt="" coords="883,369,1085,411"/>
+<area shape="rect" id="node15" href="$classmoveit_1_1core_1_1AttachedBody.html#a1b5208f4d6c74fd1c31d89015f153d93" title="Return the posture that is necessary for the object to be released, (if any). This is useful for exam..." alt="" coords="883,435,1085,476"/>
+<area shape="rect" id="node16" href="$classmoveit_1_1core_1_1AttachedBody.html#a6ad0a458fbb1d88eefd0d9866020912d" title="Get the fixed transforms (the transforms to the shapes of this body, relative to the link)...." alt="" coords="883,500,1085,541"/>
+<area shape="rect" id="node17" href="$classmoveit_1_1core_1_1AttachedBody.html#a8832405dda038c3e28a7969cb63993d1" title="Get the shapes that make up this attached body." alt="" coords="883,565,1085,607"/>
+<area shape="rect" id="node18" href="$classmoveit_1_1core_1_1AttachedBody.html#a625360c145f93840d145328ea02836b5" title="Get subframes of this object (relative to the link). The returned transforms are guaranteed to be val..." alt="" coords="883,631,1085,672"/>
+<area shape="rect" id="node19" href="$classmoveit_1_1core_1_1AttachedBody.html#a1added4f50dd7c18b8559e160885cbf1" title="Get the links that the attached body is allowed to touch." alt="" coords="883,239,1085,280"/>
+<area shape="rect" id="node20" href="$classplanning__scene_1_1PlanningScene.html#a8794b3be8e182d38fe962855c570ac40" title=" " alt="" coords="891,304,1077,345"/>
+<area shape="rect" id="node14" href="$classmoveit_1_1core_1_1LinkModel.html#a99ed1c1c371bdb1b007484fd399e435c" title="The name of this link." alt="" coords="1162,369,1341,411"/>
+<area shape="rect" id="node22" href="$classmoveit_1_1core_1_1RobotState.html#aaec5557d55b862d9dd832b3d4c221836" title="Update all transforms." alt="" coords="892,696,1076,737"/>
+<area shape="rect" id="node23" href="$classmoveit_1_1core_1_1RobotState.html#afa1f72a766bdf75d81f4404058322576" title="Update the transforms for the collision bodies. This call is needed before calling collision checking..." alt="" coords="1133,696,1369,737"/>
+<area shape="rect" id="node24" href="$classmoveit_1_1core_1_1JointModel.html#aa6dbe9f994aca22adf80add175d10681" title="Get all the link models that descend from this joint, in the kinematic tree." alt="" coords="1417,663,1620,704"/>
+<area shape="rect" id="node25" href="$classmoveit_1_1core_1_1RobotState.html#a8778df1884c3caaf47558c939832cd9e" title="Update the reference frame transforms for links. This call is needed before using the transforms of l..." alt="" coords="1427,728,1611,769"/>
+</map>

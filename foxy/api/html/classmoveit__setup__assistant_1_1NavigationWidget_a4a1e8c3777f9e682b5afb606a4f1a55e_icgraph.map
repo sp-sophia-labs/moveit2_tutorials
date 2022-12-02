@@ -1,5 +1,6 @@
 <map id="moveit_setup_assistant::NavigationWidget::setEnabled" name="moveit_setup_assistant::NavigationWidget::setEnabled">
-<area shape="rect" id="node1" title=" " alt="" coords="231,53,457,94"/>
-<area shape="rect" id="node2" href="$classmoveit__setup__assistant_1_1SetupAssistantWidget.html#a631e546c42801d791b11d7462a9ee730" title=" " alt="" coords="5,5,183,61"/>
-<area shape="rect" id="node3" href="$classmoveit__setup__assistant_1_1SetupAssistantWidget.html#addd49ec21ffb77ecfe20a2583e47497f" title=" " alt="" coords="5,85,183,141"/>
+<area shape="rect" id="node1" title=" " alt="" coords="509,53,736,94"/>
+<area shape="rect" id="node2" href="$classmoveit__setup__assistant_1_1NavigationWidget.html#a59d27e3d70a9fbdaed09beaeda595b24" title=" " alt="" coords="231,53,461,94"/>
+<area shape="rect" id="node3" href="$classmoveit__setup__assistant_1_1SetupAssistantWidget.html#addd49ec21ffb77ecfe20a2583e47497f" title=" " alt="" coords="5,5,183,61"/>
+<area shape="rect" id="node4" href="$classmoveit__setup__assistant_1_1SetupAssistantWidget.html#aaed1e00466cde1c0afef21cd891a770b" title=" " alt="" coords="5,85,183,141"/>
 </map>

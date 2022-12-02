@@ -1,8 +1,15 @@
 <map id="robot_trajectory::RobotTrajectory::empty" name="robot_trajectory::RobotTrajectory::empty">
-<area shape="rect" id="node1" title=" " alt="" coords="407,133,641,174"/>
-<area shape="rect" id="node2" href="$classtrajectory__processing_1_1IterativeSplineParameterization.html#ab01c18e50f1663358c658651e1fde2c5" title=" " alt="" coords="115,5,351,61"/>
-<area shape="rect" id="node4" href="$classtrajectory__processing_1_1TimeOptimalTrajectoryGeneration.html#a5ad18a23d5b6f0beedaa4b6e20f8b01b" title=" " alt="" coords="108,85,359,141"/>
-<area shape="rect" id="node5" href="$classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a4602671783e5fdb62207685fbaea5dce" title=" " alt="" coords="133,165,333,221"/>
-<area shape="rect" id="node6" href="$classmoveit_1_1hybrid__planning_1_1ForwardTrajectory.html#a49dba1b9183969a92b7a8c9c23cb2fed" title=" " alt="" coords="139,246,327,287"/>
-<area shape="rect" id="node3" href="$test__time__parameterization_8cpp.html#a1fb67aa34417d03016c74d44bd7f54e0" title=" " alt="" coords="5,20,60,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="704,330,939,371"/>
+<area shape="rect" id="node2" href="$classtrajectory__processing_1_1IterativeSplineParameterization.html#ab01c18e50f1663358c658651e1fde2c5" title=" " alt="" coords="394,71,630,127"/>
+<area shape="rect" id="node5" href="$classtrajectory__processing_1_1IterativeParabolicTimeParameterization.html#add98b37306db64f26057b71e45592a57" title=" " alt="" coords="368,231,656,287"/>
+<area shape="rect" id="node9" href="$classtrajectory__processing_1_1TimeOptimalTrajectoryGeneration.html#a5ad18a23d5b6f0beedaa4b6e20f8b01b" title=" " alt="" coords="387,323,637,379"/>
+<area shape="rect" id="node12" href="$classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a4602671783e5fdb62207685fbaea5dce" title=" " alt="" coords="412,403,612,459"/>
+<area shape="rect" id="node13" href="$classmoveit_1_1hybrid__planning_1_1ForwardTrajectory.html#a49dba1b9183969a92b7a8c9c23cb2fed" title=" " alt="" coords="418,483,606,525"/>
+<area shape="rect" id="node3" href="$classdefault__planner__request__adapters_1_1AddIterativeSplineParameterization.html#a630967a9aade69aa8cc49f5ece102785" title="Adapt the planning request if needed, call the planner function planner and update the planning respo..." alt="" coords="47,5,278,61"/>
+<area shape="rect" id="node4" href="$test__time__parameterization_8cpp.html#a1fb67aa34417d03016c74d44bd7f54e0" title=" " alt="" coords="135,85,190,112"/>
+<area shape="rect" id="node6" href="$classdefault__planner__request__adapters_1_1AddTimeParameterization.html#a66404b1e7b0f950d035929c33a748a7b" title="Adapt the planning request if needed, call the planner function planner and update the planning respo..." alt="" coords="31,136,294,192"/>
+<area shape="rect" id="node7" href="$classpick__place_1_1ApproachAndTranslateStage.html#ae658a494d4ecadb6078a19060c6630c0" title=" " alt="" coords="41,217,285,258"/>
+<area shape="rect" id="node8" href="$test__time__parameterization_8cpp.html#aa51b79e24472e01dd59a8f68878e719e" title=" " alt="" coords="135,283,190,309"/>
+<area shape="rect" id="node10" href="$classdefault__planner__request__adapters_1_1AddTimeOptimalParameterization.html#addb58f9acb48922a5a6fb7c8aa4aacf2" title="Adapt the planning request if needed, call the planner function planner and update the planning respo..." alt="" coords="5,333,320,389"/>
+<area shape="rect" id="node11" href="$classmoveit_1_1hybrid__planning_1_1SimpleSampler.html#a7c6b3f8cb49983fd8fd6559b6be922c8" title=" " alt="" coords="50,413,275,469"/>
 </map>

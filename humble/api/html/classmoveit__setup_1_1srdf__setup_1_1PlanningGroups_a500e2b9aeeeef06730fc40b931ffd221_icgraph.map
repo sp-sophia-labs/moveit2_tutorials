@@ -1,4 +1,0 @@
-<map id="moveit_setup::srdf_setup::PlanningGroups::getChildOfJoint" name="moveit_setup::srdf_setup::PlanningGroups::getChildOfJoint">
-<area shape="rect" id="node1" title=" " alt="" coords="275,5,449,61"/>
-<area shape="rect" id="node2" href="$classmoveit__setup_1_1srdf__setup_1_1PlanningGroupsWidget.html#a9fb3639159467d3c19e922711aa2e3bf" title="Received when this widget is chosen from the navigation menu." alt="" coords="5,5,227,61"/>
-</map>

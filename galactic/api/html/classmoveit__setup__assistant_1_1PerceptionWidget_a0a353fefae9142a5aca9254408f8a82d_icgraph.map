@@ -1,0 +1,4 @@
+<map id="moveit_setup_assistant::PerceptionWidget::loadSensorPluginsComboBox" name="moveit_setup_assistant::PerceptionWidget::loadSensorPluginsComboBox">
+<area shape="rect" id="node1" title="Populate the combo dropdown box with sensor plugins." alt="" coords="280,5,505,61"/>
+<area shape="rect" id="node2" href="$classmoveit__setup__assistant_1_1PerceptionWidget.html#a6ed52bd5b649f78386c07a94a0a31041" title="Received when this widget is chosen from the navigation menu." alt="" coords="5,13,232,54"/>
+</map>

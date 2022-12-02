@@ -1,0 +1,4 @@
+<map id="moveit_setup_assistant::DoubleListWidget::doneEditing" name="moveit_setup_assistant::DoubleListWidget::doneEditing">
+<area shape="rect" id="node1" title="Event sent when this widget is done making data changes and parent widget can save." alt="" coords="276,13,507,54"/>
+<area shape="rect" id="node2" href="$classmoveit__setup__assistant_1_1DoubleListWidget.html#aa5f8a7aa668777c25d1ad04bea5a2f76" title="Constructor." alt="" coords="5,5,228,61"/>
+</map>

@@ -1,4 +1,0 @@
-<map id="trajectory_execution_manager::TrajectoryExecutionManager::setAllowedGoalDurationMargin" name="trajectory_execution_manager::TrajectoryExecutionManager::setAllowedGoalDurationMargin">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,296,61"/>
-<area shape="rect" id="node2" href="$classtrajectory__execution__manager_1_1TrajectoryExecutionManager.html#a1fb8ee6f7c809152afc3989dc7447046" title="Stop whatever executions are active, if any." alt="" coords="344,5,567,61"/>
-</map>

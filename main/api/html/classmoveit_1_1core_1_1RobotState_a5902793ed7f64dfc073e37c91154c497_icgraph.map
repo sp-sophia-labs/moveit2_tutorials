@@ -1,27 +1,52 @@
 <map id="moveit::core::RobotState::copyJointGroupPositions" name="moveit::core::RobotState::copyJointGroupPositions">
-<area shape="rect" id="node1" title="For a given group, copy the position values of the variables that make up the group into another loca..." alt="" coords="815,906,1003,947"/>
-<area shape="rect" id="node2" href="$namespacekinematic__constraints.html#a449c87b5d209ba3b9a62d73b4278da77" title="Generates a constraint message intended to be used as a goal constraint for a joint group...." alt="" coords="541,370,736,411"/>
-<area shape="rect" id="node16" href="$namespacetrajopt__interface.html#af930b3d04376991573e60f489daaaca4" title=" " alt="" coords="569,710,708,751"/>
-<area shape="rect" id="node17" href="$classompl__interface_1_1ModelBasedStateSpace.html#adad78278f75811db856ccf9d334de0ee" title="Copy the data from a set of joint states to an OMPL state." alt="" coords="529,775,748,817"/>
-<area shape="rect" id="node19" href="$namespacepilz__industrial__motion__planner.html#af67e0fa074dd44691f84cfdb63c10798" title="Check if the two robot states have the same joint position/velocity/acceleration." alt="" coords="536,841,741,882"/>
-<area shape="rect" id="node21" href="$classmoveit_1_1core_1_1RobotState.html#ab4fa76fc793c057a393723f9fd803005" title="Given positions for the variables that make up a group, in the order found in the group (including va..." alt="" coords="547,906,731,947"/>
-<area shape="rect" id="node22" href="$classmoveit_1_1planning__interface_1_1MoveGroupInterface.html#a8b0c7ebeef4400d60367acf61154141b" title="If a different start state should be considered instead of the current state of the robot,..." alt="" coords="511,971,767,1013"/>
-<area shape="rect" id="node23" href="$test__time__optimal__trajectory__generation_8cpp.html#add348b9a8f52246d2c196d97ba97ebe8" title=" " alt="" coords="611,1037,666,1064"/>
-<area shape="rect" id="node24" href="$robot__state__test_8cpp.html#adb3b487fd2559db6519d52dec17ab77d" title=" " alt="" coords="604,1088,673,1115"/>
-<area shape="rect" id="node25" href="$classTestConstrainedStateSpace.html#ac198f32011feba35df006da6336011b8" title=" " alt="" coords="539,1139,738,1181"/>
-<area shape="rect" id="node3" href="$generate__state__database_8cpp.html#a82b7d814b7d1e65af86a269fc31283c3" title=" " alt="" coords="284,5,383,32"/>
-<area shape="rect" id="node4" href="$namespacekinematic__constraints.html#a14a9d99caa1840e95ccd1c01b08966e7" title="Generates a constraint message intended to be used as a goal constraint for a joint group...." alt="" coords="236,57,431,98"/>
-<area shape="rect" id="node5" href="$namespacetestutils.html#ae6f9c0bb1d0c74b4321a6a419f892a57" title=" " alt="" coords="233,123,434,149"/>
-<area shape="rect" id="node6" href="$pymoveit__core_8cpp.html#ada39b537dde95c26dc293c5bf705ff2e" title=" " alt="" coords="236,174,431,215"/>
-<area shape="rect" id="node8" href="$namespacetestutils.html#a47e7d5ac95ce106e03eeca07873a8eef" title=" " alt="" coords="236,239,431,281"/>
-<area shape="rect" id="node9" href="$namespacetestutils.html#a4d7a40fa95d80d2748271e44a7b28588" title="generate two LIN trajectories from test data set" alt="" coords="235,305,432,346"/>
-<area shape="rect" id="node10" href="$classmoveit__cpp_1_1PlanningComponent.html#a1b48a15df3246b58b7ce1f58ecf501bd" title="Get the joint values for targets specified by name." alt="" coords="215,370,452,411"/>
-<area shape="rect" id="node11" href="$classPlanningContextTest.html#a007e70029a3f986a0596ff0a7feac14a" title="Generate a valid fully defined request." alt="" coords="256,435,411,477"/>
-<area shape="rect" id="node12" href="$classmoveit_1_1planning__interface_1_1MoveGroupInterface_1_1MoveGroupInterfaceImpl.html#aa74efb0453a9df2775a33d81784fc448" title=" " alt="" coords="204,501,463,557"/>
-<area shape="rect" id="node13" href="$classpilz__industrial__motion__planner__testutils_1_1CartesianConfiguration.html#a3867185866283c2b8afddd4dfdedba73" title=" " alt="" coords="229,581,437,637"/>
-<area shape="rect" id="node14" href="$classmoveit__cpp_1_1PlanningComponent.html#abd170717c8d7a0c91a1ee9fe1ffd2ad1" title="Specify the workspace bounding box. The box is specified in the planning frame (i...." alt="" coords="215,662,452,703"/>
-<area shape="rect" id="node15" href="$unittest__trajectory__generator__ptp_8cpp.html#afc270e6306260d6dfbe4f2eba872e929" title="test the ptp trajectory generator of Cartesian space goal" alt="" coords="299,728,368,755"/>
-<area shape="rect" id="node7" href="$pymoveit__core_8cpp.html#aae5c18014d007aef7676d42ced1ba2b0" title=" " alt="" coords="5,181,156,208"/>
-<area shape="rect" id="node18" href="$classompl__interface_1_1PoseModelStateSpace.html#a6e3af22fe4388daccf51c775e71b847c" title="Copy the data from a set of joint states to an OMPL state." alt="" coords="224,779,443,821"/>
-<area shape="rect" id="node20" href="$unittest__trajectory__functions_8cpp.html#a740e85b52d45b6c074ad5ff1fe158eba" title="Check that function isRobotStateEqual() returns &#39;false&#39; if the positions of the robot states are not ..." alt="" coords="299,848,368,875"/>
+<area shape="rect" id="node1" title="For a given group, copy the position values of the variables that make up the group into another loca..." alt="" coords="1115,1226,1303,1267"/>
+<area shape="rect" id="node2" href="$classconstraint__samplers_1_1IKConstraintSampler.html#a770d65f81d4f4ae2ca9d5e86c6bd7c79" title="Actually calls IK on the given pose, generating a random seed state." alt="" coords="839,120,1001,176"/>
+<area shape="rect" id="node6" href="$classmoveit__rviz__plugin_1_1MotionPlanningDisplay.html#a6b52a899f9184459b4adc0769d81d315" title=" " alt="" coords="827,315,1013,371"/>
+<area shape="rect" id="node10" href="$namespacekinematic__constraints.html#a449c87b5d209ba3b9a62d73b4278da77" title="Generates a constraint message intended to be used as a goal constraint for a joint group...." alt="" coords="823,625,1017,666"/>
+<area shape="rect" id="node30" href="$namespacetrajopt__interface.html#af930b3d04376991573e60f489daaaca4" title=" " alt="" coords="851,883,989,925"/>
+<area shape="rect" id="node32" href="$classmoveit_1_1core_1_1RobotState.html#a2b95b92922f14475e7c36bac137cb6fd" title="For a given group, copy the position values of the variables that make up the group into another loca..." alt="" coords="826,949,1014,990"/>
+<area shape="rect" id="node33" href="$classompl__interface_1_1ConstrainedPlanningStateSpace.html#ab024523b89c9093d7e3aebde8c134645" title="Copy the data from a set of joint states to an OMPL state." alt="" coords="783,1014,1057,1055"/>
+<area shape="rect" id="node34" href="$classompl__interface_1_1ModelBasedStateSpace.html#adad78278f75811db856ccf9d334de0ee" title="Copy the data from a set of joint states to an OMPL state." alt="" coords="811,1079,1029,1121"/>
+<area shape="rect" id="node36" href="$classmoveit_1_1planning__interface_1_1MoveGroupInterface.html#a94620b6dfc7be8f96ccdd05b63f24094" title="Get the current joint state goal in a form compatible to setJointValueTarget()" alt="" coords="791,1145,1049,1201"/>
+<area shape="rect" id="node37" href="$classmoveit_1_1core_1_1RobotState.html#ace036f11afd180c3e2f2be90bb78b21d" title="Given the velocities for the variables in this group (qdot) and an amount of time (dt),..." alt="" coords="823,1226,1017,1267"/>
+<area shape="rect" id="node40" href="$namespacepilz__industrial__motion__planner.html#af67e0fa074dd44691f84cfdb63c10798" title="Check if the two robot states have the same joint position/velocity/acceleration." alt="" coords="817,1291,1023,1333"/>
+<area shape="rect" id="node42" href="$classmoveit__rviz__plugin_1_1MotionPlanningFrameJointsWidget.html#a8c810e5e956ebd8b38f8dfe8b3622631" title=" " alt="" coords="816,1357,1024,1413"/>
+<area shape="rect" id="node45" href="$classRobotTrajectoryTestFixture.html#a7ca0bb014fd044aca3f7da1e1fa55836" title=" " alt="" coords="773,1438,1067,1479"/>
+<area shape="rect" id="node46" href="$namespacemoveit_1_1core.html#a59364c5f823c4aa5193b05bada6bcf69" title="Convert a MoveIt robot state to common separated values (CSV) on a single line that is outputted to a..." alt="" coords="830,1503,1010,1545"/>
+<area shape="rect" id="node47" href="$classmoveit_1_1core_1_1RobotState.html#ab8313d03f9a6f2e17e19db6f6faf5db8" title="setFromIK for multiple poses and tips (end effectors) when no solver exists for the jmg that can solv..." alt="" coords="828,1569,1012,1610"/>
+<area shape="rect" id="node48" href="$test__time__optimal__trajectory__generation_8cpp.html#add348b9a8f52246d2c196d97ba97ebe8" title=" " alt="" coords="893,1635,947,1661"/>
+<area shape="rect" id="node49" href="$robot__state__test_8cpp.html#adb3b487fd2559db6519d52dec17ab77d" title=" " alt="" coords="885,1685,955,1712"/>
+<area shape="rect" id="node50" href="$classTestConstrainedStateSpace.html#ac198f32011feba35df006da6336011b8" title=" " alt="" coords="821,1737,1019,1778"/>
+<area shape="rect" id="node3" href="$classconstraint__samplers_1_1IKConstraintSampler.html#aa7e99748581ad41d84930591e55ff8c9" title=" " alt="" coords="493,5,655,61"/>
+<area shape="rect" id="node4" href="$classconstraint__samplers_1_1IKConstraintSampler.html#ae5d3227abcd14e5be087ecb67df7c728" title="Produces an IK sample." alt="" coords="167,5,330,61"/>
+<area shape="rect" id="node5" href="$test__constraint__samplers_8cpp.html#a19e71fb6f8a206a9692b50c4b02084b7" title=" " alt="" coords="5,20,75,47"/>
+<area shape="rect" id="node7" href="$classmoveit__rviz__plugin_1_1MotionPlanningDisplay.html#a6e072871a9ae5a752a044a59d11025ae" title=" " alt="" coords="484,85,664,141"/>
+<area shape="rect" id="node8" href="$classmoveit__rviz__plugin_1_1MotionPlanningDisplay.html#ae6635a4576badd216e6daf394cd4cf2f" title=" " alt="" coords="123,85,374,141"/>
+<area shape="rect" id="node9" href="$classmoveit__rviz__plugin_1_1MotionPlanningDisplay.html#a32eb8fcbef533c4874c44baf12bce4ed" title=" " alt="" coords="123,165,375,221"/>
+<area shape="rect" id="node11" href="$generate__state__database_8cpp.html#a82b7d814b7d1e65af86a269fc31283c3" title=" " alt="" coords="525,165,623,192"/>
+<area shape="rect" id="node12" href="$namespacekinematic__constraints.html#a14a9d99caa1840e95ccd1c01b08966e7" title="Generates a constraint message intended to be used as a goal constraint for a joint group...." alt="" coords="477,217,671,258"/>
+<area shape="rect" id="node13" href="$classmoveit_1_1planning__interface_1_1MoveGroupInterface_1_1MoveGroupInterfaceImpl.html#ab59f8929101f223fa4acc814d354cb27" title=" " alt="" coords="423,283,725,339"/>
+<area shape="rect" id="node16" href="$classmoveit__rviz__plugin_1_1MotionPlanningFrame.html#aa6b4592edb828e4d84963a83120de945" title=" " alt="" coords="475,363,673,419"/>
+<area shape="rect" id="node17" href="$namespacetestutils.html#ae6f9c0bb1d0c74b4321a6a419f892a57" title=" " alt="" coords="473,443,675,469"/>
+<area shape="rect" id="node18" href="$classTestPlanningContext.html#a41eb3e50154a77cf3eead6a7add81cf7" title=" " alt="" coords="497,494,651,535"/>
+<area shape="rect" id="node21" href="$pykinematic__constraint_8cpp.html#ada39b537dde95c26dc293c5bf705ff2e" title=" " alt="" coords="477,559,671,601"/>
+<area shape="rect" id="node23" href="$namespacetestutils.html#a47e7d5ac95ce106e03eeca07873a8eef" title=" " alt="" coords="477,625,671,666"/>
+<area shape="rect" id="node24" href="$namespacetestutils.html#a4d7a40fa95d80d2748271e44a7b28588" title="generate two LIN trajectories from test data set" alt="" coords="475,690,673,731"/>
+<area shape="rect" id="node25" href="$classPlanningContextTest.html#a007e70029a3f986a0596ff0a7feac14a" title="Generate a valid fully defined request." alt="" coords="497,755,651,797"/>
+<area shape="rect" id="node26" href="$classmoveit__hybrid__planning_1_1HybridPlanningFixture.html#a739f175c9c02ac75ee03ff11441d678e" title=" " alt="" coords="485,821,663,877"/>
+<area shape="rect" id="node27" href="$classmoveit__cpp_1_1PlanningComponent.html#a38d7befd1988df1f0e4c604dcde0d510" title="Set the goal constraints generated from a target state." alt="" coords="455,902,693,943"/>
+<area shape="rect" id="node28" href="$unittest__trajectory__generator__ptp_8cpp.html#afc270e6306260d6dfbe4f2eba872e929" title="test the ptp trajectory generator of Cartesian space goal" alt="" coords="539,968,609,995"/>
+<area shape="rect" id="node29" href="$classpilz__industrial__motion__planner__testutils_1_1CartesianConfiguration.html#aa598ca699a00a7dd32ec1ee58194876a" title=" " alt="" coords="457,1019,691,1075"/>
+<area shape="rect" id="node14" href="$classmoveit_1_1planning__interface_1_1MoveGroupInterface_1_1MoveGroupInterfaceImpl.html#a2b63591645e3ef521e31597f5c049bc5" title=" " alt="" coords="125,257,372,313"/>
+<area shape="rect" id="node15" href="$classmoveit_1_1planning__interface_1_1MoveGroupInterface.html#a6ed9be2b4652788b2016dd5641bebfe8" title="Build the MotionPlanRequest that would be sent to the move_group action with plan() or move() and sto..." alt="" coords="133,337,364,393"/>
+<area shape="rect" id="node19" href="$classTestPlanningContext.html#a8f4f3b99518372988da125d40652e4d7" title=" " alt="" coords="170,431,327,473"/>
+<area shape="rect" id="node20" href="$classTestPlanningContext.html#a8843ac6094d78c509e1ec3da3141e118" title=" " alt="" coords="171,497,326,538"/>
+<area shape="rect" id="node22" href="$pymoveit__core_8cpp.html#aae5c18014d007aef7676d42ced1ba2b0" title=" " alt="" coords="173,567,324,593"/>
+<area shape="rect" id="node31" href="$classtrajopt__interface_1_1TrajOptInterface.html#a6b9e2fb0c9c463675e653160b015ee3c" title=" " alt="" coords="489,1099,659,1141"/>
+<area shape="rect" id="node35" href="$classompl__interface_1_1PoseModelStateSpace.html#a6e3af22fe4388daccf51c775e71b847c" title="Copy the data from a set of joint states to an OMPL state." alt="" coords="465,1165,683,1206"/>
+<area shape="rect" id="node38" href="$classmoveit_1_1core_1_1RobotState.html#a7299fef43f47964c0180f981122a6058" title="Set the joint values from a Cartesian velocity applied during a time dt." alt="" coords="482,1230,666,1271"/>
+<area shape="rect" id="node39" href="$classmoveit_1_1core_1_1RobotState.html#a4814e754ff197a74fadf62bb0390767e" title="Set the joint values from a Cartesian velocity applied during a time dt." alt="" coords="157,1230,341,1271"/>
+<area shape="rect" id="node41" href="$unittest__trajectory__functions_8cpp.html#a740e85b52d45b6c074ad5ff1fe158eba" title="Check that function isRobotStateEqual() returns &#39;false&#39; if the positions of the robot states are not ..." alt="" coords="539,1299,609,1325"/>
+<area shape="rect" id="node43" href="$classmoveit__rviz__plugin_1_1MotionPlanningFrameJointsWidget.html#a930afdf23abaf34d6d8f701cdcfdb27c" title=" " alt="" coords="470,1357,678,1413"/>
+<area shape="rect" id="node44" href="$classmoveit__rviz__plugin_1_1MotionPlanningFrameJointsWidget.html#a4e56a9dd87fc8553f989022fe3b00f63" title=" " alt="" coords="134,1357,363,1413"/>
 </map>

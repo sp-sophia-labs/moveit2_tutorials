@@ -1,4 +1,5 @@
 <map id="moveit::core::CartesianInterpolator::computeCartesianPath" name="moveit::core::CartesianInterpolator::computeCartesianPath">
-<area shape="rect" id="node1" title="Compute the sequence of joint values that correspond to a straight Cartesian path for a particular li..." alt="" coords="304,5,555,47"/>
-<area shape="rect" id="node2" href="$structmoveit_1_1core_1_1CartesianInterpolator_1_1Distance.html#ad4321ff0961b3a23956258fd2ee87f7d" title=" " alt="" coords="5,5,256,47"/>
+<area shape="rect" id="node1" title="Compute the sequence of joint values that correspond to a straight Cartesian path for a particular li..." alt="" coords="304,39,555,80"/>
+<area shape="rect" id="node2" href="$classmoveit_1_1core_1_1RobotState.html#ac920b75bd636551e31bb36db696910f9" title="Compute the sequence of joint values that correspond to a straight Cartesian path for a particular gr..." alt="" coords="39,5,223,47"/>
+<area shape="rect" id="node3" href="$classmoveit_1_1core_1_1CartesianInterpolator.html#a281a6a8b5b72282cc1a6b593f342eba9" title="Compute the sequence of joint values that correspond to a straight Cartesian path,..." alt="" coords="5,71,256,112"/>
 </map>
