@@ -576,7 +576,7 @@ $(function() {
 <div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;{</div>
 <div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;  <span class="comment">// if left mouse button is pressed, grab all future mouse events until button(s) released</span></div>
 <div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;  <span class="keywordflow">if</span> (QApplication::mouseButtons() &amp; Qt::LeftButton)</div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;    this-&gt;grabMouse();</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;    grabMouse();</div>
 <div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;}</div>
 <div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160; </div>
 <div class="line"><a name="l00509"></a><span class="lineno"><a class="line" href="classmoveit__rviz__plugin_1_1ProgressBarEditor.html#a81ecd132dea4ff106ccfc8fdf66bd863">  509</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__rviz__plugin_1_1ProgressBarEditor.html#a81ecd132dea4ff106ccfc8fdf66bd863">ProgressBarEditor::paintEvent</a>(QPaintEvent* <span class="comment">/*event*/</span>)</div>
@@ -585,7 +585,7 @@ $(function() {
 <div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160; </div>
 <div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;  QStyleOptionProgressBar <a class="code" href="namespacemoveit__commander__cmdline.html#a76b84183c3f688c8a62245eac9b3d26c">opt</a>;</div>
 <div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;  <a class="code" href="namespacemoveit__commander__cmdline.html#a76b84183c3f688c8a62245eac9b3d26c">opt</a>.rect = rect();</div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;  <a class="code" href="namespacemoveit__commander__cmdline.html#a76b84183c3f688c8a62245eac9b3d26c">opt</a>.palette = this-&gt;palette();</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;  <a class="code" href="namespacemoveit__commander__cmdline.html#a76b84183c3f688c8a62245eac9b3d26c">opt</a>.palette = palette();</div>
 <div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;  <a class="code" href="namespacemoveit__commander__cmdline.html#a76b84183c3f688c8a62245eac9b3d26c">opt</a>.minimum = 0;</div>
 <div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;  <a class="code" href="namespacemoveit__commander__cmdline.html#a76b84183c3f688c8a62245eac9b3d26c">opt</a>.maximum = 1000;</div>
 <div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;  <a class="code" href="namespacemoveit__commander__cmdline.html#a76b84183c3f688c8a62245eac9b3d26c">opt</a>.progress = 1000. * (value_ - min_) / (max_ - min_);</div>

@@ -69,7 +69,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">time_optimal_trajectory_generation.cpp File Reference</div>  </div>
 </div><!--header-->
@@ -153,6 +154,12 @@ Classes</h2></td></tr>
 Namespaces</h2></td></tr>
 <tr class="memitem:namespacetrajectory__processing"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetrajectory__processing.html">trajectory_processing</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aae6b88f7b6ced049070977eedaeaef95"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetrajectory__processing.html#aae6b88f7b6ced049070977eedaeaef95">trajectory_processing::totgComputeTimeStamps</a> (const size_t num_waypoints, <a class="el" href="classrobot__trajectory_1_1RobotTrajectory.html">robot_trajectory::RobotTrajectory</a> &amp;trajectory, const double max_velocity_scaling_factor=1.0, const double max_acceleration_scaling_factor=1.0)</td></tr>
+<tr class="memdesc:aae6b88f7b6ced049070977eedaeaef95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute a trajectory with the given number of waypoints (plus or minus 1, due to rounding). Resampling the trajectory to get the desired num_waypoints doesn't change the start and goal point, and all re-sampled waypoints will be on the path of the original trajectory (within the configured tolerances) but controller execution may deviate from the intended path if waypoint spacing is too sparse. This is a free function because it needs to modify the const resample_dt_ member of <a class="el" href="classtrajectory__processing_1_1TimeOptimalTrajectoryGeneration.html">TimeOptimalTrajectoryGeneration</a> class.  <a href="namespacetrajectory__processing.html#aae6b88f7b6ced049070977eedaeaef95">More...</a><br /></td></tr>
+<tr class="separator:aae6b88f7b6ced049070977eedaeaef95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->

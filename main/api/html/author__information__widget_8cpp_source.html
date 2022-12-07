@@ -155,7 +155,7 @@ $(function() {
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  layout-&gt;addWidget(<a class="code" href="classmoveit__setup_1_1core_1_1AuthorInformationWidget.html#af5173fab6ae068e9763ab458fbab22fe">email_edit_</a>);</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="comment">// Finish Layout --------------------------------------------------</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  this-&gt;setLayout(layout);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  setLayout(layout);</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">// ******************************************************************************************</span></div>
@@ -164,18 +164,18 @@ $(function() {
 <div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classmoveit__setup_1_1core_1_1AuthorInformationWidget.html#affaab79953cd07866e496a6b5253a551">   91</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classmoveit__setup_1_1core_1_1AuthorInformationWidget.html#affaab79953cd07866e496a6b5253a551">AuthorInformationWidget::focusGiven</a>()</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="comment">// Allow list box to populate</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  this-&gt;<a class="code" href="classmoveit__setup_1_1core_1_1AuthorInformationWidget.html#a94186351646ccd9a4a3b3d489de30f5f">name_edit_</a>-&gt;setText(QString::fromStdString(setup_step_.<a class="code" href="classmoveit__setup_1_1core_1_1AuthorInformation.html#a912782bb9a32b7b15b3a6fb707678976">getAuthorName</a>()));</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  this-&gt;<a class="code" href="classmoveit__setup_1_1core_1_1AuthorInformationWidget.html#af5173fab6ae068e9763ab458fbab22fe">email_edit_</a>-&gt;setText(QString::fromStdString(setup_step_.<a class="code" href="classmoveit__setup_1_1core_1_1AuthorInformation.html#acf3bb8b24f2c59ced200d3f02125bb36">getAuthorEmail</a>()));</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <a class="code" href="classmoveit__setup_1_1core_1_1AuthorInformationWidget.html#a94186351646ccd9a4a3b3d489de30f5f">name_edit_</a>-&gt;setText(QString::fromStdString(setup_step_.<a class="code" href="classmoveit__setup_1_1core_1_1AuthorInformation.html#a912782bb9a32b7b15b3a6fb707678976">getAuthorName</a>()));</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <a class="code" href="classmoveit__setup_1_1core_1_1AuthorInformationWidget.html#af5173fab6ae068e9763ab458fbab22fe">email_edit_</a>-&gt;setText(QString::fromStdString(setup_step_.<a class="code" href="classmoveit__setup_1_1core_1_1AuthorInformation.html#acf3bb8b24f2c59ced200d3f02125bb36">getAuthorEmail</a>()));</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keywordtype">void</span> AuthorInformationWidget::editedName()</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;{</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  setup_step_.<a class="code" href="classmoveit__setup_1_1core_1_1AuthorInformation.html#ac383eb1b16fa5639af1052dfc2f415e1">setAuthorName</a>(this-&gt;<a class="code" href="classmoveit__setup_1_1core_1_1AuthorInformationWidget.html#a94186351646ccd9a4a3b3d489de30f5f">name_edit_</a>-&gt;text().toStdString());</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  setup_step_.<a class="code" href="classmoveit__setup_1_1core_1_1AuthorInformation.html#ac383eb1b16fa5639af1052dfc2f415e1">setAuthorName</a>(<a class="code" href="classmoveit__setup_1_1core_1_1AuthorInformationWidget.html#a94186351646ccd9a4a3b3d489de30f5f">name_edit_</a>-&gt;text().toStdString());</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="keywordtype">void</span> AuthorInformationWidget::editedEmail()</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;{</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  setup_step_.<a class="code" href="classmoveit__setup_1_1core_1_1AuthorInformation.html#a007c65492c7e1fd202c1b5d41977ad95">setAuthorEmail</a>(this-&gt;<a class="code" href="classmoveit__setup_1_1core_1_1AuthorInformationWidget.html#af5173fab6ae068e9763ab458fbab22fe">email_edit_</a>-&gt;text().toStdString());</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  setup_step_.<a class="code" href="classmoveit__setup_1_1core_1_1AuthorInformation.html#a007c65492c7e1fd202c1b5d41977ad95">setAuthorEmail</a>(<a class="code" href="classmoveit__setup_1_1core_1_1AuthorInformationWidget.html#af5173fab6ae068e9763ab458fbab22fe">email_edit_</a>-&gt;text().toStdString());</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}  <span class="comment">// namespace core</span></div>

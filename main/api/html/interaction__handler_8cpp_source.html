@@ -366,7 +366,7 @@ $(function() {
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;  <span class="keywordtype">bool</span> error_state_changed = setErrorState(g.<a class="code" href="structrobot__interaction_1_1GenericInteraction.html#a31aa54503d68ce3fb840acc2a6d4adf3">marker_name_suffix</a>, !ok);</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  <span class="keywordflow">if</span> (update_callback_)</div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  {</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    callback = [<a class="code" href="namespacecollision__detection__bullet.html">cb</a> = this-&gt;update_callback_, error_state_changed](<a class="code" href="classrobot__interaction_1_1InteractionHandler.html">robot_interaction::InteractionHandler</a>* handler) {</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    callback = [<a class="code" href="namespacecollision__detection__bullet.html">cb</a> = update_callback_, error_state_changed](<a class="code" href="classrobot__interaction_1_1InteractionHandler.html">robot_interaction::InteractionHandler</a>* handler) {</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;      <a class="code" href="namespacecollision__detection__bullet.html">cb</a>(handler, error_state_changed);</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    };</div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  }</div>
@@ -384,7 +384,7 @@ $(function() {
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  <span class="keywordtype">bool</span> error_state_changed = setErrorState(eef.parent_group, !ok);</div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  <span class="keywordflow">if</span> (update_callback_)</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  {</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    callback = [<a class="code" href="namespacecollision__detection__bullet.html">cb</a> = this-&gt;update_callback_, error_state_changed](<a class="code" href="classrobot__interaction_1_1InteractionHandler.html">robot_interaction::InteractionHandler</a>* handler) {</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    callback = [<a class="code" href="namespacecollision__detection__bullet.html">cb</a> = update_callback_, error_state_changed](<a class="code" href="classrobot__interaction_1_1InteractionHandler.html">robot_interaction::InteractionHandler</a>* handler) {</div>
 <div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;      <a class="code" href="namespacecollision__detection__bullet.html">cb</a>(handler, error_state_changed);</div>
 <div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    };</div>
 <div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  }</div>
@@ -405,7 +405,7 @@ $(function() {
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;  state.<a class="code" href="classmoveit_1_1core_1_1RobotState.html#aaec5557d55b862d9dd832b3d4c221836">update</a>();</div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160; </div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;  <span class="keywordflow">if</span> (update_callback_)</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    callback = [<a class="code" href="namespacecollision__detection__bullet.html">cb</a> = this-&gt;update_callback_](<a class="code" href="classrobot__interaction_1_1InteractionHandler.html">robot_interaction::InteractionHandler</a>* handler) { <a class="code" href="namespacecollision__detection__bullet.html">cb</a>(handler, <span class="keyword">false</span>); };</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    callback = [<a class="code" href="namespacecollision__detection__bullet.html">cb</a> = update_callback_](<a class="code" href="classrobot__interaction_1_1InteractionHandler.html">robot_interaction::InteractionHandler</a>* handler) { <a class="code" href="namespacecollision__detection__bullet.html">cb</a>(handler, <span class="keyword">false</span>); };</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;}</div>
 <div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160; </div>
 <div class="line"><a name="l00338"></a><span class="lineno"><a class="line" href="classrobot__interaction_1_1InteractionHandler.html#a69f31f43dbb0f54cb6f0a1905645ebc4">  338</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classrobot__interaction_1_1InteractionHandler.html#a69f31f43dbb0f54cb6f0a1905645ebc4">InteractionHandler::inError</a>(<span class="keyword">const</span> <a class="code" href="structrobot__interaction_1_1EndEffectorInteraction.html">EndEffectorInteraction</a>&amp; eef)<span class="keyword"> const</span></div>

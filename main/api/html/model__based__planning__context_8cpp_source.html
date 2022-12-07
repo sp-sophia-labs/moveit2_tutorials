@@ -480,7 +480,7 @@ $(function() {
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    cfg.erase(it);</div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    <span class="keyword">const</span> std::string planner_name = getGroupName() + <span class="stringliteral">&quot;/&quot;</span> + name_;</div>
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    ompl_simple_setup_-&gt;setPlannerAllocator(</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        [planner_name, &amp;spec = this-&gt;spec_, allocator = spec_.planner_selector_(<a class="code" href="namespacemoveit__commander__cmdline.html#ad511cd8d787603477151f3a6383a9dfb">type</a>)](</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        [planner_name, &amp;spec = spec_, allocator = spec_.planner_selector_(<a class="code" href="namespacemoveit__commander__cmdline.html#ad511cd8d787603477151f3a6383a9dfb">type</a>)](</div>
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;            <span class="keyword">const</span> ompl::base::SpaceInformationPtr&amp; si) { return allocator(si, planner_name, spec); });</div>
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    RCLCPP_INFO(LOGGER,</div>
 <div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;                <span class="stringliteral">&quot;Planner configuration &#39;%s&#39; will use planner &#39;%s&#39;. &quot;</span></div>

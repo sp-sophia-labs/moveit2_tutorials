@@ -185,13 +185,13 @@ $(function() {
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <a class="code" href="namespaceplanning__interface.html#a1307e10a0a3b9ca03406d777b9a938a3">planning_interface::MotionPlanRequest</a> req;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  req.planner_id = getPlannerId();</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  req.group_name = this-&gt;planning_group_;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  req.group_name = planning_group_;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  req.max_velocity_scaling_factor = this-&gt;vel_scale_;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  req.max_acceleration_scaling_factor = this-&gt;acc_scale_;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  req.max_velocity_scaling_factor = vel_scale_;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  req.max_acceleration_scaling_factor = acc_scale_;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  req.start_state = this-&gt;start_.toMoveitMsgsRobotState();</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  req.goal_constraints.push_back(this-&gt;goal_.toGoalConstraints());</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  req.start_state = start_.toMoveitMsgsRobotState();</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  req.goal_constraints.push_back(goal_.toGoalConstraints());</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordflow">return</span> req;</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>

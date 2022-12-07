@@ -230,17 +230,17 @@ $(function() {
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    : Node(<span class="stringliteral">&quot;joy_to_twist_publisher&quot;</span>, <a class="code" href="namespacemoveit__benchmark__statistics.html#ae22bb8022508842c27a92bd715ef205e">options</a>), frame_to_publish_(<a class="code" href="joystick__servo__example_8cpp.html#a90abdfafd77fbfbfd7033fd0c13834bb">BASE_FRAME_ID</a>)</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  {</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="comment">// Setup pub/sub</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    joy_sub_ = this-&gt;create_subscription&lt;sensor_msgs::msg::Joy&gt;(</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <a class="code" href="joystick__servo__example_8cpp.html#a1657785d2b4586dbc034a326a8870c29">JOY_TOPIC</a>, rclcpp::SystemDefaultsQoS(),</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        [<span class="keyword">this</span>](<span class="keyword">const</span> sensor_msgs::msg::Joy::ConstSharedPtr&amp; msg) { <span class="keywordflow">return</span> <a class="code" href="classmoveit__servo_1_1JoyToServoPub.html#ae182b272a6ec9862809cab33d9cb62bd">joyCB</a>(msg); });</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    twist_pub_ = this-&gt;create_publisher&lt;geometry_msgs::msg::TwistStamped&gt;(<a class="code" href="joystick__servo__example_8cpp.html#aafdfced739b29b0b3823c6557eacda3c">TWIST_TOPIC</a>, rclcpp::SystemDefaultsQoS());</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    joint_pub_ = this-&gt;create_publisher&lt;control_msgs::msg::JointJog&gt;(<a class="code" href="joystick__servo__example_8cpp.html#ad22407e64887b897dd2153915ad8d56b">JOINT_TOPIC</a>, rclcpp::SystemDefaultsQoS());</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    collision_pub_ =</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        this-&gt;create_publisher&lt;moveit_msgs::msg::PlanningScene&gt;(<span class="stringliteral">&quot;/planning_scene&quot;</span>, rclcpp::SystemDefaultsQoS());</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    joy_sub_ = create_subscription&lt;sensor_msgs::msg::Joy&gt;(<a class="code" href="joystick__servo__example_8cpp.html#a1657785d2b4586dbc034a326a8870c29">JOY_TOPIC</a>, rclcpp::SystemDefaultsQoS(),</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                                                          [<span class="keyword">this</span>](<span class="keyword">const</span> sensor_msgs::msg::Joy::ConstSharedPtr&amp; msg) {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                                                            <span class="keywordflow">return</span> <a class="code" href="classmoveit__servo_1_1JoyToServoPub.html#ae182b272a6ec9862809cab33d9cb62bd">joyCB</a>(msg);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                                                          });</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    twist_pub_ = create_publisher&lt;geometry_msgs::msg::TwistStamped&gt;(<a class="code" href="joystick__servo__example_8cpp.html#aafdfced739b29b0b3823c6557eacda3c">TWIST_TOPIC</a>, rclcpp::SystemDefaultsQoS());</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    joint_pub_ = create_publisher&lt;control_msgs::msg::JointJog&gt;(<a class="code" href="joystick__servo__example_8cpp.html#ad22407e64887b897dd2153915ad8d56b">JOINT_TOPIC</a>, rclcpp::SystemDefaultsQoS());</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    collision_pub_ = create_publisher&lt;moveit_msgs::msg::PlanningScene&gt;(<span class="stringliteral">&quot;/planning_scene&quot;</span>, rclcpp::SystemDefaultsQoS());</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="comment">// Create a service client to start the ServoNode</span></div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    servo_start_client_ = this-&gt;create_client&lt;std_srvs::srv::Trigger&gt;(<span class="stringliteral">&quot;/servo_node/start_servo&quot;</span>);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    servo_start_client_ = create_client&lt;std_srvs::srv::Trigger&gt;(<span class="stringliteral">&quot;/servo_node/start_servo&quot;</span>);</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    servo_start_client_-&gt;wait_for_service(std::chrono::seconds(1));</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    servo_start_client_-&gt;async_send_request(std::make_shared&lt;std_srvs::srv::Trigger::Request&gt;());</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
@@ -306,13 +306,13 @@ $(function() {
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    {</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;      <span class="comment">// publish the TwistStamped</span></div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;      twist_msg-&gt;header.frame_id = frame_to_publish_;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;      twist_msg-&gt;header.stamp = this-&gt;now();</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;      twist_msg-&gt;header.stamp = now();</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;      twist_pub_-&gt;publish(std::move(twist_msg));</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    }</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    {</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      <span class="comment">// publish the JointJog</span></div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;      joint_msg-&gt;header.stamp = this-&gt;now();</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;      joint_msg-&gt;header.stamp = now();</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;      joint_msg-&gt;header.frame_id = <span class="stringliteral">&quot;panda_link3&quot;</span>;</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;      joint_pub_-&gt;publish(std::move(joint_msg));</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    }</div>
