@@ -1,5 +1,5 @@
 <map id="trajectory_processing::TimeOptimalTrajectoryGeneration::computeTimeStamps" name="trajectory_processing::TimeOptimalTrajectoryGeneration::computeTimeStamps">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,256,87"/>
+<area shape="rect" id="node1" title="Compute a trajectory with waypoints spaced equally in time (according to resample_dt_)...." alt="" coords="5,31,256,87"/>
 <area shape="rect" id="node2" href="$classrobot__trajectory_1_1RobotTrajectory.html#afdd5cc4e84e484af2dc6ea337f62719e" title=" " alt="" coords="304,5,539,47"/>
 <area shape="rect" id="node3" href="$classrobot__trajectory_1_1RobotTrajectory.html#a6eaef50c3127c83dbc5ca393376435b1" title=" " alt="" coords="304,71,539,112"/>
 </map>

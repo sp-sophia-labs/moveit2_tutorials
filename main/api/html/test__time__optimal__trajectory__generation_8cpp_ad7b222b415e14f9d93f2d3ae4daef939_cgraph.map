@@ -1,7 +1,7 @@
 <map id="TEST" name="TEST">
 <area shape="rect" id="node1" title=" " alt="" coords="5,159,60,186"/>
 <area shape="rect" id="node2" href="$classrobot__trajectory_1_1RobotTrajectory.html#a8d818ea730ce7620ca2b15edd70f774e" title="Add a point to the trajectory." alt="" coords="116,5,351,47"/>
-<area shape="rect" id="node3" href="$classtrajectory__processing_1_1TimeOptimalTrajectoryGeneration.html#a7fb161f0df9bd1acb0a08cb339e43102" title=" " alt="" coords="108,71,359,127"/>
+<area shape="rect" id="node3" href="$classtrajectory__processing_1_1TimeOptimalTrajectoryGeneration.html#a7fb161f0df9bd1acb0a08cb339e43102" title="Compute a trajectory with waypoints spaced equally in time (according to resample_dt_)...." alt="" coords="108,71,359,127"/>
 <area shape="rect" id="node6" href="$namespacemoveit_1_1core.html#a646367a1863f557a16cb8769a2980604" title="Loads a robot from moveit_resources." alt="" coords="140,152,327,193"/>
 <area shape="rect" id="node10" href="$classmoveit_1_1core_1_1RobotState.html#a564140d144754d149b292e70c4c59b55" title="Given positions for the variables that make up a group, in the order found in the group (including va..." alt="" coords="141,217,325,259"/>
 <area shape="rect" id="node11" href="$classmoveit_1_1core_1_1RobotState.html#aba31c6f758e3dabd32c1acbd069e189e" title="Set all joints to their default positions. The default position is 0, or if that is not within bounds..." alt="" coords="141,283,325,324"/>
