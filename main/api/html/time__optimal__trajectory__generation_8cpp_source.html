@@ -1169,91 +1169,115 @@ $(function() {
 <div class="line"><a name="l01096"></a><span class="lineno"> 1096</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l01097"></a><span class="lineno"> 1097</span>&#160;  }</div>
 <div class="line"><a name="l01098"></a><span class="lineno"> 1098</span>&#160; </div>
-<div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">unsigned</span> num_points = trajectory.<a class="code" href="classrobot__trajectory_1_1RobotTrajectory.html#ababf812aa287c586d9ad0b190e1d2482">getWayPointCount</a>();</div>
-<div class="line"><a name="l01100"></a><span class="lineno"> 1100</span>&#160;  <span class="keyword">const</span> std::vector&lt;int&gt;&amp; idx = <a class="code" href="namespacetest__cleanup.html#a121623a04b6c3260c0e3e9c8cb74d9f9">group</a>-&gt;getVariableIndexList();</div>
-<div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">unsigned</span> num_joints = <a class="code" href="namespacetest__cleanup.html#a121623a04b6c3260c0e3e9c8cb74d9f9">group</a>-&gt;getVariableCount();</div>
-<div class="line"><a name="l01102"></a><span class="lineno"> 1102</span>&#160; </div>
-<div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;  <span class="comment">// Have to convert into Eigen data structs and remove repeated points</span></div>
-<div class="line"><a name="l01104"></a><span class="lineno"> 1104</span>&#160;  <span class="comment">//  (https://github.com/tobiaskunz/trajectories/issues/3)</span></div>
-<div class="line"><a name="l01105"></a><span class="lineno"> 1105</span>&#160;  std::list&lt;Eigen::VectorXd&gt; points;</div>
-<div class="line"><a name="l01106"></a><span class="lineno"> 1106</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code" href="namespacepick.html#a40e85b309b8813e4f17a4c3242b98c34">p</a> = 0; <a class="code" href="namespacepick.html#a40e85b309b8813e4f17a4c3242b98c34">p</a> &lt; num_points; ++<a class="code" href="namespacepick.html#a40e85b309b8813e4f17a4c3242b98c34">p</a>)</div>
-<div class="line"><a name="l01107"></a><span class="lineno"> 1107</span>&#160;  {</div>
-<div class="line"><a name="l01108"></a><span class="lineno"> 1108</span>&#160;    moveit::core::RobotStatePtr waypoint = trajectory.<a class="code" href="classrobot__trajectory_1_1RobotTrajectory.html#aa02527d5b79f3249febefb4780743746">getWayPointPtr</a>(<a class="code" href="namespacepick.html#a40e85b309b8813e4f17a4c3242b98c34">p</a>);</div>
-<div class="line"><a name="l01109"></a><span class="lineno"> 1109</span>&#160;    Eigen::VectorXd new_point(num_joints);</div>
-<div class="line"><a name="l01110"></a><span class="lineno"> 1110</span>&#160;    <span class="comment">// The first point should always be kept</span></div>
-<div class="line"><a name="l01111"></a><span class="lineno"> 1111</span>&#160;    <span class="keywordtype">bool</span> diverse_point = (<a class="code" href="namespacepick.html#a40e85b309b8813e4f17a4c3242b98c34">p</a> == 0);</div>
-<div class="line"><a name="l01112"></a><span class="lineno"> 1112</span>&#160; </div>
-<div class="line"><a name="l01113"></a><span class="lineno"> 1113</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; num_joints; ++j)</div>
-<div class="line"><a name="l01114"></a><span class="lineno"> 1114</span>&#160;    {</div>
-<div class="line"><a name="l01115"></a><span class="lineno"> 1115</span>&#160;      new_point[j] = waypoint-&gt;getVariablePosition(idx[j]);</div>
-<div class="line"><a name="l01116"></a><span class="lineno"> 1116</span>&#160;      <span class="comment">// If any joint angle is different, it&#39;s a unique waypoint</span></div>
-<div class="line"><a name="l01117"></a><span class="lineno"> 1117</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="namespacepick.html#a40e85b309b8813e4f17a4c3242b98c34">p</a> &gt; 0 &amp;&amp; std::fabs(new_point[j] - points.back()[j]) &gt; min_angle_change_)</div>
-<div class="line"><a name="l01118"></a><span class="lineno"> 1118</span>&#160;      {</div>
-<div class="line"><a name="l01119"></a><span class="lineno"> 1119</span>&#160;        diverse_point = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l01120"></a><span class="lineno"> 1120</span>&#160;      }</div>
-<div class="line"><a name="l01121"></a><span class="lineno"> 1121</span>&#160;    }</div>
-<div class="line"><a name="l01122"></a><span class="lineno"> 1122</span>&#160; </div>
-<div class="line"><a name="l01123"></a><span class="lineno"> 1123</span>&#160;    <span class="keywordflow">if</span> (diverse_point)</div>
-<div class="line"><a name="l01124"></a><span class="lineno"> 1124</span>&#160;    {</div>
-<div class="line"><a name="l01125"></a><span class="lineno"> 1125</span>&#160;      points.push_back(new_point);</div>
-<div class="line"><a name="l01126"></a><span class="lineno"> 1126</span>&#160;      <span class="comment">// If the last point is not a diverse_point we replace the last added point with it to make sure to always have</span></div>
-<div class="line"><a name="l01127"></a><span class="lineno"> 1127</span>&#160;      <span class="comment">// the input end point as the last point</span></div>
-<div class="line"><a name="l01128"></a><span class="lineno"> 1128</span>&#160;    }</div>
-<div class="line"><a name="l01129"></a><span class="lineno"> 1129</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacepick.html#a40e85b309b8813e4f17a4c3242b98c34">p</a> == num_points - 1)</div>
+<div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;  <span class="keywordflow">if</span> (hasMixedJointTypes(<a class="code" href="namespacetest__cleanup.html#a121623a04b6c3260c0e3e9c8cb74d9f9">group</a>))</div>
+<div class="line"><a name="l01100"></a><span class="lineno"> 1100</span>&#160;  {</div>
+<div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160;    RCLCPP_WARN(LOGGER, <span class="stringliteral">&quot;There is a combination of revolute and prismatic joints in the robot model. TOTG&#39;s &quot;</span></div>
+<div class="line"><a name="l01102"></a><span class="lineno"> 1102</span>&#160;                        <span class="stringliteral">&quot;`path_tolerance` will not function correctly.&quot;</span>);</div>
+<div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;  }</div>
+<div class="line"><a name="l01104"></a><span class="lineno"> 1104</span>&#160; </div>
+<div class="line"><a name="l01105"></a><span class="lineno"> 1105</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">unsigned</span> num_points = trajectory.<a class="code" href="classrobot__trajectory_1_1RobotTrajectory.html#ababf812aa287c586d9ad0b190e1d2482">getWayPointCount</a>();</div>
+<div class="line"><a name="l01106"></a><span class="lineno"> 1106</span>&#160;  <span class="keyword">const</span> std::vector&lt;int&gt;&amp; idx = <a class="code" href="namespacetest__cleanup.html#a121623a04b6c3260c0e3e9c8cb74d9f9">group</a>-&gt;getVariableIndexList();</div>
+<div class="line"><a name="l01107"></a><span class="lineno"> 1107</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">unsigned</span> num_joints = <a class="code" href="namespacetest__cleanup.html#a121623a04b6c3260c0e3e9c8cb74d9f9">group</a>-&gt;getVariableCount();</div>
+<div class="line"><a name="l01108"></a><span class="lineno"> 1108</span>&#160; </div>
+<div class="line"><a name="l01109"></a><span class="lineno"> 1109</span>&#160;  <span class="comment">// Have to convert into Eigen data structs and remove repeated points</span></div>
+<div class="line"><a name="l01110"></a><span class="lineno"> 1110</span>&#160;  <span class="comment">//  (https://github.com/tobiaskunz/trajectories/issues/3)</span></div>
+<div class="line"><a name="l01111"></a><span class="lineno"> 1111</span>&#160;  std::list&lt;Eigen::VectorXd&gt; points;</div>
+<div class="line"><a name="l01112"></a><span class="lineno"> 1112</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code" href="namespacepick.html#a40e85b309b8813e4f17a4c3242b98c34">p</a> = 0; <a class="code" href="namespacepick.html#a40e85b309b8813e4f17a4c3242b98c34">p</a> &lt; num_points; ++<a class="code" href="namespacepick.html#a40e85b309b8813e4f17a4c3242b98c34">p</a>)</div>
+<div class="line"><a name="l01113"></a><span class="lineno"> 1113</span>&#160;  {</div>
+<div class="line"><a name="l01114"></a><span class="lineno"> 1114</span>&#160;    moveit::core::RobotStatePtr waypoint = trajectory.<a class="code" href="classrobot__trajectory_1_1RobotTrajectory.html#aa02527d5b79f3249febefb4780743746">getWayPointPtr</a>(<a class="code" href="namespacepick.html#a40e85b309b8813e4f17a4c3242b98c34">p</a>);</div>
+<div class="line"><a name="l01115"></a><span class="lineno"> 1115</span>&#160;    Eigen::VectorXd new_point(num_joints);</div>
+<div class="line"><a name="l01116"></a><span class="lineno"> 1116</span>&#160;    <span class="comment">// The first point should always be kept</span></div>
+<div class="line"><a name="l01117"></a><span class="lineno"> 1117</span>&#160;    <span class="keywordtype">bool</span> diverse_point = (<a class="code" href="namespacepick.html#a40e85b309b8813e4f17a4c3242b98c34">p</a> == 0);</div>
+<div class="line"><a name="l01118"></a><span class="lineno"> 1118</span>&#160; </div>
+<div class="line"><a name="l01119"></a><span class="lineno"> 1119</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; num_joints; ++j)</div>
+<div class="line"><a name="l01120"></a><span class="lineno"> 1120</span>&#160;    {</div>
+<div class="line"><a name="l01121"></a><span class="lineno"> 1121</span>&#160;      new_point[j] = waypoint-&gt;getVariablePosition(idx[j]);</div>
+<div class="line"><a name="l01122"></a><span class="lineno"> 1122</span>&#160;      <span class="comment">// If any joint angle is different, it&#39;s a unique waypoint</span></div>
+<div class="line"><a name="l01123"></a><span class="lineno"> 1123</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="namespacepick.html#a40e85b309b8813e4f17a4c3242b98c34">p</a> &gt; 0 &amp;&amp; std::fabs(new_point[j] - points.back()[j]) &gt; min_angle_change_)</div>
+<div class="line"><a name="l01124"></a><span class="lineno"> 1124</span>&#160;      {</div>
+<div class="line"><a name="l01125"></a><span class="lineno"> 1125</span>&#160;        diverse_point = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l01126"></a><span class="lineno"> 1126</span>&#160;      }</div>
+<div class="line"><a name="l01127"></a><span class="lineno"> 1127</span>&#160;    }</div>
+<div class="line"><a name="l01128"></a><span class="lineno"> 1128</span>&#160; </div>
+<div class="line"><a name="l01129"></a><span class="lineno"> 1129</span>&#160;    <span class="keywordflow">if</span> (diverse_point)</div>
 <div class="line"><a name="l01130"></a><span class="lineno"> 1130</span>&#160;    {</div>
-<div class="line"><a name="l01131"></a><span class="lineno"> 1131</span>&#160;      points.back() = new_point;</div>
-<div class="line"><a name="l01132"></a><span class="lineno"> 1132</span>&#160;    }</div>
-<div class="line"><a name="l01133"></a><span class="lineno"> 1133</span>&#160;  }</div>
-<div class="line"><a name="l01134"></a><span class="lineno"> 1134</span>&#160; </div>
-<div class="line"><a name="l01135"></a><span class="lineno"> 1135</span>&#160;  <span class="comment">// Return trajectory with only the first waypoint if there are not multiple diverse points</span></div>
-<div class="line"><a name="l01136"></a><span class="lineno"> 1136</span>&#160;  <span class="keywordflow">if</span> (points.size() == 1)</div>
-<div class="line"><a name="l01137"></a><span class="lineno"> 1137</span>&#160;  {</div>
-<div class="line"><a name="l01138"></a><span class="lineno"> 1138</span>&#160;    <a class="code" href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a> waypoint = <a class="code" href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a>(trajectory.<a class="code" href="classrobot__trajectory_1_1RobotTrajectory.html#af356952b9847bc920b773f2f83cb9943">getWayPoint</a>(0));</div>
-<div class="line"><a name="l01139"></a><span class="lineno"> 1139</span>&#160;    waypoint.<a class="code" href="classmoveit_1_1core_1_1RobotState.html#a06620553a22719e4f76dd876ab1a5f9e">zeroVelocities</a>();</div>
-<div class="line"><a name="l01140"></a><span class="lineno"> 1140</span>&#160;    waypoint.<a class="code" href="classmoveit_1_1core_1_1RobotState.html#a6aad5a36ebcb44ff828cac210815e241">zeroAccelerations</a>();</div>
-<div class="line"><a name="l01141"></a><span class="lineno"> 1141</span>&#160;    trajectory.<a class="code" href="classrobot__trajectory_1_1RobotTrajectory.html#ae07ca729ccee3748d65abe389de3b8e1">clear</a>();</div>
-<div class="line"><a name="l01142"></a><span class="lineno"> 1142</span>&#160;    trajectory.<a class="code" href="classrobot__trajectory_1_1RobotTrajectory.html#a8d818ea730ce7620ca2b15edd70f774e">addSuffixWayPoint</a>(waypoint, 0.0);</div>
-<div class="line"><a name="l01143"></a><span class="lineno"> 1143</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l01144"></a><span class="lineno"> 1144</span>&#160;  }</div>
-<div class="line"><a name="l01145"></a><span class="lineno"> 1145</span>&#160; </div>
-<div class="line"><a name="l01146"></a><span class="lineno"> 1146</span>&#160;  <span class="comment">// Now actually call the algorithm</span></div>
-<div class="line"><a name="l01147"></a><span class="lineno"> 1147</span>&#160;  Trajectory parameterized(Path(points, path_tolerance_), max_velocity, max_acceleration, DEFAULT_TIMESTEP);</div>
-<div class="line"><a name="l01148"></a><span class="lineno"> 1148</span>&#160;  <span class="keywordflow">if</span> (!parameterized.isValid())</div>
-<div class="line"><a name="l01149"></a><span class="lineno"> 1149</span>&#160;  {</div>
-<div class="line"><a name="l01150"></a><span class="lineno"> 1150</span>&#160;    RCLCPP_ERROR(LOGGER, <span class="stringliteral">&quot;Unable to parameterize trajectory.&quot;</span>);</div>
-<div class="line"><a name="l01151"></a><span class="lineno"> 1151</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l01152"></a><span class="lineno"> 1152</span>&#160;  }</div>
-<div class="line"><a name="l01153"></a><span class="lineno"> 1153</span>&#160; </div>
-<div class="line"><a name="l01154"></a><span class="lineno"> 1154</span>&#160;  <span class="comment">// Compute sample count</span></div>
-<div class="line"><a name="l01155"></a><span class="lineno"> 1155</span>&#160;  <span class="keywordtype">size_t</span> sample_count = std::ceil(parameterized.getDuration() / resample_dt_);</div>
-<div class="line"><a name="l01156"></a><span class="lineno"> 1156</span>&#160; </div>
-<div class="line"><a name="l01157"></a><span class="lineno"> 1157</span>&#160;  <span class="comment">// Resample and fill in trajectory</span></div>
-<div class="line"><a name="l01158"></a><span class="lineno"> 1158</span>&#160;  <a class="code" href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a> waypoint = <a class="code" href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a>(trajectory.<a class="code" href="classrobot__trajectory_1_1RobotTrajectory.html#af356952b9847bc920b773f2f83cb9943">getWayPoint</a>(0));</div>
-<div class="line"><a name="l01159"></a><span class="lineno"> 1159</span>&#160;  trajectory.<a class="code" href="classrobot__trajectory_1_1RobotTrajectory.html#ae07ca729ccee3748d65abe389de3b8e1">clear</a>();</div>
-<div class="line"><a name="l01160"></a><span class="lineno"> 1160</span>&#160;  <span class="keywordtype">double</span> last_t = 0;</div>
-<div class="line"><a name="l01161"></a><span class="lineno"> 1161</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> sample = 0; sample &lt;= sample_count; ++sample)</div>
-<div class="line"><a name="l01162"></a><span class="lineno"> 1162</span>&#160;  {</div>
-<div class="line"><a name="l01163"></a><span class="lineno"> 1163</span>&#160;    <span class="comment">// always sample the end of the trajectory as well</span></div>
-<div class="line"><a name="l01164"></a><span class="lineno"> 1164</span>&#160;    <span class="keywordtype">double</span> t = std::min(parameterized.getDuration(), sample * resample_dt_);</div>
-<div class="line"><a name="l01165"></a><span class="lineno"> 1165</span>&#160;    Eigen::VectorXd position = parameterized.getPosition(t);</div>
-<div class="line"><a name="l01166"></a><span class="lineno"> 1166</span>&#160;    Eigen::VectorXd velocity = parameterized.getVelocity(t);</div>
-<div class="line"><a name="l01167"></a><span class="lineno"> 1167</span>&#160;    Eigen::VectorXd acceleration = parameterized.getAcceleration(t);</div>
-<div class="line"><a name="l01168"></a><span class="lineno"> 1168</span>&#160; </div>
-<div class="line"><a name="l01169"></a><span class="lineno"> 1169</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; num_joints; ++j)</div>
-<div class="line"><a name="l01170"></a><span class="lineno"> 1170</span>&#160;    {</div>
-<div class="line"><a name="l01171"></a><span class="lineno"> 1171</span>&#160;      waypoint.<a class="code" href="classmoveit_1_1core_1_1RobotState.html#a54879052daa602ea0319cbe3ded82ff3">setVariablePosition</a>(idx[j], position[j]);</div>
-<div class="line"><a name="l01172"></a><span class="lineno"> 1172</span>&#160;      waypoint.<a class="code" href="classmoveit_1_1core_1_1RobotState.html#a44192d552292408eb9a399e56921a04b">setVariableVelocity</a>(idx[j], velocity[j]);</div>
-<div class="line"><a name="l01173"></a><span class="lineno"> 1173</span>&#160;      waypoint.<a class="code" href="classmoveit_1_1core_1_1RobotState.html#a064a06cc78d55f8fe11b89dbb30ab9d2">setVariableAcceleration</a>(idx[j], acceleration[j]);</div>
-<div class="line"><a name="l01174"></a><span class="lineno"> 1174</span>&#160;    }</div>
-<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160; </div>
-<div class="line"><a name="l01176"></a><span class="lineno"> 1176</span>&#160;    trajectory.<a class="code" href="classrobot__trajectory_1_1RobotTrajectory.html#a8d818ea730ce7620ca2b15edd70f774e">addSuffixWayPoint</a>(waypoint, t - last_t);</div>
-<div class="line"><a name="l01177"></a><span class="lineno"> 1177</span>&#160;    last_t = t;</div>
-<div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160;  }</div>
-<div class="line"><a name="l01179"></a><span class="lineno"> 1179</span>&#160; </div>
-<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;}</div>
-<div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160;}  <span class="comment">// namespace trajectory_processing</span></div>
+<div class="line"><a name="l01131"></a><span class="lineno"> 1131</span>&#160;      points.push_back(new_point);</div>
+<div class="line"><a name="l01132"></a><span class="lineno"> 1132</span>&#160;      <span class="comment">// If the last point is not a diverse_point we replace the last added point with it to make sure to always have</span></div>
+<div class="line"><a name="l01133"></a><span class="lineno"> 1133</span>&#160;      <span class="comment">// the input end point as the last point</span></div>
+<div class="line"><a name="l01134"></a><span class="lineno"> 1134</span>&#160;    }</div>
+<div class="line"><a name="l01135"></a><span class="lineno"> 1135</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="namespacepick.html#a40e85b309b8813e4f17a4c3242b98c34">p</a> == num_points - 1)</div>
+<div class="line"><a name="l01136"></a><span class="lineno"> 1136</span>&#160;    {</div>
+<div class="line"><a name="l01137"></a><span class="lineno"> 1137</span>&#160;      points.back() = new_point;</div>
+<div class="line"><a name="l01138"></a><span class="lineno"> 1138</span>&#160;    }</div>
+<div class="line"><a name="l01139"></a><span class="lineno"> 1139</span>&#160;  }</div>
+<div class="line"><a name="l01140"></a><span class="lineno"> 1140</span>&#160; </div>
+<div class="line"><a name="l01141"></a><span class="lineno"> 1141</span>&#160;  <span class="comment">// Return trajectory with only the first waypoint if there are not multiple diverse points</span></div>
+<div class="line"><a name="l01142"></a><span class="lineno"> 1142</span>&#160;  <span class="keywordflow">if</span> (points.size() == 1)</div>
+<div class="line"><a name="l01143"></a><span class="lineno"> 1143</span>&#160;  {</div>
+<div class="line"><a name="l01144"></a><span class="lineno"> 1144</span>&#160;    <a class="code" href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a> waypoint = <a class="code" href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a>(trajectory.<a class="code" href="classrobot__trajectory_1_1RobotTrajectory.html#af356952b9847bc920b773f2f83cb9943">getWayPoint</a>(0));</div>
+<div class="line"><a name="l01145"></a><span class="lineno"> 1145</span>&#160;    waypoint.<a class="code" href="classmoveit_1_1core_1_1RobotState.html#a06620553a22719e4f76dd876ab1a5f9e">zeroVelocities</a>();</div>
+<div class="line"><a name="l01146"></a><span class="lineno"> 1146</span>&#160;    waypoint.<a class="code" href="classmoveit_1_1core_1_1RobotState.html#a6aad5a36ebcb44ff828cac210815e241">zeroAccelerations</a>();</div>
+<div class="line"><a name="l01147"></a><span class="lineno"> 1147</span>&#160;    trajectory.<a class="code" href="classrobot__trajectory_1_1RobotTrajectory.html#ae07ca729ccee3748d65abe389de3b8e1">clear</a>();</div>
+<div class="line"><a name="l01148"></a><span class="lineno"> 1148</span>&#160;    trajectory.<a class="code" href="classrobot__trajectory_1_1RobotTrajectory.html#a8d818ea730ce7620ca2b15edd70f774e">addSuffixWayPoint</a>(waypoint, 0.0);</div>
+<div class="line"><a name="l01149"></a><span class="lineno"> 1149</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l01150"></a><span class="lineno"> 1150</span>&#160;  }</div>
+<div class="line"><a name="l01151"></a><span class="lineno"> 1151</span>&#160; </div>
+<div class="line"><a name="l01152"></a><span class="lineno"> 1152</span>&#160;  <span class="comment">// Now actually call the algorithm</span></div>
+<div class="line"><a name="l01153"></a><span class="lineno"> 1153</span>&#160;  Trajectory parameterized(Path(points, path_tolerance_), max_velocity, max_acceleration, DEFAULT_TIMESTEP);</div>
+<div class="line"><a name="l01154"></a><span class="lineno"> 1154</span>&#160;  <span class="keywordflow">if</span> (!parameterized.isValid())</div>
+<div class="line"><a name="l01155"></a><span class="lineno"> 1155</span>&#160;  {</div>
+<div class="line"><a name="l01156"></a><span class="lineno"> 1156</span>&#160;    RCLCPP_ERROR(LOGGER, <span class="stringliteral">&quot;Unable to parameterize trajectory.&quot;</span>);</div>
+<div class="line"><a name="l01157"></a><span class="lineno"> 1157</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l01158"></a><span class="lineno"> 1158</span>&#160;  }</div>
+<div class="line"><a name="l01159"></a><span class="lineno"> 1159</span>&#160; </div>
+<div class="line"><a name="l01160"></a><span class="lineno"> 1160</span>&#160;  <span class="comment">// Compute sample count</span></div>
+<div class="line"><a name="l01161"></a><span class="lineno"> 1161</span>&#160;  <span class="keywordtype">size_t</span> sample_count = std::ceil(parameterized.getDuration() / resample_dt_);</div>
+<div class="line"><a name="l01162"></a><span class="lineno"> 1162</span>&#160; </div>
+<div class="line"><a name="l01163"></a><span class="lineno"> 1163</span>&#160;  <span class="comment">// Resample and fill in trajectory</span></div>
+<div class="line"><a name="l01164"></a><span class="lineno"> 1164</span>&#160;  <a class="code" href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a> waypoint = <a class="code" href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a>(trajectory.<a class="code" href="classrobot__trajectory_1_1RobotTrajectory.html#af356952b9847bc920b773f2f83cb9943">getWayPoint</a>(0));</div>
+<div class="line"><a name="l01165"></a><span class="lineno"> 1165</span>&#160;  trajectory.<a class="code" href="classrobot__trajectory_1_1RobotTrajectory.html#ae07ca729ccee3748d65abe389de3b8e1">clear</a>();</div>
+<div class="line"><a name="l01166"></a><span class="lineno"> 1166</span>&#160;  <span class="keywordtype">double</span> last_t = 0;</div>
+<div class="line"><a name="l01167"></a><span class="lineno"> 1167</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> sample = 0; sample &lt;= sample_count; ++sample)</div>
+<div class="line"><a name="l01168"></a><span class="lineno"> 1168</span>&#160;  {</div>
+<div class="line"><a name="l01169"></a><span class="lineno"> 1169</span>&#160;    <span class="comment">// always sample the end of the trajectory as well</span></div>
+<div class="line"><a name="l01170"></a><span class="lineno"> 1170</span>&#160;    <span class="keywordtype">double</span> t = std::min(parameterized.getDuration(), sample * resample_dt_);</div>
+<div class="line"><a name="l01171"></a><span class="lineno"> 1171</span>&#160;    Eigen::VectorXd position = parameterized.getPosition(t);</div>
+<div class="line"><a name="l01172"></a><span class="lineno"> 1172</span>&#160;    Eigen::VectorXd velocity = parameterized.getVelocity(t);</div>
+<div class="line"><a name="l01173"></a><span class="lineno"> 1173</span>&#160;    Eigen::VectorXd acceleration = parameterized.getAcceleration(t);</div>
+<div class="line"><a name="l01174"></a><span class="lineno"> 1174</span>&#160; </div>
+<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; num_joints; ++j)</div>
+<div class="line"><a name="l01176"></a><span class="lineno"> 1176</span>&#160;    {</div>
+<div class="line"><a name="l01177"></a><span class="lineno"> 1177</span>&#160;      waypoint.<a class="code" href="classmoveit_1_1core_1_1RobotState.html#a54879052daa602ea0319cbe3ded82ff3">setVariablePosition</a>(idx[j], position[j]);</div>
+<div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160;      waypoint.<a class="code" href="classmoveit_1_1core_1_1RobotState.html#a44192d552292408eb9a399e56921a04b">setVariableVelocity</a>(idx[j], velocity[j]);</div>
+<div class="line"><a name="l01179"></a><span class="lineno"> 1179</span>&#160;      waypoint.<a class="code" href="classmoveit_1_1core_1_1RobotState.html#a064a06cc78d55f8fe11b89dbb30ab9d2">setVariableAcceleration</a>(idx[j], acceleration[j]);</div>
+<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;    }</div>
+<div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160; </div>
+<div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160;    trajectory.<a class="code" href="classrobot__trajectory_1_1RobotTrajectory.html#a8d818ea730ce7620ca2b15edd70f774e">addSuffixWayPoint</a>(waypoint, t - last_t);</div>
+<div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160;    last_t = t;</div>
+<div class="line"><a name="l01184"></a><span class="lineno"> 1184</span>&#160;  }</div>
+<div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160; </div>
+<div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;}</div>
+<div class="line"><a name="l01188"></a><span class="lineno"> 1188</span>&#160; </div>
+<div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160;<span class="keywordtype">bool</span> TimeOptimalTrajectoryGeneration::hasMixedJointTypes(<span class="keyword">const</span> <a class="code" href="classmoveit_1_1core_1_1JointModelGroup.html">moveit::core::JointModelGroup</a>* <a class="code" href="namespacetest__cleanup.html#a121623a04b6c3260c0e3e9c8cb74d9f9">group</a>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160;  <span class="keyword">const</span> std::vector&lt;const moveit::core::JointModel*&gt;&amp; joint_models = <a class="code" href="namespacetest__cleanup.html#a121623a04b6c3260c0e3e9c8cb74d9f9">group</a>-&gt;getJointModels();</div>
+<div class="line"><a name="l01192"></a><span class="lineno"> 1192</span>&#160; </div>
+<div class="line"><a name="l01193"></a><span class="lineno"> 1193</span>&#160;  <span class="keywordtype">bool</span> have_prismatic =</div>
+<div class="line"><a name="l01194"></a><span class="lineno"> 1194</span>&#160;      std::any_of(joint_models.cbegin(), joint_models.cend(), [](<span class="keyword">const</span> <a class="code" href="classmoveit_1_1core_1_1JointModel.html">moveit::core::JointModel</a>* joint_model) {</div>
+<div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160;        return joint_model-&gt;getType() == moveit::core::JointModel::JointType::PRISMATIC;</div>
+<div class="line"><a name="l01196"></a><span class="lineno"> 1196</span>&#160;      });</div>
+<div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160; </div>
+<div class="line"><a name="l01198"></a><span class="lineno"> 1198</span>&#160;  <span class="keywordtype">bool</span> have_revolute =</div>
+<div class="line"><a name="l01199"></a><span class="lineno"> 1199</span>&#160;      std::any_of(joint_models.cbegin(), joint_models.cend(), [](<span class="keyword">const</span> <a class="code" href="classmoveit_1_1core_1_1JointModel.html">moveit::core::JointModel</a>* joint_model) {</div>
+<div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160;        return joint_model-&gt;getType() == moveit::core::JointModel::JointType::REVOLUTE;</div>
+<div class="line"><a name="l01201"></a><span class="lineno"> 1201</span>&#160;      });</div>
+<div class="line"><a name="l01202"></a><span class="lineno"> 1202</span>&#160; </div>
+<div class="line"><a name="l01203"></a><span class="lineno"> 1203</span>&#160;  <span class="keywordflow">return</span> have_prismatic &amp;&amp; have_revolute;</div>
+<div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160;}</div>
+<div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160;}  <span class="comment">// namespace trajectory_processing</span></div>
 <div class="ttc" id="aclassmoveit_1_1core_1_1JointModelGroup_html"><div class="ttname"><a href="classmoveit_1_1core_1_1JointModelGroup.html">moveit::core::JointModelGroup</a></div><div class="ttdef"><b>Definition:</b> <a href="joint__model__group_8h_source.html#l00069">joint_model_group.h:70</a></div></div>
+<div class="ttc" id="aclassmoveit_1_1core_1_1JointModel_html"><div class="ttname"><a href="classmoveit_1_1core_1_1JointModel.html">moveit::core::JointModel</a></div><div class="ttdoc">A joint from the robot. Models the transform that this joint applies in the kinematic chain....</div><div class="ttdef"><b>Definition:</b> <a href="joint__model_8h_source.html#l00116">joint_model.h:117</a></div></div>
 <div class="ttc" id="aclassmoveit_1_1core_1_1RobotModel_html"><div class="ttname"><a href="classmoveit_1_1core_1_1RobotModel.html">moveit::core::RobotModel</a></div><div class="ttdoc">Definition of a kinematic model. This class is not thread safe, however multiple instances can be cre...</div><div class="ttdef"><b>Definition:</b> <a href="robot__model_8h_source.html#l00075">robot_model.h:76</a></div></div>
 <div class="ttc" id="aclassmoveit_1_1core_1_1RobotModel_html_a0e6fe94c867b3452abdeecc2d7373ca2"><div class="ttname"><a href="classmoveit_1_1core_1_1RobotModel.html#a0e6fe94c867b3452abdeecc2d7373ca2">moveit::core::RobotModel::getVariableBounds</a></div><div class="ttdeci">const VariableBounds &amp; getVariableBounds(const std::string &amp;variable) const</div><div class="ttdoc">Get the bounds for a specific variable. Throw an exception of variable is not found.</div><div class="ttdef"><b>Definition:</b> <a href="robot__model_8h_source.html#l00433">robot_model.h:433</a></div></div>
 <div class="ttc" id="aclassmoveit_1_1core_1_1RobotState_html"><div class="ttname"><a href="classmoveit_1_1core_1_1RobotState.html">moveit::core::RobotState</a></div><div class="ttdoc">Representation of a robot's state. This includes position, velocity, acceleration and effort.</div><div class="ttdef"><b>Definition:</b> <a href="robot__state_8h_source.html#l00089">robot_state.h:90</a></div></div>

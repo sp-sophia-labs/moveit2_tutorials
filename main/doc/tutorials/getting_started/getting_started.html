@@ -52,6 +52,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#download-source-code-of-moveit-and-the-tutorials">Download Source Code of MoveIt and the Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#build-your-colcon-workspace">Build your Colcon Workspace</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#setup-your-colcon-workspace">Setup Your Colcon Workspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#switch-to-cyclone-dds">Switch to Cyclone DDS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#next-step">Next Step</a></li>
 </ul>
 </li>
@@ -197,6 +198,15 @@ It is easy to miss steps when going through the ROS 2 installation tutorial. If 
 not required and often skipped by advanced users who use more than one
 Colcon workspace at a time, but we recommend it for simplicity.</p>
 </div>
+</div>
+<div class="section" id="switch-to-cyclone-dds">
+<h2>Switch to Cyclone DDS<a class="headerlink" href="#switch-to-cyclone-dds" title="Permalink to this headline"></a></h2>
+<p>As of Sep 26, 2022, the default ROS2 DDS has an issue. As a workaround, switch to Cyclone. (Note: this makes all nodes started using this RMW incompatible with any other nodes not using Cyclone DDS.)</p>
+<blockquote>
+<div><p>sudo apt install ros-rolling-rmw-cyclonedds-cpp
+# You may want to add this to ~/.bashrc to source it automatically
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp</p>
+</div></blockquote>
 </div>
 <div class="section" id="next-step">
 <h2>Next Step<a class="headerlink" href="#next-step" title="Permalink to this headline"></a></h2>
