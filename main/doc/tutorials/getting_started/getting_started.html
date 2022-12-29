@@ -201,12 +201,12 @@ Colcon workspace at a time, but we recommend it for simplicity.</p>
 </div>
 <div class="section" id="switch-to-cyclone-dds">
 <h2>Switch to Cyclone DDS<a class="headerlink" href="#switch-to-cyclone-dds" title="Permalink to this headline"></a></h2>
-<p>As of Sep 26, 2022, the default ROS2 DDS has an issue. As a workaround, switch to Cyclone. (Note: this makes all nodes started using this RMW incompatible with any other nodes not using Cyclone DDS.)</p>
-<blockquote>
-<div><p>sudo apt install ros-rolling-rmw-cyclonedds-cpp
-# You may want to add this to ~/.bashrc to source it automatically
-export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp</p>
-</div></blockquote>
+<p>As of Sep 26, 2022, the default ROS 2 middleware (RMW) implementation has an issue. As a workaround, switch to Cyclone DDS. (Note: this makes all nodes started using this RMW incompatible with any other nodes not using Cyclone DDS.)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">ros</span><span class="o">-</span><span class="n">rolling</span><span class="o">-</span><span class="n">rmw</span><span class="o">-</span><span class="n">cyclonedds</span><span class="o">-</span><span class="n">cpp</span>
+<span class="c1"># You may want to add this to ~/.bashrc to source it automatically</span>
+<span class="n">export</span> <span class="n">RMW_IMPLEMENTATION</span><span class="o">=</span><span class="n">rmw_cyclonedds_cpp</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="next-step">
 <h2>Next Step<a class="headerlink" href="#next-step" title="Permalink to this headline"></a></h2>

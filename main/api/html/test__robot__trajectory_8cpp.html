@@ -78,62 +78,63 @@ $(function() {
 <code>#include &lt;<a class="el" href="robot__state_8h_source.html">moveit/robot_state/robot_state.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="robot__trajectory_8h_source.html">moveit/robot_trajectory/robot_trajectory.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="robot__model__test__utils_8h_source.html">moveit/utils/robot_model_test_utils.h</a>&gt;</code><br />
+<code>#include &lt;urdf_parser/urdf_parser.h&gt;</code><br />
 <code>#include &lt;gtest/gtest.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for test_robot_trajectory.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="test__robot__trajectory_8cpp__incl.png" border="0" usemap="#amoveit__core_2robot__trajectory_2test_2test__robot__trajectory_8cpp" alt=""/></div>
 <map name="amoveit__core_2robot__trajectory_2test_2test__robot__trajectory_8cpp" id="amoveit__core_2robot__trajectory_2test_2test__robot__trajectory_8cpp">
-<area shape="rect" title=" " alt="" coords="1377,5,1593,47"/>
-<area shape="rect" href="robot__model_8h.html" title=" " alt="" coords="839,273,993,315"/>
-<area shape="rect" href="robot__state_8h.html" title=" " alt="" coords="1412,184,1559,225"/>
-<area shape="rect" href="robot__trajectory_8h.html" title=" " alt="" coords="1961,95,2137,136"/>
-<area shape="rect" href="robot__model__test__utils_8h.html" title=" " alt="" coords="688,184,837,225"/>
-<area shape="rect" title=" " alt="" coords="2161,102,2265,129"/>
-<area shape="rect" href="class__forward_8h.html" title=" " alt="" coords="1756,541,1913,583"/>
-<area shape="rect" href="exceptions_8h.html" title=" " alt="" coords="1022,370,1253,397"/>
-<area shape="rect" title=" " alt="" coords="972,459,1105,486"/>
-<area shape="rect" href="joint__model__group_8h.html" title=" " alt="" coords="1329,363,1487,404"/>
-<area shape="rect" title=" " alt="" coords="276,549,356,575"/>
-<area shape="rect" title=" " alt="" coords="1486,549,1613,575"/>
-<area shape="rect" title=" " alt="" coords="1051,549,1192,575"/>
-<area shape="rect" href="fixed__joint__model_8h.html" title=" " alt="" coords="261,363,416,404"/>
-<area shape="rect" href="floating__joint__model_8h.html" title=" " alt="" coords="440,363,611,404"/>
-<area shape="rect" href="planar__joint__model_8h.html" title=" " alt="" coords="635,363,797,404"/>
-<area shape="rect" href="revolute__joint__model_8h.html" title=" " alt="" coords="821,363,997,404"/>
-<area shape="rect" href="prismatic__joint__model_8h.html" title=" " alt="" coords="54,363,237,404"/>
-<area shape="rect" href="declare__ptr_8h.html" title=" " alt="" coords="1937,631,2109,672"/>
-<area shape="rect" title=" " alt="" coords="2359,720,2436,747"/>
-<area shape="rect" title=" " alt="" coords="861,459,947,486"/>
-<area shape="rect" href="joint__model_8h.html" title=" " alt="" coords="639,452,793,493"/>
-<area shape="rect" title=" " alt="" coords="1221,549,1280,575"/>
-<area shape="rect" href="link__model_8h.html" title=" " alt="" coords="1489,452,1644,493"/>
-<area shape="rect" href="kinematics__base_8h.html" title=" " alt="" coords="1181,452,1363,493"/>
-<area shape="rect" title=" " alt="" coords="1358,549,1445,575"/>
-<area shape="rect" title=" " alt="" coords="1719,459,1761,486"/>
-<area shape="rect" title=" " alt="" coords="2151,541,2334,583"/>
-<area shape="rect" title=" " alt="" coords="794,549,1017,575"/>
-<area shape="rect" href="attached__body_8h.html" title=" " alt="" coords="1824,363,1971,404"/>
-<area shape="rect" href="transforms_8h.html" title=" " alt="" coords="1837,459,2067,486"/>
-<area shape="rect" title=" " alt="" coords="1821,273,1993,315"/>
-<area shape="rect" title=" " alt="" coords="2017,273,2188,315"/>
-<area shape="rect" title=" " alt="" coords="1031,273,1183,315"/>
-<area shape="rect" title=" " alt="" coords="1207,281,1430,307"/>
-<area shape="rect" title=" " alt="" coords="1453,281,1523,307"/>
-<area shape="rect" title=" " alt="" coords="1547,281,1693,307"/>
-<area shape="rect" title=" " alt="" coords="2091,452,2263,493"/>
-<area shape="rect" title=" " alt="" coords="2287,452,2446,493"/>
-<area shape="rect" title=" " alt="" coords="2623,184,2803,225"/>
-<area shape="rect" title=" " alt="" coords="2827,184,3007,225"/>
-<area shape="rect" title=" " alt="" coords="1583,191,1646,218"/>
-<area shape="rect" title=" " alt="" coords="1671,191,1745,218"/>
-<area shape="rect" title=" " alt="" coords="1770,191,1918,218"/>
-<area shape="rect" title=" " alt="" coords="1942,191,2026,218"/>
-<area shape="rect" title=" " alt="" coords="2050,191,2182,218"/>
-<area shape="rect" title=" " alt="" coords="2207,191,2329,218"/>
-<area shape="rect" title=" " alt="" coords="2354,191,2497,218"/>
-<area shape="rect" title=" " alt="" coords="525,281,686,307"/>
-<area shape="rect" title=" " alt="" coords="710,281,815,307"/>
+<area shape="rect" title=" " alt="" coords="2327,5,2543,47"/>
+<area shape="rect" href="robot__model_8h.html" title=" " alt="" coords="1273,273,1427,315"/>
+<area shape="rect" href="robot__state_8h.html" title=" " alt="" coords="1922,184,2069,225"/>
+<area shape="rect" href="robot__trajectory_8h.html" title=" " alt="" coords="2495,95,2671,136"/>
+<area shape="rect" href="robot__model__test__utils_8h.html" title=" " alt="" coords="259,184,409,225"/>
+<area shape="rect" title=" " alt="" coords="2696,102,2881,129"/>
+<area shape="rect" title=" " alt="" coords="2906,102,3010,129"/>
+<area shape="rect" href="class__forward_8h.html" title=" " alt="" coords="2467,541,2625,583"/>
+<area shape="rect" href="exceptions_8h.html" title=" " alt="" coords="423,370,653,397"/>
+<area shape="rect" title=" " alt="" coords="1297,459,1430,486"/>
+<area shape="rect" href="joint__model__group_8h.html" title=" " alt="" coords="1697,363,1856,404"/>
+<area shape="rect" title=" " alt="" coords="393,549,473,575"/>
+<area shape="rect" title=" " alt="" coords="1883,549,2009,575"/>
+<area shape="rect" title=" " alt="" coords="1251,549,1393,575"/>
+<area shape="rect" href="fixed__joint__model_8h.html" title=" " alt="" coords="1273,363,1427,404"/>
+<area shape="rect" href="floating__joint__model_8h.html" title=" " alt="" coords="1451,363,1622,404"/>
+<area shape="rect" href="planar__joint__model_8h.html" title=" " alt="" coords="678,363,841,404"/>
+<area shape="rect" href="revolute__joint__model_8h.html" title=" " alt="" coords="865,363,1041,404"/>
+<area shape="rect" href="prismatic__joint__model_8h.html" title=" " alt="" coords="1065,363,1248,404"/>
+<area shape="rect" href="declare__ptr_8h.html" title=" " alt="" coords="2872,631,3044,672"/>
+<area shape="rect" title=" " alt="" coords="2981,720,3058,747"/>
+<area shape="rect" title=" " alt="" coords="495,459,581,486"/>
+<area shape="rect" href="joint__model_8h.html" title=" " alt="" coords="1118,452,1273,493"/>
+<area shape="rect" title=" " alt="" coords="1502,549,1561,575"/>
+<area shape="rect" href="link__model_8h.html" title=" " alt="" coords="1931,452,2086,493"/>
+<area shape="rect" href="kinematics__base_8h.html" title=" " alt="" coords="1505,452,1688,493"/>
+<area shape="rect" title=" " alt="" coords="1683,549,1769,575"/>
+<area shape="rect" title=" " alt="" coords="1763,459,1806,486"/>
+<area shape="rect" title=" " alt="" coords="2157,541,2340,583"/>
+<area shape="rect" title=" " alt="" coords="836,549,1059,575"/>
+<area shape="rect" href="attached__body_8h.html" title=" " alt="" coords="1931,363,2078,404"/>
+<area shape="rect" href="transforms_8h.html" title=" " alt="" coords="2359,459,2589,486"/>
+<area shape="rect" title=" " alt="" coords="1972,273,2144,315"/>
+<area shape="rect" title=" " alt="" coords="2169,273,2339,315"/>
+<area shape="rect" title=" " alt="" coords="2363,273,2515,315"/>
+<area shape="rect" title=" " alt="" coords="2540,281,2763,307"/>
+<area shape="rect" title=" " alt="" coords="1606,281,1675,307"/>
+<area shape="rect" title=" " alt="" coords="1699,281,1846,307"/>
+<area shape="rect" title=" " alt="" coords="2111,452,2283,493"/>
+<area shape="rect" title=" " alt="" coords="2144,184,2324,225"/>
+<area shape="rect" title=" " alt="" coords="2348,184,2528,225"/>
+<area shape="rect" title=" " alt="" coords="2552,191,2615,218"/>
+<area shape="rect" title=" " alt="" coords="2639,191,2714,218"/>
+<area shape="rect" title=" " alt="" coords="2739,191,2887,218"/>
+<area shape="rect" title=" " alt="" coords="2911,191,2995,218"/>
+<area shape="rect" title=" " alt="" coords="3019,191,3151,218"/>
+<area shape="rect" title=" " alt="" coords="3175,191,3298,218"/>
+<area shape="rect" title=" " alt="" coords="3323,191,3465,218"/>
+<area shape="rect" title=" " alt="" coords="5,281,167,307"/>
+<area shape="rect" title=" " alt="" coords="191,281,296,307"/>
 </map>
 </div>
 </div>
@@ -142,6 +143,8 @@ Include dependency graph for test_robot_trajectory.cpp:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRobotTrajectoryTestFixture.html">RobotTrajectoryTestFixture</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classOneRobot.html">OneRobot</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -154,6 +157,8 @@ Functions</h2></td></tr>
 <tr class="separator:ad3066192ec61da2c34e8fd039caef93f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2eca9d77186f589d9148d63fbef0006"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__robot__trajectory_8cpp.html#ac2eca9d77186f589d9148d63fbef0006">TEST_F</a> (<a class="el" href="classRobotTrajectoryTestFixture.html">RobotTrajectoryTestFixture</a>, ChainEdits)</td></tr>
 <tr class="separator:ac2eca9d77186f589d9148d63fbef0006"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a419937a250310dbdd2197c9eb4ae285a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__robot__trajectory_8cpp.html#a419937a250310dbdd2197c9eb4ae285a">TEST_F</a> (<a class="el" href="classRobotTrajectoryTestFixture.html">RobotTrajectoryTestFixture</a>, Append)</td></tr>
+<tr class="separator:a419937a250310dbdd2197c9eb4ae285a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa878f2cef45be90442ef52b1896fe4ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__robot__trajectory_8cpp.html#aa878f2cef45be90442ef52b1896fe4ec">TEST_F</a> (<a class="el" href="classRobotTrajectoryTestFixture.html">RobotTrajectoryTestFixture</a>, RobotTrajectoryShallowCopy)</td></tr>
 <tr class="separator:aa878f2cef45be90442ef52b1896fe4ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76d5b9f24dcf15a5b6530157905834ce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__robot__trajectory_8cpp.html#a76d5b9f24dcf15a5b6530157905834ce">TEST_F</a> (<a class="el" href="classRobotTrajectoryTestFixture.html">RobotTrajectoryTestFixture</a>, RobotTrajectoryDeepCopy)</td></tr>
@@ -166,6 +171,10 @@ Functions</h2></td></tr>
 <tr class="separator:a8a7aa8ae6cf7c2a9fecb9b33af31f6f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a102898fa0cc22e7d56d37b3aa9c3cc7a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__robot__trajectory_8cpp.html#a102898fa0cc22e7d56d37b3aa9c3cc7a">TEST_F</a> (<a class="el" href="classRobotTrajectoryTestFixture.html">RobotTrajectoryTestFixture</a>, RobotTrajectoryDensity)</td></tr>
 <tr class="separator:a102898fa0cc22e7d56d37b3aa9c3cc7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1773e1af9fb3aadd57c6bda950aac5e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__robot__trajectory_8cpp.html#a1773e1af9fb3aadd57c6bda950aac5e3">TEST_F</a> (<a class="el" href="classOneRobot.html">OneRobot</a>, Unwind)</td></tr>
+<tr class="separator:a1773e1af9fb3aadd57c6bda950aac5e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa552391c9e87642024c3dd47d31b634a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__robot__trajectory_8cpp.html#aa552391c9e87642024c3dd47d31b634a">TEST_F</a> (<a class="el" href="classOneRobot.html">OneRobot</a>, UnwindFromState)</td></tr>
+<tr class="separator:aa552391c9e87642024c3dd47d31b634a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__robot__trajectory_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
 <tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -196,12 +205,116 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__robot__trajectory_8cpp_source.html#l00336">336</a> of file <a class="el" href="test__robot__trajectory_8cpp_source.html">test_robot_trajectory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__robot__trajectory_8cpp_source.html#l00598">598</a> of file <a class="el" href="test__robot__trajectory_8cpp_source.html">test_robot_trajectory.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a1773e1af9fb3aadd57c6bda950aac5e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1773e1af9fb3aadd57c6bda950aac5e3">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[1/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classOneRobot.html">OneRobot</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Unwind&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__robot__trajectory_8cpp_source.html#l00562">562</a> of file <a class="el" href="test__robot__trajectory_8cpp_source.html">test_robot_trajectory.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa552391c9e87642024c3dd47d31b634a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa552391c9e87642024c3dd47d31b634a">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[2/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classOneRobot.html">OneRobot</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UnwindFromState&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__robot__trajectory_8cpp_source.html#l00579">579</a> of file <a class="el" href="test__robot__trajectory_8cpp_source.html">test_robot_trajectory.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="test__robot__trajectory_8cpp_aa552391c9e87642024c3dd47d31b634a_cgraph.png" border="0" usemap="#atest__robot__trajectory_8cpp_aa552391c9e87642024c3dd47d31b634a_cgraph" alt=""/></div>
+<map name="atest__robot__trajectory_8cpp_aa552391c9e87642024c3dd47d31b634a_cgraph" id="atest__robot__trajectory_8cpp_aa552391c9e87642024c3dd47d31b634a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,78,75,105"/>
+<area shape="rect" href="classmoveit_1_1core_1_1RobotState.html#aae57a83ed9ad7c34982b6a943341026c" title="Get the position of a particular variable. An exception is thrown if the variable is not known." alt="" coords="123,5,307,47"/>
+<area shape="rect" href="classmoveit_1_1core_1_1RobotState.html#a54879052daa602ea0319cbe3ded82ff3" title="Set the position of a single variable. An exception is thrown if the variable name is not known." alt="" coords="123,71,307,112"/>
+<area shape="rect" href="classmoveit_1_1core_1_1RobotState.html#aaec5557d55b862d9dd832b3d4c221836" title="Update all transforms." alt="" coords="123,136,307,177"/>
+<area shape="rect" href="classmoveit_1_1core_1_1RobotState.html#afa1f72a766bdf75d81f4404058322576" title="Update the transforms for the collision bodies. This call is needed before calling collision checking..." alt="" coords="355,136,591,177"/>
+<area shape="rect" href="classmoveit_1_1core_1_1JointModel.html#aa6dbe9f994aca22adf80add175d10681" title="Get all the link models that descend from this joint, in the kinematic tree." alt="" coords="639,103,841,144"/>
+<area shape="rect" href="classmoveit_1_1core_1_1RobotState.html#a8778df1884c3caaf47558c939832cd9e" title="Update the reference frame transforms for links. This call is needed before using the transforms of l..." alt="" coords="648,168,832,209"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a419937a250310dbdd2197c9eb4ae285a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a419937a250310dbdd2197c9eb4ae285a">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[3/13]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRobotTrajectoryTestFixture.html">RobotTrajectoryTestFixture</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Append&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="test__robot__trajectory_8cpp_source.html#l00408">408</a> of file <a class="el" href="test__robot__trajectory_8cpp_source.html">test_robot_trajectory.cpp</a>.</p>
 
 </div>
 </div>
 <a id="ac2eca9d77186f589d9148d63fbef0006"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2eca9d77186f589d9148d63fbef0006">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[1/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2eca9d77186f589d9148d63fbef0006">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[4/13]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -226,7 +339,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__robot__trajectory_8cpp_source.html#l00182">182</a> of file <a class="el" href="test__robot__trajectory_8cpp_source.html">test_robot_trajectory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__robot__trajectory_8cpp_source.html#l00387">387</a> of file <a class="el" href="test__robot__trajectory_8cpp_source.html">test_robot_trajectory.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -250,7 +363,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <a id="ad3066192ec61da2c34e8fd039caef93f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3066192ec61da2c34e8fd039caef93f">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[2/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3066192ec61da2c34e8fd039caef93f">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[5/13]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -275,12 +388,12 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__robot__trajectory_8cpp_source.html#l00167">167</a> of file <a class="el" href="test__robot__trajectory_8cpp_source.html">test_robot_trajectory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__robot__trajectory_8cpp_source.html#l00372">372</a> of file <a class="el" href="test__robot__trajectory_8cpp_source.html">test_robot_trajectory.cpp</a>.</p>
 
 </div>
 </div>
 <a id="acf9ba742e5fcb6035984f2a20e117f9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf9ba742e5fcb6035984f2a20e117f9f">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[3/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acf9ba742e5fcb6035984f2a20e117f9f">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[6/13]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -305,12 +418,12 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__robot__trajectory_8cpp_source.html#l00153">153</a> of file <a class="el" href="test__robot__trajectory_8cpp_source.html">test_robot_trajectory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__robot__trajectory_8cpp_source.html#l00358">358</a> of file <a class="el" href="test__robot__trajectory_8cpp_source.html">test_robot_trajectory.cpp</a>.</p>
 
 </div>
 </div>
 <a id="a51fed7b235a3ef96cb25da56c21e109d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51fed7b235a3ef96cb25da56c21e109d">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[4/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a51fed7b235a3ef96cb25da56c21e109d">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[7/13]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -335,12 +448,12 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__robot__trajectory_8cpp_source.html#l00160">160</a> of file <a class="el" href="test__robot__trajectory_8cpp_source.html">test_robot_trajectory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__robot__trajectory_8cpp_source.html#l00365">365</a> of file <a class="el" href="test__robot__trajectory_8cpp_source.html">test_robot_trajectory.cpp</a>.</p>
 
 </div>
 </div>
 <a id="a76d5b9f24dcf15a5b6530157905834ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76d5b9f24dcf15a5b6530157905834ce">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[5/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a76d5b9f24dcf15a5b6530157905834ce">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[8/13]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -365,7 +478,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__robot__trajectory_8cpp_source.html#l00229">229</a> of file <a class="el" href="test__robot__trajectory_8cpp_source.html">test_robot_trajectory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__robot__trajectory_8cpp_source.html#l00455">455</a> of file <a class="el" href="test__robot__trajectory_8cpp_source.html">test_robot_trajectory.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -380,7 +493,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <a id="a102898fa0cc22e7d56d37b3aa9c3cc7a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a102898fa0cc22e7d56d37b3aa9c3cc7a">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[6/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a102898fa0cc22e7d56d37b3aa9c3cc7a">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[9/13]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -405,7 +518,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__robot__trajectory_8cpp_source.html#l00322">322</a> of file <a class="el" href="test__robot__trajectory_8cpp_source.html">test_robot_trajectory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__robot__trajectory_8cpp_source.html#l00548">548</a> of file <a class="el" href="test__robot__trajectory_8cpp_source.html">test_robot_trajectory.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -424,7 +537,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <a id="a24637af99a63aeb797a4848805a27407"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24637af99a63aeb797a4848805a27407">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[7/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a24637af99a63aeb797a4848805a27407">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[10/13]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -449,12 +562,12 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__robot__trajectory_8cpp_source.html#l00257">257</a> of file <a class="el" href="test__robot__trajectory_8cpp_source.html">test_robot_trajectory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__robot__trajectory_8cpp_source.html#l00483">483</a> of file <a class="el" href="test__robot__trajectory_8cpp_source.html">test_robot_trajectory.cpp</a>.</p>
 
 </div>
 </div>
 <a id="ae93bf72402ab01b5ced1fe8f5dc893a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae93bf72402ab01b5ced1fe8f5dc893a5">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[8/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae93bf72402ab01b5ced1fe8f5dc893a5">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[11/13]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -479,7 +592,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__robot__trajectory_8cpp_source.html#l00301">301</a> of file <a class="el" href="test__robot__trajectory_8cpp_source.html">test_robot_trajectory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__robot__trajectory_8cpp_source.html#l00527">527</a> of file <a class="el" href="test__robot__trajectory_8cpp_source.html">test_robot_trajectory.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -497,7 +610,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <a id="aa878f2cef45be90442ef52b1896fe4ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa878f2cef45be90442ef52b1896fe4ec">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[9/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa878f2cef45be90442ef52b1896fe4ec">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[12/13]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -522,7 +635,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__robot__trajectory_8cpp_source.html#l00203">203</a> of file <a class="el" href="test__robot__trajectory_8cpp_source.html">test_robot_trajectory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__robot__trajectory_8cpp_source.html#l00429">429</a> of file <a class="el" href="test__robot__trajectory_8cpp_source.html">test_robot_trajectory.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -537,7 +650,7 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <a id="a8a7aa8ae6cf7c2a9fecb9b33af31f6f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a7aa8ae6cf7c2a9fecb9b33af31f6f4">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[10/10]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a7aa8ae6cf7c2a9fecb9b33af31f6f4">&#9670;&nbsp;</a></span>TEST_F() <span class="overload">[13/13]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -562,7 +675,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="test__robot__trajectory_8cpp_source.html#l00308">308</a> of file <a class="el" href="test__robot__trajectory_8cpp_source.html">test_robot_trajectory.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="test__robot__trajectory_8cpp_source.html#l00534">534</a> of file <a class="el" href="test__robot__trajectory_8cpp_source.html">test_robot_trajectory.cpp</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
