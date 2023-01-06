@@ -138,16 +138,16 @@
 <div class="section" id="configure-ompl">
 <h2>Configure OMPL<a class="headerlink" href="#configure-ompl" title="Permalink to this headline"></a></h2>
 <p>OMPL reads configurations parameters from a file called <code class="code docutils literal notranslate"><span class="pre">ompl_planning.yaml</span></code>. This tutorial uses the Panda robot, for which this file can be found in <code class="code docutils literal notranslate"><span class="pre">panda_moveit_config/config/ompl_planning.yaml</span></code>. We will add a parameter to tell OMPL to plan in a constrained state space by setting <code class="code docutils literal notranslate"><span class="pre">enforce_constrained_state_space</span></code>. In addition, if the parameter <a class="reference external" href="../ompl_interface/ompl_interface_tutorial.html#projection-evaluator">projection_evaluator</a> was not yet specified we also need to add it.</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">panda_arm</span><span class="p">:</span><span class="w"></span>
-<span class="w">   </span><span class="nt">enforce_constrained_state_space</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<span class="w">   </span><span class="nt">projection_evaluator</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">joints(panda_joint1,panda_joint2)</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">panda_arm</span><span class="p">:</span>
+<span class="w">   </span><span class="nt">enforce_constrained_state_space</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">   </span><span class="nt">projection_evaluator</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">joints(panda_joint1,panda_joint2)</span>
 </pre></div>
 </div>
 <p>Note that, as we are changing configuration files, you should also clone the repository <a class="reference external" href="https://github.com/ros-planning/panda_moveit_config">panda_moveit_config</a> in you’re workspace. (Instead of using the version installed with <code class="code docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span></code>.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> catkin_ws/src
-git clone https://github.com/ros-planning/panda_moveit_config.git
-<span class="nb">cd</span> ../..
-catkin build
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>catkin_ws/src
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ros-planning/panda_moveit_config.git
+<span class="nb">cd</span><span class="w"> </span>../..
+catkin<span class="w"> </span>build
 </pre></div>
 </div>
 </div>
@@ -183,10 +183,10 @@ catkin build
 <p>Setup a RobotCommander and a MoveGroupCommander, see <a class="reference external" href="../move_group_python_interface/move_group_python_interface_tutorial.html">move group Python interface</a> tutorial for more details.
 Everything is wrappen in a class to make it easily reusable.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ConstrainedPlanningTutorial</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Wrapper class for the tutorial.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Wrapper class for the tutorial.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">group_name</span><span class="o">=</span><span class="s2">&quot;panda_arm&quot;</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Start the ROS node and create object to handle the robot and the planning scene.&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Start the ROS node and create object to handle the robot and the planning scene.&quot;&quot;&quot;</span>
 
         <span class="n">moveit_commander</span><span class="o">.</span><span class="n">roscpp_initialize</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
         <span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s2">&quot;ompl_constrained_planning_example&quot;</span><span class="p">,</span> <span class="n">anonymous</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -468,7 +468,7 @@ That’s where the magic number <code class="code docutils literal notranslate">
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, PickNik Robotics.</p>
+    <p>&#169; Copyright 2023, PickNik Robotics.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

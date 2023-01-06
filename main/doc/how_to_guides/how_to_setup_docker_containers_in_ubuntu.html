@@ -135,13 +135,13 @@ This guide is intended for people who would like to have a separate environment 
 <li><p>Open a terminal session and download docker-compose.yml</p></li>
 </ol>
 <blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget https://raw.githubusercontent.com/ros-planning/moveit2_tutorials/main/.docker/docker-compose.yml
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>https://raw.githubusercontent.com/ros-planning/moveit2_tutorials/main/.docker/docker-compose.yml
 </pre></div>
 </div>
 </div></blockquote>
 <ol class="arabic" start="3">
 <li><p>Launch the container (you may need to hyphenate <code class="docutils literal notranslate"><span class="pre">docker-compose</span></code> if using compose V1)</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">DOCKER_IMAGE</span><span class="o">=</span>rolling-tutorial docker compose run --rm --name moveit2_container gpu
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">DOCKER_IMAGE</span><span class="o">=</span>rolling-tutorial<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>--name<span class="w"> </span>moveit2_container<span class="w"> </span>gpu
 </pre></div>
 </div>
 <p>You can replace <code class="docutils literal notranslate"><span class="pre">rolling-tutorial</span></code> with other tagged images, e.g. <code class="docutils literal notranslate"><span class="pre">humble-tutorial</span></code>. Similarly, you can replace <code class="docutils literal notranslate"><span class="pre">gpu</span></code> with <code class="docutils literal notranslate"><span class="pre">cpu</span></code> if you do not wish to run using Nvidia GPU drivers and you can change the name of the container by replacing <code class="docutils literal notranslate"><span class="pre">moveit2_container</span></code>. The <code class="docutils literal notranslate"><span class="pre">--rm</span></code> argument will remove the container when you stop (or exit) it, otherwise you can keep your modified container on disk and start it using <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">start</span> <span class="pre">moveit2_container</span></code></p>
@@ -151,7 +151,7 @@ This guide is intended for people who would like to have a separate environment 
 <blockquote>
 <div><p>If you wish to enter the container through another terminal, use:</p>
 <blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker <span class="nb">exec</span> -it moveit2_container /bin/bash
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>moveit2_container<span class="w"> </span>/bin/bash
 </pre></div>
 </div>
 </div></blockquote>
@@ -184,7 +184,7 @@ You can use any of these images by substituting the DOCKER_IMAGE environment var
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, PickNik Robotics.</p>
+    <p>&#169; Copyright 2023, PickNik Robotics.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

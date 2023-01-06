@@ -147,12 +147,12 @@ This project assumes you are starting with the <code class="docutils literal not
 </pre></div>
 </div>
 <p>To verify that you added the dependency correctly, add the required include to your source file <code class="docutils literal notranslate"><span class="pre">hello_moveit.cpp</span></code>:</p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;moveit_visual_tools/moveit_visual_tools.h&gt;</span><span class="cp"></span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;moveit_visual_tools/moveit_visual_tools.h&gt;</span>
 </pre></div>
 </div>
 <p>To test that this all worked, open a terminal in the workspace directory (remembering to source your ROS install in opt) and then build with colcon:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ws_moveit
-colcon build --mixin debug
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ws_moveit
+colcon<span class="w"> </span>build<span class="w"> </span>--mixin<span class="w"> </span>debug
 </pre></div>
 </div>
 </div>
@@ -160,32 +160,32 @@ colcon build --mixin debug
 <h3>2 Create a ROS executor and spin the node on a thread<a class="headerlink" href="#create-a-ros-executor-and-spin-the-node-on-a-thread" title="Permalink to this headline"></a></h3>
 <p>Before we can initialize MoveItVisualTools, we need to have a executor spinning on our ROS node.
 This is necessary because of how MoveItVisualTools interacts with ROS services and topics. First, add the threading library to your includes at the top.</p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;thread&gt;</span><span class="c1">  // &lt;---- add this to the set of includes at the top</span><span class="cp"></span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;thread&gt;</span><span class="c1">  // &lt;---- add this to the set of includes at the top</span>
 </pre></div>
 </div>
 <p>By creating and naming loggers, we are able to keep our program logs organized.</p>
 <blockquote>
 <div><div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create a ROS logger</span>
-<span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">logger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">get_logger</span><span class="p">(</span><span class="s">&quot;hello_moveit&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">logger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">get_logger</span><span class="p">(</span><span class="s">&quot;hello_moveit&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div></blockquote>
 <p>Next, add your executor before creating the MoveIt MoveGroup Interface.</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="c1">// Spin up a SingleThreadedExecutor for MoveItVisualTools to interact with ROS</span>
-<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">executors</span><span class="o">::</span><span class="n">SingleThreadedExecutor</span><span class="w"> </span><span class="n">executor</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">executor</span><span class="p">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">node</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">spinner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kr">thread</span><span class="p">([</span><span class="o">&amp;</span><span class="n">executor</span><span class="p">]()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">executor</span><span class="p">.</span><span class="n">spin</span><span class="p">();</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">executors</span><span class="o">::</span><span class="n">SingleThreadedExecutor</span><span class="w"> </span><span class="n">executor</span><span class="p">;</span>
+<span class="w">  </span><span class="n">executor</span><span class="p">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">node</span><span class="p">);</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">spinner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="kr">thread</span><span class="p">([</span><span class="o">&amp;</span><span class="n">executor</span><span class="p">]()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">executor</span><span class="p">.</span><span class="n">spin</span><span class="p">();</span><span class="w"> </span><span class="p">});</span>
 
 <span class="w">  </span><span class="c1">// Create the MoveIt MoveGroup Interface</span>
 
-<span class="p">...</span><span class="w"></span>
+<span class="p">...</span>
 </pre></div>
 </div>
 <p>Finally, make sure to join the thread before exiting.</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Shutdown ROS</span>
 <span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span><span class="w">  </span><span class="c1">// &lt;--- This will cause the spin function in the thread to return</span>
 <span class="n">spinner</span><span class="p">.</span><span class="n">join</span><span class="p">();</span><span class="w">  </span><span class="c1">// &lt;--- Join the thread before exiting</span>
-<span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>After making these changes, rebuild your workspace to make sure you don’t have any syntax errors.</p>
@@ -194,15 +194,15 @@ This is necessary because of how MoveItVisualTools interacts with ROS services a
 <h3>3 Create and Initialize MoveItVisualTools<a class="headerlink" href="#create-and-initialize-moveitvisualtools" title="Permalink to this headline"></a></h3>
 <p>Next, we will construct and initialize MoveItVisualTools after the construction of MoveGroupInterface.</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create the MoveIt MoveGroup Interface</span>
-<span class="k">using</span><span class="w"> </span><span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span><span class="p">;</span><span class="w"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">move_group_interface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MoveGroupInterface</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;panda_arm&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span><span class="p">;</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">move_group_interface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MoveGroupInterface</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;panda_arm&quot;</span><span class="p">);</span>
 
 <span class="c1">// Construct and initialize MoveItVisualTools</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">moveit_visual_tools</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">moveit_visual_tools</span><span class="o">::</span><span class="n">MoveItVisualTools</span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;panda_link0&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">rviz_visual_tools</span><span class="o">::</span><span class="n">RVIZ_MARKER_TOPIC</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="n">move_group_interface</span><span class="p">.</span><span class="n">getRobotModel</span><span class="p">()};</span><span class="w"></span>
-<span class="n">moveit_visual_tools</span><span class="p">.</span><span class="n">deleteAllMarkers</span><span class="p">();</span><span class="w"></span>
-<span class="n">moveit_visual_tools</span><span class="p">.</span><span class="n">loadRemoteControl</span><span class="p">();</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">moveit_visual_tools</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">moveit_visual_tools</span><span class="o">::</span><span class="n">MoveItVisualTools</span><span class="p">{</span>
+<span class="w">    </span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;panda_link0&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">rviz_visual_tools</span><span class="o">::</span><span class="n">RVIZ_MARKER_TOPIC</span><span class="p">,</span>
+<span class="w">    </span><span class="n">move_group_interface</span><span class="p">.</span><span class="n">getRobotModel</span><span class="p">()};</span>
+<span class="n">moveit_visual_tools</span><span class="p">.</span><span class="n">deleteAllMarkers</span><span class="p">();</span>
+<span class="n">moveit_visual_tools</span><span class="p">.</span><span class="n">loadRemoteControl</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>We pass the following into the constructor: the ROS node, the base link of the robot, the marker topic to use (more on this later), and the robot model (which we get from the move_group_interface).
@@ -214,24 +214,24 @@ Remote control is a really simple plugin that lets us have a button in RViz to i
 <h3>4 Write closures for visualizations<a class="headerlink" href="#write-closures-for-visualizations" title="Permalink to this headline"></a></h3>
 <p>After we’ve constructed and initialized, we now create some closures (function objects that have access to variables in our current scope) that we can use later in our program to help render visualizations in RViz.</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create closures for visualization</span>
-<span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">draw_title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="n">moveit_visual_tools</span><span class="p">](</span><span class="k">auto</span><span class="w"> </span><span class="n">text</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">text_pose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Isometry3d</span><span class="o">::</span><span class="n">Identity</span><span class="p">();</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">draw_title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="n">moveit_visual_tools</span><span class="p">](</span><span class="k">auto</span><span class="w"> </span><span class="n">text</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">text_pose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Eigen</span><span class="o">::</span><span class="n">Isometry3d</span><span class="o">::</span><span class="n">Identity</span><span class="p">();</span>
 <span class="w">    </span><span class="n">msg</span><span class="p">.</span><span class="n">translation</span><span class="p">().</span><span class="n">z</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span><span class="w">  </span><span class="c1">// Place text 1m above the base link</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}();</span><span class="w"></span>
-<span class="w">  </span><span class="n">moveit_visual_tools</span><span class="p">.</span><span class="n">publishText</span><span class="p">(</span><span class="n">text_pose</span><span class="p">,</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="n">rviz_visual_tools</span><span class="o">::</span><span class="n">WHITE</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                  </span><span class="n">rviz_visual_tools</span><span class="o">::</span><span class="n">XLARGE</span><span class="p">);</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-<span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="n">moveit_visual_tools</span><span class="p">](</span><span class="k">auto</span><span class="w"> </span><span class="n">text</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">moveit_visual_tools</span><span class="p">.</span><span class="n">prompt</span><span class="p">(</span><span class="n">text</span><span class="p">);</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-<span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">draw_trajectory_tool_path</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
-<span class="w">    </span><span class="p">[</span><span class="o">&amp;</span><span class="n">moveit_visual_tools</span><span class="p">,</span><span class="w"></span>
-<span class="w">     </span><span class="n">jmg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">move_group_interface</span><span class="p">.</span><span class="n">getRobotModel</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">getJointModelGroup</span><span class="p">(</span><span class="w"></span>
-<span class="w">         </span><span class="s">&quot;panda_arm&quot;</span><span class="p">)](</span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">trajectory</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="n">moveit_visual_tools</span><span class="p">.</span><span class="n">publishTrajectoryLine</span><span class="p">(</span><span class="n">trajectory</span><span class="p">,</span><span class="w"> </span><span class="n">jmg</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}();</span>
+<span class="w">  </span><span class="n">moveit_visual_tools</span><span class="p">.</span><span class="n">publishText</span><span class="p">(</span><span class="n">text_pose</span><span class="p">,</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"> </span><span class="n">rviz_visual_tools</span><span class="o">::</span><span class="n">WHITE</span><span class="p">,</span>
+<span class="w">                                  </span><span class="n">rviz_visual_tools</span><span class="o">::</span><span class="n">XLARGE</span><span class="p">);</span>
+<span class="p">};</span>
+<span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="n">moveit_visual_tools</span><span class="p">](</span><span class="k">auto</span><span class="w"> </span><span class="n">text</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">moveit_visual_tools</span><span class="p">.</span><span class="n">prompt</span><span class="p">(</span><span class="n">text</span><span class="p">);</span>
+<span class="p">};</span>
+<span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">draw_trajectory_tool_path</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="p">[</span><span class="o">&amp;</span><span class="n">moveit_visual_tools</span><span class="p">,</span>
+<span class="w">     </span><span class="n">jmg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">move_group_interface</span><span class="p">.</span><span class="n">getRobotModel</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">getJointModelGroup</span><span class="p">(</span>
+<span class="w">         </span><span class="s">&quot;panda_arm&quot;</span><span class="p">)](</span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">trajectory</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">moveit_visual_tools</span><span class="p">.</span><span class="n">publishTrajectoryLine</span><span class="p">(</span><span class="n">trajectory</span><span class="p">,</span><span class="w"> </span><span class="n">jmg</span><span class="p">);</span>
+<span class="w">    </span><span class="p">};</span>
 </pre></div>
 </div>
 <p>Each of the three closures capture <code class="docutils literal notranslate"><span class="pre">moveit_visual_tools</span></code> by reference and the last one captures a pointer to the joint model group object we are planning with.
@@ -250,56 +250,56 @@ You will see in the next section how we use these functions we created.</p>
 <p>Now we’ll augment the code in the middle of your program.
 Update your code for planning and executing to include these new features:</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Set a target Pose</span>
-<span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">target_pose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Pose</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">msg</span><span class="p">.</span><span class="n">orientation</span><span class="p">.</span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">msg</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.28</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">msg</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">-0.2</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">msg</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span><span class="w"></span>
-<span class="p">}();</span><span class="w"></span>
-<span class="n">move_group_interface</span><span class="p">.</span><span class="n">setPoseTarget</span><span class="p">(</span><span class="n">target_pose</span><span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">target_pose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Pose</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span>
+<span class="w">  </span><span class="n">msg</span><span class="p">.</span><span class="n">orientation</span><span class="p">.</span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span>
+<span class="w">  </span><span class="n">msg</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.28</span><span class="p">;</span>
+<span class="w">  </span><span class="n">msg</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">-0.2</span><span class="p">;</span>
+<span class="w">  </span><span class="n">msg</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span>
+<span class="p">}();</span>
+<span class="n">move_group_interface</span><span class="p">.</span><span class="n">setPoseTarget</span><span class="p">(</span><span class="n">target_pose</span><span class="p">);</span>
 
 <span class="c1">// Create a plan to that target pose</span>
-<span class="n">prompt</span><span class="p">(</span><span class="s">&quot;Press &#39;Next&#39; in the RvizVisualToolsGui window to plan&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">draw_title</span><span class="p">(</span><span class="s">&quot;Planning&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">moveit_visual_tools</span><span class="p">.</span><span class="n">trigger</span><span class="p">();</span><span class="w"></span>
-<span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">[</span><span class="n">success</span><span class="p">,</span><span class="w"> </span><span class="n">plan</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="n">move_group_interface</span><span class="p">]</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span><span class="o">::</span><span class="n">Plan</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">ok</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">(</span><span class="n">move_group_interface</span><span class="p">.</span><span class="n">plan</span><span class="p">(</span><span class="n">msg</span><span class="p">));</span><span class="w"></span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="p">(</span><span class="n">ok</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="p">);</span><span class="w"></span>
-<span class="p">}();</span><span class="w"></span>
+<span class="n">prompt</span><span class="p">(</span><span class="s">&quot;Press &#39;Next&#39; in the RvizVisualToolsGui window to plan&quot;</span><span class="p">);</span>
+<span class="n">draw_title</span><span class="p">(</span><span class="s">&quot;Planning&quot;</span><span class="p">);</span>
+<span class="n">moveit_visual_tools</span><span class="p">.</span><span class="n">trigger</span><span class="p">();</span>
+<span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">[</span><span class="n">success</span><span class="p">,</span><span class="w"> </span><span class="n">plan</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="n">move_group_interface</span><span class="p">]</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span><span class="o">::</span><span class="n">Plan</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">ok</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">(</span><span class="n">move_group_interface</span><span class="p">.</span><span class="n">plan</span><span class="p">(</span><span class="n">msg</span><span class="p">));</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="p">(</span><span class="n">ok</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="p">);</span>
+<span class="p">}();</span>
 
 <span class="c1">// Execute the plan</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">success</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">draw_trajectory_tool_path</span><span class="p">(</span><span class="n">plan</span><span class="p">.</span><span class="n">trajectory_</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="n">moveit_visual_tools</span><span class="p">.</span><span class="n">trigger</span><span class="p">();</span><span class="w"></span>
-<span class="w">  </span><span class="n">prompt</span><span class="p">(</span><span class="s">&quot;Press &#39;Next&#39; in the RvizVisualToolsGui window to execute&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="n">draw_title</span><span class="p">(</span><span class="s">&quot;Executing&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="n">moveit_visual_tools</span><span class="p">.</span><span class="n">trigger</span><span class="p">();</span><span class="w"></span>
-<span class="w">  </span><span class="n">move_group_interface</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">plan</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">draw_title</span><span class="p">(</span><span class="s">&quot;Planning Failed!&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="n">moveit_visual_tools</span><span class="p">.</span><span class="n">trigger</span><span class="p">();</span><span class="w"></span>
-<span class="w">  </span><span class="n">RCLCPP_ERROR</span><span class="p">(</span><span class="n">logger</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Planning failed!&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">success</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">draw_trajectory_tool_path</span><span class="p">(</span><span class="n">plan</span><span class="p">.</span><span class="n">trajectory_</span><span class="p">);</span>
+<span class="w">  </span><span class="n">moveit_visual_tools</span><span class="p">.</span><span class="n">trigger</span><span class="p">();</span>
+<span class="w">  </span><span class="n">prompt</span><span class="p">(</span><span class="s">&quot;Press &#39;Next&#39; in the RvizVisualToolsGui window to execute&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">draw_title</span><span class="p">(</span><span class="s">&quot;Executing&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">moveit_visual_tools</span><span class="p">.</span><span class="n">trigger</span><span class="p">();</span>
+<span class="w">  </span><span class="n">move_group_interface</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">plan</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">draw_title</span><span class="p">(</span><span class="s">&quot;Planning Failed!&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="n">moveit_visual_tools</span><span class="p">.</span><span class="n">trigger</span><span class="p">();</span>
+<span class="w">  </span><span class="n">RCLCPP_ERROR</span><span class="p">(</span><span class="n">logger</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Planning failed!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>One thing you’ll quickly notice is that we have to call a method called <code class="docutils literal notranslate"><span class="pre">trigger</span></code> on <code class="docutils literal notranslate"><span class="pre">moveit_visual_tools</span></code> after each call to change something rendered in RViz.
 The reason for this is that messages sent to RViz are batched up and sent when you call <code class="docutils literal notranslate"><span class="pre">trigger</span></code> to reduce bandwidth of the marker topics.</p>
 <p>Lastly, build your project again to make sure all the code additions are correct.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ws_moveit
-<span class="nb">source</span> /opt/ros/rolling/setup.bash
-colcon build --mixin debug
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ws_moveit
+<span class="nb">source</span><span class="w"> </span>/opt/ros/rolling/setup.bash
+colcon<span class="w"> </span>build<span class="w"> </span>--mixin<span class="w"> </span>debug
 </pre></div>
 </div>
 </div>
 <div class="section" id="enable-visualizations-in-rviz">
 <h3>6 Enable visualizations in RViz<a class="headerlink" href="#enable-visualizations-in-rviz" title="Permalink to this headline"></a></h3>
 <p>Open a new terminal, source the workspace, and then start the demo launch file that opens RViz.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ws_moveit
-<span class="nb">source</span> install/setup.bash
-ros2 launch moveit2_tutorials demo.launch.py
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ws_moveit
+<span class="nb">source</span><span class="w"> </span>install/setup.bash
+ros2<span class="w"> </span>launch<span class="w"> </span>moveit2_tutorials<span class="w"> </span>demo.launch.py
 </pre></div>
 </div>
 <p>Uncheck “MotionPlanning” in the “Displays” tab to hide it.
@@ -324,9 +324,9 @@ Click on the “Add” Button in the “Displays” panel.</p>
 <div class="section" id="run-the-program">
 <h3>7 Run the Program<a class="headerlink" href="#run-the-program" title="Permalink to this headline"></a></h3>
 <p>In a new terminal, go to the workspace, source the workspace, and run <code class="docutils literal notranslate"><span class="pre">hello_moveit</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ws_moveit
-<span class="nb">source</span> install/setup.bash
-ros2 run hello_moveit hello_moveit
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ws_moveit
+<span class="nb">source</span><span class="w"> </span>install/setup.bash
+ros2<span class="w"> </span>run<span class="w"> </span>hello_moveit<span class="w"> </span>hello_moveit
 </pre></div>
 </div>
 <p>You’ll notice that your program has stopped with a log that looks like this:</p>
@@ -370,7 +370,7 @@ To continue, press <code class="docutils literal notranslate"><span class="pre">
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, PickNik Robotics.</p>
+    <p>&#169; Copyright 2023, PickNik Robotics.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

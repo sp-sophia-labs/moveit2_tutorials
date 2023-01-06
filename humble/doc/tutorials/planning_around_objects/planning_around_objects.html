@@ -115,7 +115,7 @@ This project assumes you are starting with the <code class="docutils literal not
 <div class="section" id="add-include-for-planning-scene-interface">
 <h3>1 Add include for Planning Scene Interface<a class="headerlink" href="#add-include-for-planning-scene-interface" title="Permalink to this headline"></a></h3>
 <p>At the top of your source file, add this to the list of includes:</p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;moveit/planning_scene_interface/planning_scene_interface.h&gt;</span><span class="cp"></span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;moveit/planning_scene_interface/planning_scene_interface.h&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -123,15 +123,15 @@ This project assumes you are starting with the <code class="docutils literal not
 <h3>2 Change the Target Pose<a class="headerlink" href="#change-the-target-pose" title="Permalink to this headline"></a></h3>
 <p>First, update the target pose with the following change to make the robot plan to a different location:</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Set a target Pose</span>
-<span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">target_pose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Pose</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">msg</span><span class="p">.</span><span class="n">orientation</span><span class="p">.</span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">msg</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.28</span><span class="p">;</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">target_pose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Pose</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span>
+<span class="w">  </span><span class="n">msg</span><span class="p">.</span><span class="n">orientation</span><span class="p">.</span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span>
+<span class="w">  </span><span class="n">msg</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.28</span><span class="p">;</span>
 <span class="w">  </span><span class="n">msg</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.4</span><span class="p">;</span><span class="w">  </span><span class="c1">// &lt;---- This value was changed</span>
-<span class="w">  </span><span class="n">msg</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span><span class="w"></span>
-<span class="p">}();</span><span class="w"></span>
-<span class="n">move_group_interface</span><span class="p">.</span><span class="n">setPoseTarget</span><span class="p">(</span><span class="n">target_pose</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">msg</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span>
+<span class="p">}();</span>
+<span class="n">move_group_interface</span><span class="p">.</span><span class="n">setPoseTarget</span><span class="p">(</span><span class="n">target_pose</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -145,33 +145,33 @@ One thing to notice at the end of this block of code is that we set the operatio
 This results in the object getting added to the collision scene.
 Place this code block between setting the target pose from the previous step and creating a plan.</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create collision object for the robot to avoid</span>
-<span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">collision_object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">frame_id</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
-<span class="w">                                 </span><span class="n">move_group_interface</span><span class="p">.</span><span class="n">getPlanningFrame</span><span class="p">()]</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">moveit_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">CollisionObject</span><span class="w"> </span><span class="n">collision_object</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">collision_object</span><span class="p">.</span><span class="n">header</span><span class="p">.</span><span class="n">frame_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">frame_id</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">collision_object</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;box1&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">shape_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">SolidPrimitive</span><span class="w"> </span><span class="n">primitive</span><span class="p">;</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">collision_object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">frame_id</span><span class="w"> </span><span class="o">=</span>
+<span class="w">                                 </span><span class="n">move_group_interface</span><span class="p">.</span><span class="n">getPlanningFrame</span><span class="p">()]</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">moveit_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">CollisionObject</span><span class="w"> </span><span class="n">collision_object</span><span class="p">;</span>
+<span class="w">  </span><span class="n">collision_object</span><span class="p">.</span><span class="n">header</span><span class="p">.</span><span class="n">frame_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">frame_id</span><span class="p">;</span>
+<span class="w">  </span><span class="n">collision_object</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;box1&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="n">shape_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">SolidPrimitive</span><span class="w"> </span><span class="n">primitive</span><span class="p">;</span>
 
 <span class="w">  </span><span class="c1">// Define the size of the box in meters</span>
-<span class="w">  </span><span class="n">primitive</span><span class="p">.</span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">primitive</span><span class="p">.</span><span class="n">BOX</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">primitive</span><span class="p">.</span><span class="n">dimensions</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="n">primitive</span><span class="p">.</span><span class="n">dimensions</span><span class="p">[</span><span class="n">primitive</span><span class="p">.</span><span class="n">BOX_X</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">primitive</span><span class="p">.</span><span class="n">dimensions</span><span class="p">[</span><span class="n">primitive</span><span class="p">.</span><span class="n">BOX_Y</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.1</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">primitive</span><span class="p">.</span><span class="n">dimensions</span><span class="p">[</span><span class="n">primitive</span><span class="p">.</span><span class="n">BOX_Z</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">primitive</span><span class="p">.</span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">primitive</span><span class="p">.</span><span class="n">BOX</span><span class="p">;</span>
+<span class="w">  </span><span class="n">primitive</span><span class="p">.</span><span class="n">dimensions</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="w">  </span><span class="n">primitive</span><span class="p">.</span><span class="n">dimensions</span><span class="p">[</span><span class="n">primitive</span><span class="p">.</span><span class="n">BOX_X</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span>
+<span class="w">  </span><span class="n">primitive</span><span class="p">.</span><span class="n">dimensions</span><span class="p">[</span><span class="n">primitive</span><span class="p">.</span><span class="n">BOX_Y</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.1</span><span class="p">;</span>
+<span class="w">  </span><span class="n">primitive</span><span class="p">.</span><span class="n">dimensions</span><span class="p">[</span><span class="n">primitive</span><span class="p">.</span><span class="n">BOX_Z</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span>
 
 <span class="w">  </span><span class="c1">// Define the pose of the box (relative to the frame_id)</span>
-<span class="w">  </span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Pose</span><span class="w"> </span><span class="n">box_pose</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">box_pose</span><span class="p">.</span><span class="n">orientation</span><span class="p">.</span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">box_pose</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.2</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">box_pose</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.2</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">box_pose</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.25</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Pose</span><span class="w"> </span><span class="n">box_pose</span><span class="p">;</span>
+<span class="w">  </span><span class="n">box_pose</span><span class="p">.</span><span class="n">orientation</span><span class="p">.</span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span>
+<span class="w">  </span><span class="n">box_pose</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.2</span><span class="p">;</span>
+<span class="w">  </span><span class="n">box_pose</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.2</span><span class="p">;</span>
+<span class="w">  </span><span class="n">box_pose</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.25</span><span class="p">;</span>
 
-<span class="w">  </span><span class="n">collision_object</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">primitive</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="n">collision_object</span><span class="p">.</span><span class="n">primitive_poses</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">box_pose</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="n">collision_object</span><span class="p">.</span><span class="n">operation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">collision_object</span><span class="p">.</span><span class="n">ADD</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">collision_object</span><span class="p">.</span><span class="n">primitives</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">primitive</span><span class="p">);</span>
+<span class="w">  </span><span class="n">collision_object</span><span class="p">.</span><span class="n">primitive_poses</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">box_pose</span><span class="p">);</span>
+<span class="w">  </span><span class="n">collision_object</span><span class="p">.</span><span class="n">operation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">collision_object</span><span class="p">.</span><span class="n">ADD</span><span class="p">;</span>
 
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">collision_object</span><span class="p">;</span><span class="w"></span>
-<span class="p">}();</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">collision_object</span><span class="p">;</span>
+<span class="p">}();</span>
 </pre></div>
 </div>
 </div>
@@ -181,8 +181,8 @@ Place this code block between setting the target pose from the previous step and
 To do this, we use an object called the <code class="docutils literal notranslate"><span class="pre">PlanningSceneInterface</span></code> that uses ROS interfaces to communicate changes to the planning scene to <code class="docutils literal notranslate"><span class="pre">MoveGroup</span></code>.
 This code block should directly follow the code block that creates the collision object.</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Add the collision object to the scene</span>
-<span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">PlanningSceneInterface</span><span class="w"> </span><span class="n">planning_scene_interface</span><span class="p">;</span><span class="w"></span>
-<span class="n">planning_scene_interface</span><span class="p">.</span><span class="n">applyCollisionObject</span><span class="p">(</span><span class="n">collision_object</span><span class="p">);</span><span class="w"></span>
+<span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">PlanningSceneInterface</span><span class="w"> </span><span class="n">planning_scene_interface</span><span class="p">;</span>
+<span class="n">planning_scene_interface</span><span class="p">.</span><span class="n">applyCollisionObject</span><span class="p">(</span><span class="n">collision_object</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -227,7 +227,7 @@ In this next tutorial, you will create a program to pick and place an object.</p
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, PickNik Robotics.</p>
+    <p>&#169; Copyright 2023, PickNik Robotics.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

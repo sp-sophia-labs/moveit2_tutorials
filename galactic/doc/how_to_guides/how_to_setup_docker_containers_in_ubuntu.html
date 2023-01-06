@@ -135,8 +135,8 @@ This guide is intended for people who would like to have a separate environment 
 <li><p>Open a terminal session, download the Docker script, and make it executable.</p></li>
 </ol>
 <blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget https://raw.githubusercontent.com/abake48/moveit2_tutorials/how-to-docker-ubuntu/_scripts/start-docker.sh -O ~/.local/bin/start-docker.sh
-chmod +x ~/.local/bin/start-docker.sh
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>https://raw.githubusercontent.com/abake48/moveit2_tutorials/how-to-docker-ubuntu/_scripts/start-docker.sh<span class="w"> </span>-O<span class="w"> </span>~/.local/bin/start-docker.sh
+chmod<span class="w"> </span>+x<span class="w"> </span>~/.local/bin/start-docker.sh
 </pre></div>
 </div>
 </div></blockquote>
@@ -153,16 +153,16 @@ chmod +x ~/.local/bin/start-docker.sh
 </dd>
 </dl>
 <p>To run the script and use Nvidia GPU drivers</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>start-docker.sh moveit2-galactic moveit/moveit2:galactic-source
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>start-docker.sh<span class="w"> </span>moveit2-galactic<span class="w"> </span>moveit/moveit2:galactic-source
 </pre></div>
 </div>
 <p>If the above command fails, it is likely that Nvidia drivers cannot be used or are installed correctly. In which case, you can still proceed without using Nvidia drivers!
 First, you’ll need to remove the container you just created by running the following command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker rm moveit2-galactic
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>rm<span class="w"> </span>moveit2-galactic
 </pre></div>
 </div>
 <p>Then, to run the Docker container without the Nvidia drivers, run the following command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>start-docker.sh moveit2-galactic moveit/moveit2:galactic-source <span class="nb">false</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>start-docker.sh<span class="w"> </span>moveit2-galactic<span class="w"> </span>moveit/moveit2:galactic-source<span class="w"> </span><span class="nb">false</span>
 </pre></div>
 </div>
 <p>Running the script for the first time creates, starts, and executes the container <code class="docutils literal notranslate"><span class="pre">moveit2-galactic</span></code>.</p>
@@ -172,7 +172,7 @@ First, you’ll need to remove the container you just created by running the fol
 </ol>
 <blockquote>
 <div><p>Whenever you wish to reenter your container, you can run the following command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>start-docker.sh moveit2-galactic
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>start-docker.sh<span class="w"> </span>moveit2-galactic
 </pre></div>
 </div>
 </div></blockquote>
@@ -204,7 +204,7 @@ For example, this guide instructs you to use the image with the tag <code class=
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, PickNik Robotics.</p>
+    <p>&#169; Copyright 2023, PickNik Robotics.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

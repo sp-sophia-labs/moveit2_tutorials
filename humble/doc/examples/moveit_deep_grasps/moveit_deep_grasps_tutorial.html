@@ -142,8 +142,8 @@ both the <code class="docutils literal notranslate"><span class="pre">moveit_tas
 candidates along with the associated costs back to the action client as feedback.</p>
 <p>The relevant fields for the message can be seen in <code class="docutils literal notranslate"><span class="pre">moveit_task_constructor_msgs/action/SampleGraspPoses.action</span></code>.</p>
 <p>Using the <code class="docutils literal notranslate"><span class="pre">DeepGraspPose</span></code> stage is easy. Add the stage below to the current task. The implementation can be seen in <a class="reference external" href="https://github.com/PickNikRobotics/deep_grasp_demo/blob/master/deep_grasp_task/src/deep_pick_place_task.cpp#L207">Deep Grasp Task</a>.</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">stage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">stages</span><span class="o">::</span><span class="n">DeepGraspPose</span><span class="o">&lt;</span><span class="n">moveit_task_constructor_msgs</span><span class="o">::</span><span class="n">SampleGraspPosesAction</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="w"></span>
-<span class="w">  </span><span class="n">action_name</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;generate grasp pose&quot;</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">stage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_unique</span><span class="o">&lt;</span><span class="n">stages</span><span class="o">::</span><span class="n">DeepGraspPose</span><span class="o">&lt;</span><span class="n">moveit_task_constructor_msgs</span><span class="o">::</span><span class="n">SampleGraspPosesAction</span><span class="o">&gt;&gt;</span><span class="p">(</span>
+<span class="w">  </span><span class="n">action_name</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;generate grasp pose&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>The template parameter is the action message. Specify the <code class="docutils literal notranslate"><span class="pre">action_name</span></code> which is the namespace for communication between
@@ -222,7 +222,7 @@ such as the bar clamp (seen on the right). Experiment with the <code class="docu
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, PickNik Robotics.</p>
+    <p>&#169; Copyright 2023, PickNik Robotics.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

@@ -144,10 +144,10 @@
 <p>A time parameterization algorithm such as TOTG calculates velocities and accelerations for a trajectory, but none of the time parameterization algorithms support jerk limits. This is not ideal – large jerks  along a trajectory can cause jerky motion or damage hardware. As a further post-processing step, the Ruckig jerk-limited smoothing algorithm can be appliied to limit joint jerks over the trajectories.</p>
 <p>To apply the Ruckig smoothing algorithm, jerk limits should be defined in a <code class="docutils literal notranslate"><span class="pre">joint_limits.yaml</span></code> file. If you do not specify a jerk limit for any joint, a reasonable default will be applied and a warning printed.</p>
 <p>Finally, add the Ruckig smoothing algorithm to the list of planning request adapters (typically in <code class="docutils literal notranslate"><span class="pre">ompl_planning.yaml</span></code>). The Ruckig smoothing algorithm should run last, so put it at the top of list:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">request_adapters</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span><span class="w"></span>
-<span class="w">  </span><span class="no">default_planner_request_adapters/AddRuckigTrajectorySmoothing</span><span class="w"></span>
-<span class="w">  </span><span class="no">default_planner_request_adapters/AddTimeOptimalParameterization</span><span class="w"></span>
-<span class="w">  </span><span class="no">...</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">request_adapters</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">&gt;-</span>
+<span class="w">  </span><span class="no">default_planner_request_adapters/AddRuckigTrajectorySmoothing</span>
+<span class="w">  </span><span class="no">default_planner_request_adapters/AddTimeOptimalParameterization</span>
+<span class="w">  </span><span class="no">...</span>
 </pre></div>
 </div>
 </div>
@@ -165,7 +165,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, PickNik Robotics.</p>
+    <p>&#169; Copyright 2023, PickNik Robotics.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

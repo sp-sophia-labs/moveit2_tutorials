@@ -125,10 +125,10 @@ To prepare yourself for this please complete the <a class="reference external" h
 <p>Navigate to your <code class="docutils literal notranslate"><span class="pre">ws_moveit2</span></code> directory you created in the <a class="reference internal" href="../getting_started/getting_started.html"><span class="doc">Getting Started Tutorial</span></a>.</p>
 <p>Change directory into the <code class="docutils literal notranslate"><span class="pre">src</span></code> directory, as that is where we put our source code.</p>
 <p>Create a new package with the ROS 2 command line tools:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 pkg create <span class="se">\</span>
- --build-type ament_cmake <span class="se">\</span>
- --dependencies moveit_ros_planning_interface rclcpp <span class="se">\</span>
- --node-name hello_moveit hello_moveit
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>pkg<span class="w"> </span>create<span class="w"> </span><span class="se">\</span>
+<span class="w"> </span>--build-type<span class="w"> </span>ament_cmake<span class="w"> </span><span class="se">\</span>
+<span class="w"> </span>--dependencies<span class="w"> </span>moveit_ros_planning_interface<span class="w"> </span>rclcpp<span class="w"> </span><span class="se">\</span>
+<span class="w"> </span>--node-name<span class="w"> </span>hello_moveit<span class="w"> </span>hello_moveit
 </pre></div>
 </div>
 <p>The output of this will show that it created some files in a new directory.</p>
@@ -139,45 +139,45 @@ This will create the necessary changes in the <code class="docutils literal notr
 <div class="section" id="create-a-ros-node-and-executor">
 <h3>2 Create a ROS Node and Executor<a class="headerlink" href="#create-a-ros-node-and-executor" title="Permalink to this headline"></a></h3>
 <p>This first block of code is a bit of boilerplate but you should be used to seeing this from the ROS 2 tutorials.</p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;memory&gt;</span><span class="cp"></span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;memory&gt;</span>
 
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;rclcpp/rclcpp.hpp&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;moveit/move_group_interface/move_group_interface.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;rclcpp/rclcpp.hpp&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;moveit/move_group_interface/move_group_interface.h&gt;</span>
 
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">argv</span><span class="p">[])</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
 <span class="w">  </span><span class="c1">// Initialize ROS and create the Node</span>
-<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="s">&quot;hello_moveit&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">NodeOptions</span><span class="p">().</span><span class="n">automatically_declare_parameters_from_overrides</span><span class="p">(</span><span class="nb">true</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">);</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span><span class="o">&gt;</span><span class="p">(</span>
+<span class="w">    </span><span class="s">&quot;hello_moveit&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">NodeOptions</span><span class="p">().</span><span class="n">automatically_declare_parameters_from_overrides</span><span class="p">(</span><span class="nb">true</span><span class="p">)</span>
+<span class="w">  </span><span class="p">);</span>
 
 <span class="w">  </span><span class="c1">// Create a ROS logger</span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">logger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">get_logger</span><span class="p">(</span><span class="s">&quot;hello_moveit&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">logger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">get_logger</span><span class="p">(</span><span class="s">&quot;hello_moveit&quot;</span><span class="p">);</span>
 
 <span class="w">  </span><span class="c1">// Next step goes here</span>
 
 <span class="w">  </span><span class="c1">// Shutdown ROS</span>
-<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span><span class="w"></span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">shutdown</span><span class="p">();</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <div class="section" id="build-and-run">
 <h4>2.1 Build and Run<a class="headerlink" href="#build-and-run" title="Permalink to this headline"></a></h4>
 <p>We will build and run the program to see that everything is right before we move on.</p>
 <p>Change directory back to the workspace directory <code class="docutils literal notranslate"><span class="pre">ws_moveit2</span></code> and run this command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon build --mixin debug
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon<span class="w"> </span>build<span class="w"> </span>--mixin<span class="w"> </span>debug
 </pre></div>
 </div>
 <p>After this succeeds, <strong>open a new terminal</strong>, then source the workspace environment script in that new terminal so that we can run our program.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/ws_moveit2
-<span class="nb">source</span> install/setup.bash
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ws_moveit2
+<span class="nb">source</span><span class="w"> </span>install/setup.bash
 </pre></div>
 </div>
 <p>Run your program and see the output.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run hello_moveit hello_moveit
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>hello_moveit<span class="w"> </span>hello_moveit
 </pre></div>
 </div>
 <p>The program should run and exit without error.</p>
@@ -186,10 +186,10 @@ This will create the necessary changes in the <code class="docutils literal notr
 <h4>2.2 Examine the code<a class="headerlink" href="#examine-the-code" title="Permalink to this headline"></a></h4>
 <p>The headers included at the top are just some standard C++ headers and the header for ROS and MoveIt that we will use later.</p>
 <p>After that, we have the normal call to initialize rclcpp, and then we create our Node.</p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span><span class="o">&gt;</span><span class="p">(</span><span class="w"></span>
-<span class="w">  </span><span class="s">&quot;hello_moveit&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">NodeOptions</span><span class="p">().</span><span class="n">automatically_declare_parameters_from_overrides</span><span class="p">(</span><span class="nb">true</span><span class="p">)</span><span class="w"></span>
-<span class="p">);</span><span class="w"></span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span><span class="o">&gt;</span><span class="p">(</span>
+<span class="w">  </span><span class="s">&quot;hello_moveit&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="n">rclcpp</span><span class="o">::</span><span class="n">NodeOptions</span><span class="p">().</span><span class="n">automatically_declare_parameters_from_overrides</span><span class="p">(</span><span class="nb">true</span><span class="p">)</span>
+<span class="p">);</span>
 </pre></div>
 </div>
 <p>The first argument is a string that ROS will use to make a unique node.
@@ -201,57 +201,57 @@ The second is needed for MoveIt because of how we use ROS Parameters.</p>
 <h3>3 Plan and Execute using MoveGroupInterface<a class="headerlink" href="#plan-and-execute-using-movegroupinterface" title="Permalink to this headline"></a></h3>
 <p>In place of the comment that says “Next step goes here,” add this code:</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create the MoveIt MoveGroup Interface</span>
-<span class="k">using</span><span class="w"> </span><span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span><span class="p">;</span><span class="w"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">move_group_interface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MoveGroupInterface</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;panda_arm&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span><span class="p">;</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">move_group_interface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MoveGroupInterface</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;panda_arm&quot;</span><span class="p">);</span>
 
 <span class="c1">// Set a target Pose</span>
-<span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">target_pose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]{</span><span class="w"></span>
-<span class="w">  </span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Pose</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">msg</span><span class="p">.</span><span class="n">orientation</span><span class="p">.</span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">msg</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.28</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">msg</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">-0.2</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">msg</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span><span class="w"></span>
-<span class="p">}();</span><span class="w"></span>
-<span class="n">move_group_interface</span><span class="p">.</span><span class="n">setPoseTarget</span><span class="p">(</span><span class="n">target_pose</span><span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">target_pose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]{</span>
+<span class="w">  </span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Pose</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span>
+<span class="w">  </span><span class="n">msg</span><span class="p">.</span><span class="n">orientation</span><span class="p">.</span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span>
+<span class="w">  </span><span class="n">msg</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.28</span><span class="p">;</span>
+<span class="w">  </span><span class="n">msg</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">-0.2</span><span class="p">;</span>
+<span class="w">  </span><span class="n">msg</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span>
+<span class="p">}();</span>
+<span class="n">move_group_interface</span><span class="p">.</span><span class="n">setPoseTarget</span><span class="p">(</span><span class="n">target_pose</span><span class="p">);</span>
 
 <span class="c1">// Create a plan to that target pose</span>
-<span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">[</span><span class="n">success</span><span class="p">,</span><span class="w"> </span><span class="n">plan</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="n">move_group_interface</span><span class="p">]{</span><span class="w"></span>
-<span class="w">  </span><span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span><span class="o">::</span><span class="n">Plan</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">ok</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">(</span><span class="n">move_group_interface</span><span class="p">.</span><span class="n">plan</span><span class="p">(</span><span class="n">msg</span><span class="p">));</span><span class="w"></span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="p">(</span><span class="n">ok</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="p">);</span><span class="w"></span>
-<span class="p">}();</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">[</span><span class="n">success</span><span class="p">,</span><span class="w"> </span><span class="n">plan</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="n">move_group_interface</span><span class="p">]{</span>
+<span class="w">  </span><span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span><span class="o">::</span><span class="n">Plan</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">ok</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">(</span><span class="n">move_group_interface</span><span class="p">.</span><span class="n">plan</span><span class="p">(</span><span class="n">msg</span><span class="p">));</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="p">(</span><span class="n">ok</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="p">);</span>
+<span class="p">}();</span>
 
 <span class="c1">// Execute the plan</span>
-<span class="k">if</span><span class="p">(</span><span class="n">success</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">move_group_interface</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">plan</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">RCLCPP_ERROR</span><span class="p">(</span><span class="n">logger</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Planing failed!&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="k">if</span><span class="p">(</span><span class="n">success</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">move_group_interface</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">plan</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">RCLCPP_ERROR</span><span class="p">(</span><span class="n">logger</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Planing failed!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <div class="section" id="id1">
 <h4>3.1 Build and Run<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h4>
 <p>Just like before, we need to build the code before we can run it.</p>
 <p>In the workspace directory, <code class="docutils literal notranslate"><span class="pre">ws_moveit2</span></code>, run this command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon build --mixin debug
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon<span class="w"> </span>build<span class="w"> </span>--mixin<span class="w"> </span>debug
 </pre></div>
 </div>
 <p>After this succeeds, we need to re-use the demo launch file from the previous tutorial to start RViz and the MoveGroup node.
 In a separate terminal, source the workspace and then execute this:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 launch moveit2_tutorials demo.launch.py
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>launch<span class="w"> </span>moveit2_tutorials<span class="w"> </span>demo.launch.py
 </pre></div>
 </div>
 <p>Then in the <code class="docutils literal notranslate"><span class="pre">Displays</span></code> window under <code class="docutils literal notranslate"><span class="pre">MotionPlanning/Planning</span> <span class="pre">Request</span></code>, uncheck the box <code class="docutils literal notranslate"><span class="pre">Query</span> <span class="pre">Goal</span> <span class="pre">State</span></code>.</p>
 <a class="reference internal image-reference" href="../../../_images/rviz_1.png"><img alt="../../../_images/rviz_1.png" src="../../../_images/rviz_1.png" style="width: 300px;" /></a>
 <p>In a third terminal, source the workspace and run your program.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2 run hello_moveit hello_moveit
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>hello_moveit<span class="w"> </span>hello_moveit
 </pre></div>
 </div>
 <p>This should cause the robot in RViz to move and end up in this pose:</p>
 <a class="reference internal image-reference" href="../../../_images/rviz_2.png"><img alt="../../../_images/rviz_2.png" src="../../../_images/rviz_2.png" style="width: 300px;" /></a>
 <p>Note that if you ran the node <code class="docutils literal notranslate"><span class="pre">hello_moveit</span></code> without launching the demo launch file first, it will wait for 10 seconds and then print this error and exit.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>ERROR<span class="o">]</span> <span class="o">[</span><span class="m">1644181704</span>.350825487<span class="o">]</span> <span class="o">[</span>hello_moveit<span class="o">]</span>: Could not find parameter robot_description and did not receive robot_description via std_msgs::msg::String subscription within <span class="m">10</span>.000000 seconds.
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>ERROR<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">1644181704</span>.350825487<span class="o">]</span><span class="w"> </span><span class="o">[</span>hello_moveit<span class="o">]</span>:<span class="w"> </span>Could<span class="w"> </span>not<span class="w"> </span>find<span class="w"> </span>parameter<span class="w"> </span>robot_description<span class="w"> </span>and<span class="w"> </span>did<span class="w"> </span>not<span class="w"> </span>receive<span class="w"> </span>robot_description<span class="w"> </span>via<span class="w"> </span>std_msgs::msg::String<span class="w"> </span>subscription<span class="w"> </span>within<span class="w"> </span><span class="m">10</span>.000000<span class="w"> </span>seconds.
 </pre></div>
 </div>
 <p>This is because the <code class="docutils literal notranslate"><span class="pre">demo.launch.py</span></code> launch is starting the <code class="docutils literal notranslate"><span class="pre">MoveGroup</span></code> node that provides the robot description.
@@ -264,8 +264,8 @@ If it fails to find that within 10 seconds, it prints this error and terminates 
 Note that this is the only mutable object that we create in this program.
 Another thing to take note of is the second interface to the <code class="docutils literal notranslate"><span class="pre">MoveGroupInterface</span></code> object we are creating here: <code class="docutils literal notranslate"><span class="pre">&quot;panda_arm&quot;</span></code>.
 That is the group of joints as defined in the robot description that we are going to operate on with this <code class="docutils literal notranslate"><span class="pre">MoveGroupInterface</span></code>.</p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span><span class="p">;</span><span class="w"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">move_group_interface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MoveGroupInterface</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;panda_arm&quot;</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span><span class="p">;</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">move_group_interface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MoveGroupInterface</span><span class="p">(</span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;panda_arm&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Then, we set our target pose and plan. Note that only the target pose is set (via <code class="docutils literal notranslate"><span class="pre">setPoseTarget</span></code>. The starting pose is implicitly the position published by joint state publisher, which could be changed using the <code class="docutils literal notranslate"><span class="pre">MoveGroupInterface::setStartState*</span></code> family of functions (but is not in this tutorial).</p>
@@ -273,31 +273,31 @@ That is the group of joints as defined in the robot description that we are goin
 This is a pattern you’ll find in modern C++ codebases that enables writing in a more declarative style.
 For more information about this pattern there is a couple of links at the end of this tutorial.</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Set a target Pose</span>
-<span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">target_pose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]{</span><span class="w"></span>
-<span class="w">  </span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Pose</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">msg</span><span class="p">.</span><span class="n">orientation</span><span class="p">.</span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">msg</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.28</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">msg</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">-0.2</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">msg</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span><span class="w"></span>
-<span class="p">}();</span><span class="w"></span>
-<span class="n">move_group_interface</span><span class="p">.</span><span class="n">setPoseTarget</span><span class="p">(</span><span class="n">target_pose</span><span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">target_pose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]{</span>
+<span class="w">  </span><span class="n">geometry_msgs</span><span class="o">::</span><span class="n">msg</span><span class="o">::</span><span class="n">Pose</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span>
+<span class="w">  </span><span class="n">msg</span><span class="p">.</span><span class="n">orientation</span><span class="p">.</span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span>
+<span class="w">  </span><span class="n">msg</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.28</span><span class="p">;</span>
+<span class="w">  </span><span class="n">msg</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">-0.2</span><span class="p">;</span>
+<span class="w">  </span><span class="n">msg</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span>
+<span class="p">}();</span>
+<span class="n">move_group_interface</span><span class="p">.</span><span class="n">setPoseTarget</span><span class="p">(</span><span class="n">target_pose</span><span class="p">);</span>
 
 <span class="c1">// Create a plan to that target pose</span>
-<span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">[</span><span class="n">success</span><span class="p">,</span><span class="w"> </span><span class="n">plan</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="n">move_group_interface</span><span class="p">]{</span><span class="w"></span>
-<span class="w">  </span><span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span><span class="o">::</span><span class="n">Plan</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">ok</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">(</span><span class="n">move_group_interface</span><span class="p">.</span><span class="n">plan</span><span class="p">(</span><span class="n">msg</span><span class="p">));</span><span class="w"></span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="p">(</span><span class="n">ok</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="p">);</span><span class="w"></span>
-<span class="p">}();</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">[</span><span class="n">success</span><span class="p">,</span><span class="w"> </span><span class="n">plan</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="n">move_group_interface</span><span class="p">]{</span>
+<span class="w">  </span><span class="n">moveit</span><span class="o">::</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MoveGroupInterface</span><span class="o">::</span><span class="n">Plan</span><span class="w"> </span><span class="n">msg</span><span class="p">;</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">ok</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">(</span><span class="n">move_group_interface</span><span class="p">.</span><span class="n">plan</span><span class="p">(</span><span class="n">msg</span><span class="p">));</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="p">(</span><span class="n">ok</span><span class="p">,</span><span class="w"> </span><span class="n">msg</span><span class="p">);</span>
+<span class="p">}();</span>
 </pre></div>
 </div>
 <p>Finally, we execute our plan if planning was successful, otherwise we log an error:</p>
 <div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Execute the plan</span>
-<span class="k">if</span><span class="p">(</span><span class="n">success</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">move_group_interface</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">plan</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">RCLCPP_ERROR</span><span class="p">(</span><span class="n">logger</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Planning failed!&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="k">if</span><span class="p">(</span><span class="n">success</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">move_group_interface</span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="n">plan</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">RCLCPP_ERROR</span><span class="p">(</span><span class="n">logger</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Planning failed!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div>
@@ -336,7 +336,7 @@ For more information about this pattern there is a couple of links at the end of
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, PickNik Robotics.</p>
+    <p>&#169; Copyright 2023, PickNik Robotics.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

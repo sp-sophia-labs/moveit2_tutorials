@@ -126,10 +126,10 @@
 <h2>Parallel Planning Interface<a class="headerlink" href="#parallel-planning-interface" title="Permalink to this headline"></a></h2>
 <p>Using parallel planning with MoveItCpp is similar to single pipeline planning, except that a different implementation
 of the planning component’s <code class="code docutils literal notranslate"><span class="pre">plan(...)</span></code> function is used:</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MotionPlanResponse</span><span class="w"> </span><span class="n">PlanningComponent</span><span class="o">::</span><span class="n">plan</span><span class="p">(</span><span class="w"></span>
-<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">MultiPipelinePlanRequestParameters</span><span class="o">&amp;</span><span class="w"> </span><span class="n">parameters</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="n">SolutionCallbackFunction</span><span class="w"> </span><span class="n">solution_selection_callback</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="n">StoppingCriterionFunction</span><span class="w"> </span><span class="n">stopping_criterion_callback</span><span class="p">)</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">MotionPlanResponse</span><span class="w"> </span><span class="n">PlanningComponent</span><span class="o">::</span><span class="n">plan</span><span class="p">(</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">MultiPipelinePlanRequestParameters</span><span class="o">&amp;</span><span class="w"> </span><span class="n">parameters</span><span class="p">,</span>
+<span class="w">  </span><span class="n">SolutionCallbackFunction</span><span class="w"> </span><span class="n">solution_selection_callback</span><span class="p">,</span>
+<span class="w">  </span><span class="n">StoppingCriterionFunction</span><span class="w"> </span><span class="n">stopping_criterion_callback</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>This function tries to plan a trajectory from a start state to a goal state that satisfies a set of constraints. Based on the configuration
@@ -152,110 +152,110 @@ suggests that a well-configured parallel planning setup is versatile, and can be
 <div class="section" id="what-code-is-necessary-to-use-parallel-planning">
 <h2>What code is necessary to use parallel planning?<a class="headerlink" href="#what-code-is-necessary-to-use-parallel-planning" title="Permalink to this headline"></a></h2>
 <p>First, you need to initialize <code class="code docutils literal notranslate"><span class="pre">moveit_cpp</span></code> and a planning component that will solve your planning problems. Next, you need to set start state and goal constraints:</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">planning_component_</span><span class="o">-&gt;</span><span class="n">setGoal</span><span class="p">(</span><span class="o">*</span><span class="n">goal_state</span><span class="p">);</span><span class="w"></span>
-<span class="n">planning_component_</span><span class="o">-&gt;</span><span class="n">setStartStateToCurrentState</span><span class="p">();</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">planning_component_</span><span class="o">-&gt;</span><span class="n">setGoal</span><span class="p">(</span><span class="o">*</span><span class="n">goal_state</span><span class="p">);</span>
+<span class="n">planning_component_</span><span class="o">-&gt;</span><span class="n">setStartStateToCurrentState</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>Additionally, it is necessary to set up the <code class="code docutils literal notranslate"><span class="pre">MultiPipelinePlanRequestParameters</span></code>.</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">moveit_cpp</span><span class="o">::</span><span class="n">PlanningComponent</span><span class="o">::</span><span class="n">MultiPipelinePlanRequestParameters</span><span class="w"> </span><span class="n">multi_pipeline_plan_request</span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">node_</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;ompl_rrtc&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;pilz_lin&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;chomp&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">moveit_cpp</span><span class="o">::</span><span class="n">PlanningComponent</span><span class="o">::</span><span class="n">MultiPipelinePlanRequestParameters</span><span class="w"> </span><span class="n">multi_pipeline_plan_request</span><span class="p">{</span>
+<span class="w">  </span><span class="n">node_</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;ompl_rrtc&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;pilz_lin&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;chomp&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">};</span>
 </pre></div>
 </div>
 <p>The constructor of this class will initialize multiple <code class="code docutils literal notranslate"><span class="pre">PlanningRequestParameter</span></code> class members based on the config that is provided in the node’s
 parameter namespaces <code class="code docutils literal notranslate"><span class="pre">&quot;ompl_rrtc&quot;</span></code>, <code class="code docutils literal notranslate"><span class="pre">&quot;pilz_lin&quot;</span></code>, and <code class="code docutils literal notranslate"><span class="pre">&quot;chomp&quot;</span></code>. To provide these, you can extend the <code class="code docutils literal notranslate"><span class="pre">moveit_cpp.yaml</span></code> file:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="c1"># PlanRequestParameters for the first parallel pipeline that uses OMPL - RRTConnect</span><span class="w"></span>
-<span class="w">  </span><span class="nt">ompl_rrtc</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">plan_request_params</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">planning_attempts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
-<span class="w">      </span><span class="nt">planning_pipeline</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ompl</span><span class="w"></span>
-<span class="w">      </span><span class="nt">planner_id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;RRTConnectkConfigDefault&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="nt">max_velocity_scaling_factor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span><span class="w"></span>
-<span class="w">      </span><span class="nt">max_acceleration_scaling_factor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span><span class="w"></span>
-<span class="w">      </span><span class="nt">planning_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="c1"># PlanRequestParameters for the first parallel pipeline that uses OMPL - RRTConnect</span>
+<span class="w">  </span><span class="nt">ompl_rrtc</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">plan_request_params</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">planning_attempts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">planning_pipeline</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ompl</span>
+<span class="w">      </span><span class="nt">planner_id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;RRTConnectkConfigDefault&quot;</span>
+<span class="w">      </span><span class="nt">max_velocity_scaling_factor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+<span class="w">      </span><span class="nt">max_acceleration_scaling_factor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+<span class="w">      </span><span class="nt">planning_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.5</span>
 
-<span class="w">  </span><span class="c1"># PlanRequestParameters for a second parallel pipeline using Pilz with the LIN planner</span><span class="w"></span>
-<span class="w">  </span><span class="nt">pilz_lin</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">plan_request_params</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">planning_attempts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
-<span class="w">      </span><span class="nt">planning_pipeline</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pilz_industrial_motion_planner</span><span class="w"></span>
-<span class="w">      </span><span class="nt">planner_id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;LIN&quot;</span><span class="w"></span>
-<span class="w">      </span><span class="nt">max_velocity_scaling_factor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span><span class="w"></span>
-<span class="w">      </span><span class="nt">max_acceleration_scaling_factor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span><span class="w"></span>
-<span class="w">      </span><span class="nt">planning_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.8</span><span class="w"></span>
+<span class="w">  </span><span class="c1"># PlanRequestParameters for a second parallel pipeline using Pilz with the LIN planner</span>
+<span class="w">  </span><span class="nt">pilz_lin</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">plan_request_params</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">planning_attempts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">planning_pipeline</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pilz_industrial_motion_planner</span>
+<span class="w">      </span><span class="nt">planner_id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;LIN&quot;</span>
+<span class="w">      </span><span class="nt">max_velocity_scaling_factor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+<span class="w">      </span><span class="nt">max_acceleration_scaling_factor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+<span class="w">      </span><span class="nt">planning_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.8</span>
 
-<span class="w">  </span><span class="c1"># PlanRequestParameters for a third parallel pipeline that uses CHOMP as planner</span><span class="w"></span>
-<span class="w">  </span><span class="nt">chomp</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">plan_request_params</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">planning_attempts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
-<span class="w">      </span><span class="nt">planning_pipeline</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chomp</span><span class="w"></span>
-<span class="w">      </span><span class="nt">max_velocity_scaling_factor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span><span class="w"></span>
-<span class="w">      </span><span class="nt">max_acceleration_scaling_factor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span><span class="w"></span>
-<span class="w">      </span><span class="nt">planning_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.5</span><span class="w"></span>
+<span class="w">  </span><span class="c1"># PlanRequestParameters for a third parallel pipeline that uses CHOMP as planner</span>
+<span class="w">  </span><span class="nt">chomp</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">plan_request_params</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">planning_attempts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">planning_pipeline</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chomp</span>
+<span class="w">      </span><span class="nt">max_velocity_scaling_factor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+<span class="w">      </span><span class="nt">max_acceleration_scaling_factor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+<span class="w">      </span><span class="nt">planning_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.5</span>
 
-<span class="c1"># Another OMPL planner using a second OMPL pipeline named &#39;ompl_rrt_star&#39;</span><span class="w"></span>
-<span class="nt">ompl_rrt_star</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">plan_request_params</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">planning_attempts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
-<span class="w">    </span><span class="nt">planning_pipeline</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ompl_rrt_star</span><span class="w"> </span><span class="c1"># Different OMPL pipeline name!</span><span class="w"></span>
-<span class="w">    </span><span class="nt">planner_id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;PRMkConfigDefault&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="nt">max_velocity_scaling_factor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span><span class="w"></span>
-<span class="w">    </span><span class="nt">max_acceleration_scaling_factor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span><span class="w"></span>
-<span class="w">    </span><span class="nt">planning_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.5</span><span class="w"></span>
+<span class="c1"># Another OMPL planner using a second OMPL pipeline named &#39;ompl_rrt_star&#39;</span>
+<span class="nt">ompl_rrt_star</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">plan_request_params</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">planning_attempts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">planning_pipeline</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ompl_rrt_star</span><span class="w"> </span><span class="c1"># Different OMPL pipeline name!</span>
+<span class="w">    </span><span class="nt">planner_id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;PRMkConfigDefault&quot;</span>
+<span class="w">    </span><span class="nt">max_velocity_scaling_factor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+<span class="w">    </span><span class="nt">max_acceleration_scaling_factor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+<span class="w">    </span><span class="nt">planning_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.5</span>
 </pre></div>
 </div>
 <p>Optionally, it is possible to define a custom stopping criterion and/or solution selection function. If none are passed as an argument to <code class="code docutils literal notranslate"><span class="pre">plan(...)</span></code>,
 all pipelines use their complete planning time budget, and afterwards the shortest path is chosen.</p>
 <p>For this example, we’re using the default stopping criterion and a solution selection criterion that chooses the shortest solution:</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MotionPlanResponse</span><span class="w"> </span><span class="nf">getShortestSolution</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MotionPlanResponse</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">solutions</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MotionPlanResponse</span><span class="w"> </span><span class="nf">getShortestSolution</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MotionPlanResponse</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">solutions</span><span class="p">)</span>
+<span class="p">{</span>
 <span class="w">  </span><span class="c1">// Find trajectory with minimal path</span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">shortest_solution</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">min_element</span><span class="p">(</span><span class="n">solutions</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">solutions</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"></span>
-<span class="w">    </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MotionPlanResponse</span><span class="o">&amp;</span><span class="w"> </span><span class="n">solution_a</span><span class="p">,</span><span class="w"></span>
-<span class="w">       </span><span class="k">const</span><span class="w"> </span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MotionPlanResponse</span><span class="o">&amp;</span><span class="w"> </span><span class="n">solution_b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">shortest_solution</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">min_element</span><span class="p">(</span><span class="n">solutions</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">solutions</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span>
+<span class="w">    </span><span class="p">[](</span><span class="k">const</span><span class="w"> </span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MotionPlanResponse</span><span class="o">&amp;</span><span class="w"> </span><span class="n">solution_a</span><span class="p">,</span>
+<span class="w">       </span><span class="k">const</span><span class="w"> </span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MotionPlanResponse</span><span class="o">&amp;</span><span class="w"> </span><span class="n">solution_b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="c1">// If both solutions were successful, check which path is shorter</span>
-<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">solution_a</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">solution_b</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">robot_trajectory</span><span class="o">::</span><span class="n">path_length</span><span class="p">(</span><span class="o">*</span><span class="n">solution_a</span><span class="p">.</span><span class="n">trajectory_</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"></span>
-<span class="w">               </span><span class="n">robot_trajectory</span><span class="o">::</span><span class="n">path_length</span><span class="p">(</span><span class="o">*</span><span class="n">solution_b</span><span class="p">.</span><span class="n">trajectory_</span><span class="p">);</span><span class="w"></span>
-<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">solution_a</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">solution_b</span><span class="p">)</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">robot_trajectory</span><span class="o">::</span><span class="n">path_length</span><span class="p">(</span><span class="o">*</span><span class="n">solution_a</span><span class="p">.</span><span class="n">trajectory_</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span>
+<span class="w">               </span><span class="n">robot_trajectory</span><span class="o">::</span><span class="n">path_length</span><span class="p">(</span><span class="o">*</span><span class="n">solution_b</span><span class="p">.</span><span class="n">trajectory_</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
 <span class="w">      </span><span class="c1">// If only solution a is successful, return a</span>
-<span class="w">      </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">solution_a</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
-<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">solution_a</span><span class="p">)</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
 <span class="w">      </span><span class="c1">// Else return solution b, either because it is successful or not</span>
-<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">});</span><span class="w"></span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="n">shortest_solution</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="n">shortest_solution</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>Here is an example of a custom stopping criterion, that terminates the other planning pipelines as soon as <code class="code docutils literal notranslate"><span class="pre">RRTConnect</span></code> finds a solution:</p>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="c1">// Stop parallel planning as soon as RRTConnect finds a solution</span>
-<span class="kt">bool</span><span class="w"> </span><span class="nf">stoppingCriterion</span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="n">moveit_cpp</span><span class="o">::</span><span class="n">PlanningComponent</span><span class="o">::</span><span class="n">PlanSolutions</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">plan_solutions</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="n">moveit_cpp</span><span class="o">::</span><span class="n">PlanningComponent</span><span class="o">::</span><span class="n">MultiPipelinePlanRequestParameters</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">plan_request_parameters</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="nf">stoppingCriterion</span><span class="p">(</span>
+<span class="w">    </span><span class="n">moveit_cpp</span><span class="o">::</span><span class="n">PlanningComponent</span><span class="o">::</span><span class="n">PlanSolutions</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">plan_solutions</span><span class="p">,</span>
+<span class="w">    </span><span class="n">moveit_cpp</span><span class="o">::</span><span class="n">PlanningComponent</span><span class="o">::</span><span class="n">MultiPipelinePlanRequestParameters</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">plan_request_parameters</span><span class="p">)</span>
+<span class="p">{</span>
 <span class="w">  </span><span class="c1">// Read solutions that are found up to this point from a thread safe storage</span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">solutions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plan_solutions</span><span class="p">.</span><span class="n">getSolutions</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">solutions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plan_solutions</span><span class="p">.</span><span class="n">getSolutions</span><span class="p">();</span>
 
 <span class="w">  </span><span class="c1">// Stop parallel planning if the pipeline using RRTConnect finds a solution</span>
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">solution</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">solutions</span><span class="p">)</span><span class="w"></span>
-<span class="w">  </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">solution</span><span class="p">.</span><span class="n">planner_id_</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;RRTConnectkConfigDefault&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">solution</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">solutions</span><span class="p">)</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">solution</span><span class="p">.</span><span class="n">planner_id_</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;RRTConnectkConfigDefault&quot;</span><span class="p">)</span>
+<span class="w">      </span><span class="p">{</span>
 <span class="w">        </span><span class="c1">// Return true to abort the other pipelines</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
-<span class="w">      </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="w">  </span><span class="c1">// Return false when parallel planning should continue</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>Once <code class="code docutils literal notranslate"><span class="pre">MultiPipelinePlanRequestParameters</span></code> and optionally <code class="code docutils literal notranslate"><span class="pre">SolutionCallbackFunction</span></code> and/or <code class="code docutils literal notranslate"><span class="pre">StoppingCriterionFunction</span></code> are defined, we call <code class="code docutils literal notranslate"><span class="pre">plan(...)</span></code>:</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">plan_solution</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">planning_component_</span><span class="o">-&gt;</span><span class="n">plan</span><span class="p">(</span><span class="n">multi_pipeline_plan_request</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">getShortestSolution</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">plan_solution</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">planning_component_</span><span class="o">-&gt;</span><span class="n">plan</span><span class="p">(</span><span class="n">multi_pipeline_plan_request</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">getShortestSolution</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -279,7 +279,7 @@ all pipelines use their complete planning time budget, and afterwards the shorte
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, PickNik Robotics.</p>
+    <p>&#169; Copyright 2023, PickNik Robotics.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
