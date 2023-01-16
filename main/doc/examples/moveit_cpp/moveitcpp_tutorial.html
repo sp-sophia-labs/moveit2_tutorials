@@ -163,6 +163,10 @@
 <h3>Setup<a class="headerlink" href="#setup" title="Permalink to this headline"></a></h3>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">PLANNING_GROUP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;panda_arm&quot;</span><span class="p">;</span>
 <span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">LOGNAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;moveit_cpp_tutorial&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>ros2_controllers</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">CONTROLLERS</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;panda_arm_controller&quot;</span><span class="p">);</span>
 
 <span class="cm">/* Otherwise robot with zeros joint_states */</span>
 <span class="n">rclcpp</span><span class="o">::</span><span class="n">sleep_for</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">chrono</span><span class="o">::</span><span class="n">seconds</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
@@ -224,7 +228,7 @@ they are illustrated in the following plan examples</p>
 </div>
 <p>Now, we call the PlanningComponents to compute the plan and visualize it.
 Note that we are just planning</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">plan_solution1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">planning_components</span><span class="o">-&gt;</span><span class="n">plan</span><span class="p">();</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">planning_interface</span><span class="o">::</span><span class="n">MotionPlanResponse</span><span class="w"> </span><span class="n">plan_solution1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">planning_components</span><span class="o">-&gt;</span><span class="n">plan</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>Check if PlanningComponents succeeded in finding the plan</p>
@@ -246,7 +250,8 @@ Note that we are just planning</p>
 <span class="w">  </span><span class="n">visual_tools</span><span class="p">.</span><span class="n">trigger</span><span class="p">();</span>
 
 <span class="w">  </span><span class="cm">/* Uncomment if you want to execute the plan */</span>
-<span class="w">  </span><span class="cm">/* planning_components-&gt;execute(); // Execute the plan */</span>
+<span class="w">  </span><span class="cm">/* bool blocking = true; */</span>
+<span class="w">  </span><span class="cm">/* moveit_controller_manager::ExecutionStatus result = moveit_cpp_ptr-&gt;execute(plan_solution1.trajectory_, blocking, CONTROLLERS); */</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -289,7 +294,8 @@ moveit::core::RobotState</p>
 <span class="w">  </span><span class="n">visual_tools</span><span class="p">.</span><span class="n">trigger</span><span class="p">();</span>
 
 <span class="w">  </span><span class="cm">/* Uncomment if you want to execute the plan */</span>
-<span class="w">  </span><span class="cm">/* planning_components-&gt;execute(); // Execute the plan */</span>
+<span class="w">  </span><span class="cm">/* bool blocking = true; */</span>
+<span class="w">  </span><span class="cm">/* moveit_cpp_ptr-&gt;execute(plan_solution2.trajectory_, blocking, CONTROLLERS); */</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -332,7 +338,8 @@ moveit::core::RobotState</p>
 <span class="w">  </span><span class="n">visual_tools</span><span class="p">.</span><span class="n">trigger</span><span class="p">();</span>
 
 <span class="w">  </span><span class="cm">/* Uncomment if you want to execute the plan */</span>
-<span class="w">  </span><span class="cm">/* planning_components-&gt;execute(); // Execute the plan */</span>
+<span class="w">  </span><span class="cm">/* bool blocking = true; */</span>
+<span class="w">  </span><span class="cm">/* moveit_cpp_ptr-&gt;execute(plan_solution3.trajectory_, blocking, CONTROLLERS); */</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -373,7 +380,8 @@ see <a class="reference external" href="https://github.com/ros-planning/moveit_r
 <span class="w">  </span><span class="n">visual_tools</span><span class="p">.</span><span class="n">trigger</span><span class="p">();</span>
 
 <span class="w">  </span><span class="cm">/* Uncomment if you want to execute the plan */</span>
-<span class="w">  </span><span class="cm">/* planning_components-&gt;execute(); // Execute the plan */</span>
+<span class="w">  </span><span class="cm">/* bool blocking = true; */</span>
+<span class="w">  </span><span class="cm">/* moveit_cpp_ptr-&gt;execute(plan_solution4.trajectory_, blocking, CONTROLLERS); */</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -424,7 +432,8 @@ see <a class="reference external" href="https://github.com/ros-planning/moveit_r
 <span class="w">  </span><span class="n">visual_tools</span><span class="p">.</span><span class="n">trigger</span><span class="p">();</span>
 
 <span class="w">  </span><span class="cm">/* Uncomment if you want to execute the plan */</span>
-<span class="w">  </span><span class="cm">/* planning_components-&gt;execute(); // Execute the plan */</span>
+<span class="w">  </span><span class="cm">/* bool blocking = true; */</span>
+<span class="w">  </span><span class="cm">/* moveit_cpp_ptr-&gt;execute(plan_solution5.trajectory_, blocking, CONTROLLERS); */</span>
 <span class="p">}</span>
 </pre></div>
 </div>
