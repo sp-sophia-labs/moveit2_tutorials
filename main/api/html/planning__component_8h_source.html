@@ -110,7 +110,7 @@ $(function() {
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;geometry_msgs/msg/pose_stamped.h&gt;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;geometry_msgs/msg/pose_stamped.hpp&gt;</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="moveit__cpp_8h.html">moveit/moveit_cpp/moveit_cpp.h</a>&gt;</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="plan__solutions_8hpp.html">moveit/moveit_cpp/plan_solutions.hpp</a>&gt;</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="planning__response_8h.html">moveit/planning_interface/planning_response.h</a>&gt;</span></div>
@@ -238,7 +238,7 @@ $(function() {
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;       <span class="keyword">const</span> <a class="code" href="classmoveit__cpp_1_1PlanningComponent.html#a7c463689c88ee9d9c85878014a30d3e5">SolutionCallbackFunction</a>&amp; solution_selection_callback = &amp;<a class="code" href="namespacemoveit__cpp.html#aeaa57dcbfc74be4ea60a8db8f75a1c34">getShortestSolution</a>,</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;       <a class="code" href="classmoveit__cpp_1_1PlanningComponent.html#a82867c70d29374c3eedfd09f515794e7">StoppingCriterionFunction</a> stopping_criterion_callback = <span class="keyword">nullptr</span>);</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classmoveit__cpp_1_1PlanningComponent.html#aeeec940682a69411d1bd164adc059f80">execute</a>(<span class="keywordtype">bool</span> blocking = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  [[deprecated(<span class="stringliteral">&quot;Use MoveItCpp::execute()&quot;</span>)]] <span class="keywordtype">bool</span> <a class="code" href="classmoveit__cpp_1_1PlanningComponent.html#aeeec940682a69411d1bd164adc059f80">execute</a>(<span class="keywordtype">bool</span> blocking = <span class="keyword">true</span>);</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  <span class="keyword">const</span> <a class="code" href="structplanning__interface_1_1MotionPlanResponse.html">planning_interface::MotionPlanResponse</a>&amp; <a class="code" href="classmoveit__cpp_1_1PlanningComponent.html#a65f7e1501518eb6ee80424efb97207a0">getLastMotionPlanResponse</a>();</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>

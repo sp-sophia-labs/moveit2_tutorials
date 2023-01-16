@@ -140,9 +140,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7fbfe7bccd12821fc22bae7689aba5e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afad41200abebbb9724a17a73363293bd"><td class="memItemLeft" align="right" valign="top">trajectory_execution_manager::TrajectoryExecutionManagerPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1MoveItCpp.html#afad41200abebbb9724a17a73363293bd">getTrajectoryExecutionManagerNonConst</a> ()</td></tr>
 <tr class="separator:afad41200abebbb9724a17a73363293bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48632e24176193c126eb422ffb49aee2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmoveit__controller__manager_1_1ExecutionStatus.html">moveit_controller_manager::ExecutionStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1MoveItCpp.html#a48632e24176193c126eb422ffb49aee2">execute</a> (const std::string &amp;group_name, const robot_trajectory::RobotTrajectoryPtr &amp;robot_trajectory, bool blocking=true)</td></tr>
-<tr class="memdesc:a48632e24176193c126eb422ffb49aee2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute a trajectory on the planning group specified by group_name using the trajectory execution manager. If blocking is set to false, the execution is run in background and the function returns immediately.  <a href="classmoveit__cpp_1_1MoveItCpp.html#a48632e24176193c126eb422ffb49aee2">More...</a><br /></td></tr>
-<tr class="separator:a48632e24176193c126eb422ffb49aee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11b72ed483adbaa4840c8672de64f6a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmoveit__controller__manager_1_1ExecutionStatus.html">moveit_controller_manager::ExecutionStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1MoveItCpp.html#a11b72ed483adbaa4840c8672de64f6a9">execute</a> (const std::string &amp;group_name, const robot_trajectory::RobotTrajectoryPtr &amp;robot_trajectory, bool blocking=true, const std::vector&lt; std::string &gt; &amp;controllers=std::vector&lt; std::string &gt;())</td></tr>
+<tr class="memdesc:a11b72ed483adbaa4840c8672de64f6a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute a trajectory on the planning group specified by group_name using the trajectory execution manager.  <a href="classmoveit__cpp_1_1MoveItCpp.html#a11b72ed483adbaa4840c8672de64f6a9">More...</a><br /></td></tr>
+<tr class="separator:a11b72ed483adbaa4840c8672de64f6a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f5194bc4567398fe8c17988f21b8d18"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmoveit__controller__manager_1_1ExecutionStatus.html">moveit_controller_manager::ExecutionStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1MoveItCpp.html#a3f5194bc4567398fe8c17988f21b8d18">execute</a> (const robot_trajectory::RobotTrajectoryPtr &amp;robot_trajectory, bool blocking=true, const std::vector&lt; std::string &gt; &amp;controllers=std::vector&lt; std::string &gt;())</td></tr>
+<tr class="separator:a3f5194bc4567398fe8c17988f21b8d18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3b5ae726e6bca97849ebba0c4de0d56"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1MoveItCpp.html#ab3b5ae726e6bca97849ebba0c4de0d56">terminatePlanningPipeline</a> (const std::string &amp;pipeline_name)</td></tr>
 <tr class="memdesc:ab3b5ae726e6bca97849ebba0c4de0d56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility to terminate the given planning pipeline.  <a href="classmoveit__cpp_1_1MoveItCpp.html#ab3b5ae726e6bca97849ebba0c4de0d56">More...</a><br /></td></tr>
 <tr class="separator:ab3b5ae726e6bca97849ebba0c4de0d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -361,8 +363,54 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a48632e24176193c126eb422ffb49aee2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48632e24176193c126eb422ffb49aee2">&#9670;&nbsp;</a></span>execute()</h2>
+<a id="a3f5194bc4567398fe8c17988f21b8d18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f5194bc4567398fe8c17988f21b8d18">&#9670;&nbsp;</a></span>execute() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmoveit__controller__manager_1_1ExecutionStatus.html">moveit_controller_manager::ExecutionStatus</a> moveit_cpp::MoveItCpp::execute </td>
+          <td>(</td>
+          <td class="paramtype">const robot_trajectory::RobotTrajectoryPtr &amp;&#160;</td>
+          <td class="paramname"><em>robot_trajectory</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>blocking</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>controllers</em> = <code>std::vector&lt;std::string&gt;()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00227">227</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classmoveit__cpp_1_1MoveItCpp_a3f5194bc4567398fe8c17988f21b8d18_icgraph.png" border="0" usemap="#aclassmoveit__cpp_1_1MoveItCpp_a3f5194bc4567398fe8c17988f21b8d18_icgraph" alt=""/></div>
+<map name="aclassmoveit__cpp_1_1MoveItCpp_a3f5194bc4567398fe8c17988f21b8d18_icgraph" id="aclassmoveit__cpp_1_1MoveItCpp_a3f5194bc4567398fe8c17988f21b8d18_icgraph">
+<area shape="rect" title=" " alt="" coords="675,13,851,54"/>
+<area shape="rect" href="classmoveit__commander_1_1interpreter_1_1MoveGroupCommandInterpreter.html#a29650abebe37990b0109eb3ac6933f6b" title=" " alt="" coords="340,5,627,61"/>
+<area shape="rect" href="classmoveit__commander_1_1interpreter_1_1MoveGroupCommandInterpreter.html#a6e405d05c0a636530b31910b9e1d9b6d" title=" " alt="" coords="5,13,292,54"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a11b72ed483adbaa4840c8672de64f6a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11b72ed483adbaa4840c8672de64f6a9">&#9670;&nbsp;</a></span>execute() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -383,7 +431,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>blocking</em> = <code>true</code>&#160;</td>
+          <td class="paramname"><em>blocking</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>controllers</em> = <code>std::vector&lt;std::string&gt;()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -393,14 +447,24 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Execute a trajectory on the planning group specified by group_name using the trajectory execution manager. If blocking is set to false, the execution is run in background and the function returns immediately. </p>
+<p>Execute a trajectory on the planning group specified by group_name using the trajectory execution manager. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">group_name</td><td>MoveIt group to execute for. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname"><a class="el" href="namespacerobot__trajectory.html">robot_trajectory</a></td><td>Contains trajectory info as well as metadata such as a RobotModel. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">blocking</td><td>If blocking, wait for the trajectory to execute before continuing. Defaults to <code>true</code>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">controllers</td><td>An optional list of ros2_controllers to execute with. If none, MoveIt will attempt to find a controller. The exact behavior of finding a controller depends on which MoveItControllerManager plugin is active. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structmoveit__controller__manager_1_1ExecutionStatus.html#a09075c47bbda14f1df49a0a0f27188fda9cb40c0ff9c15273ba1411df0dba2704">moveit_controller_manager::ExecutionStatus::SUCCEEDED</a> if successful </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00220">220</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classmoveit__cpp_1_1MoveItCpp_a48632e24176193c126eb422ffb49aee2_icgraph.png" border="0" usemap="#aclassmoveit__cpp_1_1MoveItCpp_a48632e24176193c126eb422ffb49aee2_icgraph" alt=""/></div>
-<map name="aclassmoveit__cpp_1_1MoveItCpp_a48632e24176193c126eb422ffb49aee2_icgraph" id="aclassmoveit__cpp_1_1MoveItCpp_a48632e24176193c126eb422ffb49aee2_icgraph">
+<div class="center"><img src="classmoveit__cpp_1_1MoveItCpp_a11b72ed483adbaa4840c8672de64f6a9_icgraph.png" border="0" usemap="#aclassmoveit__cpp_1_1MoveItCpp_a11b72ed483adbaa4840c8672de64f6a9_icgraph" alt=""/></div>
+<map name="aclassmoveit__cpp_1_1MoveItCpp_a11b72ed483adbaa4840c8672de64f6a9_icgraph" id="aclassmoveit__cpp_1_1MoveItCpp_a11b72ed483adbaa4840c8672de64f6a9_icgraph">
 <area shape="rect" title="Execute a trajectory on the planning group specified by group_name using the trajectory execution man..." alt="" coords="675,13,851,54"/>
 <area shape="rect" href="classmoveit__commander_1_1interpreter_1_1MoveGroupCommandInterpreter.html#a29650abebe37990b0109eb3ac6933f6b" title=" " alt="" coords="340,5,627,61"/>
 <area shape="rect" href="classmoveit__commander_1_1interpreter_1_1MoveGroupCommandInterpreter.html#a6e405d05c0a636530b31910b9e1d9b6d" title=" " alt="" coords="5,13,292,54"/>
@@ -611,7 +675,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00269">269</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00278">278</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
 
 </div>
 </div>
@@ -725,7 +789,7 @@ Here is the caller graph for this function:</div>
 
 <p>Utility to terminate the given planning pipeline. </p>
 
-<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00250">250</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="moveit__cpp_8cpp_source.html#l00259">259</a> of file <a class="el" href="moveit__cpp_8cpp_source.html">moveit_cpp.cpp</a>.</p>
 
 </div>
 </div>
