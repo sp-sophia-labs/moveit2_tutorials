@@ -65,7 +65,9 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">trajectory_processing Namespace Reference</div>  </div>
 </div><!--header-->
@@ -90,6 +92,13 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtrajectory__processing_1_1CircularPathSegment.html">CircularPathSegment</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a2f525068004863870448944e4f257e76"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetrajectory__processing.html#a2f525068004863870448944e4f257e76">LimitType</a> { <a class="el" href="namespacetrajectory__processing.html#a2f525068004863870448944e4f257e76af5ae097ccb042291e8133e121332fc51">VELOCITY</a>
+, <a class="el" href="namespacetrajectory__processing.html#a2f525068004863870448944e4f257e76ab68723e49db8f1de065f1c1616cd3f8e">ACCELERATION</a>
+ }</td></tr>
+<tr class="separator:a2f525068004863870448944e4f257e76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a79622f661286d3894890e3c85de97594"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetrajectory__processing.html#a79622f661286d3894890e3c85de97594">MOVEIT_CLASS_FORWARD</a> (<a class="el" href="classtrajectory__processing_1_1TimeOptimalTrajectoryGeneration.html">TimeOptimalTrajectoryGeneration</a>)</td></tr>
@@ -104,7 +113,33 @@ Functions</h2></td></tr>
 <tr class="separator:a7d9b3dd17438e8bdafeab11c091c3857"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af852fc4d44c04c8c422b8aa60cd42c45"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetrajectory__processing.html#af852fc4d44c04c8c422b8aa60cd42c45">trajectoryWaypointCount</a> (const moveit_msgs::msg::RobotTrajectory &amp;trajectory)</td></tr>
 <tr class="separator:af852fc4d44c04c8c422b8aa60cd42c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a624e02f529af8dc9f85f6dbdee939d47"><td class="memItemLeft" align="right" valign="top">const std::unordered_map&lt; <a class="el" href="namespacetrajectory__processing.html#a2f525068004863870448944e4f257e76">LimitType</a>, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetrajectory__processing.html#a624e02f529af8dc9f85f6dbdee939d47">LIMIT_TYPES</a></td></tr>
+<tr class="separator:a624e02f529af8dc9f85f6dbdee939d47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a2f525068004863870448944e4f257e76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f525068004863870448944e4f257e76">&#9670;&nbsp;</a></span>LimitType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespacetrajectory__processing.html#a2f525068004863870448944e4f257e76">trajectory_processing::LimitType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a2f525068004863870448944e4f257e76af5ae097ccb042291e8133e121332fc51"></a>VELOCITY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a2f525068004863870448944e4f257e76ab68723e49db8f1de065f1c1616cd3f8e"></a>ACCELERATION&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="time__optimal__trajectory__generation_8h_source.html#l00048">48</a> of file <a class="el" href="time__optimal__trajectory__generation_8h_source.html">time_optimal_trajectory_generation.h</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a7d9b3dd17438e8bdafeab11c091c3857"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7d9b3dd17438e8bdafeab11c091c3857">&#9670;&nbsp;</a></span>isTrajectoryEmpty()</h2>
@@ -213,7 +248,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="time__optimal__trajectory__generation_8cpp_source.html#l01061">1061</a> of file <a class="el" href="time__optimal__trajectory__generation_8cpp_source.html">time_optimal_trajectory_generation.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="time__optimal__trajectory__generation_8cpp_source.html#l01064">1064</a> of file <a class="el" href="time__optimal__trajectory__generation_8cpp_source.html">time_optimal_trajectory_generation.cpp</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -243,6 +278,27 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="trajectory__tools_8cpp_source.html#l00046">46</a> of file <a class="el" href="trajectory__tools_8cpp_source.html">trajectory_tools.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a624e02f529af8dc9f85f6dbdee939d47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a624e02f529af8dc9f85f6dbdee939d47">&#9670;&nbsp;</a></span>LIMIT_TYPES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::unordered_map&lt;<a class="el" href="namespacetrajectory__processing.html#a2f525068004863870448944e4f257e76">LimitType</a>, std::string&gt; trajectory_processing::LIMIT_TYPES</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= { { <a class="code" href="namespacetrajectory__processing.html#a2f525068004863870448944e4f257e76af5ae097ccb042291e8133e121332fc51">VELOCITY</a>, <span class="stringliteral">&quot;velocity&quot;</span> },</div>
+<div class="line">                                                                 { <a class="code" href="namespacetrajectory__processing.html#a2f525068004863870448944e4f257e76ab68723e49db8f1de065f1c1616cd3f8e">ACCELERATION</a>, <span class="stringliteral">&quot;acceleration&quot;</span> } }</div>
+<div class="ttc" id="anamespacetrajectory__processing_html_a2f525068004863870448944e4f257e76ab68723e49db8f1de065f1c1616cd3f8e"><div class="ttname"><a href="namespacetrajectory__processing.html#a2f525068004863870448944e4f257e76ab68723e49db8f1de065f1c1616cd3f8e">trajectory_processing::ACCELERATION</a></div><div class="ttdeci">@ ACCELERATION</div><div class="ttdef"><b>Definition:</b> <a href="time__optimal__trajectory__generation_8h_source.html#l00052">time_optimal_trajectory_generation.h:51</a></div></div>
+<div class="ttc" id="anamespacetrajectory__processing_html_a2f525068004863870448944e4f257e76af5ae097ccb042291e8133e121332fc51"><div class="ttname"><a href="namespacetrajectory__processing.html#a2f525068004863870448944e4f257e76af5ae097ccb042291e8133e121332fc51">trajectory_processing::VELOCITY</a></div><div class="ttdeci">@ VELOCITY</div><div class="ttdef"><b>Definition:</b> <a href="time__optimal__trajectory__generation_8h_source.html#l00050">time_optimal_trajectory_generation.h:50</a></div></div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="time__optimal__trajectory__generation_8h_source.html#l00054">54</a> of file <a class="el" href="time__optimal__trajectory__generation_8h_source.html">time_optimal_trajectory_generation.h</a>.</p>
 
 </div>
 </div>

@@ -857,40 +857,40 @@ $(function() {
 <div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;    }</div>
 <div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;  }</div>
 <div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;  <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;      <span class="comment">// world objects could have previously been attached objects; we try to move them</span></div>
-<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;      <span class="comment">// from their old cache to the new one, if possible. the code is not pretty, but should help</span></div>
-<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;      <span class="comment">// when we attach/detach objects that are in the world</span></div>
-<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;      <span class="keywordflow">if</span> (std::is_same&lt;T, World::Object&gt;::value)</div>
-<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;  {</div>
-<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;    <span class="comment">// get the cache that corresponds to objects; maybe this attached object used to be a world object</span></div>
-<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;    <a class="code" href="structcollision__detection_1_1FCLShapeCache.html">FCLShapeCache</a>&amp; othercache = GetShapeCache&lt;BV, moveit::core::AttachedBody&gt;();</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;    <span class="comment">// world objects could have previously been attached objects; we try to move them</span></div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;    <span class="comment">// from their old cache to the new one, if possible. the code is not pretty, but should help</span></div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;    <span class="comment">// when we attach/detach objects that are in the world</span></div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;    <span class="keywordflow">if</span> (std::is_same&lt;T, World::Object&gt;::value)</div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;    {</div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;      <span class="comment">// get the cache that corresponds to objects; maybe this attached object used to be a world object</span></div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;      <a class="code" href="structcollision__detection_1_1FCLShapeCache.html">FCLShapeCache</a>&amp; othercache = GetShapeCache&lt;BV, moveit::core::AttachedBody&gt;();</div>
 <div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160; </div>
-<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;    <span class="comment">// attached bodies could be just moved from the environment.</span></div>
-<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;    <span class="keyword">auto</span> cache_it = othercache.<a class="code" href="structcollision__detection_1_1FCLShapeCache.html#a6f185c9254095950b29dbe8b491c5673">map_</a>.find(wptr);</div>
-<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;    <span class="keywordflow">if</span> (cache_it != othercache.<a class="code" href="structcollision__detection_1_1FCLShapeCache.html#a6f185c9254095950b29dbe8b491c5673">map_</a>.end())</div>
-<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;    {</div>
-<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;      <span class="keywordflow">if</span> (cache_it-&gt;second.unique())</div>
-<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;      {</div>
-<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;        <span class="comment">// remove from old cache</span></div>
-<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;        FCLGeometryConstPtr obj_cache = cache_it-&gt;second;</div>
-<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;        othercache.<a class="code" href="structcollision__detection_1_1FCLShapeCache.html#a6f185c9254095950b29dbe8b491c5673">map_</a>.erase(cache_it);</div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;      <span class="comment">// attached bodies could be just moved from the environment.</span></div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;      <span class="keyword">auto</span> cache_it = othercache.<a class="code" href="structcollision__detection_1_1FCLShapeCache.html#a6f185c9254095950b29dbe8b491c5673">map_</a>.find(wptr);</div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;      <span class="keywordflow">if</span> (cache_it != othercache.<a class="code" href="structcollision__detection_1_1FCLShapeCache.html#a6f185c9254095950b29dbe8b491c5673">map_</a>.end())</div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;      {</div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;        <span class="keywordflow">if</span> (cache_it-&gt;second.unique())</div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;        {</div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;          <span class="comment">// remove from old cache</span></div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;          FCLGeometryConstPtr obj_cache = cache_it-&gt;second;</div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;          othercache.<a class="code" href="structcollision__detection_1_1FCLShapeCache.html#a6f185c9254095950b29dbe8b491c5673">map_</a>.erase(cache_it);</div>
 <div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160; </div>
-<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;        <span class="comment">// update the CollisionGeometryData; nobody has a pointer to this, so we can safely modify it</span></div>
-<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;        <span class="keyword">const_cast&lt;</span><a class="code" href="structcollision__detection_1_1FCLGeometry.html">FCLGeometry</a>*<span class="keyword">&gt;</span>(obj_cache.get())-&gt;updateCollisionGeometryData(data, shape_index, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;          <span class="comment">// update the CollisionGeometryData; nobody has a pointer to this, so we can safely modify it</span></div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;          <span class="keyword">const_cast&lt;</span><a class="code" href="structcollision__detection_1_1FCLGeometry.html">FCLGeometry</a>*<span class="keyword">&gt;</span>(obj_cache.get())-&gt;updateCollisionGeometryData(data, shape_index, <span class="keyword">true</span>);</div>
 <div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160; </div>
-<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;        <span class="comment">//          RCLCPP_DEBUG(LOGGER, &quot;Collision data structures for world object %s retrieved</span></div>
-<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;        <span class="comment">//          from the cache for</span></div>
-<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;        <span class="comment">//          attached</span></div>
-<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;        <span class="comment">//          bodies.&quot;,</span></div>
-<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;        <span class="comment">//                   obj_cache-&gt;collision_geometry_data_-&gt;getID().c_str());</span></div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;          <span class="comment">//          RCLCPP_DEBUG(LOGGER, &quot;Collision data structures for world object %s retrieved</span></div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;          <span class="comment">//          from the cache for</span></div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;          <span class="comment">//          attached</span></div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;          <span class="comment">//          bodies.&quot;,</span></div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;          <span class="comment">//                   obj_cache-&gt;collision_geometry_data_-&gt;getID().c_str());</span></div>
 <div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160; </div>
-<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;        <span class="comment">// add to the new cache</span></div>
-<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;        cache.<a class="code" href="structcollision__detection_1_1FCLShapeCache.html#a6f185c9254095950b29dbe8b491c5673">map_</a>[wptr] = obj_cache;</div>
-<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;        cache.<a class="code" href="structcollision__detection_1_1FCLShapeCache.html#aab73b9cbb871a1f3cd659372c1368cf7">bumpUseCount</a>();</div>
-<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;        <span class="keywordflow">return</span> obj_cache;</div>
-<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;      }</div>
-<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;    }</div>
-<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;  }</div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;          <span class="comment">// add to the new cache</span></div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;          cache.<a class="code" href="structcollision__detection_1_1FCLShapeCache.html#a6f185c9254095950b29dbe8b491c5673">map_</a>[wptr] = obj_cache;</div>
+<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;          cache.<a class="code" href="structcollision__detection_1_1FCLShapeCache.html#aab73b9cbb871a1f3cd659372c1368cf7">bumpUseCount</a>();</div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;          <span class="keywordflow">return</span> obj_cache;</div>
+<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;        }</div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;      }</div>
+<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;    }</div>
 <div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160; </div>
 <div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;  <a class="code" href="namespacefcl.html#a8cf66bcf72cc44bb6f04b8e2e0444cc0">fcl::CollisionGeometryd</a>* cg_g = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;  <span class="comment">// handle cases individually</span></div>

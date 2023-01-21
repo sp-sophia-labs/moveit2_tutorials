@@ -1,0 +1,4 @@
+<map id="trajectory_processing::RuckigSmoothing::applySmoothing" name="trajectory_processing::RuckigSmoothing::applySmoothing">
+<area shape="rect" id="node1" title="Apply smoothing to a time&#45;parameterized trajectory so that jerk limits are not violated." alt="" coords="312,5,571,47"/>
+<area shape="rect" id="node2" href="$classtrajectory__processing_1_1RuckigSmoothing.html#a92c021fa80857da16fd5a24aa4c6c851" title="Apply smoothing to a time&#45;parameterized trajectory so that jerk limits are not violated." alt="" coords="5,5,264,47"/>
+</map>

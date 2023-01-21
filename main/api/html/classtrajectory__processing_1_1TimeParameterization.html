@@ -91,9 +91,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5bb53d61cca77c7519cefd350f0fc5d7"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtrajectory__processing_1_1TimeParameterization.html#a5bb53d61cca77c7519cefd350f0fc5d7">~TimeParameterization</a> ()=default</td></tr>
 <tr class="separator:a5bb53d61cca77c7519cefd350f0fc5d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4dbacb6d1eaab1aaca95aeabcc01477d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtrajectory__processing_1_1TimeParameterization.html#a4dbacb6d1eaab1aaca95aeabcc01477d">computeTimeStamps</a> (<a class="el" href="classrobot__trajectory_1_1RobotTrajectory.html">robot_trajectory::RobotTrajectory</a> &amp;trajectory, const double max_velocity_scaling_factor=1.0, const double max_acceleration_scaling_factor=1.0) const =0</td></tr>
+<tr class="memdesc:a4dbacb6d1eaab1aaca95aeabcc01477d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute a trajectory with waypoints spaced equally in time.  <a href="classtrajectory__processing_1_1TimeParameterization.html#a4dbacb6d1eaab1aaca95aeabcc01477d">More...</a><br /></td></tr>
 <tr class="separator:a4dbacb6d1eaab1aaca95aeabcc01477d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4e39381da1da60073e6df18f1f5a388"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtrajectory__processing_1_1TimeParameterization.html#ab4e39381da1da60073e6df18f1f5a388">computeTimeStamps</a> (<a class="el" href="classrobot__trajectory_1_1RobotTrajectory.html">robot_trajectory::RobotTrajectory</a> &amp;trajectory, const std::unordered_map&lt; std::string, double &gt; &amp;velocity_limits, const std::unordered_map&lt; std::string, double &gt; &amp;acceleration_limits) const =0</td></tr>
-<tr class="separator:ab4e39381da1da60073e6df18f1f5a388"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfa2f7df7fb2bcbd85951388e2a9c303"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtrajectory__processing_1_1TimeParameterization.html#adfa2f7df7fb2bcbd85951388e2a9c303">computeTimeStamps</a> (<a class="el" href="classrobot__trajectory_1_1RobotTrajectory.html">robot_trajectory::RobotTrajectory</a> &amp;trajectory, const std::unordered_map&lt; std::string, double &gt; &amp;velocity_limits, const std::unordered_map&lt; std::string, double &gt; &amp;acceleration_limits, const double max_velocity_scaling_factor=1.0, const double max_acceleration_scaling_factor=1.0) const =0</td></tr>
+<tr class="memdesc:adfa2f7df7fb2bcbd85951388e2a9c303"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute a trajectory with waypoints spaced equally in time.  <a href="classtrajectory__processing_1_1TimeParameterization.html#adfa2f7df7fb2bcbd85951388e2a9c303">More...</a><br /></td></tr>
+<tr class="separator:adfa2f7df7fb2bcbd85951388e2a9c303"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05237e8addf59612b2220d6c001e868c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtrajectory__processing_1_1TimeParameterization.html#a05237e8addf59612b2220d6c001e868c">computeTimeStamps</a> (<a class="el" href="classrobot__trajectory_1_1RobotTrajectory.html">robot_trajectory::RobotTrajectory</a> &amp;trajectory, const std::vector&lt; moveit_msgs::msg::JointLimits &gt; &amp;joint_limits, const double max_velocity_scaling_factor=1.0, const double max_acceleration_scaling_factor=1.0) const =0</td></tr>
+<tr class="memdesc:a05237e8addf59612b2220d6c001e868c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute a trajectory with waypoints spaced equally in time.  <a href="classtrajectory__processing_1_1TimeParameterization.html#a05237e8addf59612b2220d6c001e868c">More...</a><br /></td></tr>
+<tr class="separator:a05237e8addf59612b2220d6c001e868c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -126,7 +131,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a4dbacb6d1eaab1aaca95aeabcc01477d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4dbacb6d1eaab1aaca95aeabcc01477d">&#9670;&nbsp;</a></span>computeTimeStamps() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dbacb6d1eaab1aaca95aeabcc01477d">&#9670;&nbsp;</a></span>computeTimeStamps() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -165,12 +170,22 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Compute a trajectory with waypoints spaced equally in time. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">trajectory</td><td><a class="el" href="classA.html">A</a> path which needs time-parameterization. It's OK if this path has already been time-parameterized; this function will re-time-parameterize it. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">max_velocity_scaling_factor</td><td><a class="el" href="classA.html">A</a> factor in the range [0,1] which can slow down the trajectory. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">max_acceleration_scaling_factor</td><td><a class="el" href="classA.html">A</a> factor in the range [0,1] which can slow down the trajectory. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implemented in <a class="el" href="classtrajectory__processing_1_1TimeOptimalTrajectoryGeneration.html#a7fb161f0df9bd1acb0a08cb339e43102">trajectory_processing::TimeOptimalTrajectoryGeneration</a>.</p>
 
 </div>
 </div>
-<a id="ab4e39381da1da60073e6df18f1f5a388"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4e39381da1da60073e6df18f1f5a388">&#9670;&nbsp;</a></span>computeTimeStamps() <span class="overload">[2/2]</span></h2>
+<a id="adfa2f7df7fb2bcbd85951388e2a9c303"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfa2f7df7fb2bcbd85951388e2a9c303">&#9670;&nbsp;</a></span>computeTimeStamps() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -194,7 +209,19 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::unordered_map&lt; std::string, double &gt; &amp;&#160;</td>
-          <td class="paramname"><em>acceleration_limits</em>&#160;</td>
+          <td class="paramname"><em>acceleration_limits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>max_velocity_scaling_factor</em> = <code>1.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>max_acceleration_scaling_factor</em> = <code>1.0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -209,7 +236,80 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classtrajectory__processing_1_1TimeOptimalTrajectoryGeneration.html#a49bf674d7d31cb7aa0f5e0950bbd25b1">trajectory_processing::TimeOptimalTrajectoryGeneration</a>.</p>
+<p>Compute a trajectory with waypoints spaced equally in time. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">trajectory</td><td><a class="el" href="classA.html">A</a> path which needs time-parameterization. It's OK if this path has already been time-parameterized; this function will re-time-parameterize it. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">velocity_limits</td><td>Joint names and velocity limits in rad/s </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">acceleration_limits</td><td>Joint names and acceleration limits in rad/s^2 </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">max_velocity_scaling_factor</td><td><a class="el" href="classA.html">A</a> factor in the range [0,1] which can slow down the trajectory. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">max_acceleration_scaling_factor</td><td><a class="el" href="classA.html">A</a> factor in the range [0,1] which can slow down the trajectory. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classtrajectory__processing_1_1TimeOptimalTrajectoryGeneration.html#ad7b10759c8a86cc52e7ce71cd93e7998">trajectory_processing::TimeOptimalTrajectoryGeneration</a>.</p>
+
+</div>
+</div>
+<a id="a05237e8addf59612b2220d6c001e868c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05237e8addf59612b2220d6c001e868c">&#9670;&nbsp;</a></span>computeTimeStamps() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool trajectory_processing::TimeParameterization::computeTimeStamps </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classrobot__trajectory_1_1RobotTrajectory.html">robot_trajectory::RobotTrajectory</a> &amp;&#160;</td>
+          <td class="paramname"><em>trajectory</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; moveit_msgs::msg::JointLimits &gt; &amp;&#160;</td>
+          <td class="paramname"><em>joint_limits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>max_velocity_scaling_factor</em> = <code>1.0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>max_acceleration_scaling_factor</em> = <code>1.0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compute a trajectory with waypoints spaced equally in time. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">trajectory</td><td><a class="el" href="classA.html">A</a> path which needs time-parameterization. It's OK if this path has already been time-parameterized; this function will re-time-parameterize it. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname"><a class="el" href="namespacejoint__limits.html">joint_limits</a></td><td>Joint names and corresponding velocity limits in rad/s and acceleration limits in rad/s^2 </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">max_velocity_scaling_factor</td><td><a class="el" href="classA.html">A</a> factor in the range [0,1] which can slow down the trajectory. </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">max_acceleration_scaling_factor</td><td><a class="el" href="classA.html">A</a> factor in the range [0,1] which can slow down the trajectory. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classtrajectory__processing_1_1TimeOptimalTrajectoryGeneration.html#a5d2dc5833b5400fd9ff1190f06305606">trajectory_processing::TimeOptimalTrajectoryGeneration</a>.</p>
 
 </div>
 </div>

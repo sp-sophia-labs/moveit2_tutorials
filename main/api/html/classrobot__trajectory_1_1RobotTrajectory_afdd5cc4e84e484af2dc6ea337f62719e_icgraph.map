@@ -1,9 +1,10 @@
 <map id="robot_trajectory::RobotTrajectory::empty" name="robot_trajectory::RobotTrajectory::empty">
-<area shape="rect" id="node1" title=" " alt="" coords="667,173,901,214"/>
-<area shape="rect" id="node2" href="$classtrajectory__processing_1_1TimeOptimalTrajectoryGeneration.html#a7fb161f0df9bd1acb0a08cb339e43102" title="Compute a trajectory with waypoints spaced equally in time (according to resample_dt_)...." alt="" coords="368,85,619,141"/>
-<area shape="rect" id="node6" href="$classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a4602671783e5fdb62207685fbaea5dce" title=" " alt="" coords="393,165,593,221"/>
-<area shape="rect" id="node7" href="$classmoveit_1_1hybrid__planning_1_1ForwardTrajectory.html#a004dec961e56440b5df8093bf55b2a58" title=" " alt="" coords="399,246,587,287"/>
+<area shape="rect" id="node1" title=" " alt="" coords="667,213,901,254"/>
+<area shape="rect" id="node2" href="$classtrajectory__processing_1_1TimeOptimalTrajectoryGeneration.html#a7fb161f0df9bd1acb0a08cb339e43102" title="Compute a trajectory with waypoints spaced equally in time (according to resample_dt_)...." alt="" coords="368,125,619,181"/>
+<area shape="rect" id="node7" href="$classmoveit__ros__benchmarks_1_1BenchmarkExecutor.html#a4602671783e5fdb62207685fbaea5dce" title=" " alt="" coords="393,205,593,261"/>
+<area shape="rect" id="node8" href="$classmoveit_1_1hybrid__planning_1_1ForwardTrajectory.html#a004dec961e56440b5df8093bf55b2a58" title=" " alt="" coords="399,286,587,327"/>
 <area shape="rect" id="node3" href="$classdefault__planner__request__adapters_1_1AddTimeOptimalParameterization.html#addb58f9acb48922a5a6fb7c8aa4aacf2" title="Adapt the planning request if needed, call the planner function planner and update the planning respo..." alt="" coords="5,5,320,61"/>
 <area shape="rect" id="node4" href="$classmoveit_1_1hybrid__planning_1_1SimpleSampler.html#a7c6b3f8cb49983fd8fd6559b6be922c8" title=" " alt="" coords="50,85,275,141"/>
-<area shape="rect" id="node5" href="$test__time__optimal__trajectory__generation_8cpp.html#a79dd89100c5859ac9733457667f912b3" title=" " alt="" coords="135,165,190,192"/>
+<area shape="rect" id="node5" href="$classtrajectory__processing_1_1TimeOptimalTrajectoryGeneration.html#a5d2dc5833b5400fd9ff1190f06305606" title="Compute a trajectory with waypoints spaced equally in time (according to resample_dt_)...." alt="" coords="37,165,288,221"/>
+<area shape="rect" id="node6" href="$test__time__optimal__trajectory__generation_8cpp.html#a79dd89100c5859ac9733457667f912b3" title=" " alt="" coords="135,245,190,272"/>
 </map>

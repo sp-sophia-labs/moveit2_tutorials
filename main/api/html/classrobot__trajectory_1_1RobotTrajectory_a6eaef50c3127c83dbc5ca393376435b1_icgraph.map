@@ -1,10 +1,11 @@
 <map id="robot_trajectory::RobotTrajectory::getGroup" name="robot_trajectory::RobotTrajectory::getGroup">
-<area shape="rect" id="node1" title=" " alt="" coords="904,155,1139,197"/>
-<area shape="rect" id="node2" href="$classtrajectory__processing_1_1TimeOptimalTrajectoryGeneration.html#a7fb161f0df9bd1acb0a08cb339e43102" title="Compute a trajectory with waypoints spaced equally in time (according to resample_dt_)...." alt="" coords="605,99,856,155"/>
-<area shape="rect" id="node6" href="$classchomp_1_1ChompTrajectory.html#a7c699cdfffe049e9b9e103d787b41b39" title="Receives the path obtained from a given MotionPlanDetailedResponse res object&#39;s trajectory (e...." alt="" coords="639,191,823,233"/>
+<area shape="rect" id="node1" title=" " alt="" coords="904,235,1139,277"/>
+<area shape="rect" id="node2" href="$classtrajectory__processing_1_1TimeOptimalTrajectoryGeneration.html#a7fb161f0df9bd1acb0a08cb339e43102" title="Compute a trajectory with waypoints spaced equally in time (according to resample_dt_)...." alt="" coords="605,165,856,221"/>
+<area shape="rect" id="node7" href="$classchomp_1_1ChompTrajectory.html#a7c699cdfffe049e9b9e103d787b41b39" title="Receives the path obtained from a given MotionPlanDetailedResponse res object&#39;s trajectory (e...." alt="" coords="639,271,823,313"/>
 <area shape="rect" id="node3" href="$classdefault__planner__request__adapters_1_1AddTimeOptimalParameterization.html#addb58f9acb48922a5a6fb7c8aa4aacf2" title="Adapt the planning request if needed, call the planner function planner and update the planning respo..." alt="" coords="243,5,557,61"/>
 <area shape="rect" id="node4" href="$classmoveit_1_1hybrid__planning_1_1SimpleSampler.html#a7c6b3f8cb49983fd8fd6559b6be922c8" title=" " alt="" coords="287,85,513,141"/>
-<area shape="rect" id="node5" href="$test__time__optimal__trajectory__generation_8cpp.html#a79dd89100c5859ac9733457667f912b3" title=" " alt="" coords="373,165,427,192"/>
-<area shape="rect" id="node7" href="$classchomp_1_1ChompPlanner.html#a15329905603fe1bf38e84a3973dc3e83" title=" " alt="" coords="315,217,485,258"/>
-<area shape="rect" id="node8" href="$classchomp_1_1OptimizerAdapter.html#ac4b3582c46aba259952e593ebce7fcdb" title="Adapt the planning request if needed, call the planner function planner and update the planning respo..." alt="" coords="5,217,195,258"/>
+<area shape="rect" id="node5" href="$classtrajectory__processing_1_1TimeOptimalTrajectoryGeneration.html#a5d2dc5833b5400fd9ff1190f06305606" title="Compute a trajectory with waypoints spaced equally in time (according to resample_dt_)...." alt="" coords="275,165,525,221"/>
+<area shape="rect" id="node6" href="$test__time__optimal__trajectory__generation_8cpp.html#a79dd89100c5859ac9733457667f912b3" title=" " alt="" coords="373,245,427,272"/>
+<area shape="rect" id="node8" href="$classchomp_1_1ChompPlanner.html#a15329905603fe1bf38e84a3973dc3e83" title=" " alt="" coords="315,297,485,338"/>
+<area shape="rect" id="node9" href="$classchomp_1_1OptimizerAdapter.html#ac4b3582c46aba259952e593ebce7fcdb" title="Adapt the planning request if needed, call the planner function planner and update the planning respo..." alt="" coords="5,297,195,338"/>
 </map>
