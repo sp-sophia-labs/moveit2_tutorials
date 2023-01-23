@@ -90,8 +90,6 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ae6352d7155433ba59624c26021b0b538"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#ae6352d7155433ba59624c26021b0b538">MoveItErrorCode</a> = <a class="el" href="classmoveit_1_1core_1_1MoveItErrorCode.html">moveit::core::MoveItErrorCode</a></td></tr>
-<tr class="separator:ae6352d7155433ba59624c26021b0b538"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c463689c88ee9d9c85878014a30d3e5"><td class="memItemLeft" align="right" valign="top">typedef std::function&lt; <a class="el" href="structplanning__interface_1_1MotionPlanResponse.html">planning_interface::MotionPlanResponse</a>(const std::vector&lt; <a class="el" href="structplanning__interface_1_1MotionPlanResponse.html">planning_interface::MotionPlanResponse</a> &gt; &amp;solutions)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a7c463689c88ee9d9c85878014a30d3e5">SolutionCallbackFunction</a></td></tr>
 <tr class="memdesc:a7c463689c88ee9d9c85878014a30d3e5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classA.html">A</a> solution callback function type for the parallel planning API of planning component <br  />
   <a href="classmoveit__cpp_1_1PlanningComponent.html#a7c463689c88ee9d9c85878014a30d3e5">More...</a><br /></td></tr>
@@ -170,8 +168,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adeb31285287961f5cf24dd38b7705946"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structplanning__interface_1_1MotionPlanResponse.html">planning_interface::MotionPlanResponse</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#adeb31285287961f5cf24dd38b7705946">plan</a> (const <a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1PlanRequestParameters.html">PlanRequestParameters</a> &amp;parameters, const bool store_solution=true)</td></tr>
 <tr class="memdesc:adeb31285287961f5cf24dd38b7705946"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run a plan from start or current state to fulfill the last goal constraints provided by <a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a4a3998f0a28eaac720bc845c81940fe2" title="Set the goal constraints used for planning.">setGoal()</a> using the provided <a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1PlanRequestParameters.html" title="Planner parameters provided with the MotionPlanRequest.">PlanRequestParameters</a>.  <a href="classmoveit__cpp_1_1PlanningComponent.html#adeb31285287961f5cf24dd38b7705946">More...</a><br /></td></tr>
 <tr class="separator:adeb31285287961f5cf24dd38b7705946"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a207525fe9c41138ea802ba211954f2bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structplanning__interface_1_1MotionPlanResponse.html">planning_interface::MotionPlanResponse</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a207525fe9c41138ea802ba211954f2bf">plan</a> (const <a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1MultiPipelinePlanRequestParameters.html">MultiPipelinePlanRequestParameters</a> &amp;parameters, const <a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a7c463689c88ee9d9c85878014a30d3e5">SolutionCallbackFunction</a> &amp;solution_selection_callback=&amp;<a class="el" href="namespacemoveit__cpp.html#aeaa57dcbfc74be4ea60a8db8f75a1c34">getShortestSolution</a>, <a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a82867c70d29374c3eedfd09f515794e7">StoppingCriterionFunction</a> stopping_criterion_callback=nullptr)</td></tr>
-<tr class="memdesc:a207525fe9c41138ea802ba211954f2bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run a plan from start or current state to fulfill the last goal constraints provided by <a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a4a3998f0a28eaac720bc845c81940fe2" title="Set the goal constraints used for planning.">setGoal()</a> using the provided <a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1PlanRequestParameters.html" title="Planner parameters provided with the MotionPlanRequest.">PlanRequestParameters</a>.  <a href="classmoveit__cpp_1_1PlanningComponent.html#a207525fe9c41138ea802ba211954f2bf">More...</a><br /></td></tr>
+<tr class="memitem:a207525fe9c41138ea802ba211954f2bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structplanning__interface_1_1MotionPlanResponse.html">planning_interface::MotionPlanResponse</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a207525fe9c41138ea802ba211954f2bf">plan</a> (const <a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1MultiPipelinePlanRequestParameters.html">MultiPipelinePlanRequestParameters</a> &amp;parameters, const <a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a7c463689c88ee9d9c85878014a30d3e5">SolutionCallbackFunction</a> &amp;solution_selection_callback=&amp;getShortestSolution, <a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a82867c70d29374c3eedfd09f515794e7">StoppingCriterionFunction</a> stopping_criterion_callback=nullptr)</td></tr>
+<tr class="memdesc:a207525fe9c41138ea802ba211954f2bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run a plan from start or current state to fulfill the last goal constraints provided by <a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a4a3998f0a28eaac720bc845c81940fe2" title="Set the goal constraints used for planning.">setGoal()</a> using the provided <a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1PlanRequestParameters.html" title="Planner parameters provided with the MotionPlanRequest.">PlanRequestParameters</a>. This defaults to taking the full planning time (null stopping_criterion_callback) and finding the shortest solution in joint space.  <a href="classmoveit__cpp_1_1PlanningComponent.html#a207525fe9c41138ea802ba211954f2bf">More...</a><br /></td></tr>
 <tr class="separator:a207525fe9c41138ea802ba211954f2bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeeec940682a69411d1bd164adc059f80"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#aeeec940682a69411d1bd164adc059f80">execute</a> (bool blocking=true)</td></tr>
 <tr class="memdesc:aeeec940682a69411d1bd164adc059f80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute the latest computed solution trajectory computed by <a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a2a75ec5db464f21e9ef899bfe2945512" title="Run a plan from start or current state to fulfill the last goal constraints provided by setGoal() usi...">plan()</a>. By default this function terminates after the execution is complete. The execution can be run in background by setting blocking to false.  <a href="classmoveit__cpp_1_1PlanningComponent.html#aeeec940682a69411d1bd164adc059f80">More...</a><br /></td></tr>
@@ -182,24 +180,8 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="planning__component_8h_source.html#l00052">52</a> of file <a class="el" href="planning__component_8h_source.html">planning_component.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="planning__component_8h_source.html#l00053">53</a> of file <a class="el" href="planning__component_8h_source.html">planning_component.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="ae6352d7155433ba59624c26021b0b538"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae6352d7155433ba59624c26021b0b538">&#9670;&nbsp;</a></span>MoveItErrorCode</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#ae6352d7155433ba59624c26021b0b538">moveit_cpp::PlanningComponent::MoveItErrorCode</a> =  <a class="el" href="classmoveit_1_1core_1_1MoveItErrorCode.html">moveit::core::MoveItErrorCode</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="planning__component_8h_source.html#l00055">55</a> of file <a class="el" href="planning__component_8h_source.html">planning_component.h</a>.</p>
-
-</div>
-</div>
 <a id="a7c463689c88ee9d9c85878014a30d3e5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7c463689c88ee9d9c85878014a30d3e5">&#9670;&nbsp;</a></span>SolutionCallbackFunction</h2>
 
@@ -661,7 +643,7 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a7c463689c88ee9d9c85878014a30d3e5">SolutionCallbackFunction</a> &amp;&#160;</td>
-          <td class="paramname"><em>solution_selection_callback</em> = <code>&amp;<a class="el" href="namespacemoveit__cpp.html#aeaa57dcbfc74be4ea60a8db8f75a1c34">getShortestSolution</a></code>, </td>
+          <td class="paramname"><em>solution_selection_callback</em> = <code>&amp;getShortestSolution</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -677,7 +659,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Run a plan from start or current state to fulfill the last goal constraints provided by <a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a4a3998f0a28eaac720bc845c81940fe2" title="Set the goal constraints used for planning.">setGoal()</a> using the provided <a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1PlanRequestParameters.html" title="Planner parameters provided with the MotionPlanRequest.">PlanRequestParameters</a>. </p>
+<p>Run a plan from start or current state to fulfill the last goal constraints provided by <a class="el" href="classmoveit__cpp_1_1PlanningComponent.html#a4a3998f0a28eaac720bc845c81940fe2" title="Set the goal constraints used for planning.">setGoal()</a> using the provided <a class="el" href="structmoveit__cpp_1_1PlanningComponent_1_1PlanRequestParameters.html" title="Planner parameters provided with the MotionPlanRequest.">PlanRequestParameters</a>. This defaults to taking the full planning time (null stopping_criterion_callback) and finding the shortest solution in joint space. </p>
 
 <p class="definition">Definition at line <a class="el" href="planning__component_8cpp_source.html#l00230">230</a> of file <a class="el" href="planning__component_8cpp_source.html">planning_component.cpp</a>.</p>
 <div class="dynheader">

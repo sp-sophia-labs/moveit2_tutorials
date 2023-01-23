@@ -1,0 +1,4 @@
+<map id="moveit_cpp::PlanSolutions::getSolutions" name="moveit_cpp::PlanSolutions::getSolutions">
+<area shape="rect" id="node1" title="Get solutions." alt="" coords="283,5,477,47"/>
+<area shape="rect" id="node2" href="$namespacemoveit__cpp.html#a7d1be600bf15df66357cd38cefacc9b1" title="A callback function that can be used as a parallel planning stop criterion. It stops parallel plannin..." alt="" coords="5,13,235,39"/>
+</map>

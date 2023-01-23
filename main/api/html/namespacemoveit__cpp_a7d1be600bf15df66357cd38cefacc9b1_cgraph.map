@@ -1,0 +1,4 @@
+<map id="moveit_cpp::stopAtFirstSolution" name="moveit_cpp::stopAtFirstSolution">
+<area shape="rect" id="node1" title="A callback function that can be used as a parallel planning stop criterion. It stops parallel plannin..." alt="" coords="5,13,235,39"/>
+<area shape="rect" id="node2" href="$classmoveit__cpp_1_1PlanSolutions.html#ac3840d20b3fc93a29cbb604759bfd0e6" title="Get solutions." alt="" coords="283,5,477,47"/>
+</map>
